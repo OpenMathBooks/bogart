@@ -845,7 +845,7 @@
           <figure xml:id="HexNet" >
             <caption>A possible
             computer network.</caption>
-            <image width="33%" source="images/NumberedHexagonalNetwork" />
+            <image width="33%" source="../images/NumberedHexagonalNetwork" />
           </figure>
 
       <activity category="interesting">

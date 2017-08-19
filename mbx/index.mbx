@@ -2,6 +2,13 @@
 
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" xml:id="home">
 <docinfo>
+
+  <website>
+    <name><c>bogart.openmathbooks.org</c></name>
+    <address>http://bogart.openmathbooks.org</address>
+  </website>
+
+
 <macros>
 \newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
@@ -95,6 +102,8 @@
     <title>Hints to Selected Problems</title>
     <solution-list />
 </appendix>
+
+
 
 
 <index>

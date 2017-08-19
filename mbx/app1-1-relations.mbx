@@ -276,7 +276,7 @@
     <figure xml:id="alphabetdigraph" >
       <caption>The alphabet
       digraph.</caption>
-      <image width="10%" source="images/alphabetdigraph" />
+      <image width="10%" source="../images/alphabetdigraph" />
     </figure>
 
     <p>
@@ -330,7 +330,7 @@
         </hint>
         <solution>
             <sidebyside width="20%" >
-                <image source="images/Subsetsof2set" />
+                <image source="../images/Subsetsof2set" />
             </sidebyside>
             <p>
             We would need to draw 19 arrows, some of them curved,
@@ -353,7 +353,7 @@
         </statement>
         <solution>
           <sidebyside width="50%">
-            <image source="images/initialdigraph" />
+            <image source="../images/initialdigraph" />
           </sidebyside>
         </solution>
       </activity>
@@ -368,7 +368,7 @@
         </statement>
         <solution>
           <sidebyside width="50%">
-            <image source="images/initialdigraph2" />
+            <image source="../images/initialdigraph2" />
           </sidebyside>
         </solution>
       </activity>
@@ -382,7 +382,7 @@
         </statement>
         <solution>
           <sidebyside width="50%">
-            <image source="images/initialdigraph3" />
+            <image source="../images/initialdigraph3" />
           </sidebyside>
         </solution>
       </activity>

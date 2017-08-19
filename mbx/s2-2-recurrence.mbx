@@ -186,7 +186,7 @@
       <figure xml:id="Hanoi" >
         <caption>The
         Towers of Hanoi Puzzle</caption>
-        <image width="85%" source="images/Hanoi" />
+        <image width="85%" source="../images/Hanoi" />
       </figure>
 
 
