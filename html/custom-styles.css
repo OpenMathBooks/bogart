@@ -3,44 +3,62 @@
 .essential::before {
   display: inline!important;
   content: "\2022";
+  position: absolute;
+  left: "1em";
 }
 
 .motivation::before {
   display: inline!important;
   content: "\00b0";
+  position: absolute;
+  left: "1em";
 }
 
 .summary::before {
   display: inline!important;
   content: "\002b";
+  position: absolute;
+  left: "1em";
 }
 
 .interesting::before {
   display: inline!important;
   content: "\21D2";
+  position: absolute;
+  left: "1em";
 }
 
 .difficult::before {
   display: inline!important;
   content: "\002a";
+  position: absolute;
+  left: "1em";
 }
 
 .forward-essential::before{
   display: inline!important;
   content: "\22C5";
+  position: absolute;
+  left: "1em";
 }
 
 .interesting-forward-essential::before{
   display: inline!important;
   content: "\21D2 \22C5";
+  position: absolute;
+  left: "1em";
 }
 
 .interesting-essential::before{
   display: inline!important;
   content: "\21D2 \2022";
+  position: absolute;
+  left: "1em";
 }
 
 .interesting-difficult::before{
   display: inline!important;
   content: "\21D2 \002a";
+  position: absolute;
+  left: "1em";
 }
