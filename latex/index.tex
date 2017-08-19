@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2017-08-19T13:02:56-06:00    *%
+%*    on 2017-08-19T13:39:32-06:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -488,12 +488,12 @@ Disjoint subsets are defined in \hyperref[sum]{Problem~\ref{sum}}. What can you 
 These problems contain among them the kernels of many of the fundamental ideas of combinatorics. For example, with luck, you just \index{sum principle}\index{principle!sum}\index{principle!product} \index{product principle}stated the sum principle (illustrated in \hyperref[sumprinc]{Figure~\ref{sumprinc}}), and product principle (illustrated in \hyperref[prodprinc]{Figure~\ref{prodprinc}}) in \hyperref[sum]{Problems~\ref{sum}} and \hyperref[product]{Problem~\ref{product}}. These two counting principles are the basis on which we will develop many other counting principles.%
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{../images/SumPrinc}
+\includegraphics[width=0.5\linewidth]{images/SumPrinc}
 \caption{The union of these two disjoint sets has size 17.\label{sumprinc}}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{../images/ProdPrinc}
+\includegraphics[width=0.5\linewidth]{images/ProdPrinc}
 \caption{The union of four disjoint sets of size five.\label{prodprinc}}
 \end{figure}
 You may have noticed some standard mathematical words and phrases such as \terminology{set}, \terminology{ordered pair}, \terminology{function} and so on creeping into the problems. One of our goals in these notes is to show how most counting problems can be recognized as counting all or some of the elements of a set of standard mathematical objects. For example \hyperref[orderedpair]{Problem~\ref{orderedpair}} is meant to suggest that the question we asked in \hyperref[basicsandwiches]{Problem~\ref{basicsandwiches}} was really a problem of counting all the ordered pairs consisting of a bread choice and a filling choice. We use \(A\times B\) to stand for the set of all ordered pairs whose first element is in \(A\) and whose second element is in \(B\) and we call \(A\times B\) the \index{Cartesian product}\index{product!Cartesian}\terminology{Cartesian product} of \(A\) and \(B\), so you can think of \hyperref[orderedpair]{Problem~\ref{orderedpair}} as asking you for the size of the Cartesian product of \(M\) and \(N\), that is, asking you to count the number of elements of this Cartesian product.%
@@ -590,7 +590,7 @@ As another example how standard mathematical language relates to counting proble
 However, there is another kind of graph called a \terminology{directed graph}\index{graph!directed}\index{directed graph} or \terminology{digraph}\index{digraph}\index{function!digraph of} that is especially useful when dealing with functions between finite sets. We take up this topic in more detail in \hyperref[Relations]{Appendix~\ref{Relations}}, particularly \hyperref[relationdigraph]{Subsection~\ref{relationdigraph}} and \hyperref[digraphsoffunctions]{Subsection~\ref{digraphsoffunctions}}. In \hyperref[functiondigraphs]{Figure~\ref{functiondigraphs}} we show several examples of digraphs of functions.%
 \begin{figure}
 \centering
-\includegraphics[width=0.73\linewidth]{../images/functiondigraph}
+\includegraphics[width=0.73\linewidth]{images/functiondigraph}
 \caption{What is a digraph of a function?\label{functiondigraphs}}
 \end{figure}
 If we have a function \(f\) from a set \(S\) to a set \(T\), we draw a line of dots or circles, called \terminology{vertices} to represent the elements of \(S\) and another (usually parallel) line of circles or dots to represent the elements of \(T\). We then draw an arrow from the circle for \(x\) to the circle for \(y\) if \(f(x) = y\). Sometimes, as in part (e) of the figure, if we have a function from a set \(S\) to itself, we draw only one set of vertices representing the elements of \(S\), in which case we can have arrows both entering and leaving a given vertex. As you see, the digraph can be more enlightening in this case if we experiment with the function to find a nice placement of the vertices rather than putting them in a row.%
@@ -906,7 +906,7 @@ A school play requires a ten dollar donation per person; the donation goes into 
 Notice that a lattice path from \((0,0)\) to \((n,n)\) stays inside (or on the edges of) the square whose sides are the \(x\)-axis, the \(y\)-axis, the line \(x=n\) and the line \(y=n\). In this problem we will compute the number of lattice paths from (0,0) to \((n,n)\) that stay inside (or on the edges of) the triangle whose sides are the \(x\)-axis, the line \(x=n\) and the line \(y=x\). For example, in \hyperref[CatalanPaths]{Figure~\ref{CatalanPaths}} we show the grid of points with integer coordinates for the triangle whose sides are the \(x\)-axis, the line \(x=4\) and the line \(y=x\).%
 \begin{figure}
 \centering
-\includegraphics[width=0.33\linewidth]{../images/CatalanPaths}
+\includegraphics[width=0.33\linewidth]{images/CatalanPaths}
 \caption{The lattice paths from \((0,0)\) to \((i,i)\) for \(i=0,1,2,3,4\).  The number of paths to the point \((i,i)\) is shown just above that point.\label{CatalanPaths}}
 \end{figure}
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
@@ -1021,7 +1021,7 @@ Draw five circles labeled Al, Sue, Don, Pam, and Jo. Find a way to draw red and 
 \hyperref[R_3_3_]{Problems~\ref{R_3_3_}--\ref{notR_3_3_}} together show that six is the smallest number \(R\) with the property that if we have \(R\) people in a room, then there is either a set of (at least) three mutual acquaintances or a set of (at least) three mutual strangers. Another way to say the same thing is to say that six is the smallest number so that no matter how we connect 6 points in the plane (no three on a line) with red and green lines, we can find either a red triangle or a green triangle. There is a name for this property. The \terminology{Ramsey Number} \(R(m,n)\) is the smallest number \(R\) so that if we have \(R\) people in a room, then there is a set of at least \(m\) mutual acquaintances or at least \(n\) mutual strangers. There is also a geometric description of Ramsey Numbers; it uses the idea of a \terminology{complete graph} on \(R\) vertices. A \terminology{complete graph}\index{graph!complete} on \(R\) vertices consists of \(R\) points in the plane together with line segments (or curves) connecting each two of the \(R\) vertices.\footnote{As you may have guessed, a complete graph is a special case of something called a graph.  The word graph will be defined in \hyperref[graphsection]{Subsection~\ref{graphsection}}.\label{fn-4}} The points are called \terminology{vertices}\index{vertex!of a complete graph}\index{vertex} and the line segments are called \terminology{edges}\index{edge!of a complete graph}\index{edge}. In \hyperref[completegraph]{Figure~\ref{completegraph}} we show three different ways to draw a complete graph on four vertices. We use \(K_n\) to stand for a complete graph on \(n\) vertices.%
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{../images/threeK4s}
+\includegraphics[width=0.5\linewidth]{images/threeK4s}
 \caption{Three ways to draw a complete graph on four vertices\label{completegraph}}
 \end{figure}
 Our geometric description of \(R(3,3)\) may be translated into the language of graph theory (which is the subject that includes complete graphs) by saying \(R(3,3)\) is the smallest number \(R\) so that if we color the edges of a \(K_R\) with two colors, then we can find in our picture a \(K_3\) all of whose edges have the same color.  The graph theory description of \(R(m,n)\) is that \(R(m,n)\) is the smallest number \(R\) so that if we color the edges of a \(K_R\) with red and green, then we can find in our picture either a \(K_m\) all of whose edges are red or a \(K_n\) all of whose edges are green. Because we could have said our colors in the opposite order, we may conclude that \(R(m,n) = R(n,m)\). In particular \(R(n,n)\) is the smallest number \(R\) such that if we color the edges of a \(K_R\) with two colors, then our picture contains a \(K_n\) all of whose edges have the same color.%
@@ -1074,7 +1074,7 @@ The number is the Catalan Number: we get a bijection between balanced lists of p
 \item[6.]\marginsymbol[-1em]{\pdftooltip{$*$}{difficult}} \hypertarget{exercise-6}{}Suppose we plan to put six distinct computers in a network as shown in \hyperref[hexagonalnetwork]{Figure~\ref{hexagonalnetwork}}.  The lines show which computers can communicate directly with which others.  Consider two ways of assigning computers to the nodes of the network different if there are two computers that communicate directly in one assignment and that don't communicate directly in the other.  In how many different ways can we assign computers to the network?%
 \begin{figure}
 \centering
-\includegraphics[width=0.33\linewidth]{../images/HexagonalNetwork}
+\includegraphics[width=0.33\linewidth]{images/HexagonalNetwork}
 \caption{A computer network.\label{hexagonalnetwork}}
 \end{figure}
 \par\smallskip
@@ -1356,7 +1356,7 @@ A first-order recurrence relation is one which expresses \(a_n\) in terms of \(a
 \end{activity}
 \begin{figure}
 \centering
-\includegraphics[width=0.85\linewidth]{../images/Hanoi}
+\includegraphics[width=0.85\linewidth]{images/Hanoi}
 \caption{The Towers of Hanoi Puzzle\label{Hanoi}}
 \end{figure}
 \begin{activity}[]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \label{HanoiProblem}
@@ -1425,7 +1425,7 @@ If \(b\not=1\), then \(\displaystyle \sum_{i=0}^{n-1}b^i =
 In \hyperref[Ramseysection]{Section~\ref{Ramseysection}} we introduced the idea of a directed graph. Graphs consist of vertices and edges. We describe vertices and edges in much the same way as we describe points and lines in geometry: we don't really say what vertices and edges are, but we say what they do. We just don't have a complicated axiom system the way we do in geometry. A \terminology{graph}\index{graph} consists of a set \(V\) called a vertex set and a set \(E\) called an edge set. Each member of \(V\) is called a \terminology{vertex}\index{vertex} and each member of \(E\) is called an \terminology{edge}.\index{edge} Associated with each edge are two (not necessarily different) vertices called its endpoints. We draw pictures of graphs by drawing points to represent the vertices and line segments (curved if we choose) whose endpoints are at vertices to represent the edges. In \hyperref[Threegraphs]{Figure~\ref{Threegraphs}} we show three pictures of graphs.%
 \begin{figure}
 \centering
-\includegraphics[width=0.95\linewidth]{../images/threegraphs}
+\includegraphics[width=0.95\linewidth]{images/threegraphs}
 \caption{Three different graphs\label{Threegraphs}}
 \end{figure}
 Each gray circle in the figure represents a vertex; each line segment represents an edge. You will note that we labelled the vertices; these labels are names we chose to give the vertices. We can choose names or not as we please. The third graph also shows that it is possible to have an edge that connects a vertex (like the one labelled \(y\)) to itself or it is possible to have two or more edges (like those between vertices \(v\) and \(y\)) between two vertices. The \terminology{degree}\index{vertex!degree of}\index{degree of a vertex} of a vertex is the number of times it appears as the endpoint of edges; thus the degree of \(y\) in the third graph in the figure is four.%
@@ -1482,7 +1482,7 @@ In a tree, given two vertices, how many paths can you find between them? Prove t
 How many trees are there on the vertex set \(\{1,2\}\)? On the vertex set \(\{1,2,3\}\)? When we label the vertices of our tree, we consider the tree which has edges between vertices 1 and 2 and between vertices 2 and 3 different from the tree that has edges between vertices 1 and 3 and between 2 and 3. See \hyperref[differenttrees]{Figure~\ref{differenttrees}}.%
 \begin{figure}
 \centering
-\includegraphics[width=0.8\linewidth]{../images/threetrees}
+\includegraphics[width=0.8\linewidth]{images/threetrees}
 \caption{The three labelled trees on three vertices\label{differenttrees}}
 \end{figure}
 How many (labelled) trees are there on four vertices? You don't have a lot of data to guess from, but try to guess a formula for the number of labelled trees with vertex set \(\{1,2,\cdots,n\}\).%
@@ -1517,7 +1517,7 @@ What is the number of (labelled) trees on \(n\) vertices with three vertices of 
 Many of the applications of trees arise from trying to find an efficient way to connect all the vertices of a graph. For example, in a telephone network, at any given time we have a certain number of wires (or microwave channels, or cellular channels) available for use. These wires or channels go from a specific place to a specific place. Thus the wires or channels may be thought of as edges of a graph and the places the wires connect may be thought of as vertices of that graph. A tree whose edges are some of the edges of a graph \(G\) and whose vertices are all of the vertices of the graph \(G\) is called a \terminology{spanning tree}\index{spanning tree}\index{tree!spanning} of \(G\). A spanning tree for a telephone network will give us a way to route calls between any two vertices in the network. In \hyperref[spanningtrees]{Figure~\ref{spanningtrees}} we show a graph and all its spanning trees.%
 \begin{figure}
 \centering
-\includegraphics[width=0.95\linewidth]{../images/spanningtrees}
+\includegraphics[width=0.95\linewidth]{images/spanningtrees}
 \caption{A graph and all its spanning trees.\label{spanningtrees}}
 \end{figure}
 \begin{activity}[]\marginsymbol[-1em]{} \label{activity-117}
@@ -1539,13 +1539,13 @@ The method you used in \hyperref[mincostspantree]{Problem~\ref{mincostspantree}}
 There are two operations on graphs that we can apply to get a recurrence (though a more general kind than those we have studied for sequences) which will let us compute the number of spanning trees of a graph. The operations each apply to an edge \(e\) of a graph \(G\). The first is called \terminology{deletion};\index{deletion} we \emph{delete} the edge \(e\) from the graph by removing it from the edge set. \hyperref[twodeletions]{Figure~\ref{twodeletions}} shows how we can delete edges from a graph to get a spanning tree.%
 \begin{figure}
 \centering
-\includegraphics[width=0.6\linewidth]{../images/twodeletions}
+\includegraphics[width=0.6\linewidth]{images/twodeletions}
 \caption{Deleting two appropriate edges from this graph gives a spanning tree.\label{twodeletions}}
 \end{figure}
 The second operation is called \terminology{contraction}.%
 \begin{figure}
 \centering
-\includegraphics[width=0.65\linewidth]{../images/threecontractions}
+\includegraphics[width=0.65\linewidth]{images/threecontractions}
 \caption{The results of contracting three different edges in a graph.\label{threecontractions}}
 \end{figure}
 Contractions of three different edges in the same graph are shown in \hyperref[threecontractions]{Figure~\ref{threecontractions}}. Intuitively, we contract an edge by shrinking it in length until its endpoints coincide; we let the rest of the graph ``go along for the ride.'' To be more precise, we \terminology{contract}\index{contraction} the edge \(e\) with endpoints \(v\) and \(w\) as follows: \leavevmode%
@@ -1566,7 +1566,7 @@ We use \(G-e\) (read as \(G\) minus \(e\)) to stand for the result of deleting \
 \item\label{task-101} \marginsymbol[-2.5em]{} Use the recurrence of the previous part to compute the number of spanning trees of the graph in \hyperref[spantreeexercise]{Figure~\ref{spantreeexercise}}.%
 \begin{figure}
 \centering
-\includegraphics[width=0.2\linewidth]{../images/spantreeexercise}
+\includegraphics[width=0.2\linewidth]{images/spantreeexercise}
 \caption{A graph.\label{spantreeexercise}}
 \end{figure}
 \end{enumerate}
@@ -2160,7 +2160,7 @@ When we write a partition as \(\lambda = \lambda_1,\lambda_2,\ldots,\lambda_n\),
 The decreasing list representation of partitions leads us to a handy way to visualize partitions. Given a decreasing list \((\lambda_1,\lambda_2,\ldots \lambda_n)\), we draw a figure made up of rows of dots that has \(\lambda_1\) equally spaced dots in the first row, \(\lambda_2\) equally spaced dots in the second row, starting out right below the beginning of the first row and so on. Equivalently, instead of dots, we may use identical squares, drawn so that a square touches each one to its immediate right or immediately below it along an edge. See \hyperref[FerrersYoung]{Figure~\ref{FerrersYoung}} for examples.\index{Ferrers diagram}\index{Young diagram}\index{partition of an integer!Ferrers diagram}\index{partition of an integer!Young diagram}\index{diagram!of a partition!Ferrers}\index{diagram!of a partition!Young} The figure we draw with dots is called the \terminology{Ferrers diagram} of the partition; sometimes the figure with squares is also called a Ferrers diagram; sometimes it is called a \terminology{Young diagram}. At this stage it is irrelevant which name we choose and which kind of figure we draw; in more advanced work the squares are handy because we can put things like numbers or variables into them.  From now on we will use squares and call the diagrams Young diagrams.%
 \begin{figure}
 \centering
-\includegraphics[width=0.45\linewidth]{../images/FerrersYoung}
+\includegraphics[width=0.45\linewidth]{images/FerrersYoung}
 \caption{The Ferrers and Young diagrams of the partition (5,3,3,2)\label{FerrersYoung}}
 \end{figure}
 \begin{activity}[]\marginsymbol[-1em]{\pdftooltip{$\bullet$}{essential}} \label{activity-163}
@@ -2170,7 +2170,7 @@ Draw the Young diagram of the partition (4,4,3,1,1). Describe the geometric rela
 The partition \((\lambda_1,\lambda_2,\ldots, \lambda_n)\) is called the \terminology{conjugate}\index{conjugate of an integer partition}\index{partition of an integer!conjugate of} of the partition \((\gamma_1,\gamma_2,\ldots, \gamma_m)\) if we obtain the Young diagram of one from the Young diagram of the other by flipping one around the line with slope -1 that extends the diagonal of the top left square. See \hyperref[conjugateYoung]{Figure~\ref{conjugateYoung}} for an example.%
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{../images/conjugateYoung}
+\includegraphics[width=0.5\linewidth]{images/conjugateYoung}
 \caption{The Ferrers diagram the partition (5,3,3,2) and its conjugate.\label{conjugateYoung}}
 \end{figure}
 What is the conjugate of (4,4,3,1,1)? How is the largest part of a partition related to the number of parts of its conjugate? What does this tell you about the number of partitions of a positive integer \(k\) with largest part \(m\)?%
@@ -2188,7 +2188,7 @@ Show that the number of partitions of \(k\) into \(4\) parts equals the number o
 The idea of conjugation of a partition could be defined without the geometric interpretation of a Young diagram, but it would seem far less natural without the geometric interpretation. Another idea that seems much more natural in a geometric context is this. Suppose we have a partition of \(k\) into \(n\) parts with largest part \(m\). Then the Young diagram of the partition can fit into a rectangle that is \(m\) or more units wide (horizontally) and \(n\) or more units deep. Suppose we place the Young diagram of our partition in the top left-hand corner of an \(m'\) unit wide and \(n'\) unit deep rectangle with \(m'\ge m\) and \(n' \ge n\), as in \hyperref[complementpartition]{Figure~\ref{complementpartition}}.%
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{../images/complementpartition}
+\includegraphics[width=0.7\linewidth]{images/complementpartition}
 \caption{To complement the partition \((5,3,3,2)\) in a 6 by 5 rectangle: enclose it in the rectangle, rotate, and cut out the original Young diagram.\label{complementpartition}}
 \end{figure}
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
@@ -3286,7 +3286,7 @@ Use the deletion-contraction recurrence to compute the chromatic polynomial of t
 \setlength{\panelmax}{0pt}
 \newsavebox{\panelboxAAimage}
 \savebox{\panelboxAAimage}{%
-\includegraphics[width=0.25\linewidth]{../images/spantreeexercise}
+\includegraphics[width=0.25\linewidth]{images/spantreeexercise}
 }
 \newlength{\phAAimage}\setlength{\phAAimage}{\ht\panelboxAAimage+\dp\panelboxAAimage}
 \settototalheight{\phAAimage}{\usebox{\panelboxAAimage}}
@@ -3448,7 +3448,7 @@ Until now we have thought of permutations mostly as ways of listing the elements
 \leavevmode%
 \begin{figure}
 \centering
-\includegraphics[width=0.95\linewidth]{../images/RotationsOfSquare}
+\includegraphics[width=0.95\linewidth]{images/RotationsOfSquare}
 \caption{The four possible results of rotating a square and maintaining its position.\label{RotationsOfSquare}}
 \end{figure}
 In \hyperref[RotationsOfSquare]{Figure~\ref{RotationsOfSquare}} we show a square with its four vertices labelled 1, 2, 3, and 4. We have also labeled the spot in the plane where each of these vertices falls with the same label. Then we have shown the effect of rotating the square clockwise through 90, 180, 270, and 360 degrees (which is the same as rotating through 0 degrees). Underneath each of the rotated squares we have named the function that carries out the rotation. We use \(\rho\), the Greek letter pronounced ``row,'' to stand for a 90 degree clockwise rotation. We use \(\rho^2\) to stand for two 90 degree rotations, and so on. We can think of the function \(\rho\) as a function on the four element set\footnote{What we are doing is restricting the rotation \(\rho\) to the set \(\{1,2,3,4\}\).\label{fn-19}} \(\{1,2,3,4\}\). In particular, for any function \(\varphi\) (the Greek letter phi, usually pronounced ``fee,'' but sometimes ``fie'') from the plane back to itself that may move the square around but otherwise leaves it in the same place, we let \(\varphi(i)\) be the label of the place where vertex previously in position \(i\) is now. Thus \(\rho(1) =2\), \(\rho(2)=3\), \(\rho(3)=4\) and \(\rho(4) =1\). Notice that \(\rho\) is a permutation on the set \(\{1,2,3,4\}\).%
@@ -3554,7 +3554,7 @@ then, by applying the definition of composition of functions, we may compute \(\
 \varphi\) as shown in \hyperref[permutationproduct]{Figure~\ref{permutationproduct}}.%
 \begin{figure}
 \centering
-\includegraphics[width=0.73\linewidth]{../images/productofpermutations}
+\includegraphics[width=0.73\linewidth]{images/productofpermutations}
 \caption{How to multiply permutations in two-row notation.\label{permutationproduct}}
 \end{figure}
 We don't normally put the circle between two permutations in two row notation when we are composing them, and refer to the operation as multiplying the permutations, or as the product of the permutations. To see how \hyperref[permutationproduct]{Figure~\ref{permutationproduct}} illustrates composition, notice that the arrow starting at 1 in \(\varphi\) goes to 4. Then from the 4 in \(\varphi\) it goes to the 4 in \(\sigma\) and then to 2. This illustrates that \(\varphi(1)=4\) and \(\sigma(4) =2\), so that \(\sigma(\varphi(1))=2\).%
@@ -3586,7 +3586,7 @@ How many elements does the group \(D_n\) have? Prove that you are correct.%
 In \hyperref[cube1]{Figure~\ref{cube1}} we show a cube with the positions of its vertices and faces labeled.  As with motions of the square, we let \(\varphi(x)\) be the label of the place where vertex previously in position \(x\) is now.%
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{../images/cube1}
+\includegraphics[width=0.5\linewidth]{images/cube1}
 \caption{A cube with the positions of its vertices and faces labelled.  The curved arrows point to the positions that are blocked by the cube.\label{cube1}}
 \end{figure}
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
@@ -3656,7 +3656,7 @@ There is an even more efficient way to write down permutations. Notice that the 
 \end{pmatrix}\). We have drawn the directed graph of this permutation in \hyperref[permutationcycledigraph]{Figure~\ref{permutationcycledigraph}}.%
 \begin{figure}
 \centering
-\includegraphics[width=0.73\linewidth]{../images/permutationcycledigraph}
+\includegraphics[width=0.73\linewidth]{images/permutationcycledigraph}
 \caption{The directed graph of a permutation .\label{permutationcycledigraph}}
 \end{figure}
 You see that the graph has two directed cycles, the rather trivial one with vertex 4 pointing to itself, and the nontrivial one with vertex 1 pointing to vertex 2 pointing to vertex 3 which points back to vertex 1. A permutation is called a \terminology{cycle}\index{cycle (of a permutation)}\index{permutation!cycle of} if its digraph consists of exactly one cycle. Thus \(\begin{pmatrix}1\amp 2\amp 3\cr2\amp 3\amp 1
@@ -4144,7 +4144,7 @@ In how many ways may we color the edges of a (regular) \((2n+1)\)-gon free to mo
 How many different proper colorings with four colors are there of the graph in \hyperref[starhexagon]{Figure~\ref{starhexagon}}? Two graphs are the same if we can redraw one of the graphs, not changing the vertex set or edge set, so that it is identical to the other one. This is equivalent to permuting the vertices in some way so that when we apply the permutation to the endpoints of the edges to get a new edge set, the new edge set is equal to the old one. Such a permutation is called an \terminology{automorphism}\index{automorphism (of a graph)} of the graph. Thus two colorings are different if there is no automorphism of the graph that carries one to the other one.%
 \begin{figure}
 \centering
-\includegraphics[width=0.33\linewidth]{../images/NumberedHexagonalNetwork}
+\includegraphics[width=0.33\linewidth]{images/NumberedHexagonalNetwork}
 \caption{A graph on six vertices.\label{starhexagon}}
 \end{figure}
 \end{activity}
@@ -4288,7 +4288,7 @@ How many cubes can we make in \hyperref[coloredsticks]{Problem~\ref{coloredstick
 \end{activity}
 \begin{figure}
 \centering
-\includegraphics[width=0.33\linewidth]{../images/NumberedHexagonalNetwork}
+\includegraphics[width=0.33\linewidth]{images/NumberedHexagonalNetwork}
 \caption{A possible computer network.\label{HexNet}}
 \end{figure}
 \begin{activity}[]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \label{activity-326}
@@ -4442,7 +4442,7 @@ If \(f:S\rightarrow T\) is a function, we say that \(f\) \terminology{maps} \(x\
 We visualize numerical functions like \(f(x)=x^2\) with their graphs in Cartesian coordinate systems. We will call these kinds of graphs \index{graph!coordinate}\emph{coordinate graphs} to distinguish them from other kinds of graphs used to visualize relations that are non-numerical.%
 \begin{figure}
 \centering
-\includegraphics[width=0.1\linewidth]{../images/alphabetdigraph}
+\includegraphics[width=0.1\linewidth]{images/alphabetdigraph}
 \caption{The alphabet digraph.\label{alphabetdigraph}}
 \end{figure}
 In \hyperref[alphabetdigraph]{Figure~\ref{alphabetdigraph}} we illustrate another kind of graph, a ``directed graph'' or ``digraph'' of the ``comes before in alphabetical order" relation on the letters \(a\), \(b\), \(c\), and \(d\). To draw a \index{graph!directed}\index{directed graph}\index{digraph}\terminology{directed graph} of a relation on a set \(S\), we draw a circle (or dot, if we prefer), which we call a \index{vertex}\terminology{vertex}\index{vertex!of a complete graph}, for each element of the set, we usually label the vertex with the set element it corresponds to, and we draw an arrow from the vertex for \(a\) to that for \(b\) if \(a\) is related to \(b\), that is, if the ordered pair \((a,b)\) is in our relation. We call such an arrow an \index{edge}\terminology{edge}\index{edge!in a digraph} or a \terminology{directed edge}. We draw the arrow from \(a\) to \(b\), for example, because \(a\) comes before \(b\) in alphabetical order. We try to choose the locations where we draw our vertices so that the arrows capture what we are trying to illustrate as well as possible. Sometimes this entails redrawing our directed graph several times until we think the arrows capture the relationship well.%

@@ -23,7 +23,7 @@
     <figure xml:id="Threegraphs" >
       <caption>Three different
       graphs</caption>
-      <image width="95%" source="../images/threegraphs" />
+      <image width="95%" source="images/threegraphs" />
     </figure>
 
     <p>
@@ -399,7 +399,7 @@
         <figure xml:id="differenttrees" >
           <caption>The three labelled
           trees on three vertices</caption>
-          <image width="80%" source="../images/threetrees" />
+          <image width="80%" source="images/threetrees" />
         </figure>
         <p>
           How many
@@ -592,7 +592,7 @@
     <figure xml:id="spanningtrees" >
       <caption>A graph
       and all its spanning trees.</caption>
-      <image width="95%" source="../images/spanningtrees" />
+      <image width="95%" source="images/spanningtrees" />
     </figure>
 
     <activity>
@@ -766,7 +766,7 @@
       <caption>Deleting
       two appropriate edges from this graph gives a spanning
       tree.</caption>
-      <image width="60%" source="../images/twodeletions" />
+      <image width="60%" source="images/twodeletions" />
     </figure>
 
     <p>
@@ -777,7 +777,7 @@
       <caption>The results of
       contracting three different edges in a
       graph.</caption>
-      <image width="65%" source="../images/threecontractions" />
+      <image width="65%" source="images/threecontractions" />
     </figure>
 
     <p>
@@ -865,7 +865,7 @@
         <figure xml:id="spantreeexercise" >
           <caption>A
           graph.</caption>
-          <image width="20%" source="../images/spantreeexercise" />
+          <image width="20%" source="images/spantreeexercise" />
         </figure>
       </statement>
 
@@ -889,7 +889,7 @@
         </p>
         <figure xml:id="spantreeexerciseresult">
             <caption>Various deletions and contractions.</caption>
-            <image width="95%" source="../images/spantreeexerciseresult" />
+            <image width="95%" source="images/spantreeexerciseresult" />
         </figure>
         <p>
           We could now convert each of these graphs to trees with multiple edges by

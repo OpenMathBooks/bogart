@@ -72,7 +72,7 @@
         <figure xml:id="hexagonalnetwork" >
           <caption>A computer
           network.</caption>
-          <image width="33%" source="../images/HexagonalNetwork" />
+          <image width="33%" source="images/HexagonalNetwork" />
         </figure>
         </statement>
         <solution>

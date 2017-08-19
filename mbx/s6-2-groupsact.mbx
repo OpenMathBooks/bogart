@@ -220,7 +220,7 @@
       <caption>A cube with the positions of its vertices and
       faces labelled.  The curved arrows point to the positions that are blocked by
       the cube.</caption>
-      <image width="50%" source="../images/cube1" />
+      <image width="50%" source="images/cube1" />
     </figure>-->
 
     <activity category="essential">
@@ -886,7 +886,7 @@ and is denoted by <m>Gx_{\text{multi}}</m>.
           function <m>f</m> with <m>f(1) =R</m>, <m>f(2)
           = R</m>,
           <m>f(3)=B</m>, <m>f(4)=B</m>.</caption>
-          <image width="20%" source="../images/ColoredSquare" />
+          <image width="20%" source="images/ColoredSquare" />
         </figure>
 
     <activity xml:id="actiononfunctions" category="essential">
@@ -1031,7 +1031,7 @@ and is denoted by <m>Gx_{\text{multi}}</m>.
       <caption>The four
       possible results of rotating a colored square
       and maintaining its position.</caption>
-      <image width="95%" source="../images/RotationsOfColoredSquare" />
+      <image width="95%" source="images/RotationsOfColoredSquare" />
     </figure>
 
     <p>
@@ -1060,7 +1060,7 @@ and is denoted by <m>Gx_{\text{multi}}</m>.
       <solution>
           <figure xml:id="MotionsOfColoredSquare">
               <caption>Motions of a colored square</caption>
-          <image width="95%" source="../images/MotionsOfColoredSquare" />
+          <image width="95%" source="images/MotionsOfColoredSquare" />
           </figure>
           <p>
           There are four elements in the orbit. Two elements fix <m>f</m>. Two elements
@@ -1616,9 +1616,9 @@ and is denoted by <m>Gx_{\text{multi}}</m>.
       </statement>
       <solution>
         <figure xml:id="ActionsOnSquare">
-          <image width="95%" source="../images/MotionsOfColoredSquare" />
-          <image width="95%" source="../images/MotionsOfColoredSquare1" />
-          <image width="95%" source="../images/MotionsOfColoredSquare" />
+          <image width="95%" source="images/MotionsOfColoredSquare" />
+          <image width="95%" source="images/MotionsOfColoredSquare1" />
+          <image width="95%" source="images/MotionsOfColoredSquare" />
           <caption></caption>
         </figure>
       </solution>
@@ -2177,7 +2177,7 @@ and is denoted by <m>Gx_{\text{multi}}</m>.
 
         <figure xml:id="starhexagon" >
           <caption>A graph on six vertices.</caption>
-          <image width="33%" source="../images/NumberedHexagonalNetwork" />
+          <image width="33%" source="images/NumberedHexagonalNetwork" />
         </figure>
       </statement>
       <hint>

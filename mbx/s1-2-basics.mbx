@@ -432,14 +432,14 @@
     <figure xml:id="sumprinc" >
       <caption>The union of these
       two disjoint sets has size 17.</caption>
-      <image width="50%" source="../images/SumPrinc" />
+      <image width="50%" source="images/SumPrinc" />
     </figure>
 
     <figure xml:id="prodprinc" >
       <caption>The
       union of four disjoint sets of size
       five.</caption>
-      <image width="50%" source="../images/ProdPrinc" />
+      <image width="50%" source="images/ProdPrinc" />
     </figure>
 
     <p>
@@ -916,7 +916,7 @@ many ways can you pair up the next person who isn't already paired up?
     <figure xml:id="functiondigraphs" >
       <caption>What is a digraph of a
       function?</caption>
-      <image width="73%" source="../images/functiondigraph" />
+      <image width="73%" source="images/functiondigraph" />
     </figure>
 
     <p>

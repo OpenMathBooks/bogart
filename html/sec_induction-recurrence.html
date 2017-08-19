@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-19T12:57:36-06:00    *-->
+<!--*    on 2017-08-19T13:37:31-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -40,8 +40,7 @@ MathJax.Hub.Config({
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="custom-styles.css" rel="stylesheet" type="text/css">
-<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<link href="assets/css/custom-styles.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
@@ -197,7 +196,7 @@ a_{n-1}a_1.
 <article class="introduction" id="introduction-29"><p id="p-537">A first-order recurrence relation is one which expresses \(a_n\) in terms of \(a_{n-1}\) and other functions of \(n\text{,}\) but which does not include any of the terms \(a_i\) for \(i\lt n-1\) in the equation.</p></article><article class="exercise-like" id="task-87"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-538">Which of the <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">recurrences (2.1)</a> through <a knowl="./knowl/Catalanrecurrence.html" knowl-id="xref-Catalanrecurrence" alt="Equation 2.6 " title="Equation 2.6 ">(2.6)</a> are first order recurrences?</p></article><article class="exercise-like" id="task-88"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <p id="p-540">Show that there is one and only one sequence \(a_n\) that is defined for every nonnegative integer \(n\text{,}\) satisfies a given first order recurrence, and satisfies \(a_0=a\) for some fixed constant \(a\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-82" id="hint-82"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-82" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-541">A first order recurrence for \(a_n\) gives us \(a_n\) as a function of \(a_{n-1}\text{.}\)</p></span></span></article></article><figure class="figure-like" id="Hanoi"><img width="85%" src="../images/Hanoi" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.1</span>The Towers of Hanoi Puzzle</figcaption></figure><article class="example-like interesting" id="HanoiProblem"><h5 class="heading">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-82" id="hint-82"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-82" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-541">A first order recurrence for \(a_n\) gives us \(a_n\) as a function of \(a_{n-1}\text{.}\)</p></span></span></article></article><figure class="figure-like" id="Hanoi"><object type="image/svg+xml" style="width:85%; margin:auto; display:block;" data="images/Hanoi.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.1</span>The Towers of Hanoi Puzzle</figcaption></figure><article class="example-like interesting" id="HanoiProblem"><h5 class="heading">
 <span class="type">Problem</span><span class="codenumber">91</span>
 </h5>
 <p id="p-543">The “Towers of Hanoi” puzzle has three rods rising from a rectangular base with \(n\) rings of different sizes stacked in decreasing order of size on one rod. A legal move consists of moving a ring from one rod to another so that it does not land on top of a smaller ring. If \(m_n\) is the number of moves required to move all the rings from the initial rod to another rod that you choose, give a recurrence for \(m_n\text{.}\) (Hint: suppose you already knew the number of moves needed to solve the puzzle with \(n-1\) rings.)</p>

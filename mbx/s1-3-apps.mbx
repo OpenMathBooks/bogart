@@ -197,7 +197,7 @@
 
       <figure xml:id="CatalanPaths" >
           <caption>The lattice paths from <m>(0,0)</m> to <m>(i,i)</m> for <m>i=0,1,2,3,4</m>.  The number of paths to the point <m>(i,i)</m> is shown just above that point.</caption>
-          <image width="33%" source="../images/CatalanPaths" />
+          <image width="33%" source="images/CatalanPaths" />
       </figure>
         </introduction>
       <task>
@@ -796,7 +796,7 @@
           <p>In the figure that follows, we use solid lines for red and dashed lines for green. Clearly there is no solid triangle and no dashed triangle.
           </p>
           <sidebyside width="33%">
-              <image source="../images/NonRamsey5" />
+              <image source="images/NonRamsey5" />
           </sidebyside>
           <p><xref ref="R_3_3_" /> says you can't do this with
           six people's names. This problem says that the conclusion of <xref ref="R_3_3_" /> does not hold when you have five people.
@@ -814,7 +814,7 @@
     <figure xml:id="completegraph" >
       <caption>Three ways to draw a
       complete graph on four vertices</caption>
-      <image width="50%" source="../images/threeK4s" />
+      <image width="50%" source="images/threeK4s" />
     </figure>
 
     <p>Our geometric description of <m>R(3,3)</m> may be translated into the language of graph theory (which is the subject that includes complete graphs) by saying <m>R(3,3)</m> is the smallest number <m>R</m> so that if we color the edges of a <m>K_R</m> with two colors, then we can find in our picture a <m>K_3</m> all of whose edges have the same color.  The graph theory description of <m>R(m,n)</m> is that <m>R(m,n)</m> is the smallest number <m>R</m> so that if we color the edges of a <m>K_R</m> with red and green, then we can find in our picture either a <m>K_m</m> all of whose edges are red or a <m>K_n</m> all of whose edges are green. Because we could have said our colors in the opposite order, we may conclude that <m>R(m,n) = R(n,m)</m>. In particular <m>R(n,n)</m> is the smallest number <m>R</m> such that if we color the edges of a <m>K_R</m> with two colors, then our picture contains a <m>K_n</m> all of whose edges have the same color.
@@ -842,7 +842,7 @@
         </p>
         <figure xml:id="NonRamsey8">
             <caption>A graph showing <m>R(4,4) \gt 8</m></caption>
-            <image width="33%" source="../images/NonRamsey8" />
+            <image width="33%" source="images/NonRamsey8" />
         </figure>
       </solution>
     </activity>

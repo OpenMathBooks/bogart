@@ -58,7 +58,7 @@
           <sidebyside widths="25%">
               <figure xml:id="del-cont" >
                   <caption>A graph.</caption>
-                  <image source="../images/spantreeexercise" />
+                  <image source="images/spantreeexercise" />
               </figure>
           </sidebyside>
         </statement>
@@ -79,7 +79,7 @@
           <sidebyside width="95%">
           <figure xml:id="delete-contract">
               <caption>Graphs obtained through deletions and contractions</caption>
-              <image source="../images/spantreeexerciseresult" />
+              <image source="images/spantreeexerciseresult" />
           </figure>
           </sidebyside>
             <p>The chromatic polynomial of a triangle is <m>x(x-1)(x-2)</m> because

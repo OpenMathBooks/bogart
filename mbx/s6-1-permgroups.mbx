@@ -21,7 +21,7 @@
       <caption>The four
       possible results of rotating a square
       and maintaining its position.</caption>
-      <image width="95%" source="../images/RotationsOfSquare" />
+      <image width="95%" source="images/RotationsOfSquare" />
     </figure>
 
     <p>
@@ -595,7 +595,7 @@
       <caption>How to
       multiply permutations in two-row
       notation.</caption>
-      <image width="73%" source="../images/productofpermutations" />
+      <image width="73%" source="images/productofpermutations" />
     </figure>
 
     <p>
@@ -765,7 +765,7 @@
           <caption>A cube with the positions of its vertices and
           faces labelled.  The curved arrows point to the positions that are blocked by
           the cube.</caption>
-          <image width="50%" source="../images/cube1" />
+          <image width="50%" source="images/cube1" />
         </figure>
       </introduction>
 
@@ -1265,7 +1265,7 @@
 <!--      <m>\begin{pmatrix}1\amp 2\amp 3\amp 4\\
       2\amp 3\amp 1\amp 4
       \end{pmatrix}</m> (Commented out because LaTeX doesn't like matrices in captions-->.</caption>
-      <image width="73%" source="../images/permutationcycledigraph" />
+      <image width="73%" source="images/permutationcycledigraph" />
     </figure>
 
     <p>

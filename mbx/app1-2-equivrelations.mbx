@@ -51,7 +51,7 @@
           four ways.
         </p>
         <sidebyside width="70%">
-          <image source="../images/flavordigraph" />
+          <image source="images/flavordigraph" />
         </sidebyside>
       </solution>
     </activity>
@@ -90,7 +90,7 @@
         cream.
       </p>
         <sidebyside width="70%">
-            <image source="../images/icecreamindish" />
+            <image source="images/icecreamindish" />
         </sidebyside>
       </solution>
     </activity>
@@ -104,7 +104,7 @@
     </statement>
       <solution>
           <sidebyside width="70%">
-              <image source="../images/4AROUNDATABLE" />
+              <image source="images/4AROUNDATABLE" />
           </sidebyside>
       </solution>
     </activity>
