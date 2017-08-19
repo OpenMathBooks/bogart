@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:20-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>The element \(k\) is either in a cycle by itself or it isn't. The number of permutations in which it is in a cycle by itself is \(c(k-1,n-1)\text{.}\) If it is in a cycle with something else, it can come after any of the \(k-1\) elements, and each choice of which one it comes after gives a different permutation. (You can always shift a cycle around so that \(k\) doesn't come first.) Thus \(c(k,n) = c(k-1,n-1) + (k-1)c(k-1,n)\text{.}\) The table is:</p>
+<div class="sidebyside" style=""><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(k/n\)</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">1</td>
+<td class="l m b1 r1 l0 t0 lines">2</td>
+<td class="l m b1 r1 l0 t0 lines">3</td>
+<td class="l m b1 r1 l0 t0 lines">4</td>
+<td class="l m b1 r1 l0 t0 lines">5</td>
+<td class="l m b1 r1 l0 t0 lines">6</td>
+<td class="l m b1 r1 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">2</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">3</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">2</td>
+<td class="l m b0 r1 l0 t0 lines">3</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">4</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">6</td>
+<td class="l m b0 r1 l0 t0 lines">11</td>
+<td class="l m b0 r1 l0 t0 lines">6</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">5</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">24</td>
+<td class="l m b0 r1 l0 t0 lines">50</td>
+<td class="l m b0 r1 l0 t0 lines">35</td>
+<td class="l m b0 r1 l0 t0 lines">10</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">6</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">120</td>
+<td class="l m b0 r1 l0 t0 lines">274</td>
+<td class="l m b0 r1 l0 t0 lines">225</td>
+<td class="l m b0 r1 l0 t0 lines">85</td>
+<td class="l m b0 r1 l0 t0 lines">15</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r1 l1 t0 lines">7</td>
+<td class="l m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r1 l0 t0 lines">720</td>
+<td class="l m b0 r1 l0 t0 lines">1764</td>
+<td class="l m b0 r1 l0 t0 lines">1624</td>
+<td class="l m b0 r1 l0 t0 lines">735</td>
+<td class="l m b0 r1 l0 t0 lines">175</td>
+<td class="l m b0 r1 l0 t0 lines">21</td>
+<td class="l m b0 r1 l0 t0 lines">1</td>
+</tr>
+</table></div></div></div>
+<p>We see that the table is identical with our earlier table of the Stirling numbers of the first kind, except that in that table there was an alternating pattern of minus signs, offset by one place in successive rows. Thus it must be the case that \(c(k,n)=
+|s(k,n)|\text{.}\) To prove this, note that it is the case when \(k=0\text{,}\) and also when \(n=1\text{.}\) Now assume inductively it is true when \(k= m-1\) and notice that if \(n&gt;0\text{,}\) \(s(m,n)=s(m-1,n-1)-(m-1)s(m-1,n)\text{,}\) that \(s(m-1,n-1)\) and \(s(m-1,n)\) have opposite signs, so</p>
+\begin{align*}
+\hspace{-.5in}|s(m-1)-(m-1)s(m-1,n)| =\amp  |s(m-1| +
+(m-1)|s(m-1,n)|\\
+=\amp c(m-1,n-1)+(m-1)c(m-1,n)\\
+=\amp  c(m,n).
+\end{align*}
+<p>Thus by the principle of mathematical induction \(c(k,n) = |s(k,n)|\) for all nonnegative numbers \(k\) (and all \(n\) between 0 and \(k\text{.}\))</p></span></body>
+</html>

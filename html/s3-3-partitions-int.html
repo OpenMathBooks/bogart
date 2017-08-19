@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:38-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Partitions of Integers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="s3-2-partitions.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_distribution-suppprobs.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="s3-2-partitions.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_distribution-suppprobs.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int" class="active">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="s3-3-partitions-int"><header title="Section 3.3 Partitions of Integers"><h1 class="heading hide-type" alt="Section 3.3 Partitions of Integers">
+<span class="type">Section</span><span class="codenumber">3.3</span><span class="title">Partitions of Integers</span><a href="s3-3-partitions-int.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-37"><p id="p-876">We have now completed all our distribution problems except for those in which both the objects and the recipients are identical. For example, we might be putting identical apples into identical paper bags. In this case all that matters is how many bags get one apple (how many recipients get one object), how many get two, how many get three, and so on. Thus for each bag we have a number, and the multiset of numbers of apples in the various bags is what determines our distribution of apples into identical bags. A multiset of positive integers that add to \(n\) is called a <em class="terminology">partition</em> of \(n\text{.}\) Thus the partitions of 3 are 1+1+1, 1+2 (which is the same as 2+1) and 3. The number of partitions of \(k\) is denoted by \(P(k)\text{;}\) in computing the partitions of 3 we showed that \(P(3) = 3\text{.}\) It is traditional to use Greek letters like \(\lambda\) (the Greek letter \(\lambda\) is pronounced LAMB duh) to stand for partitons; we might write \(\lambda= 1,1,1\text{,}\) \(\gamma= 2,1\) and \(\tau = 3\) to stand for the three partitions we just described. We also write \(\lambda = 1^3\) as a shorthand for \(\lambda = 1,1,1\text{,}\) and we write \(\lambda \dashv 3\) as a shorthand for ``\(\lambda\) is a partition of three."</p>
+<article class="example-like motivation" id="activity-157"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">157</span>
+</h5>
+<p id="p-877">Find all partitions of 4 and find all partitions of 5, thereby computing \(P(4)\) and \(P(5)\text{.}\)</p></article></section><section class="subsection" id="subsection-36"><header title="Subsection 3.3.1 The number of partitions of \(k\) into \(n\) parts"><h1 class="heading hide-type" alt="Subsection 3.3.1 The number of partitions of \(k\) into \(n\) parts">
+<span class="type">Subsection</span><span class="codenumber">3.3.1</span><span class="title">The number of partitions of \(k\) into \(n\) parts</span><a href="s3-3-partitions-int.html#subsection-36" class="permalink">¶ permalink</a>
+</h1></header><p id="p-879">A <em class="terminology">partition of the integer \(k\) into \(n\) parts</em> is a multiset of \(n\) positive integers that add to \(k\text{.}\) We use \(P(k,n)\) to denote the number of partitions of \(k\) into \(n\) parts. Thus \(P(k,n)\) is the number of ways to distribute \(k\) identical objects to \(n\) identical recipients so that each gets at least one.</p>
+<article class="example-like motivation" id="activity-158"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">158</span>
+</h5>
+<p id="p-880">Find \(P(6,3)\) by finding all partitions of 6 into 3 parts. What does this say about the number of ways to put six identical apples into three identical bags so that each bag has at least one apple?</p></article></section><section class="subsection" id="subsection-37"><header title="Subsection 3.3.2 Representations of partitions"><h1 class="heading hide-type" alt="Subsection 3.3.2 Representations of partitions">
+<span class="type">Subsection</span><span class="codenumber">3.3.2</span><span class="title">Representations of partitions</span><a href="s3-3-partitions-int.html#subsection-37" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like motivation" id="activity-159"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">159</span>
+</h5>
+<p id="p-882">How many solutions are there in the positive integers to the equation \(x_1+x_2+x_3 =7\) with \(x_1\ge x_2\ge x_3\text{?}\)</p></article><article class="example-like" id="activity-160"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">160</span>
+</h5>
+<p id="p-884">Explain the relationship between partitions of \(k\) into \(n\) parts and lists \(x_1,x_2\text{,}\)…, \(x_n\) of positive integers with \(x_1\ge x_2\ge\ldots \ge x_n\text{.}\) Such a representation of a partition is called a <em class="terminology">decreasing list</em> representation of the partition.</p></article><article class="example-like motivation" id="activity-161"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">161</span>
+</h5>
+<p id="p-886">Describe the relationship between partitions of \(k\) and lists or vectors \((x_1,x_2,\ldots,x_n)\) such that \(x_1+2x_2+\ldots kx_k = k\text{.}\)  Such a representation of a partition is called a <em class="terminology">type vector</em> representation of a partition, and it is typical to leave the trailing zeros out of such a representation; for example \((2,1)\) stands for the same partition as \((2,1,0,0)\text{.}\) What is the decreasing list representation for this partition, and what number does it partition?</p></article><article class="example-like" id="activity-162"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">162</span>
+</h5>
+<p id="p-888">How does the number of partitions of \(k\) relate to the number of partitions of \(k+1\) whose smallest part is one?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-139" id="hint-139"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-139" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-889">How can you start with a partition of k and make it into a new partition of \(k+1\) that is guaranteed to have a part of size one, even if the original partition didn't?</p></span></span>
+</div></article><p id="p-891">When we write a partition as \(\lambda = \lambda_1,\lambda_2,\ldots,\lambda_n\text{,}\) it is customary to write the list of \(\lambda_i\)s as a decreasing list. When we have a type vector \((t_1,t_2,\ldots,t_m)\) for a partition, we write either \(\lambda = 1^{t_1}2^{t_2}\cdots m^{t_m}\) or \(\lambda = m^{t_m}(m-1)^{t_{m-1}}\cdots 2^{t_2}1^{t_1}\text{.}\) Henceforth we will use the second of these. When we write \(\lambda=\lambda_1^{i_1}\lambda_2^{i_2}\cdots\lambda_n^{i_n}\text{,}\) we will assume that \(\lambda_i&gt;\lambda_i+1\text{.}\)</p></section><section class="subsection" id="subsection-38"><header title="Subsection 3.3.3 Ferrers and Young Diagrams and the conjugate of a partition"><h1 class="heading hide-type" alt="Subsection 3.3.3 Ferrers and Young Diagrams and the conjugate of a partition">
+<span class="type">Subsection</span><span class="codenumber">3.3.3</span><span class="title">Ferrers and Young Diagrams and the conjugate of a partition</span><a href="s3-3-partitions-int.html#subsection-38" class="permalink">¶ permalink</a>
+</h1></header><p id="p-892">The decreasing list representation of partitions leads us to a handy way to visualize partitions. Given a decreasing list \((\lambda_1,\lambda_2,\ldots \lambda_n)\text{,}\) we draw a figure made up of rows of dots that has \(\lambda_1\) equally spaced dots in the first row, \(\lambda_2\) equally spaced dots in the second row, starting out right below the beginning of the first row and so on. Equivalently, instead of dots, we may use identical squares, drawn so that a square touches each one to its immediate right or immediately below it along an edge. See <a knowl="./knowl/FerrersYoung.html" knowl-id="xref-FerrersYoung" alt="Figure 3.3.1 " title="Figure 3.3.1 ">Figure 3.3.1</a> for examples. The figure we draw with dots is called the <em class="terminology">Ferrers diagram</em> of the partition; sometimes the figure with squares is also called a Ferrers diagram; sometimes it is called a <em class="terminology">Young diagram</em>. At this stage it is irrelevant which name we choose and which kind of figure we draw; in more advanced work the squares are handy because we can put things like numbers or variables into them.  From now on we will use squares and call the diagrams Young diagrams.</p>
+<figure class="figure-like" id="FerrersYoung"><img width="45%" src="../images/FerrersYoung" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">3.3.1</span>The Ferrers and Young diagrams of the partition (5,3,3,2)</figcaption></figure><article class="example-like essential" id="activity-163"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">163</span>
+</h5>
+<p id="p-893">Draw the Young diagram of the partition (4,4,3,1,1). Describe the geometric relationship between the Young diagram of (5,3,3,2) and the Young diagram of (4,4,3,1,1).</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-140" id="hint-140"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-140" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-894">Draw a line through the top-left corner and bottom-right corner of the topleft box.</p></span></span>
+</div></article><article class="example-like essential" id="activity-164"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">164</span>
+</h5>
+<p id="p-896">The partition \((\lambda_1,\lambda_2,\ldots, \lambda_n)\) is called the <em class="terminology">conjugate</em> of the partition \((\gamma_1,\gamma_2,\ldots, \gamma_m)\) if we obtain the Young diagram of one from the Young diagram of the other by flipping one around the line with slope -1 that extends the diagonal of the top left square. See <a knowl="./knowl/conjugateYoung.html" knowl-id="xref-conjugateYoung" alt="Figure 3.3.2 " title="Figure 3.3.2 ">Figure 3.3.2</a> for an example.</p>
+<figure class="figure-like" id="conjugateYoung"><img width="50%" src="../images/conjugateYoung" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">3.3.2</span>The Ferrers diagram the partition (5,3,3,2) and its conjugate.</figcaption></figure><p id="p-897">What is the conjugate of (4,4,3,1,1)? How is the largest part of a partition related to the number of parts of its conjugate? What does this tell you about the number of partitions of a positive integer \(k\) with largest part \(m\text{?}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-141" id="hint-141"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-141" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-898">The largest part of a partition is the maximum number of boxes in a row of its Young diagram. What does the maximum number of boxes in a column tell us?</p></span></span>
+</div></article><article class="example-like interesting" id="activity-165"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">165</span>
+</h5>
+<p id="p-900">A partition is called <em class="terminology">self-conjugate</em> if it is equal to its conjugate. Find a relationship between the number of self-conjugate partitions of \(k\) and the number of partitions of \(k\) into distinct odd parts.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-142" id="hint-142"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-142" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-901">Draw all self conjugate partitions of integers less than or equal to 8.  Draw all partitions of integers less than or equal to 8 into distinct odd parts (many of these will have just one part). Now try to see how to get from one set of drawings to the other in a consistent way.</p></span></span>
+</div></article><article class="example-like" id="partition-even-mult-even-use"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">166</span>
+</h5>
+<p id="p-904">Explain the relationship between the number of partitions of \(k\) into even parts and the number of partitions of \(k\) into parts of even multiplicity, i.e. parts which are each used an even number of times as in (3,3,3,3,2,2,1,1).</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-143" id="hint-143"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-143" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-905">Draw the partitions of six into even parts. Draw the partitions of six into parts used an even number of times. Look for a relationship between one set of diagrams and the other set of diagrams. If you have trouble, repeat the process using 8 or even 10 in place of 6.</p></span></span>
+</div></article><article class="example-like interesting" id="rectanglecomplement"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">167</span>
+</h5>
+<p id="p-907">Show that the number of partitions of \(k\) into \(4\) parts equals the number of partitions of \(3k\) (or \(3k+4\) or \(3k-4\)) into \(4\) parts.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-144" id="hint-144"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-144" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-908">Draw a partition of ten into 4 parts. Assume each square has area one. Then draw a rectangle of area 40 enclosing your diagram that touches the top of your diagram, the left side of your diagram and the bottom of your diagram. How does this rectangle give you a partition of 30 into four parts?</p></span></span>
+</div></article><article class="example-like" id="activity-168"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">168</span>
+</h5>
+<article class="introduction" id="introduction-38"><p id="p-910">The idea of conjugation of a partition could be defined without the geometric interpretation of a Young diagram, but it would seem far less natural without the geometric interpretation. Another idea that seems much more natural in a geometric context is this. Suppose we have a partition of \(k\) into \(n\) parts with largest part \(m\text{.}\) Then the Young diagram of the partition can fit into a rectangle that is \(m\) or more units wide (horizontally) and \(n\) or more units deep. Suppose we place the Young diagram of our partition in the top left-hand corner of an \(m'\) unit wide and \(n'\) unit deep rectangle with \(m'\ge m\) and \(n' \ge n\text{,}\) as in <a knowl="./knowl/complementpartition.html" knowl-id="xref-complementpartition" alt="Figure 3.3.4 " title="Figure 3.3.4 ">Figure 3.3.4</a>.</p>
+<figure class="figure-like" id="complementpartition"><img width="70%" src="../images/complementpartition" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">3.3.4</span>To complement the partition \((5,3,3,2)\) in a 6 by 5 rectangle: enclose it in the rectangle, rotate, and cut out the original Young diagram.</figcaption></figure></article><article class="exercise-like" id="task-117"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-911">Why can we interpret the part of the rectangle not occupied by our Young diagram, rotated in the plane, as the Young diagram of another partition? This is called the <em class="terminology">complement</em> of our partition in the rectangle.</p></article><article class="exercise-like" id="task-118"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-913">What integer is being partitioned by the complement?</p></article><article class="exercise-like" id="task-119"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-915">What conditions on \(m'\) and \(n'\) guarantee that the complement has the same number of parts as the original one?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-145" id="hint-145"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-145" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-916">Consider two cases, \(m' \gt m\) and \(m' = m\text{.}\)</p></span></span></article><article class="exercise-like" id="task-120"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-918">What conditions on \(m'\) and \(n'\) guarantee that the complement has the same largest part as the original one?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-146" id="hint-146"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-146" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-919">Consider two cases, \(n' \gt n\) and \(n' = n\text{.}\)</p></span></span></article><article class="exercise-like" id="task-121"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-921">Is it possible for the complement to have both the same number of parts and the same largest part as the original one?</p></article><article class="exercise-like" id="task-122"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-923">If we complement a partition in an \(m'\) by \(n'\) box and then complement that partition in an \(m'\) by \(n'\) box again, do we get the same partition that we started with?</p></article></article><article class="example-like interesting" id="activity-169"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">169</span>
+</h5>
+<p id="p-925">Suppose we take a partition of \(k\) into \(n\) parts with largest part \(m\text{,}\) complement it in the smallest rectangle it will fit into, complement the result in the smallest rectangle it will fit into, and continue the process until we get the partition 1 of one into one part.  What can you say about the partition with which we started?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-147" id="hint-147"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-147" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-926">Suppose we take two repetitions of this complementation process. What rows and columns do we remove from the diagram?</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-148" id="hint-148"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-148" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-927">To deal with an odd number of repetitions of the complementation process, think of it as an even number plus 1. Thus ask what kind of partition gives us the partition of one into one part after this complementation process.</p></span></span>
+</div></article><article class="example-like" id="activity-170"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">170</span>
+</h5>
+<p id="p-932">Show that \(P(k,n)\) is at least \(\frac{1}{n!}\binom{k-1}{n-1}\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-149" id="hint-149"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-149" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-933">How many compositions are there of \(k\) into n parts? What is the maximum number of compositions that could correspond to a given partition of \(k\) into \(n\) parts?</p></span></span>
+</div></article><p id="p-935">With the binomial coefficients, with Stirling numbers of the second kind, and with the Lah numbers, we were able to find a recurrence by asking what happens to our subset, partition, or broken permutation of a set \(S\) of numbers if we remove the largest element of \(S\text{.}\) Thus it is natural to look for a recurrence to count the number of partitions of \(k\) into \(n\) parts by doing something similar. Unfortunately, since we are counting distributions in which all the objects are identical, there is no way for us to identify a largest element. However if we think geometrically, we can ask what we could remove from a Young diagram to get a Young diagram. Two natural ways to get a partition of a smaller integer from a partition of \(n\) would be to remove the top row of the Young diagram of the partition and to remove the left column of the Young diagram of the partition. These two operations correspond to removing the largest part from the partition and to subtracting 1 from each part of the partition respectively. Even though they are symmetric with respect to conjugation, they aren't symmetric with respect to the number of parts. Thus one might be much more useful than the other for finding a recurrence for the number of partitions of \(k\) into \(n\) parts.</p>
+<article class="example-like interesting-forward-essential" id="numberpartitionrecurrence"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">171</span>
+</h5>
+<article class="introduction" id="introduction-39"><p id="p-936">In this problem we will study the two operations and see which one seems more useful for getting a recurrence for \(P(k,n)\text{.}\)</p></article><article class="exercise-like" id="task-123"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-937">How many parts does the remaining partition have when we remove the largest part (more precisely, we reduce its multiplicity by one) from a partition of \(k\) into \(n\) parts?  What can you say about the number of parts of the remaining partition if we remove one from each part?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-150" id="hint-150"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-150" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-938">These two operations do rather different things to the number of parts, and you can describe exactly what only one of the operations does. Think about the Young diagram.</p></span></span></article><article class="exercise-like" id="task-124"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-940">If we remove the largest part from a partition, what can we say about the integer that is being partitioned by the remaining parts of the partition? If we remove one from each part of a partition of \(k\) into \(n\) parts, what integer is being partitioned by the remaining parts? (Another way to describe this is that we remove the first column from the Young diagram of the partition.)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-151" id="hint-151"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-151" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-941">Think about the Young diagram. In only one of the two cases can you give an exact answer to the question.</p></span></span></article><article class="exercise-like" id="task-125"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-943">The last two questions are designed to get you thinking about how we can get a bijection between the set of partitions of \(k\) into \(n\) parts and some other set of partitions that are partitions of a smaller number.  These questions describe two different strategies for getting that set of partitions of a smaller number or of smaller numbers.  Each strategy leads to a bijection between partitions of \(k\) into \(n\) parts and a set of partitions of a smaller number or numbers.  For each strategy, use the answers to the last two questions to find and describe this set of partitions into a smaller number and a bijection between partitions of \(k\) into \(n\) parts and partitions of the smaller integer or integers into appropriate numbers of parts. (In one case the set of partitions and bijection are relatively straightforward to describe and in the other case not so easy.)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-152" id="hint-152"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-152" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-944">Here the harder part requires that, after removal, you consider a range of possible numbers being partitioned and that you give an upper bound on the part size. However it lets you describe the number of parts exactly.</p></span></span></article><article class="exercise-like" id="task-126"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-947">Find a recurrence (which need not have just two terms on the right hand side) that describes how to compute \(P(k,n)\) in terms of the number of partitions of smaller integers into a smaller number of parts.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-153" id="hint-153"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-153" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-948">One of the two sets of partitions of smaller numbers from the previous part is more amenable to finding a recurrence than the other. The resulting recurrence does not have just two terms though.</p></span></span></article><article class="exercise-like" id="task-127"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-950">What is \(P(k,1)\) for a positive integer \(k\text{?}\)</p></article><article class="exercise-like" id="task-128"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-952">What is \(P(k,k)\) for a positive integer \(k\text{?}\)</p></article><article class="exercise-like" id="task-129"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-954">Use your recurrence to compute a table with the values of \(P(k,n)\) for values of \(k\) between 1 and 7.</p></article><article class="exercise-like" id="task-130"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<p id="p-955">What would you want to fill into row 0 and column 0 of your table in order to make it consistent with your recurrence.  What does this say \(P(0,0)\) should be?  We usually define a sum with no terms in it to be zero. Is that consistent with the way the recurrence says we should define \(P(0,0)\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-154" id="hint-154"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-154" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-956">If there is a sum equal to zero, there may very well be a partition of zero.</p></span></span></article></article><p id="p-958">It is remarkable that there is no known formula for \(P(k,n)\text{,}\) nor is there one for \(P(k)\text{.}\) This section was are devoted to developing methods for computing values of \(P(n,k)\) and finding properties of \(P(n,k)\) that we can prove even without knowing a formula. Some future sections will attempt to develop other methods.</p>
+<p id="p-959">We have seen that the number of partitions of \(k\) into \(n\) parts is equal to the number of ways to distribute \(k\) identical objects to \(n\) recipients so that each receives at least one. If we relax the condition that each recipient receives at least one, then we see that the number of distributions of \(k\) identical objects to \(n\) recipients is \(\sum_{i=1}^n P(k,i)\) because if some recipients receive nothing, it does not matter which recipients these are. This completes rows 7 and 8 of our table of distribution problems. The completed table is shown in <a knowl="./knowl/lastdistributiontable.html" knowl-id="xref-lastdistributiontable" alt="Table 3.3.5 " title="Table 3.3.5 ">Table 3.3.5</a>. There are quite a few theorems that you have proved which are summarized by <a knowl="./knowl/lastdistributiontable.html" knowl-id="xref-lastdistributiontable" alt="Table 3.3.5 " title="Table 3.3.5 ">Table 3.3.5</a>.  It would be worthwhile to try to write them all down!</p>
+<figure class="figure-like" id="lastdistributiontable"><table>
+<tr><td class="c m b3 r3 l3 t3 lines" colspan="3">The Twentyfold Way: A Table of Distribution Problems</td></tr>
+<tr>
+<td class="l m b0 r3 l3 t0 lines">\(k\) objects and conditions<br> on how they are received</td>
+<td class="c m b1 r3 l0 t0 lines" colspan="2">\(n\) recipients and mathematical<br> model for distribution</td>
+</tr>
+<tr>
+<td class="l m b3 r3 l3 t0 lines"></td>
+<td class="c m b3 r1 l0 t0 lines">Distinct</td>
+<td class="c m b3 r3 l0 t0 lines">Identical</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">1.  Distinct<br> no conditions</td>
+<td class="c m b1 r1 l0 t0 lines">\(n^k\)<br> functions</td>
+<td class="c m b1 r3 l0 t0 lines">\(\sum_{i=1}^kS(n,i)\)<br> set partitions (\(\le n\) parts)</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">2.  Distinct<br> Each gets at most one</td>
+<td class="c m b1 r1 l0 t0 lines">\(n^{\underline{k}}\)<br> \(k\)-element<br> permutations</td>
+<td class="c m b1 r3 l0 t0 lines">1 if \(k\le n\text{;}\)<br> 0 otherwise</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">3.  Distinct<br> Each gets at least one</td>
+<td class="c m b1 r1 l0 t0 lines">\(S(k,n)n!\)<br> onto functions</td>
+<td class="c m b1 r3 l0 t0 lines">\(S(k,n)\)<br> set partitions (\(n\) parts)</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">4. Distinct<br> Each gets exactly one</td>
+<td class="c m b1 r1 l0 t0 lines">\(k!=n!\)<br> permutations</td>
+<td class="c m b1 r3 l0 t0 lines">1 if \(k=n\text{;}\)<br> 0 otherwise</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">5.  Distinct,<br>order matters</td>
+<td class="c t b1 r1 l0 t0 lines">\((k+n-1)^{\underline{k}}\)<br> ordered functions</td>
+<td class="c t b1 r3 l0 t0 lines">\(\sum_{i=1}^n L(k,i)\)<br> broken permutations<br> (\(\le n\) parts)</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">6.  Distinct,<br> order matters<br> Each gets at least one</td>
+<td class="c t b1 r1 l0 t0 lines">\((k)^{\underline{n}}(k-1)^{\underline{k-n}}\)<br> ordered<br> onto functions</td>
+<td class="c t b1 r3 l0 t0 lines">\(L(k,n)= \binom{k}{n}(k-1)^{\underline{k-n}}\)<br> broken permutations<br> (\(n\) parts)</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">7.  Identical<br> no conditions</td>
+<td class="c t b1 r1 l0 t0 lines">\(\binom{n+k-1}{k}\)<br> multisets</td>
+<td class="c t b1 r3 l0 t0 lines">\(\sum_{i=1}^nP(k,i)\)<br> number partitions<br> (\(\le n\) parts)</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">8.  Identical<br> Each gets at most one</td>
+<td class="c t b1 r1 l0 t0 lines">\(\binom{n}{k}\)<br> subsets</td>
+<td class="c t b1 r3 l0 t0 lines">1 if \(k\le n\text{;}\)<br> 0 otherwise</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">9.  Identical<br> Each gets at least one</td>
+<td class="c t b1 r1 l0 t0 lines">\(\binom{k-1}{n-1}\)<br> compositions<br> (\(n\) parts)</td>
+<td class="c t b1 r3 l0 t0 lines">\(P(k,n)\)<br> number partitions<br> (\(n\) parts)</td>
+</tr>
+<tr>
+<td class="l t b3 r3 l3 t0 lines">10.  Identical<br> Each gets exactly one</td>
+<td class="c t b3 r1 l0 t0 lines">1 if \(k=n\text{;}\)<br> 0 otherwise</td>
+<td class="c t b3 r3 l0 t0 lines">1 if \(k=n\text{;}\)<br> 0 otherwise</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">3.3.5</span>The number of ways to distribute \(k\) objects to \(n\) recipients, with restrictions on how the objects are received</figcaption></figure></section><section class="subsection" id="subsection-39"><header title="Subsection 3.3.4 Partitions into distinct parts"><h1 class="heading hide-type" alt="Subsection 3.3.4 Partitions into distinct parts">
+<span class="type">Subsection</span><span class="codenumber">3.3.4</span><span class="title">Partitions into distinct parts</span><a href="s3-3-partitions-int.html#subsection-39" class="permalink">¶ permalink</a>
+</h1></header><p id="p-960">Often \(Q(k,n)\) is used to denote the number of partitions of \(k\) into distinct parts, that is, parts that are different from each other.</p>
+<article class="example-like" id="activity-172"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">172</span>
+</h5>
+<p id="p-961">Show that</p>
+\begin{equation*}
+Q(k,n) \le \frac{1}{n!}\binom{k-1}{n-1}.
+\end{equation*}
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-155" id="hint-155"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-155" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-962">How does the number of compositions of \(k\) into \(n\) distinct parts compare to the number of compositions of \(k\) into \(n\) parts (not necessarily distinct)? What do compositions have to do with partitions?</p></span></span>
+</div></article><article class="example-like interesting" id="activity-173"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">173</span>
+</h5>
+<p id="p-964">Show that the number of partitions of 7 into 3 parts equals the number of partitions of 10 into three distinct parts.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-156" id="hint-156"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-156" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-965">While you could simply display partitions of 7 into three parts and partitions of 10 into three parts, we hope you won't. Perhaps you could write down the partitions of 4 into two parts and the partitions of 5 into two distinct parts and look for a natural bijection between them. So the hope is that you will discover a bijection from the set of partitions of 7 into three parts and the partitions of 10 into three distinct parts. It could help to draw the Young diagrams of partitions of 4 into two parts and the partitions of 5 into two distinct parts.</p></span></span>
+</div></article><article class="example-like interesting-forward-essential" id="activity-174"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">174</span>
+</h5>
+<p id="p-967">There is a relationship between \(P(k,n)\) and \(Q(m,n)\) for some other number \(m\text{.}\) Find the number \(m\) that gives you the nicest possible relationship.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-157" id="hint-157"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-157" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-968">In the case \(k=4\) and \(n=2\text{,}\) we have \(m=5\text{.}\) In the case \(k = 7\) and \(n = 3\text{,}\) we have \(m = 10\text{.}\)</p></span></span>
+</div></article><article class="example-like forward-essential" id="activity-175"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">175</span>
+</h5>
+<p id="p-970">Find a recurrence that expresses \(Q(k,n)\) as a sum of \(Q(k-n,m)\) for appropriate values of \(m\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-158" id="hint-158"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-158" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-971">What can you do to a Young diagram for a partition of \(k\) into \(n\) distinct parts to get a Young diagram of a partition of \(k-n\) into some number of distinct parts?</p></span></span>
+</div></article><article class="example-like interesting-difficult}" id="activity-176"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">176</span>
+</h5>
+<p id="p-973">Show that the number of partitions of \(k\) into distinct parts equals the number of partitions of \(k\) into odd parts.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-159" id="hint-159"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-159" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-974">For any partition of \(k\) into parts \(\lambda_1\text{,}\) \(\lambda_2\text{,}\) etc. we can get a partition of \(k\) into odd parts by factoring the highest power of two that we can from each \(\lambda_i\text{,}\) writing \(\lambda_i = \gamma_i\cdot 2^k_i\text{.}\)  Why is \(\gamma_i\) odd? Now partition \(k\) into \(2^{k_1}\) parts of size \(\gamma_1\text{,}\) \(2^{k_2}\) parts of size \(\gamma_2\text{,}\) etc. and you have a partition of \(k\) into odd parts.</p></span></span>
+</div></article><article class="example-like interesting-difficult}" id="activity-177"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">177</span>
+</h5>
+<p id="p-977">Euler showed that if \(k\not= \frac{3j^2+j}{2}\text{,}\) then the number of partitions of \(k\) into an even number of distinct parts is the same as the number of partitions of \(k\) into an odd number of distinct parts. Prove this, and in the exceptional case find out how the two numbers relate to each other.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-160" id="hint-160"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-160" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-978">Suppose we have a partition of \(k\) into distinct parts. If the smallest part, say \(m\text{,}\) is smaller than the number of parts, we may add one to each of the \(m\) largest parts and delete the smallest part, and we have changed the parity of the number of parts, but we still have distinct parts. On the other hand, suppose the smallest part, again say \(m\text{,}\) is larger than or equal to the number of parts. Then we can subtract 1 from each part larger than \(m\text{,}\) and add a part equal to the number of parts larger than \(m\text{.}\) This changes the parity of the number of parts, but if the second smallest part is \(m+1\text{,}\) the resulting partition does not have distinct parts. Thus this method does not work. Further, if it did always work, the case \(k \ne \frac{3j^2+j}{2}\) would be covered also. However you can modify this method by comparing \(m\) not to the total number of parts, but to the number of rows at the top of the Young diagram that differ by exactly one from the row above. Even in this situation, there are certain slight additional assumptions you need to make, so this hint leaves you a lot of work to do. (It is reasonable to expect problems because of that exceptional case.) However, it should lead you in a useful direction.</p></span></span>
+</div></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

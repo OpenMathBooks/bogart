@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:38-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Partitions and Stirling Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="s3-1-distrib-idea.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="s3-3-partitions-int.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="s3-1-distrib-idea.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="s3-3-partitions-int.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions" class="active">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="s3-2-partitions"><header title="Section 3.2 Partitions and Stirling Numbers"><h1 class="heading hide-type" alt="Section 3.2 Partitions and Stirling Numbers">
+<span class="type">Section</span><span class="codenumber">3.2</span><span class="title">Partitions and Stirling Numbers</span><a href="s3-2-partitions.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-34"><p id="p-780">We have seen how the number of partitions of a set of \(k\) objects into \(n\) blocks corresponds to the distribution of \(k\) distinct objects to \(n\) identical recipients. While there is a formula that we shall eventually learn for this number, it requires more machinery than we now have available. However there is a good method for computing this number that is similar to Pascal's equation. Now that we have studied recurrences in one variable, we will point out that Pascal's equation is in fact a <!--Style me with CSS--><em>recurrence in two variables</em>; that is it lets us compute \(\binom{n}{k}\) in terms of values of \(\binom{m}{i}\) in which either \(m\lt n\) or \(i\lt k\) or both. It was the fact that we had such a recurrence and knew \(\binom{n}{0}\) and \(\binom{n}{n}\) that let us create Pascal's triangle.</p></section><section class="subsection" id="subsection-33"><header title="Subsection 3.2.1 Stirling Numbers of the second kind"><h1 class="heading hide-type" alt="Subsection 3.2.1 Stirling Numbers of the second kind">
+<span class="type">Subsection</span><span class="codenumber">3.2.1</span><span class="title">Stirling Numbers of the second kind</span><a href="s3-2-partitions.html#subsection-33" class="permalink">¶ permalink</a>
+</h1></header><p id="p-781">We use the notation \(S(k,n)\) to stand for the number of partitions of a \(k\) element set with \(n\) blocks. For historical reasons, \(S(k,n)\) is called a <em class="terminology">Stirling number of the second kind</em>. </p>
+<article class="example-like" id="secondstirlingrecurrence"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">134</span>
+</h5>
+<p id="p-782">In a partition of the set \([k]\text{,}\) the number \(k\) is either in a block by itself, or it is not. How does the number of partitions of \([k]\) with \(n\) parts in which \(k\) is in a block with other elements of \([k]\) compare to the number of partitions of \([k-1]\) into \(n\) blocks? Find a two variable recurrence for \(S(n,k)\text{,}\) valid for \(n\) and \(k\) larger than one.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-116" id="hint-116"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-116" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-783">The number of partitions of \([k]\) into \(n\) parts in which \(k\) is not in a block relates to the number of partitions of \(k-1\) into some number of blocks in a way that involves \(n\text{.}\) With this in mind, review how you proved Pascal's (recurrence) equation.</p></span></span>
+</div></article><article class="example-like" id="activity-135"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">135</span>
+</h5>
+<p id="p-785">What is \(S(k,1)\text{?}\) What is \(S(k,k)\text{?}\) Create a table of values of \(S(k,n)\) for \(k\) between 1 and 5 and \(n\) between 1 and \(k\text{.}\) This table is sometimes called <em class="terminology">Stirling's Triangle (of the second kind)</em> How would you define \(S(k,n)\) for the nonnegative values of \(k\) and \(n\) that are not both positive? Now for what values of \(k\) and \(n\) is your two variable recurrence valid?</p></article><article class="example-like" id="sandwiches"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">136</span>
+</h5>
+<p id="p-788">Extend Stirling's triangle enough to allow you to answer the following question and answer it. (Don't fill in the rows all the way; the work becomes quite tedious if you do. Only fill in what you need to answer this question.) A caterer is preparing three bag lunches for hikers. The caterer has nine different sandwiches. In how many ways can these nine sandwiches be distributed into three identical lunch bags so that each bag gets at least one?</p></article><article class="example-like" id="caterer2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">137</span>
+</h5>
+<p id="p-790">The question in <a knowl="./knowl/sandwiches.html" knowl-id="xref-sandwiches" alt="Problem 136 " title="Problem 136 ">Problem 136</a> naturally suggests a more realistic question; in how many ways may the caterer distribute the nine sandwich's into three identical bags so that each bag gets exactly three? Answer this question. (Hint, what if the question asked about six sandwiches and two distinct bags? How does having identical bags change the answer?)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-117" id="hint-117"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-117" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-791">What if the question asked about six sandwiches and two distinct bags? How does having identical bags change the answer?</p></span></span>
+</div></article><article class="example-like forward-essential" id="activity-138"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">138</span>
+</h5>
+<p id="p-793">What is \(S(k,k-1)\text{?}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-118" id="hint-118"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-118" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-794">What are the possible sizes of parts?</p></span></span>
+</div></article><article class="example-like essential" id="partitionsgivenpartsize"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">139</span>
+</h5>
+<p id="p-796">In how many ways can we partition \(k\) items into \(n\) blocks so that we have \(k_i\) blocks of size \(i\) for each \(i\text{?}\) (Notice that \(\sum_{i=1}^k k_i = n\) and \(\sum_{i=1}^k ik_i = k\text{.}\)) The sequence \(k_1,k_2,\ldots,k_n\) is called the <em class="terminology">type vector</em> of the partition.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-119" id="hint-119"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-119" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-797">Suppose we make a list of the \(k\) items. We take the first \(k_1\) elements to be the blocks of size 1. How many elements do we need to take to get \(k_2\) blocks of size two? Which elements does it make sense to choose for this purpose?</p></span></span>
+</div></article><article class="example-like summary" id="activity-140"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">140</span>
+</h5>
+<p id="p-799">Describe how to compute \(S(n,k)\) in terms of quantities given by the formula you found in <a knowl="./knowl/partitionsgivenpartsize.html" knowl-id="xref-partitionsgivenpartsize" alt="Problem 139 " title="Problem 139 ">Problem 139</a>.</p></article><article class="example-like interesting" id="activity-141"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">141</span>
+</h5>
+<p id="p-801">Find a recurrence for the Lah numbers \(L(k,n)\) similar to the one in <a knowl="./knowl/secondstirlingrecurrence.html" knowl-id="xref-secondstirlingrecurrence" alt="Problem 134 " title="Problem 134 ">Problem 134</a>.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-120" id="hint-120"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-120" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-802">To see how many broken permutations of a \(k\) element set into \(n\) parts do not have \(k\) is a part by itself, ask yourself how many broken permutations of \([7]\) result from adding 7 to the one of the two permutations in the broken permutation \(\{14, 2356\}\text{.}\)</p></span></span>
+</div></article><article class="example-like forward-essential" id="BellNumberIntro"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">142</span>
+</h5>
+<article class="introduction" id="introduction-35"><p id="p-804">(Relevant in <a href="expogenfun.html" alt="Appendix C Exponential Generating Functions" title="Appendix C Exponential Generating Functions">Appendix C</a>.) The total number of partitions of a \(k\)-element set is denoted by \(B(k)\) and is called the \(k\)-th <em class="terminology">Bell number</em>. Thus \(B(1)=1\) and \(B(2) =2\text{.}\)</p></article><article class="exercise-like" id="task-108"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-805">Show, by explicitly exhibiting the partitions, that \(B(3)=5\text{.}\)</p></article><article class="exercise-like" id="task-109"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-807">Find a recurrence that expresses \(B(k)\) in terms of \(B(n)\) for \(n\lt  k\) and prove your formula correct in as many ways as you can.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-121" id="hint-121"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-121" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-808">Here it is helpful to think about what happens if you delete the entire block containing \(k\) rather than thinking about whether \(k\) is in a block by itself or not.</p></span></span></article><article class="exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-811">Find \(B(k)\) for \(k=4,5,6\text{.}\)</p></article></article></section><section class="subsection" id="subsection-34"><header title="Subsection 3.2.2 Stirling Numbers and onto functions"><h1 class="heading hide-type" alt="Subsection 3.2.2 Stirling Numbers and onto functions">
+<span class="type">Subsection</span><span class="codenumber">3.2.2</span><span class="title">Stirling Numbers and onto functions</span><a href="s3-2-partitions.html#subsection-34" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like motivation" id="activity-143"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">143</span>
+</h5>
+<p id="p-813">Given a function \(f\) from a \(k\)-element set \(K\) to an \(n\)-element set, we can define a partition of \(K\) by putting \(x\) and \(y\) in the same block of the partition if and only if \(f(x)=f(y)\text{.}\) How many blocks does the partition have if \(f\) is onto? How is the number of functions from a \(k\)-element set onto an \(n\)-element set related to a Stirling number? Be as precise in your answer as you can.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-122" id="hint-122"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-122" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-814">You can think of a function as assigning values to the blocks of its partition. If you permute the values assigned to the blocks, do you always change the function?</p></span></span>
+</div></article><article class="example-like interesting" id="activity-144"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">144</span>
+</h5>
+<p id="p-816">How many labeled trees on \(n\) vertices have exactly 3 vertices of degree one?  Note that this problem has appeared before in <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a>.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-123" id="hint-123"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-123" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-817">The Prüfer code of a labeled tree is a sequence of \(n-2\) entries that must be chose from the vertices that do not have degree 1. The sequence can be though of as a function from the set \([n-2]\) to the set of vertices that do not have degree 1. What is special about this function?</p></span></span>
+</div></article><article class="example-like essential" id="Stirlingfalling"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">145</span>
+</h5>
+<p id="p-819">Each function from a \(k\)-element set \(K\) to an \(n\)-element set \(N\) is a function from \(K\) onto <!--Style me with CSS--><em>some</em> subset of \(N\text{.}\) If \(J\) is a subset of \(N\) of size \(j\text{,}\) you know how to compute the number of functions that map onto \(J\) in terms of Stirling numbers. Suppose you add the number of functions mapping onto \(J\) over all possible subsets \(J\) of \(N\text{.}\) What simple value should this sum equal? Write the equation this gives you.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-124" id="hint-124"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-124" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-820">When you add the number of functions mapping onto \(J\) over all possible subsets \(J\) of \(N\text{,}\) what is the set of functions whose size you are computing?</p></span></span>
+</div></article><article class="example-like motivation" id="activity-146"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">146</span>
+</h5>
+<p id="p-822">In how many ways can the sandwiches of <a knowl="./knowl/sandwiches.html" knowl-id="xref-sandwiches" alt="Problem 136 " title="Problem 136 ">Problem 136</a> be placed into three distinct bags so that each bag gets at least one?</p></article><article class="example-like motivation" id="activity-147"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">147</span>
+</h5>
+<p id="p-824">In how many ways can the sandwiches of <a knowl="./knowl/caterer2.html" knowl-id="xref-caterer2" alt="Problem 137 " title="Problem 137 ">Problem 137</a> be placed into distinct bags so that each bag gets exactly three?</p></article><article class="example-like essential" id="activity-148"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">148</span>
+</h5>
+<p id="p-827">In how many ways may we label the elements of a \(k\)-element set with \(n\) distinct labels (numbered 1 through \(n\)) so that label \(i\) is used \(j_i\) times? (If we think of the labels as \(y_1, y_2, \ldots, y_n\text{,}\) then we can rephrase this question as follows.  How many functions are there from a \(k\)-element set \(K\) to a set \(N=\{y_1,y_2,\ldots y_n\}\) so that \(y_i\) is the image of \(j_i\) elements of \(K\text{?}\)) This number is called a <em class="terminology">multinomial coefficient</em> and denoted by</p>
+\begin{equation*}
+\binom{k}{j_1,j_2,\ldots, j_n}.
+\end{equation*}
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-125" id="hint-125"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-125" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-828">What if the \(j_i\)'s don't add to \(k\text{?}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-126" id="hint-126"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-126" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-829">Think about listing the elements of the \(k\)-element set and labeling the first \(j_1\) elements with label number 1.</p></span></span>
+</div></article><article class="example-like" id="activity-149"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">149</span>
+</h5>
+<p id="p-831">Explain how to compute the number of functions from a \(k\)-element set \(K\) to an \(n\)-element set \(N\) by using multinomial coefficients.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-127" id="hint-127"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-127" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-832">The sum principle will help here.</p></span></span>
+</div></article><article class="example-like" id="activity-150"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">150</span>
+</h5>
+<p id="p-834">Explain how to compute the number of functions from a \(k\)-element set \(K\) onto an \(n\)-element set \(N\) by using multinomial coefficients.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-128" id="hint-128"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-128" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-835">How are the relevant \(j_i\)'s in the multinomial coefficients you use here different from the \(j_i\)'s in the previous problem.</p></span></span>
+</div></article><article class="example-like essential" id="activity-151"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">151</span>
+</h5>
+<p id="p-837">What do multinomial coefficients have to do with expanding the \(k\)th power of a multinomial \(x_1+x_2+\cdots+x_n\text{?}\) This result is called the <em class="terminology">multinomial theorem</em>.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-129" id="hint-129"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-129" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-838">Think about how binomial coefficients relate to expanding a power of a binomial and note that the binomial coefficient \(\binom{n}{k}\) and the multinomial coefficient \(\binom{n}{k,n-k}\) are the same.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-35"><header title="Subsection 3.2.3 Stirling Numbers and bases for polynomials"><h1 class="heading hide-type" alt="Subsection 3.2.3 Stirling Numbers and bases for polynomials">
+<span class="type">Subsection</span><span class="codenumber">3.2.3</span><span class="title">Stirling Numbers and bases for polynomials</span><a href="s3-2-partitions.html#subsection-35" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like forward-essential" id="powersfromfalling"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">152</span>
+</h5>
+<article class="exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-840">Find a way to express \(n^k\) in terms of \(k^{\underline{j}}\) for appropriate values \(j\text{.}\) You may use Stirling numbers if they help you.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-130" id="hint-130"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-130" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-841">We have related Stirling numbers to powers \(n^k\text{.}\) How are binomial coefficients related to falling factorial powers?</p></span></span></article><article class="exercise-like" id="task-112"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-843">Notice that \(x^{\underline{j}}\) makes sense for a numerical variable \(x\) (that could range over the rational numbers, the real numbers, or even the complex numbers instead of only the nonnegative integers, as we are implicitly assuming \(n\) does), just as \(x^j\) does. Find a way to express the power \(x^k\) in terms of the polynomials \(x^{\underline{j}}\) for appropriate values of \(j\) and explain why your formula is correct.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-131" id="hint-131"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-131" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-844">In the equation \(\sum_{j=0}^n n^{\underline{j}}S(k,j) = n^k\text{,}\) we might try substituting \(x\) for \(n\text{.}\) However we don't know what \(\sum_{j=0}^x\) means when \(x\) is a variable. Is there anything other than \(n\) that makes a suitable upper limit for the sum? (Think about what you know about \(S(k,j)\text{.}\)</p></span></span></article></article><p id="p-847">You showed in <a knowl="./knowl/powersfromfalling.html" knowl-id="xref-powersfromfalling" alt="Problem 152 " title="Problem 152 ">Problem 152</a> how to get each power of \(x\) in terms of the falling factorial powers \(x^{\underline{j}}\text{.}\) Therefore every polynomial in \(x\) is expressible in terms of a sum of numerical multiples of falling factorial powers. Using the language of linear algebra, we say that the ordinary powers of \(x\) and the falling factorial powers of \(x\) each form a basis for the “space” of polynomials, and that the numbers \(S(k,n)\) are “change of basis coefficients.” If you are not familiar with linear algebra, a <em class="terminology">basis</em> for the <em class="terminology">space of polynomials</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-8" id="fn-8"><span class="footnote"><sup> 3 </sup></span></a></span><span id="hk-fn-8" style="display: none;" class="tex2jax_ignore"><span class="footnote">The space of polynomials is just another name for the set of all polynomials.</span></span> is a set of polynomials such that each polynomial, whether in that set or not, can be expressed in one and only one way as a sum of numerical multiples of polynomials in the set.</p>
+<article class="example-like motivation" id="activity-153"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">153</span>
+</h5>
+<p id="p-848">Show that every power of \(x+1\) is expressible as a sum of numerical multiples of powers of \(x\text{.}\) Now show that every power of \(x\) (and thus every polynomial in \(x\)) is a sum of numerical multiples (some of which could be negative) of powers of \(x+1\text{.}\) This means that the powers of \(x+1\) are a basis for the space of polynomials as well. Describe the change of basis coefficients that we use to express the binomial powers \((x+1)^n\) in terms of the ordinary \(x^j\) explicitly. Find the change of basis coefficients we use to express the ordinary powers \(x^n\) in terms of the binomial powers \((x+1)^k\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-132" id="hint-132"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-132" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-849">For the last question, you might try taking advantage of the fact that \(x = x + 1 - 1\text{.}\)</p></span></span>
+</div></article><article class="example-like interesting-forward-essential" id="Stirlingfirst"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">154</span>
+</h5>
+<p id="p-853">By multiplication, we can see that every falling factorial polynomial can be expressed as a sum of numerical multiples of powers of \(x\text{.}\) In symbols, this means that there are numbers \(s(k,n)\) (notice that this \(s\) is lower case, not upper case) such that we may write \(x^{\underline{k}} =
+\sum_{n=0}^k s(k,n)x^n\text{.}\) These numbers \(s(k,n)\) are called Stirling Numbers of the first kind. By thinking algebraically about what the formula</p>
+\begin{equation}
+x^{\underline{k}} =
+x^{\underline{k-1}}(x-k+1)
+\tag{3.3}
+\end{equation}
+<p>means, we can find a recurrence for Stirling numbers of the first kind that gives us another triangular array of numbers called Stirling's triangle of the first kind. Explain why <a knowl="./knowl/stirling1.html" knowl-id="xref-stirling1" alt="Equation 3.3 " title="Equation 3.3 ">Equation (3.3)</a> is true and use it to derive a recurrence for \(s(k,n)\) in terms of \(s(k-1,n-1)\) and \(s(k-1,n)\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-133" id="hint-133"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-133" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-854">What does induction have to do with <a knowl="./knowl/stirling1.html" knowl-id="xref-stirling1" alt="Equation 3.3 " title="Equation 3.3 ">Equation (3.3)</a>?</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-134" id="hint-134"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-134" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-855">What could you assume inductively about \(x^{\underline{k-1}}\) if you were trying to prove \(x^{\underline{k}} = \sum_{n=0}^k s(k,n)x^n\text{?}\)</p></span></span>
+</div></article><article class="example-like" id="activity-155"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">155</span>
+</h5>
+<p id="p-858">Write down the rows of Stirling's triangle of the first kind for \(k=0\) to 6.</p></article><p id="p-859">By definition, the Stirling numbers of the first kind are also change of basis coefficients. The Stirling numbers of the first and second kind are change of basis coefficients from the falling factorial powers of \(x\) to the ordinary factorial powers, and vice versa.</p>
+<article class="example-like interesting" id="activity-156"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">156</span>
+</h5>
+<article class="introduction" id="introduction-36"><p id="p-860">Explain why every rising factorial polynomial \(x^{\overline{k}}\) can be expressed in terms of the falling factorial polynomials \(x^{\underline{n}}\text{.}\) Let \(b(k,n)\) stand for the change of basis coefficients that allow us to express \(x^{\overline{k}}\) in terms of the falling factorial polynomials \(x^{\underline{n}}\text{;}\) that is, define \(b(k,n)\) by the equations</p>
+\begin{equation*}
+x^{\overline{k}}=\sum_{n=0}^k b(k,n) x^{\underline{n}}.
+\end{equation*}
+</article><article class="exercise-like" id="task-113"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-861">Find a recurrence for \(b(k,n)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-135" id="hint-135"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-135" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-862">There is a solution for this problem similar to the solution to <a knowl="./knowl/Stirlingfirst.html" knowl-id="xref-Stirlingfirst" alt="Problem 154 " title="Problem 154 ">Problem 154</a>.</p></span></span></article><article class="exercise-like" id="task-114"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-865">Find a formula for \(b(k,n)\) and prove the correctness of what you say in as many ways as you can.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-136" id="hint-136"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-136" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-866">Is the recurrence you got familiar?</p></span></span></article><article class="exercise-like" id="task-115"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-869">Is \(b(k,n)\) the same as any of the other families of numbers (binomial coefficients, Bell numbers, Stirling numbers, Lah numbers, etc.) we have studied?</p></article><article class="exercise-like" id="task-116"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-871">Say as much as you can (but say it precisely) about the change of basis coefficients for expressing \(x^{\underline{k}}\) in terms of \(x^{\overline{n}}\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-137" id="hint-137"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-137" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-872">Show that \((-x)^{\underline{k}} = (-1)^k x^{\overline{k}}\) and \((-x)^{\overline{k}} = (-1)^k x^{\underline{k}}\text{.}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-138" id="hint-138"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-138" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-873">The first hint lets you write an equation for \((-1)^k x^{\underline{k}}\) as a rising factorial of something else and then use what you know about expressing rising factorials in terms of falling factorials, after which you have to convert back to factorial powers of \(x\text{.}\)</p></span></span></article></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

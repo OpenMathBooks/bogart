@@ -16,7 +16,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!-- Assumes current file is in discrete-text/xsl and that the mathbook repository is adjacent -->
-<xsl:import href="../../mathbook/xsl/mathbook-latex.xsl" />
+<xsl:import href="../../../mathbook/xsl/mathbook-latex.xsl" />
 <!-- Assumes next file can be found in discrete-text/xsl -->
 <xsl:import href="custom-common.xsl" />
 
@@ -124,7 +124,7 @@
 <!-- Exercises have "solution"s which should be put in the back. -->
 <!-- Not sure what to do for homework solutions -->
 <xsl:param name="exercise.text.statement" select="'yes'" />
-<xsl:param name="exercise.text.hint" select="'yes'" />
+<xsl:param name="exercise.text.hint" select="'no'" />
 <xsl:param name="exercise.text.answer" select="'no'" />
 <xsl:param name="exercise.text.solution" select="'no'" />
 <xsl:param name="exercise.backmatter.statement" select="'no'" />

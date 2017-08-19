@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:36-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Graphs and Trees</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_induction-recurrence.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="InductionRecursion.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_induction-suppprobs.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_induction-recurrence.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="InductionRecursion.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_induction-suppprobs.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link active"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees" class="active">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_induction-graphstrees"><header title="Section 2.3 Graphs and Trees"><h1 class="heading hide-type" alt="Section 2.3 Graphs and Trees">
+<span class="type">Section</span><span class="codenumber">2.3</span><span class="title">Graphs and Trees</span><a href="sec_induction-graphstrees.html" class="permalink">¶ permalink</a>
+</h1></header><section class="subsection" id="graphsection"><header title="Subsection 2.3.1 Undirected graphs"><h1 class="heading hide-type" alt="Subsection 2.3.1 Undirected graphs">
+<span class="type">Subsection</span><span class="codenumber">2.3.1</span><span class="title">Undirected graphs</span><a href="sec_induction-graphstrees.html#graphsection" class="permalink">¶ permalink</a>
+</h1></header><p id="p-579">In <a href="s1-3-apps.html#Ramseysection" alt="Subsection 1.3.4 Ramsey Numbers" title="Subsection 1.3.4 Ramsey Numbers">Section 1.3.4</a> we introduced the idea of a directed graph. Graphs consist of vertices and edges. We describe vertices and edges in much the same way as we describe points and lines in geometry: we don't really say what vertices and edges are, but we say what they do. We just don't have a complicated axiom system the way we do in geometry. A <em class="terminology">graph</em> consists of a set \(V\) called a vertex set and a set \(E\) called an edge set. Each member of \(V\) is called a <em class="terminology">vertex</em> and each member of \(E\) is called an <em class="terminology">edge</em>. Associated with each edge are two (not necessarily different) vertices called its endpoints. We draw pictures of graphs by drawing points to represent the vertices and line segments (curved if we choose) whose endpoints are at vertices to represent the edges. In <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a> we show three pictures of graphs.</p>
+<figure class="figure-like" id="Threegraphs"><img width="95%" src="../images/threegraphs" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.1</span>Three different graphs</figcaption></figure><p id="p-580">Each gray circle in the figure represents a vertex; each line segment represents an edge. You will note that we labelled the vertices; these labels are names we chose to give the vertices. We can choose names or not as we please. The third graph also shows that it is possible to have an edge that connects a vertex (like the one labelled \(y\)) to itself or it is possible to have two or more edges (like those between vertices \(v\) and \(y\)) between two vertices. The <em class="terminology">degree</em> of a vertex is the number of times it appears as the endpoint of edges; thus the degree of \(y\) in the third graph in the figure is four.</p>
+<article class="example-like motivation" id="activity-100"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">100</span>
+</h5>
+<p id="p-581">In the graph on the left in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>, what is the degree of each vertex?</p></article><article class="example-like motivation" id="activity-101"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">101</span>
+</h5>
+<p id="p-583">For each graph in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a> is the number of vertices of odd degree even or odd?</p></article><article class="example-like interesting-forward-essential" id="activity-102"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">102</span>
+</h5>
+<article class="introduction" id="introduction-31"><p id="p-585">The sum of the degrees of the vertices of a (finite) graph is related in a natural way to the number of edges.</p></article><article class="exercise-like" id="task-91"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-586">What is the relationship?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-87" id="hint-87"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-87" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-587">There are several ways to see how to do this problem. One is to draw pictures of graphs with one edge, two edges, three edges, perhaps four edges and figure out the sum of the degrees. Another is to ask what deleting an edge does to the sum of the degrees. Another is to ask what a given edge “contributes” to the sum of the degrees.</p></span></span></article><article class="exercise-like" id="task-92"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-589">Find a proof that what you say is correct that uses induction on the number of edges.  Hint:  To make your inductive step, think about what happens to a graph if you delete an edge.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-88" id="hint-88"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-88" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-590">To make your inductive step, think about what happens to a graph if you delete an edge.</p></span></span></article><article class="exercise-like" id="task-93"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-592">Find a proof that what you say is correct that uses induction on the number of vertices.</p></article><article class="exercise-like" id="task-94"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-594">Find a proof that what you say is correct that does not use induction.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-89" id="hint-89"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-89" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-595">Suppose that instead of summing the degree of \(v\) over all vertices \(v\text{,}\) you sum some quantity defined for each edge \(e\) over all the edges.</p></span></span></article></article><article class="example-like forward-essential" id="activity-103"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">103</span>
+</h5>
+<p id="p-597">What can you say about the number of vertices of odd degree in a graph?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-90" id="hint-90"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-90" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-598">Whatever you say should be consistent with what you already know about degrees of vertices.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-22"><header title="Subsection 2.3.2 Walks and paths in graphs"><h1 class="heading hide-type" alt="Subsection 2.3.2 Walks and paths in graphs">
+<span class="type">Subsection</span><span class="codenumber">2.3.2</span><span class="title">Walks and paths in graphs</span><a href="sec_induction-graphstrees.html#subsection-22" class="permalink">¶ permalink</a>
+</h1></header><p id="p-600">A <em class="terminology">walk</em> in a graph is an alternating sequence \(v_0e_1v_1\ldots
+e_iv_i\) of vertices and edges such that edge \(e_i\) connects vertices \(v_{i-1}\) and \(v_i\text{.}\) A graph is called connected if, for any pair of vertices, there is a walk starting at one and ending at the other.</p>
+<article class="example-like" id="connectedanddisconnected"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">104</span>
+</h5>
+<p id="p-601">Which of the graphs in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a> is connected?</p></article><article class="example-like motivation" id="activity-105"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">105</span>
+</h5>
+<p id="p-603">A <em class="terminology">path</em> in a graph is a walk with no repeated vertices.  Find the longest path you can in the third graph of <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>.</p></article><article class="example-like motivation" id="activity-106"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">106</span>
+</h5>
+<p id="p-605">A <em class="terminology">cycle</em> in a graph is a walk whose first and last vertex are equal but which has no other repeated vertices.  Which graphs in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a> have cycles?  What is the largest number of edges in a cycle in the second graph in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>?  What is the smallest number of edges in a cycle in the third graph in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>?</p></article><article class="example-like motivation" id="activity-107"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">107</span>
+</h5>
+<p id="p-607">A connected graph with no cycles is called a <em class="terminology">tree</em>.  Which graphs, if any, in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a> are trees?</p></article></section><section class="subsection" id="subsection-23"><header title="Subsection 2.3.3 Counting vertices, edges, and paths in trees"><h1 class="heading hide-type" alt="Subsection 2.3.3 Counting vertices, edges, and paths in trees">
+<span class="type">Subsection</span><span class="codenumber">2.3.3</span><span class="title">Counting vertices, edges, and paths in trees</span><a href="sec_induction-graphstrees.html#subsection-23" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like interesting-forward-essential" id="Noverticesandedgesoftree"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">108</span>
+</h5>
+<p id="p-609">Draw some trees and on the basis of your examples, make a conjecture about the relationship between the number of vertices and edges in a tree. Prove your conjecture. (Hint: what happens if you choose an edge and delete it, but not its endpoints?)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-91" id="hint-91"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-91" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-610">What happens if you choose an edge and delete it, but not its endpoints?</p></span></span>
+</div></article><article class="example-like forward-essential" id="activity-109"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">109</span>
+</h5>
+<p id="p-612">What is the minimum number of vertices of degree one in a finite tree? What is it if the number of vertices is bigger than one? Prove that you are correct.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-92" id="hint-92"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-92" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-613">One approach to the problem is to use facts that we already know about degrees, vertices and edges. Another approach is to try deleting an edge from a tree with more than one vertex and analyze the possible numbers of vertices of degree one in what is left over.</p></span></span>
+</div></article><article class="example-like interesting-forward-essential" id="activity-110"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">110</span>
+</h5>
+<p id="p-615">In a tree, given two vertices, how many paths can you find between them? Prove that you are correct.</p></article><article class="example-like interesting-difficult}" id="Prufer"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">111</span>
+</h5>
+<p id="p-617">How many trees are there on the vertex set \(\{1,2\}\text{?}\) On the vertex set \(\{1,2,3\}\text{?}\) When we label the vertices of our tree, we consider the tree which has edges between vertices 1 and 2 and between vertices 2 and 3 different from the tree that has edges between vertices 1 and 3 and between 2 and 3. See <a knowl="./knowl/differenttrees.html" knowl-id="xref-differenttrees" alt="Figure 2.3.2 " title="Figure 2.3.2 ">Figure 2.3.2</a>.</p>
+<figure class="figure-like" id="differenttrees"><img width="80%" src="../images/threetrees" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.2</span>The three labelled trees on three vertices</figcaption></figure><p id="p-618">How many (labelled) trees are there on four vertices? You don't have a lot of data to guess from, but try to guess a formula for the number of labelled trees with vertex set \(\{1,2,\cdots,n\}\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-93" id="hint-93"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-93" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-619">When you get to four and especially five vertices, draw all the unlabeled trees you can think of, and then figure out in how many different ways you can put labels on the vertices.</p></span></span>
+</div></article><p id="p-621">We are now going to introduce a method to prove the formula you guessed. Given a tree with two or more vertices, labelled with positive integers, we define a sequence \(b_1,b_2,\ldots\) of integers inductively as follows: If the tree has two vertices, the sequence consists of one entry, namely the label of the vertex with the larger label. Otherwise, let \(a_1\) be the lowest numbered vertex of degree 1 in the tree. Let \(b_1\) be the label of the unique vertex in the tree adjacent to \(a_1\) and write down \(b_1\text{.}\) For example, in the first graph in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>, \(a_1\) is 1 and \(b_1\) is 2. Given \(a_1\) through \(a_{i-1}\text{,}\) let \(a_i\) be the lowest numbered vertex of degree 1 in the tree you get by deleting \(a_1\) through \(a_{i-1}\)and let \(b_i\) be the unique vertex in this new tree adjacent to \(a_i\text{.}\) For example, in the first graph in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>, \(a_2=2\) and \(b_2=3\text{.}\) Then \(a_3=5\) and \(b_3=4\text{.}\) We use \(b\) to stand for the sequence of \(b_i\)s we get in this way. In the tree (the first graph) in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a>, the sequence \(b\) is 2344378. (If you are unfamiliar with inductive (recursive) definition, you might want to write down some other labelled trees on eight vertices and construct the sequence of \(b_i\)s.)</p>
+<article class="example-like" id="prufer-props"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">112</span>
+</h5>
+<article class="exercise-like" id="task-95"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-622">How long will the sequence of \(b_i\)s be if it is computed from a tree with \(n\) vertices (labelled with 1 through \(n\))?</p></article><article class="exercise-like" id="task-96"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-623">What can you say about the last member of the sequence of \(b_i\)s?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-94" id="hint-94"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-94" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-624">Do some examples.</p></span></span></article><article class="exercise-like" id="task-97"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-625">Can you tell from the sequence of \(b_i\)s what \(a_1\)is?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-95" id="hint-95"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-95" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-626">Is it possible for \(a_1\) to be equal to one of the \(b_j\)s?</p></span></span></article><article class="exercise-like" id="task-98"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-627">Find a bijection between labelled trees and something you can “count” that will tell you how many labelled trees there are on \(n\) labelled vertices.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-96" id="hint-96"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-96" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-628">You have seen that the sequence \(b\) determines \(a_1\text{.}\) Does it determine any other \(a_j\)s? If you knew all the \(a_j\)s and all the \(b_j\)s, could you reconstruct the tree? What are the possible values of \(b_1\text{?}\) \(b_j\text{?}\)</p></span></span></article></article><p id="p-629">The sequence \(b_1,b_2,\ldots, b_{n-2}\) in <a knowl="./knowl/Prufer.html" knowl-id="xref-Prufer" alt="Problem 111 " title="Problem 111 ">Problem 111</a> is called a <em class="terminology">Prüfer coding</em> or <em class="terminology">Prüfer code</em> for the tree. There is a good bit of interesting information encoded into the Prüfer code for a tree.</p>
+<article class="example-like" id="activity-113"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">113</span>
+</h5>
+<p id="p-630">What can you say about the vertices of degree one from the Prüfer code for a tree labeled with the integers from 1 to \(b\text{?}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-97" id="hint-97"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-97" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-631">What vertex or vertices in the sequence \(b_1,b_2,\ldots,b_{n-1}\) can have degree 1?</p></span></span>
+</div></article><article class="example-like" id="activity-114"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">114</span>
+</h5>
+<p id="p-632">What can you say about the Prüfer code for a tree with exactly two vertices of degree 1? (and perhaps some vertices with other degrees as well)? Does this characterize such trees?</p></article><article class="example-like interesting" id="activity-115"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">115</span>
+</h5>
+<p id="p-634">What can you determine about the degree of the vertex labelled \(i\) from the Prüfer code of the tree?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-98" id="hint-98"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-98" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-635">If a vertex has degree 1, how many times does it appear in the Prüfer code of the tree? What about a vertex of degree 2?</p></span></span>
+</div></article><article class="example-like interesting" id="activity-116"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">116</span>
+</h5>
+<p id="p-637">What is the number of (labelled) trees on \(n\) vertices with three vertices of degree 1? (Assume they are labelled with the integers 1 through \(n\text{.}\)) This problem will appear again in the next chapter after some material that will make it easier.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-99" id="hint-99"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-99" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-638">How many vertices appear exactly once in the Prüfer code of the tree and how many appear exactly twice?</p></span></span>
+</div></article></section><section class="subsection" id="subsection-24"><header title="Subsection 2.3.4 Spanning trees"><h1 class="heading hide-type" alt="Subsection 2.3.4 Spanning trees">
+<span class="type">Subsection</span><span class="codenumber">2.3.4</span><span class="title">Spanning trees</span><a href="sec_induction-graphstrees.html#subsection-24" class="permalink">¶ permalink</a>
+</h1></header><p id="p-640">Many of the applications of trees arise from trying to find an efficient way to connect all the vertices of a graph. For example, in a telephone network, at any given time we have a certain number of wires (or microwave channels, or cellular channels) available for use. These wires or channels go from a specific place to a specific place. Thus the wires or channels may be thought of as edges of a graph and the places the wires connect may be thought of as vertices of that graph. A tree whose edges are some of the edges of a graph \(G\) and whose vertices are all of the vertices of the graph \(G\) is called a <em class="terminology">spanning tree</em> of \(G\text{.}\) A spanning tree for a telephone network will give us a way to route calls between any two vertices in the network. In <a knowl="./knowl/spanningtrees.html" knowl-id="xref-spanningtrees" alt="Figure 2.3.3 " title="Figure 2.3.3 ">Figure 2.3.3</a> we show a graph and all its spanning trees.</p>
+<figure class="figure-like" id="spanningtrees"><img width="95%" src="../images/spanningtrees" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.3</span>A graph and all its spanning trees.</figcaption></figure><article class="example-like" id="activity-117"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">117</span>
+</h5>
+<p id="p-641">Show that every connected graph has a spanning tree. It is possible to find a proof that starts with the graph and works “down” towards the spanning tree and to find a proof that starts with just the vertices and works “up” towards the spanning tree. Can you find both kinds of proof?</p></article></section><section class="subsection" id="subsection-25"><header title="Subsection 2.3.5 Minimum cost spanning trees"><h1 class="heading hide-type" alt="Subsection 2.3.5 Minimum cost spanning trees">
+<span class="type">Subsection</span><span class="codenumber">2.3.5</span><span class="title">Minimum cost spanning trees</span><a href="sec_induction-graphstrees.html#subsection-25" class="permalink">¶ permalink</a>
+</h1></header><p id="p-646">Our motivation for talking about spanning trees was the idea of finding a minimum number of edges we need to connect all the edges of a communication network together. In many cases edges of a communication network come with costs associated with them. For example, one cell-phone operator charges another one when a customer of the first uses an antenna of the other. Suppose a company has offices in a number of cities and wants to put together a communication network connecting its various locations with high-speed computer communications, but to do so at minimum cost. Then it wants to take a graph whose vertices are the cities in which it has offices and whose edges represent possible communications lines between the cities. Of course there will not necessarily be lines between each pair of cities, and the company will not want to pay for a line connecting city \(i\) and city \(j\) if it can already connect them indirectly by using other lines it has chosen. Thus it will want to choose a spanning tree of minimum cost among all spanning trees of the communications graph. For reasons of this application, if we have a graph with numbers assigned to its edges, the sum of the numbers on the edges of a spanning tree of \(G\) will be called the <em class="terminology">cost</em> of the spanning tree.</p>
+<article class="example-like interesting" id="mincostspantree"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">118</span>
+</h5>
+<p id="p-647">Describe a method (or better, two methods different in at least one aspect) for finding a spanning tree of minimum cost in a graph whose edges are labelled with costs, the cost on an edge being the cost for including that edge in a spanning tree. Prove that your method(s) work.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-100" id="hint-100"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-100" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-648">Think of selecting one edge of the tree at a time. Given that you have chosen some edges and have a graph whose connected components are trees, what is a good way to choose the next edge? To prove your method correct, use contradiction by assuming there is a spanning tree tree with lower total cost.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-101" id="hint-101"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-101" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-649">Think of selecting one edge of the tree at a time. But now do it in such a way that one connected component is a tree and the other connected components have just one vertex. What is a good way to make the component that is a tree into a tree with one more vertex? To prove your method works, use contradiction by assuming there is a spanning tree with lower total cost.</p></span></span>
+</div></article><p id="p-652">The method you used in <a knowl="./knowl/mincostspantree.html" knowl-id="xref-mincostspantree" alt="Problem 118 " title="Problem 118 ">Problem 118</a> is called a <em class="terminology">greedy method</em>, because each time you made a choice of an edge, you chose the least costly edge available to you.</p></section><section class="subsection" id="subsection-26"><header title="Subsection 2.3.6 The deletion/contraction recurrence for spanning trees"><h1 class="heading hide-type" alt="Subsection 2.3.6 The deletion/contraction recurrence for spanning trees">
+<span class="type">Subsection</span><span class="codenumber">2.3.6</span><span class="title">The deletion/contraction recurrence for spanning trees</span><a href="sec_induction-graphstrees.html#subsection-26" class="permalink">¶ permalink</a>
+</h1></header><p id="p-653">There are two operations on graphs that we can apply to get a recurrence (though a more general kind than those we have studied for sequences) which will let us compute the number of spanning trees of a graph. The operations each apply to an edge \(e\) of a graph \(G\text{.}\) The first is called <em class="terminology">deletion</em>; we <!--Style me with CSS--><em>delete</em> the edge \(e\) from the graph by removing it from the edge set. <a knowl="./knowl/twodeletions.html" knowl-id="xref-twodeletions" alt="Figure 2.3.4 " title="Figure 2.3.4 ">Figure 2.3.4</a> shows how we can delete edges from a graph to get a spanning tree.</p>
+<figure class="figure-like" id="twodeletions"><img width="60%" src="../images/twodeletions" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.4</span>Deleting two appropriate edges from this graph gives a spanning tree.</figcaption></figure><p id="p-654">The second operation is called <em class="terminology">contraction</em>.</p>
+<figure class="figure-like" id="threecontractions"><img width="65%" src="../images/threecontractions" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.5</span>The results of contracting three different edges in a graph.</figcaption></figure><p id="p-655">Contractions of three different edges in the same graph are shown in <a knowl="./knowl/threecontractions.html" knowl-id="xref-threecontractions" alt="Figure 2.3.5 " title="Figure 2.3.5 ">Figure 2.3.5</a>. Intuitively, we contract an edge by shrinking it in length until its endpoints coincide; we let the rest of the graph “go along for the ride.” To be more precise, we <em class="terminology">contract</em> the edge \(e\) with endpoints \(v\) and \(w\) as follows: </p>
+<ol id="ol-5" style="list-style-type: decimal;">
+<li id="li-20"><p id="p-656">remove all edges having either \(v\) or \(w\) or both as an endpoint from the edge set,</p></li>
+<li id="li-21"><p id="p-657">remove \(v\) and \(w\) from the vertex set,</p></li>
+<li id="li-22"><p id="p-658">add a new vertex \(E\) to the vertex set,</p></li>
+<li id="li-23"><p id="p-659">add an edge from \(E\) to each remaining vertex that used to be an endpoint of an edge whose other endpoint was \(v\) or \(w\text{,}\) and add an edge from \(E\) to \(E\) for any edge other than \(e\) whose endpoints were in the set \(\{v,w\}\text{.}\)</p></li>
+</ol>
+<p id="p-660">We use \(G-e\) (read as \(G\) minus \(e\)) to stand for the result of deleting \(e\) from \(G\text{,}\) and we use \(G/e\) (read as \(G\) contract \(e\)) to stand for the result of contracting \(e\) from \(G\text{.}\)</p>
+<article class="example-like interesting-forward-essential" id="activity-119"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">119</span>
+</h5>
+<article class="exercise-like" id="task-99"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-661">How do the number of spanning trees of \(G\) not containing the edge \(e\) and the number of spanning trees of \(G\) containing \(e\) relate to the number of spanning trees of \(G-e\) and \(G/e\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-102" id="hint-102"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-102" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-662">If you have a spanning tree of \(G\) that contains \(e\text{,}\) is the graph that results from that tree by contracting \(e\) still a tree?</p></span></span></article><article class="exercise-like" id="task-100"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-663">Use \(\#(G)\) to stand for the number of spanning trees of \(G\) (so that, for example, \(\#(G/e)\) stands for the number of spanning trees of \(G/e\)). Find an expression for \(\#(G)\) in terms of \(\#(G/e)\) and \(\#(G-e)\text{.}\) This expression is called the <em class="terminology">deletion-contraction recurrence</em>.</p></article><article class="exercise-like" id="task-101"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-664">Use the recurrence of the previous part to compute the number of spanning trees of the graph in <a knowl="./knowl/spantreeexercise.html" knowl-id="xref-spantreeexercise" alt="Figure 2.3.6 " title="Figure 2.3.6 ">Figure 2.3.6</a>.</p>
+<figure class="figure-like" id="spantreeexercise"><img width="20%" src="../images/spantreeexercise" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.6</span>A graph.</figcaption></figure></article></article></section><section class="subsection" id="subsection-27"><header title="Subsection 2.3.7 Shortest paths in graphs"><h1 class="heading hide-type" alt="Subsection 2.3.7 Shortest paths in graphs">
+<span class="type">Subsection</span><span class="codenumber">2.3.7</span><span class="title">Shortest paths in graphs</span><a href="sec_induction-graphstrees.html#subsection-27" class="permalink">¶ permalink</a>
+</h1></header><p id="p-668">Suppose that a company has a main office in one city and regional offices in other cities. Most of the communication in the company is between the main office and the regional offices, so the company wants to find a spanning tree that minimizes not the total cost of all the edges, but rather the cost of communication between the main office and each of the regional offices. It is not clear that such a spanning tree even exists. This problem is a special case of the following. We have a connected graph with nonnegative numbers assigned to its edges. (In this situation these numbers are often called weights.) The <em class="terminology">(weighted) length</em> of a path in the graph is the sum of the weights of its edges. The <em class="terminology">distance</em> between two vertices is the least (weighted) length of any path between the two vertices. Given a vertex \(v\text{,}\) we would like to know the distance between \(v\) and each other vertex, and we would like to know if there is a spanning tree in \(G\) such that the length of the path in the spanning tree from \(v\) to each vertex \(x\) is the distance from \(v\) to \(x\) in \(G\text{.}\)</p>
+<article class="example-like" id="Dijkstra"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">120</span>
+</h5>
+<p id="p-669">Show that the following algorithm (known as Dijkstra's algorithm) applied to a weighted graph whose vertices are labelled 1 to \(n\) gives, for each \(i\text{,}\) the distance from vertex 1 to i as \(d(i)\text{.}\) </p>
+<ol id="ol-6" style="list-style-type: decimal;">
+<li id="li-24"><p id="p-670">Let \(d(1) = 0\text{.}\) Let \(d(i) = \infty\) for all other \(i\text{.}\)  Let \(v(1)\)=1. Let \(v(j) = 0\) for all other \(j\text{.}\)  For each \(i\) and \(j\text{,}\) let \(w(i,j)\) be the minimum weight of an edge between \(i\) and \(j\text{,}\) or \(\infty\) if there are no such edges.  Let \(k=1\text{.}\)  Let \(t=1\text{.}\)</p></li>
+<li id="li-25"><p id="p-671">For each \(i\text{,}\) if \(d(i)&gt;d(k) + w(k,i)\) let \(d(i)= d(k) +w(k,i)\text{.}\)</p></li>
+<li id="li-26"><p id="p-672">Among those \(i\) with \(v(i)=0\text{,}\) choose one with \(d(i)\) a minimum, and let \(k=i\text{.}\)  Increase \(t\) by 1. Let \(v(i) =1.\)</p></li>
+<li id="li-27"><p id="p-673">Repeat the previous two steps until \(t=n\)</p></li>
+</ol></article><article class="example-like" id="activity-121"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">121</span>
+</h5>
+<p id="p-675">Is there a spanning tree such that the distance from vertex \(1\) to vertex \(i\) given by the algorithm in <a knowl="./knowl/Dijkstra.html" knowl-id="xref-Dijkstra" alt="Problem 120 " title="Problem 120 ">Problem 120</a> is the distance for vertex 1 to vertex \(i\) in the tree (using the same weights on the edges, of course)?</p></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:16-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">246.1</span>
+</h5>
+<p>Color an arbitrary vertex; you have \(x\) choices for the color of that vertex. No two vertices adjacent to it are adjacent (otherwise we'd have a cycle), so for for each of them you have \(x-1\) choices of colors. No two vertices adjacent to colored vertices are adjacent to each other, nor is one of them adjacent to two colored vertices (in either case you'd have a cycle), so for each of them you'd have \(x-1\) colors. You can continue this argument until all vertices are colored, so you have \(x(x-1)^{n-1}\) ways to color the vertices.</p>
+<p>You can also prove by induction that the chromatic polynomial of a tree is \(x(x-1)^{n-1}\text{.}\) This is clearly true if there is one vertex. Otherwise, choose a vertex of degree 1 in an \(n\)-vertex tree and remove it. You may inductively assume that the chromatic polynomial of the remaining tree is \(x(x-1)^{n-2}\text{.}\) Now there are \(x-1\) choices for the color of the vertex you removed since it has degree 1, and so the chromatic polynomial of the tree is \(x(x-1)^{n-1}\text{.}\) There is also an inductive argument in which you delete and contract an arbitrary edge.</p></span><span class="incontext"><a href="sec_inclexcl-delcont.html#solution-415">in-context</a></span>
+</body>
+</html>

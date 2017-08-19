@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:56-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>You can prove this by plugging in the formula for \(\binom{n}{k}\) on both sides and cancelling stuff until you get the same thing on both sides.</p>
+<p>However a much more interesting proof is that the right hand side counts the number of ways to choose a \(k\)-element set form an \(n\)-element set and then choose an \(m\)-element set from what remains. The left hand side counts the number of ways to first chose a \(k\)-element subset from the \(n\)-element set and then choose an \(m\)-element subset from what remains. Thus in both cases you are counting the number of ways to choose an ordered pair consisting of an \(m\)-element subset and a disjoint \(k\)-element subset from an \(n\)-element set.</p>
+<p>You can also base a proof on the observation that \((x+y+x)^n=
+\sum_{k=0}^n\binom{n}{k}(x+y)^kz^{n-k}\) and \((x+y+z)^n=\sum_{m=0}^n\binom{n}{m}x^m(y+z)^{n-m}\) and asking for the coefficient of \(x^my^{n-m-k}z^k\text{.}\) You do have to use the binomial theorem with an eye to the result you are looking for, however.</p></span></body>
+</html>

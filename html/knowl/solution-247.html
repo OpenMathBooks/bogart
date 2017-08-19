@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:03-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">156.b.1</span>
+</h5>
+<p>We will answer the next part of the problem here! The recurrence for \(b(k,n)\) is exactly the same as the recurrence for \(L(k,n)\text{.}\) Further, \(b(0,0)=1=L(0,0)\text{,}\) \(b(0,n) = 0=L(0,n)\) for \(n&gt;0\text{,}\) and \(b(k,k)=L(k,k) =1\text{.}\) Thus \(b(k,n)\) and \(L(k,n)\) are identical. This and the formula from <a knowl="./knowl/brokenpermutation.html" knowl-id="xref-brokenpermutation" alt="Problem 133 " title="Problem 133 ">Problem 133</a> gives one proof that \(b(k,n)=k!\binom{k-1}{n-1}/n!\text{.}\)</p>
+<p>A second proof that the change of basis coefficients are Lah numbers goes as follows. \(n^{\overline{k}}\) counts the number of ordered functions from a \(k\)-element set to an \(n\)-element set. One way to determine such an ordered function is to take a broken permutation of the \(k\)-element set into \(n\) or fewer parts, and then take a one-to-one function from the parts to the \(n\)-element set. More informally we assign the parts of the broken permutation to distinct elements of the \(n\)-element set. If the broken permutation has \(i\) parts, the number of ways to do this assignment is the number of \(i\)-element permutations of an \(n\)-element set, \(n^{\underline{i}}\text{.}\) Thus \(n^{\overline{k}}=\sum_{i=0}^n L(k,i)n^{\underline{i}}\text{.}\) However we can change the upper limit of the sum to \(k\) because \(L(k,i)\) is zero when \(i&gt;k\) and \(n^{\underline{i}}\) is zero when \(i&gt;n\text{.}\) Now we change \(n\) to \(x\) because we have a polynomial equality which is valid for infinitely many of the values of the variable. This gives us \(x^{\overline{k}}=\sum_{i=0}^k L(k,i)x^{\underline{i}}\text{.}\) Thus \(b(k,i) =
+L(k,i)\text{.}\)</p></span><span class="incontext"><a href="s3-2-partitions.html#solution-247">in-context</a></span>
+</body>
+</html>

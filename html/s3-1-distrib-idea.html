@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:37-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The idea of a distribution</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-3.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="s3-2-partitions.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-3.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="s3-2-partitions.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea" class="active">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="s3-1-distrib-idea"><header title="Section 3.1 The idea of a distribution"><h1 class="heading hide-type" alt="Section 3.1 The idea of a distribution">
+<span class="type">Section</span><span class="codenumber">3.1</span><span class="title">The idea of a distribution</span><a href="s3-1-distrib-idea.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-32"><p id="p-706">Many of the problems we solved in <a href="what-is.html" alt="Chapter 1 What is Combinatorics?" title="Chapter 1 What is Combinatorics?">Chapter 1</a> may be thought of as problems of distributing objects (such as pieces of fruit or ping-pong balls) to recipients (such as children). Some of the ways of viewing counting problems as distribution problems are somewhat indirect. For example, in <a knowl="./knowl/ping-pong.html" knowl-id="xref-ping-pong" alt="Problem 37 " title="Problem 37 ">Problem 37</a> you probably noticed that the number of ways to pass out \(k\) ping-pong balls to \(n\) children so that no child gets more than one is the number of ways that we may choose a \(k\)-element subset of an \(n\)-element set. We think of the children as recipients and objects we are distributing as the identical ping-pong balls, distributed so that each recipient gets at most one ball. Those children who receive an object are in our set. It is helpful to have more than one way to think of solutions to problems. In the case of distribution problems, another popular model for distributions is to think of putting balls in boxes rather than distributing objects to recipients. Passing out identical objects is modeled by putting identical balls into boxes. Passing out distinct objects is modeled by putting distinct balls into boxes.</p></section><section class="subsection" id="subsection-28"><header title="Subsection 3.1.1 The twentyfold way"><h1 class="heading hide-type" alt="Subsection 3.1.1 The twentyfold way">
+<span class="type">Subsection</span><span class="codenumber">3.1.1</span><span class="title">The twentyfold way</span><a href="s3-1-distrib-idea.html#subsection-28" class="permalink">¶ permalink</a>
+</h1></header><p id="p-707">When we are passing out objects to recipients, we may think of the objects as being either identical or distinct. We may also think of the recipients as being either identical (as in the case of putting fruit into plastic bags in the grocery store) or distinct (as in the case of passing fruit out to children). We may restrict the distributions to those that give at least one object to each recipient, or those that give exactly one object to each recipient, or those that give at most one object to each recipient, or we may have no such restrictions. If the objects are distinct, it may be that the order in which the objects are received is relevant (think about putting books onto the shelves in a bookcase) or that the order in which the objects are received is irrelevant (think about dropping a handful of candy into a child's trick or treat bag). If we ignore the possibility that the order in which objects are received matters, we have created \(2\cdot2\cdot4=16\) distribution problems. In the cases where a recipient can receive more than one distinct object, we also have four more problems when the order objects are received matters. Thus we have 20 possible distribution problems.</p>
+<figure class="figure-like" id="firstdistributiontable"><table>
+<tr><td class="c m b3 r3 l3 t3 lines" colspan="3">The Twentyfold Way: A Table of Distribution Problems</td></tr>
+<tr>
+<td class="l m b0 r3 l3 t0 lines">\(k\) objects and conditions<br> on how they are received</td>
+<td class="c m b1 r3 l0 t0 lines" colspan="2">\(n\) recipients and mathematical<br> model for distribution</td>
+</tr>
+<tr>
+<td class="l m b3 r3 l3 t0 lines"></td>
+<td class="c m b3 r1 l0 t0 lines">Distinct</td>
+<td class="c m b3 r3 l0 t0 lines">Identical</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">1.  Distinct<br> no conditions</td>
+<td class="c m b1 r1 l0 t0 lines">\(n^k\)<br> functions</td>
+<td class="c m b1 r3 l0 t0 lines">?<br> set partitions (\(\le n\) parts)</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">2.  Distinct<br> Each gets at most one</td>
+<td class="c m b1 r1 l0 t0 lines">\(n^{\underline{k}}\)<br> \(k\)-element<br> permutations</td>
+<td class="c m b1 r3 l0 t0 lines">1 if \(k\le n\text{;}\)<br> 0 otherwise</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">3.  Distinct<br> Each gets at least one</td>
+<td class="c m b1 r1 l0 t0 lines">\(?\)<br> onto functions</td>
+<td class="c m b1 r3 l0 t0 lines">\(?\)<br> set partitions (\(n\) parts)</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l3 t0 lines">4. Distinct<br> Each gets exactly one</td>
+<td class="c m b1 r1 l0 t0 lines">\(k!=n!\)<br> permutations</td>
+<td class="c m b1 r3 l0 t0 lines">1 if \(k=n\text{;}\)<br> 0 otherwise</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">5.  Distinct,<br>order matters</td>
+<td class="c t b1 r1 l0 t0 lines">?<br> ?</td>
+<td class="c t b1 r3 l0 t0 lines">?<br> ?</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">6.  Distinct,<br> order matters<br> Each gets at least one</td>
+<td class="c t b1 r1 l0 t0 lines">?<br> ?</td>
+<td class="c t b1 r3 l0 t0 lines">?<br> ?</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">7.  Identical<br> no conditions</td>
+<td class="c t b1 r1 l0 t0 lines">?<br> ?</td>
+<td class="c t b1 r3 l0 t0 lines">?<br> ?</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">8.  Identical<br> Each gets at most one</td>
+<td class="c t b1 r1 l0 t0 lines">\(\binom{n}{k}\)<br> subsets</td>
+<td class="c t b1 r3 l0 t0 lines">1 if \(k\le n\text{;}\)<br> 0 otherwise</td>
+</tr>
+<tr>
+<td class="l t b1 r3 l3 t0 lines">9.  Identical<br> Each gets at least one</td>
+<td class="c t b1 r1 l0 t0 lines">?<br> ?</td>
+<td class="c t b1 r3 l0 t0 lines">?<br> ?</td>
+</tr>
+<tr>
+<td class="l t b3 r3 l3 t0 lines">10.  Identical<br> Each gets exactly one</td>
+<td class="c t b3 r1 l0 t0 lines">1 if \(k=n\text{;}\)<br> 0 otherwise</td>
+<td class="c t b3 r3 l0 t0 lines">1 if \(k=n\text{;}\)<br> 0 otherwise</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">3.1.1</span>An incomplete table of the number of ways to distribute \(k\) objects to \(n\) recipients, with restrictions on how the objects are received</figcaption></figure><p id="p-708">We describe these problems in <a knowl="./knowl/firstdistributiontable.html" knowl-id="xref-firstdistributiontable" alt="Table 3.1.1 " title="Table 3.1.1 ">Table 3.1.1</a>. Since there are twenty possible distribution problems, we call the table the “Twentyfold Way,” adapting terminology suggested by Joel Spencer for a more restricted class of distribution problems. In the first column of the table we state whether the objects are distinct (like people) or identical (like ping-pong balls) and then give any conditions on how the objects may be received. The conditions we consider are whether each recipient gets at most one object, whether each recipient gets at least one object, whether each recipient gets exactly one object, and whether the order in which the objects are received matters. In the second column we give the solution to the problem and the name of the mathematical model for this kind of distribution problem when the recipients are distinct, and in the third column we give the same information when the recipients are identical. We use question marks as the answers to problems we have not yet solved and models we have not yet studied. We give explicit answers to problems we solved in <a href="what-is.html" alt="Chapter 1 What is Combinatorics?" title="Chapter 1 What is Combinatorics?">Chapter 1</a> and problems whose answers are immediate. The goal of this chapter is to develop methods that will allow us to fill in the table with formulas or at least quantities we know how to compute, and we will give a completed table at the end of the chapter. We will now justify the answers that are not question marks and replace some question marks with answers as we cover relevant material.</p>
+<p id="p-709">If we pass out \(k\) distinct objects (say pieces of fruit) to \(n\) distinct recipients (say children), we are saying for each object which recipient it goes to. Thus we are defining a function from the set of objects to the recipients. We saw the following theorem in <a knowl="./knowl/numberoffunctionsconjecture.html" knowl-id="xref-numberoffunctionsconjecture" alt="Part 13.b " title="Part 13.b ">Problem 13.b</a>.</p>
+<article class="theorem-like" id="theorem-3"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.1.2</span>
+</h5>
+<p id="p-710">There are \(n^k\) functions from a \(k\)-element set to an \(n\)-element set.</p></article><p id="p-711">We proved it in <a knowl="./knowl/numberoffunctionsconjecture.html" knowl-id="xref-numberoffunctionsconjecture" alt="Part 13.b " title="Part 13.b ">Problem 13.b</a> and in another way in <a knowl="./knowl/altproofnumberoffunctionsconjecture.html" knowl-id="xref-altproofnumberoffunctionsconjecture" alt="Problem 75 " title="Problem 75 ">Problem 75</a>. If we pass out \(k\) distinct objects (say pieces of fruit) to \(n\) indistinguishable recipients (say identical paper bags) then we are dividing the objects up into disjoint sets; that is we are forming a partition of the objects into some number, certainly no more than the number \(k\) of objects, of parts. Later in this chapter (and again in the next chapter) we shall discuss how to compute the number of partitions of a \(k\)-element set into \(n\) parts. This explains the entries in row one of our table.</p>
+<p id="p-712">If we pass out \(k\) distinct objects to \(n\) recipients so that each gets at most one, we still determine a function, but the function must be one-to-one. The number of one-to-one functions from a \(k\)-element set to an \(n\) element set is the same as the number of one-to-one functions from the set \([k] =\{1,2,\ldots,k\}\) to an \(n\)-element set. In <a knowl="./knowl/kelementpermutation.html" knowl-id="xref-kelementpermutation" alt="Problem 20 " title="Problem 20 ">Problem 20</a> we proved the following theorem.</p>
+<article class="theorem-like" id="numberofinjections"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.1.3</span>
+</h5>
+<p id="p-713">If \(0\le k\le n\text{,}\) then the number of \(k\)-element permutations of an \(n\)-element set is</p>
+\begin{equation*}
+n^{\underline{k}} = n(n-1)\cdots(n-k+1) =
+n!/(n-k)!.
+\end{equation*}
+<p id="p-714"></p></article><p id="p-715">If \(k&gt;n\) there are no one-to-one functions from a \(k\) element set to an \(n\) element, so we define \(n^{\underline{k}}\) to be zero in this case. Notice that this is what the indicated product in the middle term of our formula gives us. If we are supposed to distribute \(k\) distinct objects to \(n\) identical recipients so that each gets at most one, we cannot do so if \(k&gt;n\text{,}\) so there are 0 ways to do so. On the other hand, if \(k\le n\text{,}\) then it doesn't matter which recipient gets which object, so there is only one way to do so. This explains the entries in row two of our table.</p>
+<p id="p-716">If we distribute \(k\) distinct objects to \(n\) distinct recipients so that each recipient gets at least one, then we are counting functions again, but this time functions from a \(k\)-element set <!--Style me with CSS--><em>onto</em> an \(n\)-element set. At present we do not know how to compute the number of such functions, but we will discuss how to do so later in this chapter and in the next chapter. If we distribute \(k\) identical objects to \(n\) recipients, we are again simply partitioning the objects, but the condition that each recipient gets at least one means that we are partitioning the objects into exactly \(n\) blocks. Again, we will discuss how compute the number of ways of partitioning a set of \(k\) objects into \(n\) blocks later in this chapter. This explains the entries in row three of our table.</p>
+<p id="p-717">If we pass out \(k\) distinct objects to \(n\) recipients so that each gets exactly one, then \(k=n\) and the function that our distribution gives us is a bijection. The number of bijections from an \(n\)-element set to an \(n\)-element set is \(n!\) by <a knowl="./knowl/numberofinjections.html" knowl-id="xref-numberofinjections" alt="Theorem 3.1.3 " title="Theorem 3.1.3 ">Theorem 3.1.3</a>. If we pass out \(k\) distinct objects of \(n\) identical recipients so that each gets exactly 1, then in this case it doesn't matter which recipient gets which object, so the number of ways to do so is 1 if \(k=n\text{.}\) If \(k\not=n\text{,}\) then the number of such distributions is zero. This explains the entries in row four of our table.</p>
+<p id="p-718">We now jump to row eight of our table. We saw in <a knowl="./knowl/ping-pong.html" knowl-id="xref-ping-pong" alt="Problem 37 " title="Problem 37 ">Problem 37</a> that the number of ways to pass out \(k\) identical ping-pong balls to \(n\) children is simply the number of \(k\)-element subsets of an \(n\)-element set. In <a knowl="./knowl/formulanchoosek.html" knowl-id="xref-formulanchoosek" alt="Problem 39 " title="Problem 39 ">Problem 39</a> we proved the following theorem.</p>
+<article class="theorem-like" id="theorem-5"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.1.4</span>
+</h5>
+<p id="p-719">If \(0\le k \le n\text{,}\) the number of \(k\)-element subsets of an \(n\)-element set is given by</p>
+\begin{equation*}
+\binom{n}{k} = \frac{n^{\underline{k}}}{k!}
+= \frac{n!}{k!(n-k)!}.
+\end{equation*}
+</article><p id="p-720">We define \(\binom{n}{k}\) to be 0 if \(k&gt;n\text{,}\) because then there are no \(k\)-element subsets of an \(n\)-element set. Notice that this is what the middle term of the formula in the theorem gives us. This explains the entries of row 8 of our table. For now we jump over row 9.</p>
+<p id="p-721">In row 10 of our table, if we are passing out \(k\) identical objects to \(n\) recipients so that each gets exactly one, it doesn't matter whether the recipients are identical or not; there is only one way to pass out the objects if \(k=n\) and otherwise it is impossible to make the distribution, so there are no ways of distributing the objects. This explains the entries of row 10 of our table. Several other rows of our table can be computed using the methods of <a href="what-is.html" alt="Chapter 1 What is Combinatorics?" title="Chapter 1 What is Combinatorics?">Chapter 1</a>.</p></section><section class="subsection" id="orderedfunctionsection"><header title="Subsection 3.1.2 Ordered functions"><h1 class="heading hide-type" alt="Subsection 3.1.2 Ordered functions">
+<span class="type">Subsection</span><span class="codenumber">3.1.2</span><span class="title">Ordered functions</span><a href="s3-1-distrib-idea.html#orderedfunctionsection" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like" id="bookcase"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">122</span>
+</h5>
+<article class="introduction" id="introduction-33"><p id="p-722">Suppose we wish to place \(k\) distinct books onto the shelves of a bookcase with \(n\) shelves. For simplicity, assume for now that all of the books would fit on any of the shelves. Also, let's imagine pushing the books on a shelf as far to the left as we can, so that we are only thinking about how the books sit relative to each other, not about the exact places where we put the books. Since the books are distinct, we can think of a the first book, the second book and so on.</p></article><article class="exercise-like" id="task-102"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-723">How many places are there where we can place the first book?</p></article><article class="exercise-like" id="task-103"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-725">When we place the second book, if we decide to place it on the shelf that already has a book, does it matter if we place it to the left or right of the book that is already there?</p></article><article class="exercise-like" id="task-104"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-727">How many places are there where we can place the second book?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-103" id="hint-103"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-103" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-728">If you decide to put it on a shelf that already has a book, you have two choices of where to put it on that shelf.</p></span></span></article><article class="exercise-like" id="task-105"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-730">Once we have \(i-1\) books placed, if we want to place book \(i\)  on a shelf that already has some books, is sliding it in to the left of all the books already there different from placing it to the right of all the books already or between two books already there?</p></article><article class="exercise-like" id="task-106"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-732">In how many ways may we place the \(i\)th book into the bookcase?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-104" id="hint-104"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-104" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-733">Among all the places you could put books, on all the shelves, how many are to the immediate left of some book? How many other places are there?</p></span></span></article><article class="exercise-like" id="task-107"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-735">In how many ways may we place all the books?</p></article></article><article class="example-like" id="bookcaseeveryshelf"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">123</span>
+</h5>
+<p id="p-737">Suppose we wish to place the books in <a knowl="./knowl/bookcase.html" knowl-id="xref-bookcase" alt="Problem 122 " title="Problem 122 ">Problem 122</a> (satisfying the assumptions we made there) so that each shelf gets at least one book. Now in how many ways may we place the books? (Hint: how can you make sure that each shelf gets at least one book before you start the process described in <a knowl="./knowl/bookcase.html" knowl-id="xref-bookcase" alt="Problem 122 " title="Problem 122 ">Problem 122</a>?)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-105" id="hint-105"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-105" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-738">How can you make sure that each shelf gets at least one book before you start the process described in <a knowl="./knowl/bookcase.html" knowl-id="xref-bookcase" alt="Problem 122 " title="Problem 122 ">Problem 122</a>?</p></span></span>
+</div></article><p id="p-740">The assignment of which books go to which shelves of a bookcase is simply a function from the books to the shelves. But a function doesn't determine which book sits to the left of which others on the shelf, and this information is part of how the books are arranged on the shelves. In other words, the order in which the shelves receive their books matters.  Our function must thus assign an ordered list of books to each shelf. We will call such a function an ordered function. More precisely, an <em class="terminology">ordered function</em> from a set \(S\) to a set \(T\) is a function that assigns an (ordered) list of elements of \(S\) to some, but not necessarily all, elements of \(T\) in such a way that each element of \(S\) appears on one and only one of the lists.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-6" id="fn-6"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-6" style="display: none;" class="tex2jax_ignore"><span class="footnote">The phrase ordered function is not a standard one, because there is as yet no standard name for the result of an ordered distribution problem.</span></span> (Notice that although it is not the usual definition of a function from \(S\) to \(T\text{,}\) a function can be described as an assignment of subsets of \(S\) to some, but not necessarily all, elements of \(T\) so that each element of \(S\) is in one and only one of these subsets.) Thus the number of ways to place the books into the bookcase is the entry in the middle column of row 5 of our table. If in addition we require each shelf to get at least one book, we are discussing the entry in the middle column of row 6 of our table. An <em class="terminology">ordered onto function</em> is one which assigns a list to each element of \(T\text{.}\) In <a knowl="./knowl/bookcase.html" knowl-id="xref-bookcase" alt="Problem 122 " title="Problem 122 ">Problem 122</a> you showed that the number of ordered functions from a \(k\)-element set to an \(n\)-element set is \(\displaystyle \prod_{i=1}^n (n+i-1)\text{.}\) This product occurs frequently enough that it has a name; it is called the \(k\)\/th <em class="terminology">rising factorial power</em> of \(n\) and is denoted by \(n^{\overline{k}}\text{.}\)  It is read as ``\(n\) to the \(k\) rising.'' (This notation is due to Don Knuth, who also suggested the notation for falling factorial powers.) We can summarize with a theorem that adds two more formulas for the number of ordered functions.</p>
+<article class="theorem-like" id="theorem-6"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.1.5</span>
+</h5>
+<p id="p-741">The number of ordered functions from a \(k\)-element set to an \(n\)-element set is</p>
+\begin{equation*}
+n^{\overline{k}}=\prod_{i=1}^n (n+i-1) = \frac{(n+i-1)!}{(n-1)!} =
+(n+k-1)^{\underline{k}}.
+\end{equation*}
+</article></section><section class="subsection" id="subsection-30"><header title="Subsection 3.1.3 Multisets"><h1 class="heading hide-type" alt="Subsection 3.1.3 Multisets">
+<span class="type">Subsection</span><span class="codenumber">3.1.3</span><span class="title">Multisets</span><a href="s3-1-distrib-idea.html#subsection-30" class="permalink">¶ permalink</a>
+</h1></header><p id="p-742">In the middle column of row 7 of our table, we are asking for the number of ways to distribute \(k\) identical objects (say ping-pong balls) to \(n\) distinct recipients (say children).</p>
+<article class="example-like essential" id="identicalbooks"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">124</span>
+</h5>
+<p id="p-743">In how many ways may we distribute \(k\) identical books on the shelves of a bookcase with \(n\) shelves, assuming that any shelf can hold all the books?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-106" id="hint-106"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-106" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-744">What is the relationship between the number of ways to distribute identical books and the number of ways to distribute distinct books?</p></span></span>
+</div></article><article class="example-like essential" id="multiset"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">125</span>
+</h5>
+<p id="p-746">A <em class="terminology">multiset</em> chosen from a set \(S\) may be thought of as a subset with repeated elements allowed. For example the multiset of letters of the word Mississippi is \(\{i,i,i,i,m,p,p,s,s,s,s\}\text{.}\) To determine a multiset we must say how many times (including, perhaps, zero) each member of \(S\) appears in the multiset. The number of times an element appears is called its <em class="terminology">multiplicity</em>. The size of a multiset chosen from \(S\) is the total number of times any member of \(S\) appears. For example, the size of the multiset of letters of Mississippi is 11. What is the number of multisets of size \(k\) that can be chosen from an \(n\)-element set?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-107" id="hint-107"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-107" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-747">Look for a relationship between a multiset of shelves and a way of distributing identical books to shelves</p></span></span>
+</div></article><article class="example-like interesting" id="activity-126"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">126</span>
+</h5>
+<p id="p-749">Your answer in the previous problem should be expressible as a binomial coefficient. Since a binomial coefficient counts subsets, find a bijection between subsets of something and multisets chosen from a set \(S\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-108" id="hint-108"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-108" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-750">Note that \(\binom{n+k-1}{k} = \binom{n+k-1}{n-1}\text{.}\) So we have to figure out how choosing either \(k\) elements or \(n - 1\) elements out of \(n + k - 1\) elements constitutes the choice of a multiset. We really have no idea what set of \(n + k - 1\) objects to use, so why not use \([n + k - 1]\text{?}\) If we choose \(n - 1\) of these objects, there are \(k\) left over, the same number as the number of elements of our multiset. Since our multiset is supposed to be chosen from an \(n\)-element set, perhaps we should let the \(n\)-element set be \([n]\text{.}\) From our choice of \(n - 1\) numbers, we have to decide on the multiplicity of 1 through \(n\text{.}\) For example with \(n = 4\) and \(k = 6\text{,}\) we have \(n+k-1=9\text{.}\) Here, shown with underlines, is a selection of \(3=n-1\) elements from \([9]\text{:}\) \(1, 2, \underline{3}, 4 \underline{5}, 6, 7, \underline{8}, 9\text{.}\) How do the underlined elements give us a multiset of size 6 chosen from an [4]-element set? In this case, 1 has multiplicity 2, 2 has multiplicity 1, 3 has multiplicity 2, and 4 has multiplicity 1.</p></span></span>
+</div></article><article class="example-like" id="activity-127"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">127</span>
+</h5>
+<p id="p-752">How many solutions are there in nonnegative integers to the equation \(x_1+x_2+ \cdots +x_m = r\text{,}\) where \(m\) and \(r\) are constants?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-109" id="hint-109"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-109" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-753">A solution to the equations assigns a nonnegative number to each of \(1,2,\ldots, m\) so that the nonnegative numbers add to \(r\text{.}\) Does such an assignment have a combinatorial meaning?</p></span></span>
+</div></article><article class="example-like" id="k-obj-n-recip"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">128</span>
+</h5>
+<p id="p-755">In how many ways can we distribute \(k\) identical objects to \(n\) distinct recipients so that each recipient gets at least \(m\text{?}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-110" id="hint-110"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-110" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-756">Can you think of some way of guaranteeing that each recipient gets \(m\) objects (assuming \(k \ge mn\)) right at the beginning of the process of passing the objects out?</p></span></span>
+</div></article><p id="p-758">Multisets explain the entry in the middle column of row 7 of our table of distribution problems.</p></section><section class="subsection" id="subsection-31"><header title="Subsection 3.1.4 Compositions of integers"><h1 class="heading hide-type" alt="Subsection 3.1.4 Compositions of integers">
+<span class="type">Subsection</span><span class="codenumber">3.1.4</span><span class="title">Compositions of integers</span><a href="s3-1-distrib-idea.html#subsection-31" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like forward-essential" id="activity-129"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">129</span>
+</h5>
+<p id="p-759">In how many ways may we put \(k\) identical books onto \(n\) shelves if each shelf must get at least one book?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-111" id="hint-111"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-111" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-760">We already know how to place k distinct books onto n distinct shelves so that each shelf gets at least one. Suppose we replace the distinct books with identical ones. If we permute the distinct books before replacement, does that affect the final outcome? There are other ways to solve this problem.</p></span></span>
+</div></article><article class="example-like forward-essential" id="compositionagian"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">130</span>
+</h5>
+<p id="p-762">A <em class="terminology">composition</em> of the integer \(k\) into \(n\) parts is a list of \(n\) positive integers that add to \(k\text{.}\)  How many compositions are there of an integer \(k\) into \(n\) parts?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-112" id="hint-112"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-112" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-763">Do you see a relationship between compositions and something else we have counted already?</p></span></span>
+</div></article><article class="example-like interesting" id="activity-131"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">131</span>
+</h5>
+<p id="p-765">Your answer in <a knowl="./knowl/compositionagian.html" knowl-id="xref-compositionagian" alt="Problem 130 " title="Problem 130 ">Problem 130</a> can be expressed as a binomial coefficient. This means it should be possible to interpret a composition as a subset of some set. Find a bijection between compositions of \(k\) into \(n\) parts and certain subsets of some set.  Explain explicitly how to get the composition from the subset and the subset from the composition.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-113" id="hint-113"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-113" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-766">If we line up \(k\) identical books, how many adjacencies are there in between books?</p></span></span>
+</div></article><article class="example-like forward-essential" id="activity-132"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">132</span>
+</h5>
+<p id="p-768">Explain the connection between compositions of \(k\) into \(n\) parts and the problem of distributing \(k\) identical objects to \(n\) recipients so that each recipient gets at least one.</p></article><p id="p-770">The sequence of problems you just completed should explain the entry in the middle column of row 9 of our table of distribution problems.</p></section><section class="subsection" id="subsection-32"><header title="Subsection 3.1.5 Broken permutations and Lah numbers"><h1 class="heading hide-type" alt="Subsection 3.1.5 Broken permutations and Lah numbers">
+<span class="type">Subsection</span><span class="codenumber">3.1.5</span><span class="title">Broken permutations and Lah numbers</span><a href="s3-1-distrib-idea.html#subsection-32" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like interesting-forward-essential" id="brokenpermutation"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">133</span>
+</h5>
+<p id="p-771">In how many ways may we stack \(k\) distinct books into \(n\) identical boxes so that there is a stack in every box? The hints may suggest that you can do this problem in more than one way!</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-114" id="hint-114"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-114" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-772">Imagine taking a stack of \(k\) books, and breaking it up into stacks to put into the boxes in the same order they were originally stacked. If you are going to use \(n\) boxes, in how many places will you have to break the stack up into smaller stacks, and how many ways can you do this?</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-115" id="hint-115"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-115" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-773">How many different bookcase arrangements correspond to the same way of stacking \(k\) books into \(n\) boxes so that each box has at least one book?</p></span></span>
+</div></article><p id="p-776">We can think of stacking books into identical boxes as partitioning the books and then ordering the blocks of the partition. This turns out not to be a useful computational way of visualizing the problem because the number of ways to order the books in the various stacks depends on the sizes of the stacks and not just the number of stacks. However this way of thinking actually led to the first hint in <a knowl="./knowl/brokenpermutation.html" knowl-id="xref-brokenpermutation" alt="Problem 133 " title="Problem 133 ">Problem 133</a>. Instead of dividing a set up into nonoverlapping parts, we may think of dividing a <!--Style me with CSS--><em>permutation</em> (thought of as a list) of our \(k\) objects up into \(n\) ordered blocks. We will say that a set of ordered lists of elements of a set \(S\) is a <em class="terminology">broken permutation</em> of \(S\) if each element of \(S\) is in one and only one of these lists.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-7" id="fn-7"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-7" style="display: none;" class="tex2jax_ignore"><span class="footnote">The phrase broken permutation is not standard, because there is no standard name for the solution to this kind  of distribution problem.</span></span> The number of broken permutations of a \(k\)-element set with \(n\) blocks is denoted by \(L(k,n)\text{.}\) The number \(L(k,n)\) is called a <em class="terminology">Lah Number</em> and, from our solution to <a knowl="./knowl/brokenpermutation.html" knowl-id="xref-brokenpermutation" alt="Problem 133 " title="Problem 133 ">Problem 133</a>, is equal to \(k!\binom{k-1}{n-1}/n!\text{.}\)</p>
+<p id="p-777">The Lah numbers are the solution to the question ``In how many ways may we distribute \(k\) distinct objects to \(n\) identical recipients if order matters and each recipient must get at least one?" Thus they give the entry in row 6 and column 6 of our table. The entry in row 5 and column 6 of our table will be the number of broken permutations with less than or equal to \(n\) parts. Thus it is a sum of Lah numbers.</p>
+<p id="p-778">We have seen that ordered functions and broken permutations explain the entries in rows 5 and 6 of our table.</p>
+<p id="p-779">In the next two sections we will give ways of computing the remaining entries.</p></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

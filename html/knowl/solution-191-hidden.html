@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:59-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>The number of spanning trees of \(G\) not containing \(e\) is the number of spanning trees of \(G-e\text{.}\) The number of spanning trees of \(G\) containing the edge \(e\) is the number of spanning trees of \(G/e\text{.}\) Therefore \(\#(G) =\#(G-e)
++\#(G/e)\text{.}\) Applying the formula twice to \(G\) gives</p>
+\begin{align*}
+\#(G)
+= &amp;\#(G-\{1,2\}-\{2,3\}) + \#((G-\{1,2\})/\{2,3\})\\
+\amp +
+\#((G/\{1,2\})-\{2,3\}) +
+\#(G/\{1,2\}/\{2,3\}).
+\end{align*}
+<p>We now show the four graphs on the right hand side of the equation.</p>
+<figure class="figure-like"><img width="95%" src="../images/spantreeexerciseresult" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.7</span>Various deletions and contractions.</figcaption></figure><p>We could now convert each of these graphs to trees with multiple edges by deleting and contracting one more edge, say edge \(\{1,5\}\text{,}\) which would make the analysis easier but the picture twice as big. Since we can easily count spanning trees of a triangle, we can also stop here, noting that the first graph has three spanning trees, the second has six, the third has five, and the fourth has seven, so the total number of spanning trees is \(3+6+5+7=21\text{.}\)</p></span></body>
+</html>

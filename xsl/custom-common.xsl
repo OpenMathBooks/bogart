@@ -57,8 +57,8 @@
 <!-- Second, an exercise in a solutions list in backmatter.-->
 <xsl:param name="exercise.backmatter.statement" select="'no'" />
 <xsl:param name="exercise.backmatter.hint" select="'yes'" />
-<xsl:param name="exercise.backmatter.answer" select="'yes'" />
-<xsl:param name="exercise.backmatter.solution" select="'yes'" />
+<xsl:param name="exercise.backmatter.answer" select="'no'" />
+<xsl:param name="exercise.backmatter.solution" select="'no'" />
 <!-- Now project-like elements, in main text.  -->
 <!-- A task is a division of a project         -->
 <xsl:param name="project.text.statement" select="'yes'" /> <!-- not implemented -->

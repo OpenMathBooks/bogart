@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:14-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">232.1</span>
+</h5>
+<p>The principle of inclusion and exclusion for one set says \(|A_1| = |A_1|\text{.}\)  The principle of inclusion and exclusion for two sets says \(|A_1\cup A_2| = |A_1| + |A_2| - |A_1 \cap A_2|\text{,}\) and was prove in our solution to <a knowl="./knowl/twosetintersection.html" knowl-id="xref-twosetintersection" alt="Problem 226 " title="Problem 226 ">Problem 226</a>.  Now suppose the formula is true for a union of \(n-1\) or fewer sets and \(n \ge 2\text{.}\)  Since</p>
+\begin{equation*}
+A_1 \cup A_2 \cup \cdots \cup A_n = \left(A_1 \cup A_2 \cup \cdots \cup A_{n-1}\right) \cup A_n
+\end{equation*}
+<p>we can apply the formula of <a knowl="./knowl/twosetintersection.html" knowl-id="xref-twosetintersection" alt="Problem 226 " title="Problem 226 ">Problem 226</a> to get</p>
+\begin{align*}
+\left|\bigcup_{i=1}^n A_i \right| \amp = \left|\left(\bigcup_{i=1}^{n-1} A_i\right) \cup A_n \right| \\
+\amp = \left| \bigcup_{i=1}^{n-1} A_i\right| + |A_n| - \left|\left( \bigcup_{i=1}^{n-1} A_i\right) \cap A_n\right|\\
+\amp = \left| \bigcup_{i=1}^{n-1} A_i\right| + |A_n| - \left|\bigcup_{i=1}^{n-1} A_i \cap A_n\right|
+\end{align*}
+<p>By the inductive hypothesis, we may apply the principle of inclusion and exclusion to the first and last term in the last line above, and can rewrite it as</p>
+\begin{gather*}
+\sum_{S:S\subseteq [n-1],S\ne \emptyset} (-1)^{|S|-1}\left|\bigcap_{i:i\in S}A_i \right| + |A_n| - \sum_{S:S\subseteq [n-1],S\ne \emptyset} (-1)^{|S|-1}\left|\bigcap_{i:i\in S}A_i \cap A_n \right|\\
+= \sum_{S:S\subseteq [n],S\ne \emptyset} (-1)^{|S|-1}\left|\bigcap_{i:i\in S}A_i \right|,
+\end{gather*}
+<p>where the last line follows because every nonempty subset of \([n]\) is either (1) a nonempty subset of \([n-1]\text{,}\) (2) a nonempty subset of \([n-1]\) with  \(n\) added in, or (3) the set \(\{n\}\text{.}\)  Thus by the principle of mathematical induction, the formula for the principle of inclusion and exclusion holds for all nonnegative integers \(n\text{.}\)</p></span><span class="incontext"><a href="sec_inclexcl-sizeunion.html#solution-392">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:39-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">387.b.1</span>
+</h5>
+<p>\(T(x) = \sum_{i=0}^\infty (x+x^2/2)^i/i!\text{.}\) By the binomial theorem, this gives \(T(x) = \sum_{i=0}^\infty \frac{\sum_{j=0}^i \binom{i}{j}x^j\bigl(\frac{x^2}{2}\bigr)^{i-j}}{
+i!}=\sum_{i=0}^\infty\frac{\sum_{j=0}^i\binom{i}{j}x^{2i-j}2^{j-i}}{i!}\text{.}\) Then the coefficient \(c_n\) of \(x^n\) is the sum over all \(i\) and \(j\) with \(2i-j=n\) and \(j\le i\) of \(\binom{i}{j}\frac{n!}{i!}2^{j-i}\text{.}\) But if \(2i-j=n\text{,}\) then \(j= 2i-n\text{,}\) and if \(2i-n\le i\text{,}\) then \(i\le n\text{,}\) so that \(c_n
+= \frac{n!}{2^n}\sum_{i=0}^n\binom{i}{2i-n}\frac{2^i}{i!}\text{.}\) Note that \(\binom{i}{2i-n}\) is the same as \(\binom{i}{n-i}\text{,}\) which is 0 unless \(i\ge
+n/2\text{,}\) which reduces our sum to \(c_n = \frac{n!}{2^n}\sum_{i=\lceil n/2\rceil}^n\binom{i}{n-i}\frac{2^i}{i!}\text{.}\)</p></span><span class="incontext"><a href="expogenfun.html#solution-623">in-context</a></span>
+</body>
+</html>

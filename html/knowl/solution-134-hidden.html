@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:56-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>We wish to prove that \(\binom{n}{i} =\frac{n!}{i!(n-i)!}\text{.}\) We note that since \(\binom{n}{0}=1\) and \(\binom{n}{n} =1\) are in agreement with this formula, we only have to consider the cases in which \(0\lt i\lt n\text{,}\) which by the way, requires that \(n\ge 2\text{.}\) We will prove that our formula holds by induction on \(n\) for \(n\ge 2\text{.}\) If \(n=2\text{,}\) the only \(i\) we need to consider is \(i=1\text{,}\) and we know that \(\binom{2}{1}=2\text{,}\) the number of one-element subsets of a two-element set. But \(\frac{2!}{1!(2-1)!}\) is 2 also, so our formula holds when \(n=2\text{.}\) Now suppose our formula holds when \(n=k-1\text{,}\) so that for every \(i\) with \(0\lt i\lt n-1\text{,}\) \(\binom{k-1}{i} =
+\frac{(k-1)!}{i!(k-1-i)!}\text{.}\) Then by the Pascal Equation</p>
+\begin{align*}
+\binom{k}{i} =\amp \binom{k-1}{i-1}+\binom{k-1}{i}\\
+=\amp
+\frac{(k-1)!}{(i-1)!(k-1-i+1)!} + \frac{(k-1)!}{i!(k-1-i)!}\\
+=\amp \frac{(k-1)!i+(k-1)!(k-i)}{i!(k-i)!} \ =\  \frac{k!}{i!(k-i)!}.
+\end{align*}
+<p>Thus the truth of our formula for \(n=k-1\) implies its truth for \(n=k\text{.}\) Therefore by the principle of mathematical induction, our formula is true for all integers \(n\ge 2\text{.}\) We have already seen is is true when \(i=0\) or \(i=1\text{,}\) so it is true for all nonnegative \(n\) and all numbers \(i\) with \(0\le i\le n\text{.}\)</p></span></body>
+</html>

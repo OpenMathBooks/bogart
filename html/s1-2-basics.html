@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:33-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Basic Counting Principles</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="s1-1-about.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="what-is.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="s1-3-apps.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="s1-1-about.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="what-is.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="s1-3-apps.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link active"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics" class="active">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="s1-2-basics"><header title="Section 1.2 Basic Counting Principles"><h1 class="heading hide-type" alt="Section 1.2 Basic Counting Principles">
+<span class="type">Section</span><span class="codenumber">1.2</span><span class="title">Basic Counting Principles</span><a href="s1-2-basics.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-2"><article class="example-like motivation" id="fiveteamtournament"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">1</span>
+</h5>
+<p id="p-15">Five schools are going to send their baseball teams to a tournament, in which each team must play each other team exactly once. How many games are required?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-16">Answer the questions in <a knowl="./knowl/baseball2.html" knowl-id="xref-baseball2" alt="Problem 2 " title="Problem 2 ">Problem 2</a> for the case of five schools.</p></span></span>
+</div></article><article class="example-like essential" id="baseball2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">2</span>
+</h5>
+<article class="introduction" id="introduction-3"><p id="p-18">Now some number \(n\) of schools are going to send their baseball teams to a tournament, and each team must play each other team exactly once. Let us think of the teams as numbered 1 through \(n\text{.}\)</p></article><article class="exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-19">How many games does  team 1 have to play in?</p></article><article class="exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-21">How many games, other than the one with team 1, does team two have to play in?</p></article><article class="exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-23">How many games, other than those with the first \(i-1\) teams, does team \(i\) have to play in?</p></article><article class="exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-25">In terms of your answers to the previous parts of this problem, what is the total number of games that must be played?</p></article></article><article class="example-like essential" id="basicsandwiches"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">3</span>
+</h5>
+<p id="p-27">One of the schools sending its team to the tournament has to send its players from some distance, and so it is making sandwiches for team members to eat along the way. There are three choices for the kind of bread and five choices for the kind of filling. How many different kinds of sandwiches are available?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-2" id="hint-2"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-28">For each kind of bread, how many sandwiches are possible?</p></span></span>
+</div></article><article class="example-like summary" id="orderedpair"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">4</span>
+</h5>
+<p id="p-30">An <em class="terminology">ordered pair</em> \((a,b)\) consists of two things we call \(a\) and \(b\text{.}\) We say \(a\) is the first member of the pair and \(b\) is the second member of the pair. If \(M\) is an \(m\) element set and \(N\) is an \(n\)-element set, how many ordered pairs are there whose first member is in \(M\) and whose second member is in \(N\text{?}\) Does this problem have anything to do with any of the previous problems?</p></article><article class="example-like motivation" id="completelunch"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">5</span>
+</h5>
+<p id="p-32">Since a sandwich by itself is pretty boring, students from the school in <a knowl="./knowl/basicsandwiches.html" knowl-id="xref-basicsandwiches" alt="Problem 3 " title="Problem 3 ">Problem 3</a> are offered a choice of a drink (from among five different kinds), a sandwich, and a fruit (from among four different kinds). In how many ways may a student make a choice of the three items now?</p></article><article class="example-like essential" id="tripledeckercone"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">6</span>
+</h5>
+<p id="p-34">The coach of the team in <a knowl="./knowl/basicsandwiches.html" knowl-id="xref-basicsandwiches" alt="Problem 3 " title="Problem 3 ">Problem 3</a> knows of an ice cream parlor along the way where she plans to stop to buy each team member a triple decker cone. There are 12 different flavors of ice cream, and triple decker cones are made in homemade waffle cones. Having chocolate ice cream as the bottom scoop is different from having chocolate ice cream as the top scoop. How many possible ice cream cones are going to be available to the team members? How many cones with three different kinds of ice cream will be available?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-3" id="hint-3"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-35">Try to solve the problem first with a two-scoop cone. (Look for an earlier problem that is analogous.) Then, for each two scoop cone, in how many ways can you put on a top scoop?</p></span></span>
+</div></article><article class="example-like essential" id="countingfunctions"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">7</span>
+</h5>
+<article class="introduction" id="introduction-4"><p id="p-37">The idea of a function is ubiquitous in mathematics. A function \(f\) from a set \(S\) to a set \(T\) is a relationship between the two sets that associates exactly one member \(f(x)\) of \(T\) with each element \(x\) in \(S\text{.}\) We will come back to the ideas of functions and relationships in more detail and from different points of view from time to time. However, the quick review above should probably let you answer these questions. If you have difficulty with them, it would be a good idea to go now to <a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a> and work through <a href="Relations.html#relationsandfunctions" alt="Section A.1 Relations as sets of Ordered Pairs" title="Section A.1 Relations as sets of Ordered Pairs">Section A.1</a> which covers this definition in more detail. You might also want to study <a href="Relations.html#digraphsoffunctions" alt="Subsection A.1.3 Digraphs of Functions" title="Subsection A.1.3 Digraphs of Functions">Section A.1.3</a> to learn to visualize the properties of functions. We will take up the topic of this section later in this chapter as well, but in less detail than is in the appendix.</p></article><article class="exercise-like" id="countingfunctionsparta"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-38">Using \(f\text{,}\) \(g\text{,}\) …, to stand for the various functions, write down all the different functions you can from the set \(\{1,2\}\) to the set \(\{a,b\}\text{.}\)  For example, you might start with \(f(1)=a\text{,}\) \(f(2)=b\text{.}\)  How many functions are there from the set \(\{1,2\}\) to the set \(\{a,b\}\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-4" id="hint-4"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-39">Ask yourself “how many choices do we have for \(f(1)\text{?}\)” Then ask how many choices we have for \(f(2)\text{.}\)</p></span></span></article><article class="exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-41">How many functions are there from the three element set \(\{1,2,3\}\) to the two element set \(\{a,b\}\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-5" id="hint-5"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-42">It may not be practical to write down rules for all the functions for this problem. But you could ask yourself how many choices we have for \(f(1)\text{,}\) how many we have for \(f(2)\) and how many we have for \(f(3)\text{.}\)</p></span></span></article><article class="exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-44">How many functions are there from the two element set \(\{a,b\}\) to the three element set \(\{1,2,3\}\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-6" id="hint-6"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-6" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-45">If you are choosing a function \(f\text{,}\) how many choices do you have for \(f(a)\text{?}\) Then how many choices do you have for \(f(b)\text{?}\)</p></span></span></article><article class="exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-47">How many functions are there from a three element set to a 12 element set?</p></article><article class="exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-49">The function \(f\) is called <em class="terminology">one-to-one</em> or an <em class="terminology">injection</em> if whenever \(x\) is different from \(y\text{,}\) \(f(x)\) is different from \(f(y)\text{.}\)  How many one-to-one functions are there from a three element set to a  12 element set?</p></article><article class="exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-51">Explain the relationship between this problem and <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>.</p></article></article><article class="example-like essential" id="icecreaminpints"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">8</span>
+</h5>
+<article class="introduction" id="introduction-5"><p id="p-53">A group of hungry team members in <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a> notices it would be cheaper to buy three pints of ice cream for them to split than to buy a triple decker cone for each of them, and that way they would get more ice cream. They ask their coach if they can buy three pints of ice cream.</p></article><article class="exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-54">In how many ways can they choose three pints of different flavors out of the 12 flavors?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-7" id="hint-7"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-7" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-55">You know how to figure out in how many ways they could make a list of three flavors out of the twelve. But each set of three flavors can be listed in a number of different ways. Try to figure out in how many ways a set of three flavors can be listed, and then try to see how this helps you.</p></span></span></article><article class="exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-57">In how many ways may they choose three pints if the flavors don't have to be different?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-8" id="hint-8"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-8" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-58">Try to break the problem up into cases you can solve by previous methods; then figure out how to get the answer to the problem by using these answers for the cases.</p></span></span></article></article><article class="example-like essential" id="sum"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">9</span>
+</h5>
+<p id="p-60">Two sets are said to be <em class="terminology">disjoint</em> if they have no elements in common. For example, \(\{1,3,12\}\) and \(\{6, 4, 8, 2\}\) are disjoint, but \(\{1,3,12\}\) and \(\{3,5,7\}\) are not. Three or more sets are said to be <em class="terminology">mutually disjoint</em> if no two of them have any elements in common. What can you say about the size of the union of a finite number of finite (mutually) disjoint sets? Does this have anything to do with any of the previous problems?</p></article><article class="example-like essential" id="product"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">10</span>
+</h5>
+<p id="p-62">Disjoint subsets are defined in <a knowl="./knowl/sum.html" knowl-id="xref-sum" alt="Problem 9 " title="Problem 9 ">Problem 9</a>. What can you say about the size of the union of \(m\) (mutually) disjoint sets, each of size \(n\text{?}\) Does this have anything to do with any of the previous problems?</p></article></section><section class="subsection" id="subsection-1"><header title="Subsection 1.2.1 The sum and product principles"><h1 class="heading hide-type" alt="Subsection 1.2.1 The sum and product principles">
+<span class="type">Subsection</span><span class="codenumber">1.2.1</span><span class="title">The sum and product principles</span><a href="s1-2-basics.html#subsection-1" class="permalink">¶ permalink</a>
+</h1></header><p id="p-64">These problems contain among them the kernels of many of the fundamental ideas of combinatorics. For example, with luck, you just  stated the sum principle (illustrated in <a knowl="./knowl/sumprinc.html" knowl-id="xref-sumprinc" alt="Figure 1.2.1 " title="Figure 1.2.1 ">Figure 1.2.1</a>), and product principle (illustrated in <a knowl="./knowl/prodprinc.html" knowl-id="xref-prodprinc" alt="Figure 1.2.2 " title="Figure 1.2.2 ">Figure 1.2.2</a>) in <a knowl="./knowl/sum.html" knowl-id="xref-sum" alt="Problem 9 " title="Problem 9 ">Problems 9</a> and <a knowl="./knowl/product.html" knowl-id="xref-product" alt="Problem 10 " title="Problem 10 ">Problem 10</a>. These two counting principles are the basis on which we will develop many other counting principles.</p>
+<figure class="figure-like" id="sumprinc"><img width="50%" src="../images/SumPrinc" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.1</span>The union of these two disjoint sets has size 17.</figcaption></figure><figure class="figure-like" id="prodprinc"><img width="50%" src="../images/ProdPrinc" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.2</span>The union of four disjoint sets of size five.</figcaption></figure><p id="p-65">You may have noticed some standard mathematical words and phrases such as <em class="terminology">set</em>, <em class="terminology">ordered pair</em>, <em class="terminology">function</em> and so on creeping into the problems. One of our goals in these notes is to show how most counting problems can be recognized as counting all or some of the elements of a set of standard mathematical objects. For example <a knowl="./knowl/orderedpair.html" knowl-id="xref-orderedpair" alt="Problem 4 " title="Problem 4 ">Problem 4</a> is meant to suggest that the question we asked in <a knowl="./knowl/basicsandwiches.html" knowl-id="xref-basicsandwiches" alt="Problem 3 " title="Problem 3 ">Problem 3</a> was really a problem of counting all the ordered pairs consisting of a bread choice and a filling choice. We use \(A\times B\) to stand for the set of all ordered pairs whose first element is in \(A\) and whose second element is in \(B\) and we call \(A\times B\) the <em class="terminology">Cartesian product</em> of \(A\) and \(B\text{,}\) so you can think of <a knowl="./knowl/orderedpair.html" knowl-id="xref-orderedpair" alt="Problem 4 " title="Problem 4 ">Problem 4</a> as asking you for the size of the Cartesian product of \(M\) and \(N\text{,}\) that is, asking you to count the number of elements of this Cartesian product.</p>
+<p id="p-66">When a set \(S\) is a union of disjoint sets \(B_1, B_2, \ldots, B_m\) we say that the sets \(B_1, B_2, \ldots, B_m\) are a <em class="terminology">partition</em> of the set \(S\text{.}\) Thus a partition of \(S\) is a (special kind of) set of sets. So that we don't find ourselves getting confused between the set \(S\) and the sets \(B_i\) into which we have divided it, we often call the sets \(B_1, B_2,
+\ldots, B_m\) the <em class="terminology">blocks</em> of the partition. In this language, the <em class="terminology">sum principle</em> says that</p>
+<blockquote class="blockquote" id="blockquote-1"><p id="p-67">if we have a partition of a set \(S\text{,}\) then the size of \(S\) is the sum of the sizes of the blocks of the partition.</p></blockquote>
+<p id="p-68">The <em class="terminology">product principle</em> says that</p>
+<blockquote class="blockquote" id="blockquote-2"><p id="p-69">if we have a partition of a set \(S\) into \(m\) blocks, each of size \(n\text{,}\) then \(S\) has size \(mn\text{.}\)</p></blockquote>
+<p id="p-70">You'll notice that in our formal statement of the sum and product pinciple we talked about a partition of a finite set. We could modify our language a bit to cover infinite sizes, but whenever we talk about sizes of sets in what follows, we will be working with finite sets. So as to avoid possible complications in the future, let us agree that when we refer to the size of a set, we are implicitly assuming the set is finite. There is another version of the product principle that applies directly in problems like <a knowl="./knowl/completelunch.html" knowl-id="xref-completelunch" alt="Problem 5 " title="Problem 5 ">Problem 5</a> and <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>, where we were not just taking a union of \(m\) disjoint sets of size \(n\text{,}\) but rather \(m\) disjoint sets of size \(n\text{,}\) each of which was a union of \(m'\) disjoint sets of size \(n'\text{.}\) This is an inconvenient way to have to think about a counting problem, so we may rephrase the product principle in terms of a sequence of decisions:</p>
+<article class="example-like essential" id="generalproductprincipleintro"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">11</span>
+</h5>
+<p id="p-71">If we make a sequence of \(m\) choices for which </p>
+<ul id="ul-1" style="list-style-type: disc;">
+<li id="li-1">there are \(k_1\) possible first choices, and</li>
+<li id="li-2">for each way of making the first \(i-1\) choices, there are \(k_i\) ways to make the \(i\)th choice,</li>
+</ul>
+<p> then in how many ways may we make our sequence of choices? (You need not prove your answer correct at this time.)</p></article><p id="p-72">The counting principle you gave in <a knowl="./knowl/generalproductprincipleintro.html" knowl-id="xref-generalproductprincipleintro" alt="Problem 11 " title="Problem 11 ">Problem 11</a> is called the <em class="terminology">general product principle</em>. We will outline a proof of the general product pinciple from the original product principle in <a knowl="./knowl/generalproductprincipleproof.html" knowl-id="xref-generalproductprincipleproof" alt="Problem 80 " title="Problem 80 ">Problem 80</a>. Until then, let us simply accept it as another counting principle. For now, notice how much easier it makes it to explain why we multiplied the things we did in <a knowl="./knowl/completelunch.html" knowl-id="xref-completelunch" alt="Problem 5 " title="Problem 5 ">Problem 5</a> and <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>.</p>
+<article class="example-like interesting" id="tennispairings1"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">12</span>
+</h5>
+<article class="introduction" id="introduction-6"><p id="p-73">A tennis club has \(2n\) members. We want to pair up the members by twos for singles matches.</p></article><article class="exercise-like" id="tennispairings1a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-74">In how many ways may we pair up all the members of the club? (Hint: consider the cases of 2, 4, and 6 members.)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-9" id="hint-9"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-75">Suppose you have a list in alphabetical order of names of the members of the club. In how many ways can you pair up the first person on the list? In how many ways can you pair up the next person who isn't already paired up?</p></span></span></article><article class="exercise-like" id="task-14"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-77">Suppose that in addition to specifying who plays whom, for each pairing we say who serves first.  Now in how many ways may we specify our pairs?</p></article></article><article class="example-like summary" id="countingfunctions2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">13</span>
+</h5>
+<article class="introduction" id="introduction-7"><p id="p-78">Let us now return to <a knowl="./knowl/countingfunctions.html" knowl-id="xref-countingfunctions" alt="Problem 7 " title="Problem 7 ">Problem 7</a> and justify—or perhaps finish—our answer to the question about the number of functions from a three-element set to a 12-element set.</p></article><article class="exercise-like" id="task-15"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-79">How can you justify your answer in <a knowl="./knowl/countingfunctions.html" knowl-id="xref-countingfunctions" alt="Problem 7 " title="Problem 7 ">Problem 7</a> to the question “How many functions are there from a three element set (say \([3]=\{1,2,3\}\)) to a twelve element set (say [12])?”</p></article><article class="exercise-like" id="numberoffunctionsconjecture"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-81">Based on the examples you've seen so far, make a conjecture about how many functions there are from the set</p>
+\begin{equation*}
+[m] = \{1,2,3,\dots,m\}
+\end{equation*}
+<p>to \([n]=\{1,2,3,\dots,n\}\) and prove it.</p></article><article class="exercise-like" id="task-17"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-83">A common notation for the set of all functions from a set \(M\) to a set \(N\) is \(N^M\text{.}\)  Why is this a good notation?</p></article></article><article class="example-like summary" id="generalproductprinciple"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">14</span>
+</h5>
+<p id="p-85">Now suppose we are thinking about a set \(S\) of functions \(f\) from \([m]\) to some set \(X\text{.}\) (For example, in <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a> we were thinking of the set of functions from the three possible places for scoops in an ice-cream cone to \(12\) flavors of ice cream.) Suppose there are \(k_1\) choices for \(f(1)\text{.}\) (In <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>, \(k_1\) was \(12\text{,}\) because there were \(12\) ways to choose the first scoop.) Suppose that for each choice of \(f(1)\) there are \(k_2\) choices for \(f(2)\text{.}\) (For example, in <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a> \(k_2\) was \(12\) if the second flavor could be the same as the first, but \(k_2\) was \(11\) if the flavors had to be different.) In general, suppose that for each choice of \(f(1)\text{,}\) \(f(2)\text{,}\) … \(f(i-1)\text{,}\) there are \(k_i\) choices for \(f(i)\text{.}\) (For example, in <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>, if the flavors have to be different, then for each coice of \(f(1)\) and \(f(2)\text{,}\) there are \(10\) choices for \(f(3)\text{.}\))</p>
+<p id="p-86">What we have assumed so far about the functions in \(S\) may be summarized as </p>
+<ul id="ul-2" style="list-style-type: disc;">
+<li id="li-3">There are \(k_1\) choices for \(f(1)\text{.}\)</li>
+<li id="li-4">For each choice of \(f(1)\text{,}\) \(f(2)\text{,}\) …, \(f(i-1)\text{,}\) there are \(k_i\) choices for \(f(i)\text{.}\)</li>
+</ul>
+<p id="p-87">How many functions are in the set \(S\text{?}\) Is there any practical difference between the result of this problem and the general product principle?</p></article><p id="p-89">The point of <a knowl="./knowl/generalproductprinciple.html" knowl-id="xref-generalproductprinciple" alt="Problem 14 " title="Problem 14 ">Problem 14</a> is that the general product principle can be stated informally, as we did originally, or as a statement about counting sets of standard concrete mathematical objects, namely functions.</p>
+<article class="example-like interesting" id="activity-15"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">15</span>
+</h5>
+<p id="p-90">A roller coaster car has \(n\) rows of seats, each of which has room for two people. If \(n\) men and \(n\) women get into the car with a man and a woman in each row, in how many ways may they choose their seats?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-10" id="hint-10"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-91">In how many ways may you assign the men to their rows? The women? Once a woman and a man have a row to share, in how many ways may they choose their seats?</p></span></span>
+</div></article><article class="example-like summary" id="activity-16"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">16</span>
+</h5>
+<p id="p-93">How does the general product principle apply to <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>?</p></article><article class="example-like essential" id="activity-17"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">17</span>
+</h5>
+<p id="p-95">In how many ways can we pass out \(k\) distinct pieces of fruit to \(n\) children (with no restriction on how many pieces of fruit a child may get)?</p></article><article class="example-like essential" id="SubsetsFirstTime"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">18</span>
+</h5>
+<p id="p-97">How many subsets does a set \(S\) with \(n\) elements have?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-11" id="hint-11"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-98">Try applying the product principle in the case n = 2 and n = 3. How might you apply it in general?</p></span></span>
+</div></article><article class="example-like motivation" id="activity-19"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">19</span>
+</h5>
+<p id="p-100">Assuming \(k\le n\text{,}\) in how many ways can we pass out \(k\) distinct pieces of fruit to \(n\) children if each child may get at most one? What is the number if \(k&gt;n\text{?}\) Assume for both questions that we pass out all the fruit.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-12" id="hint-12"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-101">Ask yourself if either the sum principle or product principle applies.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-13" id="hint-13"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-102">Remember that zero is a number.</p></span></span>
+</div></article><article class="example-like essential" id="kelementpermutation"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">20</span>
+</h5>
+<p id="p-104">Another name for a list, in a specific order, of \(k\) distinct things chosen from a set \(S\) is a <em class="terminology">\(k\)-element permutation</em> of \(S\text{.}\) We can also think of a \(k\)-element permutation of \(S\) as a one-to-one function (or, in other words, injection) from \([k]=\{1,2,\ldots, k\}\) to \(S\text{.}\) How many \(k\)-element permutations does an \(n\)-element set have? (For this problem it is natural to assume \(k\le n\text{.}\) However the question makes sense even if \(k&gt;n\text{.}\) What is the number of \(k\)-element permutations of an \(n\)-element set if \(k&gt;n\text{?}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-14" id="hint-14"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-14" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-105">Do you see an analogy between this problem and any of the previous problems?</p></span></span>
+</div></article><p id="p-107">There are a number of different notations for the number of \(k\)-element permutations of an \(n\)-element set. The one we shall use was introduced by Don Knuth; namely \(n^{\underline{k}}\text{,}\) read “\(n\) to the \(k\) falling” or “\(n\) to the \(k\) down”. In <a knowl="./knowl/kelementpermutation.html" knowl-id="xref-kelementpermutation" alt="Problem 20 " title="Problem 20 ">Problem 20</a> you may have shown that</p>
+\begin{equation}
+n^{\underline{k}} =n(n-1)\cdots (n-k+1)= \prod_{i=1}^k(
+n-i+1).
+\tag{1.1}
+\end{equation}
+<p id="p-108">It is standard to call \(n^{\underline{k}}\) the <em class="terminology">\(k\)-th falling factorial power of \(n\)</em>, which explains why we use exponential notation. Of course we call it a <em class="terminology">factorial</em> power since \(n^{\underline{n}} = n(n-1)\cdots 1\) which we call <em class="terminology">\(n\)-factorial</em> and denote by \(n!\text{.}\) If you are unfamiliar with the \(\Pi\) notation, or <em class="terminology">product notation</em> we introduced for products in <a knowl="./knowl/productnotation.html" knowl-id="xref-productnotation" alt="Equation 1.1 " title="Equation 1.1 ">Equation (1.1)</a>, it works just like the \(\Sigma\) notation works for summations.</p>
+<article class="example-like essential" id="activity-21"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">21</span>
+</h5>
+<p id="p-109">Express \(n^{\underline{k}}\) as a quotient of factorials.</p></article><article class="example-like interesting" id="activity-22"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">22</span>
+</h5>
+<p id="p-111">How should we define \(n^{\underline{0}}\text{?}\)</p></article></section><section class="subsection" id="subsection-2"><header title="Subsection 1.2.2 Functions and directed graphs"><h1 class="heading hide-type" alt="Subsection 1.2.2 Functions and directed graphs">
+<span class="type">Subsection</span><span class="codenumber">1.2.2</span><span class="title">Functions and directed graphs</span><a href="s1-2-basics.html#subsection-2" class="permalink">¶ permalink</a>
+</h1></header><p id="p-113">As another example how standard mathematical language relates to counting problems, <a knowl="./knowl/countingfunctions.html" knowl-id="xref-countingfunctions" alt="Problem 7 " title="Problem 7 ">Problem 7</a> explicitly asked you to relate the idea of counting functions to the question of <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>. You have probably learned in algebra or calculus how to draw graphs in the Cartesian plane of functions from a set of numbers to a set of numbers. You may recall how we can determine whether a graph is a graph of a function by examining whether each vertical straight line crosses the graph at most one time. You might also recall how we can determine whether such a function is one-to-one by examining whether each horizontal straight line crosses the graph at most one time. The functions we deal with will often involve objects which are not numbers, and will often be functions from one finite set to another. Thus graphs in the cartesian plane will often not be available to us for visualizing functions.</p>
+<p id="p-114">However, there is another kind of graph called a <em class="terminology">directed graph</em> or <em class="terminology">digraph</em> that is especially useful when dealing with functions between finite sets. We take up this topic in more detail in <a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a>, particularly <a href="Relations.html#relationdigraph" alt="Subsection A.1.2 Directed graphs" title="Subsection A.1.2 Directed graphs">Subsection A.1.2</a> and <a href="Relations.html#digraphsoffunctions" alt="Subsection A.1.3 Digraphs of Functions" title="Subsection A.1.3 Digraphs of Functions">Subsection A.1.3</a>. In <a knowl="./knowl/functiondigraphs.html" knowl-id="xref-functiondigraphs" alt="Figure 1.2.3 " title="Figure 1.2.3 ">Figure 1.2.3</a> we show several examples of digraphs of functions.</p>
+<figure class="figure-like" id="functiondigraphs"><img width="73%" src="../images/functiondigraph" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.3</span>What is a digraph of a function?</figcaption></figure><p id="p-115">If we have a function \(f\) from a set \(S\) to a set \(T\text{,}\) we draw a line of dots or circles, called <em class="terminology">vertices</em> to represent the elements of \(S\) and another (usually parallel) line of circles or dots to represent the elements of \(T\text{.}\) We then draw an arrow from the circle for \(x\) to the circle for \(y\) if \(f(x) = y\text{.}\) Sometimes, as in part (e) of the figure, if we have a function from a set \(S\) to itself, we draw only one set of vertices representing the elements of \(S\text{,}\) in which case we can have arrows both entering and leaving a given vertex. As you see, the digraph can be more enlightening in this case if we experiment with the function to find a nice placement of the vertices rather than putting them in a row.</p>
+<p id="p-116">Notice that there is a simple test for whether a digraph whose vertices represent the elements of the sets \(S\) and \(T\) is the digraph of a function from \(S\) to \(T\text{.}\) There must be one and only one arrow leaving each vertex of the digraph representing an element of \(S\text{.}\) The fact that there is one arrow means that \(f(x)\) is defined for each \(x\) in \(S\text{.}\) The fact that there is only one arrow means that each \(x\) in \(S\) is related to exactly one element of \(T\text{.}\) (Note that these remarks hold as well if we have a function from \(S\) to \(S\) and draw only one set of vertices representing the elements of \(S\text{.}\)) For further discussion of functions and digraphs see <a href="Relations.html#functionrelation" alt="Subsection A.1.1 The relation of a function" title="Subsection A.1.1 The relation of a function">Sections A.1.1</a> and <a href="Relations.html#relationdigraph" alt="Subsection A.1.2 Directed graphs" title="Subsection A.1.2 Directed graphs">Subsection A.1.2</a> of {<a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a>}.</p>
+<article class="example-like motivation" id="activity-23"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">23</span>
+</h5>
+<p id="p-117">Draw the digraph of the function from the set \(\{\)Alice, Bob, Dawn, Bill\(\}\) to the set \(\{\)A, B, C, D, E\(\}\) given by</p>
+\begin{equation*}
+f(X) = \text{ the first letter of the name }X .
+\end{equation*}
+</article><article class="example-like essential" id="activity-24"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">24</span>
+</h5>
+<p id="p-118">A function \(f:S\rightarrow T\) is called an <em class="terminology">onto function</em> or <em class="terminology">surjection</em> if each element of \(T\) is \(f(x)\) for some \(x\in S\text{.}\) Choose a set \(S\) and a set \(T\) so that you can draw the digraph of a function from \(S\) to \(T\) that is one-to-one but not onto, and draw the digraph of such a function.</p></article><article class="example-like motivation" id="activity-25"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">25</span>
+</h5>
+<p id="p-120">Choose a set \(S\) and a set \(T\) so that you can draw the digraph of a function from \(S\) to \(T\) that is onto but not one-to-one, and draw the digraph of such a function.</p></article><article class="example-like essential" id="activity-26"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">26</span>
+</h5>
+<article class="introduction" id="introduction-8"><p id="p-122">Digraphs of functions help us visualize the ideas of one-to-one functions and onto functions.</p></article><article class="exercise-like" id="task-18"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-123">What does the digraph of a one-to-one function (injection) from a finite set \(X\) to a finite set \(Y\) look like? (Look for a test somewhat similar to the one we described for when a digraph is the digraph of a function.)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-15" id="hint-15"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-124">For each part of this problem, think about how many arrows are allowed to enter a vertex representing a member of \(Y\text{.}\)</p></span></span></article><article class="exercise-like" id="task-19"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-126">What does the digraph of an onto function look like?</p></article><article class="exercise-like" id="bijectiondigraph"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-128">What does the digraph of a one-to-one and onto function from a finite set \(S\) to a set \(T\) look like?</p></article></article><article class="example-like essential" id="permutationasbijection"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">27</span>
+</h5>
+<p id="p-130">The word <!--Style me with CSS--><em>permutation</em> is actually used in two different ways in mathematics. A <em class="terminology">permutation</em> of a set \(S\) is one-to-one from \(S\) onto \(S\text{.}\) How many permutations does an \(n\)-element set have?</p></article><p id="p-132">Notice that there is a great deal of consistency between the use of the word permutation in <a knowl="./knowl/permutationasbijection.html" knowl-id="xref-permutationasbijection" alt="Problem 27 " title="Problem 27 ">Problem 27</a> and the use in <a knowl="./knowl/kelementpermutation.html" knowl-id="xref-kelementpermutation" alt="Problem 20 " title="Problem 20 ">Problem 20</a>. If we have some way \(a_1,a_2,\ldots,a_n\) of listing our set, then any other list \(b_1,b_2,\ldots,b_n\) gives us the permutation of \(S\) whose rule is \(f(a_i) =b_i\text{,}\) and any permutation of \(S\text{,}\) say the one given by \(g(a_i)=c_i\) gives us a list \(c_1,c_2,\ldots,c_n\) of \(S\text{.}\) Thus there is really very little difference between the idea of a permutation of \(S\) and an \(n\)-element permutation of \(S\) when \(n\) is the size of \(S\text{.}\)</p></section><section class="subsection" id="subsection-3"><header title="Subsection 1.2.3 The bijection principle"><h1 class="heading hide-type" alt="Subsection 1.2.3 The bijection principle">
+<span class="type">Subsection</span><span class="codenumber">1.2.3</span><span class="title">The bijection principle</span><a href="s1-2-basics.html#subsection-3" class="permalink">¶ permalink</a>
+</h1></header><p id="p-133">Another name for a one-to-one and onto function is <em class="terminology">bijection</em>. The digraphs marked (a), (b), and (e) in <a knowl="./knowl/functiondigraphs.html" knowl-id="xref-functiondigraphs" alt="Figure 1.2.3 " title="Figure 1.2.3 ">Figure 1.2.3</a> are digraphs of bijections. The description in <a knowl="./knowl/bijectiondigraph.html" knowl-id="xref-bijectiondigraph" alt="Part 26.c " title="Part 26.c ">Problem 26.c</a> of the digraph of a bijection from \(X\) to \(Y\) illustrates one of the fundamental principles of combinatorial mathematics, the <em class="terminology">bijection principle</em>:</p>
+<blockquote class="blockquote" id="blockquote-3"><p id="p-134">Two sets have the same size if and only if there is a bijection between them.</p></blockquote>
+<p id="p-135">It is surprising how this innocent sounding principle guides us into finding insight into some otherwise very complicated proofs.</p></section><section class="subsection" id="subsection-4"><header title="Subsection 1.2.4 Counting subsets of a set"><h1 class="heading hide-type" alt="Subsection 1.2.4 Counting subsets of a set">
+<span class="type">Subsection</span><span class="codenumber">1.2.4</span><span class="title">Counting subsets of a set</span><a href="s1-2-basics.html#subsection-4" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like" id="SubsetsBinaryRepresentation"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">28</span>
+</h5>
+<p id="p-136">The <em class="terminology">binary representation</em> of a number \(m\) is a list, or string, \(a_1a_2\ldots a_k\) of zeros and ones such that \(m=a_12^{k-1} + a_2 2^{k-2}
++\cdots+ a_k 2^0.\) Describe a bijection between the binary representations of the integers between 0 and \(2^n-1\) and the subsets of an \(n\)-element set. What does this tell you about the number of subsets of an \(n\)-element set?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-16" id="hint-16"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-16" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-137">The problem is asking you to describe a one-to-one function from the set of binary representations of numbers between \(0\) and \(2^n-1\) onto the set of subsets of the set \([n]\text{.}\) Write down these two sets for \(n = 2\text{.}\) They should both have four elements. The set of binary representations should contain the string \(00\text{.}\) You could think of this as the instruction ``take no ones and take no twos.'' In that context, what could you think of the string \(11\) as standing for? This should help you describe a function. Of course now you have to figure out how to show it is one-to-one and onto.</p></span></span>
+</div></article><p id="p-139">Notice that the first question in <a knowl="./knowl/icecreaminpints.html" knowl-id="xref-icecreaminpints" alt="Problem 8 " title="Problem 8 ">Problem 8</a> asked you for the number of ways to choose a three element subset from a 12 element subset. You may have seen a notation like \(\binom{n}{k}\text{,}\) \(C(n,k)\text{,}\) or \(_nC_k\) which stands for the number of ways to choose a \(k\)-element subset from an \(n\)-element set. The number \(\binom{n}{k}\) is read as “\(n\) choose \(k\)” and is called a <em class="terminology">binomial coefficient</em> for reasons we will see later on. Another frequently used way to read the binomial coefficient notation is ``the number of combinations  of \(n\) things taken \(k\) at a time." You are going to be asked to construct two bijections that relate to these numbers and figure out what famous formula they prove. We are going to think about subsets of the \(n\)-element set \([n] =
+\{1,2,3,\ldots, n\}\text{.}\) As an example, the set of two-element subsets of \([4]\) is</p>
+\begin{equation*}
+\{\{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}\}.
+\end{equation*}
+<p id="p-140">This example tells us that \(\binom{4}{2} = 6\text{.}\)</p>
+<article class="example-like essential" id="Pascal"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">29</span>
+</h5>
+<article class="introduction" id="introduction-9"><p id="p-141">Let \(C\) be the set of \(k\)-element subsets of \([n]\) that contain the number \(n\text{,}\) and let \(D\) be the set of \(k\)-element subsets of \([n]\) that don't contain \(n\text{.}\)</p></article><article class="exercise-like" id="task-21"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-142">Let \(C'\) be the set of \((k-1)\)-element subsets of \([n-1]\text{.}\)  Describe a bijection from \(C\) to \(C'\text{.}\)  (A verbal description is fine.)</p></article><article class="exercise-like" id="task-22"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-144">Let \(D'\) be the set of \(k\)-element subsets of \([n-1]=\{1,2,\ldots n-1\}\text{.}\)  Describe a bijection from \(D\) to \(D'\text{.}\) (A verbal description is fine.)</p></article><article class="exercise-like" id="task-23"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-146">Based on the two previous parts, express the sizes of \(C\) and \(D\) in terms of binomial coefficients involving \(n-1\) instead of \(n\text{.}\)</p></article><article class="exercise-like" id="task-24"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-148">Apply the sum principle to \(C\) and \(D\) and obtain a formula that expresses \(\binom{n}{k}\) in terms of two binomial coefficients involving \(n-1\text{.}\)  You have just derived the Pascal Equation that is the basis for the famous Pascal's Triangle.</p></article></article></section><section class="subsection" id="subsection-5"><header title="Subsection 1.2.5 Pascal's Triangle"><h1 class="heading hide-type" alt="Subsection 1.2.5 Pascal's Triangle">
+<span class="type">Subsection</span><span class="codenumber">1.2.5</span><span class="title">Pascal's Triangle</span><a href="s1-2-basics.html#subsection-5" class="permalink">¶ permalink</a>
+</h1></header><p id="p-150">The Pascal Equation that you derived in <a knowl="./knowl/Pascal.html" knowl-id="xref-Pascal" alt="Problem 29 " title="Problem 29 ">Problem 29</a> gives us the triangle in <a knowl="./knowl/Pascaltriangle.html" knowl-id="xref-Pascaltriangle" alt="Figure 1.2.4 " title="Figure 1.2.4 ">Figure 1.2.4</a>. This figure has the number of \(k\)-element subsets of an \(n\)-element set as the \(k\)th number over in the \(n\)th row (we call the top row the zeroth row and the beginning entry of a row the zeroth number over). You'll see that your formula doesn't say anything about \(\binom{n}{k}\) if \(k=0\) or \(k=n\text{,}\) but otherwise it says that each entry is the sum of the two that are above it and just to the left or right.</p>
+<figure class="figure-like" id="Pascaltriangle"><div class="sidebyside" style="" id="sidebyside-5"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;">
+<p id="p-151"></p>
+\begin{equation*}
+\begin{matrix}\amp \amp \amp \amp \amp \amp \amp 1\amp \amp \amp \amp \amp \amp \amp \\
+\amp \amp \amp \amp \amp \amp 1\amp \amp 1\amp \amp \amp \amp \amp \amp \\
+\amp \amp \amp \amp \amp 1\amp \amp 2\amp \amp 1\amp \amp \amp \amp \amp \\
+\amp \amp \amp \amp 1\amp \amp 3\amp \amp 3\amp \amp 1\amp \amp \amp \amp \\
+\amp \amp \amp 1\amp \amp 4\amp \amp 6\amp \amp 4\amp \amp 1\amp \amp \\
+\amp \amp 1\amp \amp 5\amp \amp 10\amp \amp 10\amp \amp 5\amp \amp 1\amp \\
+\amp 1\amp \amp 6\amp \amp 15\amp \amp 20\amp \amp 15\amp \amp 6\amp \amp 1\\
+1\amp \amp 7\amp \amp 21\amp \amp 35\amp \amp 35\amp \amp 21\amp \amp 7\amp \amp 1
+\end{matrix}
+\end{equation*}
+</div></div></div>
+<figcaption><span class="heading">Figure</span><span class="codenumber">1.2.4</span>Pascal's Triangle</figcaption></figure><p id="p-152"></p>
+<article class="example-like" id="activity-30"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">30</span>
+</h5>
+<p id="p-153">Just for practice, what is the next row of Pascal's triangle?</p></article><article class="example-like interesting" id="activity-31"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">31</span>
+</h5>
+<p id="p-155">Without writing out the rows completely, write out enough of Pascal's triangle to get a numerical answer for the first question in <a knowl="./knowl/icecreaminpints.html" knowl-id="xref-icecreaminpints" alt="Problem 8 " title="Problem 8 ">Problem 8</a>.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-17" id="hint-17"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-17" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-156">Starting with the row 1 8 28 56 70 56 28 8 1, put dots below it where the elements of row 9 should be. Then put dots below that where the elements of row 10 should be. Do the same for rows 11 and 12. Mark the dot where row 12 should appear. Now mark the dots you need in row 11 to compute the entry in column 3 of row 12. Now mark the dots you need in row 10 to compute the marked entries in row 11. Do the same for rows 9 and 8. Now you should be able to see what you need to do.</p></span></span>
+</div></article><p id="p-158">It is less common to see Pascal's triangle as a right triangle, but it actually makes your formula easier to interpret. In Pascal's Right Triangle, the element in row \(n\) and column \(k\) (with the convention that the first row is row zero and the first column is column zero) is \(\binom{n}{k}\text{.}\) In this case your formula says each entry in a row is the sum of the one above and the one above and to the left, except for the leftmost and rightmost entries of a row, for which that doesn't make sense. Since the leftmost entry is \(\binom{n}{0}\) and the rightmost entry is \(\binom{n}{n}\text{,}\) these entries are both one (to see why, ask yourself how many \(0\)-element subsets and how many \(n\)-element subsets an \(n\)-element set has), and your formula then tells how to fill in the rest of the table.</p>
+<figure class="figure-like" id="Pascalrighttriangle"><table>
+<tr>
+<td class="r m b1 r0 l0 t0 lines" colspan="2">\(k=0\)</td>
+<td class="r m b1 r0 l0 t0 lines">1</td>
+<td class="r m b1 r0 l0 t0 lines">2</td>
+<td class="r m b1 r0 l0 t0 lines">3</td>
+<td class="r m b1 r0 l0 t0 lines">4</td>
+<td class="r m b1 r0 l0 t0 lines">5</td>
+<td class="r m b1 r0 l0 t0 lines">6</td>
+<td class="r m b1 r0 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">\(n=0\)</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">2</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">2</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">3</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">3</td>
+<td class="r m b0 r0 l0 t0 lines">3</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">4</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">4</td>
+<td class="r m b0 r0 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">4</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">5</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">5</td>
+<td class="r m b0 r0 l0 t0 lines">10</td>
+<td class="r m b0 r0 l0 t0 lines">10</td>
+<td class="r m b0 r0 l0 t0 lines">5</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">15</td>
+<td class="r m b0 r0 l0 t0 lines">20</td>
+<td class="r m b0 r0 l0 t0 lines">15</td>
+<td class="r m b0 r0 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">7</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">7</td>
+<td class="r m b0 r0 l0 t0 lines">21</td>
+<td class="r m b0 r0 l0 t0 lines">35</td>
+<td class="r m b0 r0 l0 t0 lines">35</td>
+<td class="r m b0 r0 l0 t0 lines">21</td>
+<td class="r m b0 r0 l0 t0 lines">7</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.2.5</span>Pascal's Right Triangle</figcaption></figure><p id="p-159">Seeing this right triangle leads us to ask whether there is some natural way to extend the right triangle to a rectangle. If we did have a rectangular table of binomial coefficients, counting the first row as row zero (i.e., \(n=0\)) and the first column as column zero (i.e., \(k=0\)), the entries we don't yet have are values of \(\binom{n}{k}\) for \(k&gt;n\text{.}\) But how many \(k\)-element subsets does an \(n\)-element set have if \(k&gt;n\text{?}\) The answer, of course, is zero, so all the other entries we would fill in would be zero, giving us the rectangular array in <a knowl="./knowl/Pascal_sRectangle.html" knowl-id="xref-Pascal_sRectangle" alt="Table 1.2.6 " title="Table 1.2.6 ">Figure 1.2.6</a>. It is straightforward to check that Pascal's equation now works for all the entries in the rectangle that have an entry above them and an entry above and to the left.</p>
+<figure class="figure-like" id="Pascal_sRectangle"><table>
+<tr>
+<td class="r m b1 r0 l0 t0 lines" colspan="2">\(k=0\)</td>
+<td class="r m b1 r0 l0 t0 lines">1</td>
+<td class="r m b1 r0 l0 t0 lines">2</td>
+<td class="r m b1 r0 l0 t0 lines">3</td>
+<td class="r m b1 r0 l0 t0 lines">4</td>
+<td class="r m b1 r0 l0 t0 lines">5</td>
+<td class="r m b1 r0 l0 t0 lines">6</td>
+<td class="r m b1 r0 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">\(n=0\)</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">2</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">2</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">3</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">3</td>
+<td class="r m b0 r0 l0 t0 lines">3</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">4</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">4</td>
+<td class="r m b0 r0 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">4</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">5</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">5</td>
+<td class="r m b0 r0 l0 t0 lines">10</td>
+<td class="r m b0 r0 l0 t0 lines">10</td>
+<td class="r m b0 r0 l0 t0 lines">5</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">15</td>
+<td class="r m b0 r0 l0 t0 lines">20</td>
+<td class="r m b0 r0 l0 t0 lines">15</td>
+<td class="r m b0 r0 l0 t0 lines">6</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">7</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+<td class="r m b0 r0 l0 t0 lines">7</td>
+<td class="r m b0 r0 l0 t0 lines">21</td>
+<td class="r m b0 r0 l0 t0 lines">35</td>
+<td class="r m b0 r0 l0 t0 lines">35</td>
+<td class="r m b0 r0 l0 t0 lines">21</td>
+<td class="r m b0 r0 l0 t0 lines">7</td>
+<td class="r m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.2.6</span>Pascal's Rectangle</figcaption></figure><article class="example-like interesting" id="activity-32"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">32</span>
+</h5>
+<article class="introduction" id="introduction-10"><p id="p-160">Because our definition told us that \(\binom{n}{k}\) is 0 when \(k&gt;n\text{,}\) we got a rectangular table of numbers that satisfies the Pascal Equation.</p></article><article class="exercise-like" id="task-25"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-161">Is there any other way to define \(\binom{n }{k}\) when \(k&gt;n\) in order to get a rectangular table that agrees with Pascal's Right Triangle for \(k\le n\) and satisfies the Pascal Equation?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-18" id="hint-18"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-18" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-162">Begin by trying to figure out what the entries just above the diagonal of the rectangle are. After that, what other entries can you figure out?</p></span></span></article><article class="exercise-like" id="task-26"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-164">Suppose we want to extend Pascal's Rectangle to the left and define \(\binom{n}{-k}\) for \(n\ge 0\) and \(k&gt;0\) so that \(-k\lt 0\text{.}\) What should we put into row \(n\) and column \(-k\) of Pascal's Rectangle in order for the Pascal Equation to hold true?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-19" id="hint-19"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-19" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-165">See if you can figure out what the entries in column \(-1\) have to be.</p></span></span></article><article class="exercise-like" id="task-27"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-167">What should we put into row \(-n\) and column \(k\) or column \(-k\) in order for the Pascal Equation to continue to hold?  Do we have any freedom of choice?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-20" id="hint-20"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-20" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-168">What does the sum of two consecutive values in row \(-1\) have to be? Could this sum depend on which two consecutive values we take? Is there some value of row \(-1\) that we could choose arbitrarily? Now what about row \(-2\text{?}\) Can we make arbitrary choices there? If so, how many can we make, and is their position arbitrary?</p></span></span></article></article><article class="example-like" id="charfunction"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">33</span>
+</h5>
+<article class="introduction" id="introduction-11"><p id="p-170">There is yet another bijection that lets us prove that a set of size \(n\) has \(2^n\) subsets. Namely, for each subset \(S\) of \([n]=\{1,2,\ldots, n\}\text{,}\) define a function (traditionally denoted by \(\chi_S\)) as follows.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-1" style="display: none;" class="tex2jax_ignore"><span class="footnote">The symbol \(\chi\) is the Greek letter chi that is pronounced Ki, with the \(i\) sounding like “eye.”</span></span></p>
+\begin{equation*}
+\chi_S(i) = \begin{cases}1 \amp \text{ if }  i\in S \\ 0 \amp \text{ if }  i\not\in
+S
+\end{cases}
+\end{equation*}
+<p id="p-171">The function \(\chi_S\) is called the <em class="terminology">characteristic function</em> of \(S\text{.}\) Notice that the characteristic function is a function from \([n]\) to \(\{0,1\}\text{.}\)</p></article><article class="exercise-like" id="task-28"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<article class="introduction" id="introduction-12"><p id="p-172">For practice, consider the function \(\chi_{\{1,3\}}\) for the subset \(\{1,3\}\) of the set \(\{1,2,3,4\}\text{.}\)  What are</p></article><article class="exercise-like" id="task-29"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<p id="p-173">\(\chi_{\{1,3\}}(1)\text{?}\)</p></article><article class="exercise-like" id="task-30"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<p id="p-175">\(\chi_{\{1,3\}}(2)\text{?}\)</p></article><article class="exercise-like" id="task-31"><h5 class="heading"><span class="codenumber">(iii)</span></h5>
+<p id="p-177">\(\chi_{\{1,3\}}(3)\text{?}\)</p></article><article class="exercise-like" id="task-32"><h5 class="heading"><span class="codenumber">(iv)</span></h5>
+<p id="p-179">\(\chi_{\{1,3\}}(4)\text{?}\)</p></article></article><article class="exercise-like" id="task-33"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-181">We define a function \(f\) from the set of subsets of \([n]=\{1,2,\ldots, n\}\) to the set of functions from \([n]\) to \(\{0,1\}\) by \(f(S)=\chi_S\text{.}\)  Explain why \(f\) is a bijection.</p></article><article class="exercise-like" id="task-34"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-183">Why does the fact that \(f\) is a bijection prove that \([n]\) has \(2^n\) subsets?</p></article></article><p id="p-185">In <a knowl="./knowl/SubsetsFirstTime.html" knowl-id="xref-SubsetsFirstTime" alt="Problem 18 " title="Problem 18 ">Problems 18</a>, <a knowl="./knowl/SubsetsBinaryRepresentation.html" knowl-id="xref-SubsetsBinaryRepresentation" alt="Problem 28 " title="Problem 28 ">Problem 28</a>, and <a knowl="./knowl/charfunction.html" knowl-id="xref-charfunction" alt="Problem 33 " title="Problem 33 ">Problem 33</a> you gave three proofs of the following theorem.</p>
+<article class="theorem-like" id="theorem-1"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.2.7</span>
+</h5>
+<p id="p-186">The number of subsets of an \(n\)-element set is \(2^n\text{.}\)</p></article><p id="p-187">The proofs in <a knowl="./knowl/SubsetsBinaryRepresentation.html" knowl-id="xref-SubsetsBinaryRepresentation" alt="Problem 28 " title="Problem 28 ">Problem 28</a> and <a knowl="./knowl/charfunction.html" knowl-id="xref-charfunction" alt="Problem 33 " title="Problem 33 ">Problem 33</a> use essentially the same bijection, but they interpret sequences of zeros and ones differently, and so end up being different proofs. We will give yet another proof, using bijections similar to those we used in proving the Pascal Equation, at the beginning of <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a>.</p></section><section class="subsection" id="subsection-6"><header title="Subsection 1.2.6 The quotient principle"><h1 class="heading hide-type" alt="Subsection 1.2.6 The quotient principle">
+<span class="type">Subsection</span><span class="codenumber">1.2.6</span><span class="title">The quotient principle</span><a href="s1-2-basics.html#subsection-6" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="twelvechoosethree"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">34</span>
+</h5>
+<article class="introduction" id="introduction-13"><p id="p-188">As we noted in <a knowl="./knowl/Pascal.html" knowl-id="xref-Pascal" alt="Problem 29 " title="Problem 29 ">Problem 29</a>, the first question in <a knowl="./knowl/icecreaminpints.html" knowl-id="xref-icecreaminpints" alt="Problem 8 " title="Problem 8 ">Problem 8</a> asked us for the number of three-element subsets of a twelve-element set. We were able to use the Pascal Equation to get a numerical answer to that question. Had we had twenty or thirty flavors of ice cream to choose from, using the Pascal Equation to get our answer would have entailed a good bit more work. We have seen how the general product principle gives us an answer to <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>. Thus we might think that the number of ways to choose a three element set from 12 elements is the number of ways to choose the first element times the number of ways to choose the second element times the number of ways to choose the third element, which is \(12\cdot11\cdot10=1320\text{.}\) However, our result in <a knowl="./knowl/Pascal.html" knowl-id="xref-Pascal" alt="Problem 29 " title="Problem 29 ">Problem 29</a> shows that this is wrong.</p></article><article class="exercise-like" id="task-35"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-189">What is it that is different between the number of ways to stack ice cream in a triple decker cone with three different flavors of ice cream and the number of ways to simply choose three different flavors of ice cream?</p></article><article class="exercise-like" id="twelvechoosethreethree"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-191">In particular, how many different triple decker cones use the same three flavors?  (Of course any three distinct flavors could substitute for vanilla, chocolate and strawberry without changing the answer.)</p></article><article class="exercise-like" id="twelvechoosethreefinal"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-193">Using your answer from <a knowl="./knowl/twelvechoosethreethree.html" knowl-id="xref-twelvechoosethreethree" alt="Part 34.b " title="Part 34.b ">part b</a>, compute the number of ways to choose three different flavors of ice cream (out of twelve flavors) from the number of ways to choose a triple decker cone with three different flavors (out of twelve  flavors).</p></article></article><article class="example-like essential" id="nchoosek"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">35</span>
+</h5>
+<p id="p-195">Based on what you observed in <a knowl="./knowl/twelvechoosethreefinal.html" knowl-id="xref-twelvechoosethreefinal" alt="Part 34.c " title="Part 34.c ">Problem 34.c</a>, how many \(k\)-element subsets does an \(n\)-element set have?</p></article><article class="example-like interesting" id="activity-36"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">36</span>
+</h5>
+<p id="p-197">The formula you proved in <a knowl="./knowl/nchoosek.html" knowl-id="xref-nchoosek" alt="Problem 35 " title="Problem 35 ">Problem 35</a> is symmetric in \(k\) and \(n-k\text{;}\) that is, it gives the same number for \(\binom{n}{k}\) as it gives for \(\binom{n}{n-k}\text{.}\) Whenever two quantities are counted by the same formula it is good for our insight to find a bijection that demonstrates the two sets being counted have the same size. In fact this is a guiding principle of research in combinatorial mathematics. Find a bijection that proves that \(\binom{n}{k}\) equals \(\binom{n}{n-k}\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-21" id="hint-21"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-21" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-198">The first thing you need to decide is “What are the two sets whose elements we are counting?” Then it will be easier to think of a bijection between these two sets. It turns out that these two sets are sets of sets!</p></span></span>
+</div></article><article class="example-like essential" id="ping-pong"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">37</span>
+</h5>
+<p id="p-200">In how many ways can we pass out \(k\) (identical) ping-pong balls to \(n\) children if each child may get at most one?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-22" id="hint-22"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-22" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-201">Ask yourself “What is a problem like this doing in the middle of a bunch of problems about counting subsets of a set? Is it related, or is it supposed to gives us a break from sets?”</p></span></span>
+</div></article><article class="example-like essential" id="roundtable"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">38</span>
+</h5>
+<p id="p-203">In how many ways may \(n\) people sit around a round table? (Assume that when people are sitting around a round table, all that really matters is who is to each person's right. For example, if we can get one arrangement of people around the table from another by having everyone get up and move to the right one place and sit back down, we get an equivalent arrangement of people. Notice that you can get a list from a seating arrangement by marking a place at the table, and then listing the people at the table, starting at that place and moving around to the right.) There are at least two different ways of doing this problem. Try to find them both.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-23" id="hint-23"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-23" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-204">The problem suggests that you think about how to get a list from a seating arrangement. Could every list of n distinct people come from a seating chart? How many lists of n distinct people are there? How many lists could we get from a given seating chart by taking different starting places?</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-24" id="hint-24"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-24" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-205">For a different way of doing the problem, suppose that you have chosen one person, say the first one in a list of the people in alphabetical order by name. Now seat that person. Does it matter where they sit? In ways can you seat the remaining people? Does it matter where the second person in alphabetical order sits?</p></span></span>
+</div></article><p id="p-207">We are now going to analyze the result of <a knowl="./knowl/nchoosek.html" knowl-id="xref-nchoosek" alt="Problem 35 " title="Problem 35 ">Problem 35</a> in more detail in order to tease out another counting principle that we can use in a wide variety of situations.</p>
+<figure class="figure-like" id="tab_permsof3"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(abc\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(acb\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bac\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bca\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cab\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cab\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(abd\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(adb\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bad\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bda\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dab\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dba\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(abe\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(aeb\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bae\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bea\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(eab\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(eba\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(acd\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(adc\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cad\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cda\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dac\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dca\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(ace\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(aec\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cae\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cea\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(eac\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(eca\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(ade\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(aed\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dae\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dea\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ead\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(eda\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(bcd\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bdc\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cbd\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cdb\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dbc\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dcb\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(bce\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bec\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(cbe\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ceb\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ebc\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ecb\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(bde\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(bed\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dbe\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(deb\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ebd\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(edb\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(cde\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ced\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dce\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(dec\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(ecd\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(edc\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.2.8</span>The \(3\)-element permutations of \(\{a,b,c,d,e\}\) organized by which \(3\)-element set they permute.</figcaption></figure><p id="p-208">In <a knowl="./knowl/tab_permsof3.html" knowl-id="xref-tab_permsof3" alt="Table 1.2.8 " title="Table 1.2.8 ">Table 1.2.8</a> we list all three-element permutations of the \(5\)-element set \(\{a,b,c,d,e\}\text{.}\) Each row consists of all \(3\)-element permutations of some subset of \(\{a,b,c,d,e\}\text{.}\) Because a given \(k\)-element subset can be listed as a \(k\)-element permutation in \(k!\) ways, there are \(3!=6\) permutations in each row. Because each \(3\)-element permutation appears exactly once in the table, each row is a block of a partition of the set of \(3\)-element permutations of \(\{a,b,c,d,e\}\text{.}\) Each block has size six. Each block consists of all \(3\)-element permutations of some three-element subset of \(\{a,b,c,d,e\}\text{.}\) Since there are ten rows, we see that there are ten \(3\)-element subsets of \(\{a,b,c,d,e\}\text{.}\) An alternate way to see this is to observe that we partitioned the set of all \(60\) three-element permutations of \(\{a,b,c,d,e\}\) into some number \(q\) of blocks, each of size six. Thus by the product principle, \(q\cdot 6=60\text{,}\) so \(q=10\text{.}\)</p>
+<article class="example-like essential" id="formulanchoosek"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">39</span>
+</h5>
+<article class="introduction" id="introduction-14"><p id="p-209">Rather than restricting ourselves to \(n=5\) and \(k=3\text{,}\) we can partition the set of all \(k\)-element permutations of \(S\) up into blocks. We do so by letting \(B_K\) be the set (block) of all \(k\)-element permutations of \(K\) for each \(k\)-element subset \(K\) of \(S\text{.}\) Thus as in our preceding example, each block consists of all permutations of some subset \(K\) of our \(n\)-element set. For example, the permutations of \(\{a,b,c\}\) are listed in the first row of <a knowl="./knowl/tab_permsof3.html" knowl-id="xref-tab_permsof3" alt="Table 1.2.8 " title="Table 1.2.8 ">Table 1.2.8</a>. In fact each row of that table is a block. The questions that follow are about the corresponding partition of the set of \(k\)-element permutations of \(S\text{,}\) where \(S\) and \(k\) are arbitrary.</p></article><article class="exercise-like" id="task-38"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-210">How many permutations are there in a block?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-25" id="hint-25"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-25" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-211">A block consists of all permutations of some subset \(\{a_1 , a_2, \ldots, a_k \}\) of \(S\text{.}\) How many permutations are there of the set \(\{a_1 , a_2, \ldots, a_k \}\text{?}\)</p></span></span></article><article class="exercise-like" id="task-39"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-213">Since \(S\) has \(n\) elements, what does <a knowl="./knowl/kelementpermutation.html" knowl-id="xref-kelementpermutation" alt="Problem 20 " title="Problem 20 ">problem 20</a> tell you about the total number of \(k\)-element permutations of \(S\text{?}\)</p></article><article class="exercise-like" id="task-40"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-215">Describe a bijection between the set of blocks of the partition and the set of \(k\)-element subsets of \(S\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-26" id="hint-26"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-26" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-216">What sets are listed, and how many times is each one listed if you take one list from each row of <a knowl="./knowl/tab_permsof3.html" knowl-id="xref-tab_permsof3" alt="Table 1.2.8 " title="Table 1.2.8 ">Table 1.2.8</a>? How does this choice of lists give you the bijection in this special case?</p></span></span></article><article class="exercise-like" id="formulanchoosekfinal"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-218">What formula does this give you for the number \(\binom{n}{k}\) of \(k\)-element subsets of an \(n\)-element set?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-27" id="hint-27"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-27" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-219">You can make good use of the product principle here.</p></span></span></article></article><article class="example-like interesting" id="activity-40"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">40</span>
+</h5>
+<article class="introduction" id="introduction-15"><p id="p-221">A basketball team has 12 players. However, only five players play at any given time during a game.</p></article><article class="exercise-like" id="task-42"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-222">In how may ways may the coach choose the five players?</p></article><article class="exercise-like" id="task-43"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-224">To be more realistic, the five players playing a game normally consist of two guards, two forwards, and one center.  If there are five guards, four forwards, and three centers on the team, in how many ways can the coach choose two guards, two forwards, and one center?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-28" id="hint-28"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-28" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-225">The coach is making a sequence of decisions. Can you figure out how many choices the coach has for each decision in the sequence?</p></span></span></article><article class="exercise-like" id="task-44"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-227">What if one of the centers is equally skilled at playing forward?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-29" id="hint-29"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-29" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-228">As with any counting problem whose context does not suggest an approach, it is useful to ask yourself if you could decompose the problem into simpler parts by using either the sum or product principle.</p></span></span></article></article><article class="example-like essential" id="roundtablepartition"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">41</span>
+</h5>
+<p id="p-230">In <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">Problem 38</a>, describe a way to partition the \(n\)-element permutations of the \(n\) people into blocks so that there is a bijection between the set of blocks of the partition and the set of arrangements of the \(n\) people around a round table. What method of solution for <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">Problem 38</a> does this correspond to?</p></article><article class="example-like essential" id="quotientprinciple"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">42</span>
+</h5>
+<p id="p-232">In <a knowl="./knowl/formulanchoosekfinal.html" knowl-id="xref-formulanchoosekfinal" alt="Part 39.d " title="Part 39.d ">Problems 39.d</a> and <a knowl="./knowl/roundtablepartition.html" knowl-id="xref-roundtablepartition" alt="Problem 41 " title="Problem 41 ">41</a>, you have been using the product principle in a new way. One of the ways in which we previously stated the product principle was “If we partition a set into \(m\) blocks each of size \(n\text{,}\) then the set has size \(m\cdot n\text{.}\)” In <a knowl="./knowl/formulanchoosekfinal.html" knowl-id="xref-formulanchoosekfinal" alt="Part 39.d " title="Part 39.d ">Problems 39.d</a> and <a knowl="./knowl/roundtablepartition.html" knowl-id="xref-roundtablepartition" alt="Problem 41 " title="Problem 41 ">41</a> we knew the size \(p\) of a set \(P\) of permutations of a set, and we knew we had partitioned \(P\) into some unknown number of blocks, each of a certain known size \(r\text{.}\) If we let \(q\) stand for the number of blocks, what does the product principle tell us about \(p\text{,}\) \(q\text{,}\) and \(r\text{?}\) What do we get when we solve for \(q\text{?}\)</p></article><p id="p-234">The formula you found in the <a knowl="./knowl/quotientprinciple.html" knowl-id="xref-quotientprinciple" alt="Problem 42 " title="Problem 42 ">Problem 42</a> is so useful that we are going to single it out as another principle. The <em class="terminology">quotient principle</em> says:</p>
+<blockquote class="blockquote" id="blockquote-4"><p id="p-235">If we partition a set \(P\) into \(q\) blocks, each of size \(r\text{,}\) then \(q=p/r.\)</p></blockquote>
+<p id="p-236">The quotient principle is really just a restatement of the product principle, but thinking about it as a principle in its own right often leads us to find solutions to problems. Notice that it does not always give us a formula for the number of blocks of a partition; it only works when all the blocks have the same size. In <a href="groupsonsets.html" alt="Chapter 6 Groups acting on sets" title="Chapter 6 Groups acting on sets">Chapter 6</a>, we develop a way to solve problems with different block sizes in cases where there is a good deal of symmetry in the problem. (The roundness of the table was a symmetry in the problem of people at a table; the fact that we can order the sets in any order is the symmetry in the problem of counting \(k\)-element subsets.)</p>
+<p id="p-237">In <a href="Relations.html#equivalencerelations" alt="Section A.2 Equivalence relations" title="Section A.2 Equivalence relations">Section A.2</a> of <a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a> we introduce the idea of an equivalence relation, see what equivalence relations have to do with partitions, and discuss the quotient principle from that point of view. While that appendix is not required for what we are doing here, if you want a more thorough discussion of the quotient principle, this would be a good time to work through that appendix.</p>
+<article class="example-like" id="necklace"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">43</span>
+</h5>
+<p id="p-238">In how many ways may we string \(n\) distinct beads on a necklace without a clasp? (Perhaps we make the necklace by stringing the beads on a string, and then carefully gluing the two ends of the string together so that the joint can't be seen. Assume someone can pick up the necklace, move it around in space and put it back down, giving an apparently different way of stringing the beads that is equivalent to the first.)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-30" id="hint-30"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-30" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-239">How could we get a list of beads from a necklace?</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-31" id="hint-31"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-31" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-240">When we cut the necklace and string it out on a table, there are 2n lists of beads we could get. Why is it \(2n\) rather than \(n\text{?}\)</p></span></span>
+</div></article><article class="example-like interesting" id="tennispairings2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">44</span>
+</h5>
+<article class="introduction" id="introduction-16"><p id="p-242">We first gave this problem as <a knowl="./knowl/tennispairings1a.html" knowl-id="xref-tennispairings1a" alt="Part 12.a " title="Part 12.a ">Problem 12.a</a>. Now we have several ways to approach the problem. A tennis club has \(2n\) members. We want to pair up the members by twos for singles matches.</p></article><article class="exercise-like" id="task-45"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-243">In how many ways may we pair up all the members of the club? Give at least two solutions different from the one you gave in   <a knowl="./knowl/tennispairings1a.html" knowl-id="xref-tennispairings1a" alt="Part 12.a " title="Part 12.a ">Problem 12.a</a>. (You may not have done <a knowl="./knowl/tennispairings1a.html" knowl-id="xref-tennispairings1a" alt="Part 12.a " title="Part 12.a ">Problem 12.a</a>. In that case, see if you can find three solutions.)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-32" id="hint-32"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-32" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-244">You might first choose the pairs of people. You might also choose to make a list of all the people and then take them by twos from the list.</p></span></span></article><article class="exercise-like" id="task-46"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-247">Suppose that in addition to specifying who plays whom, for each pairing we say who serves first.  Now in how many ways may we specify our pairs? Try to find as many solutions as you can.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-33" id="hint-33"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-33" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-248">You might first choose ordered pairs of people, and have the first person in each pair serve first. You might also choose to make a list of all the people and then take them by twos from the list in order.</p></span></span></article></article><article class="example-like essential" id="twocolorsofbeads"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">45</span>
+</h5>
+<p id="p-251">(This becomes especially relevant in <a href="groupsonsets.html" alt="Chapter 6 Groups acting on sets" title="Chapter 6 Groups acting on sets">Chapter 6</a>, though it makes an important point here.) In how many ways may we attach two identical red beads and two identical blue beads to the corners of a square (with one bead per corner) free to move around in (three-dimensional) space?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-34" id="hint-34"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-34" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-252">It might be helpful to just draw some pictures of the possible configurations. There aren't that many.</p></span></span>
+</div></article><article class="example-like interesting" id="Stirling_sapproximation"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">46</span>
+</h5>
+<p id="p-254">While the formula you proved in <a knowl="./knowl/nchoosek.html" knowl-id="xref-nchoosek" alt="Problem 35 " title="Problem 35 ">Problems 35</a> and <a knowl="./knowl/formulanchoosekfinal.html" knowl-id="xref-formulanchoosekfinal" alt="Part 39.d " title="Part 39.d ">39.d</a> is very useful, it doesn't give us a sense of how big the binomial coefficients are. We can get a very rough idea, for example, of the size of \(\binom{2n}{n}\) by recognizing that we can write \((2n)^\frac{\underline{n}}/n!\) as \({2n}{n}\cdot
+\frac{2n-1}{n-1}\cdots \frac{n+1}{1}\text{,}\) and each quotient is at least \(2\text{,}\) so the product is at least \(2^n\text{.}\) If this were an accurate estimate, it would mean the fraction of \(n\)-element subsets of a \(2n\)-element set would be about         \(2^n/2^{2n}=1/2^n\text{,}\) which becomes very small as \(n\) becomes large. However it is pretty clear the approximation will not be a very good one, because some of the terms in that product are much larger than 2. In fact, if \(\binom{2n}{k}\) were the same for every \(k\text{,}\) then each would be the fraction \(\frac{1}{2n+1}\) of \(2^{2n}\text{.}\) This is much larger than the fraction \(\frac{1}{2^n}\text{.}\) But our intuition suggets that \(\binom{2n}{n}\) is much larger than \(\binom{2n}{1}\) and is likely larger than \(\binom{2n}{n-1}\) so we can be sure our approximation is a bad one. For estimates like this, James Stirling developed a formula to approximate \(n!\) when \(n\) is large, namely \(n!\) is about \(\left(\sqrt{2\pi
+n}\right){n^n/ e^n}\text{.}\) In fact the ratio of \(n!\) to this expression approaches 1 as \(n\) becomes infinite.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-2" id="fn-2"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-2" style="display: none;" class="tex2jax_ignore"><span class="footnote">Proving this takes more of a detour than is advisable here; however there is an elementary proof which you can work through in the problems of the end of Section 1 of Chapter 1 of <!--Style me with CSS--><em>Introductory Combinatorics</em> by Kenneth P. Bogart, Harcourt Academic Press, (2000).</span></span> We write this as</p>
+\begin{equation*}
+n!\sim \sqrt{2\pi
+n}\frac{n^n}{e^n}.
+\end{equation*}
+<p id="p-255">We read this notation as \(n!\) is asymptotic to \(\sqrt{2\pi n}\frac{n^n}{e^n}\text{.}\) Use Stirling's formula to show that the fraction of subsets of size \(n\) in an \(2n\)-element set is approximately \(1/\sqrt{\pi n}\text{.}\) This is a much bigger fraction than \(\frac{1}{2^n}\text{!}\)</p></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

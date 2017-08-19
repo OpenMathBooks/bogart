@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:59-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">118.1</span>
+</h5>
+<p>Start with vertex, number it vertex 1, and choose the least costly edge leaving it. Number the new vertex 2. Given your current set of vertices and edges, choose the least costly edge leaving that set, and if your set has \(i-1\) vertices, label the new vertex \(i\text{.}\) You will always have a tree as you go along since you are adding a vertex of degree 1 to a tree you already have. You will get a spanning tree because the graph you start with is connected. If your tree did not have the lowest cost among all spanning trees, there would be some smallest \(i\) such that there is an edge from vertex \(i\) in a least cost spanning tree that is not in your tree. Since we chose the least \(i\text{,}\) the edge we just chose from vertex \(i\) goes to a higher-numbered vertex. Thus you could have chosen that edge as you were constructing your tree, so there cannot be a tree of lower total cost than the one you chose.</p>
+<p>Alternatively, start with the vertex set of the graph and no edges. Choose an edge of least cost. Repeat the following until it cannot be repeated. Given the set of edges you have so far, choose an edge of least cost among all edges that do not form a cycle with edges you already have. The graph you get will have no cycles, and it will have to be connected, because otherwise there would be an edge in the original graph that connects two vertices in the graph you just constructed. Thus you will have a tree. Suppose there is another tree with lower total cost. Choose such a tree with as many edges as common with your tree as possible. Then there is some edge \(e\) of this tree of lowest cost among all edges connecting two vertices that are not connected by an edge in your tree. Suppose the cost of this edge is \(c\text{.}\) Since these vertices are connected by some path in your tree, when you were considering edges of cost \(c\text{,}\) these two vertices were already connected by a path in your tree. There must be some edge \(f\) on that path not in the least cost tree. The edge \(f\) was already in your tree while you were considering edges of cost \(c\text{,}\) so its cost is no more than \(c\text{.}\) Adding \(f\) to the tree of least cost gives a cycle. All edges on that cycle that are not in your tree have cost at least \(c\) by our choice of \(e\text{.}\) But since \(f\) was from your tree, there must be some edge \(g\) of the cycle that is in the least cost tree that but not in your tree. Removing \(g\) from the least cost tree and adding \(f\) cannot increase the cost of the tree, but it gives a tree that has one more edge in common with your tree. This contradicts the choice of the least cost tree, so there must have been no tree of lower total cost than the one you constructed.</p></span><span class="incontext"><a href="sec_induction-graphstrees.html#solution-190">in-context</a></span>
+</body>
+</html>

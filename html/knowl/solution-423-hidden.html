@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:17-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>By the deletion-contraction recurrence,</p>
+\begin{equation*}
+\chi_{G_{12}}(x) =
+\chi_{G_{12}-e}(x)-\chi_{G_{12/e}}(x).
+\end{equation*}
+<p>Now \(\chi_{G_{12}-e}(x)=\chi_{G_1}(x)\times \chi_{G_2}(x)\) because each ordered pair of proper colorings of \(G_1\) and \(G_2\) is a proper coloring of \(G_{12}-e\text{.}\) \(G_{12}/e\) is the graph we get by identifying the endpoint of \(e\) in \(G_1\) with the endpoint of \(e\) in \(G_2\text{.}\) Notice that if you fix one vertex of a graph \(G\text{,}\) fix one color, and ask how many proper colorings with \(x\) colors \(G\) has in which the fixed vertex is the fixed color, you get \(\chi_G(x)/x\text{.}\)  (By the quotient principle.) Thus \(\chi_{G_2}(x)/x\) is the number of ways to extend a proper coloring of \(G_1\) to a proper coloring of \(G_{12}/e\text{.}\) Then, by the product principle, the number of proper colorings of \(G_{12}/e\) with \(x\) colors is \(\chi_{G_1}(x)\chi_{G_2}(x)/x\text{.}\) Therefore by the deletion-contraction recurrence, \(\chi_{G_{12}}(x) = \chi_{G_1}(x)\chi_{G_2}(x)(1-\frac{1}{x})\text{.}\)</p></span></body>
+</html>

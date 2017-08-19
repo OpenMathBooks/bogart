@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:12-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>To solve for \(C_n\text{,}\) write</p>
+\begin{align*}
+\sum_{n=0}^\infty C_nx^n \amp= 1+\sum_{n=1}^\infty\sum_{i=1}^nC_{i-1}C_{n-i}x^n\\
+\sum_{n=0}^\infty C_nx^n
+\amp= 1+x\sum_{n=1}^\infty\sum_{i=1}^nC_{i-1}x^{i-1}C_{n-i}x^{n-i}\\
+\sum_{n=0}^\infty C_nx^n
+\amp= 1+x\sum_{i=1}^\infty C_{i-1}x^{i-1}\sum_{j=0}^\infty C_{j}x^{j}\\
+y \amp= 1 + xy^2\text{.}
+\end{align*}
+<p>This gives us \(xy^2-y+1=0\text{,}\) and solving for \(y\) by the quadratic formula gives us \(y=\frac{1\pm \sqrt{1-4x}}{2x}\text{.}\)</p></span></body>
+</html>

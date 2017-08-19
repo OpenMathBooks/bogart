@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:15-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Let \(A\) be the set of all seating arrangements for \(2n\) people around a round table. Let \(A_i\) be the set of arrangements in which couple \(i\) sits together. We are interested in \(|\overline{A_1\cup A_2\cup \cdots \cup A_n}|\text{.}\) Thus, for a set \(S\subseteq [n]\text{,}\) we need to compute \(\left|\bigcup_{i\colon i\in S} A_i\right|\text{.}\) If we let each couple described by \(S\) sit together, we will seat \(|S|\) couples and \(2n-2|S|\) individuals around the table. We can do this in \(2^{|S|}(|S| + 2n-2 |S|-1)!\) ways, because once we chose a place for a couple (i.e., two adjacent seats) there are two ways the couple can sit down. Thus as long as \(S\) is nonempty, we have the right formula for \(\left|\bigcap_{i\colon i\in S} A_i\right|\text{.}\) Notice that in the case where \(S=\emptyset\) the formula gives us \((2n-1)!\) seating arrangements, which is exactly the number of ways to seat \(2n\) people around a round table. This is the size of our set \(A\text{.}\) Therefore,</p>
+\begin{equation*}
+\left|\bigcap_{i\colon i\in S} A_i\right| = 2^{|S|}(2n-|S|-1)!
+\text{.}
+\end{equation*}
+<p>Substituting this into the formula from <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a> gives us</p>
+\begin{align*}
+\left|\overline{\bigcup_{i=1}^n A_i}\right| &amp;=  \sum_{S:S\subseteq [n]}
+(-1)^{|S|} \left|\bigcap_{i\colon i\in S} A_i\right|\\
+&amp;= \sum_{s=0}^n(-1)^s\binom{n}{s}2^{s}(2n- s-1)!\text{.}
+\end{align*}
+<span class="incontext"><a href="sec_inclexcl-apps.html#p-1362">in-context</a></span>
+</body>
+</html>

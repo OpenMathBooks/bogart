@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:12-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>\((x^3+x^4+x^5+x^6)^n\text{;}\)</p>
+\begin{align*}
+(x^3+x^4+x^5+x^6)^n =\amp x^{3n}(1+x+x^2+x^3)^n\\
+=\amp x^{3n}\left(\frac{1-x^4}{1-x}\right)^n\\
+=\amp x^{3n}\sum_{j=0}^n (-1)^j\binom{n}{j}x^{4j}\sum_{i=0}^\infty
+\binom{n+i-1}{i}x^i\text{.}
+\end{align*}
+<p>The number of ways to pass out \(k\) pieces of candy is the coefficient of \(x^k\) in this expression. Thus the answer is zero if \(k\lt 3n\) because of the \(x^{3n}\) in front. Otherwise the answer is the coefficient of \(^{k-3n}\) in \(\sum_{j=0}^n (-1)^j\binom{n}{j}x^{4j}\sum_{i=0}^\infty \binom{n+i-1}{i}x^i\text{,}\) which is</p>
+\begin{equation*}
+\sum_{i,j:4j+i=k-3n}(-1)^j\binom{n}{j}\binom{n+i-1}{i}= \sum_{j=0}^{\lfloor (k-3n)/4\rfloor} (-1)^j\binom{n}{j}\binom{k-2n-4j-1}{n-1}.
+\end{equation*}
+</span></body>
+</html>

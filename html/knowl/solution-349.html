@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:10-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">210.h.1</span>
+</h5>
+<p>\(\qchoose{m+n}{n}\) is the generating function for the number of partitions whose Young diagram fits into an \(m\) by \(n\) rectangle. That is,</p>
+\begin{equation*}
+\qchoose{m+n}{n}=\sum_{k=0}^\infty a_kq^k,
+\end{equation*}
+<p>where \(a_k\) is the number of partitions of \(k\) whose Young diagram fits into an \(m\) by \(n\) rectangle. In particular \(a_k=0\) if \(k&gt;mn\text{,}\) because the Young diagram of a partition of a number larger than \(mn\) certainly cannot fit into an \(m\) by \(n\) rectangle. Thus</p>
+\begin{equation*}
+\qchoose{m+n}{n}=\sum_{k=0}^{mn} a_kq^k.
+\end{equation*}
+<p>Furthermore, \(a_k=a_{mn-k}\text{,}\) because the complement in an \(m\) by \(n\) rectangle of a partition of \(k\) is a partition of \(mn-k\text{,}\) and complementation in an \(m\) by \(n\) rectangle is a bijection between partitions of \(k\) that fit into the rectangle and partitions of \(mn-k\) that fit into the rectangle. Thus \(\qchoose{m+n}{n}\) is a polynomial of degree \(mn\) in which the coefficient of \(q_k\) equals the coefficient of \(q^{mn-k}\text{.}\) For this reason we can compute the limit as \(q\) approaches \(-1\) simply by substituting \(-1\) for \(q\) in the polynomial; the only trouble being that the formula we know for \(\qchoose{m+n}{n}\) is quotient of polynomials that has zero in both the numerator and denominator when we substitute in \(q=-1\text{.}\) Nonetheless, when we substitute \(-1\) for \(q\) we get the alternating sum \(\sum_{i=0}^{mn} (-1)^ia_i\text{.}\)  Thus if \(a_i\) and \(a_{mn-i}\) have opposite sign, they will cancel out. If \(mn\) is even, \(i\) is even exactly when \(mn-i\) is even, and so \(a_i\) and \(a_{mn-i}\) have the same sign. However when \(mn\) is odd, \(a_i\) and \(a_{mn-i}\) have opposite signs in the sum \(\sum_{i=0}^{mn} (-1)^ia_i\text{,}\) and so the sum is zero.  Thus the polynomial \(\qchoose{m+n}{n}\) is zero at \(q=-1\) whenever \(mn\) is odd.</p>
+<p>Our experience with binomial coefficients might lead us to hope that the alternating sum of the coefficients \(a_k\) will always be zero. However, we computed that \(\qchoose{4}{2}=1+q+2q^2+q^3+q^4\text{,}\) so</p>
+\begin{equation*}
+\lim_{q\rightarrow -1}\qchoose{4}{2}=1-1+2-1+1=1.
+\end{equation*}
+<p>We could compute some more values of the limit by going back to the definition in this way, but it seems unlikely that we could get enough data to make a good conjecture. However we have the recurrence, and setting \(q=-1\) in the recurrence gives us <a knowl="./knowl/q-binomial-tab.html" knowl-id="xref-q-binomial-tab" alt="Table 4.2.1 " title="Table 4.2.1 ">Table 4.2.1</a>.  From the table, it is clear that we get binomial coefficients interspersed with 0s in the even numbered rows of our table and repeated binomial coefficients in the odd numbered rows of our table. In particular when \(m+n\) and \(n\) are both even, \(\neg1choose{m+n}{n}=\binom{(m+n)/2}{n/2}\text{,}\) and if \(m+n\) is even and \(n\) is odd, \(\neg1choose{m+n}{n}=0\text{.}\) In our table, at least, if \(m+n\) is odd, it appears that we get \(\neg1choose{m+n}{n}=\binom{\lfloor(m+n)/2\rfloor}{\lfloor n/2\rfloor}\text{.}\) In fact, using the recurrence just as we used it to construct the table, we can prove by induction that</p>
+\begin{equation*}
+\neg1choose{m+n}{n}=\left\{
+\begin{array}{ll}0\amp \mbox{if \(mn\) is odd} \\
+\binom{\lfloor(m+n)/2\rfloor}{\lfloor n/2\rfloor}\amp \mbox{otherwise.}
+\end{array} \right.
+\end{equation*}
+<figure class="figure-like"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(m+n\backslash n\)</td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+<td class="l m b1 r0 l0 t0 lines">5</td>
+<td class="l m b1 r0 l0 t0 lines">6</td>
+<td class="l m b1 r0 l0 t0 lines">7</td>
+<td class="l m b1 r0 l0 t0 lines">8</td>
+<td class="l m b1 r0 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">4.2.1</span>\(-1\)-binomial coefficients</figcaption></figure><p>(Note that \(mn\) is odd if and only if \(m+n\) is even and \(n\) is odd.) Wouldn't it be fascinating to know what we are counting here? It is the number of lattice paths from \((0, 0)\) to \((n - k, k)\) that are symmetric under 180 degree rotation. This and other results are discussed in the paper by John R. Stembridge “Some hidden relations involving the ten symmetry classes of plane partitions.” <span class="booktitle">J. Combin. Theory Ser. A</span> 68 (1994), no. 2, 372–409.</p></span><span class="incontext"><a href="sec_genfns-int-parts.html#solution-349">in-context</a></span>
+</body>
+</html>

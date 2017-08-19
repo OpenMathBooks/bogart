@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:17-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>We use the Principle of Inclusion and Exclusion. The set \(A\) will be the set of arrangements of people in a circle where two arrangements are the same if we get one from the other by rotating or flipping the second. Set \(A_i\) will be the set of arrangements in which person \(i\) links arms with someone previously to his or her immediate right. (Saying it is the person to the right gives us more control over our formulas.) Given a subset \(S\) of \([n]\text{,}\) the number of ways for the people in that set to link arms with the people previously on their right is the number of ways to arrange \(n-|S|\) strings of people around a circle with strings of length more than 1 having two ways to arrange themselves.  (Once we have two or more people linked, another person can be added to this string only at one end or not at all, because this person must have been to the right of one of the people on an end of the string. However a string of length two or more can unlink and then link in the opposite order, and each person will still be linked to exactly the same people.) Thus \(\left|\bigcap_{i\colon i\in S}A_i\right|= (n-|S|-1)!2^{m(S)}\text{,}\) where \(m(S)\) is the number of strings of length more than one determined by \(S\text{.}\) The number \(m(S)\) can be any number from 1 to \(S\text{,}\) so long as \(S\) is not too big; namely so long as \(|S|\le \lfloor n/1\rfloor\text{.}\) (This is because if \(m(S)=|S|\text{,}\) then each person determined by a property in \(S\) must be adjacent to a person not determined by a property in \(S\text{.}\)) In particular, \(\left|\bigcap_{i\colon i\in S}A_i\right|\) is not completely determined by the size of \(S\text{,}\) as in all our other inclusion-exclusion problems. How do we compute \(m(S)\text{?}\) Let us call a subset \(R\) of \(S\) a run if </p>
+<ol style="list-style-type: lower-alpha;">
+<li>the people determined by \(R\) sit together in a row in both seatings, and</li>
+<li>no other person in \(S\) is in a row with these people in both seatings.</li>
+</ol>
+<p> Some runs might determine just one person, but a run could also equal all of \(S\text{.}\) Each run will have one more person not in \(S\) who was originally to the right of the person in the run who was rightmost in the first seating, and so this person will have to sit in a row with the people in \(R\) in the second seating as well. Thus the number \(r\) of runs in \(S\) is the number of strings \(m(S)\) that may be seated in two ways, and there are \(n-|S|-r\) people who do not have to be seated with runs. Thus \(\left|\bigcap_{i\colon i\in S}A_i\right| = (n-|S|-1)!2^r\text{,}\) because the total number of strings of people (including strings of just one person) we need to seat is \(n-|S| -r\text{,}\) and there are \((k-1)!\) ways to arrange \(k\) objects in a circle. If we try to use the information we have so far to compute \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\text{,}\) we get</p>
+\begin{equation*}
+\left|\overline{\bigcup_{i=1}^n A_i}\right| =\sum_{S:S\subseteq [n]}(-1)^{|S|}(n-|S|_1)!2^r
+=\sum_{s=0}^n\sum_{r=1}^{|S|}N(s,r)(n-s-1)!2^r,
+\end{equation*}
+<p>in which \(N(s,r)\) stands for the number of property sets with size \(s\) and \(r\) runs.</p>
+<p>Picking out runs in a circular arrangement adds a layer of difficulty, so to compute \(N(s,r)\text{,}\) we first compute how many subsets of \([n]\) we have with \(r\) runs and then adjust for putting \(1\) through \(n\) around a circle in order.  Imagine writing 1 through \(n\) in a straight line, each integer occupying one unit of distance along the line. We now place \(r\) sticks whose lengths add to \(s\) (each stick has positive integer length) along that line. Each stick picks out a set of consecutive integers, as many as its length, so the sticks together pick out \(s\) integers. In order to be sure the sticks correspond to runs, we need to make sure they do not touch each other, so we place \(n-s\) identical stones along the line too, making sure there is at least one stone between any two sticks. The stones thus pick out the integers not in \(S\text{.}\) The sticks are not quite identical, though the sticks of a given length are. In other words, which lengths of sticks are in which places is what matters. So the sticks give us a composition of \(s\text{,}\) a list of distinct positive integers that add to \(s\text{.}\) We know there are \(\binom{s-1}{r-1}\) such compositions. Once we have chosen an ordering for the sticks, we need to distribute the stones among the sticks so that no two sticks are adjacent.  Since the stones are identical, we can do this by putting one stone between each pair of sticks in our composition, and then distribute the remaining \(n-s-r+1\) stones in any way we want among the \(r-1\) places between the sticks and the two places to the left and right of all the sticks.. We can do this in</p>
+\begin{equation*}
+\binom{r+1 + (n-s-r+1)-1}{n-s-r+1}=\binom{n-s+1}{n-s-r+1}=\binom{n-s+1}{r}
+\end{equation*}
+<p>ways. Thus there are \(\binom{s-1}{r-1}\binom{n-s+1}{r}\) ways to choose a subset \(S\) of \([n]\) that has \(r\) runs.</p>
+<p>Now we have to deal with the fact that our \(n\) people (who we have replaced with the integers 1 through \(n\) in order) were arranged around a circle. That means that a run is now a set of consecutive integers on the circle, where \(n\) and 1 are considered consecutive. Recall that the set \(S\) is picked out by the sticks. If we arrange 1 through \(n\) around a circle in order, the set \(S\) that originally had \(r\) runs will have \(r-1\) runs if sticks covered both the first and last integer (1 and \(n\)), but otherwise it will still have \(n\) runs. Thus the number of subsets of \([n]\) that have \(n\) runs when \(1\) through \(n\) are arranged in a circle is the number of subsets of \([n]\) with \(r+1\) runs that have both 1 and \(n\) in \(S\) plus the number of subsets of \([n]\) with \(r\) runs that do not have both \(1\) and \(n\) in \(S\text{.}\) To compute the number of subsets \(S\) that <!--Style me with CSS--><em>do</em> contain both 1 and \(n\text{,}\) we compute the number of arrangements of \(r\) sticks and \(n-s\) stones that do start and end with a stick; that means that after we choose our composition into \(r\) parts to get our arrangement of sticks and place one stone between each pair of previously adjacent sticks, we now place the remaining \(n-s-r+1\) stones in the \(r-1\) places between previously adjacent sticks in</p>
+\begin{equation*}
+\binom{r-1 + (n-s-r+1)-1}{n-s-r+1}=\binom{n-s-1}{n-s-r+1}=\binom{n-s-1}{r-2}
+\end{equation*}
+<p>ways. For the sticks and stones to determine a subset we must assign lengths to the sticks; the number of ways to do this is, as above, \(\binom{s-1}{r-1}\text{,}\) the number of compositions of \(s\) with \(r\) parts. Thus there are \(\binom{s-1}{r-1}\binom{n-s-1}{r-2}\) subsets of \([n]\) that have \(r\) runs and include both 1 and \(n\text{.}\) For our computation we will also want the number of subsets of \([n]\) that have \(r+1\) runs and contain both \(1\) and \(n\) this is \(\binom{s-1}{r}\binom{n-s-1}{r-1}\text{.}\)</p>
+<p>On the other hand, the number of subsets of \([n]\) that have \(r\) runs and do not contain both \(1\) and \(n\) is the total number of subsets with \(r\) runs minus the number that do contain both \(1\) and \(n\text{;}\) this is</p>
+\begin{equation*}
+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right).
+\end{equation*}
+<p>This gives us</p>
+\begin{equation*}
+N(s,r) =\binom{s-1}{r}\binom{n-s-1}{r-1}+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right)
+\end{equation*}
+<p>ways to choose an \(s\)-element subset of \([n]\) that has \(r\) runs when \([n]\) is arranged around a circle. Thus there are</p>
+\begin{equation*}
+\sum\limits_{s=0}^n\sum\limits_{r=1}^{s}(-1)^s\left[\binom{s-1}{r}\binom{n-s-1}{r-1}+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right)\right](n-s-1)!2^r
+\end{equation*}
+<p>ways for people to arrange themselves in the second circle so that no-one is adjacent to anyone he or she was previously adjacent to.</p></span></body>
+</html>

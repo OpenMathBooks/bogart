@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:45-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Groups Acting on Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_groups-permgroups.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groupsonsets.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_groups-polya.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_groups-permgroups.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="groupsonsets.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_groups-polya.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact" class="active">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_groups-groupsact"><header title="Section 6.2 Groups Acting on Sets"><h1 class="heading hide-type" alt="Section 6.2 Groups Acting on Sets">
+<span class="type">Section</span><span class="codenumber">6.2</span><span class="title">Groups Acting on Sets</span><a href="sec_groups-groupsact.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-57"><p id="p-1561">We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups of permutations of the vertices of a square. These permutations represent rigid motions of the square in the plane and in three dimensional space respectively. The square has geometric features of interest other than its vertices; for example its diagonals, or its edges. Any geometric motion of the square that returns it to its original position takes each diagonal to a possibly different diagonal, and takes each edge to a possibly different edge. In <a knowl="./knowl/rotate-square.html" knowl-id="xref-rotate-square" alt="Figure 6.2.1 " title="Figure 6.2.1 ">Figure 6.2.1</a> we show the results on the sides and diagonals of the rotations of a square. The rotation group permutes the sides of the square and permutes the diagonals of the square as it rotates the square. Thus, we say the rotation group “acts” on the sides and diagonals of the square.</p>
+<figure class="figure-like" id="rotate-square"><div class="sidebyside" style="" id="sidebyside-15"><div class="sbsrow" style="margin-left:0.5%;margin-right:0.5%;">
+<div class="sbspanel" style="width:19.1919191919192%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-33.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+<div class="sbspanel" style="width:19.1919191919192%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-34.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+<div class="sbspanel" style="width:19.1919191919192%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-35.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+<div class="sbspanel" style="width:19.1919191919192%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-36.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+<div class="sbspanel" style="width:19.1919191919192%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-37.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+</div></div>
+<figcaption><span class="heading">Figure</span><span class="codenumber">6.2.1</span>The results on the sides and diagonals of rotating the square</figcaption></figure><article class="example-like" id="activity-279"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">279</span>
+</h5>
+<article class="exercise-like" id="task-199"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1562">Write down the two-line notation for the permutation \(\overline{\rho}\) that a \(90\) degree rotation does to the sides of the square.</p></article><article class="exercise-like" id="task-200"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1564">Write down the two-line notation for the permutation \(\overline{\rho^2}\) that  a 180 degree rotation does to the sides of the square.</p></article><article class="exercise-like" id="task-201"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1566">Is \(\overline{\rho^2} = \overline\rho\circ\overline\rho\text{?}\) Why or why not?</p></article><article class="exercise-like" id="task-202"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1568">Write down the two-line notation for the permutation \(\widehat{\rho}\) that a 90 degree rotation does to the diagonals \(d_{13}\) and \(d_{24}\) of the square.</p></article><article class="exercise-like" id="task-203"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1570">Write down the two-line notation for the permutation \(\widehat{\rho^2}\) that a 180 degree rotation does to the diagonals \(d_{13}\) and \(d_{24}\) of the square.</p></article><article class="exercise-like" id="task-204"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1572">Is \(\widehat{\rho^2} = \widehat{\rho}\circ\widehat{\rho}\text{?}\) Why or why not? What familiar permutation is \(\widehat{\rho^2}\) in this case?</p></article></article><p id="p-1574">We have seen that the fact that we have defined a permutation group as the permutations of some specific set doesn't preclude us from thinking of the elements of that group as permuting the elements of some other set as well. In order to keep track of which permutations of which set we are using to define our group and which other set is being permuted as well, we introduce some new language and notation. We are going to say that the group \(D_4\) “acts” on the edges and diagonals of a square and the group \(R\) of permutations of the vertices of a cube that arise from rigid motions of the cube “acts” on the edges, faces, diagonals, etc. of the cube.</p>
+<article class="example-like essential" id="activity-280"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">280</span>
+</h5>
+<article class="introduction" id="introduction-58"><p id="p-1575">In <a knowl="./knowl/cube1.html" knowl-id="xref-cube1" alt="Figure 6.1.3 " title="Figure 6.1.3 ">Figure 6.1.3</a> we show a cube with the positions of its vertices and faces labeled. As with motions of the square, we let we let \(\varphi(x)\) be the label of the place where vertex previously in position \(x\) is now.</p></article><article class="exercise-like" id="actsonparta"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1576">In <a knowl="./knowl/cube1-prob.html" knowl-id="xref-cube1-prob" alt="Problem 263 " title="Problem 263 ">Problem 263</a> we wrote in two row notation the permutation \(\rho\) of the vertices that corresponds to rotating the cube 90 degrees around a vertical axis through the faces \(t\) (for top) and \(u\) (for underneath). (We rotated in a right-handed fashion around this axis, meaning that vertex 6 goes to the back and vertex 8 comes to the front.) Write in two row notation the permutation \(\overline{\rho}\) of the faces that corresponds to this member \(\rho\) of \(R\text{.}\) </p></article><article class="exercise-like" id="task-206"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1578">In <a knowl="./knowl/cube1-prob.html" knowl-id="xref-cube1-prob" alt="Problem 263 " title="Problem 263 ">Problem 263</a> we wrote in two row notation the permutation \(\varphi\) that rotates the cube 120 degrees around the diagonal from vertex 1 to vertex 7 and carries vertex 8 to vertex 6.  Write in two row notation the \(\overline{\varphi}\) of the faces that corresponds to this member of \(R\text{.}\)</p></article><article class="exercise-like" id="cube2"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1580">In <a knowl="./knowl/cube1-prob.html" knowl-id="xref-cube1-prob" alt="Problem 263 " title="Problem 263 ">Problem 263</a> we computed the two row notation for \(\rho\circ\varphi\text{.}\) Now compute the two row notation for \(\overline{\rho}\circ\overline{\varphi}\) (\(\overline{\rho}\) was defined in <a knowl="./knowl/actsonparta.html" knowl-id="xref-actsonparta" alt="Part 280.a " title="Part 280.a ">Part 280.a</a>), and write in two row notation the permutation \(\overline{\rho\circ\varphi}\) of the faces that corresponds to the action of the permutation \(\rho\circ\varphi\) on the faces of the cube. (For this question it helps to think geometrically about what motion of the cube is carried out by \(\rho\circ\varphi\text{.}\))  What do you observe about \(\overline{\rho\circ\varphi}\) and \(\overline{\rho}\circ\overline{\varphi}\text{?}\)</p></article></article><p id="p-1582">We say that a permutation group \(G\) <em class="terminology">acts</em> on a set \(S\) if, for each member \(\sigma\) of \(G\) there is a permutation \(\overline{\sigma}\) of \(S\) such that</p>
+\begin{equation*}
+\overline{\sigma\circ\varphi} = \overline{\sigma}\circ\overline{\varphi}
+\end{equation*}
+<p>for every member \(\sigma\) and \(\varphi\) of \(G\text{.}\) In <a knowl="./knowl/cube2.html" knowl-id="xref-cube2" alt="Part 280.c " title="Part 280.c ">Problem 280.c</a> you saw one example of this condition. If we think intuitively of \(\rho\) and \(\varphi\) as motions in space, then following the action of \(\varphi\) by the action of \(\rho\) does give us the action of \(\rho\circ \varphi\text{.}\) We can also reason directly with the permutations in the group \(R\) of rigid motions (rotations) of the cube to show that \(R\) acts on the faces of the cube.</p>
+<article class="example-like" id="activity-281"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">281</span>
+</h5>
+<p id="p-1583">Show that a group \(G\) of permutations of a set \(S\) acts on \(S\) with \(\overline{\varphi} = \varphi\) for all \(\varphi\) in \(G\text{.}\)</p></article><article class="example-like essential" id="D_4on2-sets"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">282</span>
+</h5>
+<p id="p-1585">The group \(D_4\) is a group of permutations of \(\{1,2,3,4\}\) as in <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>. We are going to show in this problem how this group acts on the two-element subsets of \(\{1,2,3,4\}\text{.}\) In <a knowl="./knowl/orbits1.html" knowl-id="xref-orbits1" alt="Problem 287 " title="Problem 287 ">Problem 287</a> we will see a natural geometric interpretation of this action. In particular, for each two-element subset \(\{i,j\}\) of \(\{1,2,3,4\}\) and each member \(\sigma\) of \(D_4\) we define \(\overline{\sigma}(\{i,j\}) = \{\sigma(i),\sigma(j)\}\text{.}\)  Show that with this definition of \(\overline{\sigma}\text{,}\) the group \(D_4\) acts on the two-element subsets of \(\{1,2,3,4\}\text{.}\)</p></article><article class="example-like essential" id="activity-283"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">283</span>
+</h5>
+<article class="introduction" id="introduction-59"><p id="p-1588">Suppose that \(\sigma\) and \(\varphi\) are permutations in the group \(R\) of rigid motions of the cube. We have argued already that each rigid motion sends a face to a face. Thus \(\sigma\) and \(\varphi\) both send the vertices on one face to the vertices on another face. Let \(\{h,i,j,k\}\) be the set of labels next to the vertices on a face \(F\text{.}\)</p></article><article class="exercise-like" id="task-208"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1589">What are the vertices of the face \(F'\) that \(F\) is sent to by \(\varphi\text{?}\)</p></article><article class="exercise-like" id="task-209"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1591">What are the vertices of the face \(F''\) that \(F'\) is sent to by \(\sigma\text{?}\)</p></article><article class="exercise-like" id="task-210"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1593">What are the vertices of the face \(F'''\) that \(F\) is sent to by \(\sigma\circ\varphi\text{?}\)</p></article><article class="exercise-like" id="task-211"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1595">How have you just shown that the group \(R\) acts on the faces?</p></article></article></section><section class="subsection" id="subsection-65"><header title="Subsection 6.2.1 Groups acting on colorings of sets"><h1 class="heading hide-type" alt="Subsection 6.2.1 Groups acting on colorings of sets">
+<span class="type">Subsection</span><span class="codenumber">6.2.1</span><span class="title">Groups acting on colorings of sets</span><a href="sec_groups-groupsact.html#subsection-65" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1597">Recall that when you were asked in <a knowl="./knowl/twocolorsofbeads.html" knowl-id="xref-twocolorsofbeads" alt="Problem 45 " title="Problem 45 ">Problem 45</a> to find the number of ways to place two red beads and two blue beads at the corners of a square free to move in three-dimensional space, you were not able to apply the quotient principle to answer the question. Instead you had to see that you could divide the set of six lists of two \(R\)s and two \(B\)s into two sets, one of size two in which the \(R\)s and \(B\)s alternated and one of size four in which the two reds (and therefore the two blues) would be side-by-side on the square. Saying that the square is free to move in space is equivalent to saying that two arrangements of beads on the square are equivalent if a member of the dihedral group carries one arrangement to the other. Thus an important ingredient in the analysis of such problems will be how a group can act on colorings of a set of vertices. We can describe the coloring of the square in <a knowl="./knowl/colored-square.html" knowl-id="xref-colored-square" alt="Figure 6.2.2 " title="Figure 6.2.2 ">Figure 6.2.2</a> as the function \(f\) with</p>
+\begin{equation*}
+f(1)=R,\; f(2)=R, \; f(3)=B,\;\text{ and }\;f(4)=B\text{,}
+\end{equation*}
+<p>but it is more compact and turns out to be more suggestive to represent the coloring in <a knowl="./knowl/colored-square.html" knowl-id="xref-colored-square" alt="Figure 6.2.2 " title="Figure 6.2.2 ">Figure 6.2.2</a> as the set of ordered pairs</p>
+\begin{equation}
+(1,R), (2,R), (3,B), (4,B)
+\tag{6.3}
+\end{equation}
+<figure class="figure-like" id="colored-square"><object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="../images/image-38.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.2.2</span>The colored square with coloring \(\left\{(1,R),(2,R),(3,B),(4,B)\right\}\)</figcaption></figure><p id="p-1598">This gives us an explicity list of which colors are assigned to which vertex.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-22" id="fn-22"><span class="footnote"><sup> 4 </sup></span></a></span><span id="hk-fn-22" style="display: none;" class="tex2jax_ignore"><span class="footnote">The reader who has studied <a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a> will recognize that this set of ordered pairs is the relation of the function \(f\text{,}\) but we won't need to make any specific references to the idea of a relation in what follows.</span></span> Then if we rotate the square through 90 degrees, we see that the set of ordered pairs becomes</p>
+\begin{equation}
+\left\{(\rho(1),R),(\rho(2),R),(\rho(3),B),(\rho(4),B)\right\}\tag{6.4}
+\end{equation}
+<p>which is the same as</p>
+\begin{equation*}
+\left\{(2,R),(3,R),(4,B),(1,B)\right\}\text{.}
+\end{equation*}
+<p>Or, in a more natural order,</p>
+\begin{equation}
+\left\{(1,B),(2,R),(3,R),(4,B)\right\}\text{.}\tag{6.5}
+\end{equation}
+<p id="p-1599">The reordering we did in <a knowl="./knowl/coloring-pairs-rotate-natural.html" knowl-id="xref-coloring-pairs-rotate-natural" alt="Equation 6.5 " title="Equation 6.5 ">(6.5)</a> suggests yet another simplification of notation. So long as we know we that the first elements of our pairs are labeled by the members of \([n]\) for some integer \(n\) and we are listing our pairs in increasing order by the first component, we can denote the coloring</p>
+\begin{equation*}
+\left\{(1,B),(2,R),(3,R),(4,B)\right\}
+\end{equation*}
+<p>by \(BRRB\text{.}\) In the case where we have numbered the elements of the set \(S\) we are coloring, we will call this list of colors of the elements of \(S\) in order the <em class="terminology">standard notation</em> for the coloring. We will call the ordering used in <a knowl="./knowl/coloring-pairs-rotate-natural.html" knowl-id="xref-coloring-pairs-rotate-natural" alt="Equation 6.5 " title="Equation 6.5 ">(6.5)</a>the <em class="terminology">standard ordering</em> of the coloring. </p>
+<p id="p-1600">Thus we have three natural ways to represent a coloring of a set: as a function, as a set of ordered pairs, and as a list. Different representations are useful for different things. For example, the representation by ordered pairs will provide a natural way to define the action of a group on colorings of a set. Given a coloring as a function \(f\text{,}\) we denote the set of ordered pairs</p>
+\begin{equation*}
+\left\{(x,f(x))\mid x\in S\right\}\text{,}
+\end{equation*}
+<p>suggestively as \((S,f)\) for short. We use \(f(1)f(2)\cdots f(n)\) to stand for a particular coloring \((S,f)\) in the standard notation.</p>
+<article class="example-like" id="activity-284"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">284</span>
+</h5>
+<article class="introduction" id="introduction-60"><p id="p-1601">Suppose now that instead of coloring the vertices of a square, we color its edges. We will use the shorthand 12, 23, 34, and 41 to stand for the edges of the cube between vertex 1 and vertex 2, vertex 2 and vertex 3, and so on. Then a coloring of the edges with 12 red, 23 blue, 34 red and 41 blue can be represented as</p>
+\begin{equation}
+\left\{(12,R),(23,B),(34,R),(41,B)\right\}\text{.}\tag{6.6}
+\end{equation}
+<p>If \(\rho\) is the rotation through 90 degrees, then we have a permutation \(\overline{\rho}\) acting on its edges. This permutation acts on the colorings to give us a permutation \(\overline{\overline{\rho}}\) of the set of colorings.</p></article><article class="exercise-like" id="task-212"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1602">What is \(\overline{\overline{\rho}}\) of the coloring in <a knowl="./knowl/square-edge-coloring.html" knowl-id="xref-square-edge-coloring" alt="Equation 6.6 " title="Equation 6.6 ">(6.6)</a>?</p></article><article class="exercise-like" id="task-213"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1604">What is \(\overline{\overline{\rho^2}}\) of the coloring in <a knowl="./knowl/square-edge-coloring.html" knowl-id="xref-square-edge-coloring" alt="Equation 6.6 " title="Equation 6.6 ">(6.6)</a>?</p></article></article><p id="p-1606">If \(G\) is a group that acts on the set \(S\text{,}\) we define the <em class="terminology">action of \(G\) on the colorings</em> \((S,f)\) by by</p>
+\begin{equation}
+\overline{\overline{\sigma}}((S,f))=\overline{\overline{\sigma}}\left(\left\{(x,f(x))\mid x\in S\right\}\right) = \left\{\left(\overline{\sigma}(x),f(x)\right)\mid x\in S\right\}.
+\text{.}\tag{6.7}
+\end{equation}
+<p>We have two bars over \(\sigma\) because \(\sigma\) is a permutation of one set that gives us a permutation \(\overline{\sigma}\) of a setcond set, and then \(\overline{\sigma}\) acts to give a permutation \(\overline{\overline{\sigma}}\) of a thid set, the set of colorings. For example, suppose we want to analyze colorings of the faces of a cube under the action of the rotation group of the cube as we have defined it on the vertices. Each vertex-permutation \(\sigma\) in the group gives a permutation \(\overline{\sigma}\) of the faces of the cube. Then each permutation \(\overline{\sigma}\) of the faces gives us a permutation \(\overline{\overline{\sigma}}\) of the colorings of the faces.</p>
+<p id="p-1607">In the special case that \(G\) is a group of permutations of \(S\) rather than a group acting on \(S\text{,}\) <a knowl="./knowl/action-on-colorings.html" knowl-id="xref-action-on-colorings" alt="Equation 6.7 " title="Equation 6.7 ">Equation (6.7)</a> becomes</p>
+\begin{equation*}
+\overline{\sigma}((S,f)) = \overline{\sigma}(\{(x,f(x))\mid x\in S\}) = \{(\sigma(x),f(x))\mid x\in S\}\text{.}
+\end{equation*}
+<p>In the case where \(G\) is the rotation group of the square acting on the vertices of the square, the example of acting on a coloring by \(\rho\) that we saw in <a knowl="./knowl/coloring-pairs-rotate-natural.html" knowl-id="xref-coloring-pairs-rotate-natural" alt="Equation 6.5 " title="Equation 6.5 ">(6.5)</a> is an example of this kind of action. In the standard notation, when we act on a coloring by \(\sigma\text{,}\) the color in position \(i\) moves to position \(\sigma(i)\text{.}\)</p>
+<article class="example-like" id="coloring-to-coloring"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">285</span>
+</h5>
+<p id="p-1608">Why does the action we have defined on colorings in <a knowl="./knowl/action-on-colorings.html" knowl-id="xref-action-on-colorings" alt="Equation 6.7 " title="Equation 6.7 ">Equation (6.7)</a> take a coloring to a coloring?</p></article><article class="example-like" id="activity-286"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">286</span>
+</h5>
+<p id="p-1610">Show that if \(G\) is a group of permutations of a set \(S\text{,}\) and \(f\) is a coloring function on \(S\text{,}\) then the equation</p>
+\begin{equation*}
+\overline{\overline{\sigma}}(\{(x,f(x))\mid x\in S\}) = \{(\overline{\sigma}(x),f(x))\mid x\in S\}
+\end{equation*}
+<p>defines an action of \(G\) on the colorings \((S,f)\) of \(S\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-236" id="hint-236"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-236" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1611">Before you try to show that \(\overline{\overline{\sigma}}\) actually is a permutation of the colorings, it would be useful to verify the second part of the definition of a group action, namely that \(\overline{\overline{\sigma}}\circ\overline{\overline{\varphi}} = \overline{\overline{\sigma\circ\varphi}}\text{.}\)</p></span></span>
+</div></article></section><section class="subsection" id="subsection-66"><header title="Subsection 6.2.2 Orbits"><h1 class="heading hide-type" alt="Subsection 6.2.2 Orbits">
+<span class="type">Subsection</span><span class="codenumber">6.2.2</span><span class="title">Orbits</span><a href="sec_groups-groupsact.html#subsection-66" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="orbits1"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">287</span>
+</h5>
+<article class="introduction" id="introduction-61"><p id="p-1614">Refer back to <a knowl="./knowl/D_4on2-sets.html" knowl-id="xref-D_4on2-sets" alt="Problem 282 " title="Problem 282 ">Problem 282</a> in answering the following questions.</p></article><article class="exercise-like" id="task-214"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1615">What is the set of two element subsets that you get by computing \(\overline{\sigma}(\{1,2\})\) for all \(\sigma\) in \(D_4\text{?}\)</p></article><article class="exercise-like" id="task-215"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1617">What is the multiset of two-element subsets that you get by computing \(\overline{\sigma}(\{1,2\})\) for all \(\sigma\)in \(D_4\text{?}\)</p></article><article class="exercise-like" id="task-216"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1619">What is the set of two-element subsets you get by computing \(\overline{\sigma}(\{1,3\})\) for all \(\sigma\) in \(D_4\text{?}\)</p></article><article class="exercise-like" id="task-217"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1621">What is the multiset of two-element subsets that you get by computing \(\overline{\sigma}(\{1,3\})\) for all \(\sigma\) in \(D_4\text{?}\)</p></article><article class="exercise-like" id="task-218"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1623">Describe these two sets geometrically in terms of the square.</p></article></article><article class="example-like essential" id="activity-288"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">288</span>
+</h5>
+<p id="p-1625">This problem uses the notation for permutations in the dihedral group of the square introduced before <a knowl="./knowl/dihedral2.html" knowl-id="xref-dihedral2" alt="Problem 259 " title="Problem 259 ">Problem 259</a>. What is the effect of a 180 degree rotation \(\rho^2\) on the diagonals of a square? What is the effect of the flip \(\varphi_{1|3}\) on the diagonals of a square? How many elements of \(D_4\) send each diagonal to itself? How many elements of \(D_4\) interchange the diagonals of a square?</p></article><p id="p-1627">In <a knowl="./knowl/orbits1.html" knowl-id="xref-orbits1" alt="Problem 287 " title="Problem 287 ">Problem 287</a> you saw that the action of the dihedral group \(D_4\) on two element subsets of \(\{1,2,3,4\}\) seems to split them into two sets, one with two elements and one with 4. We call these two sets the “orbits” of \(D_4\) acting on the two elements subsets of \(\{1,2,3,4\}\text{.}\) More generally, the <em class="terminology">orbit</em> of a permutation group \(G\) determined by an element \(x\) of a set \(S\) on which \(G\) acts is</p>
+\begin{equation*}
+\{\overline{\sigma}(x)| \sigma \in G\}
+\text{,}
+\end{equation*}
+<p>and is denoted by \(Gx\text{.}\) In <a knowl="./knowl/orbits1.html" knowl-id="xref-orbits1" alt="Problem 287 " title="Problem 287 ">Problem 287</a> it was possible to have \(Gx = Gy\text{.}\) In fact in that problem, \(Gx = Gy\) for every \(y\) in \(Gx\text{.}\)</p>
+<article class="example-like" id="disjoint-orbits"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">289</span>
+</h5>
+<p id="p-1628">Suppose a group acts on a set \(S\text{.}\) Could an element of \(S\) be in two different orbits? (Say why or why not.)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-237" id="hint-237"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-237" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1629">If \(z \in Gx\) and \(z \in Gy\) , how can you use elements of \(G\) to explain the relationship between \(x\) and \(y\text{?}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-238" id="hint-238"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-238" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1630">Suppose \(\sigma\) is a fixed member of \(G\text{.}\) As \(\tau\) ranges over \(G\text{,}\) which elements of \(G\) occur as \(\tau\sigma\text{?}\)</p></span></span>
+</div></article><p id="p-1632"><a knowl="./knowl/disjoint-orbits.html" knowl-id="xref-disjoint-orbits" alt="Problem 289 " title="Problem 289 ">Problem 289</a> almost completes the proof of the following theorem.</p>
+<article class="theorem-like" id="thm-orbits-partition"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.2.3</span>
+</h5>
+<p id="p-1633">Suppose a group acts on a set \(S\text{.}\) The orbits of \(G\) form a partition of \(S\text{.}\)</p></article><p id="p-1634">It is probably worth pointing out that this theorem tells us that the orbit \(Gx\) is also the orbit \(Gy\) for any element \(y\) of \(Gx\text{.}\)</p>
+<article class="example-like" id="activity-290"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">290</span>
+</h5>
+<p id="p-1635">Complete the proof of <a knowl="./knowl/thm-orbits-partition.html" knowl-id="xref-thm-orbits-partition" alt="Theorem 6.2.3 " title="Theorem 6.2.3 ">Theorem 6.2.3</a>.</p></article><p id="p-1637">Notice that thinking in terms of orbits actually hides some information about the action of our group. When we computed the multiset of all results of acting on \(\{1, 2\}\) with the elements of \(D_4\text{,}\) we got an eight-element multiset containing each side twice. When we computed the multiset of all results of acting on \(\{1,3\}\) with the elements of \(D_4\text{,}\) we got an eight-element multiset containing each diagonal of the square four times. These multisets remind us that we are acting on our two-element sets with an eight-element group. The <em class="terminology">multiorbit</em> of \(G\) determined by an element \(x\) of \(S\) is the multiset</p>
+\begin{equation*}
+\{\overline{\sigma}(x)\mid \sigma \in G\}\text{,}
+\end{equation*}
+<p>and is denoted by \(Gx_{\text{multi}}\text{.}\)</p>
+<p id="p-1638">When we used the quotient principle to count circular seating arrangements or necklaces, we partitioned up a set of lists of people or beads into blocks of equivalent lists. In the case of seating n people around a round table, what made two lists equivalent was, in retrospect, the action of the rotation group \(C_n\text{.}\) In the case of stringing \(n\) beads on a string to make a necklace, what made two lists equivalent was the action of the dihedral group. Thus the blocks of our partitions were orbits of the rotation group or the dihedral group, and we were counting the number of orbits of the group action. In <a knowl="./knowl/twocolorsofbeads.html" knowl-id="xref-twocolorsofbeads" alt="Problem 45 " title="Problem 45 ">Problem 45</a>, we were not able to apply the quotient principle because we had blocks of different sizes. However, these blocks were still orbits of the action of the group \(D_4\text{.}\) And, even though the orbits have different sizes, we expect that each orbit corresponds naturally to a multiorbit and that the multiorbits all have the same size. Thus if we had a version of the quotient rule for a union of multisets, we could hope to use it to count the number of multiorbits.</p>
+<article class="example-like" id="activity-291"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">291</span>
+</h5>
+<article class="exercise-like" id="task-219"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1639">Find the orbit and multiorbit of \(D_4\) acting on the coloring</p>
+\begin{equation*}
+\{(1,R),(2,R),(3,B),(4,B)\}\text{,}
+\end{equation*}
+<p>or, in standard notation, \(RRBB\) of the vertices of a square.</p></article><article class="exercise-like" id="task-220"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1641">How many group elements map the coloring \(RRBB\) to itself? What is the multiplicity of \(RRBB\) in its multiorbit?</p></article><article class="exercise-like" id="task-221"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1643">Find the orbit and multiorbit of \(D_4\) acting on the coloring</p>
+\begin{equation*}
+\{(1,R),(2,B),(3,R),(4,B)\}\text{.}
+\end{equation*}
+</article><article class="exercise-like" id="task-222"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1645">How many elements of the group send the coloring \(RBRB\) to itself? What is the multiplicity of \(RBRB\) in its orbit?</p></article></article><article class="example-like" id="activity-292"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">292</span>
+</h5>
+<article class="exercise-like" id="compose-right"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1647">If \(G\) is a group, how is the set \(\{\tau\sigma\mid\tau\in G\}\) related to \(G\text{?}\)</p></article><article class="exercise-like" id="disjoint-multiorbits"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1649">Use this to show that \(y\) is in the multiorbit \(Gx_{\text{multi}}\) if and only if \(Gx_{\text{multi}} = Gy_{\text{multi}}\text{.}\)</p></article></article><p id="p-1651"><a knowl="./knowl/disjoint-multiorbits.html" knowl-id="xref-disjoint-multiorbits" alt="Part 292.b " title="Part 292.b ">Problem 292.b</a> tells us that, when \(G\) acts on \(S\text{,}\) each element \(x\) of \(S\) is in one and only one multiorbit. Since each orbit is a subset of a multiorbit and each element \(x\) in \(S\) is in one and only one orbit, this also tells us there is a bijection between the orbits of \(G\) and the multiorbits of \(G\text{,}\) so that we have the same number of orbits as multiorbits.</p>
+<p id="p-1652">When a group acts on a set, a group element is said to <em class="terminology">fix</em> an element of \(x \in S\) if \(\overline{\sigma}(x) = x\text{.}\) The set of all elements fixing an element \(x\) is denoted by \(\Fix(x)\text{.}\)</p>
+<article class="example-like" id="activity-293"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">293</span>
+</h5>
+<p id="p-1653">Suppose a group \(G\) acts on a set \(S\text{.}\) What is special about the subset \(\Fix(x)\) for an element \(x\) of \(S\text{?}\)</p></article><article class="example-like essential" id="activity-294"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">294</span>
+</h5>
+<p id="p-1655">Suppose a group \(G\) acts on a set \(S\text{.}\) What is the relationship of the multiplicity of \(x\in S\) in its multiorbit and the size of \(\Fix(x)\text{?}\)</p></article><article class="example-like" id="activity-295"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">295</span>
+</h5>
+<p id="p-1657">What can you say about relationships between the multiplicity of an element \(y\) in the multiorbit \(Gx_{\text{multi}}\) and the multiplicites of other elements? Try to use this to get a relationship between the size of an orbit of \(G\) and the size of \(G\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-239" id="hint-239"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-239" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1658">How does the size of a multiorbit compare to the size of \(G\text{?}\)</p></span></span>
+</div></article><p id="p-1660">We suggested earlier that a quotient principle for multisets might prove useful. The quotient principle came from the sum principle, and we do not have a sum principle for multisets. Such a principle would say that the size of a union of disjoint multisets is the sum of their sizes. We have not yet defined the union of multisets or disjoint multisets, because we haven't needed the ideas until now. We define the <em class="terminology">union</em> of two multisets \(S\) and \(T\) to be the multiset in which the multiplicity of an element \(x\) is the maximum<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-23" id="fn-23"><span class="footnote"><sup> 5 </sup></span></a></span><span id="hk-fn-23" style="display: none;" class="tex2jax_ignore"><span class="footnote">We choose the maximum rather than the sum so that the union of sets is a special case of the union of multisets.</span></span> of the multiplicity of \(x\) in \(S\) and its multiplicity in \(T\) . Similarly, the union of a family of multisets is defined by defining the multiplicity of an element \(x\) to be the maximum of its multiplicities in the members of the family. Two multisets are said to be <em class="terminology">disjoint</em> if no element is a member of both, that is, if no element has multiplicity one or more in both. Since the size of a multiset is the sum of the multiplicities of its members, we immediately get the <em class="terminology">sum principle for multisets</em>.</p>
+<blockquote class="blockquote" id="blockquote-14"><p id="p-1661">The size of a union of disjoint multisets is the sum of their sizes. </p></blockquote>
+<p id="p-1662">Taking the multisets all to have the same size, we get the <em class="terminology">product principle</em> for multisets. </p>
+<blockquote class="blockquote" id="blockquote-15"><p id="p-1663">The union of a set of \(m\) disjoint multisets, each of size \(n\) has size \(mn\text{.}\)</p></blockquote>
+<p id="p-1664">The <em class="terminology">quotient principle</em> for multisets then follows immediately.</p>
+<blockquote class="blockquote" id="blockquote-16"><p id="p-1665">If a \(p\)-element multiset is a union of \(q\) disjoint multisets, each of size \(r\text{,}\) then \(q = p/r\text{.}\)</p></blockquote>
+<article class="example-like essential" id="union-multiorbit-size"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">296</span>
+</h5>
+<p id="p-1666">How does the size of the union of the set of multiorbits of a group \(G\) acting on a set \(S\) relate to the number of multiorbits and the size of \(G\text{?}\)</p></article><article class="example-like essential" id="union-multiorbit-fix"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">297</span>
+</h5>
+<p id="p-1668">How does the size of the union of the set of multiorbits of a group \(G\) acting on a set \(S\) relate to the numbers \(|\Fix(x)|\text{?}\)</p></article><article class="example-like essential" id="numbermultiorbits3"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">298</span>
+</h5>
+<p id="p-1670">In <a knowl="./knowl/union-multiorbit-size.html" knowl-id="xref-union-multiorbit-size" alt="Problem 296 " title="Problem 296 ">Problems 296</a> and <a knowl="./knowl/union-multiorbit-fix.html" knowl-id="xref-union-multiorbit-fix" alt="Problem 297 " title="Problem 297 ">297</a> you computed the size of the union of the set of multiorbits of a group \(G\) acting on a set \(S\) in two different ways, getting two different expressions must be equal. Write the equation that says they are equal and solve for the number of multorbits, and therefore the number of orbits.</p></article></section><section class="subsection" id="subsection-67"><header title="Subsection 6.2.3 The Cauchy-Frobenius-Burnside Theorem"><h1 class="heading hide-type" alt="Subsection 6.2.3 The Cauchy-Frobenius-Burnside Theorem">
+<span class="type">Subsection</span><span class="codenumber">6.2.3</span><span class="title">The Cauchy-Frobenius-Burnside Theorem</span><a href="sec_groups-groupsact.html#subsection-67" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="numbermultiorbits4"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">299</span>
+</h5>
+<article class="introduction" id="introduction-62"><p id="p-1672">In <a knowl="./knowl/numbermultiorbits3.html" knowl-id="xref-numbermultiorbits3" alt="Problem 298 " title="Problem 298 ">Problem 298</a> you stated and proved a theorem that expresses the number of orbits in terms of the number of group elements fixing each element of \(S\text{.}\) It is often easier to find the number of elements fixed by a given group element than to find the number of group elements fixing an element of \(S\text{.}\)</p></article><article class="exercise-like" id="task-225"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1673">For this purpose, how does the sum \(\sum_{x\colon x\in S}|\Fix(x)|\) relate to the number of ordered pairs \((\sigma,x)\) (with \(\sigma\in G\) and \(x \in S\)) such that \(\sigma\) fixes \(x\text{?}\)</p></article><article class="exercise-like" id="task-226"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1674">Let \(\chi(\sigma)\) denote the number of elements of \(S\) fixed by \(\sigma\text{.}\) How can the number of ordered pairs \((\sigma,x)\) (with \(\sigma\in G\) and \(x\in S\)) such that \(\sigma\) fixes \(x\) be computed from \(\chi(G)\text{?}\) (It is ok to have a summation in your answer.)</p></article><article class="exercise-like" id="task-227"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1676">What does this tell you about the number of orbits?</p></article></article><article class="example-like" id="numbermultiorbits5"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">300</span>
+</h5>
+<article class="introduction" id="introduction-63"><p id="p-1678">A second computation of the result of <a knowl="./knowl/numbermultiorbits4.html" knowl-id="xref-numbermultiorbits4" alt="Problem 299 " title="Problem 299 ">Problem 299</a> can be done as follows.</p></article><article class="exercise-like" id="task-228"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1679">Let \(\widehat{\chi}(\sigma,x)=1\) if \(\sigma(x)=x\) and let \(\widehat{\chi}(\sigma,x) =0\) otherwise.  Notice that \(\widehat{\chi}\) is different from the \(\chi\) in the previous problem, because it is a function of two variables. Use \(\widehat{\chi}\) to convert the single summation in <a knowl="./knowl/numbermultiorbits3.html" knowl-id="xref-numbermultiorbits3" alt="Problem 298 " title="Problem 298 ">Problem 298</a> into a double summation over elements \(x\) of \(S\) and elements \(\sigma\) of \(G\text{.}\)</p></article><article class="exercise-like" id="task-229"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1681">Reverse the order of the previous summation in order to convert it into a single sum involving the function \(\chi\) given by</p>
+\begin{equation*}
+\chi(\sigma) =
+\mbox{the number of elements of \(S\) left fixed by \(\sigma\)} .
+\end{equation*}
+</article></article><p id="p-1683">In <a knowl="./knowl/numbermultiorbits4.html" knowl-id="xref-numbermultiorbits4" alt="Problem 299 " title="Problem 299 ">Problem 299</a> you gave a formula for the number of orbits of a group \(G\) acting on a set \(X\text{.}\) This formula was first worked out by Cauchy in the case of the symmetric group, and then for more general groups by Frobenius. In his pioneering book on Group Theory, Burnside used this result as a lemma, and while he attributed the result to Cauchy and Frobenius in the first edition of his book, in later editions, he did not. Later on, other mathematicians who used his book named the result ``Burnside's Lemma," which is the name by which it is still most commonly known. Let us agree to call this result the Cauchy-Frobenius-Burnside Theorem, or CFB Theorem for short in a compromise between historical accuracy and common usage.</p>
+<article class="example-like interesting" id="activity-301"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">301</span>
+</h5>
+<p id="p-1684">In how many ways may we string four (identical) red, six (identical) blue, and seven (identical) green beads on a necklace?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-240" id="hint-240"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-240" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1685">We are asking for the number of orbits of some group on lists of four \(R\)s, six \(B\)s, and seven \(G\)s.</p></span></span>
+</div></article><article class="example-like interesting" id="activity-302"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">302</span>
+</h5>
+<p id="p-1687">If we have an unlimited supply of identical red beads and identical blue beads, in how many ways may we string 17 of them on a necklace?</p></article><article class="example-like interesting" id="activity-303"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">303</span>
+</h5>
+<p id="p-1689">If we have five (identical) red, five (identical) blue, and five (identical) green beads, in how many ways may we string them on a necklace?</p></article><article class="example-like interesting" id="activity-304"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">304</span>
+</h5>
+<p id="p-1691">In how many ways may we paint the faces of a cube with six different colors, using all six?</p></article><article class="example-like" id="activity-305"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">305</span>
+</h5>
+<p id="p-1693">In how many ways may we paint the faces of a cube with two colors of paint? What if both colors must be used?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-241" id="hint-241"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-241" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1694">There are five kinds of elements in the rotation group of the cube. For example, there are six rotations by 90 degrees or 270 degrees around an axis connecting the centers of two opposite faces and there are 8 rotations (of 120 degrees and 240 degrees, respectively) around an axis connecting two diagonally opposite vertices.</p></span></span>
+</div></article><article class="example-like interesting" id="Catalancircle"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">306</span>
+</h5>
+<p id="p-1696">In how many ways may we color the edges of a (regular) \((2n+1)\)-gon free to move around in the <!--Style me with CSS--><em>plane</em> (so it cannot be flipped) if we use red \(n\) times and blue \(n+1\) times? If this is a number you have seen before, identify it. </p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-242" id="hint-242"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-242" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1697">Is it possible for a nontrivial rotation to fix any coloring?</p></span></span>
+</div></article><article class="example-like interesting-difficult}" id="activity-307"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">307</span>
+</h5>
+<p id="p-1699">In how many ways may we color the edges of a (regular) \((2n+1)\)-gon free to move in <!--Style me with CSS--><em>three-dimensional space</em> so that \(n\) edges are colored red and \(n+1\) edges are colored blue. Your answer may depend on whether \(n\) is even or odd.</p></article><article class="example-like interesting-difficult}" id="activity-308"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">308</span>
+</h5>
+<p id="p-1704">(Not unusually hard for someone who has worked on chromatic polynomials.) How many different proper colorings with four colors are there of the vertices of a graph which is cycle on five vertices? (If we get one coloring by rotating or flipping another one, they aren't really different.)</p></article><article class="example-like interesting-difficult}" id="activity-309"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">309</span>
+</h5>
+<p id="p-1706">How many different proper colorings with four colors are there of the graph in <a knowl="./knowl/starhexagon.html" knowl-id="xref-starhexagon" alt="Figure 6.2.4 " title="Figure 6.2.4 ">Figure 6.2.4</a>? Two graphs are the same if we can redraw one of the graphs, not changing the vertex set or edge set, so that it is identical to the other one. This is equivalent to permuting the vertices in some way so that when we apply the permutation to the endpoints of the edges to get a new edge set, the new edge set is equal to the old one. Such a permutation is called an <em class="terminology">automorphism</em> of the graph. Thus two colorings are different if there is no automorphism of the graph that carries one to the other one.</p>
+<figure class="figure-like" id="starhexagon"><img width="33%" src="../images/NumberedHexagonalNetwork" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">6.2.4</span>A graph on six vertices.</figcaption></figure><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-243" id="hint-243"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-243" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1707">There are 48 elements in the group of automorphisms of the graph.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-244" id="hint-244"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-244" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1708">For this problem, it may be easier to ask which group elements fix a coloring rather than which colorings are fixed by a group element.</p></span></span>
+</div></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

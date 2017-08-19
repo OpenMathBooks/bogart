@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:03-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">156.a.1</span>
+</h5>
+<p></p>
+\begin{align*}
+\amp \sum_{n=0}^k b(k,n) x^{\underline{n}} = x^{\overline{k}} =
+x^{\overline{k-1}}(x+k-1)\\
+=\amp \left(\sum_{n=0}^{k-1} b(k-1,n) x^{\underline{n}}\right)(x+k-1)\\
+=\amp \sum_{n=0}^{k-1} b(k-1,n) x^{\underline{n}}(x+k-1)\\
+=\amp \sum_{n=0}^{k-1} b(k-1,n) x^{\underline{n}}(x-n+n+k-1)\\
+=\amp \sum_{n=0}^{k-1} b(k-1,n) x^{\underline{n+1}} +(n+k-1)b(k-1,n)
+x^{\underline{n}}\\
+=\amp \sum_{n=1}^k b(k-1,n-1)x^{\underline{n}} +\sum_{n=0}^{k-1}
+(n+k-1)b(k-1,n)x^{\underline{n}}
+\end{align*}
+<p>Thus if \(n\) is not 0 or \(k\text{,}\) we equate the coefficient of \(x^{\underline{n}}\) in the first line and last line to get</p>
+\begin{equation*}
+b(k,n) =
+b(k-1,n-1) + (n+k-1)b(k-1,n).
+\end{equation*}
+<p>The trick of subtracting \(n\) and adding \(n\) in the middle of the computation was the result of wanting to mimic the way in which we increased the power on \(x\) in the solution to <a knowl="./knowl/Stirlingfirst.html" knowl-id="xref-Stirlingfirst" alt="Problem 154 " title="Problem 154 ">Problem 154</a>.</p></span><span class="incontext"><a href="s3-2-partitions.html#solution-246">in-context</a></span>
+</body>
+</html>

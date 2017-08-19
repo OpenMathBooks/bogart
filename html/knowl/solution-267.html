@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:58:04-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">169.1</span>
+</h5>
+<p>Let us call the process of enclosing \(\lambda\) in the smallest rectangle possible and then forming the complement in that rectangle <em class="terminology">encomplementation</em> (This is short for <!--Style me with CSS--><em>en</em>\/closure and <!--Style me with CSS--><em>complementation</em> and is not a standard term—there is no standard term for this operation.) and call the result of it the <em class="terminology">encomplement</em> of \(\lambda\text{.}\)  The result of two encomplementations on the Young diagram of a partition is to remove all rows of maximum length and all columns of maximum length from the Young diagram. Thus the description of the result of an even number \(2j\) of encomplementations is straightforward; we remove all the rows of the \(j\) largest distinct lengths and all columns of the \(j\) largest distinct lengths. So if an even number of encomplementations brings us to a partition with one block of size one, we should be able to describe the original partition fairly easily. To deal with the result of an odd number of encomplementations, we ask what happens if we encomplement just once.  If the complement of \(\lambda\) in the smallest rectangle in which if fits has one square, then \(\lambda =\lambda_1^{n_1}\lambda_1-1\text{.}\) Thus we are asking for the partitions which, after an even number of encomplementations, give us either the partition with one block or a partition of the form \(\lambda_1^{n_1}(\lambda_1-1)\text{.}\) First we ask what kind of partition results in the second one after two encomplementations. If we get \(\lambda_1^{n_1}(\lambda_1-1)\) from two encomplementations, the partition we started with had the form</p>
+\begin{equation*}
+\lambda_0^{n_0}(\lambda_1+\lambda_{2})^{n_1}(\lambda_1+
+\lambda_2-1)\lambda_2^{n_2}.
+\end{equation*}
+<p>If we get \(\lambda_1^{n_1}(\lambda_1-1)\) from four encomplementations, then we started with a partition of the form</p>
+\begin{equation*}
+\lambda_{-1}^{n_{-1}}(\lambda_0+\lambda_{3})^{n_0}(\lambda_1+
+\lambda_2 +
+\lambda_{3})^{n_1}(\lambda_1+\lambda_2 +\lambda_3-1)(\lambda_2+
+\lambda_{3})^{n_3}
+\lambda_3^{n_3}.
+\end{equation*}
+<p>From this pattern we see that a partition that results in \(\lambda_1^{n_1}(\lambda_1-1)\) after \(2j\) encomplementations has the form</p>
+\begin{equation}
+\lambda_{1-j}^{n_{1-j}}\lambda_{2-j}^{n_{2-j}}\cdots
+\lambda_0^{n_0}
+{\lambda'_1}^{n_1}
+(\lambda'_1-1)\lambda_2^{n_2}\cdots
+\lambda_{j+1}^{n_{j+1}},
+\tag{3.4}
+\end{equation}
+<p>where \(\lambda_i&gt;\lambda_{i+1}\) and \(\lambda_0&gt;\lambda'_1&gt;\lambda_2+1\text{.}\)</p>
+<p>On the other hand, a partition \(\lambda\) that results in \(1\) after two encomplementations has the form \(\lambda_0^{n_0}(\lambda_1+1)\lambda_1^{n_1}\text{,}\) and so a partition that results in 1 after \(j\) encomplementations is of the form</p>
+\begin{equation}
+\lambda_{1-j}^{n_{1-j}}\lambda_{2-j}^{n_{2-j}}\cdots
+\lambda_0^{n_0}(\lambda_1+1)\lambda_1^{n_1}\lambda_2^{n_2}\cdots
+\lambda_j^{n_j},
+\tag{3.5}
+\end{equation}
+<p>where \(\lambda_i&gt;\lambda_{i+1}\) and \(\lambda_0&gt;\lambda_1+1\text{.}\) Thus a partition results in a single part of size 1 after some number of encomplementations if and only if it has the form of <a knowl="./knowl/form1.html" knowl-id="xref-form1" alt="Equation 3.4 " title="Equation 3.4 ">Equation (3.4)</a> or <a knowl="./knowl/form2.html" knowl-id="xref-form2" alt="Equation 3.5 " title="Equation 3.5 ">Equation (3.5)</a>.</p></span><span class="incontext"><a href="s3-3-partitions-int.html#solution-267">in-context</a></span>
+</body>
+</html>

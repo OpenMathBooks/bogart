@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-19T12:57:36-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Recurrence Relations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="title-period-fix.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_induction-examples.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="InductionRecursion.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_induction-graphstrees.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_induction-examples.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="InductionRecursion.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_induction-graphstrees.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link active"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence" class="active">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="appendix-4.html" data-scroll="appendix-4">Selected Hints</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_induction-recurrence"><header title="Section 2.2 Recurrence Relations"><h1 class="heading hide-type" alt="Section 2.2 Recurrence Relations">
+<span class="type">Section</span><span class="codenumber">2.2</span><span class="title">Recurrence Relations</span><a href="sec_induction-recurrence.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-28"><article class="example-like" id="activity-87"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">87</span>
+</h5>
+<p id="p-526">How is the number of subsets of an \(n\)-element set related to the number of subsets of an \((n - 1)\)-element set? Prove that you are correct.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-81" id="hint-81"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-81" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-527">Remember, a subset of \([n]\) either does or doesn't contain \(n\text{.}\)</p></span></span>
+</div></article><article class="example-like" id="activity-88"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">88</span>
+</h5>
+<p id="p-529">Explain why it is that the number of bijections from an \(n\)-element set to an \(n\)-element set is equal to \(n\) times the number of bijections from an \((n-1)\)-element subset to an \((n-1)\)-element set. What does this have to do with <a knowl="./knowl/permutationasbijection.html" knowl-id="xref-permutationasbijection" alt="Problem 27 " title="Problem 27 ">Problem 27</a>?</p></article><p id="p-531">We can summarize these observations as follows. If \(s_n\) stands for the number of subsets of an \(n\)-element set, then</p>
+\begin{equation}
+s_n =2s_{n-1},
+\tag{2.1}
+\end{equation}
+<p>and if \(b_n\) stands for the number of bijections from an \(n\)-element set to an \(n\)-element set, then</p>
+\begin{equation}
+b_n =
+nb_{n-1}.
+\tag{2.2}
+\end{equation}
+<p id="p-532"><a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Equations (2.1)</a> and <a knowl="./knowl/bijectionequation.html" knowl-id="xref-bijectionequation" alt="Equation 2.2 " title="Equation 2.2 ">(2.2)</a> are examples of <em class="terminology">recurrence equations</em> or <em class="terminology">recurrence relations</em>. A <em class="terminology">recurrence relation</em> or simply a <em class="terminology">recurrence</em> is an equation that expresses the \(n\)th term of a sequence \(a_n\) in terms of values of \(a_i\) for \(i\lt n\text{.}\) Thus <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Equations (2.1)</a> and <a knowl="./knowl/bijectionequation.html" knowl-id="xref-bijectionequation" alt="Equation 2.2 " title="Equation 2.2 ">(2.2)</a> are examples of recurrences.</p></section><section class="subsection" id="subsection-17"><header title="Subsection 2.2.1 Examples of recurrence relations"><h1 class="heading hide-type" alt="Subsection 2.2.1 Examples of recurrence relations">
+<span class="type">Subsection</span><span class="codenumber">2.2.1</span><span class="title">Examples of recurrence relations</span><a href="sec_induction-recurrence.html#subsection-17" class="permalink">¶ permalink</a>
+</h1></header><p id="p-533">Other examples of recurrences are</p>
+\begin{equation}
+a_n = a_{n-1} +
+7,
+\tag{2.3}
+\end{equation}
+
+\begin{equation}
+a_n =3a_{n-1} + 2^n,
+\tag{2.4}
+\end{equation}
+
+\begin{equation}
+a_n = a_{n-1} + 3a_{n-2},\mbox{
+and}
+\tag{2.5}
+\end{equation}
+
+\begin{equation}
+a_n= a_1a_{n-1} + a_2a_{n-2}+\cdots +
+a_{n-1}a_1.
+\tag{2.6}
+\end{equation}
+<p id="p-534">A <em class="terminology">solution</em> to a recurrence relation is a sequence that satisfies the recurrence relation. Thus a solution to <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Recurrence (2.1)</a> is \(s_n =2^n\text{.}\) Note that \(s_n=17\cdot2^n\) and \(s_n=-13\cdot2^n\) are also solutions to <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Recurrence (2.1)</a>. What this shows is that a recurrence can have infinitely many solutions. In a given problem, there is generally one solution that is of interest to us. For example, if we are interested in the number of subsets of a set, then the solution to <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Recurrence (2.1)</a> that we care about is \(s_n=2^n\text{.}\) Notice this is the only solution we have mentioned that satisfies \(s_0=1\text{.}\)</p>
+<article class="example-like" id="activity-89"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">89</span>
+</h5>
+<p id="p-535">Show that there is only one solution to <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Recurrence (2.1)</a> that satisfies \(s_0=1\text{.}\)</p></article><article class="example-like" id="activity-90"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">90</span>
+</h5>
+<article class="introduction" id="introduction-29"><p id="p-537">A first-order recurrence relation is one which expresses \(a_n\) in terms of \(a_{n-1}\) and other functions of \(n\text{,}\) but which does not include any of the terms \(a_i\) for \(i\lt n-1\) in the equation.</p></article><article class="exercise-like" id="task-87"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-538">Which of the <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">recurrences (2.1)</a> through <a knowl="./knowl/Catalanrecurrence.html" knowl-id="xref-Catalanrecurrence" alt="Equation 2.6 " title="Equation 2.6 ">(2.6)</a> are first order recurrences?</p></article><article class="exercise-like" id="task-88"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-540">Show that there is one and only one sequence \(a_n\) that is defined for every nonnegative integer \(n\text{,}\) satisfies a given first order recurrence, and satisfies \(a_0=a\) for some fixed constant \(a\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-82" id="hint-82"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-82" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-541">A first order recurrence for \(a_n\) gives us \(a_n\) as a function of \(a_{n-1}\text{.}\)</p></span></span></article></article><figure class="figure-like" id="Hanoi"><img width="85%" src="../images/Hanoi" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.1</span>The Towers of Hanoi Puzzle</figcaption></figure><article class="example-like interesting" id="HanoiProblem"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">91</span>
+</h5>
+<p id="p-543">The “Towers of Hanoi” puzzle has three rods rising from a rectangular base with \(n\) rings of different sizes stacked in decreasing order of size on one rod. A legal move consists of moving a ring from one rod to another so that it does not land on top of a smaller ring. If \(m_n\) is the number of moves required to move all the rings from the initial rod to another rod that you choose, give a recurrence for \(m_n\text{.}\) (Hint: suppose you already knew the number of moves needed to solve the puzzle with \(n-1\) rings.)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-83" id="hint-83"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-83" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-544">Suppose you already knew the number of moves needed to solve the puzzle with \(n-1\)rings.</p></span></span>
+</div></article><article class="example-like interesting" id="circlesinplane"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">92</span>
+</h5>
+<p id="p-546">We draw \(n\) mutually intersecting circles in the plane so that each one crosses each other one exactly twice and no three intersect in the same point. (As examples, think of Venn diagrams with two or three mutually intersecting sets.) Find a recurrence for the number \(r_n\) of regions into which the plane is divided by \(n\) circles. (One circle divides the plane into two regions, the inside and the outside.) Find the number of regions with \(n\) circles. For what values of \(n\) can you draw a Venn diagram showing all the possible intersections of \(n\) sets using circles to represent each of the sets?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-84" id="hint-84"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-84" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-547">If we have \(n - 1\)circles drawn in such a way that they define \(r_{n-1}\) regions, and we draw a new circle, each time it crosses another circle, except for the last time, it finishes dividing one region into two parts and starts dividing a new region into two parts.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-85" id="hint-85"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-85" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-548">Compare \(r_n\) with the number of subsets of an \(n\)-element set.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-18"><header title="Subsection 2.2.2 Arithmetic Series (optional)"><h1 class="heading hide-type" alt="Subsection 2.2.2 Arithmetic Series (optional)">
+<span class="type">Subsection</span><span class="codenumber">2.2.2</span><span class="title">Arithmetic Series (optional)</span><a href="sec_induction-recurrence.html#subsection-18" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like" id="childsaving"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">93</span>
+</h5>
+<p id="p-551">A child puts away two dollars from her allowance each week. If she starts with twenty dollars, give a recurrence for the amount \(a_n\) of money she has after \(n\) weeks and find out how much money she has at the end of \(n\) weeks.</p></article><article class="example-like" id="arithmeticprogression"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">94</span>
+</h5>
+<p id="p-553">A sequence that satisfies a recurrence of the form \(a_n=a_{n-1} +c\) is called an <em class="terminology">arithmetic progression</em>. Find a formula in terms of the initial value \(a_0\) and the common difference \(c\) for the term \(a_n\) in an arithmetic progression and prove you are right.</p></article><article class="example-like" id="activity-95"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">95</span>
+</h5>
+<p id="p-555">A person who is earning $50,000 per year gets a raise of $3000 a year for \(n\) years in a row. Find a recurrence for the amount \(a_n\) of money the person earns over \(n+1\) years. What is the total amount of money that the person earns over a period of \(n+1\) years? (In \(n+1\) years, there are \(n\) raises.)</p></article><article class="example-like" id="activity-96"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">96</span>
+</h5>
+<p id="p-557">An <em class="terminology">arithmetic series</em> is a sequence \(s_n\) equal to the sum of the terms \(a_0\) through \(a_n\) of of an arithmetic progression. Find a recurrence for the sum \(s_n\) of an arithmetic progression with initial value \(a_0\) and common difference \(c\) (using the language of <a knowl="./knowl/arithmeticprogression.html" knowl-id="xref-arithmeticprogression" alt="Problem 94 " title="Problem 94 ">Problem 94</a>). Find a formula for general term \(s_n\) of an arithmetic series.</p></article></section><section class="subsection" id="subsection-19"><header title="Subsection 2.2.3 First order linear recurrences"><h1 class="heading hide-type" alt="Subsection 2.2.3 First order linear recurrences">
+<span class="type">Subsection</span><span class="codenumber">2.2.3</span><span class="title">First order linear recurrences</span><a href="sec_induction-recurrence.html#subsection-19" class="permalink">¶ permalink</a>
+</h1></header><p id="p-559">Recurrences such as those in <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Equations (2.1)</a> through <a knowl="./knowl/secondorderlinear.html" knowl-id="xref-secondorderlinear" alt="Equation 2.5 " title="Equation 2.5 ">(2.5)</a> are called <em class="terminology">linear recurrences</em>, as are the recurrences of <a knowl="./knowl/HanoiProblem.html" knowl-id="xref-HanoiProblem" alt="Problem 91 " title="Problem 91 ">Problems 91</a> and <a knowl="./knowl/circlesinplane.html" knowl-id="xref-circlesinplane" alt="Problem 92 " title="Problem 92 ">Problem 92</a>. A <em class="terminology">linear recurrence</em> is one in which \(a_n\) is expressed as a sum of functions of \(n\) times values of (some of the terms) \(a_i\) for \(i\lt n\) plus (perhaps) another function (called the <em class="terminology">driving function</em>) of \(n\text{.}\) A linear equation is called <em class="terminology">homogeneous</em> if the driving function is zero (or, in other words, there is no driving function). It is called a <em class="terminology">constant coefficient linear recurrence</em> if the functions that are multiplied by the \(a_i\) terms are all constants (but the driving function need not be constant).</p>
+<article class="example-like" id="classifyrecurrences"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">97</span>
+</h5>
+<p id="p-560">Classify the recurrences in <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Equations (2.1)</a> through <a knowl="./knowl/secondorderlinear.html" knowl-id="xref-secondorderlinear" alt="Equation 2.5 " title="Equation 2.5 ">(2.5)</a> and <a knowl="./knowl/HanoiProblem.html" knowl-id="xref-HanoiProblem" alt="Problem 91 " title="Problem 91 ">Problems 91</a> and <a knowl="./knowl/circlesinplane.html" knowl-id="xref-circlesinplane" alt="Problem 92 " title="Problem 92 ">Problem 92</a> according to whether or not they are constant coefficient, and whether or not they are homogeneous.</p></article><article class="example-like essential" id="firstordlinconst"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">98</span>
+</h5>
+<p id="p-562">As you can see from <a knowl="./knowl/classifyrecurrences.html" knowl-id="xref-classifyrecurrences" alt="Problem 97 " title="Problem 97 ">Problem 97</a> some interesting sequences satisfy first order linear recurrences, including many that have constant coefficients, have constant driving term, or are homogeneous. Find a formula in terms of \(b\text{,}\) \(d\text{,}\) \(a_0\) and \(n\) for the general term \(a_n\) of a sequence that satisfies a constant coefficient first order linear recurrence \(a_n = ba_{n-1} + d\) and prove you are correct. If your formula involves a summation, try to replace the summation by a more compact expression.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-86" id="hint-86"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-86" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-563">You might try working out the cases \(n=2,3,4\) and then look for a pattern. Alternately, you could write \(a_{n-1}=b a_{n-2} + d\text{,}\) substitute the right hand side of this expression into \(a_{n}=b a_{n-1} + d\) to get a recurrence involving only \(a_{n-2}\) , and then repeat a similar process with \(a_{n-2}\) and perhaps \(a_{n-3}\) and see a pattern that is developing.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-20"><header title="Subsection 2.2.4 Geometric Series"><h1 class="heading hide-type" alt="Subsection 2.2.4 Geometric Series">
+<span class="type">Subsection</span><span class="codenumber">2.2.4</span><span class="title">Geometric Series</span><a href="sec_induction-recurrence.html#subsection-20" class="permalink">¶ permalink</a>
+</h1></header><p id="p-569">A sequence that satisfies a recurrence of the form \(a_n=ba_{n-1}\) is called a <em class="terminology">geometric progression</em>. Thus the sequence satisfying <a knowl="./knowl/subsetequation.html" knowl-id="xref-subsetequation" alt="Equation 2.1 " title="Equation 2.1 ">Equation (2.1)</a>, the recurrence for the number of subsets of an \(n\)-element set, is an example of a geometric progression. From your solution to <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a>, a geometric progression has the form \(a_n=a_0b^n\text{.}\) In your solution to <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a> you may have had to deal with the sum of a geometric progression in just slightly different notation, namely \(\sum_{i=0}^{n-1}db^i\text{.}\) A sum of this form is called a <em class="terminology">(finite) geometric series</em>.</p>
+<article class="example-like" id="sumgeometricseries"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">99</span>
+</h5>
+<article class="introduction" id="introduction-30"><p id="p-570">Do this problem only if your final answer (so far) to <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a> contained the sum \(\sum_{i=0}^{n-1}db^i\text{.}\)</p></article><article class="exercise-like" id="task-89"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-571">Expand \((1-x)(1+x)\text{.}\)  Expand \((1-x)(1+x+x^2)\text{.}\) Expand \((1-x)(1+x+x^2+x^3)\text{.}\)</p></article><article class="exercise-like" id="task-90"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-573">What do you expect \((1-b)\sum_{i=0}^{n-1} db^i\) to be?  What formula for \(\sum_{i=0}^{n-1}db^i\) does this give you?  Prove that you are correct.</p></article></article><p id="p-576">In <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a> and <a knowl="./knowl/sumgeometricseries.html" knowl-id="xref-sumgeometricseries" alt="Problem 99 " title="Problem 99 ">perhaps 99</a> you proved an important theorem.</p>
+<article class="theorem-like" id="theorem-2"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.2.2</span>
+</h5>
+<p id="p-577">If \(b\not=1\) and \(a_n=ba_{n-1} +d\text{,}\) then \(\displaystyle a_n =
+a_0b^n + d\frac{1-b^n}{1-b}\text{.}\) If \(b=1\text{,}\) then, \(\displaystyle a_n =
+a_0 +nd\)</p></article><article class="theorem-like" id="corollary-1"><h5 class="heading">
+<span class="type">Corollary</span><span class="codenumber">2.2.3</span>
+</h5>
+<p id="p-578">If \(b\not=1\text{,}\) then \(\displaystyle \sum_{i=0}^{n-1}b^i =
+\frac{1-b^n}{1-b}\text{.}\) If \(b=1\text{,}\) \(\displaystyle \sum_{i=0}^{n-1}b^i =n\text{.}\)</p></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>
