@@ -56,7 +56,7 @@
 %
 % \usepackage{svg}
 %
-% \usepackage[framemethod=tikz]{mdframed}
+\usepackage[framemethod=tikz]{mdframed}
 
 
 
@@ -66,15 +66,63 @@
 %%%%%%%%%%%%%%%%%  Nicely styled environments: %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
 
-%%%%%%%% Problem type markings %%%%%%%%%%%%
+\newcommand{\sslash}{\mathbin{/\mkern-6mu/}}
 
-% \usepackage{tabto, pdfcomment}
-% \newcommand{\marginsymbol}[2][0]{\tabto*{#1}\makebox[1ex][r]{#2}\tabto*{\TabPrevPos}}
+% \tcbuselibrary{theorems}
+%
+% \newtcbtheorem{myproblem}{Problem}{colback=green!5, colframe=black}{th}
 
 
 
+%Create indented ``problem'' environment:
+% \newmdtheoremenv[%
+% leftmargin=1.5ex, %left/right margins for oneside
+% rightmargin=1.5ex,
+% roundcorner=0pt,
+% topline=false,
+% leftline=false,
+% ]{mdproblem}[project]{Problem}
+\tcbset{probstyle/.style={%
+	breakable,
+	enhanced,
+	colback=white,
+	colframe=blue!10,
+	boxrule=0pt,
+	bottom=0pt,
+	after skip=5pt,
+	% rightrule=2pt,
+	% arc=2mm,
+	% boxsep=0pt,
+	% after upper*={\quad $\sslash$},
+	overlay last={%
+		% \node at ([yshift=1em,xshift=-1em]frame.south east) {$\sslash$};
+		\draw[#1, blue!20] ([xshift=-10pt, yshift=-5pt]frame.south east) -- ++(0,2.5em);
+		\draw[#1, blue!20] ([xshift=-5pt]frame.south east) -- ++(-3em,0);
+		},
+	overlay unbroken={%
+		% \node at ([yshift=1em,xshift=-1em]frame.south east) {$\sslash$};
+		\draw[#1, blue!20] ([xshift=-10pt, yshift=-5pt]frame.south east) -- ++(0,2.5em);
+		\draw[#1, blue!20] ([xshift=-5pt]frame.south east) -- ++(-3em,0);
+		}
+	}
+}
 
+
+\newtheorem{myproblem}[project]{Problem}
+
+%Redefine ``example'' to call the new mdexample, and put a paragraph break after it.
+\renewenvironment{activity}{%
+\begin{tcolorbox}[probstyle]
+\begin{myproblem}
+}{%
+\end{myproblem}
+\end{tcolorbox}
+\par\medskip
+}
 
 
 % %create a mdframe style% \usepackage[bf,sc,center,outermarks]{titlesec}
