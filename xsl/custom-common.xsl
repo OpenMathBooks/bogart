@@ -115,7 +115,7 @@
 <!-- Image files, media files and knowls are placed in directories    -->
 <!-- The defaults are relative to wherever principal output goes      -->
 <!-- These can be overridden at the command-line or in customizations -->
-<xsl:param name="directory.images" select="'images'" />
+<xsl:param name="directory.images" select="'../images'" />
 <xsl:param name="directory.media"  select="'media'" />
 <xsl:param name="directory.knowls" select="'knowls'" />
 <!-- Pointers to realizations of the actual document -->
