@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2017-08-19T13:39:32-06:00    *%
+%*    on 2017-08-20T09:47:01-06:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -53,6 +53,28 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 %% end: pdflatex-specific configuration
+}
+%% Monospace font: Inconsolata (zi4)
+%% Sponsored by TUG: http://levien.com/type/myfonts/inconsolata.html
+%% See package documentation for excellent instructions
+%% One caveat, seem to need full file name to locate OTF files
+%% Loads the "upquote" package as needed, so we don't have to
+%% Upright quotes might come from the  textcomp  package, which we also use
+%% We employ the shapely \ell to match Google Font version
+%% pdflatex: "varqu" option produces best upright quotes
+%% xelatex,lualatex: add StylisticSet 1 for shapely \ell
+%% xelatex,lualatex: add StylisticSet 2 for plain zero
+%% xelatex,lualatex: we add StylisticSet 3 for upright quotes
+%% 
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific monospace font
+\usepackage{zi4}
+\setmonofont[BoldFont=Inconsolatazi4-Bold.otf,StylisticSet={1,3}]{Inconsolatazi4-Regular.otf}
+%% end: xelatex and lualatex-specific monospace font
+}{%
+%% begin: pdflatex-specific monospace font
+\usepackage[varqu]{zi4}
+%% end: pdflatex-specific monospace font
 }
 %% Symbols, align environment, bracket-matrix
 \usepackage{amsmath}
@@ -226,6 +248,8 @@
 \renewcommand{\alsoname}{see also}
 %% hyperref driver does not need to be specified, it will be detected
 \usepackage{hyperref}
+%% configure hyperref's  \url  to match listings' inline verbatim
+\renewcommand\UrlFont{\small\ttfamily}
 %% Hyperlinking active in PDFs, all links solid and blue
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
 \hypersetup{pdftitle={Combinatorics Through Guided Discovery}}
@@ -1048,29 +1072,14 @@ As of this writing, relatively few Ramsey Numbers are known. \(R(3,n)\) is known
 \begin{exerciselist}
 \item[1.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{compositiondefinition}{}Remember that we can write \(n\) as a sum of \(n\) ones.  How many plus signs do we use?  In how many ways may we write \(n\) as a sum of a list of \(k\) positive numbers?  Such a list is called a \terminology{composition}\index{composition} of \(n\) into \(k\) parts.\index{composition!\(k\) parts}\index{composition!number of}%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-122}{}\quad
-We use \(n-1\) plus signs. Write down such a sum and choose \(k-1\) of the plus signs. Then each string of ones and plusses between two chosen plus signs, before the first chosen plus sign or after the last chosen one corresponds to a part of a composition of \(n\). Thus the number of compositions of \(n\) with \(k\) parts is the number of ways to choose the \(k-1\) places, which is \(\binom{n-1}{k-1}\).%
 \item[2.]\marginsymbol[-1em]{} \hypertarget{composition_numberof}{}In \hyperlink{compositiondefinition}{Problem~1.4.1} we defined a composition of \(n\) into \(k\) parts.  What is the total number of compositions of \(n\) (into any number of parts). \index{compositions!number of}%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-123}{}\quad
-The total number of compositions is the number of ways to choose a subset of the plus signs which is \(2^{n-1}\).%
 \item[3.]\marginsymbol[-1em]{\pdftooltip{\Large$\cdot$}{essential for this section or the next}} \hypertarget{GrayCode}{}Write down a list of all 16 zero-one sequences of length four starting with 0000 in such a way that each entry differs from the precious one by changing just one digit.  This is called a Gray Code.\index{Gray Code} That is, a \terminology{Gray Code} for 0-1 sequences of length \(n\) is a list of the sequences so that each entry differs from the previous one in exactly one place.  Can you describe how to get a Gray Code for 0-1 sequences of length five from the one you found for sequences of length 4?  Can you describe how to prove that there is a Gray code for sequences of length \(n\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-124}{}\quad
-(One of many) 0000, 0001, 0011, 0010, 0110, 0111, 0101, 0100, 1100, 1101, 1111, 1110, 1010, 1011, 1001, 1000. To get a code for sequences of length 5, put a zero at the end of each of the sequences we have. Follow that revised sequence by 10001, and write the remainder of the sequence in reverse order with a 1 at the end of each term. (Don't reverse the individual length four sequences, just the sequence of sequences!) If we do this with a Gray code for sequences of length \(n\), we get a Gray code for sequences of any length we wish. In the terminology of \hyperref[InductionRecursion]{Chapter~\ref{InductionRecursion}}, we just described the inductive step of an inductive proof that Gray codes exist for sequences of any length.%
 \item[4.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-4}{}Use the idea of a Gray code from \hyperlink{GrayCode}{Problem~1.4.3} to prove bijectively that the number of even-sized subsets of an \(n\)-element set equals the number of odd-sized subsets of an \(n\)-element set.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-125}{}\quad
-Each sequence in the Gray code is the characteristic function of a set, and the number of elements of the set is the number of ones in the sequence. Since each sequence differs in just one place from the preceding one, the sequences alternate between having an even number of ones and an odd number of ones. Since the first sequence is all zeros and there are \(2^n\) sequences, the last one has an odd number of zeros. Thus the map that takes each sequence except the last to the next one, and takes the last to the first is a bijection between the characteristic functions of sets with an even number of elements and sets with an odd number of elements.%
 \item[5.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-5}{}A list of parentheses is said to be balanced if there are the same number of left parentheses as right, and as we count from left to right we always find at least as many left parentheses as right parentheses.  For example, (((()()))()) is balanced and ((()) and (()()))(() are not.  How many balanced lists of \(n\) left and \(n\) right parentheses are there?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-126}{}\quad
-The number is the Catalan Number: we get a bijection between balanced lists of parentheses and Catalan paths by sending each left paren to an upstep and each right paren to a downstep. The condition that there are always as many left parentheses as right ensures we never go below the \(x\) axis.%
 \item[6.]\marginsymbol[-1em]{\pdftooltip{$*$}{difficult}} \hypertarget{exercise-6}{}Suppose we plan to put six distinct computers in a network as shown in \hyperref[hexagonalnetwork]{Figure~\ref{hexagonalnetwork}}.  The lines show which computers can communicate directly with which others.  Consider two ways of assigning computers to the nodes of the network different if there are two computers that communicate directly in one assignment and that don't communicate directly in the other.  In how many different ways can we assign computers to the network?%
 \begin{figure}
 \centering
@@ -1078,49 +1087,19 @@ The number is the Catalan Number: we get a bijection between balanced lists of p
 \caption{A computer network.\label{hexagonalnetwork}}
 \end{figure}
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-127}{}\quad
-We consider two assignments of computers to be equivalent if in both assignments, each computer communicates directly with exactly the same computers. This partitions the set of all \(6!\) computer assignments into blocks of \(48\) computers each. Thus we have \(720/48=15\) ways to assign the computers to the network.%
 \item[7.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-7}{}In a circular ice cream dish we are going to put four distinct scoops of ice cream chosen from among twelve flavors.  Assuming we place four scoops of the same size as if they were at the corners of a square, and recognizing that moving the dish doesn't change the way in which we have put the ice cream into the dish, in how many ways may we choose the ice cream and put it into the dish?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-128}{}\quad
-Each ice cream arrangement is equivalent to three others, the ones we get by rotating the dish. This divides the arrangements of four flavors of ice cream into blocks of size 4. Thus we may arrange the ice cream we have chosen in the dish in \(4!/4=6\) ways. We may choose the ice cream in \(\binom{12}{4}=495\) ways, and so we may choose it and put it into the dish in 2970 ways.%
 \item[8.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-8}{}In as many ways as you can, show that \(\binom{n}{k}\binom{n-k}{m} =
 \binom{n}{m}\binom{n-m}{k}\).%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-129}{}\quad
-You can prove this by plugging in the formula for \(\binom{n}{k}\) on both sides and cancelling stuff until you get the same thing on both sides.%
-\par
-However a much more interesting proof is that the right hand side counts the number of ways to choose a \(k\)-element set form an \(n\)-element set and then choose an \(m\)-element set from what remains. The left hand side counts the number of ways to first chose a \(k\)-element subset from the \(n\)-element set and then choose an \(m\)-element subset from what remains. Thus in both cases you are counting the number of ways to choose an ordered pair consisting of an \(m\)-element subset and a disjoint \(k\)-element subset from an \(n\)-element set.%
-\par
-You can also base a proof on the observation that \((x+y+x)^n=
-\sum_{k=0}^n\binom{n}{k}(x+y)^kz^{n-k}\) and \((x+y+z)^n=\sum_{m=0}^n\binom{n}{m}x^m(y+z)^{n-m}\) and asking for the coefficient of \(x^my^{n-m-k}z^k\). You do have to use the binomial theorem with an eye to the result you are looking for, however.%
 \item[9.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-9}{}A tennis club has \(4n\) members.  To specify a doubles match, we choose two teams of two people.  In how many ways may we arrange the members into doubles matches so that each player is in one doubles match?  In how many ways may we do it if we specify in addition who serves first on each team?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-130}{}\quad
-We now have many methods for solving this problem. Perhaps the easiest is to list all \((4n)\) people and take them in groups of four for doubles matches, with the first two in a group of four as one team and the second two as another team. We note that interchanging the \(n\) blocks of 4 does not change the matches, nor does interchanging the two people on a team nor interchanging the two teams. Thus we have \((4n)!/n!2^{3n}\) ways to arrange the matches. If we are to say who serves first on each team, we might as well say it is the first of the two listed, so now we have \((4n)!/n!2^n\) ways to arrange the matches.%
 \item[10.]\marginsymbol[-1em]{} \hypertarget{exercise-10}{}A town has \(n\) streetlights running along the north side of main street.  The poles on which they are mounted need to be painted so that they do not rust.  In how many ways may they be painted with red, white, blue, and green if an even number of them are to be painted green?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-131}{}\quad
-We can think of first choosing the set of even size of poles to be painted green, and the painting the remaining poles red, white, and blue.  We may do this in \(\sum_{k=0}^{\lfloor n/2\rfloor}\binom{n}{2k}3^{n-2k}\) ways.%
 \item[11.]\marginsymbol[-1em]{\pdftooltip{$*$}{difficult}} \hypertarget{pingpongpaint}{}We have \(n\) identical ping-pong balls.  In how many ways may we paint them red, white, blue, and green?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-132}{}\quad
-We can line up the identical ping-pong balls and break them into four groups, those of each color, by inserting dividers. If we want to paint at least one in each color, we can choose three of the spaces between the balls in which to insert dividers, so we can paint them in \(\binom{n-1}{k}\).  But the problem didn't require us to use each color, so we can put two dividers adjacent to each other. Thus there are \(n+1\) places where we can put the first divider (putting it before all the balls means we use no red, and putting it after all of them means we use no green. Now there are \(n+2\) places where we can put the second divider, including before or after the first, and \(n+3\) places where we can put the third divider. However if we interchange two dividers we still paint the balls before the first divider red, those between then next two white, and so on. Thus \(3!=6\) of these arrangements of balls and dividers correspond to the same paint job, so the number of ways to paint the balls is \(\frac{(n+1)(n+2)(n+3)}{6} =\binom{n+3}{3}\). This suggests that another way to think of the problem is to consider \(n+3\) slots in a row, and fill \(n\) of them with balls and \(3\) of them with dividers; since the balls are identical and the dividers might as well be identical, the number of ways to do this is the number of ways to choose the slots that get dividers.%
 \item[12.]\marginsymbol[-1em]{\pdftooltip{$*$}{difficult}} \hypertarget{exercise-12}{}We have \(n\) identical ping-pong balls.  In how many ways may we paint them red, white, blue, and green if we use green paint on an even number of them?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-133}{}\quad
-We first decide how many balls to paint green, then paint the remainder with the other three colors as in \hyperlink{pingpongpaint}{Problem~1.4.11} This gives us%
-\begin{equation*}
-\sum_{k=0}^{\lfloor n/2\rfloor}\binom{n-2k+2}{2}
-\end{equation*}
-ways to paint the balls.%
 \end{exerciselist}
 \typeout{************************************************}
 \typeout{Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory}
@@ -1596,42 +1575,8 @@ Is there a spanning tree such that the distance from vertex \(1\) to vertex \(i\
 \begin{exerciselist}
 \item[1.]\marginsymbol[-1em]{} \hypertarget{exercise-13}{}Use the inductive definition of \(a^n\) to prove that \((ab)^n=a^nb^n\) for all nonnegative integers \(n\).%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-194}{}\quad
-If \(n=0\) we get \((ab)^0=1\) and \(a^0b^0=1\). Assume inductively that \((ab)^{n-1}=a^{n-1}b^{n-1}\). Then by the inductive definition, inductive hypothesis, and commutative law,%
-\begin{equation*}
-(ab)^n= (ab)^{n-1}ab=a^{n-1}b^{n-1}ab=a^{n-1}ab^{n-1}b=a^nb^n.
-\end{equation*}
-%
-\par
-Thus the fact that \((ab)^{n-1}=a^{n-1}b^{n-1}\) implies the fact that \((ab)^n=
-a^nb^n\). Therefore by the principle of mathematical induction, \((ab)^n=a^nb^n\) for all nonnegative integers \(n\).%
 \item[2.]\marginsymbol[-1em]{} \hypertarget{exercise-14}{}Give an inductive definition of \(\displaystyle \bigcup_{i=1}^nS_i\) and use it and the two set distributive law to prove the distributive law \(\displaystyle{A\cap \bigcup_{i=1}^n S_i=\bigcup_{i=1}^n A\cap S_i}\).%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-195}{}\quad
-We define \(\displaystyle\bigcup_{i=1}^1S_i= S_i\) and \(\displaystyle
-\bigcup_{i=1}^n S_i =
-\bigcup_{i=1}^{n-1}S_i
-\cup S_n\). Then%
-\begin{equation*}
-\displaystyle A\cap\bigcup_{i=1}^1S_i=
-A\cap S_1=\bigcup_{i=1}^1 A\cap S_i.
-\end{equation*}
-%
-\par
-Assume that \(n>1\) and \(\displaystyle A\cap\bigcup_{i=1}^{n-1}=\bigcup_{i=1}^{n-1}A\cap S_i\). Now%
-\begin{align*}
-A\cap\bigcup_{i=1}^nS_i  =\amp  A\cap\left(\bigcup_{i=1}^{n-1}S_i
-\cup S_n\right)=\left(A\cap\bigcup_{i=1}^{n-1}S_i\right) \cup\left( A\cap
-S_n\right)\\
-=\amp \left(\bigcup_{i=1}^{n-1}A\cap
-S_i\right)\cup\left(A\cap S_n\right)=\bigcup_{i=1}^n A\cap S_i.
-\end{align*}
-%
-\par
-Thus the truth of the distributive law for distributing an intersection over a union of \(n-1\) sets implies its truth for distributing an intersection over a union of \(n\) sets. Therefore by the principle of mathematical induction, the distributive law \(\displaystyle A\cap\bigcup_{i=1}^nS_i=
-\bigcup_{i=1}^nA\cap S_i\) holds for all positive integers \(n\).%
 \item[3.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-15}{}A hydrocarbon molecule is a molecule whose only atoms are either carbon atoms or hydrogen atoms.  In a simple molecular model of a hydrocarbon, a carbon atom will bond to exactly four other atoms and hydrogen atom will bond to exactly one other atom. Such a model is shown in \hyperref[butane]{Figure~\ref{butane}}. We represent a hydrocarbon compound with a graph whose vertices are labelled with C's and H's so that each C vertex has degree four and each H vertex has degree one.  A hydrocarbon is called an ``alkane'' Common examples are methane (natural gas), butane (one version of which is shown in \hyperref[butane]{Figure~\ref{butane}})propane, hexane (ordinary gasoline), octane (to make gasoline burn more slowly), etc.%
 \begin{figure}
 \centering
@@ -1647,38 +1592,6 @@ Thus the truth of the distributive law for distributing an intersection over a u
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-196}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-30}{}We have \(n\) vertices of degree four, and so if we have \(m\) vertices of degree 1, we get \(4n+m=2(m+n-1)\) from the fact that the sum of the degrees of the vertices must be twice the number of edges. Thus we have \(m=2n+2\) hydrogen atoms.%
-\item\hypertarget{li-31}{}There is another tree with four carbon atoms, sometimes called isobutane, as shown below.%
-\end{enumerate}
-%
-% group protects changes to lengths, releases boxes (?)
-{% begin: group for a single side-by-side
-% set panel max height to practical minimum, created in preamble
-\setlength{\panelmax}{0pt}
-\newsavebox{\panelboxUimage}
-\savebox{\panelboxUimage}{%
-\resizebox{0.45\linewidth}{!}{{
-\chemfig{H-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270,2]C(-[:0]H)(-[:270]H)(-[:180]H))-[:0]C(-[:90]H)(-[:270]H)-[:0]H}
-}
-}}
-\newlength{\phUimage}\setlength{\phUimage}{\ht\panelboxUimage+\dp\panelboxUimage}
-\settototalheight{\phUimage}{\usebox{\panelboxUimage}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phUimage}}
-\leavevmode%
-% begin: side-by-side as tabular
-% \tabcolsep change local to group
-\setlength{\tabcolsep}{0\linewidth}
-% @{} suppress \tabcolsep at extremes, so margins behave as intended
-\par\medskip\noindent
-\hspace*{0.275\linewidth}%
-\begin{tabular}{@{}*{1}{c}@{}}
-\begin{minipage}[c][\panelmax][t]{0.45\linewidth}\usebox{\panelboxUimage}\end{minipage}\end{tabular}\\
-% end: side-by-side as tabular
-}% end: group for a single side-by-side
 \item[4.]\marginsymbol[-1em]{} \hypertarget{exercise-16}{}\leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-32}{}Give a recurrence for the number of ways to divide \(2n\) people into sets of two for tennis games.  (Don't worry about who serves first.)%
@@ -1686,51 +1599,17 @@ Thus the truth of the distributive law for distributing an intersection over a u
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-197}{}\quad
-Not worrying about the serve: \(t_{2n}=(2n-1)t_{2n-2}\)%
-\par
-Worrying about the serve: \(s_{2n}=2(2n-1)s_{2n-2}\)%
 \item[5.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-17}{}Give a recurrence for the number of ways to divide \(4n\) people into sets of four for games of bridge.  (Don't worry about how they sit around the bridge table or who is the first dealer.)%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-198}{}\quad
-\(b_{4n}=\binom{4n-1}{3}b_{4n-4}\).%
 \item[6.]\marginsymbol[-1em]{} \hypertarget{exercise-18}{}Use induction to prove your result in Supplementary \hyperlink{composition_numberof}{Problem~1.4.2} at the end of \hyperref[what-is]{Chapter~\ref{what-is}}.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-199}{}\quad
-A composition of \(n\) is an ordered list of positive numbers that adds to \(n\). We wish to show that there are \(2^{n-1}\) compositions of \(n\). There is one composition of the number 1, and \(2^{1-1}=1\). Now assume inductively that there are \(2^{n-2}\) compositions of the number \({n-1}\). From a composition of \(n-1\), we can get a composition of \(n\) either by making a new last part of size 1, or by adding one to the last part. Clearly these two operations give different partitions of \(n\); what is not so clear is that they give all partitions of \(n\), but they do: Either the last part of a partition of \(n\) is 1, in which case it comes from the first kind of operation, or it is larger than one, in which case it comes from the second operation. Thus the number of compositions of \(n\) is twice the number of compositions of \(n-1\), and so is \(2\cdot2^{n-2}=2^{n-1}\). Therefore the statement that there are \(2^{n-2}\) compositions of \(n-1\) implies the statement that there are \(2^{n-1}\) compositions of \(n\). Thus by the principle of mathematical induction, there are \(2^{n-1}\) compositions of \(n\) for every positive integer \(n\).%
 \item[7.]\marginsymbol[-1em]{} \hypertarget{inductiveprodnotation}{}Give an inductive definition of the product notation \(\displaystyle
 \prod_{i=1}^n a_i\).%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-200}{}\quad
-\(\displaystyle\prod_{i=1}^1a_i=a_1\), and \(\displaystyle\prod_{i=1}^n
-a_i= \left(\prod_{i=1}^{n-1}a_i\right)\cdot a_n\).%
 \item[8.]\marginsymbol[-1em]{} \hypertarget{exercise-20}{}Using the fact that \((ab)^k =a^kb^k\), use your inductive definition of product notation in \hyperlink{inductiveprodnotation}{Problem~2.4.7} to prove that \(\displaystyle \left(\prod_{i=1}^n a_i\right)^k=\prod_{i=1}^n a_i^k\).%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-201}{}\quad
-When \(n=1\) we get \(\displaystyle\left(\prod_{i=1}^1 a_i\right)^k=a_i^k =\prod_{i=1}^1a_i^k\). Now assume inductively that \(\displaystyle\left(\prod_{i=1}^{m-1}a_i\right)^k=\prod_{i=1}^{m-1}a_i^k\). Then we may write%
-\begin{equation*}
-\left(\prod_{i=1}^ma_i\right)^k=\left(\left(\prod_{i=1}^{m-1}
-a_i\right)\cdot a_m\right)^k=\left(\prod_{i=1}^{m-1}
-a_i^k\right)\cdot a_m^k=\prod_{i=1}^m a_i^k.
-\end{equation*}
-%
-\par
-Thus the correctness of the formula for \(n=m-1\) implies its correctness for \(n=m\). Therefore by the principle of mathematical induction, the formula holds for all positive integers \(n\).%
 \item[9.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-21}{}How many labelled trees on \(n\) vertices have exactly four vertices of degree 1?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-202}{}\quad
-The vertices of degree 1 are the vertices that do not appear in the Gray code for the tree. So we first choose four vertices out of \(n\) in \(\binom{n}{4}\) ways to be our vertices of degree 1, and then we use the remaining \(n-4\) vertices to fill in our list of \(n-2\) vertices, using each of the \(n-4\) at least once. Thus we either use one of them 3 times and the rest once, or two of them twice and the rest once. There are \(n-4\) ways to choose the one we use three times and \(\binom{n-2}{3}\binom{n-5}{1}\binom{n-6}{1}\cdots\binom{1}{1}=\frac{(n-2)!}{3!}\) ways to label the \(n-2\) places with the chosen vertices. There are \(\binom{n-4}{2}\) ways to choose the vertices we would use twice, and \(\binom{n-2}{2}\binom{n-4}{2}\binom{n-6}{1}\binom{n-7}{1}\cdots \binom{1}{1}=\frac{(n-2)!}{2!2!}\) ways to assign the chosen vertices to the \(n-2\) places in the Prüfer Code. Thus we have%
-\begin{align*}
-\amp \binom{n}{4}\left((n-4)\frac{(n-2)!}{3!} +\frac{(n-4)(n-3)}{2}\frac{(n-2)!}{4}\right)\\
-=\amp \frac{n!}{48}(n-2)^{\underline{3}}\left(\frac{1}{3} +\frac{n-3}{4}\right)
-\end{align*}
-possible Prüfer codes and therefore the same number of labelled trees.%
 \item[10.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$\ $*$}{especially interesting and difficult}} \hypertarget{exercise-22}{}The \terminology{degree sequence}\index{degree sequence}\index{sequence!degree} of a tree is a list of the degrees of the vertices in nonincreasing order.  For example the degree sequence of the first graph in \hyperref[spanningtrees]{Figure~\ref{spanningtrees}} is \((4,3,2,2,1)\).  For a graph with vertices labeled 1 through \(n\), the \terminology{ordered degree sequence}\index{degree sequence!ordered} of the graph is the sequence \((d_1,d_2,\dots,d_n)\) in which \(d_i\) is the degree of vertex \(i\). For example, the ordered degree sqeuence of the first graph in \hyperref[Threegraphs]{Figure~\ref{Threegraphs}} is \((1,2,3,3,1,1,2,1)\). \leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-34}{}How many labelled trees are there on \(n\) vertices with ordered degree sequence \(d_1,d_2,\ldots d_n\)? (This problem appears again in the next chapter since some ideas in that chapter make it more straightforward.)%
@@ -1738,22 +1617,6 @@ possible Prüfer codes and therefore the same number of labelled trees.%
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-203}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-36}{}We are given that\(d_i\) is the degree of vertex \(i\). The number of times \(i\) appears in the Prüfer code of a tree is one less than the degree of \(i\), so vertex \(i\) appears \(d_i-1\) times. Thus the sum of the \(d_i-1\) should be \(2n-2-n=n-2\). Of the \(n-2\) places in the Prüfer code, we want to label \(d_1-1\) of them with 1, \(d_2-1\) of them with 2 and in general \(d_i-1\) of them with \(i\). There are%
-\begin{equation*}
-\binom{n-2}{d_1-1}\binom{n-2-(d_1-1)}{d_2-1}\binom{n-2-(d_1-1+d_2-1)}{d_3-1}\cdots\binom{d_n-1}{d_n-1}
-\end{equation*}
-ways to do this, so the number of trees in which vertex \(i\) has degree \(d_i\) is \(\frac{(n-2)!}{(d_1-1)!(d_2-1)!\cdots(d_n-1)!}\).%
-\item\hypertarget{li-37}{}Now we modify the solution of the previous part by observing that to count all graphs with a given degree sequence, the actual vertices which have the given degrees is irrelevant, so we must multiply the result of the easier problem by the number of ways to assign the degrees to the vertices. To assign the degrees, we can list the vertices in \(n!\) ways, choose the first \(i_1\) of these vertices to have degree 1, then next \(i_2\) to have degree 2, and so on. But the order in which we list the vertices of a given degree is irrelevant. Thus the number of ways to assign the degrees is \(\frac{n!}{i_1!i_2!\cdots i_n!}\). Once the degrees are assigned, there are \(\frac{(n-2)!}{\prod_{d=1}^n (d-1)!^{i_d}}\), by translating our easier result. Thus the total number of trees with the degree sequence in which there are \(i_d\) vertices of degree \(d\) is%
-\begin{equation*}
-\frac{n!(n-2)!}{\prod_{j=1}^n i_j!(j-1)!^{i_j}}\text{.}
-\end{equation*}
-%
-\end{enumerate}
-%
 \end{exerciselist}
 \typeout{************************************************}
 \typeout{Chapter 3 Distribution Problems}
@@ -2389,18 +2252,6 @@ Euler showed that if \(k\not= \frac{3j^2+j}{2}\), then the number of partitions 
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-283}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-44}{}\(\binom{n+k-1}{k}\)%
-\item\hypertarget{li-45}{}\(n^k\)%
-\item\hypertarget{li-46}{}\(\binom{n}{k}\).%
-\item\hypertarget{li-47}{}\(n^{\underline{k}}\)%
-\item\hypertarget{li-48}{}None of the above.%
-\item\hypertarget{li-49}{}\(\binom{k-1}{n-1}\)%
-\end{enumerate}
-%
 \item[2.]\marginsymbol[-1em]{} \hypertarget{exercise-24}{}The neighborhood betterment committee has been given \(r\) trees to distribute to \(s\) families living along one side of a street. \leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-50}{}In how many ways can they distribute all of them if the trees are distinct, there are more families than trees, and each family can get at most one?%
@@ -2414,100 +2265,36 @@ Euler showed that if \(k\not= \frac{3j^2+j}{2}\), then the number of partitions 
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-284}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-58}{}\(s^{\underline{r}}\)%
-\item\hypertarget{li-59}{}\(s^r\)%
-\item\hypertarget{li-60}{}\(\binom{s}{r}\)%
-\item\hypertarget{li-61}{}\(\sum_{k=0}^s \binom{s}{k}r^{\underline{k}}\) or\(\sum_{k=0}^s s^{\underline{k}}\binom{r}{k}\)%
-\item\hypertarget{li-62}{}\(\binom{r+s-1}{r}\)%
-\item\hypertarget{li-63}{}\(s^{\overline{r}}=(r+s-1)^{\underline{r}}\)%
-\item\hypertarget{li-64}{}\(r!\binom{r-1}{s-1}\)%
-\item\hypertarget{li-65}{}\(\binom{r-1}{s-1}\)%
-\end{enumerate}
-%
 \item[3.]\marginsymbol[-1em]{} \hypertarget{exercise-25}{}In how many ways can \(n\) identical chemistry books, \(r\) identical mathematics books, \(s\) identical physics books, and \(t\) identical astronomy books be arranged on three bookshelves?  (Assume there is no limit on the number of books per shelf.)%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-285}{}\quad
-\(\frac{(n+r+s+t+2)!}{n!r!s!t!2!}\)%
 \item[4.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-26}{}One formula for the Lah numbers is%
 \begin{equation*}
 L(k,n) = \binom{k}{n}(k-1)^{\underline{k-n}}
 \end{equation*}
 Find a proof that explains this product.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-286}{}\quad
-First choose the \(n\) elements which will be the first member of the part they lie in. (This, in effect, labels the \(n\) parts.) Then assign the remaining \(k-n\) elements to their parts by making an ordered function of \(n-k\) objects to \(n\) recipients in \((n + (k-n) - 1)^{{k-n}} = (k-1)^{{k-n}}\) ways.%
 \item[5.]\marginsymbol[-1em]{} \hypertarget{exercise-27}{}What is the number of partitions of \(n\) into two parts?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-287}{}\quad
-\(n/2\) if \(n\) is even and \((n-1)/2\) if \(n\) is odd, equivalently, \(\lfloor n/2\rfloor\)%
 \item[6.]\marginsymbol[-1em]{} \hypertarget{partitions-k-2-parts}{}What is the number of partitions of \(k\) into \(k - 2\) parts?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-288}{}\quad
-A partition of \(k\) into \(k-2\) parts will have either one part of size 3 and \(k-3\) parts of size 1, or two parts of size 2 and \(k-4\) parts of size 1. Thus, the number of partitions of \(k\) into \(k-2\) parts is%
-\begin{align*}
-\binom{k}{3} + \binom{k}{2}\binom{k-2}{2}/2 &=
-k(k-1)(n-2)/6 + k(k-1)(k-2)(k-3)/8\\
-&= k(k-1)(k-2)(1/6 + (k-3)/8)\\
-&= k(k-1)(k-2)(3k-5)/24\text{.}
-\end{align*}
-%
 \item[7.]\marginsymbol[-1em]{} \hypertarget{exercise-29}{}Show that the number of partitions of \(k\) into \(n\) parts of size at most \(m\) equals the number of partitions of \(mn-k\) into no more than \(n\) parts of size at most \(m-1\).%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-289}{}\quad
-If we take the complement of the Young diagram of a partition of \(k\) into \(n\) parts of size at most \(m\) in an rectangle with \(n\) rows and \(m\) columns, the number we partition will be \(mn-k\), and we will have no more than \(n\) parts, each of size at most \(m-1\). And if we take the complement of a partition of this second kind in the same rectangle, we will get a partition of the first kind.%
 \item[8.]\marginsymbol[-1em]{} \hypertarget{exercise-30}{}Show that the number of partitions of \(k\) into parts of size at most \(m\) is equal to the number of partitions of of \(k+m\) into \(m\) parts.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-290}{}\quad
-Given the first kind of partition, take the conjugate (giving a partition of \(k\) into at most \(m\) parts), add one to each part, and then add enough parts of size 1 to get a total of \(m\) parts. It is straightforward that this process can be reversed.%
 \item[9.]\marginsymbol[-1em]{} \hypertarget{exercise-31}{}You can say something pretty specific about self-conjugate partitions of \(k\) into distinct parts.  Figure out what it is and prove it.  With that, you should be able to find a relationship between these partitions and partitions whose parts are consecutive integers, starting with 1.  What is that relationship?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-291}{}\quad
-In a self-conjugate partition, the number of parts is the size of the largest part. If these parts are distinct, this means that each number between 1 and the largest part appears once as a part. That is, the parts are a list of consecutive integers, starting with 1.%
 \item[10.]\marginsymbol[-1em]{} \hypertarget{exercise-32}{}What is \(s(k,1)\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-292}{}\quad
-Since s\((k,1)\) is the coefficient of \(x^1\) in%
-\begin{equation*}
-x^{\underline{k}} = x(x-1)
-(x-2)\cdot (x-(k-1)),
-\end{equation*}
-it is \((-1)^{k-1}(k-1)!\).%
 \item[11.]\marginsymbol[-1em]{} \hypertarget{exercise-33}{}Show that the Stirling numbers of the second kind satisfy the recurrence%
 \begin{equation*}
 S(k,n) = \sum_{i=1}^kS(k-i,n-1)\binom{n-1}{i-1}\text{.}
 \end{equation*}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-293}{}\quad
-A partition of \([k]\) into \(n\) blocks has a block containing \(k\). If this block has size \(i\), when you remove it, you get a partition of a set of size \(k-i\) into \(n-1\) blocks. The number of possible sets of size \(i\) containing \(k\) is \(\binom{k-1}{i-1}\), and \(i\) can be any number between 1 and \(k\). Each partition of \(k\) into \(n\) blocks may be constructed exactly once by first choosing the block containing \(k\) and then partitioning the remaining elements into \(n-1\) blocks. This proves the formula.%
 \item[12.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-34}{}Let \(c(k,n)\) be the number of ways for \(k\) children to hold hands to form \(n\) circles, where one child clasping his or her hands together and holding them out to form a circle is considered a circle.  Find a recurrence for \(c(k,n)\).  Is the family of numbers \(c(k,n)\) related to any of the other families of numbers we have studied? If so, how?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-294}{}\quad
-The \(k\)th child is either in a circle by him/her self, and there are \(c(k-1,n-1)\) ways for this to happen, or is in a circle with some other children. In the second case child \(i\) can be to the immediate right of any of the other \(k-1\) children, so there are \((k-1)c(k-1,n)\) ways for this to happen. Thus \(c(k,n)=c(k-1,n-1)
-+(k-1)c(k-1,n)\). This recurrence is almost the same as the recurrence for \(s(k,n)\), except it has a plus sign where the recurrence for the Stirling numbers of the first kind has a minus sign. Further \(c(k,1)=(k-1)!\) and \(c(k,k)=1\), which agrees, except for sign, with the Stirling numbers of the first kind. If we experiment with applying the recurrence, we see that whenever we use it to compute \(c(k,n)\), we get that \(c(k,n)=|s(k,n)|\). It is now straightforward to prove by induction that \(c(k,n)=|s(k,n)|\).%
 \item[13.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-35}{}How many labeled trees on \(n\) vertices have exactly four vertices of degree 1?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-295}{}\quad
-The vertices of degree 1 are the vertices that do not appear in the Prüfer code for the tree. So we first choose four vertices out of \(n\) in \(\binom{n}{4}\) ways to be our vertices of degree 1, and the Prüfer code may be thought of as a function from the \(n-2\) places of the code onto the \(n-4\) remaining vertices, so there are \(S(n-2,n-4)(n-4)!\) Prüfer codes for each choice of the vertices of degree 1. Thus, using \hyperlink{partitions-k-2-parts}{Problem~3.4.6}, we have that the number of labeled trees is%
-\begin{equation*}
-\binom{n}{4}\frac{(n-2)(n-4)(3n-11)(n-4)!}{24} = \frac{n!(n-2)(n-3)(n-4)(3n-11)}{576}\text{.}
-\end{equation*}
-%
 \item[14.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-36}{}The \terminology{degree sequence}\index{degree sequence} of a graph is a list of the degrees of the vertices in non-increasing order. For example the degree sequence of the first graph in \hyperref[spanningtrees]{Figure~\ref{spanningtrees}} is \((4, 3, 2, 2, 1)\). For a graph with vertices labeled 1 through \(n\), the \terminology{ordered degree sequence}\index{ordered degree sequence} of the graph is the sequence \(d_1, d_2,\dots, d_n\) in which \(d_i\) is the degree of vertex \(i\). For example the ordered degree sequence of the first graph in \hyperref[Threegraphs]{Figure~\ref{Threegraphs}} is \((1,2,3,3,1,1,2,1)\).%
 \par
 \leavevmode%
@@ -2517,22 +2304,6 @@ The vertices of degree 1 are the vertices that do not appear in the Prüfer code
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-296}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-68}{}We first solve the ordered degree sequence problem in which we assume \(d_i\) is the degree of vertex \(i\). The number of times \(i\) appears in the Prüfer code of a tree is one less than the degree of \(i\), so vertex \(i\) appears \(d_i - 1\) times. Thus the sum of the \(d_i -1\) should be \(2n-2-n = n-2\). Of the \(n-2\) places in the Prüfer code, we want to label \(d_1 -1\) of them with 1, \(d_2 -1\) of them with 2 and in general \(d_i - 1\) of them with \(i\). There are%
-\begin{equation*}
-\binom{n-2}{d_1-1,d_2-1,d_3-1,\dots,d_n-1}
-\end{equation*}
-ways to do this, so the number of trees in which vertex \(i\) has degree \(d_i\) is \(\frac{(n-2)!}{(d_1-1)!(d_2-1)!\cdots(d_n-1)!}\).%
-\item\hypertarget{li-69}{}Now we modify the solution of the previous part by observing that to count all graphs with a given degree sequence, the actual vertices which have the given degrees is irrelevant, so we must multiply the result of the easier problem by the number of ways to assign the degrees to the vertices. To assign the degrees, we can list the vertices in \(n!\) ways, choose the first \(i_1\) of these vertices to have degree 1, then next \(i_2\) to have degree 2, and so on. But the order in which we list the vertices of a given degree is irrelevant. Thus, the number of ways to assign the degrees is \(\frac{n!}{i_1!i_2!\cdots i_n!}\). Once the degrees are assigned, there are \(\frac{(n-2)!}{\prod_{d=1}^n (d-1)! i_d}\), by translating our easier result. Thus, the total number of trees with the degree sequence in which there are \(i_d\) vertices of degree \(d\) is%
-\begin{equation*}
-\frac{n!(n-2)!}{\prod_{j=1}^n i_j!(j-1)!^i}\text{.}
-\end{equation*}
-%
-\end{enumerate}
-%
 \end{exerciselist}
 \typeout{************************************************}
 \typeout{Chapter 4 Generating Functions}
@@ -2965,20 +2736,6 @@ Use this and your solution for \(y\) (note that of the two possible values for \
 \end{equation*}
 to find a formula for the number of ways to pass out the candy.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-372}{}\quad
-\((x^3+x^4+x^5+x^6)^n\);%
-\begin{align*}
-(x^3+x^4+x^5+x^6)^n =\amp x^{3n}(1+x+x^2+x^3)^n\\
-=\amp x^{3n}\left(\frac{1-x^4}{1-x}\right)^n\\
-=\amp x^{3n}\sum_{j=0}^n (-1)^j\binom{n}{j}x^{4j}\sum_{i=0}^\infty
-\binom{n+i-1}{i}x^i\text{.}
-\end{align*}
-The number of ways to pass out \(k\) pieces of candy is the coefficient of \(x^k\) in this expression. Thus the answer is zero if \(k\lt 3n\) because of the \(x^{3n}\) in front. Otherwise the answer is the coefficient of \(^{k-3n}\) in \(\sum_{j=0}^n (-1)^j\binom{n}{j}x^{4j}\sum_{i=0}^\infty \binom{n+i-1}{i}x^i\), which is%
-\begin{equation*}
-\sum_{i,j:4j+i=k-3n}(-1)^j\binom{n}{j}\binom{n+i-1}{i}= \sum_{j=0}^{\lfloor (k-3n)/4\rfloor} (-1)^j\binom{n}{j}\binom{k-2n-4j-1}{n-1}.
-\end{equation*}
-%
 \item[2.]\marginsymbol[-1em]{\pdftooltip{$\circ$}{motivational material}} \hypertarget{exercise-38}{}\leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-76}{}In paying off a mortgage loan with initial amount \(A\), annual interest rate \(p\)\% on a monthly basis with a monthly payment of \(m\), what recurrence describes the amount owed after \(n\) months of payments in terms of the amount owed after \(n-1\) months?  Some technical details: You make the first payment after one month.  The amount of interest included in your monthly payment is \(.01p/12\).  This interest rate is applied to the amount you owed immediately after making your last monthly payment.%
@@ -2988,134 +2745,20 @@ The number of ways to pass out \(k\) pieces of candy is the coefficient of \(x^k
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-373}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-80}{}\(a_n=(1+\frac{.01p}{12})a_{n-1}-m\).%
-\item\hypertarget{li-81}{}From \hyperref[firstordlinconst]{Problem~\ref{firstordlinconst}} or by applying generating functions we have%
-\begin{align*}
-a_n  =\amp  A(1+\frac{.01p}{12})^n-m\frac{1-(1+\frac{.01p}{12})^n}{1-(1+\frac{.01p}{12})}\\
-=\amp  \left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}
-\end{align*}
-%
-\item\hypertarget{li-82}{}\(\left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}=0\) gives us the equation \(\left(1+\frac{.01p}{12}\right)^n=\frac{1200m}{1200m-Ap}\). Taking logarithms to any base we choose gives us \(n\log (1+\frac{.01p}{12})=\log 1200m-\log (1200m-Ap)\) and so \(n=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\).%
-\item\hypertarget{li-83}{}\(360=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\) is the equation we need to solve for \(m\), the monthly payment. We need to chose some base for the logarithm so we can write its inverse function; suppose we use logs to the base 10. Then%
-\begin{align*}
-360\log (1+\frac{.01p}{12})  =\amp  \log
-1200m-\log (1200m-Ap)\\
-10^{360\log (1+\frac{.01p}{12})} =\amp 10^{\log
-1200m/(1200m-Ap)}\\
-(1+\frac{.01p}{12})^{360}  =\amp 1200m/(1200m-Ap)\\
-\left(1200m-Ap\right)(1+\frac{.01p}{12})^{360} =\amp 1200m\\
-1200m\left((1+\frac{.01p}{12})^{360}-1\right) =\amp  Ap(1+\frac{.01p}{12})^{360}\\
-m  =\amp  \frac{Ap(1+\frac{.01p}{12})^{360}}{1200\left((1+\frac{.01p}{12})^{360}-1\right)}
-\end{align*}
-is our monthly payment.%
-\end{enumerate}
-%
 \item[3.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-39}{}We have said that for nonnegative \(i\) and positive \(n\) we want to define \(\binom{-n}{i}\) to be \(\binom{n+i-1}{i}\). If we want the Pascal recurrence to be valid, how should we define \(\binom{-n}{-i}\) when \(n\) and \(i\) are both positive?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-374}{}\quad
-The number \(\binom{n}{k}\) is the number in row \(n\) and column \(k\) of the Pascal (right) triangle. We have said we want to have \(\binom{-n}{0}=\binom{n+0-1}{0}\), so we want ones everywhere in that column. Now the Pascal recurrence gives us that \(\binom{-n}{0}=\binom{-n-1}{-1} +\binom{-n-1}{0}\), so that \(\binom{-n}{-1}=0\), as does \(\binom{0}{-1}\). Applying the Pascal recurrence again gives us \(\binom{-n}{-1}= \binom{-n-1}{-2} +\binom{-n-1}{-1}\), so we have \(\binom{-n-1}{-2}=0\) as well. Following this pattern, we can prove by induction that \(\binom{-n}{-k}\) is zero whenever \(k\) and \(n\) are positive.%
 \item[4.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-40}{}Find a recurrence relation for the number of ways to divide a convex \(n\)-gon into triangles by means of non-intersecting diagonals.  How do these numbers relate to the Catalan numbers?\index{Catalan Number!recurrence for}%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-375}{}\quad
-Let \(d_n\) be the number of ways to divide an \(n\)-gon into triangles by means of nonintersecting diagonals. Take an \(n\)-gon and label its vertices cyclically from 1 to \(n\). Any triangulation must have a triangle containing the edge \(1n\) between vertex 1 and vertex \(n\). The third vertex can be any number between 2 and \(n-1\). We consider two cases. First, if the third vertex is 2 or \(n-1\), then we have divided our polygon up into a triangle and an \((n-1)\)-gon, and any triangulation of that \((n-1)\)-gon joins with our original triangle to give us a triangulation of the \(n\)-gon. Second, if the third vertex of our original triangle is vertex \(i\) with \(3\le i\le n-2\) then we have divided our polygon into the polygon with the \(i\) edges \(12\), \(23\), \dots{}, \((i-1)i\), \(i1\), the polygon with \(n-i+1\) edges \(ni\), \(i(i+1)\), \dots{}, \((n-1)n\), and the original triangle with edges \(n1\), \(1i\), \(in\). Triangulations of the first two of these polygons join with the original triangle to give us a triangulation of the original polygon.%
-\par
-The number of triangulations of the original polygon that we get from case 1 is \(2d_{n-1}\). The number of triangulations we get from the second case is \(\sum_{i=3}^{n-2} d_id_{n-i+1}\). Thus the total number of triangulations is \(2d_{n-1}+d_{n-2}d_3 + d_{n-3}d_4 +\cdots + d_3d_{n-2}\). If we take \(d_2=1\), then we may write \(d_n = d_{n-1}d_2+d_{n-2}d_3 +\cdots+d_3d_{n-2} + d_2d_{n-1}=\sum\limits_{i=2}^{n-1} d_id_{n-i+1}\). This is very similar to the recurrence in \hyperref[CatalanRecurrence]{Problem~\ref{CatalanRecurrence}} for the Catalan numbers. We could apply the generating function method we used with the Catalan numbers to find a formula for \(d_n\). We could also experiment with the first few Catalan numbers and the first few ``triangulation'' numbers to see if they are related. We have \(C_0=1\), \(C_1=1\), \(C_2=2\), \(C_3=C_0C_2+C_1C_1 +C_2C_0=5\), and \(C_4=C_0C_3+C_1C_2+C_2C_1+C_3C_0=14\). We have that \(d_2=1\), \(d_3=1\), \(d_4=2\), \(d_5=d_4d_2+d_3d_3+d_2d_4=5\), and \(d_6=d_5d_2+d_4d_3+d_3d_4+d_5d_2=14\). This makes pretty convincing evidence that \(d_i= C_{i-2}\). We have already done a base case (and more) for an inductive proof. So assume inductively that \(d_{i}=C_{i-2}\) for \(i\lt n\). Then%
-\begin{align*}
-d_n =\amp \sum\limits_{i=2}^{n-1} d_id_{n-i+1}\\
-=\amp \sum\limits_{i=2}^{n-1} C_{i-2}C_{n-i+1-2}\\
-=\amp \sum\limits_{i=2}^{n-1} C_{i-2}C_{n-i-1}\\
-=\amp \sum\limits_{k=1}^{n-2} C_{k-1}C_{n-(k+1)-1}\\
-=\amp \sum\limits_{k=1}^{n-2} C_{k-1}C_{(n-2)-k}\\
-=\amp C_{n-2}
-\end{align*}
-%
-\par
-Thus by the principle of mathematical induction, \(d_n=C_{n-2}\) for all integers \(n\ge 2\).%
 \item[5.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-41}{}How does \(\sum_{k=0}^n\binom{n-k}{k}\) relate to the Fibonacci Numbers?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-376}{}\quad
-We begin by computing a few values of \(a_n=\sum_{k=0}^n\binom{n-k}{k}\). We have \(a_0=1\), \(a_1=1\), \(a_2=2\), \(a_3=1+2=3\), \(a_4=1+3+1=5\), \(a_5=1+4+3=8\) and \(a_6=1+5+6+1=13\). So far the sequence agrees with the Fibonacci Numbers. Each term of the sequence is the sum of the two preceding terms, so it makes sense to try to prove that \(a_n=a_{n-1}+a_{n-2}\). We may write%
-\begin{align*}
-a_{n-1}+a_{n-2}
-=\amp \sum_{k=0}^{n-1} \binom{n-1-k}{k}
-+\sum_{k=0}^{n-2} \binom{n-2-k}{k}\\
-=\amp \sum_{k=0}^{n-1} \binom{n-1-k}{k}+\sum_{j=1}^{n-1}\binom{n-1-j}{j-1}\\
-=\amp 1+\sum_{k=1}^{n-1}\binom{n-1-k}{k}+\binom{n-1-k}{k-1}\\
-=\amp 1+\sum_{k=1}^{n-1}\binom{n-k}{k} \rangle =\rangle  \sum_{k=0}^{n-1}\binom{n-k}{k}
-\rangle =\rangle  a_n
-\end{align*}
-%
-\par
-Thus the sequence satisfies the same recurrence as the Fibonacci numbers and its first two values are the same as the Fibonacci numbers. This lets us prove by induction that \(a_n\) is the \(n\)th Fibonacci number. More generally, given any second order recurrence, if two sequences satisfy that recurrence and have the same first two values, then they are equal.%
 \item[6.]\marginsymbol[-1em]{} \hypertarget{exercise-42}{}Let \(m\) and \(n\) be fixed. Express the generating function for the number of \(k\)-element multisets of an \(n\)-element set such that no element appears more than \(m\) times as a quotient of two polynomials. Use this expression to get a formula for the number of \(k\)-element multisets of an \(n\)-element set such that no element appears more than \(m\) times.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-377}{}\quad
-\((1+x+x^2+\cdots+x^m)^n=\frac{(1-x^{m+1})^n}{(1-x)^n}\).  Expanding this gives us \(\frac{(1-x^{m+1})^n}{(1-x)^n}=\sum_{i=0}^n(-1)^i \binom{n}{i}x^{(m+1)i} \sum_{j=0}^\infty \binom{n+j-1}{j}\). The coefficient of \(x^k\) in this product is the number of \(k\)-element multisets chosen from an \(n\)-element set in which no element appears more than \(m\) times. This coefficient is \(\sum\limits_{i,j:(m+1)i+j=k}(-1)^i\binom{n}{i}\binom{n+j-1}{j}=\sum\limits_{i=1}^{\lfloor\frac{k}{m+1}\rfloor}(-1)^i\binom{n}{i}\binom{n+k-(m+1)i-1}{n-1}\).%
 \item[7.]\marginsymbol[-1em]{} \hypertarget{exercise-43}{}One natural but oversimplified model for the growth of a tree is that all new wood grows from the previous year's growth and is proportional to it in amount. To be more precise, assume that the (total) length of the new growth in a given year is the constant \(c\) times the (total) length of new growth in the previous year. Write down a recurrence for the total length \(a_n\) of all the branches of the tree at the end of growing season \(n\). Find the general solution to your recurrence relation. Assume that we begin with a one meter cutting of new wood (from the previous year) which branches out and grows a total of two meters of new wood in the first year.  What will the total length of all the branches of the tree be at the end of \(n\) years?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-378}{}\quad
-\(a_n= a_{n-1} +c(a_{n-1}-a_{n-2})=(1+c)a_{n-1}-ca_{n-2}\).%
-\begin{align*}
-\sum_{n=2}^\infty
-a_nx^n =\amp \sum_{n=2}^\infty(1+c)a_{n-1}x^n-c\sum_{n=2}^\infty a_{n-2}x^n\\
-(1-(1+c)x +cx^2)\sum_{n=0}^\infty a_nx^n =\amp a_0+a_1x-a_0(1+c)x\\
-\sum_{n=0}^\infty a_nx^n  =\amp  \frac{a_0+(a_1-a_0(1+c))x}{1-(1+c)x +cx^2}\\
-=\amp  \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}
-\end{align*}
-%
-\par
-Assuming \(c\not=1\) and using the method of partial fractions gives us%
-\begin{align*}
-\amp \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}\\
-=\amp  (a_0+(a_1-a_0(1+c))x)
-\left[\frac{1/(1-c)}{(1-x)} -\frac{c/(1-c)}{1-cx}\right]\\
-=\amp  (a_0+(a_1-a_0(1+c))x)\left[\frac{1}{1-c}\sum_{i=0}^\infty x^i-\frac{c}{1-c}\sum_{i=0}^\infty c^ix^i\right]\\
-=\amp  \frac{(a_0+(a_1-a_0(1+c))x)}{1-c}\sum_{i=0}^\infty
-(1-c^{i+1})x^i.
-\end{align*}
-%
-\par
-From this we get that%
-\begin{equation*}
-a_i=\frac{a_0}{1-c}(1-c^{i+1}) +\frac{a_1-a_0(1+c)}{1-c}(1-c^i).
-\end{equation*}
-%
-\par
-Assuming that we begin with one meter of new wood means \(a_0=1\), and assuming we have a total of two meters of new wood at the end of the first year means \(c=2\) and \(a_1=3\). Substituting these into our formula for \(a_i\) gives us \(a_i=2^{i+1}-1\)%
 \item[8.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-44}{}(Relevant to \hyperref[expogenfun]{Appendix~\ref{expogenfun}}) We have some chairs which we are going to paint with red, white, blue, green, yellow and purple paint. Suppose that we may paint any number of chairs red or white, that we may paint at most one chair blue, at most three chairs green, only an even number of chairs yellow, and only a multiple of four chairs purple. In how many ways may we paint \(n\) chairs?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-379}{}\quad
-The generating function for the number of ways to paint \(n\) chairs is%
-\begin{align*}
-\amp \hspace{-.5in}(1+x+x^2+\cdots)^2(1+x)(1+x+x^2+x^3)(1+x^2+x^4+\cdots)
-(1+x^4+x^8+\cdots)\\
-=\amp
-\frac{(1+x)(1+x+x^2+x^3)}{(1-x)^2(1-x^2)(1-x^4)}\rangle =\rangle  \frac{1}{(1-x)^4}
-\end{align*}
-%
-\par
-Thus the number of ways to paint \(n\) chairs is \(\binom{n+4-1}{n}=\binom{n+3}{n}\)%
 \item[9.]\marginsymbol[-1em]{} \hypertarget{exercise-45}{}What is the generating function for the number of partitions of an integer in which each part is used at most \(m\) times? Why is this also the generating function for partitions in which consecutive parts (in a decreasing list representation) differ by at most \(m\) and the smallest part is also at most \(m\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-380}{}\quad
-%
-\begin{equation*}
-(1+q+\cdots+q^m)(1+q^2 +\cdots+q^{2m})\cdots
-=\prod_{i=1}^\infty\sum_{j=0}^m q^{ij}\\
-=\prod_{i=1}^\infty \frac{1-q^{i(m+1)}}{1-q^i}
-\end{equation*}
-This is also the generating function for the number of partitions of an integer in which consecutive parts differ by at most \(m\), because when we conjugate a partition in which each part is used at most \(m\) times, we get a partition in which each distinct column of the Young diagram occurs at most \(m\) times, which means that the difference between two consecutive parts (in the decreasing list representation) is at most \(m\).%
 \end{exerciselist}
 \typeout{************************************************}
 \typeout{Chapter 5 The Principle of Inclusion and Exclusion}
@@ -3325,112 +2968,20 @@ What do you observe about the signs of the coefficients of the chromatic polynom
 \begin{exerciselist}
 \item[1.]\marginsymbol[-1em]{} \hypertarget{exercise-46}{}Each person attending a party has been asked to bring a prize. The person planning the party has arranged to give out exactly as many prizes as there are guests, but any person may win any number of prizes. If there are \(n\) guests, in how many ways may the prizes be given out so that nobody gets the prize that he or she brought?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-417}{}\quad
-We use inclusion and exclusion. Let \(A\) be the set of all ways to distribute the prizes. Let \(A_i\) be the set of distributions in which person \(i\) gets the prize he or she brought. We are interested in \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\). We need to compute \(\left|\bigcap_{i\colon i\in S} A_i\right|\) for every subset \(S\) of \([n]\). But \(\left|\bigcap_{i\colon i\in S} A_i\right|\) is the number of functions from the prizes to the people that assign the prize that person \(i\) brhought to person \(i\) for each \(i\) in the set \(S\). Think in terms of distributing those prizes first. Then there are \(n-|S|\) other prizes that we may pass out to the \(n\) people as we please, so we may do that in \(n^{n-|S|}\) ways. Thus \(\left|\bigcap_{i\colon i\in S} A_i\right|=n^{n-|S|}\). Applying the formula from \hyperref[compunion]{Problem~\ref{compunion}}, we get%
-\begin{equation*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right| =\sum_{S:S\subseteq [n]}(-1)^{|S|} n^{n-|S|} =
-\sum_{s=0}^n (-1)^{|S|}\binom{n}{s}n^{n-s}.
-\end{equation*}
-%
 \item[2.]\marginsymbol[-1em]{} \hypertarget{exercise-47}{}There are \(m\) students attending a seminar in a room with \(n\) seats. The seminar is a long one, and in the middle the group takes a break. In how many ways may the students return to the room and sit down so that nobody is in the same seat as before?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-418}{}\quad
-We use inclusion and exclusion. We let \(A\) be the set of all seating arrangements. We let \(A_i\) be the set of seating arrangements such that student \(i\) sits in the same seat as before. We are interested in \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\). For this purpose, for each subset \(S\) of the set \([n]\), we need to compute \(\left|\bigcap_{i\colon i\in S} A_i\right|\), the number of ways for the students to return so that every student represented by an \(i\) in \(S\) sits in his or her previous seat. This leaves us with \(n-|S|\) seats to be filled in a one-to-one fashion by \(m-|S|\) students. There are \((n-|S|)^{\underline{m-|S|}}\) such seating arrangements, so \(\left|\bigcap_{i\colon i\in S} A_i\right|= (n-|S|)^{\underline{m-|S|}}\). Thus we have%
-\begin{equation*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right|=\sum_{S:S\subseteq [n]}
-(-1)^{|S|}(n-|S|)^{\underline{m-|S|}} = \sum_{s=0}^m (-1)^s\binom{m}{s}(n-s)^{\underline{m-s}}
-\end{equation*}
-ways for the students to return so that nobody sits in his or her previous place.%
 \item[3.]\marginsymbol[-1em]{} \hypertarget{exercise-48}{}What is the number of ways to pass out \(k\) pieces of candy from an unlimited supply of identical candy to \(n\) children (where \(n\) is fixed) so that each child gets between three and six pieces of candy (inclusive)? If you have done \hyperlink{candy-genfn}{Problem~1 of Supplementary Problems~\ref{sec_genfns-suppprobs}}, compare your answer in that problem with your answer in this one.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-419}{}\quad
-We could do the problem as a generating functions problem. But, as an inclusion-exclusion problem, we would let \(A_i\) be the set of \(i\) such that child \(i\) gets more than six pieces of candy. We would then observe that the number of ways to pass out the candy so that the children determined by a set \(S\) of \([n]\) all get more than six pieces, and everyone else gets at least 3, is the number of ways to pass out the remaining candy after giving 7 pieces to each child identified by \(S\) and 3 pieces to each other child. This number is \(\binom{k-7|S|-3(n-|S|)-1}{n-1}=\binom{k-2n-4|S|-1}{n-1}\). From here we would substitute into the formula from \hyperref[compunion]{Problem~\ref{compunion}}, make any simplifications we could, and we would be done. This will give the same answer as \hyperlink{candy-genfn}{Problem~1 of Supplementary Problems~\ref{sec_genfns-suppprobs}}.%
 \item[4.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-49}{}In how many ways may \(k\) distinct books be arranged on \(n\) shelves so that no shelf gets more than \(m\) books?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-420}{}\quad
-We use inclusion and exclusion. Let property \(A\) be the set of all arrangements of the books on the shelves. Let \(A_i\) be the set of arrangements in which shelf \(i\) gets more than \(m\) books. Then the number of arrangements of books in which the shelves determined by a subset \(S\) of \([n]\) get more than \(m\) books is \(\left|\bigcap_{i\colon i\in S} A_i\right| = k^{\underline{(m+1)|S|}}n^{\underline{k-(m+1)|S|}}\), because in order to get an arrangement in \(\bigcup_{i\colon i\in S} A_i\) we may choose \((m+1)|S|\) books and arrange \(m+1\) of them on each of the shelves represented by the properties in \(S\), after which we arrange the remainder of the books. Thus%
-\begin{align*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right| &=\sum_{S:S\subseteq [n]} (-1)^{|S|}
-k^{\underline{(m+1)|S|}}n^{\underline{k-(m+1)|S|}}
-\\
-&=\sum_{s=0}^n
-(-1)^s\binom{n}{s}k^{\underline{(m+1)s}}n^{\underline{k-(m+1)s}}
-\end{align*}
-is the number of ways to arrange the books so that no shelf gets more than \(m\).%
 \item[5.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-50}{}Suppose that \(n\) children join hands in a circle for a game at nursery school. The game involves everyone falling down (and letting go). In how many ways may they join hands in a circle again so that nobody is to the right of the same child that was previously to his or her right?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-421}{}\quad
-We use inclusion and exclusion, with \(A\) being the set of all circular arrangements of the children (where rotation of an arrangement gives the same arrangement, but flipping gives a different arrangement). The set \(A_i\) is the set of arrangements such that child \(i\) has the same child to the immediate right both times they join hands. Given a set \(S\subseteq [n]\), we can think of arranging units consisting of individual children and strings of children holding hands in a circle. We have \(n-s\) of these units because \(s\) children are to the immediate right of someone in units of size more than one (and everyone else is leftmost in a unit or not in a string of length 2 or more). Each string of children can be arranged in only one way, because our set specifies who has to have the same child on the right. Thus \(\left|\bigcap_{i\colon i\in S} A_i\right| = (n-s-1)!\). This gives us%
-\begin{align*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right| &=\sum_{S:S\subseteq [n]}
-(-1)^{|S|}(n-|S|-1)!\\
-&=
-\sum_{s=0}^n (-1)^s \binom{n}{s} (n-s-1)!\\
-&= \sum_{s=0}^n (-1)^s \frac{n!}{s!(n-s)}
-\end{align*}
-ways for the children to join hands the second time so that none of them has the same child to the right.%
 \item[6.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$\ $*$}{especially interesting and difficult}} \hypertarget{Hora}{}Suppose that \(n\) people link arms in a folk-dance and dance in a circle. Later on they let go and dance some more, after which they link arms in a circle again. In how many ways can they link arms the second time so that no-one is next to a person with whom he or she linked arms before.%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-422}{}\quad
-We use the Principle of Inclusion and Exclusion. The set \(A\) will be the set of arrangements of people in a circle where two arrangements are the same if we get one from the other by rotating or flipping the second. Set \(A_i\) will be the set of arrangements in which person \(i\) links arms with someone previously to his or her immediate right. (Saying it is the person to the right gives us more control over our formulas.) Given a subset \(S\) of \([n]\), the number of ways for the people in that set to link arms with the people previously on their right is the number of ways to arrange \(n-|S|\) strings of people around a circle with strings of length more than 1 having two ways to arrange themselves.  (Once we have two or more people linked, another person can be added to this string only at one end or not at all, because this person must have been to the right of one of the people on an end of the string. However a string of length two or more can unlink and then link in the opposite order, and each person will still be linked to exactly the same people.) Thus \(\left|\bigcap_{i\colon i\in S}A_i\right|= (n-|S|-1)!2^{m(S)}\), where \(m(S)\) is the number of strings of length more than one determined by \(S\). The number \(m(S)\) can be any number from 1 to \(S\), so long as \(S\) is not too big; namely so long as \(|S|\le \lfloor n/1\rfloor\). (This is because if \(m(S)=|S|\), then each person determined by a property in \(S\) must be adjacent to a person not determined by a property in \(S\).) In particular, \(\left|\bigcap_{i\colon i\in S}A_i\right|\) is not completely determined by the size of \(S\), as in all our other inclusion-exclusion problems. How do we compute \(m(S)\)? Let us call a subset \(R\) of \(S\) a run if \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-84}{}the people determined by \(R\) sit together in a row in both seatings, and%
-\item\hypertarget{li-85}{}no other person in \(S\) is in a row with these people in both seatings.%
-\end{enumerate}
- Some runs might determine just one person, but a run could also equal all of \(S\). Each run will have one more person not in \(S\) who was originally to the right of the person in the run who was rightmost in the first seating, and so this person will have to sit in a row with the people in \(R\) in the second seating as well. Thus the number \(r\) of runs in \(S\) is the number of strings \(m(S)\) that may be seated in two ways, and there are \(n-|S|-r\) people who do not have to be seated with runs. Thus \(\left|\bigcap_{i\colon i\in S}A_i\right| = (n-|S|-1)!2^r\), because the total number of strings of people (including strings of just one person) we need to seat is \(n-|S| -r\), and there are \((k-1)!\) ways to arrange \(k\) objects in a circle. If we try to use the information we have so far to compute \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\), we get%
-\begin{equation*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right| =\sum_{S:S\subseteq [n]}(-1)^{|S|}(n-|S|_1)!2^r
-=\sum_{s=0}^n\sum_{r=1}^{|S|}N(s,r)(n-s-1)!2^r,
-\end{equation*}
-in which \(N(s,r)\) stands for the number of property sets with size \(s\) and \(r\) runs.%
-\par
-Picking out runs in a circular arrangement adds a layer of difficulty, so to compute \(N(s,r)\), we first compute how many subsets of \([n]\) we have with \(r\) runs and then adjust for putting \(1\) through \(n\) around a circle in order.  Imagine writing 1 through \(n\) in a straight line, each integer occupying one unit of distance along the line. We now place \(r\) sticks whose lengths add to \(s\) (each stick has positive integer length) along that line. Each stick picks out a set of consecutive integers, as many as its length, so the sticks together pick out \(s\) integers. In order to be sure the sticks correspond to runs, we need to make sure they do not touch each other, so we place \(n-s\) identical stones along the line too, making sure there is at least one stone between any two sticks. The stones thus pick out the integers not in \(S\). The sticks are not quite identical, though the sticks of a given length are. In other words, which lengths of sticks are in which places is what matters. So the sticks give us a composition of \(s\), a list of distinct positive integers that add to \(s\). We know there are \(\binom{s-1}{r-1}\) such compositions. Once we have chosen an ordering for the sticks, we need to distribute the stones among the sticks so that no two sticks are adjacent.  Since the stones are identical, we can do this by putting one stone between each pair of sticks in our composition, and then distribute the remaining \(n-s-r+1\) stones in any way we want among the \(r-1\) places between the sticks and the two places to the left and right of all the sticks.. We can do this in%
-\begin{equation*}
-\binom{r+1 + (n-s-r+1)-1}{n-s-r+1}=\binom{n-s+1}{n-s-r+1}=\binom{n-s+1}{r}
-\end{equation*}
-ways. Thus there are \(\binom{s-1}{r-1}\binom{n-s+1}{r}\) ways to choose a subset \(S\) of \([n]\) that has \(r\) runs.%
-\par
-Now we have to deal with the fact that our \(n\) people (who we have replaced with the integers 1 through \(n\) in order) were arranged around a circle. That means that a run is now a set of consecutive integers on the circle, where \(n\) and 1 are considered consecutive. Recall that the set \(S\) is picked out by the sticks. If we arrange 1 through \(n\) around a circle in order, the set \(S\) that originally had \(r\) runs will have \(r-1\) runs if sticks covered both the first and last integer (1 and \(n\)), but otherwise it will still have \(n\) runs. Thus the number of subsets of \([n]\) that have \(n\) runs when \(1\) through \(n\) are arranged in a circle is the number of subsets of \([n]\) with \(r+1\) runs that have both 1 and \(n\) in \(S\) plus the number of subsets of \([n]\) with \(r\) runs that do not have both \(1\) and \(n\) in \(S\). To compute the number of subsets \(S\) that \emph{do} contain both 1 and \(n\), we compute the number of arrangements of \(r\) sticks and \(n-s\) stones that do start and end with a stick; that means that after we choose our composition into \(r\) parts to get our arrangement of sticks and place one stone between each pair of previously adjacent sticks, we now place the remaining \(n-s-r+1\) stones in the \(r-1\) places between previously adjacent sticks in%
-\begin{equation*}
-\binom{r-1 + (n-s-r+1)-1}{n-s-r+1}=\binom{n-s-1}{n-s-r+1}=\binom{n-s-1}{r-2}
-\end{equation*}
-ways. For the sticks and stones to determine a subset we must assign lengths to the sticks; the number of ways to do this is, as above, \(\binom{s-1}{r-1}\), the number of compositions of \(s\) with \(r\) parts. Thus there are \(\binom{s-1}{r-1}\binom{n-s-1}{r-2}\) subsets of \([n]\) that have \(r\) runs and include both 1 and \(n\). For our computation we will also want the number of subsets of \([n]\) that have \(r+1\) runs and contain both \(1\) and \(n\) this is \(\binom{s-1}{r}\binom{n-s-1}{r-1}\).%
-\par
-On the other hand, the number of subsets of \([n]\) that have \(r\) runs and do not contain both \(1\) and \(n\) is the total number of subsets with \(r\) runs minus the number that do contain both \(1\) and \(n\); this is%
-\begin{equation*}
-\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right).
-\end{equation*}
-%
-\par
-This gives us%
-\begin{equation*}
-N(s,r) =\binom{s-1}{r}\binom{n-s-1}{r-1}+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right)
-\end{equation*}
-ways to choose an \(s\)-element subset of \([n]\) that has \(r\) runs when \([n]\) is arranged around a circle. Thus there are%
-\begin{equation*}
-\sum\limits_{s=0}^n\sum\limits_{r=1}^{s}(-1)^s\left[\binom{s-1}{r}\binom{n-s-1}{r-1}+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right)\right](n-s-1)!2^r
-\end{equation*}
-ways for people to arrange themselves in the second circle so that no-one is adjacent to anyone he or she was previously adjacent to.%
 \item[7.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$\ $*$}{especially interesting and difficult}} \hypertarget{exercise-52}{}(A challenge; the author has not tried to solve this one!) Redo \hyperlink{Hora}{Problem~6} in the case that there are \(n\) men and \(n\) women and when people arrange themselves in a circle they do so alternating gender.%
 \par\smallskip
 \item[8.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-53}{}Suppose we take two graphs \(G_1\) and \(G_2\) with disjoint vertex sets, we choose one vertex on each graph, and connect these two graphs by an edge \(e\) to get a graph \(G_{12}\). How does the chromatic polynomial of \(G_{12}\) relate to those of \(G_1\) and \(G_2\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-423}{}\quad
-By the deletion-contraction recurrence,%
-\begin{equation*}
-\chi_{G_{12}}(x) =
-\chi_{G_{12}-e}(x)-\chi_{G_{12/e}}(x).
-\end{equation*}
-%
-\par
-Now \(\chi_{G_{12}-e}(x)=\chi_{G_1}(x)\times \chi_{G_2}(x)\) because each ordered pair of proper colorings of \(G_1\) and \(G_2\) is a proper coloring of \(G_{12}-e\). \(G_{12}/e\) is the graph we get by identifying the endpoint of \(e\) in \(G_1\) with the endpoint of \(e\) in \(G_2\). Notice that if you fix one vertex of a graph \(G\), fix one color, and ask how many proper colorings with \(x\) colors \(G\) has in which the fixed vertex is the fixed color, you get \(\chi_G(x)/x\).  (By the quotient principle.) Thus \(\chi_{G_2}(x)/x\) is the number of ways to extend a proper coloring of \(G_1\) to a proper coloring of \(G_{12}/e\). Then, by the product principle, the number of proper colorings of \(G_{12}/e\) with \(x\) colors is \(\chi_{G_1}(x)\chi_{G_2}(x)/x\). Therefore by the deletion-contraction recurrence, \(\chi_{G_{12}}(x) = \chi_{G_1}(x)\chi_{G_2}(x)(1-\frac{1}{x})\).%
 \end{exerciselist}
 \typeout{************************************************}
 \typeout{Chapter 6 Groups acting on sets}
@@ -4316,9 +3867,6 @@ Thus we can think of the set of graphs as a set of colorings with colors 0 and 1
 \par\smallskip
 \item[2.]\marginsymbol[-1em]{} \hypertarget{exercise-55}{}How many elements are in the dihedral group \(D_3\)?  The symmetric group \(S_3\)?  What can you conclude about \(D_3\) and \(S_3\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-537}{}\quad
-Six, six. \(D_3\) and \(S_3\) are the same group.%
 \item[3.]\marginsymbol[-1em]{} \hypertarget{exercise-56}{}A tetrahedron is a thee dimensional geometric figure with four vertices, six edges, and four triangular faces.  Suppose we start with a tetrahedron in space and consider the set of all permutations of the vertices of the tetrahedron that correspond to moving the tetrahedron in space and returning it to its original location, perhaps with the vertices in different places. \leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-114}{}Explain why these permutations form a group.%
@@ -4329,20 +3877,10 @@ Six, six. \(D_3\) and \(S_3\) are the same group.%
 \par\smallskip
 \item[4.]\marginsymbol[-1em]{} \hypertarget{exercise-57}{}Find a three-element subgroup of the group \(S_3\).  Can you find a different three-element subgroup of \(S_3\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-538}{}\quad
-\(\{\iota,(1\ 2\ 3),(1\ 3\ 2)\). This is the only three-element subgroup because the other elements of \(S_3\) are two cycles, so one of them forms a two-element subgroup with \(\iota\), and two of them together with \(\iota\) are not a subgroup. Since a subgroup acts on \(S_3\) by composition, any subgroup must have 1, 2, 3, or 6 elements, because \(S_3\) is a union of orbits of that group and the orbits all have the same size.%
 \item[5.]\marginsymbol[-1em]{} \hypertarget{exercise-58}{}Prove true or demonstrate false with a counterexample: ``In a permutation group, \((\sigma\varphi)^n = \sigma^n\varphi^n\).''%
 \par\smallskip
 \item[6.]\marginsymbol[-1em]{} \hypertarget{exercise-59}{}If a group \(G\) acts on a set \(S\), and if \(\sigma(x) =y\), is there anything interesting we can say about the subgroups \(\Fix(x)\) and \(\Fix(y)\)?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-539}{}\quad
-They have the same size; in fact,%
-\begin{equation*}
-\sigma\Fix(x) = \{\sigma\circ\tau\mid\tau\in\Fix(x)\} = \Fix(y)\text{.}
-\end{equation*}
-%
 \item[7.]\marginsymbol[-1em]{} \hypertarget{exercise-60}{}\leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-117}{}If a group \(G\) acts on a set \(S\), does \(\overline{\sigma}(f) = f\circ\sigma\) define a group action on the functions from \(S\) to a set \(T\)? Why or why not?%
@@ -4351,24 +3889,6 @@ They have the same size; in fact,%
 \end{enumerate}
 %
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-540}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-120}{}No, because \(\overline{\sigma\tau}(f) = f\circ\sigma\circ\tau\), but \(\overline{\sigma}\circ\overline{\tau}(f) = f\circ\tau\circ\sigma\). Thus, if our group is not commutative, this is not a group action.%
-\item\hypertarget{group-act-comp}{}Yes, because the action gives a permutation of the functions and \(\overline{\sigma\tau}(f) = f\circ(\sigma\circ)^{-1} = f\circ\tau^{-1}\circ\sigma^{-1}\), while \(\overline{\sigma}\circ\overline{\tau}(f) = f\circ\tau^{-1}\circ\sigma^{-1}\). Thus this is a group action.%
-\item\hypertarget{li-122}{}The action proposed in \hyperlink{group-act-comp}{part~6.4.7.b} is the same as our action on colorings. To see why, if%
-\begin{align*}
-&\{(1,g(1)),(2,g(2)),\dots,(n,g(n))\}\\
-=&\{(\sigma(1),f(1)),(\sigma(2),f(2)),\dots,(\sigma(n),f(n))\}\text{,}
-\end{align*}
-and \(i=\sigma(j)\), then \(j=\sigma^{-1}(i)\) and so%
-\begin{equation*}
-(i,g(i)) = (\sigma(j),f(j)) = (\sigma(\sigma^{-1}(i)),f(\sigma^{-1}(i)) = (i,f(\sigma^{-1}(i))\text{.}
-\end{equation*}
-Therefore, \(g=f\circ \sigma^{-1}\).%
-\end{enumerate}
-%
 \item[8.]\marginsymbol[-1em]{} \hypertarget{exercise-61}{}Find the number of ways to color the faces of a tetrahedron with two colors.%
 \par\smallskip
 \item[9.]\marginsymbol[-1em]{} \hypertarget{exercise-62}{}Find the number of ways to color the faces of a tetrahedron with four colors so that each color is used.%
@@ -4383,9 +3903,6 @@ Therefore, \(g=f\circ \sigma^{-1}\).%
 \par\smallskip
 \item[14.]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \hypertarget{exercise-67}{}Show that if \(H\) is a subgroup of the group \(G\), then \(H\) acts on \(G\) by \(\sigma(\tau) = \sigma\circ\tau\) for all \(\sigma\) in \(H\) and \(\tau\) in \(G\). What is the size of an orbit of this action? How does the size of a subgroup of a group relate to the size of the group?%
 \par\smallskip
-\par\smallskip
-\noindent\textbf{Solution.}\hypertarget{solution-541}{}\quad
-Composition of the elements of a permutation group on the left by \(\sigma\) permutes the elements of the group, so \(\overline{\sigma}\) is a permutation of \(G\). The size of an orbit is the size of the subgroup, because if \(\sigma\circ\tau_1 = \sigma\circ\tau_2\), then \(\tau_1 = \tau_2\). Since \(G\) is the union of the orbits of \(H\) and these orbits all have the same size, by the quotient principle the size of \(H\) divides the size of \(G\).%
 \end{exerciselist}
 %
 %% A lineskip in table of contents as transition to appendices, backmatter
@@ -5056,14 +4573,813 @@ The point to the last problem is that we can use the exponential formula in reve
 \par\smallskip
 \end{exerciselist}
 \typeout{************************************************}
-\typeout{Appendix D Selected Hints}
+\typeout{Appendix D Hints to Selected Problems}
 \typeout{************************************************}
-\chapter[{Selected Hints}]{Selected Hints}\label{appendix-4}
+\chapter[{Hints to Selected Problems}]{Hints to Selected Problems}\label{appendix-4}
+\begin{itemize}[itemsep=1em]
+\item[\textbf{1}.]Answer the questions in \hyperref[baseball2]{Problem~\ref{baseball2}} for the case of five schools.%
+
+\item[\textbf{3}.]For each kind of bread, how many sandwiches are possible?%
+
+\item[\textbf{6}.]Try to solve the problem first with a two-scoop cone. (Look for an earlier problem that is analogous.) Then, for each two scoop cone, in how many ways can you put on a top scoop?%
+
+\item[\textbf{7.a}.]Ask yourself ``how many choices do we have for \(f(1)\)?'' Then ask how many choices we have for \(f(2)\).%
+
+\item[\textbf{7.b}.]It may not be practical to write down rules for all the functions for this problem. But you could ask yourself how many choices we have for \(f(1)\), how many we have for \(f(2)\) and how many we have for \(f(3)\).%
+
+\item[\textbf{7.c}.]If you are choosing a function \(f\), how many choices do you have for \(f(a)\)? Then how many choices do you have for \(f(b)\)?%
+
+\item[\textbf{8.a}.]You know how to figure out in how many ways they could make a list of three flavors out of the twelve. But each set of three flavors can be listed in a number of different ways. Try to figure out in how many ways a set of three flavors can be listed, and then try to see how this helps you.%
+
+\item[\textbf{8.b}.]Try to break the problem up into cases you can solve by previous methods; then figure out how to get the answer to the problem by using these answers for the cases.%
+
+\item[\textbf{12.a}.]Suppose you have a list in alphabetical order of names of the members of the club. In how many ways can you pair up the first person on the list? In how many ways can you pair up the next person who isn't already paired up?%
+
+\item[\textbf{15}.]In how many ways may you assign the men to their rows? The women? Once a woman and a man have a row to share, in how many ways may they choose their seats?%
+
+\item[\textbf{18}.]Try applying the product principle in the case n = 2 and n = 3. How might you apply it in general?%
+
+\item[\textbf{19}.]Ask yourself if either the sum principle or product principle applies.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Remember that zero is a number.%
+
+\item[\textbf{20}.]Do you see an analogy between this problem and any of the previous problems?%
+
+\item[\textbf{26.a}.]For each part of this problem, think about how many arrows are allowed to enter a vertex representing a member of \(Y\).%
+
+\item[\textbf{28}.]The problem is asking you to describe a one-to-one function from the set of binary representations of numbers between \(0\) and \(2^n-1\) onto the set of subsets of the set \([n]\). Write down these two sets for \(n = 2\). They should both have four elements. The set of binary representations should contain the string \(00\). You could think of this as the instruction ``take no ones and take no twos.'' In that context, what could you think of the string \(11\) as standing for? This should help you describe a function. Of course now you have to figure out how to show it is one-to-one and onto.%
+
+\item[\textbf{31}.]Starting with the row 1 8 28 56 70 56 28 8 1, put dots below it where the elements of row 9 should be. Then put dots below that where the elements of row 10 should be. Do the same for rows 11 and 12. Mark the dot where row 12 should appear. Now mark the dots you need in row 11 to compute the entry in column 3 of row 12. Now mark the dots you need in row 10 to compute the marked entries in row 11. Do the same for rows 9 and 8. Now you should be able to see what you need to do.%
+
+\item[\textbf{32.a}.]Begin by trying to figure out what the entries just above the diagonal of the rectangle are. After that, what other entries can you figure out?%
+
+\item[\textbf{32.b}.]See if you can figure out what the entries in column \(-1\) have to be.%
+
+\item[\textbf{32.c}.]What does the sum of two consecutive values in row \(-1\) have to be? Could this sum depend on which two consecutive values we take? Is there some value of row \(-1\) that we could choose arbitrarily? Now what about row \(-2\)? Can we make arbitrary choices there? If so, how many can we make, and is their position arbitrary?%
+
+\item[\textbf{36}.]The first thing you need to decide is ``What are the two sets whose elements we are counting?'' Then it will be easier to think of a bijection between these two sets. It turns out that these two sets are sets of sets!%
+
+\item[\textbf{37}.]Ask yourself ``What is a problem like this doing in the middle of a bunch of problems about counting subsets of a set? Is it related, or is it supposed to gives us a break from sets?''%
+
+\item[\textbf{38}.]The problem suggests that you think about how to get a list from a seating arrangement. Could every list of n distinct people come from a seating chart? How many lists of n distinct people are there? How many lists could we get from a given seating chart by taking different starting places?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: For a different way of doing the problem, suppose that you have chosen one person, say the first one in a list of the people in alphabetical order by name. Now seat that person. Does it matter where they sit? In ways can you seat the remaining people? Does it matter where the second person in alphabetical order sits?%
+
+\item[\textbf{39.a}.]A block consists of all permutations of some subset \(\{a_1 , a_2, \ldots, a_k \}\) of \(S\). How many permutations are there of the set \(\{a_1 , a_2, \ldots, a_k \}\)?%
+
+\item[\textbf{39.c}.]What sets are listed, and how many times is each one listed if you take one list from each row of \hyperref[tab_permsof3]{Table~\ref{tab_permsof3}}? How does this choice of lists give you the bijection in this special case?%
+
+\item[\textbf{39.d}.]You can make good use of the product principle here.%
+
+\item[\textbf{40.b}.]The coach is making a sequence of decisions. Can you figure out how many choices the coach has for each decision in the sequence?%
+
+\item[\textbf{40.c}.]As with any counting problem whose context does not suggest an approach, it is useful to ask yourself if you could decompose the problem into simpler parts by using either the sum or product principle.%
+
+\item[\textbf{43}.]How could we get a list of beads from a necklace?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: When we cut the necklace and string it out on a table, there are 2n lists of beads we could get. Why is it \(2n\) rather than \(n\)?%
+
+\item[\textbf{44.a}.]You might first choose the pairs of people. You might also choose to make a list of all the people and then take them by twos from the list.%
+
+\item[\textbf{44.b}.]You might first choose ordered pairs of people, and have the first person in each pair serve first. You might also choose to make a list of all the people and then take them by twos from the list in order.%
+
+\item[\textbf{45}.]It might be helpful to just draw some pictures of the possible configurations. There aren't that many.%
+
+\item[\textbf{47}.]Note that we must walk at least ten blocks, so ten is the smallest number of blocks possible. In how many of those ten blocks must we walk north?%
+
+\item[\textbf{48.b}.]In \hyperref[blockwalking]{Problem~\ref{blockwalking}} you saw that we had to make ten choices of north or east, choosing north four times.%
+
+\item[\textbf{48.c}.]This problem is actually a bit tricky. What happens to the answer if \(i \gt m\) or \(j \gt n\)? Remember that paths go up or to the right.%
+
+\item[\textbf{49.a}.]Where can you go from (0,0) in one step? In two steps? In any of these cases, what can you say about the sum of the coordinates of a point you can get to? Can you find any other relationship between the x- and y-coordinates of a point you can get to? For example, can you get to the point (1, 3)?%
+
+\item[\textbf{49.c}.]How many choices do you have to make in order to choose a path?%
+
+\item[\textbf{50.c}.]In each part, each such sequence corresponds to a path that can't cross over (but may touch) a certain line.%
+
+\item[\textbf{51.b}.]Given a path from \((0, 0)\) to \((n, n)\) which touches or crosses the line \(y = x + 1\), how can you modify the part of the path from \((0, 0)\) to the first touch of \(y = x + 1\) so that the modified path starts instead at \((-1, 1)\)? The trick is to do this in a systematic way that will give you your bijection.%
+
+\item[\textbf{51.c}.]A path either touches the line \(y = x + 1\) or it doesn't. This partitions the set of paths into two blocks.%
+
+\item[\textbf{52.b}.]Look back at the definition of a Dyck Path and a Catalan Path.%
+
+\item[\textbf{52.c}.]What makes this part difficult is understanding how we are partitioning the paths. As an example, \(B_0\) is the set of all paths that have no upsteps following the last absolute minimum. Can such a path have downsteps after the last absolute minimum? (The description we gave of \(B_0\) is not succinct enough to be the answer to the second question of this part.) As another example \(B_1\) is the set of all paths that have exactly one upstep and perhaps some downsteps after the last absolute minimum. Is it possible, though, for a path in \(B_1\) to have any downsteps after the last absolute minimum? A path in \(B_2\) has exactly two upsteps after its last absolute minimum. If is possible to have one downstep after the last absolute minimum, but it has to be in a special place. What place is that? Now to figure out how many parts our partition has, we need to know the maximum number of upsteps a path can have following its last absolute minimum. What is this maximum? It might help to draw some pictures with \(n = 5\) or \(6\). In particular, is it possible that all upsteps occur after the last absolute minimum?%
+
+\item[\textbf{52.e}.]Using \(d\) for down and \(u\) for up, we could have \(uudduuddudud\) as our Catalan path. Suppose that \(i = 5\). The fifth upstep is the \(u\) in position 9. Thus \(F = uudduudd\), \(U = u\), and \(B = dud\). Now \(BU F\) is \(duduuudduudd\). This is a Dyck path that begins by going below the \(x\)-axis. The \(d\)'s in positions 1 and 3 take the path to the \(y\)-coordinate \(-1\). Then the \(y\) coordinate climbs to 2, goes back to 0, up to 2 again, and finally down to 0. So the absolute minimum is \(-1\), and it occurs in the first and third position. There are five \(u\)'s after the third positon. So this Dyck path is in the block \(B_5\) of our partition. Now comes the crucial question. Why were there five u's after that last absolute minimum in position 3? Try with the same path and \(i = 3\). Figure out why there are three u's after the last absolute minimum in the resulting path. All this discussion should explain why when \(i = 5\), the set of all Catalan paths is mapped into the set \(B_5\). Keeping \(i = 5\) for a while, try to see why this correspondence between Catalan paths and \(B_5\) is a bijection. Then, if you need to, do the same thing with \(i = 3\). This should give you enough insight to do the general case.%
+
+\item[\textbf{55}.]What would the lower limit of the sum have to be for this problem to be a routine application of the binomial theorem?%
+
+\item[\textbf{56}.]What does the binomial theorem give you for \((x - y)n\)?%
+
+\item[\textbf{57}.]Consider \((x + y)m (x + y)n\).%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: What does \(\binom{m+n}{k}\) count? What does \(\binom{m}{i}\binom{m}{k-1}\) count?%
+
+\item[\textbf{58}.]For example when \(n = 3\), we have \(\binom{3}{0} = \binom{3}{3}\) and \(\binom{3}{1} = \binom{3}{2}\).  The number of subsets of even size is \(\binom{3}{0}+\binom{3}{2}\) and the number of subsets of odd size is \(\binom{3}{1} + \binom{3}{3}\), and the two sums can be paired off into equal terms.  When we subtract the number of subsets of odd size from the number of subsets of even size, the pairing also gives us \(\binom{3}{0} - \binom{3}{1} + \binom{3}{2} - \binom{3}{3} =
+0\).%
+
+\item[\textbf{59}.]Take the derivative of something interesting.%
+
+\item[\textbf{61}.]To prove that each function from a set S of size n to a set of size less than n is not one-to-one, we must prove that regardless of the function \(f\) that we choose, there are always two elements, say \(x\) and \(y\), such that \(f(x) = f(y)\).%
+
+\item[\textbf{62}.]The previous exercise could help you prove that if \(f\) is one-to-one, then it is onto.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: The sum principle can help you show that if \(f\) is an onto function, then \(f\) is one-to-one.%
+
+\item[\textbf{63}.]The statement of the generalized pigeonhole principle involves the number of elements in a block, so a counting principle is likely to help you.%
+
+\item[\textbf{64}.]You may choose a specific number for \(n\) if you want to. Notice that the last two digits of the powers of a prime other than two cannot represent an even number.%
+
+\item[\textbf{65}.]While this sounds like a pigeonhole principle problem, the ordinary pigeonhole principle doesn't guarantee three of something.%
+
+\item[\textbf{67}.]What usually makes it hard for students to start this problem is the fact that we just defined what \(R(4, 4)\) is, and not what it means for a number \emph{not} to be \(R(4, 4)\). So to get started, try to write down what it means to say \(R(4, 4)\) is not 8. You will see that there are two things that can keep \(R(4, 4)\) from being 8. You need to figure out which one happens and explain why. One such explanation could involve the graph \(K_8\) .%
+
+\item[\textbf{68}.]Review \hyperref[R_3_3_]{Problem~\ref{R_3_3_}} and your solution of it.%
+
+\item[\textbf{69}.]Let \(a_i\) be the number of acquaintances of person \(i\). Can you explain why the sum of the numbers \(a_i\) is even?%
+
+\item[\textbf{70}.]Often when there is a counter-example, there is one with a good deal of symmetry. (Caution: there is a difference between often and always!) One way to help yourself get a symmetric example, if there is one, is to put 8 vertices into a circle. Then, perhaps, you might draw green edges in some sort of regular fashion until it is impossible to draw another green edge between any two of the vertices without creating a green triangle.%
+
+\item[\textbf{71}.]In \hyperref[not_R_4_3]{Problem~\ref{not_R_4_3}} you showed that \(R(4, 3) \le 10\). In \hyperref[R_4_3_not8]{Problem~\ref{R_4_3_not8}} you showed that \(R(4, 3) \gt 8\). Thus \(R(4, 3)\) is either 9 or 10. Deciding which is the case is just plain hard. But there is a relevant problem we have done that we haven't used yet.%
+
+\item[\textbf{72}.]We wish to prove that \(\binom{n}{i} =\frac{n!}{i!(n-i)!}\). Mathematical induction allows us to assume that \(\binom{n-1}{j}=\frac{(n-1)!}{j! (n-1-j)!}\) for every \(j\)between 0 and \(n-1\). How does this put us into a position to use the Pascal relation? What special cases will be left over?%
+
+\item[\textbf{73}.]What sort of relationship do you know between values of the form \(\binom{n}{i}\) and values of the form \(\binom{n-1}{j}\)?%
+
+\item[\textbf{75}.]We did something rather similar in our example of the inductive proof that a set with \(n\) elements has \(2^n\) subsets. The work you did in a previous problem may be similar to part of what you need to do here.%
+
+\item[\textbf{76.a}.]This may look difficult because one can't decide in advance on whether to try to induct on \(m\), on \(n\), or on their sum. In some sense, it doesn't matter which you choose to induct on, though inducting on the sum would look more complicated. For most people inducting on \(n\) fits their way of working with exponents best.%
+
+\item[\textbf{76.b}.]Here it matters whether you choose to induct on \(m\) or \(n\). However, it matters only in the sense that you need to use more tools in one case. In one case, you are likely to need the rule \((cd)^n=c^n d^n\)(, which we haven't proved. (However, you might be able to prove that by induction!) In either case, you may find part (a) handy.%
+
+\item[\textbf{79}.]We didn't explicitly say to use induction here, but, especially in this context, induction is a natural tool to try here. But we don't have a variable n to induct on. That means you have to choose one. So what do you think is most useful. The number of blocks in the partition? The size of the first block of the partition? The size of the set we are partitioning? Or something else?%
+
+\item[\textbf{80}.]Think about how you might have gone from the number of double decker cones to the number of triple decker cones in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}}.%
+
+\item[\textbf{81}.]Perhaps the first thing one needs to ask is why proving that if there are \(\binom{m+n-2}{m-1}\)people in a room, then there are either at least \(m\) mutual acquaintances or at least \(n\) mutual strangers proves that \(R(m, n)\) exists. Can you see why this tells us that there is some number \(R\) of people such that if \(R\) people are in a room, then there are \(m\) mutual acquaintances or \(n\) mutual strangers? And why does that mean the Ramsey Number exists?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Naturally it should come as no surprise that you will use double induction, and you can use either form. As you think about how to use induction, the Pascal relation will come to mind. This suggests that you want to make assumptions involving \(\binom{m+n-3}{m-1}\) people in a room, or \(\binom{m+n-3}{m-2}\) people in a room. Now you have to figure out what these assumptions are and how they help you prove the result! Recall that we have made progress before by choosing one person and asking whether this person is acquainted with at least some number of people or unacquainted with at least some other number of people.%
+
+\item[\textbf{82}.]One expects to need double induction again here. But only because of the location of the problem and because the sum looks like double induction. And those reasons aren't enough to mean you have to use double induction. If you had this result in hand already, then you could us it with double induction to give a second proof that Ramsey Numbers exist.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: What you do need to show is that if there are \(R(m - 1, n) + R(m, n - 1)\) people in a room, then there are either m mutual acquaintances or n mutual strangers. As with earlier problems, it helps to start with a person and think about the number of people with whom this person is acquainted or nonacquainted. The generalized pigeonhole principle tells you something about these numbers.%
+
+\item[\textbf{83.b}.]If you could find four mutual acquaintances, you could assume person 1 is among them. And by the generalized pigeonhole principle and symmetry, so are two of the people to the first, second, fourth and eighth to the right. Now there are lots of possibilities for that fourth person. You now have the hard work of using symmetry and the definition of who is acquainted with whom to eliminate all possible combinations of four people. Then you have to think about nonacquaintances.%
+
+\item[\textbf{86.a}.]What is the definition of \(R(n, n)\)?%
+
+\item[\textbf{86.b}.]If you average a bunch of numbers and each one is bigger than one, what can you say about the average?%
+
+\item[\textbf{86.c}.]Note that there are \(2^{\binom{n}{2}}\) graphs on a set of \(n\) vertices.%
+
+\item[\textbf{86.d}.]A notation for the sum over all colorings \(c\) of \(K_m\) is%
+\begin{equation*}
+\sum_{c:c\mbox{~is a coloring of~} K_m},
+\end{equation*}
+and a notation for the sum over all subsets \(N\) of \(M\) that have size \(n\) is%
+\begin{equation*}
+\sum_{N:N\subseteq M,~|N|=n}
+\end{equation*}
 %
-\backmatter
+
+\item[\textbf{86.e}.]If you interchange the order of summation so that you sum over subsets first and colorings second, you can take advantage of the fact that for a fixed subset \(N\) , you can count count the number of colorings in which it is monochromatic.%
+
+\item[\textbf{86.f}.]You have an inequality involving m and n that tells you that \(R(n, n) > m\). Suppose you could work with that inequality in order to show that if the inequality holds, then \(m\) is bigger than something. What could you conclude about \(R(n, n)\)?%
+
+\item[\textbf{87}.]Remember, a subset of \([n]\) either does or doesn't contain \(n\).%
+
+\item[\textbf{90.b}.]A first order recurrence for \(a_n\) gives us \(a_n\) as a function of \(a_{n-1}\).%
+
+\item[\textbf{91}.]Suppose you already knew the number of moves needed to solve the puzzle with \(n-1\)rings.%
+
+\item[\textbf{92}.]If we have \(n - 1\)circles drawn in such a way that they define \(r_{n-1}\) regions, and we draw a new circle, each time it crosses another circle, except for the last time, it finishes dividing one region into two parts and starts dividing a new region into two parts.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Compare \(r_n\) with the number of subsets of an \(n\)-element set.%
+
+\item[\textbf{98}.]You might try working out the cases \(n=2,3,4\) and then look for a pattern. Alternately, you could write \(a_{n-1}=b a_{n-2} + d\), substitute the right hand side of this expression into \(a_{n}=b a_{n-1} + d\) to get a recurrence involving only \(a_{n-2}\) , and then repeat a similar process with \(a_{n-2}\) and perhaps \(a_{n-3}\) and see a pattern that is developing.%
+
+\item[\textbf{102.a}.]There are several ways to see how to do this problem. One is to draw pictures of graphs with one edge, two edges, three edges, perhaps four edges and figure out the sum of the degrees. Another is to ask what deleting an edge does to the sum of the degrees. Another is to ask what a given edge ``contributes'' to the sum of the degrees.%
+
+\item[\textbf{102.b}.]To make your inductive step, think about what happens to a graph if you delete an edge.%
+
+\item[\textbf{102.d}.]Suppose that instead of summing the degree of \(v\) over all vertices \(v\), you sum some quantity defined for each edge \(e\) over all the edges.%
+
+\item[\textbf{103}.]Whatever you say should be consistent with what you already know about degrees of vertices.%
+
+\item[\textbf{108}.]What happens if you choose an edge and delete it, but not its endpoints?%
+
+\item[\textbf{109}.]One approach to the problem is to use facts that we already know about degrees, vertices and edges. Another approach is to try deleting an edge from a tree with more than one vertex and analyze the possible numbers of vertices of degree one in what is left over.%
+
+\item[\textbf{111}.]When you get to four and especially five vertices, draw all the unlabeled trees you can think of, and then figure out in how many different ways you can put labels on the vertices.%
+
+\item[\textbf{112.b}.]Do some examples.%
+
+\item[\textbf{112.c}.]Is it possible for \(a_1\) to be equal to one of the \(b_j\)s?%
+
+\item[\textbf{112.d}.]You have seen that the sequence \(b\) determines \(a_1\). Does it determine any other \(a_j\)s? If you knew all the \(a_j\)s and all the \(b_j\)s, could you reconstruct the tree? What are the possible values of \(b_1\)? \(b_j\)?%
+
+\item[\textbf{113}.]What vertex or vertices in the sequence \(b_1,b_2,\ldots,b_{n-1}\) can have degree 1?%
+
+\item[\textbf{115}.]If a vertex has degree 1, how many times does it appear in the Prüfer code of the tree? What about a vertex of degree 2?%
+
+\item[\textbf{116}.]How many vertices appear exactly once in the Prüfer code of the tree and how many appear exactly twice?%
+
+\item[\textbf{118}.]Think of selecting one edge of the tree at a time. Given that you have chosen some edges and have a graph whose connected components are trees, what is a good way to choose the next edge? To prove your method correct, use contradiction by assuming there is a spanning tree tree with lower total cost.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Think of selecting one edge of the tree at a time. But now do it in such a way that one connected component is a tree and the other connected components have just one vertex. What is a good way to make the component that is a tree into a tree with one more vertex? To prove your method works, use contradiction by assuming there is a spanning tree with lower total cost.%
+
+\item[\textbf{119.a}.]If you have a spanning tree of \(G\) that contains \(e\), is the graph that results from that tree by contracting \(e\) still a tree?%
+
+\item[\textbf{122.c}.]If you decide to put it on a shelf that already has a book, you have two choices of where to put it on that shelf.%
+
+\item[\textbf{122.e}.]Among all the places you could put books, on all the shelves, how many are to the immediate left of some book? How many other places are there?%
+
+\item[\textbf{123}.]How can you make sure that each shelf gets at least one book before you start the process described in \hyperref[bookcase]{Problem~\ref{bookcase}}?%
+
+\item[\textbf{124}.]What is the relationship between the number of ways to distribute identical books and the number of ways to distribute distinct books?%
+
+\item[\textbf{125}.]Look for a relationship between a multiset of shelves and a way of distributing identical books to shelves%
+
+\item[\textbf{126}.]Note that \(\binom{n+k-1}{k} = \binom{n+k-1}{n-1}\). So we have to figure out how choosing either \(k\) elements or \(n - 1\) elements out of \(n + k - 1\) elements constitutes the choice of a multiset. We really have no idea what set of \(n + k - 1\) objects to use, so why not use \([n + k - 1]\)? If we choose \(n - 1\) of these objects, there are \(k\) left over, the same number as the number of elements of our multiset. Since our multiset is supposed to be chosen from an \(n\)-element set, perhaps we should let the \(n\)-element set be \([n]\). From our choice of \(n - 1\) numbers, we have to decide on the multiplicity of 1 through \(n\). For example with \(n = 4\) and \(k = 6\), we have \(n+k-1=9\). Here, shown with underlines, is a selection of \(3=n-1\) elements from \([9]\): \(1, 2, \underline{3}, 4 \underline{5}, 6, 7, \underline{8}, 9\). How do the underlined elements give us a multiset of size 6 chosen from an [4]-element set? In this case, 1 has multiplicity 2, 2 has multiplicity 1, 3 has multiplicity 2, and 4 has multiplicity 1.%
+
+\item[\textbf{127}.]A solution to the equations assigns a nonnegative number to each of \(1,2,\ldots, m\) so that the nonnegative numbers add to \(r\). Does such an assignment have a combinatorial meaning?%
+
+\item[\textbf{128}.]Can you think of some way of guaranteeing that each recipient gets \(m\) objects (assuming \(k \ge mn\)) right at the beginning of the process of passing the objects out?%
+
+\item[\textbf{129}.]We already know how to place k distinct books onto n distinct shelves so that each shelf gets at least one. Suppose we replace the distinct books with identical ones. If we permute the distinct books before replacement, does that affect the final outcome? There are other ways to solve this problem.%
+
+\item[\textbf{130}.]Do you see a relationship between compositions and something else we have counted already?%
+
+\item[\textbf{131}.]If we line up \(k\) identical books, how many adjacencies are there in between books?%
+
+\item[\textbf{133}.]Imagine taking a stack of \(k\) books, and breaking it up into stacks to put into the boxes in the same order they were originally stacked. If you are going to use \(n\) boxes, in how many places will you have to break the stack up into smaller stacks, and how many ways can you do this?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: How many different bookcase arrangements correspond to the same way of stacking \(k\) books into \(n\) boxes so that each box has at least one book?%
+
+\item[\textbf{134}.]The number of partitions of \([k]\) into \(n\) parts in which \(k\) is not in a block relates to the number of partitions of \(k-1\) into some number of blocks in a way that involves \(n\). With this in mind, review how you proved Pascal's (recurrence) equation.%
+
+\item[\textbf{137}.]What if the question asked about six sandwiches and two distinct bags? How does having identical bags change the answer?%
+
+\item[\textbf{138}.]What are the possible sizes of parts?%
+
+\item[\textbf{139}.]Suppose we make a list of the \(k\) items. We take the first \(k_1\) elements to be the blocks of size 1. How many elements do we need to take to get \(k_2\) blocks of size two? Which elements does it make sense to choose for this purpose?%
+
+\item[\textbf{141}.]To see how many broken permutations of a \(k\) element set into \(n\) parts do not have \(k\) is a part by itself, ask yourself how many broken permutations of \([7]\) result from adding 7 to the one of the two permutations in the broken permutation \(\{14, 2356\}\).%
+
+\item[\textbf{142.b}.]Here it is helpful to think about what happens if you delete the entire block containing \(k\) rather than thinking about whether \(k\) is in a block by itself or not.%
+
+\item[\textbf{143}.]You can think of a function as assigning values to the blocks of its partition. If you permute the values assigned to the blocks, do you always change the function?%
+
+\item[\textbf{144}.]The Prüfer code of a labeled tree is a sequence of \(n-2\) entries that must be chose from the vertices that do not have degree 1. The sequence can be though of as a function from the set \([n-2]\) to the set of vertices that do not have degree 1. What is special about this function?%
+
+\item[\textbf{145}.]When you add the number of functions mapping onto \(J\) over all possible subsets \(J\) of \(N\), what is the set of functions whose size you are computing?%
+
+\item[\textbf{148}.]What if the \(j_i\)'s don't add to \(k\)?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Think about listing the elements of the \(k\)-element set and labeling the first \(j_1\) elements with label number 1.%
+
+\item[\textbf{149}.]The sum principle will help here.%
+
+\item[\textbf{150}.]How are the relevant \(j_i\)'s in the multinomial coefficients you use here different from the \(j_i\)'s in the previous problem.%
+
+\item[\textbf{151}.]Think about how binomial coefficients relate to expanding a power of a binomial and note that the binomial coefficient \(\binom{n}{k}\) and the multinomial coefficient \(\binom{n}{k,n-k}\) are the same.%
+
+\item[\textbf{152.a}.]We have related Stirling numbers to powers \(n^k\). How are binomial coefficients related to falling factorial powers?%
+
+\item[\textbf{152.b}.]In the equation \(\sum_{j=0}^n n^{\underline{j}}S(k,j) = n^k\), we might try substituting \(x\) for \(n\). However we don't know what \(\sum_{j=0}^x\) means when \(x\) is a variable. Is there anything other than \(n\) that makes a suitable upper limit for the sum? (Think about what you know about \(S(k,j)\).%
+
+\item[\textbf{153}.]For the last question, you might try taking advantage of the fact that \(x = x + 1 - 1\).%
+
+\item[\textbf{154}.]What does induction have to do with \hyperref[stirling1]{Equation~(\ref{stirling1})}?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: What could you assume inductively about \(x^{\underline{k-1}}\) if you were trying to prove \(x^{\underline{k}} = \sum_{n=0}^k s(k,n)x^n\)?%
+
+\item[\textbf{156.a}.]There is a solution for this problem similar to the solution to \hyperref[Stirlingfirst]{Problem~\ref{Stirlingfirst}}.%
+
+\item[\textbf{156.b}.]Is the recurrence you got familiar?%
+
+\item[\textbf{156.d}.]Show that \((-x)^{\underline{k}} = (-1)^k x^{\overline{k}}\) and \((-x)^{\overline{k}} = (-1)^k x^{\underline{k}}\).%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: The first hint lets you write an equation for \((-1)^k x^{\underline{k}}\) as a rising factorial of something else and then use what you know about expressing rising factorials in terms of falling factorials, after which you have to convert back to factorial powers of \(x\).%
+
+\item[\textbf{162}.]How can you start with a partition of k and make it into a new partition of \(k+1\) that is guaranteed to have a part of size one, even if the original partition didn't?%
+
+\item[\textbf{163}.]Draw a line through the top-left corner and bottom-right corner of the topleft box.%
+
+\item[\textbf{164}.]The largest part of a partition is the maximum number of boxes in a row of its Young diagram. What does the maximum number of boxes in a column tell us?%
+
+\item[\textbf{165}.]Draw all self conjugate partitions of integers less than or equal to 8.  Draw all partitions of integers less than or equal to 8 into distinct odd parts (many of these will have just one part). Now try to see how to get from one set of drawings to the other in a consistent way.%
+
+\item[\textbf{166}.]Draw the partitions of six into even parts. Draw the partitions of six into parts used an even number of times. Look for a relationship between one set of diagrams and the other set of diagrams. If you have trouble, repeat the process using 8 or even 10 in place of 6.%
+
+\item[\textbf{167}.]Draw a partition of ten into 4 parts. Assume each square has area one. Then draw a rectangle of area 40 enclosing your diagram that touches the top of your diagram, the left side of your diagram and the bottom of your diagram. How does this rectangle give you a partition of 30 into four parts?%
+
+\item[\textbf{168.c}.]Consider two cases, \(m' \gt m\) and \(m' = m\).%
+
+\item[\textbf{168.d}.]Consider two cases, \(n' \gt n\) and \(n' = n\).%
+
+\item[\textbf{169}.]Suppose we take two repetitions of this complementation process. What rows and columns do we remove from the diagram?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: To deal with an odd number of repetitions of the complementation process, think of it as an even number plus 1. Thus ask what kind of partition gives us the partition of one into one part after this complementation process.%
+
+\item[\textbf{170}.]How many compositions are there of \(k\) into n parts? What is the maximum number of compositions that could correspond to a given partition of \(k\) into \(n\) parts?%
+
+\item[\textbf{171.a}.]These two operations do rather different things to the number of parts, and you can describe exactly what only one of the operations does. Think about the Young diagram.%
+
+\item[\textbf{171.b}.]Think about the Young diagram. In only one of the two cases can you give an exact answer to the question.%
+
+\item[\textbf{171.c}.]Here the harder part requires that, after removal, you consider a range of possible numbers being partitioned and that you give an upper bound on the part size. However it lets you describe the number of parts exactly.%
+
+\item[\textbf{171.d}.]One of the two sets of partitions of smaller numbers from the previous part is more amenable to finding a recurrence than the other. The resulting recurrence does not have just two terms though.%
+
+\item[\textbf{171.h}.]If there is a sum equal to zero, there may very well be a partition of zero.%
+
+\item[\textbf{172}.]How does the number of compositions of \(k\) into \(n\) distinct parts compare to the number of compositions of \(k\) into \(n\) parts (not necessarily distinct)? What do compositions have to do with partitions?%
+
+\item[\textbf{173}.]While you could simply display partitions of 7 into three parts and partitions of 10 into three parts, we hope you won't. Perhaps you could write down the partitions of 4 into two parts and the partitions of 5 into two distinct parts and look for a natural bijection between them. So the hope is that you will discover a bijection from the set of partitions of 7 into three parts and the partitions of 10 into three distinct parts. It could help to draw the Young diagrams of partitions of 4 into two parts and the partitions of 5 into two distinct parts.%
+
+\item[\textbf{174}.]In the case \(k=4\) and \(n=2\), we have \(m=5\). In the case \(k = 7\) and \(n = 3\), we have \(m = 10\).%
+
+\item[\textbf{175}.]What can you do to a Young diagram for a partition of \(k\) into \(n\) distinct parts to get a Young diagram of a partition of \(k-n\) into some number of distinct parts?%
+
+\item[\textbf{176}.]For any partition of \(k\) into parts \(\lambda_1\), \(\lambda_2\), etc. we can get a partition of \(k\) into odd parts by factoring the highest power of two that we can from each \(\lambda_i\), writing \(\lambda_i = \gamma_i\cdot 2^k_i\).  Why is \(\gamma_i\) odd? Now partition \(k\) into \(2^{k_1}\) parts of size \(\gamma_1\), \(2^{k_2}\) parts of size \(\gamma_2\), etc. and you have a partition of \(k\) into odd parts.%
+
+\item[\textbf{177}.]Suppose we have a partition of \(k\) into distinct parts. If the smallest part, say \(m\), is smaller than the number of parts, we may add one to each of the \(m\) largest parts and delete the smallest part, and we have changed the parity of the number of parts, but we still have distinct parts. On the other hand, suppose the smallest part, again say \(m\), is larger than or equal to the number of parts. Then we can subtract 1 from each part larger than \(m\), and add a part equal to the number of parts larger than \(m\). This changes the parity of the number of parts, but if the second smallest part is \(m+1\), the resulting partition does not have distinct parts. Thus this method does not work. Further, if it did always work, the case \(k \ne \frac{3j^2+j}{2}\) would be covered also. However you can modify this method by comparing \(m\) not to the total number of parts, but to the number of rows at the top of the Young diagram that differ by exactly one from the row above. Even in this situation, there are certain slight additional assumptions you need to make, so this hint leaves you a lot of work to do. (It is reasonable to expect problems because of that exceptional case.) However, it should lead you in a useful direction.%
+
+\item[\textbf{183}.]Substitute something for \(A\), \(P\) and \(B\) in your formula from \hyperref[zerotothreefruits]{Problem~\ref{zerotothreefruits}}.%
+
+\item[\textbf{184}.]For example, to get the cost of the fruit selection \(AP B\) you would want to get \(x^{20} x^{25} x^{30} = x^{75}\).%
+
+\item[\textbf{186}.]Consider the example with \(n = 2\). Then we have two variables, \(x_1\) and \(x_2\) .  Forgetting about \(x_2\) , what sum says we either take \(x_1\) or we don't? Forgetting about \(x_1\) , what sum says we either take \(x_2\) or we don't? Now what product says we either take \(x_1\) or we don't \emph{and} we either take \(x_2\) or we don't?%
+
+\item[\textbf{188}.]For the last two questions, try multiplying out something simpler first, say \((a_0 + a_1 x + a_2 x^2 )(b_0 + b_1 x + b_2 x^2 )\) . If this problem seems difficult the part that seems to cause students the most problems is converting the expression they get for a product like this into summation notation. If you are having this kind of problem, expand the product \((a_0 + a_1 x + a_2 x^2 )(b_0 + b_1 x + b_2 x^2 )\) and then figure out what the coefficient of \(x^2\) is. Try to write that in summation notation.%
+
+\item[\textbf{189}.]Write down the formulas for the coefficients of \(x^0\), \(x^1\), \(x^2\) and \(x^3\) in%
+\begin{equation*}
+\left(\sum_{i=0}^n a_ix^i\right)\left(\sum_{j=0}^m b_jx^j\right)\text{.}
+\end{equation*}
 %
+
+\item[\textbf{190}.]How is this problem different from \hyperref[coeffinproduct2]{Problem~\ref{coeffinproduct2}}? Is this an important difference from the point of view of the coefficient of \(x^k\)?%
+
+\item[\textbf{191}.]If this problem appears difficult, the most likely reason is because the definitions are all new and symbolic. Focus on what it means for \(\sum_{k=0}^\infty c_kx^k\) to be the generating function for ordered pairs of total value \(k\). In particular, how do we get an ordered pair with total value \(k\)? What do we need to know about the values of the components of the ordered pair?%
+
+\item[\textbf{192.b}.]You might try applying the product principle for generating functions to an appropriate power of the generating function you got in the first part of this problem.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: In \hyperref[multiset]{Problem~\ref{multiset}} you found a formula for the number of \(k\)-element multisets chosen from an \(n\)-element set. Suppose you use this formula for \(a_k\) in \(\sum_{k=0}^\infty a_kx^k\). What do you get the generating function for?%
+
+\item[\textbf{195}.]While you could use calculus techniques, there is a much simpler approach. Note that \(1 + x = 1 - (-x)\).%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Can you see a way to use \hyperref[multisetgenfn]{Problem~\ref{multisetgenfn}}?%
+
+\item[\textbf{197}.]Look for a power of a polynomial to get started.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: The polynomial referred to in the first hint is a quotient of two polynomials.  The power of the denominator can be written as a power series.%
+
+\item[\textbf{198}.]Intepret \hyperref[candygenfn]{Problem~\ref{candygenfn}} in terms of multisets.%
+
+\item[\textbf{199.e}.]When you factor out \(x_1 x_2\cdots x_n\) from the enumerator of trees, the result is a sum of terms of degree \(n - 2\). (The degree of \(x_1^{i_1} x_2^{i_2} \cdots x_n^{i_n}\) is \(i_1 + i_2 + \cdots + i_n\).)%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Write down the picture (using \(x\)s) of a tree on five vertices with two vertices of degree one, of one with three vertices of degree one, and with four vertices of degree 1. Factor \(x_1 x_2 x_3 x_4 x_5\) out of the picture and look at what is left.  How is it related to your vertices of degree one? Now remove the vertices of degree 1 from the tree and write down the picture of the tree that remains.  What is special about the vertices of degree 1 of that tree. (You can just barely learn something from this with five vertex trees, so you might want to experiment a bit with six or seven vertex trees.)%
+
+\item[\textbf{200}.]This is a good place to apply the product principle for picture enumerators.%
+
+\item[\textbf{201.a}.]The product principle for generating functions helps you break the generating function into a product of ten simpler ones.%
+
+\item[\textbf{201.b}.]\(m\) was 10 in the previous part of this problem.%
+
+\item[\textbf{202}.]Think about conjugate partitions.%
+
+\item[\textbf{203.a}.]Don't be afraid of writing down a product of infinitely many power series.%
+
+\item[\textbf{203.b}.]From the fifth factor on, there is no way to choose a q i that has i nonzero and less than five from the factor.%
+
+\item[\textbf{203.d}.]Describe to yourself how to get the coefficient of a given power of \(q\).%
+
+\item[\textbf{204}.]If infinitely many of the polynomials had a nonzero coefficient for \(q\), would the product make any sense?%
+
+\item[\textbf{205}.]\((1 + q^2 + q^4 )(1 + q^3 + q^9 )\) is the generating function for partitions of an integer into at most two twos and at most two threes.%
+
+\item[\textbf{206}.]\((1 + q^2 + q^4 )(1 + q^3 + q^9 )\) is the generating function for partitions of an integer into at most two twos and at most two threes. (This is intentionally the same hint as in the previous problem, but it has a different point in this problem.)%
+
+\item[\textbf{207}.]In the power series \(\sum_{j=0}^\infty q^{2ij}\), the \(2ij\) has a different interpretation if you think of it as \((2i) \cdot j\) or if you think of it as \(i \cdot (2j)\). P%
+
+\item[\textbf{208}.]Note that%
+\begin{equation*}
+\frac{1-q^2}{1-q}\cdot \frac{1-q^4}{1-q^2}\cdot \frac{1-q^6}{1-q^3}\cdot \frac{1-q^8}{1-q^4} = \frac{(1-q^6)(1-q^8)}{(1-q)(1-q^3)} \text{.}
+\end{equation*}
+%
+
+\item[\textbf{209}.]Note that \(q^i + q^{3i} + q^{5i} + \cdots = q^i (1 + q^2 + q^4 + \cdots)\).%
+
+\item[\textbf{210.a}.]We want to calculate the number of partitions whose Young diagrams fit into a two by two square. These partitions have at most two parts and the parts have size at most two. Thus they are partitions of 1, 2, 3, or 4. However not all partitions of 3 or 4 have diagrams that fit into a two by two square. Try writing down the relevant diagrams.%
+
+\item[\textbf{210.b}.]They are the generating function for the number of partitions whose Young diagram fits into a rectangle \(n - 1\) units wide and 1 unit deep or into a rectangle 1 unit wide and \(n - 1\) units deep respectively.%
+
+\item[\textbf{210.c}.]How can you get a diagram of a partition counted by partition is counted by \(\qchoose{m+n}{n}\) from one whose partition is counted by \(\qchoose{m+n}{m}\)?%
+
+\item[\textbf{210.e.iii}.]Think about geometric operations on Young Diagrams%
+
+\item[\textbf{210.f}.]How would you use the Pascal recurrence to prove the corresponding result for binomial coefficients?%
+
+\item[\textbf{210.g}.]For finding a bijection, think about lattice paths.%
+
+\item[\textbf{210.h}.]If you could prove \(\qchoose{m+n}{n}\) is a polynomial function of \(q\), what would that tell you about how to compute the limit as \(q\) approaches \(-1\)?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Try computing a table of values of \(\qchoose{m+n}{n}\) with \(q=-1\) by using the recurrence relation. Make a pretty big table so you can see what is happening.%
+
+\item[\textbf{211.c}.]You may run into a product of the form \(\sum_{i=0}^\infty a^ix^i\sum_{j=0}^\infty b^jx^j\). Note that in the product, the coefficient of \(x^k\) is \(\sum_{i=0}^k a^ib^{k-i} = \sum_{i=0}^k \frac{a^i}{b^i}\).%
+
+\item[\textbf{214}.]Our recurrence becomes \(a_n = a_{n-1} + a_{n-2}\).%
+
+\item[\textbf{217}.]%
+\begin{equation*}
+\frac{5x+1}{(x-3)(x-5)} = \frac{cx+5c+dx-3d}{(x-3)(x-5)}
+\end{equation*}
+gives us%
+\begin{align*}
+5x \amp = cx+dx\\
+1 \amp= 5c-3d\text{.}
+\end{align*}
+%
+
+\item[\textbf{218}.]To have%
+\begin{equation*}
+\frac{ax+b}{(x-r_1)(x-r_2)} = \frac{c}{x-r_1} + \frac{d}{x-r_2}
+\end{equation*}
+we must have%
+\begin{equation*}
+cx-r_2c+dx-r_1d =ax+b\text{.}
+\end{equation*}
+%
+
+\item[\textbf{221}.]You can save yourself a tremendous amount of frustrating algebra if you arbitrarily choose one of the solutions and call it \(r_1\) and call the other solution \(r_2\) and solve the problem using these algebraic symbols in place of the actual roots.\footnote{We use the words roots and solutions interchangeably.\label{fn-15}} Not only will you save yourself some work, but you will get a formula you could use in other problems. When you are done, substitute in the actual values of the solutions and simplify.%
+
+\item[\textbf{222.a}.]Once again it will save a lot of tedious algebra if you use the symbols \(r_1\) and \(r_2\) for the solutions as in \hyperref[fractionFibonacci]{Problem~\ref{fractionFibonacci}} and substitute the actual values of the solutions once you have a formula for \(a_n\) in terms of \(r_1\) and \(r_2\).%
+
+\item[\textbf{222.d}.]Think about how the binomial theorem might help you.%
+
+\item[\textbf{224.a}.]A Catalan path could touch the \(x\)-axis several times before it reaches \((2n, 0)\).  Its first touch can be any point \((2i, 0)\) between \((2, 0)\) and \((2n, 0)\). For the path to touch first at \((2i, 0)\), the path must start with an upstep and then proceed as a Dyck path from \((1, 1)\) to \((2i - 1, 1)\). From there it must take a downstep. Can you see a bijection between such Dyck paths and Catalan paths of a certain kind?%
+
+\item[\textbf{224.b}.]Does the right-hand side of the recurrence remind you of some products you have worked with?%
+
+\item[\textbf{224.c}.]%
+\begin{equation*}
+\frac{1\cdot 3\cdot 5\cdots (2i-3)}{i!} = \frac{(2i-2)!}{(i-1)!2^i i!}\text{.}
+\end{equation*}
+%
+
+\item[\textbf{226}.]Try drawing a Venn Diagram.%
+
+\item[\textbf{228}.]Try drawing a Venn Diagram.%
+
+\item[\textbf{231.b}.]For each student, how big is the set of backpack distributions in which that student gets the correct backpack?  It might be a good idea to first consider cases with \(n=3\), \(4\), and \(5\).%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: For each pair of students (say Mary and Jim, for example) how big is the set of backpack distributions in which the students in this pair get the correct backpack. What does the question have to do with unions or intersections of sets. Keep on increasing the number of students for which you ask this kind of question.%
+
+\item[\textbf{232}.]Try induction.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: We can apply the formula of \hyperref[twosetintersection]{Problem~\ref{twosetintersection}} to get%
+\begin{align*}
+\left|\bigcup_{i=1}^n A_i \right| \amp = \left|\left(\bigcup_{i=1}^{n-1} A_i\right) \cup A_n \right| \\
+\amp = \left| \bigcup_{i=1}^{n-1} A_i\right| + |A_n| - \left|\left( \bigcup_{i=1}^{n-1} A_i\right) \cap A_n\right|\\
+\amp = \left| \bigcup_{i=1}^{n-1} A_i\right| + |A_n| - \left|\bigcup_{i=1}^{n-1} A_i \cap A_n\right|
+\end{align*}
+%
+
+\item[\textbf{233.b}.]Let \(T\) be the set of all \(i\) such that \(x \in A_i\). In terms of \(x\), what is different about the \(i\) in \(T\) and those not in \(T\)?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: You may come to a point where the binomial theorem would be helpful.%
+
+\item[\textbf{235}.]Notice that it is straightforward to figure out how many ways we may pass out the apples so that child \(i\) gets five or more apples: give five apples to child \(i\) and then pass out the remaining apples however you choose. And if  we want to figure out how many ways we may pass out the apples so that a given set \(C\) of children each get five or more apples, we give five to each child in \(C\) and then pass out the remaining \(k-5|C|\) apples however we choose.%
+
+\item[\textbf{236}.]Start with two questions that can apply to any inclusion-exclusion problem. Do you think you would be better off trying to compute the size of a union of sets or the size of a complement of a union of sets? What kinds of sets (that are conceivably of use to you) is it easy to compute the size of? (The second question can be interpreted in different ways, and for each way of interpreting it, the answer may help you see something you can use in solving the problem.)%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Suppose we have a set \(S\) of couples whom we want to seat side by side. We can think of lining up \(|S|\) couples and \(2n - 2|S|\) individual people in a circle.  In how many ways can we arrange this many items in a circle?%
+
+\item[\textbf{237}.]Reason somewhat as you did in \hyperref[relaxedmenage]{Problem~\ref{relaxedmenage}}, noting that if the set of couples who do sit side-by-side is nonempty, then the sex of the person at each place at the table is determined once we seat one couple in that set.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Think in terms of the sets \(A_i\) of arrangements of people in which couple \(i\) sits side-by-side. What does the union of the sets \(A_i\) have to do with the problem?%
+
+\item[\textbf{239}.]What does \hyperref[numontofun]{Problem~\ref{numontofun}} have to do with this question?%
+
+\item[\textbf{242.a}.]For each edge in \(F\) to connect two vertices of the same color, we must have all the vertices in a connected component of the graph  with vertex set \(V\) and edge set \(F\) colored the same color.%
+
+\item[\textbf{242.c}.]How does the number you are trying to compute relate to the union of the sets \(A_i\)?%
+
+\item[\textbf{243}.]One way to get a proper coloring of \(G-e\) is to start with a proper coloring of \(G\) and remove \(e\). But there are other colorings of \(G\) that become proper when you remove \(e\).%
+
+\item[\textbf{246}.]One approach would be to try to guess the result by doing a bunch of examples and use induction to prove you are right. If you try this, what will you be able to use to make the induction step work? There are other approaches as well.%
+
+\item[\textbf{253.a}.]What do you want \(\varphi^n\circ\varphi^{-1}\) to be?%
+
+\item[\textbf{254}.]If \(\sigma^i = \sigma^j\) and \(i \ne j\), what can you conclude about \(\iota\)?%
+
+\item[\textbf{256.b}.]What does it mean for one function to be the inverse of another one?%
+
+\item[\textbf{261}.]Once you know where the corners of the square go under the action of an isometry, how much do you know about the isometry?%
+
+\item[\textbf{264}.]In how many ways can you choose a place to which you can move vertex 1? Having done that, in how many ways can you place the three vertices adjacent to vertex 1?%
+
+\item[\textbf{265.a}.]In how many ways can you choose a place to which you can move vertex 1? Having done that, in how many ways can you place the three vertices adjacent to vertex 1?%
+
+\item[\textbf{265.b}.]Why is it sufficient to focus on permutations that take vertex 1 to itself?%
+
+\item[\textbf{270}.]If a subgroup contains, say, \(\rho^3\) and some flip, how many elements of \(D_4\) must it contain?%
+
+\item[\textbf{272}.]If the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) does not have repeated elements but the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i)\ \sigma^{n+1}(i))\) does have repeated elements, then which element or elements are repeats?%
+
+\item[\textbf{277}.]The element \(k\) is either in a cycle by itself or it isn't.%
+
+\item[\textbf{286}.]Before you try to show that \(\overline{\overline{\sigma}}\) actually is a permutation of the colorings, it would be useful to verify the second part of the definition of a group action, namely that \(\overline{\overline{\sigma}}\circ\overline{\overline{\varphi}} = \overline{\overline{\sigma\circ\varphi}}\).%
+
+\item[\textbf{289}.]If \(z \in Gx\) and \(z \in Gy\) , how can you use elements of \(G\) to explain the relationship between \(x\) and \(y\)?%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: Suppose \(\sigma\) is a fixed member of \(G\). As \(\tau\) ranges over \(G\), which elements of \(G\) occur as \(\tau\sigma\)?%
+
+\item[\textbf{295}.]How does the size of a multiorbit compare to the size of \(G\)?%
+
+\item[\textbf{301}.]We are asking for the number of orbits of some group on lists of four \(R\)s, six \(B\)s, and seven \(G\)s.%
+
+\item[\textbf{305}.]There are five kinds of elements in the rotation group of the cube. For example, there are six rotations by 90 degrees or 270 degrees around an axis connecting the centers of two opposite faces and there are 8 rotations (of 120 degrees and 240 degrees, respectively) around an axis connecting two diagonally opposite vertices.%
+
+\item[\textbf{306}.]Is it possible for a nontrivial rotation to fix any coloring?%
+
+\item[\textbf{309}.]There are 48 elements in the group of automorphisms of the graph.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: For this problem, it may be easier to ask which group elements fix a coloring rather than which colorings are fixed by a group element.%
+
+\item[\textbf{326}.]The group of automorphisms of the graph has 48 elements and contains \(D_6\) as a subgraph.%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: The permutations with four one-cycles and the two-cycle \((1\ 4)\), \((2\ 5)\), or \((3\ 6)\) are in the group of automorphisms. Once you know the cycle structure of \(D_6\) and \((1\ 4)D_6 = \{(1\ 4)\sigma | \sigma \in D_6\}\), you know the cycle structure of every element of the group.%
+
+\item[\textbf{327}.]What does the symmetric group on five vertices have to do with this problem?%
+
+\item[\textbf{329.c}.]In the relation of a function, how many pairs \((x, f (x))\) have the same \(x\)-value?%
+
+\item[\textbf{332}.]For the second question, how many arrows have to leave the empty set? How many arrows have to leave a set of size one?%
+
+\item[\textbf{339}.]What is the domain of \(g \circ f\)?%
+
+\item[\textbf{345}.]If we have scoops of vanilla, chocolate, and strawberry sitting in a circle in a dish, can we distinguish between VCS and VSC?%
+
+\item[\textbf{349}.]To show a relation is an equivalence relation, you need to show it satisfies the definition of an equivalence relation.%
+
+\item[\textbf{353}.]To get you started, in \hyperref[roundtable]{Problem~\ref{roundtable}} the equivalence classes correspond to seating arrangements.%
+
+\item[\textbf{361}.]You've probably guessed that the sum is \(n^2\). To prove this by contradiction, you have to assume it is false, that is, that there is an \(n\) such that \(1 + 3 + 5 + \cdots + 2n - 1 \ne n^2\). Then the method of \hyperref[subsetsbysmallestcounterexample]{Problem~\ref{subsetsbysmallestcounterexample}} says there must be a smallest such \(n\) and suggests we call it \(k\). Why do you know that \(1 + 3 + 5 + \cdots + 2k - 3 = (k-1)2\)? What happens if you add \(2n-1\) to both  sides of the equation?%
+
+\item[\textbf{365}.]You've probably already seen that, with small values of \(n\), sometimes \(n^2\) and sometimes \(2^n\) is bigger. But if you keep experimenting one of the functions  seems to get bigger and stay bigger than the other. The number \(n=b\) where this change occurs is a good choice for a base case. So as not to spoil the problem for you, we won't say here what this value of \(b\) is. However you    shouldn't be surprised later in the proof if you need to use the assumption that \(n /gt b\).%
+
+\par\smallskip
+\noindent\textbf{Additional Hint}: You may have reached the point of assuming that \(2^{k-1} \gt (k-1)^2\) and found yourself wondering how to prove that \(2^k \gt k^2\). A natural thing to try is multiplying both sides of \(2^{k-1} \gt (k-1)^2\) by \(2\). This ends up giving you \(2^k \gt 2k^2 - 4k +2\). Based on previous experience it is natural for you to expect to see how to turn this new right hand side into \(k^2\) but not see how to do it. Here is the hint. You only need to show that the right hand side is greater than or equal to \(k^2\). For this purpose you need to show that one of the two \(k^2\)s in \(2k^2\) somehow balances out the \(-4k\). See if you can figure out how the fact that you are only considering \(k\)s with \(k \gt b\) can help you out.%
+
+\item[\textbf{366}.]When you suspect an argument is not valid, it may be helpful to explicitly try several values of \(n\) to see if it makes sense for them. Often small values of \(n\) are adequate to find the flaw. If you find one flaw, it invalidates everything that comes afterwards (unless, of course, you can fix the flaw).%
+
+\item[\textbf{370}.]You might start out by ignoring the word unique and give a proof of the simpler theorem that results. Then look at your proof to see how you can include uniqueness in it.%
+
+\item[\textbf{377}.]An earlier problem may help you put your answer into a simpler form.%
+
+\item[\textbf{378}.]What is the power series representation of \(e^{x^2}\)?%
+
+\item[\textbf{381}.]There is only one element that you may choose. In the first case you either choose it or you don't.%
+
+\item[\textbf{387.b}.]At some point, you may find the binomial theorem to be useful.%
+
+\item[\textbf{391}.]Notice that any permutation is a product of a derangement of the elements not fixed by the permutation times a permutation whose cycle decomposition consists of one-cycles.%
+
+\item[\textbf{392}.]A binomial coefficient is likely to appear in your answer.%
+
+\item[\textbf{397}.]If \(f(x) = \sum_{i=0}^\infty a_i \frac{x^i}{i!}\) and \(g(x) = \sum_{j=0}^\infty b_j\frac{x^j}{j!}\), what is the coefficient of \(\frac{x^n}{n!}\) in \(f(x)g(x)\)?  don't be surprised if your answer has a binomial coefficient in it.  In fact, the binomial coefficient should help you finish the problem.%
+
+\item[\textbf{399}.]Since the sets of a \(k\)-set structure are nonempty and disjoint, the \(k\)-element set of sets can be arranged as a \(k\)-tuple in \(k!\) ways.%
+
+\item[\textbf{403}.]The alternate definition of a funciton in \hyperref[orderedfunctionsection]{Section~\ref{orderedfunctionsection}} can be restated to say that a function from a \(k\)-element set \(K\) to an \(n\)-element set \(N\) can be thought of as an \(n\)-tuple of sets, perhaps with some empty, whose union is \(K\). In order to think of the function as an \(n\)-tuple, we number the elements of \(N\) as number 1 through number \(n\). Then the \(i\)th set in the \(n\)-tuple is the set of elements mapped to the \(i\)th element of \(N\) in our numbering?%
+
+\item[\textbf{404}.]Don't be surprised if you see a hyperbolic sine or hyperbolic cosine in your answer. If you aren't familiar with these functions, look them up in a calculus book.%
+
+\item[\textbf{407}.]The EGF for \(\sum_{i=1}^n\binom{n}{k}k\) is \(\sum_{n=1}^\infty \sum_{i=1}^n \frac{n!}{k!(n-k)!}k\frac{x^n}{n!}\).  You can cancel out the \(n!\) terms and the \(k\) terms.  Now try to see if what is left can be regarded as the product of two EGFs.%
+
+\item[\textbf{421.a}.]To apply the exponential formula, we must take the exponential function of an EGF whose constant term is zero, or in other words, for a species of structures that has no structures that use the empty set.%
+
+\item[\textbf{421.b}.]Once you know the vertex set of a graph, all you have to do to specify the graph is to specify its set of edges.%
+
+\item[\textbf{421.d}.]What is the calculus definition of \(\log(1+y)\)?%
+
+\item[\textbf{421.f}.]Look for a formula that involves summing over all partitions of the integer \(n\).%
+
+\end{itemize}
 %
 %% The index is here, setup is all in preamble
 \printindex
+%
+\typeout{************************************************}
+\typeout{Appendix E GNU Free Documentation License}
+\typeout{************************************************}
+\chapter[{GNU Free Documentation License}]{GNU Free Documentation License}\label{appendix-gfdl}
+\typeout{************************************************}
+\typeout{Paragraphs  }
+\typeout{************************************************}
+\paragraph[{}]{}\hypertarget{paragraphs-1}{}
+Version 1.3, 3 November 2008%
+\par
+Copyright \textcopyright{} 2000, 2001, 2002, 2007, 2008 Free Software Foundation, Inc. \textless{}\url{http://www.fsf.org/}\textgreater{}%
+\par
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.%
+\typeout{************************************************}
+\typeout{Paragraphs  0. PREAMBLE}
+\typeout{************************************************}
+\paragraph[{0. PREAMBLE}]{0. PREAMBLE}\hypertarget{gfdl-section0}{}
+The purpose of this License is to make a manual, textbook, or other functional and useful document ``free'' in the sense of freedom: to assure everyone the effective freedom to copy and redistribute it, with or without modifying it, either commercially or noncommercially. Secondarily, this License preserves for the author and publisher a way to get credit for their work, while not being considered responsible for modifications made by others.%
+\par
+This License is a kind of ``copyleft'', which means that derivative works of the document must themselves be free in the same sense. It complements the GNU General Public License, which is a copyleft license designed for free software.%
+\par
+We have designed this License in order to use it for manuals for free software, because free software needs free documentation: a free program should come with manuals providing the same freedoms that the software does. But this License is not limited to software manuals; it can be used for any textual work, regardless of subject matter or whether it is published as a printed book. We recommend this License principally for works whose purpose is instruction or reference.%
+\typeout{************************************************}
+\typeout{Paragraphs  1. APPLICABILITY AND DEFINITIONS}
+\typeout{************************************************}
+\paragraph[{1. APPLICABILITY AND DEFINITIONS}]{1. APPLICABILITY AND DEFINITIONS}\hypertarget{gfdl-section1}{}
+This License applies to any manual or other work, in any medium, that contains a notice placed by the copyright holder saying it can be distributed under the terms of this License. Such a notice grants a world-wide, royalty-free license, unlimited in duration, to use that work under the conditions stated herein. The ``Document'', below, refers to any such manual or work. Any member of the public is a licensee, and is addressed as ``you''. You accept the license if you copy, modify or distribute the work in a way requiring permission under copyright law.%
+\par
+A ``Modified Version'' of the Document means any work containing the Document or a portion of it, either copied verbatim, or with modifications and/or translated into another language.%
+\par
+A ``Secondary Section'' is a named appendix or a front-matter section of the Document that deals exclusively with the relationship of the publishers or authors of the Document to the Document's overall subject (or to related matters) and contains nothing that could fall directly within that overall subject. (Thus, if the Document is in part a textbook of mathematics, a Secondary Section may not explain any mathematics.) The relationship could be a matter of historical connection with the subject or with related matters, or of legal, commercial, philosophical, ethical or political position regarding them.%
+\par
+The ``Invariant Sections'' are certain Secondary Sections whose titles are designated, as being those of Invariant Sections, in the notice that says that the Document is released under this License. If a section does not fit the above definition of Secondary then it is not allowed to be designated as Invariant. The Document may contain zero Invariant Sections. If the Document does not identify any Invariant Sections then there are none.%
+\par
+The ``Cover Texts'' are certain short passages of text that are listed, as Front-Cover Texts or Back-Cover Texts, in the notice that says that the Document is released under this License. A Front-Cover Text may be at most 5 words, and a Back-Cover Text may be at most 25 words.%
+\par
+A ``Transparent'' copy of the Document means a machine-readable copy, represented in a format whose specification is available to the general public, that is suitable for revising the document straightforwardly with generic text editors or (for images composed of pixels) generic paint programs or (for drawings) some widely available drawing editor, and that is suitable for input to text formatters or for automatic translation to a variety of formats suitable for input to text formatters. A copy made in an otherwise Transparent file format whose markup, or absence of markup, has been arranged to thwart or discourage subsequent modification by readers is not Transparent. An image format is not Transparent if used for any substantial amount of text. A copy that is not ``Transparent'' is called ``Opaque''.%
+\par
+Examples of suitable formats for Transparent copies include plain ASCII without markup, Texinfo input format, LaTeX input format, SGML or XML using a publicly available DTD, and standard-conforming simple HTML, PostScript or PDF designed for human modification. Examples of transparent image formats include PNG, XCF and JPG. Opaque formats include proprietary formats that can be read and edited only by proprietary word processors, SGML or XML for which the DTD and/or processing tools are not generally available, and the machine-generated HTML, PostScript or PDF produced by some word processors for output purposes only.%
+\par
+The ``Title Page'' means, for a printed book, the title page itself, plus such following pages as are needed to hold, legibly, the material this License requires to appear in the title page. For works in formats which do not have any title page as such, ``Title Page'' means the text near the most prominent appearance of the work's title, preceding the beginning of the body of the text.%
+\par
+The ``publisher'' means any person or entity that distributes copies of the Document to the public.%
+\par
+A section ``Entitled XYZ'' means a named subunit of the Document whose title either is precisely XYZ or contains XYZ in parentheses following text that translates XYZ in another language. (Here XYZ stands for a specific section name mentioned below, such as ``Acknowledgements'', ``Dedications'', ``Endorsements'', or ``History''.) To ``Preserve the Title'' of such a section when you modify the Document means that it remains a section ``Entitled XYZ'' according to this definition.%
+\par
+The Document may include Warranty Disclaimers next to the notice which states that this License applies to the Document. These Warranty Disclaimers are considered to be included by reference in this License, but only as regards disclaiming warranties: any other implication that these Warranty Disclaimers may have is void and has no effect on the meaning of this License.%
+\typeout{************************************************}
+\typeout{Paragraphs  2. VERBATIM COPYING}
+\typeout{************************************************}
+\paragraph[{2. VERBATIM COPYING}]{2. VERBATIM COPYING}\hypertarget{gfdl-section2}{}
+You may copy and distribute the Document in any medium, either commercially or noncommercially, provided that this License, the copyright notices, and the license notice saying this License applies to the Document are reproduced in all copies, and that you add no other conditions whatsoever to those of this License. You may not use technical measures to obstruct or control the reading or further copying of the copies you make or distribute. However, you may accept compensation in exchange for copies. If you distribute a large enough number of copies you must also follow the conditions in section 3.%
+\par
+You may also lend copies, under the same conditions stated above, and you may publicly display copies.%
+\typeout{************************************************}
+\typeout{Paragraphs  3. COPYING IN QUANTITY}
+\typeout{************************************************}
+\paragraph[{3. COPYING IN QUANTITY}]{3. COPYING IN QUANTITY}\hypertarget{gfdl-section3}{}
+If you publish printed copies (or copies in media that commonly have printed covers) of the Document, numbering more than 100, and the Document's license notice requires Cover Texts, you must enclose the copies in covers that carry, clearly and legibly, all these Cover Texts: Front-Cover Texts on the front cover, and Back-Cover Texts on the back cover. Both covers must also clearly and legibly identify you as the publisher of these copies. The front cover must present the full title with all words of the title equally prominent and visible. You may add other material on the covers in addition. Copying with changes limited to the covers, as long as they preserve the title of the Document and satisfy these conditions, can be treated as verbatim copying in other respects.%
+\par
+If the required texts for either cover are too voluminous to fit legibly, you should put the first ones listed (as many as fit reasonably) on the actual cover, and continue the rest onto adjacent pages.%
+\par
+If you publish or distribute Opaque copies of the Document numbering more than 100, you must either include a machine-readable Transparent copy along with each Opaque copy, or state in or with each Opaque copy a computer-network location from which the general network-using public has access to download using public-standard network protocols a complete Transparent copy of the Document, free of added material. If you use the latter option, you must take reasonably prudent steps, when you begin distribution of Opaque copies in quantity, to ensure that this Transparent copy will remain thus accessible at the stated location until at least one year after the last time you distribute an Opaque copy (directly or through your agents or retailers) of that edition to the public.%
+\par
+It is requested, but not required, that you contact the authors of the Document well before redistributing any large number of copies, to give them a chance to provide you with an updated version of the Document.%
+\typeout{************************************************}
+\typeout{Paragraphs  4. MODIFICATIONS}
+\typeout{************************************************}
+\paragraph[{4. MODIFICATIONS}]{4. MODIFICATIONS}\hypertarget{gfdl-section4}{}
+You may copy and distribute a Modified Version of the Document under the conditions of sections 2 and 3 above, provided that you release the Modified Version under precisely this License, with the Modified Version filling the role of the Document, thus licensing distribution and modification of the Modified Version to whoever possesses a copy of it. In addition, you must do these things in the Modified Version:\leavevmode%
+\begin{enumerate}[label=\Alph*.]
+\item\hypertarget{li-142}{}Use in the Title Page (and on the covers, if any) a title distinct from that of the Document, and from those of previous versions (which should, if there were any, be listed in the History section of the Document). You may use the same title as a previous version if the original publisher of that version gives permission.%
+\item\hypertarget{li-143}{}List on the Title Page, as authors, one or more persons or entities responsible for authorship of the modifications in the Modified Version, together with at least five of the principal authors of the Document (all of its principal authors, if it has fewer than five), unless they release you from this requirement.%
+\item\hypertarget{li-144}{}State on the Title page the name of the publisher of the Modified Version, as the publisher.%
+\item\hypertarget{li-145}{}Preserve all the copyright notices of the Document.%
+\item\hypertarget{li-146}{}Add an appropriate copyright notice for your modifications adjacent to the other copyright notices.%
+\item\hypertarget{li-147}{}Include, immediately after the copyright notices, a license notice giving the public permission to use the Modified Version under the terms of this License, in the form shown in the Addendum below.%
+\item\hypertarget{li-148}{}Preserve in that license notice the full lists of Invariant Sections and required Cover Texts given in the Document's license notice.%
+\item\hypertarget{li-149}{}Include an unaltered copy of this License.%
+\item\hypertarget{li-150}{}Preserve the section Entitled ``History'', Preserve its Title, and add to it an item stating at least the title, year, new authors, and publisher of the Modified Version as given on the Title Page. If there is no section Entitled ``History'' in the Document, create one stating the title, year, authors, and publisher of the Document as given on its Title Page, then add an item describing the Modified Version as stated in the previous sentence.%
+\item\hypertarget{li-151}{}Preserve the network location, if any, given in the Document for public access to a Transparent copy of the Document, and likewise the network locations given in the Document for previous versions it was based on.  These may be placed in the ``History'' section. You may omit a network location for a work that was published at least four years before the Document itself, or if the original publisher of the version it refers to gives permission.%
+\item\hypertarget{li-152}{}For any section Entitled ``Acknowledgements'' or ``Dedications'', Preserve the Title of the section, and preserve in the section all the substance and tone of each of the contributor acknowledgements and/or dedications given therein.%
+\item\hypertarget{li-153}{}Preserve all the Invariant Sections of the Document, unaltered in their text and in their titles. Section numbers or the equivalent are not considered part of the section titles.%
+\item\hypertarget{li-154}{}Delete any section Entitled ``Endorsements''. Such a section may not be included in the Modified Version.%
+\item\hypertarget{li-155}{}Do not retitle any existing section to be Entitled ``Endorsements'' or to conflict in title with any Invariant Section.%
+\item\hypertarget{li-156}{}Preserve any Warranty Disclaimers.%
+\end{enumerate}
+%
+\par
+If the Modified Version includes new front-matter sections or appendices that qualify as Secondary Sections and contain no material copied from the Document, you may at your option designate some or all of these sections as invariant. To do this, add their titles to the list of Invariant Sections in the Modified Version's license notice. These titles must be distinct from any other section titles.%
+\par
+You may add a section Entitled ``Endorsements'', provided it contains nothing but endorsements of your Modified Version by various parties \textemdash{} for example, statements of peer review or that the text has been approved by an organization as the authoritative definition of a standard.%
+\par
+You may add a passage of up to five words as a Front-Cover Text, and a passage of up to 25 words as a Back-Cover Text, to the end of the list of Cover Texts in the Modified Version. Only one passage of Front-Cover Text and one of Back-Cover Text may be added by (or through arrangements made by) any one entity. If the Document already includes a cover text for the same cover, previously added by you or by arrangement made by the same entity you are acting on behalf of, you may not add another; but you may replace the old one, on explicit permission from the previous publisher that added the old one.%
+\par
+The author(s) and publisher(s) of the Document do not by this License give permission to use their names for publicity for or to assert or imply endorsement of any Modified Version.%
+\typeout{************************************************}
+\typeout{Paragraphs  5. COMBINING DOCUMENTS}
+\typeout{************************************************}
+\paragraph[{5. COMBINING DOCUMENTS}]{5. COMBINING DOCUMENTS}\hypertarget{gfdl-section5}{}
+You may combine the Document with other documents released under this License, under the terms defined in section 4 above for modified versions, provided that you include in the combination all of the Invariant Sections of all of the original documents, unmodified, and list them all as Invariant Sections of your combined work in its license notice, and that you preserve all their Warranty Disclaimers.%
+\par
+The combined work need only contain one copy of this License, and multiple identical Invariant Sections may be replaced with a single copy. If there are multiple Invariant Sections with the same name but different contents, make the title of each such section unique by adding at the end of it, in parentheses, the name of the original author or publisher of that section if known, or else a unique number. Make the same adjustment to the section titles in the list of Invariant Sections in the license notice of the combined work.%
+\par
+In the combination, you must combine any sections Entitled ``History'' in the various original documents, forming one section Entitled ``History''; likewise combine any sections Entitled ``Acknowledgements'', and any sections Entitled ``Dedications''. You must delete all sections Entitled ``Endorsements''.%
+\typeout{************************************************}
+\typeout{Paragraphs  6. COLLECTIONS OF DOCUMENTS}
+\typeout{************************************************}
+\paragraph[{6. COLLECTIONS OF DOCUMENTS}]{6. COLLECTIONS OF DOCUMENTS}\hypertarget{gfdl-section6}{}
+You may make a collection consisting of the Document and other documents released under this License, and replace the individual copies of this License in the various documents with a single copy that is included in the collection, provided that you follow the rules of this License for verbatim copying of each of the documents in all other respects.%
+\par
+You may extract a single document from such a collection, and distribute it individually under this License, provided you insert a copy of this License into the extracted document, and follow this License in all other respects regarding verbatim copying of that document.%
+\typeout{************************************************}
+\typeout{Paragraphs  7. AGGREGATION WITH INDEPENDENT WORKS}
+\typeout{************************************************}
+\paragraph[{7. AGGREGATION WITH INDEPENDENT WORKS}]{7. AGGREGATION WITH INDEPENDENT WORKS}\hypertarget{gfdl-section7}{}
+A compilation of the Document or its derivatives with other separate and independent documents or works, in or on a volume of a storage or distribution medium, is called an ``aggregate'' if the copyright resulting from the compilation is not used to limit the legal rights of the compilation's users beyond what the individual works permit. When the Document is included in an aggregate, this License does not apply to the other works in the aggregate which are not themselves derivative works of the Document.%
+\par
+If the Cover Text requirement of section 3 is applicable to these copies of the Document, then if the Document is less than one half of the entire aggregate, the Document's Cover Texts may be placed on covers that bracket the Document within the aggregate, or the electronic equivalent of covers if the Document is in electronic form. Otherwise they must appear on printed covers that bracket the whole aggregate.%
+\typeout{************************************************}
+\typeout{Paragraphs  8. TRANSLATION}
+\typeout{************************************************}
+\paragraph[{8. TRANSLATION}]{8. TRANSLATION}\hypertarget{gfdl-section8}{}
+Translation is considered a kind of modification, so you may distribute translations of the Document under the terms of section 4. Replacing Invariant Sections with translations requires special permission from their copyright holders, but you may include translations of some or all Invariant Sections in addition to the original versions of these Invariant Sections. You may include a translation of this License, and all the license notices in the Document, and any Warranty Disclaimers, provided that you also include the original English version of this License and the original versions of those notices and disclaimers. In case of a disagreement between the translation and the original version of this License or a notice or disclaimer, the original version will prevail.%
+\par
+If a section in the Document is Entitled ``Acknowledgements'', ``Dedications'', or ``History'', the requirement (section 4) to Preserve its Title (section 1) will typically require changing the actual title.%
+\typeout{************************************************}
+\typeout{Paragraphs  9. TERMINATION}
+\typeout{************************************************}
+\paragraph[{9. TERMINATION}]{9. TERMINATION}\hypertarget{gfdl-section9}{}
+You may not copy, modify, sublicense, or distribute the Document except as expressly provided under this License. Any attempt otherwise to copy, modify, sublicense, or distribute it is void, and will automatically terminate your rights under this License.%
+\par
+However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.%
+\par
+Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.%
+\par
+Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, receipt of a copy of some or all of the same material does not give you any rights to use it.%
+\typeout{************************************************}
+\typeout{Paragraphs  10. FUTURE REVISIONS OF THIS LICENSE}
+\typeout{************************************************}
+\paragraph[{10. FUTURE REVISIONS OF THIS LICENSE}]{10. FUTURE REVISIONS OF THIS LICENSE}\hypertarget{gfdl-section10}{}
+The Free Software Foundation may publish new, revised versions of the GNU Free Documentation License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns. See \url{http://www.gnu.org/copyleft/}.%
+\par
+Each version of the License is given a distinguishing version number. If the Document specifies that a particular numbered version of this License ``or any later version'' applies to it, you have the option of following the terms and conditions either of that specified version or of any later version that has been published (not as a draft) by the Free Software Foundation. If the Document does not specify a version number of this License, you may choose any version ever published (not as a draft) by the Free Software Foundation. If the Document specifies that a proxy can decide which future versions of this License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Document.%
+\typeout{************************************************}
+\typeout{Paragraphs  11. RELICENSING}
+\typeout{************************************************}
+\paragraph[{11. RELICENSING}]{11. RELICENSING}\hypertarget{gfdl-section11}{}
+``Massive Multiauthor Collaboration Site'' (or ``MMC Site'') means any World Wide Web server that publishes copyrightable works and also provides prominent facilities for anybody to edit those works. A public wiki that anybody can edit is an example of such a server. A ``Massive Multiauthor Collaboration'' (or ``MMC'') contained in the site means any set of copyrightable works thus published on the MMC site.%
+\par
+``CC-BY-SA'' means the Creative Commons Attribution-Share Alike 3.0 license published by Creative Commons Corporation, a not-for-profit corporation with a principal place of business in San Francisco, California, as well as future copyleft versions of that license published by that same organization.%
+\par
+``Incorporate'' means to publish or republish a Document, in whole or in part, as part of another Document.%
+\par
+An MMC is ``eligible for relicensing'' if it is licensed under this License, and if all works that were first published under this License somewhere other than this MMC, and subsequently incorporated in whole or in part into the MMC, (1) had no cover texts or invariant sections, and (2) were thus incorporated prior to November 1, 2008.%
+\par
+The operator of an MMC Site may republish an MMC contained in the site under CC-BY-SA on the same site at any time before August 1, 2009, provided the MMC is eligible for relicensing.%
+\typeout{************************************************}
+\typeout{Paragraphs  ADDENDUM: How to use this License for your documents}
+\typeout{************************************************}
+\paragraph[{ADDENDUM: How to use this License for your documents}]{ADDENDUM: How to use this License for your documents}\hypertarget{gfdl-addendum}{}
+To use this License in a document you have written, include a copy of the License in the document and put the following copyright and license notices just after the title page:%
+\begin{verbatim}
+Copyright (C)  YEAR  YOUR NAME.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+\end{verbatim}
+If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts, replace the ``with\dots{} Texts.'' line with this:%
+\begin{verbatim}
+with the Invariant Sections being LIST THEIR TITLES, with the
+Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
+\end{verbatim}
+If you have Invariant Sections without Cover Texts, or some other combination of the three, merge those two alternatives to suit the situation.%
+\par
+If your document contains nontrivial examples of program code, we recommend releasing these examples in parallel under your choice of free software license, such as the GNU General Public License, to permit their use in free software.%
+%
+\backmatter
 %
 \end{document}
