@@ -1,11 +1,11 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2017-08-20T12:25:53-06:00    *%
+%*    on 2017-08-20T22:18:51-06:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
 %**************************************%
-\documentclass[10pt,]{book}
+\documentclass[11pt,]{book}
 %% Custom Preamble Entries, early (use latex.preamble.early)
 %% Inline math delimiters, \(, \), need to be robust
 %% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
@@ -22,6 +22,7 @@
 \usepackage{geometry}
 \geometry{letterpaper,total={340pt,9.0in}}
 %% Custom Page Layout Adjustments (use latex.geometry)
+\geometry{papersize={8.5in,11in}, hmargin={.75in, 1.5in}, bindingoffset=0.25in, height=9in, top=1in, twoside, ignoreheadfoot}
 %% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex
 %% The following provides engine-specific capabilities
 %% Generally, xelatex and lualatex will do better languages other than US English
@@ -33,9 +34,9 @@
 %% fontspec package will make Latin Modern (lmodern) the default font
 \ifxetex\usepackage{xltxtra}\fi
 \usepackage{fontspec}
-%% realscripts is the only part of xltxtra relevant to lualatex 
+%% realscripts is the only part of xltxtra relevant to lualatex
 \ifluatex\usepackage{realscripts}\fi
-%% 
+%%
 %% Extensive support for other languages
 \usepackage{polyglossia}
 %% Main document language is US English
@@ -65,7 +66,7 @@
 %% xelatex,lualatex: add StylisticSet 1 for shapely \ell
 %% xelatex,lualatex: add StylisticSet 2 for plain zero
 %% xelatex,lualatex: we add StylisticSet 3 for upright quotes
-%% 
+%%
 \ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
 %% begin: xelatex and lualatex-specific monospace font
 \usepackage{zi4}
@@ -183,20 +184,20 @@
 %% You can remove all this figure/table setup, to restore standard LaTeX behavior
 %% HOWEVER, numbering of figures/tables AND theorems/examples/remarks, etc
 %% WILL ALL de-synchronize with the numbering in the HTML version
-%% You can remove the [H] argument of the \newfloat command, to allow flotation and 
+%% You can remove the [H] argument of the \newfloat command, to allow flotation and
 %% preserve numbering, BUT the numbering may then appear "out-of-order"
 \usepackage{float}
-\usepackage[bf]{caption} % http://tex.stackexchange.com/questions/95631/defining-a-new-type-of-floating-environment 
+\usepackage[bf]{caption} % http://tex.stackexchange.com/questions/95631/defining-a-new-type-of-floating-environment
 \usepackage{newfloat}
 % Figure environment setup so that it no longer floats
 \SetupFloatingEnvironment{figure}{fileext=lof,placement={H},within=section,name=Figure}
-% figures have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme 
+% figures have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme
 \makeatletter
 \let\c@figure\c@theorem
 \makeatother
 % Table environment setup so that it no longer floats
 \SetupFloatingEnvironment{table}{fileext=lot,placement={H},within=section,name=Table}
-% tables have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme 
+% tables have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme
 \makeatletter
 \let\c@table\c@theorem
 \makeatother
@@ -284,11 +285,11 @@
 %% extpfeil package for certain extensible arrows,
 %% as also provided by MathJax extension of the same name
 %% NB: this package loads mtools, which loads calc, which redefines
-%%     \setlength, so it can be removed if it seems to be in the 
+%%     \setlength, so it can be removed if it seems to be in the
 %%     way and your math does not use:
-%%     
+%%
 %%     \xtwoheadrightarrow, \xtwoheadleftarrow, \xmapsto, \xlongequal, \xtofrom
-%%     
+%%
 %%     we have had to be extra careful with variable thickness
 %%     lines in tables, and so also load this package late
 \usepackage{extpfeil}
@@ -296,9 +297,9 @@
 % Set up the emoji for the three fruit we use
 \newfontfamily{\emojifont}{Symbola}
 \usepackage{newunicodechar}
-\newunicodechar{🍎}{\emojifont{🍎}} % Red apple 
-\newunicodechar{🍐}{{\emojifont{🍐}}} % Pear 
-\newunicodechar{🍌}{{\emojifont{🍌}}} % Banana 
+\newunicodechar{🍎}{\emojifont{🍎}} % Red apple
+\newunicodechar{🍐}{{\emojifont{🍐}}} % Pear
+\newunicodechar{🍌}{{\emojifont{🍌}}} % Banana
 % Redefine activity environment to get problem type labels
 \usepackage{tabto, pdfcomment}\newcommand{\marginsymbol}[2][0]{\tabto*{#1}\makebox[1ex][r]{#2}\tabto*{\TabPrevPos}}\input{latex-preamble-styles}
 

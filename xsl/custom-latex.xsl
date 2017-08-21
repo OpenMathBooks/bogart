@@ -42,7 +42,7 @@
 <!-- Default is empty and thus ineffective         -->
 <!-- Otherwise, happens early in preamble template -->
 
-<!-- <xsl:param name="latex.geometry" select="'papersize={6in,9in}, hmargin={0.85in, 0.5in}, height=7.75in, top=0.75in, twoside, ignoreheadfoot'"/> -->
+<xsl:param name="latex.geometry" select="'papersize={8.5in,11in}, hmargin={.75in, 1.5in}, bindingoffset=0.25in, height=9in, top=1in, twoside, ignoreheadfoot'"/>
 
 <!--  -->
 <!-- PDF Watermarking                    -->
