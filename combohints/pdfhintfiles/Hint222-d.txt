@@ -1,6 +1,0 @@
-<hint>
-  <p>
-For the algebraic explanation, think about how the binomial theorem might
-help you.
-  </p>
-</hint>

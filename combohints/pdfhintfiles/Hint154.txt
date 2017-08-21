@@ -1,5 +1,0 @@
-<hint>
-  <p>
-What does induction have to do with Equation 3.1?
-  </p>
-</hint>

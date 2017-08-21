@@ -1,6 +1,0 @@
-<hint>
-  <p>
-How are the relevant ji s in the multinomial coefficients you use here different
-from the ji s in the previous problem.
-  </p>
-</hint>

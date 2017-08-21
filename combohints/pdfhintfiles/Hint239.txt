@@ -1,5 +1,0 @@
-<hint>
-  <p>
-What does Problem 238 have to do with this question?
-  </p>
-</hint>

@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Try induction.
-  </p>
-</hint>

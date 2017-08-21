@@ -1,5 +1,0 @@
-<hint>
-  <p>
-There is a solution for this problem similar to the solution to Problem 154.
-  </p>
-</hint>

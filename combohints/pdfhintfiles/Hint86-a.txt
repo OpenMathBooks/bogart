@@ -1,5 +1,0 @@
-<hint>
-  <p>
-What is the definition of R(n, n)?
-  </p>
-</hint>

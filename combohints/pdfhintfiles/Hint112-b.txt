@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Do some examples
-  </p>
-</hint>

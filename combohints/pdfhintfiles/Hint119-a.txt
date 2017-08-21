@@ -1,6 +1,0 @@
-<hint>
-  <p>
-If you have a spanning tree of G that contains e, is the graph that results
-from that tree by contracting e still a tree?
-  </p>
-</hint>

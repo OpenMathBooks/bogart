@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Think about geometric operations on Young Diagrams
-  </p>
-</hint>

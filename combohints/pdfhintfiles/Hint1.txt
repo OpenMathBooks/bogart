@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Answer the questions in Problem 2 for the case of five schools.
-  </p>
-</hint>

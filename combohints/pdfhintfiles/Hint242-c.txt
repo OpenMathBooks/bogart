@@ -1,6 +1,0 @@
-<hint>
-  <p>
-How does the number you are trying to compute relate to the union of the
-sets Ai ?
-  </p>
-</hint>

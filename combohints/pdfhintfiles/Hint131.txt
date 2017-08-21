@@ -1,6 +1,0 @@
-<hint>
-  <p>
-If we line up k identical books, how many adjacencies are there in between
-books?
-  </p>
-</hint>
