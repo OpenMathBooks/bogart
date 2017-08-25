@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:46-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">120.1</span>
+</h5>
+<p>We prove that the distance from vertex 1 of a vertex \(i\) with \(v(i)=1\) is \(d(i)\text{.}\) We use induction on the number \(t\) of vertices with \(v(i)=1\text{.}\) If \(t=1\text{,}\) then \(d(1)=0\) is the distance from vertex 1 to vertex 1. Now when \(t=s-1\text{,}\) we have vertices \(i_1\text{,}\) \(i_2\text{,}\) … \(i_{s-1}\) such that \(v(i_p)=1\text{.}\) Suppose inductively that \(d(i_p)\) is the distance from vertex \(i_p\) to vertex 1 for \(p=1,2,\ldots,s-1\text{.}\) When \(t=s\text{,}\) we choose a vertex \(i\) with \(d(i)\) a minimum. Suppose \(u_1,u_2,\ldots, u_r\) is the sequence of vertices of a shortest (least total weight) path from vertex \(u_1=1\) to vertex \(u_r=i\) and that the length (total weight) of this path is less than \(d(i)\text{.}\) Suppose that some vertex \(u_p\) has \(v(u_p)=0\text{,}\) and choose the smallest \(p\) such that this is so. Then \(d(u_{p-1})\) is the distance from vertex \(1\) to vertex \(u_{p-1}\text{,}\) and \(d(u_{p-1}) + w(u_{p-1},u_p)\) is less than \(d(i)\) because the length of the path from \(u_1\) to \(u_r\) is less than \(d(i)\text{.}\) Then we would not have chosen the vertex \(i\) after all, but rather the vertex \(u_p\text{,}\) which is a contradiction, so all the vertices \(u_p\) with \(p\lt r\) must have \(v(u_p)=1\text{,}\) and, by our inductive hypothesis, \(d(u_p)\) must be the distance from vertex 1 to vertex \(u_p\) for \(p\lt r\text{.}\) Thus when we were computing \(d(i)\text{,}\) we would have found that \(d(i)\le d(u_{r-1}) +w(u_{r-1},i)\text{.}\) Thus \(d(i)\) must be the distance from vertex 1 to vertex \(i\) after all. Therefore the fact that Dijkstra's algorithm works when \(t=s-1\) implies that it works when \(t=s\text{,}\) so that, by the principle of mathematical induction, it works for all nonnegative integers \(t\text{.}\)</p></span><span class="incontext"><a href="sec_induction-graphstrees.html#solution-192">in-context</a></span>
+</body>
+</html>

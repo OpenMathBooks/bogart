@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:00-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>We begin by computing a few values of \(a_n=\sum_{k=0}^n\binom{n-k}{k}\text{.}\) We have \(a_0=1\text{,}\) \(a_1=1\text{,}\) \(a_2=2\text{,}\) \(a_3=1+2=3\text{,}\) \(a_4=1+3+1=5\text{,}\) \(a_5=1+4+3=8\) and \(a_6=1+5+6+1=13\text{.}\) So far the sequence agrees with the Fibonacci Numbers. Each term of the sequence is the sum of the two preceding terms, so it makes sense to try to prove that \(a_n=a_{n-1}+a_{n-2}\text{.}\) We may write</p>
+\begin{align*}
+a_{n-1}+a_{n-2}
+=\amp \sum_{k=0}^{n-1} \binom{n-1-k}{k}
++\sum_{k=0}^{n-2} \binom{n-2-k}{k}\\
+=\amp \sum_{k=0}^{n-1} \binom{n-1-k}{k}+\sum_{j=1}^{n-1}\binom{n-1-j}{j-1}\\
+=\amp 1+\sum_{k=1}^{n-1}\binom{n-1-k}{k}+\binom{n-1-k}{k-1}\\
+=\amp 1+\sum_{k=1}^{n-1}\binom{n-k}{k} \rangle =\rangle  \sum_{k=0}^{n-1}\binom{n-k}{k}
+\rangle =\rangle  a_n
+\end{align*}
+<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1289">in-context</a></span>
+</body>
+</html>

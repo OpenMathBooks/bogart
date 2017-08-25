@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:44-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>We use double induction on \(m\) and \(n\) to prove this for \(m,n\ge 2\text{.}\) Note first that \(R(m,2)=m=\binom{m+2-2}{m-1}\) and \(R(2,n)
+=n=\binom{2+n-2}{1}\text{.}\) (In words, if there are \(m\) people in a room, then either all \(m\) people know each other or there are two mutual nonacquaintances, and if there are \(n\) people in a room, then either there are two people who know each other or they are all mutual strangers.)<span><a knowl="./knowl/fn-5-hidden.html" knowl-id="hidden-fn-5" alt="Footnote 2.1 " title="Footnote 2.1 "><span class="footnote"><sup> 1 </sup></span></a></span> Now assume that whenever there are \(\binom{m+n-3}{m-1}\) people in a room there are either at least \(m\) mutual acquaintances or \(n-1\) mutual strangers, and that whenever there are at least \(\binom{m+n-3}{m-2}\) people in a room there are either at least \(m-1\) mutual acquaintances or \(n\) mutual strangers. Suppose that we have \(\binom{m+n-2}{m-1}\) people in a room. Choose a person, say \(P\text{.}\) Then since \(\binom{m+n-2}{m-1} = \binom{m-n-3}{m-1} +\binom{m+n-3}{m-2}\text{,}\) person \(P\) is, by the generalized pigeonhole principle, either acquainted with \(\binom{m+n-3}{m-2}\) people or unacquainted with \(\binom{m+n-3}{m-1}\) people. In the first case, among the people with whom \(P\) is acquainted, either \(m-1\) are mutual acquaintances or \(n\) are mutual strangers. If \(m\) are mutual strangers, we are done, while if \(m-1\) are mutual acquaintances, these \(m-1\) people, together with person \(P\text{,}\) are \(m\) mutual acquaintances, in which case we are done as well. In the second case, among the \(\binom{m+n-3}{m-1}\) people with whom person \(P\) is unacquainted, there are either \(m\) mutual acquaintances, in which case we are done, or there are \(n-1\) mutual strangers. In this event, these \(n-1\) mutual strangers, along with person \(P\) make up \(n\) mutual strangers. Thus in every case, if we know that with \(\binom{m+n-3}{m-2}\) people in a room there are either \(m-1\) mutual acquaintances or \(n\) mutual strangers, and we know that with \(\binom{m+n-3}{m-1}\) people in a room there are either \(m\) mutual acquaintances or \(n-1\) mutual strangers, we can conclude that with \(\binom{m+n-2}{m-1}\) people in a room there are either \(m\) mutual acquaintances or \(n\) mutual strangers. Therefore by the principle of double mathematical induction we know that for all \(m\) and \(n\) greater than or equal to 2, if there are \(\binom{m+n-2}{m-1}\) people in a room, then there are either \(m\) mutual acquaintances of \(n\) mutual strangers. This shows that \(R(m,n)\) exists and is no more than \(\binom{m+n-2}{m-1}\text{.}\)</p>
+<span class="incontext"><a href="sec_induction-examples.html#p-488">in-context</a></span>
+</body>
+</html>

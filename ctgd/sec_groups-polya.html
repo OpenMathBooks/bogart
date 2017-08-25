@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:32-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pólya-Redfield Enumeration Theory</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_groups-groupsact.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groupsonsets.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_groups-suppprobs.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_groups-groupsact.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="groupsonsets.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_groups-suppprobs.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya" class="active">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_groups-polya"><header title="Section 6.3 Pólya-Redfield Enumeration Theory"><h1 class="heading hide-type" alt="Section 6.3 Pólya-Redfield Enumeration Theory">
+<span class="type">Section</span><span class="codenumber">6.3</span><span class="title">Pólya-Redfield Enumeration Theory</span><a href="sec_groups-polya.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-64"><p id="p-1714">George Pólya and Robert Redfield independently developed a theory of generating functions that describe the action of a group \(G\) on functions from a set \(S\) to a set \(T\) when we know the action of \(G\) on \(S\text{.}\) Pólya's work on the subject is very accessible in its exposition, and so the subject has become popularly known as Pólya theory, though Pólya-Redfield theory would be a better name. In this section we develop the elements of this theory.</p>
+<p id="p-1715">The idea of coloring a set \(S\) has many applications. For example, the set \(S\) might be the positions in a hydrocarbon molecule which are occupied by hydrogen, and the group could be the group of spatial symmetries of the molecule (that is, the group of permutations of the atoms of the molecule that move the molecule around so that in its final position the molecule cannot be distinguished from the original molecule). The colors could then be radicals (including hydrogen itself) that we could substitute for each hydrogen position in the molecule. Then the number of orbits of colorings is the number of chemically different compounds we could create by using these substitutions.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-24" id="fn-24"><span class="footnote"><sup> 6 </sup></span></a></span><span id="hk-fn-24" style="display: none;" class="tex2jax_ignore"><span class="footnote">There is a fascinating subtle issue of what makes two molecules different.  For example, suppose we have a molecule in the form of a cube, with one atom at each vertex.  If we interchange the top and bottom faces of the cube, each atom is still connected to exactly the same atoms as before.   However we cannot achieve this permutation of the vertices by a member of the rotation group of the cube.  It could well be that the two versions of the molecule interact with other molecules in different ways, in which case we would consider them chemically different.  On the other hand if the two versions interact with other molecules in the same way, we would have no reason to consider them chemically different.  This kind of symmetry is an example of what is called <em class="terminology">chirality</em> in chemistry.</span></span></p>
+<p id="p-1716">In <a knowl="./knowl/butyl-alcohol-isomers.html" knowl-id="xref-butyl-alcohol-isomers" alt="Figure 6.3.1 " title="Figure 6.3.1 ">Figure 6.3.1</a> we show two different ways to substitute the OH radical for a hydrogen atom in the chemical diagram we gave for butane in <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a>. We have colored one vertex of degree 1 with the radical OH and the rest with the atom H. There are only two distinct ways to do this, as the OH must either connect to an “end” C or a “middle” C. This shows that there are two different forms, called isomers of the compound shown. This compound is known as butyl alcohol.</p>
+<figure class="figure-like" id="butyl-alcohol-isomers"><div class="sidebyside" style="" id="sidebyside-16"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel" style="width:48.4536082474227%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-40.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+<div class="sbspanel" style="width:48.4536082474227%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="../images/image-41.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+</div></div>
+<figcaption><span class="heading">Figure</span><span class="codenumber">6.3.1</span>The two different isomers of butyl alcohol.</figcaption></figure><p id="p-1717">So think intuitively about some “figure” that has places to be colored. (Think of the faces of a cube, the beads on a necklace, circles at the vertices of an \(n\)-gon, etc.) How can we picture the coloring? If we number the places to be colored, say 1 to \(n\text{,}\) then a function from \([n]\) to the colors is exactly our coloring; if our colors are blue, green and red, then \(BBGRRGBG\) describes a typical coloring of 8 such places. Unless the places are somehow “naturally” numbered, this idea of a coloring imposes structure that is not really there. Even if the structure is there, visualizing our colorings in this way doesn't “pull together” any common features of different colorings; we are simply visualizing all possible functions. We have a group (think of it as symmetries of the figure you are imagining) that acts on the places. That group then acts in a natural way on the colorings of the places and we are interested in orbits of the colorings. Thus we want a picture that pulls together the common features of the colorings in an orbit. One way to pull together similarities of colorings would be to let the letters we are using as pictures of colors commute as we did with our pictures in <a href="ch_genfns.html" alt="Chapter 4 Generating Functions" title="Chapter 4 Generating Functions">Chapter 4</a>; then our picture \(BBGRRGBG\) becomes \(B^3G^3R^2\text{,}\) so our picture now records simply how many times we use each color. If you think about how we defined the action of a group on a set of functions, you will see that a group element won't change how many times each color is used; it simply moves colors to different places. Thus the picture we now have of a given coloring is an equally appropriate picture for each coloring in an orbit. One natural question for us to ask is “How many orbits have a given picture?”</p>
+<article class="example-like" id="coloredhex"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">310</span>
+</h5>
+<article class="introduction" id="introduction-65"><p id="p-1718">Suppose we draw identical circles at the vertices of a regular hexagon. Suppose we color these circles with two colors, red and blue.</p></article><article class="exercise-like" id="task-230"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1719">In how many ways may we color the set \(\{1, 2, 3, 4, 5, 6\}\) using the colors red and blue?</p></article><article class="exercise-like" id="task-231"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1721">These colorings are partitioned into orbits by the action of the rotation group on the hexagon. Using our standard notation, write down all these orbits and observe how many orbits have each picture, assuming the picture of a coloring is the product of commuting variables representing the colors.</p></article><article class="exercise-like" id="picture-enumerator-hexagon"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1724">Using the picture function of the previous part, write down the picture enumerator for the orbits of colorings of the vertices of a hexagon under the action of the rotation group.</p></article></article><p id="p-1726">In <a knowl="./knowl/picture-enumerator-hexagon.html" knowl-id="xref-picture-enumerator-hexagon" alt="Part 310.c " title="Part 310.c ">Problem c</a> we saw a picture enumerator for pictures of orbits of the action of a group on colorings. As above, we can ask how many orbits of the colorings have any given picture. We can think of a multivariable generating function in which the letters we use to picture individual colors are the variables, and the coefficient of a picture is the number of orbits with that picture. Such a generating function is an answer to our natural question, and so it is this sort of generating function we will seek. Since the CFB theorem was our primary tool for saying how many orbits we have, it makes sense to think about whether the CFB theorem has an analog in terms of pictures of orbits.</p></section><section class="subsection" id="subsection-68"><header title="Subsection 6.3.1 The Orbit-Fixed Point Theorem"><h1 class="heading hide-type" alt="Subsection 6.3.1 The Orbit-Fixed Point Theorem">
+<span class="type">Subsection</span><span class="codenumber">6.3.1</span><span class="title">The Orbit-Fixed Point Theorem</span><a href="sec_groups-polya.html#subsection-68" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="orbit-fixed-point-thm"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">311</span>
+</h5>
+<p id="p-1727">Suppose now we have a group \(G\) acting on a set and we have a picture function on that set with the additional feature that for each orbit of the group, all its elements have the same picture. In this circumstance we define the picture of an orbit or multiorbit to be the picture of any one of its members. The <em class="terminology">orbit enumerator</em> \(\Orb(G,S)\) is the sum of the pictures of the orbits. (Note that this is the same as the sum of the pictures of the <em class="terminology">multiorbits</em>.) The <em class="terminology">fixed point enumerator</em> \(\Fix(G, S)\) is the sum of the pictures of each of the fixed points of each of the elements of \(G\text{.}\) We are going to construct a generating function analog of the CFB theorem. The main idea of the proof of the CFB theorem was to try to compute in two different ways the number of elements (i.e. the sum of all the multiplicities of the elements) in the union of all the multiorbits of a group acting on a set. Suppose instead we try to compute the sum of all the pictures of all the elements in the union of the multiorbits of a group acting on a set. By thinking about how this sum relates to \(\Orb(G,S)\) and \(\Fix(G,S)\text{,}\) find an analog of the CFB theorem that relates these two enumerators. State and prove this theorem. </p></article><p id="p-1729">We call the theorem of <a knowl="./knowl/orbit-fixed-point-thm.html" knowl-id="xref-orbit-fixed-point-thm" alt="Problem 311 " title="Problem 311 ">Problem 311</a> the <em class="terminology">Orbit-Fixed Point Theorem</em>. In order to apply the Orbit-Fixed Point Theorem, we need some facts about picture enumerators.</p>
+<article class="example-like essential" id="ProdPrincPictureEnumerators"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">312</span>
+</h5>
+<p id="p-1730">Suppose that \(P_1\) and \(P_2\) are picture functions on sets \(S_1\) and \(S_2\) in the sense of <a href="sec_genfns-idea.html#picturefunction" alt="Subsection 4.1.2 Picture functions" title="Subsection 4.1.2 Picture functions">Section 4.1.2</a>. Define \(P\) on \(S_1 \times
+S_2\) by \(P(x_1,x_2) = P_1(x_1)P_2(x_2)\text{.}\) How are \(E_{P_1}\text{,}\) \(E_{P_1}\text{,}\) and \(E_{P}\) related? (You may have already done this problem in another context!)</p></article><article class="example-like essential" id="PictureEnumeratorforFunctions"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">313</span>
+</h5>
+<p id="p-1732">Suppose \(P_i\) is a picture function on a set \(S_i\) for \(i=1,\dots,k\text{.}\) We define the picture of a \(k\)-tuple \((x_1,x_2,\dots,x_k)\) to be the product of the pictures of its elements, i.e.</p>
+\begin{equation*}
+\widehat P((x_1,x_2,\dots,x_k)) = \prod_{i=1}^k P_i(x_i).
+\end{equation*}
+<p id="p-1733">How does the picture enumerator \(E_{\widehat P}\) of the set \(S_1\times S_2\times\cdots\times S_k\) of all \(k\)-tuples with \(x_i\in S\) relate to the picture enumerators of the sets \(S_i\text{?}\) In the special case that \(S_i = S\) for all \(i\) and \(P_i = P\) for all \(i\text{,}\) what is \(E_{\widehat{P}}(S^k)\text{?}\)</p></article><article class="example-like essential" id="polya1"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">314</span>
+</h5>
+<p id="p-1735">Use the Orbit-Fixed Point Theorem to determine the Orbit Enumerator for the colorings, with two colors (red and blue), of six circles placed at the vertices of a hexagon which is free to move in the plane. Compare the coefficients of the resulting polynomial with the various orbits you found in <a knowl="./knowl/coloredhex.html" knowl-id="xref-coloredhex" alt="Problem 310 " title="Problem 310 ">Problem 310</a>.</p></article><article class="example-like" id="polya2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">315</span>
+</h5>
+<p id="p-1740">Find the generating function (in variables \(R\text{,}\) \(B\)) for colorings of the faces of a cube with two colors (red and blue). What does the generating function tell you about the number of ways to color the cube (up to spatial movement) with various combinations of the two colors.</p></article></section><section class="subsection" id="subsection-69"><header title="Subsection 6.3.2 The Pólya-Redfield Theorem"><h1 class="heading hide-type" alt="Subsection 6.3.2 The Pólya-Redfield Theorem">
+<span class="type">Subsection</span><span class="codenumber">6.3.2</span><span class="title">The Pólya-Redfield Theorem</span><a href="sec_groups-polya.html#subsection-69" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1743">Pólya's (and Redfield's) famed enumeration theorem deals with situations such as those in <a knowl="./knowl/polya1.html" knowl-id="xref-polya1" alt="Problem 314 " title="Problem 314 ">Problems 314</a> and <a knowl="./knowl/polya2.html" knowl-id="xref-polya2" alt="Problem 315 " title="Problem 315 ">Problem 315</a> in which we want a generating function for the set of all functions from a set \(S\) to a set \(T\) on which a picture function is defined, and the picture of a function is the product of the pictures of its multiset of values. The point of the next series of problems is to analyze the solution to <a knowl="./knowl/polya1.html" knowl-id="xref-polya1" alt="Problem 314 " title="Problem 314 ">Problems 314</a> and <a knowl="./knowl/polya2.html" knowl-id="xref-polya2" alt="Problem 315 " title="Problem 315 ">Problem 315</a> in order to see what Pólya and Redfield saw (though they didn't see it in this notation or using this terminology).</p>
+<article class="example-like essential" id="polya3"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">316</span>
+</h5>
+<p id="p-1744">In <a knowl="./knowl/polya1.html" knowl-id="xref-polya1" alt="Problem 314 " title="Problem 314 ">Problem 314</a> we have four kinds of group elements: the identity (which fixes every coloring), the rotations through 60 or 300 degrees, the rotations through 120 and 240 degrees, and the rotation through 180 degrees. The fixed point enumerator for the rotation group acting on the functions is by definition the sum of the fixed point enumerators of colorings fixed by the identity, of colorings fixed by 60 or 300 degree rotations, of colorings fixed by 120 or 240 degree rotations, and of colorings fixed by the 180 degree rotation. Write down each of these enumerators (one for each kind of permutation) individually and factor each one (over the integers) as completely as you can.</p></article><article class="example-like essential" id="polya4"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">317</span>
+</h5>
+<p id="p-1746">In <a knowl="./knowl/polya2.html" knowl-id="xref-polya2" alt="Problem 315 " title="Problem 315 ">Problem 315</a> we have five different kinds of group elements, and the fixed point enumerator is the sum of the fixed point enumerators of each of these kinds of group elements. For each kind of element, write down the fixed point enumerator for the elements of that kind. Factor the enumerators as completely as you can.</p></article><article class="example-like essential" id="polya3_5"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">318</span>
+</h5>
+<p id="p-1748">In <a knowl="./knowl/polya3.html" knowl-id="xref-polya3" alt="Problem 316 " title="Problem 316 ">Problem 316</a>, each “kind” of group element has a “kind” of cycle structure. For example, a rotation through 180 degrees has three cycles of size two. What kind of cycle structure does a rotation through 60 or 300 degrees have? What kind of cycle structure does a rotation through 120 or 240 degrees have? Discuss the relationship between the cycle structures and the factored enumerators of fixed points of the permutations in <a knowl="./knowl/polya3.html" knowl-id="xref-polya3" alt="Problem 316 " title="Problem 316 ">Problem 316</a>.</p></article><p id="p-1750">Recall that we said that a group of permutations acts on a set if, for each member \(\sigma\) of \(G\) there is a bijection \(\overline{\sigma}\) of \(S\) such that</p>
+\begin{equation*}
+\overline{\sigma\circ\varphi} = \overline{\sigma}\circ\overline{\varphi}
+\end{equation*}
+<p>for every member \(\sigma\) and \(\varphi\) of \(G\text{.}\) Since \(\overline{\sigma}\) is a bijection of \(S\) to itself, it is in fact a permutation of \(S\text{.}\) Thus \(\overline{\sigma}\) has a cycle structure (that is, it is a product of disjoint cycles) as a permutation of \(S\) (in addition to whatever its cycle structure is in the original permutation group \(G\)).</p>
+<article class="example-like essential" id="activity-319"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">319</span>
+</h5>
+<p id="p-1751">In <a knowl="./knowl/polya4.html" knowl-id="xref-polya4" alt="Problem 317 " title="Problem 317 ">Problem 317</a>, each “kind” of group element has a “kind” of cycle structure in the action of the rotation group of the cube on the faces of the cube. For example, a rotation of the cube through 180 degrees around a vertical axis through the centers of the top and bottom faces has two cycles of size two and two cycles of size one. How many such rotations does the group have? What are the other “kinds” of group elements, and what are their cycle structures? Discuss the relationship between the cycle structure and the factored enumerator in <a knowl="./knowl/polya4.html" knowl-id="xref-polya4" alt="Problem 317 " title="Problem 317 ">Problem 317</a>.</p></article><article class="example-like essential" id="activity-320"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">320</span>
+</h5>
+<article class="introduction" id="introduction-66"><p id="p-1757">The usual way of describing the Pólya-Redfield enumeration theorem involves the “cycle indicator” or “cycle index” of a group acting on a set. Suppose we have a group \(G\) acting on a finite set \(S\text{.}\) Since each group element \(\sigma\) gives us a permutation \(\overline{\sigma}\) of \(S\text{,}\) as such it has a decomposition into disjoint cycles as a permutation of \(S\text{.}\) Suppose \(\sigma\) has \(c_1\) cycles of size 1, \(c_2\) cycles of size 2, ..., \(c_n\) cycles of size \(n\text{.}\) Then the <em class="terminology">cycle monomial</em> of \(\sigma\) is</p>
+\begin{equation*}
+z(\sigma) = z_1^{c_1}z_2^{c_2}\cdots z_n^{c_n}.
+\end{equation*}
+<p id="p-1758">The <em class="terminology">cycle indicator</em> or <em class="terminology">cycle index</em> of \(G\) acting on \(S\) is</p>
+\begin{equation*}
+Z(G,S) = \frac{1}{|G|}\sum_{\sigma: \sigma \in G} z(\sigma).
+\end{equation*}
+</article><article class="exercise-like" id="task-233"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1759">What is the cycle index for the group \(D_6\) acting on the vertices of a hexagon?</p></article><article class="exercise-like" id="task-234"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1761">What is the cycle index for the group of rotations of the cube acting on the faces of the cube?</p></article></article><article class="example-like" id="activity-321"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">321</span>
+</h5>
+<p id="p-1763">How can you compute the Orbit Enumerator of \(G\) acting on functions from \(S\) to a finite set \(T\) from the cycle index of \(G\) acting on \(S\text{?}\) (Use \(t\text{,}\) thought of as a variable, as the picture of an element \(t\) of \(T\text{.}\)) State and prove the relevant theorem! This is Pólya's and Redfield's famous enumeration theorem.</p></article><article class="example-like interesting" id="activity-322"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">322</span>
+</h5>
+<p id="p-1765">Suppose we make a necklace by stringing 12 pieces of brightly colored plastic tubing onto a string and fastening the ends of the string together. We have ample supplies blue, green, red, and yellow tubing available. Give a generating function in which the coefficient of \(B^iG^jR^kY^h\) is the number of necklaces we can make with \(i\) blues, \(j\) greens, \(k\) reds, and \(h\) yellows. How many terms would this generating function have if you expanded it in terms of powers of \(B\text{,}\) \(G\text{,}\) \(R\text{,}\) and \(Y\text{?}\) Does it make sense to do this expansion? How many of these necklaces have 3 blues, 3 greens, 2 reds, and 4 yellows?</p></article><article class="example-like" id="activity-323"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">323</span>
+</h5>
+<p id="p-1770">What should we substitute for the variables representing colorings in the orbit enumerator of \(G\) acting on the set of colorings of \(S\) by a set \(T\) of colors in order to compute the total number of orbits of \(G\) acting on the set of colorings? What should we substitute into the variables in the cycle index of a group \(G\) acting on a set \(S\) in order to compute the total number of orbits of \(G\) acting on the colorings of \(S\) by a set \(T\text{?}\) Find the number of ways to color the faces of a cube with four colors.</p></article><article class="example-like interesting" id="coloredsticks"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">324</span>
+</h5>
+<p id="p-1773">We have red, green, and blue sticks all of the same length, with a dozen sticks of each color. We are going to make the skeleton of a cube by taking eight identical lumps of modeling clay and pushing three sticks into each lump so that the lumps become the vertices of the cube. (Clearly we won't need all the sticks!) In how many different ways could we make our cube? How many cubes have four edges of each color? How many have two red, four green, and six blue edges?</p></article><article class="example-like interesting" id="activity-325"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">325</span>
+</h5>
+<p id="p-1779">How many cubes can we make in <a knowl="./knowl/coloredsticks.html" knowl-id="xref-coloredsticks" alt="Problem 324 " title="Problem 324 ">Problem 324</a> if the lumps of modelling clay can be any of four colors?</p></article><figure class="figure-like" id="HexNet"><object type="image/svg+xml" style="width:33%; margin:auto; display:block;" data="images/NumberedHexagonalNetwork.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.2</span>A possible computer network.</figcaption></figure><article class="example-like interesting" id="activity-326"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">326</span>
+</h5>
+<p id="p-1783">In <a knowl="./knowl/HexNet.html" knowl-id="xref-HexNet" alt="Figure 6.3.2 " title="Figure 6.3.2 ">Figure 6.3.2</a> we see a graph with six vertices. Suppose we have three different kinds of computers that can be placed at the six vertices of the graph to form a network. In how many different ways may the computers be placed? (Two graphs are not different if we can redraw one of the graphs so that it is identical to the other one.) This is equivalent to permuting the vertices in some way so that when we apply the permutation to the endpoints of the edges to get a new edge set, the new edge set is equal to the old one. Such a permutation is called an <em class="terminology">automorphism</em> of the graph. Then two computer placements are the same if there is an automorphism of the graph that carries one to the other.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-245" id="hint-245"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-245" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1784">The group of automorphisms of the graph has 48 elements and contains \(D_6\) as a subgraph.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-246" id="hint-246"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-246" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1785">The permutations with four one-cycles and the two-cycle \((1\ 4)\text{,}\) \((2\ 5)\text{,}\) or \((3\ 6)\) are in the group of automorphisms. Once you know the cycle structure of \(D_6\) and \((1\ 4)D_6 = \{(1\ 4)\sigma | \sigma \in D_6\}\text{,}\) you know the cycle structure of every element of the group.</p></span></span>
+</div></article><article class="example-like interesting" id="activity-327"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">327</span>
+</h5>
+<p id="p-1790">Two simple graphs on the set \([n]= \{1,2,\ldots, n\}\) with edge sets \(E\) and \(E'\) (which we think of a sets of two-element sets for this problem) are said to be <em class="terminology">isomorphic</em> if there is a permutation \(\sigma\) of \([n]\) which, in its action of two-element sets, carries \(E\) to \(E'\text{.}\) We say two graphs are different if they are not isomorphic. Thus the number of different graphs is the number of orbits of the set of all two-element subsets of \([n]\) under the action of the group \(S_n\text{.}\) We can represent an edge set by its characteristic function (as in <a knowl="./knowl/charfunction.html" knowl-id="xref-charfunction" alt="Problem 33 " title="Problem 33 ">problem 33</a>). That is we define</p>
+\begin{equation*}
+\chi_E(\{u,v\}) = \left\{
+\begin{array}{ll}
+1 \amp  \mbox{if \(\{u,v\}\in E\)} \\
+0 \amp  \mbox{otherwise.}
+\end{array} \right.
+\end{equation*}
+<p id="p-1791">Thus we can think of the set of graphs as a set of colorings with colors 0 and 1 of the set of all two-element subsets of \([n]\text{.}\) The number of different graphs with vertex set \([n]\) is thus the number of orbits of this set of colorings under the action of the symmetric group \(S_n\) on the set of two-element subsets of \([n]\text{.}\) Use this to find the number of different graphs on five vertices.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-247" id="hint-247"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-247" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1792">What does the symmetric group on five vertices have to do with this problem?</p></span></span>
+</div></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

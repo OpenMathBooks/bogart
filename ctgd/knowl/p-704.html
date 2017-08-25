@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:47-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>We are given that\(d_i\) is the degree of vertex \(i\text{.}\) The number of times \(i\) appears in the Prüfer code of a tree is one less than the degree of \(i\text{,}\) so vertex \(i\) appears \(d_i-1\) times. Thus the sum of the \(d_i-1\) should be \(2n-2-n=n-2\text{.}\) Of the \(n-2\) places in the Prüfer code, we want to label \(d_1-1\) of them with 1, \(d_2-1\) of them with 2 and in general \(d_i-1\) of them with \(i\text{.}\) There are</p>
+\begin{equation*}
+\binom{n-2}{d_1-1}\binom{n-2-(d_1-1)}{d_2-1}\binom{n-2-(d_1-1+d_2-1)}{d_3-1}\cdots\binom{d_n-1}{d_n-1}
+\end{equation*}
+<p>ways to do this, so the number of trees in which vertex \(i\) has degree \(d_i\) is \(\frac{(n-2)!}{(d_1-1)!(d_2-1)!\cdots(d_n-1)!}\text{.}\)</p>
+<span class="incontext"><a href="sec_induction-suppprobs.html#p-704">in-context</a></span>
+</body>
+</html>

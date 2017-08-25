@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:24-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">370.1</span>
+</h5>
+<p>We prove our result by induction on \(m\text{.}\)  If \(m=1\text{,}\) then either \(n = 1\) and we can choose \(q = 1\) and \(r = 0\text{,}\) or \(n \gt 1\) and we can choose \(q = 0\) and \(r = 1\text{.}\)  Furthermore, if \(m = 1\) and \(n = 1\text{,}\) then \(r\) must equal zero (to be less than 1), and so \(q\) must equal 1.  In \(m=1\) and \(n \gt 1\text{,}\) then we must choose \(q = 0\) (because otherwise \(nq+r\) would have to be bigger than \(m\)) and therefore must choose \(r = m\text{.}\)  Therefore Euclid's theorem is true when \(m = 1\text{.}\)</p>
+<p>Now assume that \(m \gt 1\) and that for any positive integer \(m' \lt m\text{,}\) there are unique nonnegative integers \(q'\) and \(r'\) such that \(m' = q'n+r'\text{,}\) with \(0 \le r' \lt n\text{.}\)  If \(m \lt n\text{,}\) then we can let \(q = 0\) and \(r = m\text{,}\) and we have our \(q\) and \(r\text{.}\)  If \(m = n\text{,}\) we may choose \(q = 1\) and \(r = 0\) and we have our \(q\) and \(r\) again.  Therefore we may assume that \(m \gt n\text{.}\) In this case, \(m-n\) is a positive integer, and so since \(m-n \lt n\text{,}\) we have that, for unique nonnegative integers \(q'\) and \(r'\text{,}\)</p>
+\begin{equation*}
+m-n = q'n+r',
+\end{equation*}
+<p>with \(0 \le r \lt n\text{.}\)  But then adding \(n\) to both sides of the equation gives us \(m = (q'+1)n + r'\text{,}\) with \(0 \le r' \lt n\text{.}\)  Therefore if we take \(q = q'+1\) and \(r = r'\) we have that \(m = qn+r\text{,}\) with \(0 \le r \lt n\text{.}\)  On the other hand, \(q'\) and \(r'\) are unique by our inductive hypothesis.  Thus if \(m = qn + r\text{,}\) subtracting \(n\) from both sides of the equation gives us \(m-n = (q-1)n+r\text{.}\) This tells us that \(q\) <!--Style me with CSS--><em>must</em> equal \(q'+1\) and \(r\) <!--Style me with CSS--><em>must</em> equal \(r'\text{.}\)  Therefore by the strong principle of mathematical induction, Eulcid's Theorem holds for all positive integers \(m\text{.}\)</p></span><span class="incontext"><a href="Induction.html#solution-603">in-context</a></span>
+</body>
+</html>

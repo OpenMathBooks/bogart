@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:04-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>If a graph has a loop it has no proper colorings. The graph in <a knowl="./knowl/del-cont.html" knowl-id="xref-del-cont" alt="Figure 5.3.1 " title="Figure 5.3.1 ">Figure 5.3.1</a> has no loops and no multiple edges between two vertices. The only way we could get a loop is by contracting one of several multiple edges between two vertices, and the resulting graph would have no contribution to the chromatic polynomial of the original graph. Thus whenever a contraction gives us a graph with multiple edges between two vertices, we can replace the multiple edges by one edge and go on with our computation from there. The graphs we get when we delete and contract the edges \(\{1,2\}\) and \(\{2,3\}\) are \((G-\{1,2\})-\{2,3\}\text{,}\) \((G-\{1,2\})/\{2,3\}\text{,}\) \((G-\{2,3\})/\{1,2\}\text{,}\) and \((G/\{2,3\})/\{1,2\}\text{.}\) These are shown in the following picture.</p>
+<div class="sidebyside" style="">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/spantreeexerciseresult.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div></div>
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><figcaption class="sbscaption" style="width:100%;"><span class="heading">Figure</span><span class="codenumber">5.3.2</span>Graphs obtained through deletions and contractions</figcaption></div>
+</div>
+<p>The chromatic polynomial of a triangle is \(x(x-1)(x-2)\) because for one vertex we have \(x\) colors, for a second we have \(x-1\text{,}\) and for the third vertex, because it is adjacent to both of the other vertices, we have \(x-2\) choices of colors. For a vertex of degree 1 there are \(x-1\) choices of colors, those colors not used on the one vertex it is adjacent to. As we mentioned, the extra edges do not change the chromatic polynomial, so we have that the chromatic polynomial of \((G-\{1,2\})-\{2,3\}\) is \(x(x-1)^3(x-2)\text{,}\) the chromatic polynomial of \((G-\{1,2\})/\{2,3\}\) is \(x(x-1)^2(x-2)\text{,}\) as is that of \((G-\{2,3\})/\{1,2\}\text{,}\) and the chromatic polynomial of \((G/\{2,3\})/\{1,2\}\) is \((x-1)(x-2)(x-3)\text{.}\) Using the deletion-contraction recurrence, we get that</p>
+\begin{align*}
+\chi_G(x)  \amp =  \chi_{G-\{1,2\}}(x) - \chi_{G/\{1,2\}}(x)\\
+\amp =
+\chi_{G-\{1,2\}-\{2,3\}}(x)-\chi_{(G-\{1,2\})/\{2,3\}}(x)-
+\chi_{(G/\{1,2\})-\{2,3\}}(x)\\
+\amp \quad +  \chi_{G/\{1,2\}/\{2,3\}}(x)\\
+\amp =  x(x-1)^3(x-2)-2x(x-1)^2(x-2) + x(x-1)(x-2)\\
+\amp =  x(x-1)(x-2)(x^2-2x+1 +2x-2 +1)\\
+\amp =  x^3(x-1)(x-2)
+\end{align*}
+<p>for the chromatic polynomial of \(G\text{.}\)</p></span></body>
+</html>

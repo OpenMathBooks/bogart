@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:05-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Now we have to deal with the fact that our \(n\) people (who we have replaced with the integers 1 through \(n\) in order) were arranged around a circle. That means that a run is now a set of consecutive integers on the circle, where \(n\) and 1 are considered consecutive. Recall that the set \(S\) is picked out by the sticks. If we arrange 1 through \(n\) around a circle in order, the set \(S\) that originally had \(r\) runs will have \(r-1\) runs if sticks covered both the first and last integer (1 and \(n\)), but otherwise it will still have \(n\) runs. Thus the number of subsets of \([n]\) that have \(n\) runs when \(1\) through \(n\) are arranged in a circle is the number of subsets of \([n]\) with \(r+1\) runs that have both 1 and \(n\) in \(S\) plus the number of subsets of \([n]\) with \(r\) runs that do not have both \(1\) and \(n\) in \(S\text{.}\) To compute the number of subsets \(S\) that <!--Style me with CSS--><em>do</em> contain both 1 and \(n\text{,}\) we compute the number of arrangements of \(r\) sticks and \(n-s\) stones that do start and end with a stick; that means that after we choose our composition into \(r\) parts to get our arrangement of sticks and place one stone between each pair of previously adjacent sticks, we now place the remaining \(n-s-r+1\) stones in the \(r-1\) places between previously adjacent sticks in</p>
+\begin{equation*}
+\binom{r-1 + (n-s-r+1)-1}{n-s-r+1}=\binom{n-s-1}{n-s-r+1}=\binom{n-s-1}{r-2}
+\end{equation*}
+<p>ways. For the sticks and stones to determine a subset we must assign lengths to the sticks; the number of ways to do this is, as above, \(\binom{s-1}{r-1}\text{,}\) the number of compositions of \(s\) with \(r\) parts. Thus there are \(\binom{s-1}{r-1}\binom{n-s-1}{r-2}\) subsets of \([n]\) that have \(r\) runs and include both 1 and \(n\text{.}\) For our computation we will also want the number of subsets of \([n]\) that have \(r+1\) runs and contain both \(1\) and \(n\) this is \(\binom{s-1}{r}\binom{n-s-1}{r-1}\text{.}\)</p>
+<span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1427">in-context</a></span>
+</body>
+</html>

@@ -16,7 +16,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!-- Assumes current file is in discrete-text/xsl and that the mathbook repository is adjacent -->
-<xsl:import href="../../mathbook/xsl/mathbook-latex.xsl" />
+<xsl:import href="../../../mathbook/xsl/mathbook-latex.xsl" />
 <!-- Assumes next file can be found in discrete-text/xsl -->
 <xsl:import href="custom-common.xsl" />
 
@@ -42,7 +42,7 @@
 <!-- Default is empty and thus ineffective         -->
 <!-- Otherwise, happens early in preamble template -->
 
-<!-- <xsl:param name="latex.geometry" select="'papersize={6in,9in}, hmargin={0.85in, 0.5in}, height=7.75in, top=0.75in, twoside, ignoreheadfoot'"/> -->
+<xsl:param name="latex.geometry" select="'papersize={8.5in,11in}, hmargin={.75in, 1.5in}, bindingoffset=0.25in, height=9in, top=1in, twoside, ignoreheadfoot'"/>
 
 <!--  -->
 <!-- PDF Watermarking                    -->
@@ -124,7 +124,7 @@
 <!-- Exercises have "solution"s which should be put in the back. -->
 <!-- Not sure what to do for homework solutions -->
 <xsl:param name="exercise.text.statement" select="'yes'" />
-<xsl:param name="exercise.text.hint" select="'yes'" />
+<xsl:param name="exercise.text.hint" select="'no'" />
 <xsl:param name="exercise.text.answer" select="'no'" />
 <xsl:param name="exercise.text.solution" select="'no'" />
 <xsl:param name="exercise.backmatter.statement" select="'no'" />

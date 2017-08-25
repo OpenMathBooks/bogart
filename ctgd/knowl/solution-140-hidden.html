@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:43-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>We define \(\sum_{i=1}^1a_i = a_1\) and for \(n&gt;1\text{,}\) \(\sum_{i=1}^n
+a_i =  \left(\sum_{i=1}^{n-1}a_i\right) +a_n\text{.}\) When \(n=1\text{,}\) \(b\sum_{i=1}^1a_i =ba_1\) by the base step of our inductive definition. Assume that \(k&gt;1\) and \(b\sum_{i=1}^{k-1}a_i=\sum_{i=1}^{k-1}ba_i\text{.}\) Now we can write</p>
+\begin{equation*}
+b\sum_{i=1}^k a_i\!=\! b\left[\left(\sum_{i=1}^{k-1}a_i\right)+a_k\right]
+\!=\!
+\left(b\sum_{i=1}^{k-1}a_i\right) +ba_k \!=\! \left(\sum_{i=1}^{k-1}ba_i\right)
++ ba_k \!=\! \sum_{i=1}^k ba_i,
+\end{equation*}
+<p>where the last step is justified by the inductive step of our inductive definition with \(a_i\) replaced by \(ba_i\text{.}\) Thus the truth of our statement for \(k-1\) implies its truth for \(i=k\text{,}\) and therefore by the principle of mathematical induction, for all positive integers \(n\text{,}\) \(b\sum_{i=1}^na_i= \sum_{i=1}^nba_i\text{.}\)</p></span></body>
+</html>

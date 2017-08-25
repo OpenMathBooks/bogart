@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:41-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>Choose people in ordered piars.  The first person in an ordered pair serves first.  There are \(2n(2n-1)\) ways to choose one pair, \((2n-2)(2n-3)\) ways to choose a second pair, and once \(k\) pairs have been chosen, there are \((2n-2k)(2n-2k-1)\) ways to choose the next pair.  The number of <!--Style me with CSS--><em>lists</em> o pairs we get in this way is \(\prod_{i=0}^{n-1} (2n-2i)(2n-2i-1) = (2n)!\text{.}\) However, each way of pairing people gets listed \(n!\) times since we see all possible length \(n\) lists of pairs.  Therefore the number of actual pairings is \(\frac{(2n)!}{n!} = (2n)^{\underline{n}}\text{.}\)</p>
+<p>For yet another solution, we can list the \(2n\) members in \((2n)!\) ways. Then we can take the first two as a tennis pair, with the first person serving first, the next two, and so on. There are \(n!\) ways that a given set of tennis pairings could be arranged, so the tennis pairings partition the set of all permutations of the \(2n\) members into blocks of size \(n!\text{.}\) Thus we have \(\frac{(2n)!}{n!}\) tennis pairings once again.</p></span></body>
+</html>

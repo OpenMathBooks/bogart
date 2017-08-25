@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:56-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>\(\displaystyle\prod_{i=1}^\infty 1+q^i=\prod_{i=1}^n \frac{1-q^{2i}}{1-q^i}=\frac{\prod_{i=1}^\infty1-q^{2i}}{\prod_{j=1}^\infty 1-q^j} =\prod_{i=j}^\infty \frac{1}{1-q^{2j-1}}\text{,}\) because all the terms in the numerator cancel with alternate terms in the denominator leaving only terms with odd powers of \(q\text{.}\) But</p>
+\begin{align*}
+\amp \prod_{j=1}^\infty\frac{1}{1-q^{2j-1}}\rangle =\rangle \prod_{j=1}^\infty \sum_{i=0}^\infty (q^{2j-1})^i\\
+=\amp (1+q+q^{2\cdot1}+\cdots)(1+q^3+q^{2\cdot3}+\cdots)(1
++q^5+q^{2\cdot5}+\cdots)\cdots,
+\end{align*}
+<p>which is the generating function for partitions of integers into parts that are odd numbers.</p></span></body>
+</html>

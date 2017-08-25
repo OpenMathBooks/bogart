@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:28-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>There are no onto functions from a \(0\)-element set to a \(1\)-element set; otherwise there is exactly one function from an \(n\)-element set onto a one element set so the EGF for functions from an \(n\)-element set onto a one element set is \(e^x-1\text{.}\) A function from an \(n\)-element set onto a \(k\)-element set may be thought of as a \(k-tuple\) of functions from disjoint subsets whose union is the \(n\)-element set onto the one element subsets of the \(k\)-element set. Therefore by the corollary to the product principle for EGFs the EGF for functions from an \(n\)-element set onto a \(k\)-element set is \((e^x-1)^k\text{.}\) By the binomial theorem, this is</p>
+\begin{equation*}
+\kern-.25 in\sum_{i=0}^k\binom{k}{i}(-1)^{k-i}e^{ix}
+=
+\sum_{i=0}^k \binom{k}{i} (-1)^{k-i} \sum_{j=0}^\infty \frac{(ix)^j}{j!} =
+\sum_{i=0}^k (-1)^{k-i}\binom{k}{i} \sum_{j=0}^\infty i^j\frac{(x)^j}{j!}.
+\end{equation*}
+<p>Thus \(c_n= \sum_{i=0}^k(-1)^{k-i}\binom{k}{i}n^i\text{,}\) which is consistent with the formula we got by inclusion and exclusion.</p></span></body>
+</html>

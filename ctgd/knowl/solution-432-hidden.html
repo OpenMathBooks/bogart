@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:06-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>We give the first and last proof. We will induct on \(n\) in the first proof. If \(n=0\) the formula automatically holds. Assume inductively that \(\varphi^m\circ\varphi^{-(n-1)} = \varphi^{m-(n-1)}\text{.}\) Compose both sides of this equation on the right by \(\sigma^{-1}\) and use the associative law for composition of functions to get, in the case that \(m-n\) is nonnegative</p>
+\begin{align*}
+\varphi^m\circ(\varphi^{-(n-1)}\circ\varphi^{-1})  =\amp
+\varphi^{m-(n-1)}\circ\varphi^{-1}\\
+\varphi^m\circ(\varphi^{-1})^{n-1}\varphi^{-1} =\amp
+(\varphi^{m-n}\circ\varphi)\circ\varphi^{-1}\\
+\varphi^m\circ(\varphi^{-1})^n  =\amp  \varphi^{m-n}.
+\end{align*}
+<p>We do the same in the case that \(m-n\) is negative, getting</p>
+\begin{align*}
+\varphi^m\circ(\varphi^{-(n-1)}\circ\varphi^{-1})  =\amp
+\varphi^{m-(n-1)}\circ\varphi^{-1}\\
+\varphi^m\circ(\varphi^{-1})^{n-1}\varphi^{-1} =\amp
+(\varphi^{-1})^{n-m-1}\circ\varphi^{-1}\\
+\varphi^m\circ(\varphi^{-1})^n  =\amp  (\varphi^{-1})^{n-m}\\
+\varphi^m\circ\varphi^{-n} =\amp \varphi^{m-n}.
+\end{align*}
+<p>To prove the last statement we need to prove, we write the following, in which <a knowl="./knowl/md-65.html" knowl-id="xref-crucialline" alt="Equation 6.1 " title="Equation 6.1 ">(6.1)</a> follows from the first equation we proved and  <a knowl="./knowl/md-65.html" knowl-id="xref-modestlyimportant" alt="Equation 6.2 " title="Equation 6.2 ">(6.2)</a> follows from the fact that \((\varphi^{-1})^{-1} = \varphi\text{.}\)</p>
+\begin{align*}
+(\varphi^{-m})^{-n}  =\amp  ([\varphi^{-1})^m]^{-1})^n\\
+=\amp [(\varphi^{-1})^{-m}]^n\tag{6.1}\\
+=\amp ([(\varphi^{-1})^{-1}]^m)^n\\
+=\amp (\varphi^m)^n\tag{6.2}\\
+=\amp \varphi^{mn}
+\end{align*}
+</span></body>
+</html>

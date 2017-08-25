@@ -1,0 +1,170 @@
+/* This is the custom css file for Bogart's Combinatorics through Guided Discovery, mainly to insert problem type symbols */
+
+.example-like.essential::before {
+  display: inline-block!important;
+  content: "\2022";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.motivation::before {
+  display: inline-block!important;
+  content: "\00b0";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.summary::before {
+  display: inline-block!important;
+  content: "\002b";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.interesting::before {
+  display: inline-block!important;
+  content: "\21D2";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.difficult::before {
+  display: inline-block!important;
+  content: "\002a";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.forward-essential::before{
+  display: inline-block!important;
+  content: "\22C5";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.interesting-forward-essential::before{
+  display: inline-block!important;
+  content: "\21D2 \22C5";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.interesting-essential::before{
+  display: inline-block!important;
+  content: "\21D2 \2022";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+.example-like.interesting-difficult::before{
+  display: inline-block!important;
+  content: "\21D2 \002a";
+  position: relative;
+  left: -1.5em;
+  margin: -2pt;
+  width: 0;
+}
+
+
+/*Tasks:*/
+
+.exercise-like.essential::before {
+  display: inline-block!important;
+  content: "\2022";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.motivation::before {
+  display: inline-block!important;
+  content: "\00b0";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.summary::before {
+  display: inline-block!important;
+  content: "\002b";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.interesting::before {
+  display: inline-block!important;
+  content: "\21D2";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.difficult::before {
+  display: inline-block!important;
+  content: "\002a";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.forward-essential::before{
+  display: inline-block!important;
+  content: "\22C5";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.interesting-forward-essential::before{
+  display: inline-block!important;
+  content: "\21D2 \22C5";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.interesting-essential::before{
+  display: inline-block!important;
+  content: "\21D2 \2022";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.exercise-like.interesting-difficult::before{
+  display: inline-block!important;
+  content: "\21D2 \002a";
+  position: relative;
+  left: -1em;
+  margin: -1pt;
+  width: 0;
+}
+
+.example-like .exercise-like {
+  margin-left: 1.5em;
+}

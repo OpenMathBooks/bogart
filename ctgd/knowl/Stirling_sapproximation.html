@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:41-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like interesting"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">46</span>
+</h5>
+<p>While the formula you proved in <a knowl="./knowl/nchoosek.html" knowl-id="xref-nchoosek" alt="Problem 35 " title="Problem 35 ">Problems 35</a> and <a knowl="./knowl/formulanchoosekfinal.html" knowl-id="xref-formulanchoosekfinal" alt="Part 39.d " title="Part 39.d ">39.d</a> is very useful, it doesn't give us a sense of how big the binomial coefficients are. We can get a very rough idea, for example, of the size of \(\binom{2n}{n}\) by recognizing that we can write \((2n)^\frac{\underline{n}}/n!\) as \({2n}{n}\cdot
+\frac{2n-1}{n-1}\cdots \frac{n+1}{1}\text{,}\) and each quotient is at least \(2\text{,}\) so the product is at least \(2^n\text{.}\) If this were an accurate estimate, it would mean the fraction of \(n\)-element subsets of a \(2n\)-element set would be about         \(2^n/2^{2n}=1/2^n\text{,}\) which becomes very small as \(n\) becomes large. However it is pretty clear the approximation will not be a very good one, because some of the terms in that product are much larger than 2. In fact, if \(\binom{2n}{k}\) were the same for every \(k\text{,}\) then each would be the fraction \(\frac{1}{2n+1}\) of \(2^{2n}\text{.}\) This is much larger than the fraction \(\frac{1}{2^n}\text{.}\) But our intuition suggets that \(\binom{2n}{n}\) is much larger than \(\binom{2n}{1}\) and is likely larger than \(\binom{2n}{n-1}\) so we can be sure our approximation is a bad one. For estimates like this, James Stirling developed a formula to approximate \(n!\) when \(n\) is large, namely \(n!\) is about \(\left(\sqrt{2\pi
+n}\right){n^n/ e^n}\text{.}\) In fact the ratio of \(n!\) to this expression approaches 1 as \(n\) becomes infinite.<span><a knowl="./knowl/fn-2-hidden.html" knowl-id="hidden-fn-2" alt="Footnote 1.2 " title="Footnote 1.2 "><span class="footnote"><sup> 2 </sup></span></a></span> We write this as</p>
+\begin{equation*}
+n!\sim \sqrt{2\pi
+n}\frac{n^n}{e^n}.
+\end{equation*}
+<p>We read this notation as \(n!\) is asymptotic to \(\sqrt{2\pi n}\frac{n^n}{e^n}\text{.}\) Use Stirling's formula to show that the fraction of subsets of size \(n\) in an \(2n\)-element set is approximately \(1/\sqrt{\pi n}\text{.}\) This is a much bigger fraction than \(\frac{1}{2^n}\text{!}\)</p></article><span class="incontext"><a href="s1-2-basics.html#Stirling_sapproximation">in-context</a></span>
+</body>
+</html>

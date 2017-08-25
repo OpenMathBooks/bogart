@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:28-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The size of a union of sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_inclexcl.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_inclexcl.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_inclexcl-apps.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_inclexcl.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_inclexcl.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_inclexcl-apps.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion" class="active">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_inclexcl-sizeunion"><header title="Section 5.1 The size of a union of sets"><h1 class="heading hide-type" alt="Section 5.1 The size of a union of sets">
+<span class="type">Section</span><span class="codenumber">5.1</span><span class="title">The size of a union of sets</span><a href="sec_inclexcl-sizeunion.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-48"><p id="p-1303">One of our very first counting principles was the <em class="terminology">sum principle</em> which says that the size of a union of disjoint sets is the sum of their sizes. Computing the size of overlapping sets requires, quite naturally, information about how they overlap. Taking such information into account will allow us to develop a powerful extension of the sum principle known as the “principle of inclusion and exclusion.”</p></section><section class="subsection" id="subsection-51"><header title="Subsection 5.1.1 Unions of two or three sets"><h1 class="heading hide-type" alt="Subsection 5.1.1 Unions of two or three sets">
+<span class="type">Subsection</span><span class="codenumber">5.1.1</span><span class="title">Unions of two or three sets</span><a href="sec_inclexcl-sizeunion.html#subsection-51" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like motivation" id="fertilizer2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">225</span>
+</h5>
+<p id="p-1304">In a biology lab study of the effects of basic fertilizer ingredients on plants, 16 plants are treated with potash, 16 plants are treated with phosphate, and among these plants, eight are treated with both phosphate and potash. No other treatments are used. How many plants receive at least one treatment? If 32 plants are studied, how many receive no treatment?</p></article><article class="example-like summary" id="twosetintersection"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">226</span>
+</h5>
+<p id="p-1306">Give a formula for the size of the union \(A\cup B\) of two sets \(A\) in terms of the sizes \(|A|\) of \(A\text{,}\) \(|B|\) of \(B\text{,}\) and \(|A\cap B|\) of \(A\cap B\text{.}\) If \(A\) and \(B\) are subsets of some “universal” set \(U\text{,}\) express the size of the complement \(U-(A\cup B)\) in terms of the sizes \(|U|\) of \(U\text{,}\) \(|A|\) of \(A\text{,}\) \(|B|\) of \(B\text{,}\) and \(|A\cap B|\) of \(A\cap B\text{.}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-208" id="hint-208"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-208" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1307">Try drawing a Venn Diagram.</p></span></span>
+</div></article><article class="example-like motivation" id="activity-227"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">227</span>
+</h5>
+<p id="p-1310">In <a knowl="./knowl/fertilizer2.html" knowl-id="xref-fertilizer2" alt="Problem 225 " title="Problem 225 ">Problem 225</a>, there were just two fertilizers used to treat the sample plants. Now suppose there are three fertilizer treatments, and 15 plants are treated with nitrates, 16 with potash, 16 with phosphate, 7 with nitrate and potash, 9 with nitrate and phosphate, 8 with potash and phosphate and 4 with all three. Now how many plants have been treated? If 32 plants were studied, how many received no treatment at all?</p></article><article class="example-like essential" id="threesetintersection"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">228</span>
+</h5>
+<p id="p-1312">Give a formula for the size of \(A\cup B\cup C\) in terms of the sizes of \(A\text{,}\) \(B\text{,}\) \(C\) and the intersections of these sets.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-209" id="hint-209"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-209" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1313">Try drawing a Venn Diagram.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-52"><header title="Subsection 5.1.2 Unions of an arbitrary number of sets"><h1 class="heading hide-type" alt="Subsection 5.1.2 Unions of an arbitrary number of sets">
+<span class="type">Subsection</span><span class="codenumber">5.1.2</span><span class="title">Unions of an arbitrary number of sets</span><a href="sec_inclexcl-sizeunion.html#subsection-52" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="nsetintersection"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">229</span>
+</h5>
+<p id="p-1315">Conjecture a formula for the size of a union of sets</p>
+\begin{equation*}
+A_1\cup
+A_2\cup \cdots\cup A_n = \bigcup_{i=1}^n A_i
+\end{equation*}
+<p>in terms of the sizes of the sets \(A_i\) and their intersections.</p></article><p id="p-1317">The difficulty of generalizing <a knowl="./knowl/threesetintersection.html" knowl-id="xref-threesetintersection" alt="Problem 228 " title="Problem 228 ">Problem 228</a> to <a knowl="./knowl/nsetintersection.html" knowl-id="xref-nsetintersection" alt="Problem 229 " title="Problem 229 ">Problem 229</a> is not likely to be one of being able to see what the right conjecture is, but of finding a good notation to express your conjecture. In fact, it would be easier for some people to express the conjecture in words than to express it in a notation. Here is some notation that will make your task easier. Let us define</p>
+\begin{equation*}
+\bigcap_{i:i\in I}A_i
+\end{equation*}
+<p>to mean the intersection over all elements \(i\) in the set \(I\) of \(A_i\text{.}\) Thus</p>
+\begin{equation}
+\bigcap_{i:i\in
+\{1,3,4,6\}} = A_1\cap A_3\cap A_4 \cap A_6.
+\tag{5.1}
+\end{equation}
+<p id="p-1318">This kind of notation, consisting of an operator with a description underneath of the values of a dummy variable of interest to us, can be extended in many ways. For example</p>
+\begin{align}
+\sum_{I:I \subseteq \{1,2,3,4\}, \ |I|=2} |\cap_{i\in I}
+A_i|  \amp =  |A_1\cap A_2|+ |A_1\cap A_3|
++|A_1\cap A_4|\notag\\
+\amp +  |A_2\cap A_3|+
+|A_2\cap A_4| +|A_3\cap A_4|.\tag{5.2}
+\end{align}
+<article class="example-like essential" id="inclusion-exclusionunion"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">230</span>
+</h5>
+<p id="p-1319">Use notation something like that of <a knowl="./knowl/intersectionnotation.html" knowl-id="xref-intersectionnotation" alt="Equation 5.1 " title="Equation 5.1 ">Equation (5.1)</a> and <a knowl="./knowl/mdn-2.html" knowl-id="xref-notationsolution" alt="Equation 5.2 " title="Equation 5.2 ">Equation (5.2)</a> to express the answer to <a knowl="./knowl/nsetintersection.html" knowl-id="xref-nsetintersection" alt="Problem 229 " title="Problem 229 ">Problem 229</a>. Note there are many different correct ways to do this problem. Try to write down more than one and choose the nicest one you can. Say why you chose it (because your view of what makes a formula nice may be different from somebody else's). The nicest formula won't necessarily involve all the elements of <a knowl="./knowl/intersectionnotation.html" knowl-id="xref-intersectionnotation" alt="Equation 5.1 " title="Equation 5.1 ">Equations (5.1)</a> and <a knowl="./knowl/mdn-2.html" knowl-id="xref-notationsolution" alt="Equation 5.2 " title="Equation 5.2 ">(5.2)</a>.</p></article><article class="example-like essential" id="hatcheck"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">231</span>
+</h5>
+<article class="introduction" id="introduction-49"><p id="p-1321">A group of \(n\) students goes to a restaurant carrying backpacks. The manager invites everyone to check their backpack at the check desk and everyone does. While they are eating, a child playing in the check room randomly moves around the claim check stubs on the backpacks. We will try to compute the probability that, at the end of the meal, at least one student receives his or her own backpack.  This probability is the fraction of the total number of ways to return the backpacks in which at least one student gets his or her own backpack back.</p></article><article class="exercise-like" id="task-168"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1322">What is the total number of ways to pass back the backpacks?</p></article><article class="exercise-like" id="task-169"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1324">In how many of the distributions of backpacks to students does at least one student get his or her own backpack?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-210" id="hint-210"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-210" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1325">For each student, how big is the set of backpack distributions in which that student gets the correct backpack?  It might be a good idea to first consider cases with \(n=3\text{,}\) \(4\text{,}\) and \(5\text{.}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-211" id="hint-211"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-211" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1326">For each pair of students (say Mary and Jim, for example) how big is the set of backpack distributions in which the students in this pair get the correct backpack. What does the question have to do with unions or intersections of sets. Keep on increasing the number of students for which you ask this kind of question.</p></span></span></article><article class="exercise-like" id="task-170"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1328">What is the probability that at least one student gets the correct backpack?</p></article><article class="exercise-like" id="hatcheckprobpart"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1330">What is the probability that no student gets his or her own backpack?</p></article><article class="exercise-like interesting" id="task-172"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1332">As the number of students becomes large, what does the probability that no student gets the correct backpack approach?</p></article></article><p id="p-1334"><a knowl="./knowl/hatcheck.html" knowl-id="xref-hatcheck" alt="Problem 231 " title="Problem 231 ">Problem 231</a> is “classically” called the <em class="terminology">hatcheck problem</em>; the name comes from substituting hats for backpacks. If is also sometimes called the <em class="terminology">derangement problem</em>. A <em class="terminology">derangement</em> of an \(n\)-element set is a permutation of that set (thought of as a bijection) that maps no element of the set to itself. One can think of a way of handing back the backpacks as a permutation \(f\) of the students: \(f(i)\) is the owner of the backpack that student \(i\) receives. Then a derangement is a way to pass back the backpacks so that no student gets his or her own.</p></section><section class="subsection" id="subsection-53"><header title="Subsection 5.1.3 The Principle of Inclusion and Exclusion"><h1 class="heading hide-type" alt="Subsection 5.1.3 The Principle of Inclusion and Exclusion">
+<span class="type">Subsection</span><span class="codenumber">5.1.3</span><span class="title">The Principle of Inclusion and Exclusion</span><a href="sec_inclexcl-sizeunion.html#subsection-53" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1335">The formula you have given in <a knowl="./knowl/inclusion-exclusionunion.html" knowl-id="xref-inclusion-exclusionunion" alt="Problem 230 " title="Problem 230 ">Problem 230</a> is often called <em class="terminology">the principle of inclusion and exclusion</em> for unions of sets. The reason is the pattern in which the formula first adds (includes) all the sizes of the sets, then subtracts (excludes) all the sizes of the intersections of two sets, then adds (includes) all the sizes of the intersections of three sets, and so on.   Notice that we haven't yet proved the principle. There are a variety of proofs.  Perhaps one of the most straightforward (though not the most elegant) is an iductive proof that relies on the fact that</p>
+\begin{equation*}
+A_1 \cup A_2 \cup \cdots \cup A_n = \left(A_1 \cup A_2 \cup \cdots \cup A_{n-1}\right) \cup A_n
+\end{equation*}
+<p>and the formula for the size of a union of two sets.</p>
+<article class="example-like" id="activity-232"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">232</span>
+</h5>
+<p id="p-1336">Give a proof of your formula for the principle of inclusion and exclusion.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-212" id="hint-212"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-212" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1337">Try induction.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-213" id="hint-213"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-213" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1338">We can apply the formula of <a knowl="./knowl/twosetintersection.html" knowl-id="xref-twosetintersection" alt="Problem 226 " title="Problem 226 ">Problem 226</a> to get</p>
+\begin{align*}
+\left|\bigcup_{i=1}^n A_i \right| \amp = \left|\left(\bigcup_{i=1}^{n-1} A_i\right) \cup A_n \right| \\
+\amp = \left| \bigcup_{i=1}^{n-1} A_i\right| + |A_n| - \left|\left( \bigcup_{i=1}^{n-1} A_i\right) \cap A_n\right|\\
+\amp = \left| \bigcup_{i=1}^{n-1} A_i\right| + |A_n| - \left|\bigcup_{i=1}^{n-1} A_i \cap A_n\right|
+\end{align*}
+</span></span>
+</div></article><article class="example-like" id="activity-233"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">233</span>
+</h5>
+<article class="introduction" id="introduction-50"><p id="p-1340">We get a more elegant proof if we ask for a picture enumerator for \(A_1 \cup A_2 \cup \cdots \cup A_n\text{.}\)  so let us assume \(A\) is a set with a picture function \(P\) defined on it and that each set \(A_i\) is a subset of \(A\text{.}\)</p></article><article class="exercise-like" id="task-173"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1341">By thinking about how we got the formula for the size of a union, write down instead a conjecture for the picture enumerator of a union.  You could use notation like \(E_P(\bigcap_{i:i\in S} A_i)\) for the picture enumerator of the intersection of the sets \(A_i\) for \(i\) in a subset of \(S\) of \([n]\text{.}\)</p></article><article class="exercise-like" id="task-174"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1343">If \(x \in \bigcup_{i=1}^n A_i\text{,}\) what is the coefficient for \(P(x)\) in (the inclusion-exclusion side of) your formula for \(E_P(\bigcup_{i=1}^n A_i)\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-214" id="hint-214"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-214" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1344">Let \(T\) be the set of all \(i\) such that \(x \in A_i\text{.}\) In terms of \(x\text{,}\) what is different about the \(i\) in \(T\) and those not in \(T\text{?}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-215" id="hint-215"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-215" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1345">You may come to a point where the binomial theorem would be helpful.</p></span></span></article><article class="exercise-like" id="task-175"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1347">If \(x \notin \bigcup_{i=1}^n A_i\text{,}\) what is the coefficient of \(P(x)\) in (the inclusion-exclusion side of) your formula for \(E_P(\bigcup_{i=1}^n A_i)\text{?}\)</p></article><article class="exercise-like" id="task-176"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1349">How have you proved your conjecture for the picture enumerator of the union of the sets \(A_i\text{?}\)</p></article><article class="exercise-like" id="task-177"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1351">How can you get the formula for the principle of inclusion and exclusion from your formula for the picture enumerator of the union?</p></article></article><article class="example-like" id="compunion"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">234</span>
+</h5>
+<p id="p-1353">Frequently when we apply the principle of inclusion and exclusion, we will have a situation like that of part (d) of <a knowl="./knowl/hatcheckprobpart.html" knowl-id="xref-hatcheckprobpart" alt="Part 231.d " title="Part 231.d ">Problem 231.d</a>.  That is, we will have a set \(A\) and subsets \(A_1, A_2, \ldots, A_n\) and we will want the size or the probability of the set of elements in \(A\) that are <!--Style me with CSS--><em>not</em> in the union.  This set is known as the <em class="terminology">complement</em>  of the union of the \(A_i\)s in \(A\text{,}\) and is denoted by \(A \setminus \bigcup_{i=1}^n A_i\text{,}\) or if \(A\) is clear from context, by \(\overline{\bigcup_{i=1}^n A_i}\text{.}\) Give the fomula for \(\overline{\bigcup_{i=1}^n A_i}\text{.}\)  The principle of inclusion and exclusion generall refers to both this formula and the one for the union.</p></article><p id="p-1355">We can find a very elegant way of writing the formula in <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a> if we let \(\bigcap_{i:i\in\emptyset}A_i = A\text{.}\)  for this reason, if we have a family of subsets \(A_i\) of a set \(A\text{,}\) we define<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-16" id="fn-16"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-16" style="display: none;" class="tex2jax_ignore"><span class="footnote">For those interested in logic and set theory, given a family of subsets \(A_i\) of a set \(A\text{,}\) we define \(\bigcap_{i:i\in S}A_i\) to be the set of all members \(x\) of \(A\) that are in \(A_i\) for all \(i \in S\text{.}\)  (Note that this allows \(x\) to be in some other \(A_j\)s as well.)  Then if \(S = \emptyset\text{,}\) our intersection consists of all members \(x\) of \(A\) that satisfy the statement “if \(i\in \emptyset\text{,}\) then \(x \in A_i\text{.}\)” But since the hypothesis of the “if-then” statement is false, the statement itself is true for all \(x \in A\text{.}\)  Therefor \(\bigcap_{i:i \in \emptyset}A_i = A\text{.}\)</span></span> \(\bigcap_{i:i\in\emptyset}A_i = A\text{.}\)</p></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

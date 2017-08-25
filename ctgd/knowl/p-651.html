@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:46-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Alternatively, start with the vertex set of the graph and no edges. Choose an edge of least cost. Repeat the following until it cannot be repeated. Given the set of edges you have so far, choose an edge of least cost among all edges that do not form a cycle with edges you already have. The graph you get will have no cycles, and it will have to be connected, because otherwise there would be an edge in the original graph that connects two vertices in the graph you just constructed. Thus you will have a tree. Suppose there is another tree with lower total cost. Choose such a tree with as many edges as common with your tree as possible. Then there is some edge \(e\) of this tree of lowest cost among all edges connecting two vertices that are not connected by an edge in your tree. Suppose the cost of this edge is \(c\text{.}\) Since these vertices are connected by some path in your tree, when you were considering edges of cost \(c\text{,}\) these two vertices were already connected by a path in your tree. There must be some edge \(f\) on that path not in the least cost tree. The edge \(f\) was already in your tree while you were considering edges of cost \(c\text{,}\) so its cost is no more than \(c\text{.}\) Adding \(f\) to the tree of least cost gives a cycle. All edges on that cycle that are not in your tree have cost at least \(c\) by our choice of \(e\text{.}\) But since \(f\) was from your tree, there must be some edge \(g\) of the cycle that is in the least cost tree that but not in your tree. Removing \(g\) from the least cost tree and adding \(f\) cannot increase the cost of the tree, but it gives a tree that has one more edge in common with your tree. This contradicts the choice of the least cost tree, so there must have been no tree of lower total cost than the one you constructed.</p>
+<span class="incontext"><a href="sec_induction-graphstrees.html#p-651">in-context</a></span>
+</body>
+</html>

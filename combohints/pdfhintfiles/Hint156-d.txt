@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Show that (−x)k = (−1)k xk and (−x)k = (−1)k xk .
-  </p>
-</hint>

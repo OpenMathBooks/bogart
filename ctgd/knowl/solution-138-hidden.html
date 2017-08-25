@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:43-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>We will use induction on \(n\) and part (a) of this problem to prove that \(a^{mn}=(a^m)^n\text{.}\) First, when \(n=0\) the left and right hand sides of the equation are both 1, so \(a^{mn}=(a^m)^n\) holds when \(n=0\text{.}\) Now assume that \(a^{m(k-1)} =(a^m)^{k-1}\text{.}\) This may be rewritten as \(a^{mk-m}=(a^m)^{k-1}\) Multiply both sides by \(a^m\) and apply part (a) of the problem and then the inductive definition (with \(a^m\) replacing \(a\)) to get</p>
+\begin{align*}
+a^{mk-m}a^m =\amp (a^m)^{k-1}a^m\\
+a^{mk} =\amp (a^m)^{k-1}a^m\\
+a^{mk} =\amp (a^m)^k.
+\end{align*}
+<p>Thus the truth of our formula when \(n=k-1\) implies its truth when \(n=k\text{.}\) Therefore by the principle of mathematical induction, the formula is true for all nonnegative integers \(n\text{.}\)</p></span></body>
+</html>

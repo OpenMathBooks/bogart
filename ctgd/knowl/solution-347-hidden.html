@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:57-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>Note that \(\qchoose{n}{0}= \qchoose{n}{n} = 1\text{,}\) because only the partition with no parts sits in a rectangle of width or depth 0. But \(\frac{[m+0]!_q}{[m]!_q[0]!_q} =1\) and \(\frac{[0+n]!_q}{[0]!_q[n]!_q} =1\text{.}\) Thus the formula holds when \(m=0\) or \(n=0\text{.}\) But</p>
+\begin{align*}
+\amp q^m\frac{[m+n-1]!_q}{[n-1]!_q[m]!_q}+\frac{[m+n-1]!_q}{[n]!_q[m-1]!_q}\\
+=\amp \relax[m+n-1]!_q\left(\frac{q^m}{[n-1]!_q[m]!_q}
++\frac{1}{[n]!_q[m-1]!_q}\right)\\
+\amp \relax[m+n-1]!_q\left(\frac{[n]_qq^m}{[n]!_q[m]_q}+\frac{[m]_q}{[n]!_q[m]!_q}\right)\\
+=\amp \relax\frac{[m+n-1]!_q}{[n]!_q[m]!_q}\left((1+q+\cdots+q^{n-1})q^m +
+1+q+\cdots+q^{m-1}\right)\\
+=\amp \relax\frac{[m+n-1]!_q[m+n]_q}{[n]!_q[m]!_q}\\
+=\amp \qchoose{m+n}{n}.
+\end{align*}
+<p>Thus \(\frac{[m+n]!_q}{[m]!_q[n]!_q}\) satisfies our recurrence and so by the principle of mathematical induction, \(\qchoose{m+n}{n} = \frac{[m+n]!_q}{[m]!_q[n]!_q}.\)</p></span></body>
+</html>

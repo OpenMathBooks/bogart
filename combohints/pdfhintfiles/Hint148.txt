@@ -1,5 +1,0 @@
-<hint>
-  <p>
-What if the ji s don’t add to k?
-  </p>
-</hint>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:46-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>The number of edges of a tree is one less than the number of vertices. We prove this by strong induction on the number of edges. First, if a tree has no edges, it can have only one vertex (otherwise it is not connected). Thus the number of edges is one less than the number of vertices. Now suppose that if a tree has fewer than \(n\) edges, it the number of edges is one less than the number of vertices. Choose an edge \(e\) with endpoints \(x\) and \(y\) in the tree and remove it. The resulting graph is not connected, for if it were, the path remaining between the endpoints of \(e\text{,}\) together with \(e\text{,}\) would form a cycle. Every vertex in the tree is connected to \(x\) by a path; those connected by a path not using \(e\) still remain connected to \(x\text{.}\) Similarly those connected to \(y\) by a path in the tree that does not use the edge \(e\) remain connected to \(y\) after \(e\) is deleted. Every vertex is connected to \(x\) by a path in the tree and every vertex is connected to \(y\) by a path in the tree. If a vertex \(v\) were connected to \(x\) by a path using the edge \(e\) and to \(y\) by a path using the edge \(e\text{,}\) that would mean that we have a path from \(v\) to \(x\) and then through \(e\) to \(y\) and also a path from \(v\) to \(y\) and then through \(e\) to \(x\text{.}\) Thus taking \(e\) out of these two paths would give us a path from \(v\) to \(x\) and a path from \(v\) to \(y\text{,}\) neither of which used \(e\text{.}\) Thus when we removed the edge \(e\text{,}\) there would still be a path from \(x\) to \(y\text{,}\) and adding \(e\) to this path would give a cycle. Therefore each vertex is connected to either \(x\) or \(y\text{,}\) but not both, by a path that does not use \(e\text{.}\) Therefore when we remove \(e\text{,}\) the graph that remains consists of two trees, the tree of all vertices connected to \(x\) and the tree of all vertices connected to \(y\text{.}\) Each of these trees has fewer edges than the original tree, so if they have \(m_1\) and \(m_2\) vertices respectively, they have, by the inductive hypothesis, \(m_1-1\) and \(m_2-1\) edges respectively. But together they have all the vertices of the original tree, so the original tree has \(m_1+m_2\) vertices, and has \(m_1-1+m_2-1 +1=m)_1+m_2-1\) edges, the edges of each of the two smaller trees as well as the edge \(e\text{.}\) Therefore the number of edges of the original tree is one less than the number of vertices. Therefore by the strong principle of mathematical induction, the number of edges of a tree is one less than the number of vertices.</p></span></body>
+</html>

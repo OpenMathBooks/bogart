@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:26-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Idea of Generating Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_genfns.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_genfns.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_genfns-int-parts.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_genfns.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_genfns.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_genfns-int-parts.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea" class="active">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_genfns-idea"><header title="Section 4.1 The Idea of Generating Functions"><h1 class="heading hide-type" alt="Section 4.1 The Idea of Generating Functions">
+<span class="type">Section</span><span class="codenumber">4.1</span><span class="title">The Idea of Generating Functions</span><a href="sec_genfns-idea.html" class="permalink">¶ permalink</a>
+</h1></header><section class="subsection" id="subsection-40"><header title="Subsection 4.1.1 Visualizing Counting with Pictures"><h1 class="heading hide-type" alt="Subsection 4.1.1 Visualizing Counting with Pictures">
+<span class="type">Subsection</span><span class="codenumber">4.1.1</span><span class="title">Visualizing Counting with Pictures</span><a href="sec_genfns-idea.html#subsection-40" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1031">Suppose you are going to choose three pieces of fruit from among apples, pears and bananas for a snack.  We can symbolically represent all your choices as</p>
+\begin{equation*}
+\ap\ap\ap+\pe\pe\pe+\ba\ba\ba+\ap\ap\pe+\ap\ap\ba+\ap\pe\pe +\pe\pe\ba
++\ap\ba\ba+\pe\ba\ba+\ap\pe\ba.
+\end{equation*}
+<p>Here we are using a picture of a piece of fruit to stand for taking a piece of that fruit. Thus \(\ap\) stands for taking an apple, \(\ap\pe\) for taking an apple and a pear, and \(\ap\ap\) for taking two apples.  You can think of the plus sign as standing for the “exclusive or,” that is, \(\ap+\ba\) would stand for “I take an apple or a banana but not both.” To say “I take both an apple and a banana,” we would write \(\ap\ba\text{.}\) We can extend the analogy to mathematical notation by condensing our statement that we take three pieces of fruit to</p>
+\begin{equation*}
+\ap^3+\pe^3+\ba^3+\ap^2\pe+\ap^2\ba +\ap\pe^2+\pe^2\ba+
+\ap\ba^2+\pe\ba^2 +\ap\pe\ba.
+\end{equation*}
+<p id="p-1032">In this notation \(\ap^3\) stands for taking a multiset of three apples, while \(\ap^2\ba\) stands for taking a multiset of two apples and a banana, and so on. What our notation is really doing is giving us a convenient way to list all three element multisets chosen from the set \(\{\ap,\pe,\ba\}\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-9" id="fn-9"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-9" style="display: none;" class="tex2jax_ignore"><span class="footnote">This approach was inspired by George Pólya's paper “Picture Writing,” in the December, 1956 issue of the <span class="booktitle">American Mathematical Monthly</span>, page 689. While we are taking a somewhat more formal approach than Pólya, it is still completely in the spirit of his work.</span></span></p>
+<p id="p-1033">Suppose now that we plan to choose between one and three apples, between one and two pears, and between one and two bananas. In a somewhat clumsy way we could describe our fruit selections as</p>
+\begin{align}
+\ap\pe\ba\amp+\ap^2\pe\ba\amp+\cdots\amp+\ap^2\pe^2\ba
+\amp+\cdots \amp+
+\ap^2\pe^2\ba^2             \notag\\
+\amp+\ap^3\pe\ba\amp+
+\cdots \amp+\ap^3\pe^2\ba\amp+\cdots \amp+
+\ap^3\pe^2\ba^2.\tag{4.1}
+\end{align}
+<article class="example-like essential" id="twopiecesoffruit"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">178</span>
+</h5>
+<p id="p-1034">Using an \(A\) in place of the picture of an apple, a \(P\) in place of the picture of a pear, and a \(B\) in place of the picture of a banana, write out the formula similar to <a knowl="./knowl/mdn-1.html" knowl-id="xref-uptothreefruits" alt="Equation 4.1 " title="Equation 4.1 ">Formula (4.1)</a> without any dots for left out terms. (You may use pictures instead of letters if you prefer, but it gets tedious quite quickly!) Now expand the product \((A+A^2+A^3)(P+P^2)(B+B^2)\) and compare the result with your formula.</p></article><article class="example-like essential" id="activity-179"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">179</span>
+</h5>
+<p id="p-1037">Substitute \(x\) for all of \(A\text{,}\) \(P\) and \(B\) (or for the corresponding pictures) in the formula you got in <a knowl="./knowl/twopiecesoffruit.html" knowl-id="xref-twopiecesoffruit" alt="Problem 178 " title="Problem 178 ">Problem 178</a> and expand the result in powers of \(x\text{.}\) Give an interpretation of the coefficient of \(x^n\text{.}\)</p></article><p id="p-1039">If we were to expand the formula</p>
+\begin{equation}
+(\ap+\ap^2+\ap^3)(\pe+\pe^2)(\ba+\ba^2).
+\tag{4.2}
+\end{equation}
+<p>we would get <a knowl="./knowl/mdn-1.html" knowl-id="xref-uptothreefruits" alt="Equation 4.1 " title="Equation 4.1 ">Formula (4.1)</a>. Thus <a knowl="./knowl/mdn-1.html" knowl-id="xref-uptothreefruits" alt="Equation 4.1 " title="Equation 4.1 ">Formula (4.1)</a> and <a knowl="./knowl/threefruitsagain.html" knowl-id="xref-threefruitsagain" alt="Equation 4.2 " title="Equation 4.2 ">Formula (4.2)</a> each describe the number of multisets we can choose from the set \(\{\ap,\pe,\ba\}\) in which \(\apple\) appears between 1 and three times and \(\pear\) and \(\banana\) each appear once or twice. We interpret <a knowl="./knowl/mdn-1.html" knowl-id="xref-uptothreefruits" alt="Equation 4.1 " title="Equation 4.1 ">Formula (4.1)</a> as describing each individual multiset we can choose, and we interpret <a knowl="./knowl/threefruitsagain.html" knowl-id="xref-threefruitsagain" alt="Equation 4.2 " title="Equation 4.2 ">Formula (4.2)</a> as saying that we first decide how many apples to take, and then decide how many pears to take, and then decide how many bananas to take. At this stage it might seem a bit magical that doing ordinary algebra with the second formula yields the first, but in fact we could define addition and multiplication with these pictures more formally so we could explain in detail why things work out. However since the pictures are for motivation, and are actually difficult to write out on paper, it doesn't make much sense to work out these details. We will see an explanation in another context later on.</p></section><section class="subsection" id="picturefunction"><header title="Subsection 4.1.2 Picture functions"><h1 class="heading hide-type" alt="Subsection 4.1.2 Picture functions">
+<span class="type">Subsection</span><span class="codenumber">4.1.2</span><span class="title">Picture functions</span><a href="sec_genfns-idea.html#picturefunction" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1040">As you've seen, in our descriptions of ways of choosing fruits, we've treated the pictures of the fruit as if they are variables. You've also likely noticed that it is much easier to do algebraic manipulations with letters rather than pictures, simply because it is time consuming to draw the same picture over and over again, while we are used to writing letters quickly. In the theory of generating functions, we associate variables or polynomials or even power series with members of a set. There is no standard language describing how we associate variables with members of a set, so we shall invent<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-10" id="fn-10"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-10" style="display: none;" class="tex2jax_ignore"><span class="footnote">We are really adapting language introduced by George Pólya.</span></span> some. By a <em class="terminology">picture</em> of a member of a set we will mean a variable, or perhaps a product of powers of variables (or even a sum of products of powers of variables). A function that assigns a picture \(P(s)\) to each member \(s\) of a set \(S\) will be called a <em class="terminology">picture function</em> . The <em class="terminology">picture enumerator</em> for a picture function \(P\) defined on a set \(S\) will be</p>
+\begin{equation*}
+E_P(S) = \sum_{s: s\in S}  P(s).
+\end{equation*}
+<p id="p-1041">We choose this language because the picture enumerator lists, or enumerates, all the elements of \(S\) according to their pictures. Thus <a knowl="./knowl/mdn-1.html" knowl-id="xref-uptothreefruits" alt="Equation 4.1 " title="Equation 4.1 ">Formula (4.1)</a> is the picture enumerator the set of all multisets of fruit with between one and three apples, one and two pears, and one and two bananas.</p>
+<article class="example-like motivation" id="zerotothreeapples"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">180</span>
+</h5>
+<p id="p-1042">How would you write down a polynomial in the variable \(A\) that says you should take between zero and three apples?</p></article><article class="example-like essential" id="zerotothreefruits"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">181</span>
+</h5>
+<p id="p-1044">How would you write down a picture enumerator that says we take between zero and three apples, between zero and three pears, and between zero and three bananas?</p></article><article class="example-like forward-essential" id="activity-182"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">182</span>
+</h5>
+<p id="p-1046">(Used in <a href="groupsonsets.html" alt="Chapter 6 Groups acting on sets" title="Chapter 6 Groups acting on sets">Chapter 6</a>.) Notice that when we used \(A^2\) to stand for taking two apples, and \(P^3\) to stand for taking three pears, then we used the product \(A^2P^3\) to stand for taking two apples and three pears. Thus we have chosen the picture of the ordered pair (2 apples, 3 pears) to be the product of the pictures of a multiset of two apples and a multiset of three pears. Show that if \(S_1\) and \(S_2\) are sets with picture functions \(P_1\) and \(P_2\) defined on them, and if we define the picture of an ordered pair \((x_1,x_2)\in S_1\times S_2\) to be \(P((x_1,x_2))= P_1(x_1)P_2(x_2)\text{,}\) then the picture enumerator of \(P\) on the set \(S_1\times S_2\) is \(E_{P_1}(S_1)E_{P_2}(S_2)\text{.}\) We call this the <em class="terminology">product principle for picture enumerators</em>.</p></article></section><section class="subsection" id="subsection-42"><header title="Subsection 4.1.3 Generating functions"><h1 class="heading hide-type" alt="Subsection 4.1.3 Generating functions">
+<span class="type">Subsection</span><span class="codenumber">4.1.3</span><span class="title">Generating functions</span><a href="sec_genfns-idea.html#subsection-42" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="activity-183"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">183</span>
+</h5>
+<p id="p-1048">Suppose you are going to choose a snack of between zero and three apples, between zero and three pears, and between zero and three bananas. Write down a polynomial in one variable \(x\) such that the coefficient of \(x^n\) is the number of ways to choose a snack with \(n\) pieces of fruit.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-161" id="hint-161"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-161" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1049">Substitute something for \(A\text{,}\) \(P\) and \(B\) in your formula from <a knowl="./knowl/zerotothreefruits.html" knowl-id="xref-zerotothreefruits" alt="Problem 181 " title="Problem 181 ">Problem 181</a>.</p></span></span>
+</div></article><article class="example-like motivation" id="activity-184"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">184</span>
+</h5>
+<p id="p-1051">Suppose an apple costs 20 cents, a banana costs 25 cents, and a pear costs 30 cents. What should you substitute for \(A\text{,}\) \(P\text{,}\) and \(B\) in <a knowl="./knowl/zerotothreefruits.html" knowl-id="xref-zerotothreefruits" alt="Problem 181 " title="Problem 181 ">Problem 181</a> in order to get a polynomial in which the coefficient of \(x^n\) is the number of ways to choose a selection of fruit that costs \(n\) cents?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-162" id="hint-162"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-162" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1052">For example, to get the cost of the fruit selection \(AP B\) you would want to get \(x^{20} x^{25} x^{30} = x^{75}\text{.}\)</p></span></span>
+</div></article><article class="example-like essential" id="activity-185"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">185</span>
+</h5>
+<p id="p-1054">Suppose an apple has 40 calories, a pear has 60 calories, and a banana has 80 calories. What should you substitute for \(A\text{,}\) \(P\text{,}\) and \(B\) in <a knowl="./knowl/zerotothreefruits.html" knowl-id="xref-zerotothreefruits" alt="Problem 181 " title="Problem 181 ">Problem 181</a> in order to get a polynomial in which the coefficient of \(x^n\) is the number of ways to choose a selection of fruit with a total of \(n\) calories?</p></article><article class="example-like essential" id="reprovingbinomialtheorem"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">186</span>
+</h5>
+<p id="p-1056">We are going to choose a subset of the set \([n]=\{1,2,\ldots, n\}\text{.}\) Suppose we use \(x_1\) to be the picture of choosing 1 to be in our subset. What is the picture enumerator for either choosing 1 or not choosing 1? Suppose that for each \(i\) between 1 and \(n\text{,}\) we use \(x_i\) to be the picture of choosing \(i\) to be in our subset. What is the picture enumerator for either choosing \(i\) or not choosing \(i\) to be in our subset? What is the picture enumerator for all possible choices of subsets of \([n]\text{?}\) What should we substitute for \(x_i\) in order to get a polynomial in \(x\) such that the coefficient of \(x^k\) is the number of ways to choose a \(k\)-element subset of \(n\text{?}\) What theorem have we just reproved (a special case of)?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-163" id="hint-163"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-163" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1057">Consider the example with \(n = 2\text{.}\) Then we have two variables, \(x_1\) and \(x_2\) .  Forgetting about \(x_2\) , what sum says we either take \(x_1\) or we don't? Forgetting about \(x_1\) , what sum says we either take \(x_2\) or we don't? Now what product says we either take \(x_1\) or we don't <!--Style me with CSS--><em>and</em> we either take \(x_2\) or we don't?</p></span></span>
+</div></article><p id="p-1059">In <a knowl="./knowl/reprovingbinomialtheorem.html" knowl-id="xref-reprovingbinomialtheorem" alt="Problem 186 " title="Problem 186 ">Problem 186</a> we see that we can think of the process of expanding the polynomial \((1+x)^n\) as a way of “generating” the binomial coefficients \(\binom{n}{k}\) as the coefficients of \(x^k\) in the expansion of \((1+x)^n\text{.}\) For this reason, we say that \((1+x)^n\) is the “generating function” for the binomial coefficients \(\binom{n}{k}\text{.}\) More generally, the <em class="terminology">generating function</em> for a sequence \(a_i\text{,}\) defined for \(i\) with \(0\le i\le n\) is the expression \(\sum_{i=0}^n a_ix^i\text{,}\) and the <em class="terminology">generating function</em> for the sequence \(a_i\) with \(i\ge 0\) is the expression \(\sum_{i=0}^\infty a_ix^i\text{.}\) This last expression is an example of a power series. In calculus it is important to think about whether a power series converges in order to determine whether or not it represents a function. In a nice twist of language, even though we use the phrase generating function as the name of a power series in combinatorics, we don't require the power series to actually represent a function in the usual sense, and so we don't have to worry about convergence.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-11" id="fn-11"><span class="footnote"><sup> 3 </sup></span></a></span><span id="hk-fn-11" style="display: none;" class="tex2jax_ignore"><span class="footnote">In the evolution of our current mathematical terminology, the word function evolved through several meanings, starting with very imprecise meanings and ending with our current rather precise meaning.  The terminology “generating function” may be thought of as an example of one of the earlier usages of the term function.</span></span> Instead we think of a power series as a convenient way of representing the terms of a sequence of numbers of interest to us. The only justification for saying that such a representation is convenient is because of the way algebraic properties of power series capture some of the important properties of some sequences that are of combinatorial importance. The remainder of this chapter is devoted to giving examples of how the algebra of power series reflects combinatorial ideas.</p>
+<p id="p-1060">Because we choose to think of power series as strings of symbols that we manipulate by using the ordinary rules of algebra and we choose to ignore issues of convergence, we have to avoid manipulating power series in a way that would require us to add infinitely many real numbers. For example, we cannot make the substitution of \(y+1\) for \(x\) in the power series \(\sum_{i=0}^\infty x^i\text{,}\) because in order to interpret \(\sum_{i=0}^\infty (y+1)^i\) as a power series we would have to apply the binomial theorem to each of the \((y+1)^i\) terms, and then collect like terms, giving us infinitely many ones added together as the coefficient of \(y^0\text{,}\) and in fact infinitely many numbers added together for the coefficient of any \(y^i\text{.}\) (On the other hand, it would be fine to substitute \(y+y^2\) for \(x\text{.}\) Can you see why?)</p></section><section class="subsection" id="subsection-43"><header title="Subsection 4.1.4 Power series"><h1 class="heading hide-type" alt="Subsection 4.1.4 Power series">
+<span class="type">Subsection</span><span class="codenumber">4.1.4</span><span class="title">Power series</span><a href="sec_genfns-idea.html#subsection-43" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1061">For now, most of our uses of power series will involve just simple algebra. Since we use power series in a different way in combinatorics than we do in calculus, we should review a bit of the algebra of power series.</p>
+<article class="example-like essential" id="coeffinproduct"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">187</span>
+</h5>
+<p id="p-1062">In the polynomial \((a_0 +a_1x+a_2x^2)(b_0+b_1x+b_2x^2+b_3x^3)\text{,}\) what is the coefficient of \(x^2\text{?}\) What is the coefficient of \(x^4\text{?}\)</p></article><article class="example-like essential" id="coeffinproduct1"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">188</span>
+</h5>
+<p id="p-1064">In <a knowl="./knowl/coeffinproduct.html" knowl-id="xref-coeffinproduct" alt="Problem 187 " title="Problem 187 ">Problem 187</a> why is there a \(b_0\) and a \(b_1\) in your expression for the coefficient of \(x^2\) but there is not a \(b_0\) or a \(b_1\) in your expression for the coefficient of \(x^4\text{?}\) What is the coefficient of \(x^4\) in</p>
+\begin{equation*}
+(a_0+a_1x+a_2x^2+a_3x^3+a_4x^4)(b_0+b_1x+b_2x^2
++b_3x^3+b_4x^4)?
+\end{equation*}
+<p id="p-1065">Express this coefficient in the form</p>
+\begin{equation*}
+\sum_{i=0}^4 \mbox{ something} ,
+\end{equation*}
+<p>where the something is an expression you need to figure out. Now suppose that \(a_3=0\text{,}\) \(a_4=0\) and \(b_4=0\text{.}\) To what is your expression equal after you substitute these values? In particular, what does this have to do with <a knowl="./knowl/coeffinproduct.html" knowl-id="xref-coeffinproduct" alt="Problem 187 " title="Problem 187 ">Problem 187</a>?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-164" id="hint-164"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-164" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1066">For the last two questions, try multiplying out something simpler first, say \((a_0 + a_1 x + a_2 x^2 )(b_0 + b_1 x + b_2 x^2 )\) . If this problem seems difficult the part that seems to cause students the most problems is converting the expression they get for a product like this into summation notation. If you are having this kind of problem, expand the product \((a_0 + a_1 x + a_2 x^2 )(b_0 + b_1 x + b_2 x^2 )\) and then figure out what the coefficient of \(x^2\) is. Try to write that in summation notation.</p></span></span>
+</div></article><article class="example-like essential" id="coeffinproduct2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">189</span>
+</h5>
+<p id="p-1069">The point of the <a knowl="./knowl/coeffinproduct.html" knowl-id="xref-coeffinproduct" alt="Problem 187 " title="Problem 187 ">Problems 187</a> and <a knowl="./knowl/coeffinproduct1.html" knowl-id="xref-coeffinproduct1" alt="Problem 188 " title="Problem 188 ">Problem 188</a> is that so long as we are willing to assume \(a_i=0\) for \(i&gt;n\) and \(b_j =0\) for \(j&gt;m\text{,}\) then there is a very nice formula for the coefficient of \(x^k\) in the product</p>
+\begin{equation*}
+\left(\sum_{i=0}^n a_ix^i\right)\left(\sum_{j=0}^m b_jx^j\right).
+\end{equation*}
+<p>Write down this formula explicitly.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-165" id="hint-165"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-165" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1070">Write down the formulas for the coefficients of \(x^0\text{,}\) \(x^1\text{,}\) \(x^2\) and \(x^3\) in</p>
+\begin{equation*}
+\left(\sum_{i=0}^n a_ix^i\right)\left(\sum_{j=0}^m b_jx^j\right)\text{.}
+\end{equation*}
+</span></span>
+</div></article><article class="example-like essential" id="coeffinpowerseries"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">190</span>
+</h5>
+<p id="p-1072">Assuming that the rules you use to do arithmetic with polynomials apply to power series, write down a formula for the coefficient of \(x^k\) in the product</p>
+\begin{equation*}
+\left(\sum_{i=0}^\infty a_ix^i\right)\left(\sum_{j=0}^\infty
+b_jx^j\right)
+\text{.}
+\end{equation*}
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-166" id="hint-166"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-166" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1073">How is this problem different from <a knowl="./knowl/coeffinproduct2.html" knowl-id="xref-coeffinproduct2" alt="Problem 189 " title="Problem 189 ">Problem 189</a>? Is this an important difference from the point of view of the coefficient of \(x^k\text{?}\)</p></span></span>
+</div></article><p id="p-1075">We use the expression you obtained in <a knowl="./knowl/coeffinpowerseries.html" knowl-id="xref-coeffinpowerseries" alt="Problem 190 " title="Problem 190 ">Problem 190</a> to <!--Style me with CSS--><em>define</em> the product of power series. That is, we define the product</p>
+\begin{equation*}
+\left(\sum_{i=0}^\infty a_ix^i\right)\left(\sum_{j=0}^\infty
+b_jx^j\right)
+\end{equation*}
+<p>to be the power series \(\sum_{k=0}^\infty c_k x^k\text{,}\) where \(c_k\) is the expression you found in <a knowl="./knowl/coeffinpowerseries.html" knowl-id="xref-coeffinpowerseries" alt="Problem 190 " title="Problem 190 ">Problem 190</a>. Since you derived this expression by using the usual rules of algebra for polynomials, it should not be surprising that the product of power series satisfies these rules.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-12" id="fn-12"><span class="footnote"><sup> 4 </sup></span></a></span><span id="hk-fn-12" style="display: none;" class="tex2jax_ignore"><span class="footnote">Technically we should explicitly state these rules and prove that they are all valid for power series multiplication, but it seems like overkill at this point to do so!</span></span></p></section><section class="subsection" id="subsection-44"><header title="Subsection 4.1.5 Product principle for generating functions"><h1 class="heading hide-type" alt="Subsection 4.1.5 Product principle for generating functions">
+<span class="type">Subsection</span><span class="codenumber">4.1.5</span><span class="title">Product principle for generating functions</span><a href="sec_genfns-idea.html#subsection-44" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1076">Each time that we converted a picture function to a generating function by substituting \(x\) or some power of \(x\) for each picture, the coefficient of \(x\) had a meaning that was significant to us. For example, with the picture enumerator for selecting between zero and three each of apples, pears, and bananas, when we substituted \(x\) for each of our pictures, the exponent \(i\) in the power \(x^i\) is the number of pieces of fruit in the fruit selection that led us to \(x^i\text{.}\) After we simplify our product by collecting together all like powers of \(x\text{,}\) the coefficient of \(x^i\) is the number of fruit selections that use \(i\) pieces of fruit. In the same way, if we substitute \(x^c\) for a picture, where \(c\) is the number of calories in that particular kind of fruit, then the \(i\) in an \(x^i\) term in our generating function stands for the number of calories in a fruit selection that gave rise to \(x^i\text{,}\) and the coefficient of \(x^i\) in our generating function is the number of fruit selections with \(i\) calories.  The product principle of picture enumerators translates directly into a product principle for generating functions.</p>
+<article class="example-like essential" id="ProductPrincipleOGF"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">191</span>
+</h5>
+<p id="p-1077">Suppose that we have two sets \(S_1\) and \(S_2\text{.}\) Let \(v_1\) (\(v\) stands for value) be a function from \(S_1\) to the nonnegative integers and let \(v_2\) be a function from \(S_2\) to the nonnegative integers.  Define a new function \(v\) on the set \(S_1 \times S_2\) by \(v(x_1,x_2) = v_1(x_1) +v_2(x_2)\text{.}\) Suppose further that \(\sum_{i=0}^\infty a_ix^i\) is the generating function for the number of elements \(x_1\) of \(S_1\) of value \(i\text{,}\) that is with \(v_1(x_1)=i\text{.}\) Suppose also that \(\sum_{j=0}^\infty b_j x^j\) is the generating function for the number of elements of \(x_2\) of \(S_2\) of value \(j\text{,}\) that is with \(v_2(x_2) = j\text{.}\)  Prove that the coefficient of \(x^k\) in</p>
+\begin{equation*}
+\left(\sum_{i=0}^\infty a_ix^i\right)\left(\sum_{j=0}^\infty
+b_jx^j\right)
+\end{equation*}
+<p>is the number of ordered pairs \((x_1,x_2)\) in \(S_1\times S_2\) with total value \(k\text{,}\) that is with \(v_1(x_1) +v_2(x_2) =k\text{.}\) This is called the <em class="terminology">product principle for generating functions</em>.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-167" id="hint-167"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-167" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1078">If this problem appears difficult, the most likely reason is because the definitions are all new and symbolic. Focus on what it means for \(\sum_{k=0}^\infty c_kx^k\) to be the generating function for ordered pairs of total value \(k\text{.}\) In particular, how do we get an ordered pair with total value \(k\text{?}\) What do we need to know about the values of the components of the ordered pair?</p></span></span>
+</div></article><p id="p-1081"><a knowl="./knowl/ProductPrincipleOGF.html" knowl-id="xref-ProductPrincipleOGF" alt="Problem 191 " title="Problem 191 ">Problem 191</a> may be extended by mathematical induction to prove our next theorem.</p>
+<article class="theorem-like" id="theorem-7"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.1.1</span>
+</h5>
+<p id="p-1082">If \(S_1,S_2,\dots,S_n\) are sets with a value function \(v_i\) from \(S_i\) to the nonnegative integers for each \(i\) and \(f_i(x)\) is the generating function for the number of elements of \(S_i\) of each possible value, then the generating function for the number of \(n\)-tuples of each possible value is \(\prod_{i=1}^n f_i(x)\text{.}\)</p></article></section><section class="subsection" id="subsection-45"><header title="Subsection 4.1.6 The extended binomial theorem and multisets"><h1 class="heading hide-type" alt="Subsection 4.1.6 The extended binomial theorem and multisets">
+<span class="type">Subsection</span><span class="codenumber">4.1.6</span><span class="title">The extended binomial theorem and multisets</span><a href="sec_genfns-idea.html#subsection-45" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like essential" id="activity-192"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">192</span>
+</h5>
+<article class="introduction" id="introduction-40"><p id="p-1083">Suppose once again that \(i\) is an integer between 1 and \(n\text{.}\)</p></article><article class="exercise-like" id="task-131"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1084">What is the generating function in which the coefficient of \(x^k\) is \(1\text{?}\) This series is an example of what is called an <em class="terminology">infinite geometric series</em>. In the next part of this problem, it will be useful to interpret the coefficient one as the number of multisets of size \(k\) chosen from the singleton set \(\{i\}\text{.}\) Namely, there is only one way to choose a multiset of size \(k\) from \(\{i\}\text{:}\) choose \(i\) exactly \(k\) times.</p></article><article class="exercise-like" id="task-132"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1086">Express the generating function in which the coefficient of \(x^k\) is the number of multisets chosen from \([n]\) as a power of a power series.  What does <a knowl="./knowl/multiset.html" knowl-id="xref-multiset" alt="Problem 125 " title="Problem 125 ">Problem 125</a> (in which your answer could be expressed as a binomial coefficient) tell you about what this generating function equals?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-168" id="hint-168"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-168" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1087">You might try applying the product principle for generating functions to an appropriate power of the generating function you got in the first part of this problem.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-169" id="hint-169"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-169" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1088">In <a knowl="./knowl/multiset.html" knowl-id="xref-multiset" alt="Problem 125 " title="Problem 125 ">Problem 125</a> you found a formula for the number of \(k\)-element multisets chosen from an \(n\)-element set. Suppose you use this formula for \(a_k\) in \(\sum_{k=0}^\infty a_kx^k\text{.}\) What do you get the generating function for?</p></span></span></article></article><article class="example-like motivation" id="activity-193"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">193</span>
+</h5>
+<p id="p-1090">What is the product \((1-x)\sum_{k=0}^n x^k\text{?}\) What is the product</p>
+\begin{equation*}
+(1-x)\sum_{k=0}^\infty x^k?
+\end{equation*}
+</article><article class="example-like" id="multisetgenfn"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">194</span>
+</h5>
+<p id="p-1092">Express the generating function for the number of multisets of size \(k\) chosen from \([n]\) (where \(n\) is fixed but \(k\) can be any nonnegative integer) as a 1 over something relatively simple.</p></article><article class="example-like essential" id="negnchoosek"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">195</span>
+</h5>
+<p id="p-1095">Find a formula for \((1+x)^{-n}\) as a power series whose coefficients involve binomial coefficients. What does this formula tell you about how we should define \(\binom{-n}{k}\) when \(n\) is positive?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-170" id="hint-170"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-170" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1096">While you could use calculus techniques, there is a much simpler approach. Note that \(1 + x = 1 - (-x)\text{.}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-171" id="hint-171"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-171" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1097">Can you see a way to use <a knowl="./knowl/multisetgenfn.html" knowl-id="xref-multisetgenfn" alt="Problem 194 " title="Problem 194 ">Problem 194</a>?</p></span></span>
+</div></article><article class="example-like" id="activity-196"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">196</span>
+</h5>
+<p id="p-1099">If you define \(\binom{-n}{k}\) in the way you described in <a knowl="./knowl/negnchoosek.html" knowl-id="xref-negnchoosek" alt="Problem 195 " title="Problem 195 ">Problem 195</a>, you can write down a version of the binomial theorem for \((x+y)^n\) that is valid for both nonnegative and negative values of \(n\text{.}\) Do so. This is called the <em class="terminology">extended binomial theorem</em>. Write down a special case with \(n\) negative, like \(n=-3\text{,}\) to see an interesting surprise that suggests why we do not use this formula later on.</p></article><article class="example-like" id="candygenfn"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">197</span>
+</h5>
+<p id="p-1101">Write down the generating function for the number of ways to distribute identical pieces of candy to three children so that no child gets more than 4 pieces. Write this generating function as a quotient of polynomials. Using both the extended binomial theorem and the original binomial theorem, find out in how many ways we can pass out exactly ten pieces.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-172" id="hint-172"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-172" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1102">Look for a power of a polynomial to get started.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-173" id="hint-173"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-173" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1103">The polynomial referred to in the first hint is a quotient of two polynomials.  The power of the denominator can be written as a power series.</p></span></span>
+</div></article><article class="example-like essential" id="activity-198"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">198</span>
+</h5>
+<p id="p-1106">What is the generating function for the number of multisets chosen from an \(n\)-element set so that each element appears at least \(j\) times and less than \(m\) times? Write this generating function as a quotient of polynomials, then as a product of a polynomial and a power series.</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-174" id="hint-174"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-174" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1107">Intepret <a knowl="./knowl/candygenfn.html" knowl-id="xref-candygenfn" alt="Problem 197 " title="Problem 197 ">Problem 197</a> in terms of multisets.</p></span></span>
+</div></article><article class="example-like interesting" id="activity-199"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">199</span>
+</h5>
+<article class="introduction" id="introduction-41"><p id="p-1109">Recall that a tree is determined by its edge set. Suppose you have a tree on \(n\) vertices, say with vertex set \([n]\text{.}\) We can use \(x_i\) as the picture of vertex \(i\) and \(x_ix_j\) as the picture of the edge \(x_ix_j\text{.}\) Then one possible picture of the tree \(T\) is the product \(P(T) = \prod_{\{i,j\}:i\text{ and }j\text{ are adjacent }}x_ix_j\text{.}\)</p></article><article class="exercise-like" id="task-133"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1110">Explain why the picture of a tree is also \(\prod_{i=1}^nx_i^{\deg(i)}\text{.}\)</p></article><article class="exercise-like" id="task-134"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1112">Write down the picture enumerators for trees on two, three, and four vertices. Factor them as completely as possible.</p></article><article class="exercise-like" id="task-135"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1114">Explain why \(x_1x_2\cdots x_n\) is a factor of the picture of a tree on \(n\) vertices.</p></article><article class="exercise-like" id="task-136"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1116">Write down the picture of a tree on five vertices with one vertex of degree four, say vertex \(i\text{.}\) If a tree on five vertices has a vertex of degree three, what are the possible degrees of the other vertices. What can you say about the picture of a tree with a vertex of degree three? If a tree on five vertices has no vertices of degree three or four, how many vertices of degree two does it have? What can you say about its picture? Write down the picture enumerator for trees on five vertices.</p></article><article class="exercise-like" id="task-137"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1118">Find a (relatively) simple polynomial expression for the picture enumerator  \(\sum_{T \colon T\text{ is a tree on }[n]} P (T)\text{.}\) Prove it is correct.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-175" id="hint-175"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-175" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1119">When you factor out \(x_1 x_2\cdots x_n\) from the enumerator of trees, the result is a sum of terms of degree \(n - 2\text{.}\) (The degree of \(x_1^{i_1} x_2^{i_2} \cdots x_n^{i_n}\) is \(i_1 + i_2 + \cdots + i_n\text{.}\))</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-176" id="hint-176"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-176" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1120">Write down the picture (using \(x\)s) of a tree on five vertices with two vertices of degree one, of one with three vertices of degree one, and with four vertices of degree 1. Factor \(x_1 x_2 x_3 x_4 x_5\) out of the picture and look at what is left.  How is it related to your vertices of degree one? Now remove the vertices of degree 1 from the tree and write down the picture of the tree that remains.  What is special about the vertices of degree 1 of that tree. (You can just barely learn something from this with five vertex trees, so you might want to experiment a bit with six or seven vertex trees.)</p></span></span></article><article class="exercise-like" id="task-138"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1122">The enumerator for trees by degree sequence is the sum over all trees of \(x^{d_1}x^{d_2} \cdots x^{d_n}\text{,}\) where \(d_i\) is the degree of vertex \(i\text{.}\) What is the enumerator by degree sequence for trees on the vertex set \([n]\text{?}\)</p></article></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Consider (x + y)m (x + y)n
-  </p>
-</hint>

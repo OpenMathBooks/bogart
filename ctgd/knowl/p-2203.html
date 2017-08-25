@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:49:32-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p></p>
+\begin{equation*}
+f(x) = 1+\sum_{j=1}^\infty
+(-1)^{j-1}\frac{(g(x)-1)^j}{j}= 1+\sum_{j=1}^\infty
+(-1)^{j-1}\frac{(\sum_{i=1}^\infty 2^{\binom{i}{2}}\frac{x^i}{i!})^j}{j}.
+\end{equation*}
+<p>From the right-hand expression, we get a term involving \(x^n\) whenever we have an \(x^n\) term in the \(j\)th power of \(\sum_{i=1}^\infty 2^{\binom{i}{2}}\frac{x^i}{i!}\text{.}\) So the coefficient of \(\frac{x^n}{n!}\) is the sum over all \(j\) and all sequences \(i_1,i_2,\ldots,i_j\) with \(i_1+i_2+\cdots+i_j = n\) of terms of the form</p>
+\begin{equation*}
+\frac{n!}{j}(-1)^j\prod_{k=1}^j \frac{2^{\binom{i_k}{2}}
+}{i_k!},
+\end{equation*}
+<p>where each \(i_k&gt;0\text{.}\) Notice that reordering the numbers \(i_1\text{,}\) \(i_2\text{,}\) … \(i_k\) does not change the value of the expression. The sequence of \(i_k\)s is a composition of \(n\) into positive parts. If we knew how many compositions of \(n\) into \(j\) parts correspond to one partition of \(n\) into \(j\) parts, we could sum over a much smaller set of terms. If we use the type vector notation for a partition, namely that it has \(p_1\) parts of size 1, \(p_2\) parts of size 2, …, \(p_n\) parts of size \(n\text{,}\) then the number of compositions corresponding to that partition, i.e. the number of compositions with the type vector \((p_1,p_2, \ldots, p_n)\) is the number of ways to take \(j\) places in a vector and label \(p_1\) of them with 1, \(p_2\) of them with 2, and so on until we label \(p_n\) of them with \(n\text{.}\) This number is the multinomial coefficient \(\binom{j}{p_1,p_2,\ldots, p_n}\text{.}\) Thus our sum over all j and all compositions of \(n\) into \(j\) parts becomes</p>
+\begin{equation*}
+\sum_{j=1}^n \frac{n!}{j}(-1)^j\sum_{{p_1,p_2,\ldots,p_n: \sum_{r=1}^n
+rp_r =n \atop \text{ and }  \sum_{r=1}^n p_r =j}}\binom{j}{p_1, p_2, \ldots,
+p_n}
+\prod_{r=1}^n\frac{2^{{\binom{r}{2}p_r}}
+}{(r!)^{p_r}}.
+\end{equation*}
+<span class="incontext"><a href="expogenfun.html#p-2203">in-context</a></span>
+</body>
+</html>

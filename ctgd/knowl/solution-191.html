@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:46-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">119.c.1</span>
+</h5>
+<p>The number of spanning trees of \(G\) not containing \(e\) is the number of spanning trees of \(G-e\text{.}\) The number of spanning trees of \(G\) containing the edge \(e\) is the number of spanning trees of \(G/e\text{.}\) Therefore \(\#(G) =\#(G-e)
++\#(G/e)\text{.}\) Applying the formula twice to \(G\) gives</p>
+\begin{align*}
+\#(G)
+= &amp;\#(G-\{1,2\}-\{2,3\}) + \#((G-\{1,2\})/\{2,3\})\\
+\amp +
+\#((G/\{1,2\})-\{2,3\}) +
+\#(G/\{1,2\}/\{2,3\}).
+\end{align*}
+<p>We now show the four graphs on the right hand side of the equation.</p>
+<figure class="figure-like"><object type="image/svg+xml" style="width:95%; margin:auto; display:block;" data="images/spantreeexerciseresult.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.7</span>Various deletions and contractions.</figcaption></figure><p>We could now convert each of these graphs to trees with multiple edges by deleting and contracting one more edge, say edge \(\{1,5\}\text{,}\) which would make the analysis easier but the picture twice as big. Since we can easily count spanning trees of a triangle, we can also stop here, noting that the first graph has three spanning trees, the second has six, the third has five, and the fourth has seven, so the total number of spanning trees is \(3+6+5+7=21\text{.}\)</p></span><span class="incontext"><a href="sec_induction-graphstrees.html#solution-191">in-context</a></span>
+</body>
+</html>

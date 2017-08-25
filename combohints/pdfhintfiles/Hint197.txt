@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Look for a power of a polynomial to get started.
-  </p>
-</hint>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:55-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">200.1</span>
+</h5>
+<p>\((1+P+P^2+P^3+P^4+P^5)(1+N+N^2+N^3+N^4+N^5)(1+D+D^2+D^3+D^4+D^5)
+(1+Q+Q^2+Q^3+Q^4+Q^5)\text{.}\) Substituting \(x\) for \(P\text{,}\) \(x^5\) for \(N\text{,}\) \(x^{10}\) for \(D\) and \(x^{25}\) for \(Q\) gives us</p>
+\begin{equation*}
+\sum_{i=0}^5x^i\sum_{i=0}^5x^{5i}\sum_{i=0}^5 x^{10i} \sum_{i=0}^5
+x^{25i}=\frac{1-x^6}{1-x}\cdot\frac{1-x^{30}}{1-x^5}\cdot\frac{1-x^{60}}{
+1-x^{10}}\cdot \frac{1-x^{150}}{1-x^{25}}.
+\end{equation*}
+<p>Although we could write this as a polynomial times a product of four power series, doing so would not significantly increase our understanding, though it would let us make some painful computations of the number of ways to make a certain number of cents. If we actually wanted such numbers we would be better off asking a computer algebra package to expand the product of the polynomials on the left. With unlimited supplies the generating function becomes</p>
+\begin{equation*}
+\frac{1}{1-x}\cdot\frac{1}{1-x^5}\cdot\frac{1}{1-x^{10}}\cdot\frac{1}{1-x^{25}}.
+\end{equation*}
+<p>Again, we could write this as a product of power series, and that would allow us to painfully compute the number of ways to create a certain number of cents. If we actually wanted to know the number of ways to make up 200 cents, say, it would be more sensible to ask a computer algebra package to extract the coefficient of \(x^{200}\) in the product of the four quotients.</p></span><span class="incontext"><a href="sec_genfns-int-parts.html#solution-325">in-context</a></span>
+</body>
+</html>

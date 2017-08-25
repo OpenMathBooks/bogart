@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Is the recurrence you got familiar?
-  </p>
-</hint>

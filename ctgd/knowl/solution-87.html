@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:41-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">51.b.1</span>
+</h5>
+<p>Suppose we have a lattice path form \((0,0)\) to \((n,n)\) which touches or crosses the line \(y=x+1\text{.}\) Let \((k,k+1)\) be the first point on the line \(y=x+1\) that the lattice path touches. From that point, work backwards, replacing every upstep with a step one unit to the left and every rightstep with a step one unit down. The segment of the path you just changed will have moved left \(k+1\) times, so its leftmost \(x\) coordinate will be \(-1\text{,}\) and it will have moved down \(k\) times, so its lowest \(y\) coordinate will be 1.  Thus we now have a lattice path from \((-1,1)\) to \((n,n)\text{.}\) Further, given a lattice path from \((-1,1)\) to \((n,n)\text{,}\) it must cross the line \(y=x+1\) at least once, because it starts above the line and ends below it. At the first point where such a path touches the line \(y=x+1\text{,}\) say \((k',k'+1)\text{,}\) work backwards replacing every upstep with a step to the left and every rightstep with a step downwards. The leftmost point on this path will have \(x\) coordinate 0, and the lowest point will have \(y\) coordinate 0, so the new path will be a lattice path from \((0,0)\) to \((n,n)\) that touches the line \(y=x+1\text{.}\) Clearly these two processes reverse each other, and so they give us a bijection between paths form \((0,0)\) to \((n,n)\) that touch the line \(y=x+1\) and lattice lattice paths from \((-1,1)\) to \((n,n)\text{.}\) Notice that geometrically what we are doing to get the bijection is to take the portion of a lattice path that goes from the initial point till the first touch of the line \(y=x+1\) and reflecting it around that line. This idea of reflection was introduced by Feller, and is called Feller's reflection principle.</p></span><span class="incontext"><a href="s1-3-apps.html#solution-87">in-context</a></span>
+</body>
+</html>

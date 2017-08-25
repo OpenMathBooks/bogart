@@ -1,6 +1,0 @@
-<hint>
-  <p>
-Suppose you already knew the number of moves needed to solve the puzzle
-with n − 1 rings.
-  </p>
-</hint>

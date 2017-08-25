@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:35-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Relations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="backmatter-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter-1.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Induction.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="backmatter-1.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter-1.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="Induction.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations" class="active">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="Relations"><header title="Appendix A Relations"><h1 class="heading hide-type" alt="Appendix A Relations">
+<span class="type">Appendix</span><span class="codenumber">A</span><span class="title">Relations</span><a href="Relations.html" class="permalink">¶ permalink</a>
+</h1></header><section class="section" id="relationsandfunctions"><header title="Section A.1 Relations as sets of Ordered Pairs"><h1 class="heading hide-type" alt="Section A.1 Relations as sets of Ordered Pairs">
+<span class="type">Section</span><span class="codenumber">A.1</span><span class="title">Relations as sets of Ordered Pairs</span><a href="Relations.html#relationsandfunctions" class="permalink">¶ permalink</a>
+</h1></header><section class="subsection" id="functionrelation"><header title="Subsection A.1.1 The relation of a function"><h1 class="heading hide-type" alt="Subsection A.1.1 The relation of a function">
+<span class="type">Subsection</span><span class="codenumber">A.1.1</span><span class="title">The relation of a function</span><a href="Relations.html#functionrelation" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like" id="functionsasorderedpairs"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">328</span>
+</h5>
+<p id="p-1827">Consider the functions from \(S=\{-2,-1,0,1,2\}\) to \(T=\{1,2,3,4,5\}\) defined by \(f(x) = x+3\text{,}\) and \(g(x) = x^5-5x^3+5x +3\text{.}\) Write down the set of ordered pairs \((x,f(x))\) for \(x \in S\) and the set of ordered pairs \((x,g(x))\) for \(x \in S\text{.}\) Are the two functions the same or different?</p></article><p id="p-1829"><a knowl="./knowl/functionsasorderedpairs.html" knowl-id="xref-functionsasorderedpairs" alt="Problem 328 " title="Problem 328 ">Problem 328</a> points out how two functions which appear to be different are actually the same on some domain of interest to us. Most of the time when we are thinking about functions it is fine to think of a function casually as a relationship between two sets. In <a knowl="./knowl/functionsasorderedpairs.html" knowl-id="xref-functionsasorderedpairs" alt="Problem 328 " title="Problem 328 ">Problem 328</a> the set of ordered pairs you wrote down for each function is called the <em class="terminology">relation</em> of the function. When we want to distinguish between the casual and the careful in talking about relationships, our casual term will be “relationship” and our careful term will be “relation.” So <!--Style me with CSS--><em>relation</em> is a technical word in mathematics, and as such it has a technical definition. A <em class="terminology">relation</em> from a set \(S\) to a set \(T\) is a set of ordered pairs whose first elements are in \(S\) and whose second elements are in \(T\text{.}\) Another way to say this is that a <em class="terminology">relation</em> from \(S\) to \(T\) is a subset of \(S\times T\text{.}\)</p>
+<p id="p-1830">A typical way to define a <em class="terminology">function</em> \(f\) from a set \(S\text{,}\) called the <em class="terminology">domain</em> of the function,  to a set \(T\text{,}\) called the <em class="terminology">range</em>,  is that \(f\) is a relationship between \(S\) to \(T\) that relates one and only one member of \(T\) to each element of \(X\text{.}\) We use \(f(x)\) to stand for the element of \(T\) that is related to the element \(x\) of \(S\text{.}\) If we wanted to make our definition more precise, we could substitute the word “relation” for the word “relationship” and we would have a more precise definition. For our purposes, you can choose whichever definition you prefer. However, in any case, there is a relation associated with each function. As we said above, the relation of a function \(f:
+S\rightarrow T\) (which is the standard shorthand for “\(f\) is a function from \(S\) to \(T\)” and is usually read as \(f\) <em class="terminology">maps</em> \(S\) to \(T\)) is the set of all ordered pairs \((x,f(x))\) such that \(x\) is in \(S\text{.}\)</p>
+<article class="example-like" id="formalrelations"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">329</span>
+</h5>
+<article class="introduction" id="introduction-67"><p id="p-1831">Here are some questions that will help you get used to the formal idea of a relation and the related formal idea of a function. \(S\) will stand for a set of size \(s\) and \(T\) will stand for a set of size \(t\text{.}\)</p></article><article class="exercise-like" id="task-235"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1832">What is the size of the largest relation from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="task-236"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1834">What is the size of the smallest relation from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="task-237"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1836">The relation of a function \(f:S\rightarrow T\) is the set of all ordered pairs \((x,f(x))\) with \(x\in S\text{.}\)  What is the size of the relation of a function from \(S\) to \(T\text{?}\)  That is, how many ordered pairs are in the relation of a function from \(S\) to \(T\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-248" id="hint-248"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-248" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1837">In the relation of a function, how many pairs \((x, f (x))\) have the same \(x\)-value?</p></span></span></article><article class="exercise-like" id="task-238"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1839">We say \(f\) is a <em class="terminology">one-to-one</em> function or <em class="terminology">injection</em> from \(S\) to \(T\) if each member of \(S\) is related to a <!--Style me with CSS--><em>different</em> element of \(T\text{.}\) How many different elements must appear as second elements of the ordered pairs in the relation of a one-to-one function (injection) from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="onto"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1841">A function \(f:S\rightarrow T\) is called an <em class="terminology">onto function</em> or <em class="terminology">surjection</em> if each element of \(T\) is \(f(x)\) for some \(x\in S\) What is the minimum size that \(S\) can have if there is a  surjection from \(S\) to \(T\text{?}\)</p></article></article><article class="example-like" id="activity-330"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">330</span>
+</h5>
+<article class="introduction" id="introduction-68"><p id="p-1843">When \(f\) is a function from \(S\) to \(T\text{,}\) the sets \(S\) and \(T\) play a big role in determining whether a function is one-to-one or onto (as defined in <a knowl="./knowl/formalrelations.html" knowl-id="xref-formalrelations" alt="Problem 329 " title="Problem 329 ">Problem 329</a>). For the remainder of this problem, let \(S\) and \(T\) stand for  the set of nonnegative real numbers.</p></article><article class="exercise-like" id="task-240"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1844">If \(f:S\rightarrow T\) is given by \(f(x) =x^2\text{,}\) is \(f\) one-to-one? Is \(f\) onto?</p></article><article class="exercise-like" id="task-241"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1846">Now assume \(S'\) is the set of all real numbers and \(g:S'\rightarrow T\) is given by \(g(x) = x^2\text{.}\) Is \(g\) one-to-one? Is \(g\) onto?</p></article><article class="exercise-like" id="task-242"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1848">Assume that \(T'\) is the set of all real numbers and \(h:S\rightarrow T'\) is given by \(h(x) = x^2\text{.}\) Is \(h\) one-to-one? Is \(h\) onto?</p></article><article class="exercise-like" id="task-243"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1850">And if the function \(j:S'\rightarrow T'\) is given by \(j(x)=x^2\text{,}\) is \(j\) one-to-one? Is \(j\) onto?</p></article></article><article class="example-like" id="activity-331"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">331</span>
+</h5>
+<p id="p-1852">If \(f:S\rightarrow T\) is a function, we say that \(f\) <em class="terminology">maps</em> \(x\) to \(y\) as another way to say that \(f(x)=y\text{.}\) Suppose \(S=T=\{1,2,3\}\text{.}\) Give a function from \(S\) to \(T\) that is not onto. Notice that two different members of \(S\) have mapped to the same element of \(T\text{.}\) Thus when we say that \(f\) associates one and only one element of \(T\) to each element of \(S\text{,}\) it is quite possible that the one and only one element \(f(1)\) that \(f\) maps 1 to is exactly the same as the one and only one element \(f(2)\) that \(f\) maps 2 to.</p></article></section><section class="subsection" id="relationdigraph"><header title="Subsection A.1.2 Directed graphs"><h1 class="heading hide-type" alt="Subsection A.1.2 Directed graphs">
+<span class="type">Subsection</span><span class="codenumber">A.1.2</span><span class="title">Directed graphs</span><a href="Relations.html#relationdigraph" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1854">We visualize numerical functions like \(f(x)=x^2\) with their graphs in Cartesian coordinate systems. We will call these kinds of graphs <!--Style me with CSS--><em>coordinate graphs</em> to distinguish them from other kinds of graphs used to visualize relations that are non-numerical.</p>
+<figure class="figure-like" id="alphabetdigraph"><object type="image/svg+xml" style="width:10%; margin:auto; display:block;" data="images/alphabetdigraph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.1.1</span>The alphabet digraph.</figcaption></figure><p id="p-1855">In <a knowl="./knowl/alphabetdigraph.html" knowl-id="xref-alphabetdigraph" alt="Figure A.1.1 " title="Figure A.1.1 ">Figure A.1.1</a> we illustrate another kind of graph, a “directed graph” or “digraph” of the ``comes before in alphabetical order" relation on the letters \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{.}\) To draw a <em class="terminology">directed graph</em> of a relation on a set \(S\text{,}\) we draw a circle (or dot, if we prefer), which we call a <em class="terminology">vertex</em>, for each element of the set, we usually label the vertex with the set element it corresponds to, and we draw an arrow from the vertex for \(a\) to that for \(b\) if \(a\) is related to \(b\text{,}\) that is, if the ordered pair \((a,b)\) is in our relation. We call such an arrow an <em class="terminology">edge</em> or a <em class="terminology">directed edge</em>. We draw the arrow from \(a\) to \(b\text{,}\) for example, because \(a\) comes before \(b\) in alphabetical order. We try to choose the locations where we draw our vertices so that the arrows capture what we are trying to illustrate as well as possible. Sometimes this entails redrawing our directed graph several times until we think the arrows capture the relationship well.</p>
+<p id="p-1856">We also draw digraphs for relations from a set \(S\) to a set \(T\text{;}\) we simply draw vertices for the elements of \(S\) (usually in a row) and vertices for the elements of \(T\) (usually in a parallel row) draw an arrow from \(x\) in \(S\) to \(y\) in \(T\) if \(x\) is related to \(y\text{.}\) Notice that instead of referring to the vertex representing \(x\text{,}\) we simply referred to \(x\text{.}\) This is a common shorthand. Here are some exercises just to practice drawing digraphs.</p>
+<article class="example-like" id="activity-332"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">332</span>
+</h5>
+<p id="p-1857">Draw the digraph of the “is a proper subset of” relation on the set of subsets of a two element set. How many arrows would you have had to draw if this problem asked you to draw the digraph for the subsets of a three-element set?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-249" id="hint-249"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-249" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1858">For the second question, how many arrows have to leave the empty set? How many arrows have to leave a set of size one?</p></span></span>
+</div></article><p id="p-1860">We also draw digraphs for relations from finite set \(S\) to a finite set \(T\text{;}\) we simply draw vertices for the elements of \(S\) (usually in a row) and vertices for the elements of \(T\) (usually in a parallel row) and draw an arrow from \(x\) in \(S\) to \(y\) in \(T\) if \(x\) is related to \(y\text{.}\) Notice that instead of referring to the vertex representing \(x\text{,}\) we simply referred to \(x\text{.}\) This is a common shorthand.</p>
+<article class="example-like" id="initialdigraph"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">333</span>
+</h5>
+<p id="p-1861">Draw the digraph of the relation from the set \{A, M, P, S\} to the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} given by “is the first letter of.”</p></article><article class="example-like" id="initialdigraph2"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">334</span>
+</h5>
+<p id="p-1862">Draw the digraph of the relation from the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} to the set \{A, M, P, S\} given by “has as its first letter.”</p></article><article class="example-like" id="activity-335"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">335</span>
+</h5>
+<p id="p-1863">Draw the digraph of the relation on the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} given by “has the same first letter as.”</p></article></section><section class="subsection" id="digraphsoffunctions"><header title="Subsection A.1.3 Digraphs of Functions"><h1 class="heading hide-type" alt="Subsection A.1.3 Digraphs of Functions">
+<span class="type">Subsection</span><span class="codenumber">A.1.3</span><span class="title">Digraphs of Functions</span><a href="Relations.html#digraphsoffunctions" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like" id="activity-336"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">336</span>
+</h5>
+<article class="introduction" id="introduction-69"><p id="p-1864">When we draw the digraph of a function \(f\text{,}\) we draw an arrow <!--Style me with CSS--><em>from</em> the vertex representing \(x\) <!--Style me with CSS--><em>to</em> the vertex representing \(f(x)\text{.}\)  One of the relations you considered in <a knowl="./knowl/initialdigraph.html" knowl-id="xref-initialdigraph" alt="Problem 333 " title="Problem 333 ">Problems 333</a> and <a knowl="./knowl/initialdigraph2.html" knowl-id="xref-initialdigraph2" alt="Problem 334 " title="Problem 334 ">Problem 334</a> is the relation of a function.</p></article><article class="exercise-like" id="task-244"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1865">Which relation is the relation of a function?</p></article><article class="exercise-like" id="task-245"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1867">How does the digraph help you visualize that one relation is a function and the other is not?</p></article></article><article class="example-like" id="functiondigraphs-prob"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">337</span>
+</h5>
+<article class="introduction" id="introduction-70"><p id="p-1869">Digraphs of functions help us to visualize whether or not they are onto or one-to-one. For example, let both \(S\) and \(T\) be the set \(\{-2, -1, 0 ,1, 2\}\) and let \(S'\) and \(T'\) be the set \(\{0,1,2\}\text{.}\)  Let \(f(x) = 2-|x|\text{.}\)</p></article><article class="exercise-like" id="task-246"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1870">Draw the digraph of the function \(f\) assuming its domain is \(S\) and its range is \(T\text{.}\)  Use the digraph to explain why or why not this function maps \(S\) onto \(T\text{.}\)</p></article><article class="exercise-like" id="task-247"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1872">Use the digraph of the previous part to explain whether or not the function is one-to one.</p></article><article class="exercise-like" id="task-248"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1874">Draw the digraph of the function \(f\) assuming its domain is \(S\) and its range is \(T'\text{.}\) Use the digraph to explain whether or not the function is onto.</p></article><article class="exercise-like" id="task-249"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1876">Use the digraph of the previous part to explain whether or not the function is one-to-one.</p></article><article class="exercise-like" id="task-250"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1878">Draw the digraph of the function \(f\) assuming its domain is \(S'\) and its range is \(T'\text{.}\) Use the digraph to explain whether the function is onto.</p></article><article class="exercise-like" id="task-251"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1880">Use the digraph of the previous part to explain whether the function is one-to-one.</p></article><article class="exercise-like" id="task-252"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-1882">Suppose the function \(f\) has domain \(S'\) and range \(T\text{.}\)  Draw the digraph of \(f\) and use it to explain whether \(f\) is onto.</p></article><article class="exercise-like" id="task-253"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<p id="p-1884">Use the digraph of the previous part to explain whether \(f\) is one-to-one.</p></article></article><p id="p-1886">A one-to-one function from a set \(X\) onto a set \(Y\) is frequently called a <em class="terminology">bijection</em>, especially in combinatorics.  Your work in <a knowl="./knowl/functiondigraphs-prob.html" knowl-id="xref-functiondigraphs-prob" alt="Problem 337 " title="Problem 337 ">Problem 337</a> should show you that a digraph is the digraph of a bijection from \(X\) to \(Y\) </p>
+<ul id="ul-11" style="list-style-type: disc;">
+<li id="li-123"><p id="p-1887">if the vertices of the digraph represent the elements of \(X\) and \(Y\text{,}\)</p></li>
+<li id="li-124"><p id="p-1888">if each vertex representing an element of \(X\) has one and only one arrow leaving it, and</p></li>
+<li id="li-125"><p id="p-1889">each vertex representing an element of \(Y\) has one and only one arrow entering it.</p></li>
+</ul>
+<article class="example-like" id="activity-338"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">338</span>
+</h5>
+<p id="p-1890">If we reverse all the arrows in the digraph of a bijection \(f\text{,}\) we get the digraph of another function \(g\text{.}\) Is \(g\) a bijection? What is \(f(g(x))\text{?}\) What is \(g(f(x))\text{?}\)</p></article><p id="p-1892">If \(f\) is a function from \(S\) to \(T\text{,}\) if \(g\) is a function from \(T\) to \(S\text{,}\) and if \(f(g(x))= x\) for each \(x\) in \(T\) and \(g(f(x)) = x\) for each \(x\) in \(S\text{,}\) then we say that \(g\) is an inverse of \(f\) (and \(f\) is an inverse of \(g\)).</p>
+<p id="p-1893">More generally, if \(f\) is a function from a set \(R\) to a set \(S\text{,}\) and \(g\) is a function from \(S\) to \(T\text{,}\) then we define a new function \(f \circ g\text{,}\) called the <em class="terminology">composition</em> of \(f\) and \(g\) , by \(f\circ g(x) = f(g(x))\text{.}\)  Composition of functions is a particularly important operatio in subjects such as calculus, where we represent a function like \(h(x) = \sqrt{x^2 + 1}\) as the composition of the square root function and the square and add one function in order to use the chain rule to take the derivative of \(h\text{.}\)</p>
+<p id="p-1894">The function \(\iota\) (the Greek letter iota is pronounced eye-oh-ta) from a set \(S\) to itself, given by the rule \(\iota(x) = x\) for every \(x\) in \(S\text{,}\) is called the <em class="terminology">identity function</em> on S.  If \(f\) is a function from \(S\) to \(T\) and \(g\) is a function from \(T\) to \(S\) such that \(g(f(x)) = x\) for every \(x\) in \(S\text{,}\) we can express this by saying that \(g\circ f = \iota\text{,}\) where \(\iota\) is the identity function of \(S\text{.}\) Saying that \(f(g(x)) = x\) is the same as saying that \(f\circ g = \iota\text{,}\) where \(\iota\) stands for the identity function on \(T\text{.}\)  We use the same letter for the identity function on two different sets when we can use context to tell us on which set the identity function is being defined.</p>
+<article class="example-like" id="activity-339"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">339</span>
+</h5>
+<p id="p-1895">If \(f\) is a function from \(S\) to \(T\) and \(g\) is a function from \(T\) to \(S\) such that \(g(f(x)) = x\text{,}\) how can we tell from context that \(g\circ f\) is the identity function on \(S\) and not the identity function on \(T\text{?}\)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-250" id="hint-250"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-250" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1896">What is the domain of \(g \circ f\text{?}\)</p></span></span>
+</div></article><article class="example-like" id="inversetobijection"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">340</span>
+</h5>
+<p id="p-1898">Explain why a function that has an inverse must be a bijection.</p></article><article class="example-like" id="activity-341"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">341</span>
+</h5>
+<p id="p-1900">Is it true that the inverse of a bijection is a bijection?</p></article><article class="example-like" id="activity-342"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">342</span>
+</h5>
+<p id="p-1902">If \(g\) and \(h\) are inverse of \(f\text{,}\) then what can we say about \(g\) and \(h\text{?}\)</p></article><article class="example-like" id="activity-343"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">343</span>
+</h5>
+<p id="p-1904">Explain why a bijection must have an inverse.</p></article><p id="p-1906">Since a function with an inverse has exactly one inverse \(g\text{,}\) we call \(g\) <!--Style me with CSS--><em>the</em> inverse of \(f\text{.}\)  From now on, when \(f\) has an inverse, we shall denote its inverse by \(f^{-1}\text{.}\)  Thus \(f(f^{-1}(x)) = x\) and \(f^{-1}(f(x)) = x\text{.}\)  Equivalenetly \(f\circ f^{-1} = \iota\) and \(f^{-1} \circ f = \iota\text{.}\)</p></section></section><section class="section" id="equivalencerelations"><header title="Section A.2 Equivalence relations"><h1 class="heading hide-type" alt="Section A.2 Equivalence relations">
+<span class="type">Section</span><span class="codenumber">A.2</span><span class="title">Equivalence relations</span><a href="Relations.html#equivalencerelations" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1907">So far we've used relations primarily to talk about functions. There is another kind of relation, called an equivalence relation, that comes up in the counting problems with which we began. In <a knowl="./knowl/icecreaminpints.html" knowl-id="xref-icecreaminpints" alt="Problem 8 " title="Problem 8 ">Problem 8</a> with three distinct flavors, it was probably tempting to say there are 12 flavors for the first pint, 11 for the second, and 10 for the third, so there are \(12\cdot 11\cdot 10\) ways to choose the pints of ice cream. However, once the pints have been chosen, bought, and put into a bag, there is no way to tell which is first, which is second and which is third. What we just counted is lists of three distinct flavors—one to one functions from the set \(\{1,2,3\}\) in to the set of ice cream flavors. Two of those lists become equivalent once the ice cream purchase is made if they list the same ice cream. In other words, two of those lists become equivalent (are related) if they list same subset of the set of ice cream flavors. To visualize this relation with a digraph, we would need one vertex for each of the \(12\cdot 11\cdot 10\) lists. Even with five flavors of ice cream, we would need one vertex for each of \(5\cdot4\cdot3=60\) lists. So for now we will work with the easier to draw question of choosing three pints of ice cream of different flavors from four flavors of ice cream.</p>
+<article class="example-like" id="fourchoosethree"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">344</span>
+</h5>
+<p id="p-1908">Suppose we have four flavors of ice cream, V(anilla), C(hocolate), S(trawberry) and P(each). Draw the directed graph whose vertices consist of all lists of three distinct flavors of the ice cream, and whose edges connect two lists if they list the same three flavors. This graph makes it pretty clear in how many ways we may choose 3 flavors out of four. How many is it?</p></article><article class="example-like interesting" id="icecreaminadish"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">345</span>
+</h5>
+<p id="p-1910">Now suppose again we are choosing three distinct flavors of ice cream out of four, but instead of putting scoops in a cone or choosing pints, we are going to have the three scoops arranged symmetrically in a circular dish. Similarly to choosing three pints, we can describe a selection of ice cream in terms of which one goes in the dish first, which one goes in second (say to the right of the first), and which one goes in third (say to the right of the second scoop, which makes it to the left of the first scoop). But again, two of these lists will sometimes be equivalent. Once they are in the dish, we can't tell which one went in first. However, there is a subtle difference between putting each flavor in its own small dish and putting all three flavors in a circle in a larger dish. Think about what makes the lists of flavors equivalent, and draw the directed graph whose vertices consist of all lists of three of the flavors of ice cream and whose edges connect two lists that we cannot tell the difference between as dishes of ice cream. How many dishes of ice cream can we distinguish from one another?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-251" id="hint-251"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-251" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1911">If we have scoops of vanilla, chocolate, and strawberry sitting in a circle in a dish, can we distinguish between VCS and VSC?</p></span></span>
+</div></article><article class="example-like" id="roundtablefour"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">346</span>
+</h5>
+<p id="p-1913">Draw the digraph for <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">Problem 38</a> in the special case where we have four people sitting around the table.</p></article><p id="p-1914">In <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problems 344</a>, <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">345</a>, and <a knowl="./knowl/roundtablefour.html" knowl-id="xref-roundtablefour" alt="Problem 346 " title="Problem 346 ">346</a> (as well as <a knowl="./knowl/twelvechoosethree.html" knowl-id="xref-twelvechoosethree" alt="Problem 34 " title="Problem 34 ">Problems 34</a>, <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">38</a>, and <a knowl="./knowl/formulanchoosek.html" knowl-id="xref-formulanchoosek" alt="Problem 39 " title="Problem 39 ">39</a>) we can begin with a set of lists, and say when two lists are equivalent as representations of the objects we are trying to count. In particular, in <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problems 344</a>, <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">345</a>, and <a knowl="./knowl/roundtablefour.html" knowl-id="xref-roundtablefour" alt="Problem 346 " title="Problem 346 ">346</a> you drew the directed graph for this relation of equivalence. Technically, you should have had an arrow from each vertex (list) to itself. This is what we mean when we say a relation is <em class="terminology">reflexive</em>. Whenever you had an arrow from one vertex to a second, you had an arrow back to the first. This is what we mean when we say a relation is <em class="terminology">symmetric</em>.</p>
+<p id="p-1915">When people sit around a round table, each list is equivalent to itself: if List1 and List 2 are identical, then everyone has the same person to the right in both lists (including the first person in the list being to the right of the last person). To see the symmetric property of the equivalence of seating arrangements, if List1 and List2 are different, but everyone has the same person to the right when they sit according to List2 as when they sit according to List1, then everybody better have the same person to the right when they sit according to List1 as when they sit according to List2.</p>
+<p id="p-1916">In <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problems 344</a>, <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">345</a> and <a knowl="./knowl/roundtablefour.html" knowl-id="xref-roundtablefour" alt="Problem 346 " title="Problem 346 ">346</a> there is another property of those relations you may have noticed from the directed graph. Whenever you had an arrow from \(L_1\) to \(L_2\) and an arrow from \(L_2\) to \(L_3\text{,}\) then there was an arrow from \(L_1\) to \(L_3\text{.}\) This is what we mean when we say a relation is <em class="terminology">transitive</em>. You also undoubtedly noticed how the directed graph divides up into clumps of mutually connected vertices. This is what equivalence relations are all about. Let's be a bit more precise in our description of what it means for a relation to be reflexive, symmetric or transitive. </p>
+<ul id="ul-12" style="list-style-type: disc;">
+<li id="li-126"><p id="p-1917">If \(R\) is a relation on a set \(X\text{,}\) we say \(R\) is <em class="terminology">reflexive</em>  if \((x,x)\in
+R\) for every \(x\in X\text{.}\)</p></li>
+<li id="li-127"><p id="p-1918">If \(R\) is a relation on a set \(X\text{,}\) we say \(R\) is <em class="terminology">symmetric</em> if \((x,y)\) is in \(R\) whenever \((y,x)\) is in \(R\text{.}\)</p></li>
+<li id="li-128"><p id="p-1919">If \(R\) is a relation on a set \(X\text{,}\) we say \(R\) is <em class="terminology">transitive</em> if whenever \((x,y)\) is in \(R\) and \((y,z)\) is in \(R\text{,}\) then \((x,z)\) is in \(R\) as well.</p></li>
+</ul>
+<p id="p-1920">Each of the relations of equivalence you worked with in <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problems 344</a>, <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">345</a> and <a knowl="./knowl/roundtablefour.html" knowl-id="xref-roundtablefour" alt="Problem 346 " title="Problem 346 ">346</a> had these three properties. Can you visualize the same three properties in the relations of equivalence that you would use in <a knowl="./knowl/twelvechoosethree.html" knowl-id="xref-twelvechoosethree" alt="Problem 34 " title="Problem 34 ">Problems 34</a>, <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">38</a>, and <a knowl="./knowl/formulanchoosek.html" knowl-id="xref-formulanchoosek" alt="Problem 39 " title="Problem 39 ">39</a>? We call a relation an <em class="terminology">equivalence relation</em> if it is reflexive, symmetric and transitive.</p>
+<p id="p-1921">After some more examples, we will see how to show that equivalence relations have the kind of clumping property you saw in the directed graphs. In our first example, using the notation \((a,b) \in R\) to say that \(a\) is related to \(B\) is going to get in the way. It is really more common to write \(a
+R b\) to mean that \(a\) is related to \(b\text{.}\) For example, if our relation is the less than relation on \(\{1,2,3\}\text{,}\) you are much more likely to use \(x\lt y\) than you are \((x,y)\in \ \lt\text{,}\) aren't you? The reflexive law then says \(xRx\) for every \(x\) in \(X\text{,}\) the symmetric law says that if \(xRy\text{,}\) then \(yRx\text{,}\) and the transitive law says that if \(xRy\) and \(yRz\text{,}\) then \(xRz\text{.}\)</p>
+<article class="example-like" id="nchoosekanotherway"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">347</span>
+</h5>
+<p id="p-1922">For the necklace problem, <a knowl="./knowl/necklace.html" knowl-id="xref-necklace" alt="Problem 43 " title="Problem 43 ">Problem 43</a>, our lists are lists of beads. What makes two lists equivalent for the purpose of describing a necklace? Verify explicitly that this relationship of equivalence is reflexive, symmetric, and transitive.</p></article><article class="example-like" id="activity-348"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">348</span>
+</h5>
+<p id="p-1924">Which of the reflexive, symmetric and transitive properties does the \(\lt\) relation on the integers have?</p></article><article class="example-like" id="activity-349"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">349</span>
+</h5>
+<p id="p-1926">A relation \(R\) on the set of ordered pairs of positive integers that you learned about in grade school in another notation is the relation that says \((m,n)\) is related to \((h,k)\) if \(mk =hn\text{.}\) Show that this relation is an equivalence relation. In what context did you learn about this relation in grade school?</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-252" id="hint-252"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-252" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1927">To show a relation is an equivalence relation, you need to show it satisfies the definition of an equivalence relation.</p></span></span>
+</div></article><article class="example-like" id="activity-350"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">350</span>
+</h5>
+<p id="p-1929">Another relation that you may have learned about in school, perhaps in the guise of “clock arithmetic,” is the relation of equivalence modulo \(n\text{.}\) For integers (positive, negative, or zero) \(a\) and \(b\text{,}\) we write \(a
+\equiv b \pmod{n}\) to mean that \(a-b\) is an integer multiple of \(n\text{,}\) and in this case, we say that \(a\) is <em class="terminology">congruent to \(b\) modulo \(n\)</em> and write \(a\equiv b \pmod{n}\text{..}\) Show that the relation of congruence modulo \(n\) is an equivalence relation.</p></article><article class="example-like" id="activity-351"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">351</span>
+</h5>
+<p id="p-1931">Define a relation on the set of all lists of \(n\) distinct integers chosen from \(\{1,2,\ldots, n\}\text{,}\) by saying two lists are related if they have the same elements (though perhaps in a different order) in the first \(k\) places, and the same elements (though perhaps in a different order) in the last \(n-k\) places. Show this relation is an equivalence relation.</p></article><article class="example-like" id="equivalenceclasses"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">352</span>
+</h5>
+<p id="p-1933">Suppose that \(R\) is an equivalence relation on a set \(X\) and for each \(x\in X\text{,}\) let \(C_x = \{y| y\in X \text{ and }
+yRx\}\text{.}\) If \(C_x\) and \(C_z\) have an element \(y\) in common, what can you conclude about \(C_x\) and \(C_z\) (besides the fact that they have an element in common!)? Be explicit about what property(ies) of equivalence relations justify your answer. Why is every element of \(X\) in some set \(C_x\text{?}\) Be explicit about what property(ies) of equivalence relations you are using to answer this question. Notice that we might simultaneously denote a set by \(C_x\) and \(C_y\text{.}\) Explain why the union of the sets \(C_x\) is \(X\text{.}\) Explain why two distinct sets \(C_x\) and \(C_z\) are disjoint. What do these sets have to do with the “clumping” you saw in the digraph of <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problem 344</a> and <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">Problem 345</a>?</p></article><p id="p-1935">In <a knowl="./knowl/equivalenceclasses.html" knowl-id="xref-equivalenceclasses" alt="Problem 352 " title="Problem 352 ">Problem 352</a> the sets \(C_x\) are called <em class="terminology">equivalence classes</em> of the equivalence relation \(R\text{.}\) You have just proved that if \(R\) is an equivalence relation of the set \(X\text{,}\) then each element of \(X\) is in exactly one equivalence class of \(R\text{.}\) Recall that a <em class="terminology">partition</em> of a set \(X\) is a set of disjoint sets whose union is \(X\text{.}\) For example, \(\{1,3\}\text{,}\) \(\{2,4,6\}\text{,}\) \(\{5\}\) is a partition of the set \(\{1,2,3,4,5,6\}\text{.}\) Thus another way to describe what you proved in <a knowl="./knowl/equivalenceclasses.html" knowl-id="xref-equivalenceclasses" alt="Problem 352 " title="Problem 352 ">Problem 352</a> is the following:</p>
+<article class="theorem-like" id="theorem-10"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">A.2.1</span>
+</h5>
+<p id="p-1936">If \(R\) is an equivalence relation on \(X\text{,}\) then the set of equivalence classes of \(R\) is a partition of \(X\text{.}\)</p></article><p id="p-1937">Since a partition of \(S\) is a set of subsets of \(S\text{,}\) it is common to call the subsets into which we partition \(S\) the <em class="terminology">blocks</em> of the partition so that we don't find ourselves in the uncomfortable position of referring to a set and not being sure whether it is the set being partitioned or one of the blocks of the partition.</p>
+<article class="example-like" id="partitiontoequivalence"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">353</span>
+</h5>
+<p id="p-1938">In each of <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">Problems 38</a>, <a knowl="./knowl/formulanchoosek.html" knowl-id="xref-formulanchoosek" alt="Problem 39 " title="Problem 39 ">Problem 39</a>, <a knowl="./knowl/necklace.html" knowl-id="xref-necklace" alt="Problem 43 " title="Problem 43 ">Problem 43</a>, <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problem 344</a>, and <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">Problem 345</a>, what does an equivalence class correspond to? (Five answers are expected here.)</p>
+<div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-253" id="hint-253"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-253" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1939">To get you started, in <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">Problem 38</a> the equivalence classes correspond to seating arrangements.</p></span></span>
+</div></article><article class="example-like" id="activity-354"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">354</span>
+</h5>
+<p id="p-1941">Given the partition \(\{1,3\}\text{,}\) \(\{2,4,6\}\text{,}\) \(\{5\}\) of the set \(\{1,2,3,4,5,6\}\text{,}\) define two elements of \(\{1,2,3,4,5,6\}\) to be related if they are in the same part of the partition. That is, define 1 to be related to 3 (and 1 and 3 each related to itself), define 2 and 4, 2 and 6, and 4 and 6 to be related (and each of 2, 4, and 6 to be related to itself), and define 5 to be related to itself. Show that this relation is an equivalence relation.</p></article><article class="example-like" id="activity-355"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">355</span>
+</h5>
+<p id="p-1943">Suppose \(P = \{S_1, S_2, S_3, \ldots, S_k\}\) is a partition of \(S\text{.}\) Define two elements of \(S\) to be related if they are in the same set \(S_i\text{,}\) and otherwise not to be related. Show that this relation is an equivalence relation. Show that the equivalence classes of the equivalence relation are the sets \(S_i\text{.}\)</p></article><p id="p-1945">In <a knowl="./knowl/partitiontoequivalence.html" knowl-id="xref-partitiontoequivalence" alt="Problem 353 " title="Problem 353 ">Problem 353</a> you just proved that each partition of a set gives rise to an equivalence relation whose classes are just the parts of the partition. Thus in <a knowl="./knowl/equivalenceclasses.html" knowl-id="xref-equivalenceclasses" alt="Problem 352 " title="Problem 352 ">Problem 352</a> and <a knowl="./knowl/partitiontoequivalence.html" knowl-id="xref-partitiontoequivalence" alt="Problem 353 " title="Problem 353 ">Problem 353</a> you proved the following Theorem.</p>
+<article class="theorem-like" id="theorem-11"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">A.2.2</span>
+</h5>
+<p id="p-1946">A relation \(R\) is an equivalence relation on a set \(S\) if and only if \(S\) may be partitioned into sets \(S_1\text{,}\) \(S_2\text{,}\) …, \(S_n\) in such a way that \(x\) and \(y\) are related by \(R\) if and only if they are in the same block \(S_i\) of the partition. </p></article><p id="p-1947">In <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problems 344</a>, <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">Problem 345</a>, <a knowl="./knowl/roundtable.html" knowl-id="xref-roundtable" alt="Problem 38 " title="Problem 38 ">Problem 38</a> and <a knowl="./knowl/necklace.html" knowl-id="xref-necklace" alt="Problem 43 " title="Problem 43 ">Problem 43</a> what we were doing in each case was counting equivalence classes of an equivalence relation. There was a special structure to the problems that made this somewhat easier to do. For example, in <a knowl="./knowl/fourchoosethree.html" knowl-id="xref-fourchoosethree" alt="Problem 344 " title="Problem 344 ">Problem 344</a>, we had \(4\cdot3\cdot2 =24\) lists of three distinct flavors chosen from V, C, S, and P. Each list was equivalent to \(3\cdot2\cdot1=3!=6\) lists, including itself, from the point of view of serving 3 small dishes of ice cream. The order in which we selected the three flavors was unimportant. Thus the set of all \(4\cdot3\cdot2\) lists was a union of some number \(n\) of equivalence classes, each of size 6. By the product principle, if we have a union of \(n\) disjoint sets, each of size 6, the union has \(6n\) elements. But we already knew that the union was the set of all 24 lists of three distinct letters chosen from our four letters. Thus we have \(6n=24\text{,}\) or \(n=4\) equivalence classes.</p>
+<p id="p-1948">In <a knowl="./knowl/icecreaminadish.html" knowl-id="xref-icecreaminadish" alt="Problem 345 " title="Problem 345 ">Problem 345</a> there is a subtle change. In the language we adopted for seating people around a round table, if we choose the flavors V, C, and S, and arrange them in the dish with C to the right of V and S to the right of C, then the scoops are in different relative positions than if we arrange them instead with S to the right of V and C to the right of S. Thus the order in which the scoops go into the dish is somewhat important—somewhat, because putting in V first, then C to its right and S to its right is the same as putting in S first, then V to its right and C to its right. In this case, each list of three flavors is equivalent to only three lists, including itself, and so if there are \(n\) equivalence classes, we have \(3n=24\text{,}\) so there are \(24/3=8\) equivalence classes.</p>
+<article class="example-like" id="EquivPrincipleProblem"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">356</span>
+</h5>
+<p id="p-1949">If we have an equivalence relation that divides a set with \(k\) elements up into equivalence classes each of size \(m\text{,}\) what is the number \(n\) of equivalence classes? Explain why.</p></article><article class="example-like" id="activity-357"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">357</span>
+</h5>
+<p id="p-1951">In <a knowl="./knowl/nchoosekanotherway.html" knowl-id="xref-nchoosekanotherway" alt="Problem 347 " title="Problem 347 ">Problem 347</a>, what is the number of equivalence classes? Explain in words the relationship between this problem and the <a knowl="./knowl/formulanchoosek.html" knowl-id="xref-formulanchoosek" alt="Problem 39 " title="Problem 39 ">Problem 39</a>.</p></article><article class="example-like" id="activity-358"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">358</span>
+</h5>
+<p id="p-1953">Describe explicitly what makes two lists of beads equivalent in <a knowl="./knowl/necklace.html" knowl-id="xref-necklace" alt="Problem 43 " title="Problem 43 ">Problem 43</a> and how <a knowl="./knowl/EquivPrincipleProblem.html" knowl-id="xref-EquivPrincipleProblem" alt="Problem 356 " title="Problem 356 ">Problem 356</a> can be used to compute the number of different necklaces.</p></article><article class="example-like" id="activity-359"><h5 class="heading">
+<span class="type">Problem</span><span class="codenumber">359</span>
+</h5>
+<p id="p-1955">What are the equivalence classes (write them out as sets of lists) in <a knowl="./knowl/twocolorsofbeads.html" knowl-id="xref-twocolorsofbeads" alt="Problem 45 " title="Problem 45 ">Problem 45</a>, and why can't we use <a knowl="./knowl/EquivPrincipleProblem.html" knowl-id="xref-EquivPrincipleProblem" alt="Problem 356 " title="Problem 356 ">Problem 356</a> to compute the number of equivalence classes?</p></article><p id="p-1958">In <a knowl="./knowl/EquivPrincipleProblem.html" knowl-id="xref-EquivPrincipleProblem" alt="Problem 356 " title="Problem 356 ">Problem 356</a> you proved our next theorem. In <a href="what-is.html" alt="Chapter 1 What is Combinatorics?" title="Chapter 1 What is Combinatorics?">Chapter 1</a> (<a knowl="./knowl/quotientprinciple.html" knowl-id="xref-quotientprinciple" alt="Problem 42 " title="Problem 42 ">Problem 42</a>) we discovered and stated this theorem in the context of partitions and called it the <em class="terminology">Quotient Principle</em></p>
+<article class="theorem-like" id="theorem-12"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">A.2.3</span>
+</h5>
+<p id="p-1959">If an equivalence relation on a set \(S\) size \(k\) has \(n\) equivalence classes each of size \(m\text{,}\) then the number of equivalence classes is \(k/m\text{.}\)</p></article></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

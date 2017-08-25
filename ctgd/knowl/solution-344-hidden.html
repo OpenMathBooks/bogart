@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:57-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>The generating function for partitions that arise in the second case is \(\qchoose{m+n-1}{m-1}=\qchoose{m+n-1}{n}\text{.}\) In the first case, after we delete the largest part, the Young diagram sits in a rectangle of width \(m\) and depth \(n-1\text{.}\) The generating function for partitions that arise in the first case <!--Style me with CSS--><em>after</em> we have deleted a part of size \(m\) is \(\qchoose{m+n-1}{n-1}\text{.}\) Thus the generating function for partitions that arise in the first case (<!--Style me with CSS--><em>before</em> we delete the part of size \(m\)) is \(q^m\qchoose{m+n-1}{n-1}\text{.}\) Thus by the sum principle the generating function for all partitions that fit into a rectangle of width \(m\) and depth \(n\) is given by</p>
+\begin{equation*}
+\qchoose{m+n}{n}= q^m\qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{n}.
+\end{equation*}
+<p>If you don't use the symmetry \(\qchoose{m+n-1}{m-1}=\qchoose{m+n-1}{n}\text{,}\) you get</p>
+\begin{equation*}
+\qchoose{m+n}{n}= q^m\qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{m-1}.
+\end{equation*}
+<p>While this doesn't <!--Style me with CSS--><em>quite</em> look like the Pascal recurrence, it is still a correct answer.</p></span></body>
+</html>

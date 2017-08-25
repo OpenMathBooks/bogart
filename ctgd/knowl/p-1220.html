@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-20T09:48:58-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>\(a_n=1.1a_{n-1}+1000\text{,}\) and \(a_0=5000\text{.}\)</p>
+\begin{align*}
+\sum_{i=1}^\infty
+a_ix^i \amp= 1.1x\sum_{i=1}^\infty a_{i-1}x^{i-1} + 1000\sum_{i=1}^\infty x^i\\
+\sum_{i=0}^\infty a_ix^i -a_0 \amp=
+1.1x\sum_{i=0}^\infty a_ix^i +1000(\sum_{i=0}^\infty x^i-1)\\
+(1-1.1x)\sum_{i=0}^\infty a_ix^i  \amp=  a_0 +1000\sum_{i=10}^\infty x^i-1000\\
+\sum_{i=0}^\infty a_i x^i \amp=  a_0\sum_{i=0}^\infty (1.1)^ix^i
++1000\sum_{i=0}^\infty (1.1)^ix^i\sum_{i=0}^\infty x^i -1000\\
+\sum_{i=0}^\infty a_i x^i \amp=  a_0\sum_{i=0}^\infty (1.1)^ix^i
++1000\sum_{k=0}^\infty \left(\sum_{i=0}^k(1.1)^i\right)x^k
+- 1000\sum_{i=0}^\infty (1.1)^ix^i
+\end{align*}
+<p>This gives us that \(a_n= 4000(1.1)^n +1000 \frac{1-(1.1)^{n+1}}{-.1}\text{.}\) This simplifies to \(a_n= 4000(1.1)^n+10000(1.1)^{n+1}-10000 = 15,000(1.1)^n-10000\text{.}\) Courtesy of Maple, after ten years we have $28,906.14 and after 20 years we have $90,912.50.</p>
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1220">in-context</a></span>
+</body>
+</html>

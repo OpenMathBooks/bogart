@@ -1,5 +1,0 @@
-<hint>
-  <p>
-Look at Problem 178 again.
-  </p>
-</hint>

@@ -1,5 +1,0 @@
-<hint>
-  <p>
-For finding a bijection, think about lattice paths.
-  </p>
-</hint>
