@@ -1,11 +1,11 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2017-08-20T22:18:51-06:00    *%
+%*    on 2017-08-25T15:24:58-06:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
 %**************************************%
-\documentclass[11pt,]{book}
+\documentclass[10pt,]{book}
 %% Custom Preamble Entries, early (use latex.preamble.early)
 %% Inline math delimiters, \(, \), need to be robust
 %% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
@@ -34,9 +34,9 @@
 %% fontspec package will make Latin Modern (lmodern) the default font
 \ifxetex\usepackage{xltxtra}\fi
 \usepackage{fontspec}
-%% realscripts is the only part of xltxtra relevant to lualatex
+%% realscripts is the only part of xltxtra relevant to lualatex 
 \ifluatex\usepackage{realscripts}\fi
-%%
+%% 
 %% Extensive support for other languages
 \usepackage{polyglossia}
 %% Main document language is US English
@@ -66,7 +66,7 @@
 %% xelatex,lualatex: add StylisticSet 1 for shapely \ell
 %% xelatex,lualatex: add StylisticSet 2 for plain zero
 %% xelatex,lualatex: we add StylisticSet 3 for upright quotes
-%%
+%% 
 \ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
 %% begin: xelatex and lualatex-specific monospace font
 \usepackage{zi4}
@@ -184,20 +184,20 @@
 %% You can remove all this figure/table setup, to restore standard LaTeX behavior
 %% HOWEVER, numbering of figures/tables AND theorems/examples/remarks, etc
 %% WILL ALL de-synchronize with the numbering in the HTML version
-%% You can remove the [H] argument of the \newfloat command, to allow flotation and
+%% You can remove the [H] argument of the \newfloat command, to allow flotation and 
 %% preserve numbering, BUT the numbering may then appear "out-of-order"
 \usepackage{float}
-\usepackage[bf]{caption} % http://tex.stackexchange.com/questions/95631/defining-a-new-type-of-floating-environment
+\usepackage[bf]{caption} % http://tex.stackexchange.com/questions/95631/defining-a-new-type-of-floating-environment 
 \usepackage{newfloat}
 % Figure environment setup so that it no longer floats
 \SetupFloatingEnvironment{figure}{fileext=lof,placement={H},within=section,name=Figure}
-% figures have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme
+% figures have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme 
 \makeatletter
 \let\c@figure\c@theorem
 \makeatother
 % Table environment setup so that it no longer floats
 \SetupFloatingEnvironment{table}{fileext=lot,placement={H},within=section,name=Table}
-% tables have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme
+% tables have the same number as theorems: http://tex.stackexchange.com/questions/16195/how-to-make-equations-figures-and-theorems-use-the-same-numbering-scheme 
 \makeatletter
 \let\c@table\c@theorem
 \makeatother
@@ -285,11 +285,11 @@
 %% extpfeil package for certain extensible arrows,
 %% as also provided by MathJax extension of the same name
 %% NB: this package loads mtools, which loads calc, which redefines
-%%     \setlength, so it can be removed if it seems to be in the
+%%     \setlength, so it can be removed if it seems to be in the 
 %%     way and your math does not use:
-%%
+%%     
 %%     \xtwoheadrightarrow, \xtwoheadleftarrow, \xmapsto, \xlongequal, \xtofrom
-%%
+%%     
 %%     we have had to be extra careful with variable thickness
 %%     lines in tables, and so also load this package late
 \usepackage{extpfeil}
@@ -297,9 +297,9 @@
 % Set up the emoji for the three fruit we use
 \newfontfamily{\emojifont}{Symbola}
 \usepackage{newunicodechar}
-\newunicodechar{🍎}{\emojifont{🍎}} % Red apple
-\newunicodechar{🍐}{{\emojifont{🍐}}} % Pear
-\newunicodechar{🍌}{{\emojifont{🍌}}} % Banana
+\newunicodechar{🍎}{\emojifont{🍎}} % Red apple 
+\newunicodechar{🍐}{{\emojifont{🍐}}} % Pear 
+\newunicodechar{🍌}{{\emojifont{🍌}}} % Banana 
 % Redefine activity environment to get problem type labels
 \usepackage{tabto, pdfcomment}\newcommand{\marginsymbol}[2][0]{\tabto*{#1}\makebox[1ex][r]{#2}\tabto*{\TabPrevPos}}\input{latex-preamble-styles}
 
@@ -562,7 +562,7 @@ to \([n]=\{1,2,3,\dots,n\}\) and prove it.%
 \end{enumerate}
 \end{activity}
 \begin{activity}[]\marginsymbol[-1em]{\pdftooltip{\tiny$+$}{summary}} \label{generalproductprinciple}
-Now suppose we are thinking about a set \(S\) of functions \(f\) from \([m]\) to some set \(X\). (For example, in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}} we were thinking of the set of functions from the three possible places for scoops in an ice-cream cone to \(12\) flavors of ice cream.) Suppose there are \(k_1\) choices for \(f(1)\). (In \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}}, \(k_1\) was \(12\), because there were \(12\) ways to choose the first scoop.) Suppose that for each choice of \(f(1)\) there are \(k_2\) choices for \(f(2)\). (For example, in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}} \(k_2\) was \(12\) if the second flavor could be the same as the first, but \(k_2\) was \(11\) if the flavors had to be different.) In general, suppose that for each choice of \(f(1)\), \(f(2)\), \dots{} \(f(i-1)\), there are \(k_i\) choices for \(f(i)\). (For example, in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}}, if the flavors have to be different, then for each coice of \(f(1)\) and \(f(2)\), there are \(10\) choices for \(f(3)\).)%
+Now suppose we are thinking about a set \(S\) of functions \(f\) from \([m]\) to some set \(X\). (For example, in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}} we were thinking of the set of functions from the three possible places for scoops in an ice-cream cone to \(12\) flavors of ice cream.) Suppose there are \(k_1\) choices for \(f(1)\). (In \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}}, \(k_1\) was \(12\), because there were \(12\) ways to choose the first scoop.) Suppose that for each choice of \(f(1)\) there are \(k_2\) choices for \(f(2)\). (For example, in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}} \(k_2\) was \(12\) if the second flavor could be the same as the first, but \(k_2\) was \(11\) if the flavors had to be different.) In general, suppose that for each choice of \(f(1)\), \(f(2)\), \dots{} \(f(i-1)\), there are \(k_i\) choices for \(f(i)\). (For example, in \hyperref[tripledeckercone]{Problem~\ref{tripledeckercone}}, if the flavors have to be different, then for each choice of \(f(1)\) and \(f(2)\), there are \(10\) choices for \(f(3)\).)%
 \par
 What we have assumed so far about the functions in \(S\) may be summarized as \leavevmode%
 \begin{itemize}[label=\textbullet]
@@ -881,7 +881,7 @@ We first gave this problem as \hyperref[tennispairings1a]{Problem~\ref{tennispai
 (This becomes especially relevant in \hyperref[groupsonsets]{Chapter~\ref{groupsonsets}}, though it makes an important point here.) In how many ways may we attach two identical red beads and two identical blue beads to the corners of a square (with one bead per corner) free to move around in (three-dimensional) space?%
 \end{activity}
 \begin{activity}[]\marginsymbol[-1em]{\pdftooltip{$\importantarrow$}{especially interesting}} \label{Stirling_sapproximation}
-While the formula you proved in \hyperref[nchoosek]{Problems~\ref{nchoosek}} and \hyperref[formulanchoosekfinal]{\ref{formulanchoosek}.\ref{formulanchoosekfinal}} is very useful, it doesn't give us a sense of how big the binomial coefficients are. We can get a very rough idea, for example, of the size of \(\binom{2n}{n}\) by recognizing that we can write \((2n)^\frac{\underline{n}}/n!\) as \({2n}{n}\cdot
+While the formula you proved in \hyperref[nchoosek]{Problems~\ref{nchoosek}} and \hyperref[formulanchoosekfinal]{\ref{formulanchoosek}.\ref{formulanchoosekfinal}} is very useful, it doesn't give us a sense of how big the binomial coefficients are. We can get a very rough idea, for example, of the size of \(\binom{2n}{n}\) by recognizing that we can write \((2n)^{\underline{n}}/n!\) as \(\frac{2n}{n}\cdot
 \frac{2n-1}{n-1}\cdots \frac{n+1}{1}\), and each quotient is at least \(2\), so the product is at least \(2^n\). If this were an accurate estimate, it would mean the fraction of \(n\)-element subsets of a \(2n\)-element set would be about         \(2^n/2^{2n}=1/2^n\), which becomes very small as \(n\) becomes large. However it is pretty clear the approximation will not be a very good one, because some of the terms in that product are much larger than 2. In fact, if \(\binom{2n}{k}\) were the same for every \(k\), then each would be the fraction \(\frac{1}{2n+1}\) of \(2^{2n}\). This is much larger than the fraction \(\frac{1}{2^n}\). But our intuition suggets that \(\binom{2n}{n}\) is much larger than \(\binom{2n}{1}\) and is likely larger than \(\binom{2n}{n-1}\) so we can be sure our approximation is a bad one. For estimates like this, James Stirling developed a formula to approximate \(n!\) when \(n\) is large, namely \(n!\) is about \(\left(\sqrt{2\pi
 n}\right){n^n/ e^n}\).\index{Stirling's formula for \(n"!\)}\index{\(n"!\)!Stirling's formula for} In fact the ratio of \(n!\) to this expression approaches 1 as \(n\) becomes infinite.\footnote{Proving this takes more of a detour than is advisable here; however there is an elementary proof which you can work through in the problems of the end of Section 1 of Chapter 1 of \emph{Introductory Combinatorics} by Kenneth P. Bogart, Harcourt Academic Press, (2000).\label{fn-2}} We write this as%
 \begin{equation*}
@@ -2929,9 +2929,9 @@ Use the deletion-contraction recurrence to compute the chromatic polynomial of t
 % set panel max height to practical minimum, created in preamble
 \setlength{\panelmax}{0pt}
 \newsavebox{\panelboxAAimage}
-\savebox{\panelboxAAimage}{%
+\begin{lrbox}{\panelboxAAimage}
 \includegraphics[width=0.25\linewidth]{images/spantreeexercise}
-}
+\end{lrbox}
 \newlength{\phAAimage}\setlength{\phAAimage}{\ht\panelboxAAimage+\dp\panelboxAAimage}
 \settototalheight{\phAAimage}{\usebox{\panelboxAAimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAAimage}}
@@ -3284,7 +3284,7 @@ We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups o
 % set panel max height to practical minimum, created in preamble
 \setlength{\panelmax}{0pt}
 \newsavebox{\panelboxAGimage}
-\savebox{\panelboxAGimage}{%
+\begin{lrbox}{\panelboxAGimage}
 \resizebox{0.19\linewidth}{!}{{
 \begin{tikzpicture}
 \draw (0,0) --(0,2) -- (2,2) -- (2,0) -- (0,0);
@@ -3302,12 +3302,12 @@ We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups o
 \node [above] at (1,2) {$s_1$};
 \end{tikzpicture}
 }
-}}
+}\end{lrbox}
 \newlength{\phAGimage}\setlength{\phAGimage}{\ht\panelboxAGimage+\dp\panelboxAGimage}
 \settototalheight{\phAGimage}{\usebox{\panelboxAGimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAGimage}}
 \newsavebox{\panelboxAHimage}
-\savebox{\panelboxAHimage}{%
+\begin{lrbox}{\panelboxAHimage}
 \resizebox{0.19\linewidth}{!}{{
 \begin{tikzpicture}
 \draw (0,0) --(0,2) -- (2,2) -- (2,0) -- (0,0);
@@ -3326,12 +3326,12 @@ We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups o
 \node [below] at (1,-0.5) {$\rho$};
 \end{tikzpicture}
 }
-}}
+}\end{lrbox}
 \newlength{\phAHimage}\setlength{\phAHimage}{\ht\panelboxAHimage+\dp\panelboxAHimage}
 \settototalheight{\phAHimage}{\usebox{\panelboxAHimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAHimage}}
 \newsavebox{\panelboxAIimage}
-\savebox{\panelboxAIimage}{%
+\begin{lrbox}{\panelboxAIimage}
 \resizebox{0.19\linewidth}{!}{{
 \begin{tikzpicture}
 \draw (0,0) --(0,2) -- (2,2) -- (2,0) -- (0,0);
@@ -3350,12 +3350,12 @@ We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups o
 \node [below] at (1,-0.5) {$\rho^2$};
 \end{tikzpicture}
 }
-}}
+}\end{lrbox}
 \newlength{\phAIimage}\setlength{\phAIimage}{\ht\panelboxAIimage+\dp\panelboxAIimage}
 \settototalheight{\phAIimage}{\usebox{\panelboxAIimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAIimage}}
 \newsavebox{\panelboxAJimage}
-\savebox{\panelboxAJimage}{%
+\begin{lrbox}{\panelboxAJimage}
 \resizebox{0.19\linewidth}{!}{{
 \begin{tikzpicture}
 \draw (0,0) --(0,2) -- (2,2) -- (2,0) -- (0,0);
@@ -3374,12 +3374,12 @@ We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups o
 \node [below] at (1,-0.5) {$\rho^3$};
 \end{tikzpicture}
 }
-}}
+}\end{lrbox}
 \newlength{\phAJimage}\setlength{\phAJimage}{\ht\panelboxAJimage+\dp\panelboxAJimage}
 \settototalheight{\phAJimage}{\usebox{\panelboxAJimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAJimage}}
 \newsavebox{\panelboxAKimage}
-\savebox{\panelboxAKimage}{%
+\begin{lrbox}{\panelboxAKimage}
 \resizebox{0.19\linewidth}{!}{{
 \begin{tikzpicture}
 \draw (0,0) --(0,2) -- (2,2) -- (2,0) -- (0,0);
@@ -3398,7 +3398,7 @@ We defined the rotation group \(R_4\) and the dihedral group \(D_4\) as groups o
 \node [below] at (1,-0.5) {$\begin{aligned}\rho^4 &=\text{identity}\\&=\rho^0\end{aligned}$};
 \end{tikzpicture}
 }
-}}
+}\end{lrbox}
 \newlength{\phAKimage}\setlength{\phAKimage}{\ht\panelboxAKimage+\dp\panelboxAKimage}
 \settototalheight{\phAKimage}{\usebox{\panelboxAKimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAKimage}}
@@ -3716,20 +3716,20 @@ In \hyperref[butyl-alcohol-isomers]{Figure~\ref{butyl-alcohol-isomers}} we show 
 % set panel max height to practical minimum, created in preamble
 \setlength{\panelmax}{0pt}
 \newsavebox{\panelboxANimage}
-\savebox{\panelboxANimage}{%
+\begin{lrbox}{\panelboxANimage}
 \resizebox{0.47\linewidth}{!}{{
 \chemfig{H-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]OH)-[:0]C(-[:90]H)(-[:270]H)-[:0]H}
 }
-}}
+}\end{lrbox}
 \newlength{\phANimage}\setlength{\phANimage}{\ht\panelboxANimage+\dp\panelboxANimage}
 \settototalheight{\phANimage}{\usebox{\panelboxANimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phANimage}}
 \newsavebox{\panelboxAOimage}
-\savebox{\panelboxAOimage}{%
+\begin{lrbox}{\panelboxAOimage}
 \resizebox{0.47\linewidth}{!}{{
 \chemfig{H-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]OH}
 }
-}}
+}\end{lrbox}
 \newlength{\phAOimage}\setlength{\phAOimage}{\ht\panelboxAOimage+\dp\panelboxAOimage}
 \settototalheight{\phAOimage}{\usebox{\panelboxAOimage}}
 \setlength{\panelmax}{\maxof{\panelmax}{\phAOimage}}
