@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:06-06:00    *-->
+<!--*    on 2017-12-13T14:15:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,12 +12,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">387.b.1</span>
-</h5>
-<p>\(T(x) = \sum_{i=0}^\infty (x+x^2/2)^i/i!\text{.}\) By the binomial theorem, this gives \(T(x) = \sum_{i=0}^\infty \frac{\sum_{j=0}^i \binom{i}{j}x^j\bigl(\frac{x^2}{2}\bigr)^{i-j}}{
-i!}=\sum_{i=0}^\infty\frac{\sum_{j=0}^i\binom{i}{j}x^{2i-j}2^{j-i}}{i!}\text{.}\) Then the coefficient \(c_n\) of \(x^n\) is the sum over all \(i\) and \(j\) with \(2i-j=n\) and \(j\le i\) of \(\binom{i}{j}\frac{n!}{i!}2^{j-i}\text{.}\) But if \(2i-j=n\text{,}\) then \(j= 2i-n\text{,}\) and if \(2i-n\le i\text{,}\) then \(i\le n\text{,}\) so that \(c_n
-= \frac{n!}{2^n}\sum_{i=0}^n\binom{i}{2i-n}\frac{2^i}{i!}\text{.}\) Note that \(\binom{i}{2i-n}\) is the same as \(\binom{i}{n-i}\text{,}\) which is 0 unless \(i\ge
-n/2\text{,}\) which reduces our sum to \(c_n = \frac{n!}{2^n}\sum_{i=\lceil n/2\rceil}^n\binom{i}{n-i}\frac{2^i}{i!}\text{.}\)</p></span><span class="incontext"><a href="expogenfun.html#solution-623">in-context</a></span>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">387.a.1</span>
+</h6>
+<p></p>
+\begin{align*}
+\sum_{n=2}^\infty c_n\frac{x^{n-1}}{(n-1)!}
+\! =\amp \!\sum_{n=2}^\infty(n-1) c_{n-2}\frac{x^{n-1}}{(n-1)!} +
+\sum_{n=2}^\infty c_{n-1}\frac{x^{n-1}}{(n-1)!}\\
+\sum_{n=1}^\infty c_n\frac{x^{n-1}}{(n-1)!}- c_1 \! =\amp \! x\sum_{n=2}^\infty
+c_{n-2}\frac{x^{n-2}}{(n-2)!} + \sum_{n=0}^\infty c_n\frac{x^n}{n!} -c_0\\
+T'(x)\! =\amp \!xT(x) +T(x)
+\end{align*}
+<p>\(T(0) = c_0 =1\text{.}\) Then \(\frac{T'(x)}{T(x)} = x+1\text{,}\) giving \(\ln T(x)
+=x^2/2+x+k\text{,}\) and \(T(x) =e^ke^{x+ x^2/2}=e^{x+x^2/2}\text{,}\) since \(T(0)=1\text{.}\)</p></span><span class="incontext"><a href="app3-3-recurrences.html#solution-623">in-context</a></span>
 </body>
 </html>

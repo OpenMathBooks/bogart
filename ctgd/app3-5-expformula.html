@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-12-13T14:14:09-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CTGD The Exponential Formula</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ctgd.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app3-4-prodprinc.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="expogenfun.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="app3-suppprobs.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app3-4-prodprinc.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="expogenfun.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="app3-suppprobs.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
+</ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun" class="active">Exponential Generating Functions</a></li>
+<li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="app3-5-expformula"><header title="Section C.5 The Exponential Formula"><h2 class="heading hide-type" alt="Section C.5 The Exponential Formula">
+<span class="type">Section</span><span class="codenumber">C.5</span><span class="title">The Exponential Formula</span>
+</h2>
+<a href="app3-5-expformula.html" class="permalink">¶</a></header><p id="p-2163">Exponential generating functions turn out to be quite useful in advanced work in combinatorics. One reason why is that it is often possible to give a combinatorial interpretation to the composition of two exponential generating functions. In particular, if \(f(x) =
+\sum_{i=0}^n a_i\frac{x^i}{i!}\) and \(g(x) = \sum_{j=1}^\infty b_j \frac{x^j}{j!}\text{,}\) it makes sense to form the composition \(f(g(x))\) because in so doing we need add together only finitely many terms in order to find the coefficient of \(\frac{x^n}{n!}\) in \(f(g(x))\) since in the EGF \(g(x)\) the dummy variable \(j\) starts at 1. Since our study of combinatorial structures has not been advanced enough to give us applications of a general formula for the composition of the EGF, we will not give here the combinatorial interpretation of this composition. However we have seen some examples where one particular composition can be applied. Namely, if \(f(x) = e^x = \exp(x)\text{,}\) then \(f(g(x)) =\ exp(g(x))\) is well defined when \(b_0=0\text{.}\) We have seen three examples in which an EGF is \(e^{f(x)}\) where \(f(x)\) is another EGF. There is a fourth example in which the exponential function is slightly hidden.</p>
+<article class="example-like forward-essential" id="exp_oneblock_"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">409</span>
+</h6>
+<p id="p-2164">If \(f(x)\) is the EGF for the number of partitions of an \(n\)-set into one block, and \(g(x)\) is the EGF for the total number of partitions of an \(n\)-element set, that is, for the Bell numbers \(B_n\text{,}\) how are the two generating functions related?</p></article><article class="example-like forward-essential" id="exp_oneortwo-cycle_"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">410</span>
+</h6>
+<p id="p-2166">Let \(f(x)\) be the EGF for the number of permutations of an \(n\)-element set with one cycle of size one or two. What is \(f(x)\text{?}\) What is the EGF \(g(x)\) for the number of permutations of an \(n\)-element set all of whose cycles have size one or two, that is, the number of involutions in \(S_n\text{?}\) How are these two exponential generating functions related?</p></article><article class="example-like interesting-forward-essential" id="exp_two-cycle_"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">411</span>
+</h6>
+<p id="p-2168">Let \(f(x)\) be the EGF for the number of permutations of an \(n\)-element set that have exactly one two-cycle and no other cycles. Let \(g(x)\) be the EGF for the number of permutations which are products of two-cycles only, that is, for tennis pairings. (That is, they are not a product of two-cycles and a nonzero number of one-cycles). What is \(f(x)\text{?}\) What is \(g(x)\text{?}\) How are these to exponential generating functions related?</p></article><article class="example-like forward-essential" id="exp_onecycle_"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">412</span>
+</h6>
+<p id="p-2170">Let \(f(x)\) be the EGF for the number of permutations of an \(n\)-element set that have exactly one cycle. (This is the same as the EGF for the number of ways to arrange \(n\) people around a round table.) Let \(g(x)\) be the EGF for the total number of permutations of an \(n\)-element set. What is \(f(x)\text{?}\) What is \(g(x)\text{?}\) How are \(f(x)\) and \(g(x)\) related?</p></article><p id="p-2172">There was one element that our last four problems had in common. In each case our EGF \(f(x)\) involved the number of structures of a certain type (partitions, telephone networks, tennis pairings, permutations) that used only one set of an appropriate kind. (That is, we had a partition with one part, a telephone network consisting either of one person or two people connected to each other, a tennis pairing of one set of two people, or a permutation with one cycle.) Our EGF \(g(x)\) was the number of structures of the same “type” (we put type in quotation marks here because we don't plan to define it formally) that could consist of any number of sets of the appropriate kind. Notice that the order of these sets was irrelevant. For example we don't order the blocks of a partition and a product of disjoint cycles is the same no matter what order we use to write down the product. Thus we were relating the EGF for structures which were somehow “building blocks” to the EGF for structures which were sets of building blocks. For a reason that you will see later, it is common to call the building blocks <b class="terminology">connected</b> structures. Notice that our connected structures were all based on nonempty sets, so we had no connected structures whose value was the empty set. Thus in each case, if \(f(x) = \sum_{i=0}^\infty a_i\frac{x^i}{i!}\text{,}\) we would have \(a_0=0\text{.}\) The relationship between the EGFs was always \(g(x) = e^{f(x)}\text{.}\) We now give a combinatorial explanation for this relationship.</p>
+<article class="example-like forward-essential" id="exponentialformula"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">413</span>
+</h6>
+<div class="introduction" id="introduction-75"><p id="p-2173">Suppose that \(\F\) is a species of structures of a set \(X\) with no structures on the empty set.  Let \(f(x)\) be the EGF for \(\F\text{.}\)</p></div>
+<article class="exercise-like" id="task-266"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2174">In the power series</p>
+\begin{equation*}
+e^{f(x)} = 1 + f(x) + \frac{f(x)^2}{2!} +
+\cdots + \frac{f(x)^k}{k!} + \cdots= \sum_{k=0}^\infty \frac{f(x)^k}{k!},
+\end{equation*}
+<p>what does <a knowl="./knowl/fspeciescorollary2.html" knowl-id="xref-fspeciescorollary2" alt="Corollary C.4.3 " title="Corollary C.4.3 ">Corollary C.4.3</a> tell us about the coefficient of \(\frac{x^n}{n!}\) in \(\frac{f(x)^k}{k!}\text{?}\)</p></article><article class="exercise-like" id="task-267"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2176">What does the coefficient of \(\frac{x^n}{n!}\) in \(e^{f(x)}\) count?</p></article></article><p id="p-2178">In <a knowl="./knowl/exponentialformula.html" knowl-id="xref-exponentialformula" alt="Problem 413 " title="Problem 413 ">Problem 413</a> we proved the following theorem, which is called the <b class="terminology">exponential formula</b>.</p>
+<article class="theorem-like" id="exponentialformulathm"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">C.5.1</span>
+</h6>
+<p id="p-2179">Suppose that \(\F\) is a species of structures on subsets of a set \(X\) with no structures on the empty set. Let \(f(x)\) be the EGF for \(\F\text{.}\) Then the coefficient of \(\frac{x^n}{n!}\) in \(e^{f(x)}\) is the number of sets of structures on disjoint sets whose union is a particular set of size \(n\text{.}\)</p></article><p id="p-2180">Let us see how the exponential formula applies to the examples in <a knowl="./knowl/exp_oneblock_.html" knowl-id="xref-exp_oneblock_" alt="Problem 409 " title="Problem 409 ">Problems 409</a>, <a knowl="./knowl/exp_oneortwo-cycle_.html" knowl-id="xref-exp_oneortwo-cycle_" alt="Problem 410 " title="Problem 410 ">410</a>, <a knowl="./knowl/exp_two-cycle_.html" knowl-id="xref-exp_two-cycle_" alt="Problem 411 " title="Problem 411 ">411</a> and <a knowl="./knowl/exp_onecycle_.html" knowl-id="xref-exp_onecycle_" alt="Problem 412 " title="Problem 412 ">412</a>. In <a knowl="./knowl/oneblockpartitions.html" knowl-id="xref-oneblockpartitions" alt="Problem 382 " title="Problem 382 ">Problem 382</a> our family \(\F\) should consist of one-block partitions of finite subsets of a set, say the set of natural numbers.  Since a partition of a set is a set of blocks whose union is \(S\text{,}\) a one-block partition whose block is \(B\) is the set \(\{B\}\text{.}\) Then any nonempty finite subset of of the positive integers is the value of exactly one structure in \(\F\text{.}\)  (There is no one-block partition of the empty set, so we have no structures using the empty set.) As you showed in <a knowl="./knowl/oneblockpartitions.html" knowl-id="xref-oneblockpartitions" alt="Problem 382 " title="Problem 382 ">Problem 382</a> the generating function for partitions with just one block is \(e^x-1\text{.}\) Thus by the exponential formula, \(\exp(e^x-1)\) is the EGF for sets of subsets of the positive integers whose values are disjoint sets whose union is any particular set \(N\) of size \(n\text{.}\) This set of disjoint sets partitions the set \(N\text{.}\) Thus \(\exp(e^x-1)\) is the EGF for partitions of sets of size \(n\text{.}\) (As we wrote our description, it is the EGF for partitions of \(n\)-element subsets of the positive integers, but any two \(n\)-element sets have the same number of partitions.) In other words, \(\exp(e^x-1)\) is the exponential generating function for the Bell numbers \(B_n\text{.}\)</p>
+<article class="example-like forward-essential" id="activity-414"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">414</span>
+</h6>
+<p id="p-2181">Explain how the <a knowl="./knowl/exponentialformulathm.html" knowl-id="xref-exponentialformulathm" alt="Theorem C.5.1 " title="Theorem C.5.1 ">exponential formula</a> proves the relationship we saw in <a knowl="./knowl/exp_onecycle_.html" knowl-id="xref-exp_onecycle_" alt="Problem 412 " title="Problem 412 ">Problem 412</a>.</p></article><article class="example-like forward-essential" id="activity-415"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">415</span>
+</h6>
+<p id="p-2183">Explain how the <a knowl="./knowl/exponentialformulathm.html" knowl-id="xref-exponentialformulathm" alt="Theorem C.5.1 " title="Theorem C.5.1 ">exponential formula</a> proves the relationship we saw in <a knowl="./knowl/exp_two-cycle_.html" knowl-id="xref-exp_two-cycle_" alt="Problem 411 " title="Problem 411 ">Problem 411</a>.</p></article><article class="example-like forward-essential" id="activity-416"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">416</span>
+</h6>
+<p id="p-2185">Explain how the <a knowl="./knowl/exponentialformulathm.html" knowl-id="xref-exponentialformulathm" alt="Theorem C.5.1 " title="Theorem C.5.1 ">exponential formula</a> proves the relationship we saw in <a knowl="./knowl/exp_oneortwo-cycle_.html" knowl-id="xref-exp_oneortwo-cycle_" alt="Problem 410 " title="Problem 410 ">Problem 410</a>.</p></article><article class="example-like forward-essential" id="activity-417"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">417</span>
+</h6>
+<p id="p-2187">In <a knowl="./knowl/paintinglightpoles.html" knowl-id="xref-paintinglightpoles" alt="Problem 373 " title="Problem 373 ">Problem 373</a> we saw that the generating function for the number of ways to use five colors of paint to paint \(n\) light poles along the north side of Main Street in Anytown was \(e^{4x}\text{.}\) We should expect an explanation of this EGF using the exponential formula. Let \(\F\) be the family of all one-element sets of light poles with the additional construction of an ordered pair consisting of a light pole and a color. Thus a given light pole occurs in five ordered pairs. Put no structures on any other finite set. Show that this is a species of structures on the finite subsets of the positive integers. What is the exponential generating function \(f(x)\) for \(\F\text{?}\) Assuming that there is no upper limit on the number of light poles, what subsets of \(S\) does the exponential formula tell us are counted by the coefficient of \(x^n\) in \(e^{f(x)}\text{?}\) How do the sets being counted relate to ways to paint light poles?</p></article><p id="p-2189">One of the most spectacular applications of the exponential formula is also the reason why, when we regard a combinatorial structure as a set of building block structures, we call the building block structures <b class="terminology">connected</b>. In <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a> we introduced the idea of a connected graph and in <a knowl="./knowl/connectedanddisconnected.html" knowl-id="xref-connectedanddisconnected" alt="Problem 104 " title="Problem 104 ">Problem 104</a> we saw examples of graphs which were connected and were not connected. A subset \(C\) of the vertex set of a graph is called a <b class="terminology">connected component</b> of the graph if </p>
+<ul id="ul-13" style="list-style-type: disc;">
+<li id="li-136"><p id="p-2190">every vertex in \(C\) is connected to every other vertex in that set by a walk whose vertices lie in \(C\text{,}\) and</p></li>
+<li id="li-137"><p id="p-2191">no other vertex in the graph is connected by a walk to any vertex in \(C\text{.}\)</p></li>
+</ul>
+<p id="p-2192">In <a knowl="./knowl/conncomp.html" knowl-id="xref-conncomp" alt="Problem 241 " title="Problem 241 ">Problem 241</a> we showed that each connected component of a graph consists of a vertex and all vertices connected to it by walks in the graph.</p>
+<article class="example-like forward-essential" id="activity-418"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">418</span>
+</h6>
+<p id="p-2193">Show that every vertex of a graph lies in one and only one connected component of a graph. (Notice that this shows that the connected components of a graph form a partition of the vertex set of the graph.)</p></article><article class="example-like forward-essential" id="activity-419"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">419</span>
+</h6>
+<p id="p-2198">Explain why no edge of the graph connects two vertices in different connected components.</p></article><article class="example-like forward-essential" id="activity-420"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">420</span>
+</h6>
+<p id="p-2200">Explain why it is that if \(C\) is a connected component of a graph and \(E'\) is the set of all edges of the graph that connect vertices in \(C\text{,}\) then the graph with vertex set \(C\) and edge set \(E'\) is a connected graph. We call this graph a <b class="terminology">connected component graph</b> of the original graph.</p></article><p id="p-2202">The last sequence of problems shows that we may think of any graph as the set of its connected component graphs. (Once we know them, we know all the vertices and all the edges of the graph). Notice that a graph is connected if and only if it has exactly one connected component. Since the connected components form a partition of the vertex set of a graph, the exponential formula will relate the EGF for the number of connected graphs on \(n\) vertices with the EGF for the number of graphs (connected or not) on \(n\) vertices. However because we can draw as many edges as we want between two vertices of a graph, there are infinitely many graphs on \(n\) vertices, and so the problem of counting them is uninteresting. We can make it interesting by considering <b class="terminology">simple graphs</b>, namely graphs in which each edge has two distinct endpoints and no two edges connect the same two vertices. It is because connected graphs form the building blocks for viewing all graphs as sets of connected components that we refer to the building blocks for structures counted by the EGF in the exponential formula as connected structures.</p>
+<article class="example-like interesting-forward-essential" id="activity-421"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">421</span>
+</h6>
+<div class="introduction" id="introduction-76"><p id="p-2203">Suppose that \(f(x) = \sum_{n=0}^\infty c_n \frac{x^n}{n!}\) is the exponential generating function for the number of simple connected graphs on \(n\) vertices and \(g(x) = \sum_{i=0}^\infty a_i \frac{x^i}{i!}\) is the exponential generating function for the number of simple graphs on \(i\) vertices. From this point onward, any use of the word graph means simple graph.</p></div>
+<article class="exercise-like" id="task-268"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2204">Is \(f(x) = e^{g(x)}\text{,}\) is \(f(x) = e^{g(x)-1}\text{,}\) is \(g(x) = e^{f(x)-1}\) or is \(g(x) = e^{f(x)}\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-270" id="hint-270"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-270" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2205">To apply the exponential formula, we must take the exponential function of an EGF whose constant term is zero, or in other words, for a species of structures that has no structures that use the empty set.</p></span></span>
+</div></article><article class="exercise-like" id="task-269"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2207">One of \(a_i\) and \(c_n\) can be computed by recognizing that a simple graph on a vertex set \(V\) is completely determined by its edge set and its edge set is a subset of the set of two element subsets of \(V\text{.}\) Figure out which it is and compute it.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-271" id="hint-271"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-271" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2208">Once you know the vertex set of a graph, all you have to do to specify the graph is to specify its set of edges.</p></span></span>
+</div></article><article class="exercise-like" id="task-270"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2210">Write \(g(x)\) in terms of the natural logarithm of \(f(x)\) or \(f(x)\) in terms of the natural logarithm of  \(g(x)\text{.}\)</p></article><article class="exercise-like" id="task-271"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2212">Write \(\log(1+y)\) as a power series in \(y\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-272" id="hint-272"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-272" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2213">What is the calculus definition of \(\log(1+y)\text{?}\)</p></span></span>
+</div></article><article class="exercise-like" id="task-272"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2215">Why is the coefficient of \(\frac{x^0}{0!}\) in \(g(x)\) equal to one?  Write \(f(x)\) as a power series in \(g(x) -1\text{.}\)</p></article><article class="exercise-like" id="task-273"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2217">You can now use the previous parts of the problem to find a formula for \(c_n\) that involves summing over all partitions of the integer \(n\text{.}\) (It isn't the simplest formula in the world, and it isn't the easiest formula in the world to figure out, but it is nonetheless a formula with which one could actually make computations!)  Find such a  formula.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-273" id="hint-273"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-273" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2218">Look for a formula that involves summing over all partitions of the integer \(n\text{.}\)</p></span></span>
+</div></article></article><p id="p-2221">The point to the last problem is that we can use the exponential formula in reverse to say that if \(g(x)\) is the generating function for the number of (nonempty) connected structures of size \(n\) in a given family of combinatorial structures and \(f(x)\) is the generating function for all the structures of size \(n\) in that family, then not only is \(f(x) = e^{g(x)}\text{,}\) but \(g(x) = \ln(f(x))\) as well. Further, if we happen to have a formula for either the coefficients of \(f(x)\) or the coefficients of \(g(x)\text{,}\) we can get a formula for the coefficients of the other one!</p></section></div></main>
+</div>
+</body>
+</html>

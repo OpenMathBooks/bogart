@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:11-06:00    *-->
+<!--*    on 2017-12-13T14:15:29-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,5 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>To specify a simple graph on a vertex set \(V\text{,}\) we have to specify its set of edges. The possible sets of edges thus correspond bijectively to sets of two-element subsets of \(V\text{.}\) But if \(V\) has size \(i\) the set of all two element subsets of \(V\) has \(\binom{i}{2}\) elements. Thus the number of sets of two element subsets of \(V\) is \(2^{\binom{i}{2}}\text{.}\) Therefore \(a_i = 2^{\binom{i}{2}}\text{.}\)</p></span></body>
+<body><span class="solution"><p>To apply the exponential formula, we must take the exponential function of an EGF whose constant term is zero, or in other words for a set of elements whose values are nonempty sets. We can let \(\F\) be the set of nonempty connected graphs. (Technically, the graph with the empty set of vertices and the empty set of edges is connected.) Therefore \(f(x) -1\) is the EGF for \(\F\text{.}\) By the exponential formula, \(g(x)=e^{f(x)-1}\) because a simple graph may be thought of as a set of simple connected graphs, namely its connected component graphs. (Note that \(g(x)\) has 1 for its constant term, which corresponds to thinking of the empty graph as having an empty set of nonempty connected components.)</p></span></body>
 </html>

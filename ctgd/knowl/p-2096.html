@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:07-06:00    *-->
+<!--*    on 2017-12-13T14:15:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p> In the case of painting streetlight poles in <a knowl="./knowl/paintinglightpoles2.html" knowl-id="xref-paintinglightpoles2" alt="Problem 389 " title="Problem 389 ">Problem 389</a>, let us examine the relationship between the EGF for painting poles with two colors, the EGF for painting the poles with three colors, and the EGF for painting poles with five colors, \(e^{5x}\text{.}\) To be specific, the EGF for painting poles red and white is \(e^{2x}\) and the EGF for painting poles blue, green, and yellow is \(e^{3x}\text{.}\) To decide how to paint poles with red, white, blue, green, and yellow, we can decide  which set of poles is to be painted with red and white, and which set of poles is to be painted with blue, green, and yellow. Notice that the number of ways to paint a set of poles with red and white depends only on the size of that set, and the number of ways to paint a set of poles with blue, green, and yellow depends only on the size of that set.</p>
-<span class="incontext"><a href="expogenfun.html#p-2096">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{align*}
+\sum_{n=2}^\infty d_n\frac{x^{n-1}}{(n-1)!}
+=\amp \sum_{n=2}^\infty d_{n-1}\frac{x^{n-1}}{(n-2)!} +\sum_{n=2}^\infty
+d_{n-2}\frac{x^{n-1}}{(n-2)!}\\
+\sum_{n=1}^\infty d_n\frac{x^{n-1}}{(n-1)!} -d_1  =\amp
+x\sum_{n=2}^\infty d_{n-1}\frac{x^{n-2}}{(n-2)!} +xD(x)\\
+D'(x) -d_1  =\amp  xD'(x) +xD(x)\\
+D'(x)(1-x)  =\amp  xD(x)\\
+\frac{D'(x)}{D(x)}  =\amp  \frac{x}{1-x}
+\end{align*}
+<p>This gives us \(\ln D(x) = -\ln(1-x) -x +c\text{,}\) so that \(D(x) = \frac{1}{1-x}e^{-x}e^c\text{.}\) Since \(d_0=1\text{,}\) we have \(d(0)=1\text{,}\) so \(c=0\) and</p>
+\begin{align*}
+D(x)  =\amp  \frac{e^{-x}}{1-x}\\
+=\amp
+\sum_{i=0}^\infty(-1)^i\frac{x^i}{i!}\cdot\sum_{j=0}^\infty
+x^j=\sum_{i=0}^\infty\left(\sum_{j=0}^i \frac{(-1)^j}{j!}\right)
+x^i.
+\end{align*}
+<span class="incontext"><a href="app3-3-recurrences.html#p-2096">in-context</a></span>
 </body>
 </html>

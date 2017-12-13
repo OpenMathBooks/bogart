@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:25:49-06:00    *-->
+<!--*    on 2017-12-13T14:13:47-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Some Examples of Mathematical Induction</title>
+<title>CTGD Some Examples of Mathematical Induction</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -21,7 +21,7 @@ MathJax.Hub.Config({
         extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
         TagSide: "right",
         TagIndent: ".8em",
     },
@@ -41,10 +41,9 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="custom-styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
 \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
@@ -71,7 +70,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<h1 class="heading"><a href="ctgd.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
 <p class="byline">Kenneth P. Bogart</p>
 </div>
 </div></div>
@@ -88,7 +87,12 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
+</ul>
 <h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
@@ -103,7 +107,7 @@ MathJax.Hub.Config({
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
@@ -136,174 +140,197 @@ MathJax.Hub.Config({
 <li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
 <li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
 <li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
-<li><a href="appendix-4.html" data-scroll="appendix-4">Hints to Selected Problems</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_induction-examples"><header title="Section 2.1 Some Examples of Mathematical Induction"><h1 class="heading hide-type" alt="Section 2.1 Some Examples of Mathematical Induction">
-<span class="type">Section</span><span class="codenumber">2.1</span><span class="title">Some Examples of Mathematical Induction</span><a href="sec_induction-examples.html" class="permalink">¶ permalink</a>
-</h1></header><section class="introduction" id="introduction-24"><p id="p-421">If you are unfamiliar with the Principle of Mathematical Induction, you should read <a href="Induction.html" alt="Appendix B Mathematical Induction" title="Appendix B Mathematical Induction">Appendix B</a> (a portion of which is repeated here).</p></section><section class="subsection" id="subsection-11"><header title="Subsection 2.1.1 Mathematical induction"><h1 class="heading hide-type" alt="Subsection 2.1.1 Mathematical induction">
-<span class="type">Subsection</span><span class="codenumber">2.1.1</span><span class="title">Mathematical induction</span><a href="sec_induction-examples.html#subsection-11" class="permalink">¶ permalink</a>
-</h1></header><section class="introduction" id="introduction-25"><p id="p-422">The <em class="terminology">principle of mathematical induction</em> states that</p>
-<blockquote class="blockquote" id="blockquote-6">
-<p id="p-423">In order to prove a statement about an integer \(n\text{,}\) if we can </p>
-<ol id="ol-1" style="list-style-type: decimal;">
-<li id="li-5"><p id="p-424">Prove the statement when \(n=b\text{,}\) for some fixed integer \(b\)</p></li>
-<li id="li-6"><p id="p-425">Show that the truth of the statement for \(n=k-1\) implies the truth of the statement for \(n=k\) whenever \(k&gt;b\text{,}\)</p></li>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_induction-examples"><header title="Section 2.1 Some Examples of Mathematical Induction"><h2 class="heading hide-type" alt="Section 2.1 Some Examples of Mathematical Induction">
+<span class="type">Section</span><span class="codenumber">2.1</span><span class="title">Some Examples of Mathematical Induction</span>
+</h2>
+<a href="sec_induction-examples.html" class="permalink">¶</a></header><section class="introduction" id="introduction-24"><p id="p-434">If you are unfamiliar with the Principle of Mathematical Induction, you should read <a href="Induction.html" alt="Appendix B Mathematical Induction" title="Appendix B Mathematical Induction">Appendix B</a> (a portion of which is repeated here).</p></section><section class="subsection" id="subsection-11"><header title="Subsection 2.1.1 Mathematical induction"><h3 class="heading hide-type" alt="Subsection 2.1.1 Mathematical induction">
+<span class="type">Subsection</span><span class="codenumber">2.1.1</span><span class="title">Mathematical induction</span>
+</h3>
+<a href="sec_induction-examples.html#subsection-11" class="permalink">¶</a></header><section class="introduction" id="introduction-25"><p id="p-435">The <b class="terminology">principle of mathematical induction</b> states that</p>
+<blockquote class="blockquote" id="blockquote-8">
+<p id="p-436">In order to prove a statement about an integer \(n\text{,}\) if we can </p>
+<ol id="ol-2" style="list-style-type: decimal;">
+<li id="li-8"><p id="p-437">Prove the statement when \(n=b\text{,}\) for some fixed integer \(b\)</p></li>
+<li id="li-9"><p id="p-438">Show that the truth of the statement for \(n=k-1\) implies the truth of the statement for \(n=k\) whenever \(k&gt;b\text{,}\)</p></li>
 </ol>
 <p> then we can conclude the statement is true for all integers \(n\ge
 b\text{.}\)</p>
 </blockquote>
-<p id="p-426">As an example, let us give yet another proof that a set with \(n\) elements has \(2^n\) subsets. This proof uses essentially the same bijections we used in proving the Pascal Equation. The statement we wish to prove is the statement that “A set of size \(n\) has \(2^n\) subsets.”</p>
-<blockquote class="blockquote" id="blockquote-7"><p id="p-427">Our statement is true when \(n=0\text{,}\) because a set of size 0 is the empty set and the empty set has \(1=2^0\) subsets. (This step of our proof is called a <em class="terminology">base step</em>.) Now suppose that \(k&gt;0\) and every set with \(k-1\) elements has \(2^{k-1}\) subsets.  Suppose \(S=\{a_1,a_2,\ldots a_k\}\) is a set with \(k\) elements. We partition the subsets of \(S\) into two blocks.  Block \(B_1\) consists of the subsets that do not contain \(a_n\) and block \(B_2\) consists of the subsets that do contain \(a_n\text{.}\)  Each set in \(B_1\) is a subset of \(\{a_1,a_2,\ldots a_{k-1}\}\text{,}\) and each subset of \(\{a_1,a_2, \ldots
+<p id="p-439">As an example, let us give yet another proof that a set with \(n\) elements has \(2^n\) subsets. This proof uses essentially the same bijections we used in proving the Pascal Equation. The statement we wish to prove is the statement that “A set of size \(n\) has \(2^n\) subsets.”</p>
+<blockquote class="blockquote" id="blockquote-9"><p id="p-440">Our statement is true when \(n=0\text{,}\) because a set of size 0 is the empty set and the empty set has \(1=2^0\) subsets. (This step of our proof is called a <b class="terminology">base step</b>.) Now suppose that \(k&gt;0\) and every set with \(k-1\) elements has \(2^{k-1}\) subsets.  Suppose \(S=\{a_1,a_2,\ldots a_k\}\) is a set with \(k\) elements. We partition the subsets of \(S\) into two blocks.  Block \(B_1\) consists of the subsets that do not contain \(a_n\) and block \(B_2\) consists of the subsets that do contain \(a_n\text{.}\)  Each set in \(B_1\) is a subset of \(\{a_1,a_2,\ldots a_{k-1}\}\text{,}\) and each subset of \(\{a_1,a_2, \ldots
 a_{k-1}\}\) is in \(B_1\text{.}\)  Thus \(B_1\) is the set of all subsets of \(\{a_1,a_2,\ldots a_{k-1}\}\text{.}\)  Therefore by our assumption in the first sentence of this paragraph, the size of \(B_1\) is \(2^{k-1}\text{.}\)  Consider the function from \(B_2\) to \(B_1\) which takes a subset of \(S\) including \(a_k\) and removes \(a_k\) from it.  This function is defined on \(B_2\text{,}\) because every set in \(B_2\) contains \(a_k\text{.}\)  This function is onto, because if \(T\) is a set in \(B_1\text{,}\) then \(T\cup \{a_k\}\) is a set in \(B_2\) which the function sends to \(T\text{.}\)  This function is one-to-one because if \(V\) and \(W\) are two different sets in \(B_2\text{,}\) then removing \(a_k\) from them gives two different sets in \(B_1\text{.}\)  Thus we have a bijection between \(B_1\) and \(B_2\text{,}\) so \(B_1\) and \(B_2\) have the same size.  Therefore by the sum principle the size of \(B_1\cup B_2\) is \(2^{k-1} +2^{k-1}=2^k\text{.}\)  Therefore \(S\) has \(2^k\) subsets.  This shows that if a set of size \(k-1\) has \(2^{k-1}\) subsets, then a set of size \(k\) has \(2^k\) subsets.  Therefore by the principle of mathematical induction, a set of size \(n\) has \(2^n\) subsets for every nonnegative integer \(n\text{.}\)</p></blockquote>
-<p id="p-428">The first sentence of the last paragraph is called the <em class="terminology">inductive hypothesis</em>. In an inductive proof we always make an inductive hypothesis as part of proving that the truth of our statement when \(n=k-1\) implies the truth of our statement when \(n=k\text{.}\) The last paragraph itself is called the <em class="terminology">inductive step</em> of our proof. In an inductive step we derive the statement for \(n=k\) from the statement for \(n=k-1\text{,}\) thus proving that the truth of our statement when \(n=k-1\) implies the truth of our statement when \(n=k\text{.}\) The last sentence in the last paragraph is called the <em class="terminology">inductive conclusion</em>. All inductive proofs should have a base step, an inductive hypothesis, an inductive step, and an inductive conclusion.</p>
-<p id="p-429">There are a couple details worth noticing. First, in this problem, our base step was the case \(n=0\text{,}\) or in other words, we had \(b=0\text{.}\) However, in other proofs, \(b\) could be any integer, positive, negative, or 0. Second, our proof that the truth of our statement for \(n=k-1\) implies the truth of our statement for \(n=k\) required that \(k\) be at least 1, so that there would be an element \(a_k\) we could take away in order to describe our bijection. However, condition (2) of the principle of mathematical induction only requires that we be able to prove the implication for \(k&gt;0\text{,}\) so we were allowed to assume \(k&gt;0\text{.}\)</p></section><section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.1.1.1 Strong Mathematical Induction"><h1 class="heading hide-type" alt="Subsubsection 2.1.1.1 Strong Mathematical Induction">
-<span class="type">Subsubsection</span><span class="codenumber">2.1.1.1</span><span class="title">Strong Mathematical Induction</span><a href="sec_induction-examples.html#subsubsection-1" class="permalink">¶ permalink</a>
-</h1></header><p id="p-430">One way of looking at the principle of mathematical induction is that it tells us that if we know the “first” case of a theorem and we can derive each other case of the theorem from a smaller case, then the theorem is true in all cases. However the particular way in which we stated the theorem is rather restrictive in that it requires us to derive each case from the immediately preceding case. This restriction is not necessary, and removing it leads us to a more general statement of the principal of mathematical induction which people often call the <em class="terminology">strong principle of mathematical induction</em>. It states:</p>
-<blockquote class="blockquote" id="blockquote-8">
-<p id="p-431">In order to prove a statement about an integer \(n\) if we can </p>
-<ol id="ol-2" style="list-style-type: decimal;">
-<li id="li-7"><p id="p-432">prove our statement when \(n=b\) and</p></li>
-<li id="li-8"><p id="p-433">prove that the statements we get with \(n=b\text{,}\) \(n=b+1\text{,}\) … \(n=k-1\) imply the statement with \(n=k\text{,}\)</p></li>
+<p id="p-441">The first sentence of the last paragraph is called the <b class="terminology">inductive hypothesis</b>. In an inductive proof we always make an inductive hypothesis as part of proving that the truth of our statement when \(n=k-1\) implies the truth of our statement when \(n=k\text{.}\) The last paragraph itself is called the <b class="terminology">inductive step</b> of our proof. In an inductive step we derive the statement for \(n=k\) from the statement for \(n=k-1\text{,}\) thus proving that the truth of our statement when \(n=k-1\) implies the truth of our statement when \(n=k\text{.}\) The last sentence in the last paragraph is called the <b class="terminology">inductive conclusion</b>. All inductive proofs should have a base step, an inductive hypothesis, an inductive step, and an inductive conclusion.</p>
+<p id="p-442">There are a couple details worth noticing. First, in this problem, our base step was the case \(n=0\text{,}\) or in other words, we had \(b=0\text{.}\) However, in other proofs, \(b\) could be any integer, positive, negative, or 0. Second, our proof that the truth of our statement for \(n=k-1\) implies the truth of our statement for \(n=k\) required that \(k\) be at least 1, so that there would be an element \(a_k\) we could take away in order to describe our bijection. However, condition (2) of the principle of mathematical induction only requires that we be able to prove the implication for \(k&gt;0\text{,}\) so we were allowed to assume \(k&gt;0\text{.}\)</p></section><section class="subsubsection" id="subsubsection-1"><header title="Subsubsection 2.1.1.1 Strong Mathematical Induction"><h4 class="heading hide-type" alt="Subsubsection 2.1.1.1 Strong Mathematical Induction">
+<span class="type">Subsubsection</span><span class="codenumber">2.1.1.1</span><span class="title">Strong Mathematical Induction</span>
+</h4>
+<a href="sec_induction-examples.html#subsubsection-1" class="permalink">¶</a></header><p id="p-443">One way of looking at the principle of mathematical induction is that it tells us that if we know the “first” case of a theorem and we can derive each other case of the theorem from a smaller case, then the theorem is true in all cases. However the particular way in which we stated the theorem is rather restrictive in that it requires us to derive each case from the immediately preceding case. This restriction is not necessary, and removing it leads us to a more general statement of the principal of mathematical induction which people often call the <b class="terminology">strong principle of mathematical induction</b>. It states:</p>
+<blockquote class="blockquote" id="blockquote-10">
+<p id="p-444">In order to prove a statement about an integer \(n\) if we can </p>
+<ol id="ol-3" style="list-style-type: decimal;">
+<li id="li-10"><p id="p-445">prove our statement when \(n=b\) and</p></li>
+<li id="li-11"><p id="p-446">prove that the statements we get with \(n=b\text{,}\) \(n=b+1\text{,}\) … \(n=k-1\) imply the statement with \(n=k\text{,}\)</p></li>
 </ol>
 <p> then our statement is true for all integers \(n\ge b\text{.}\)</p>
 </blockquote>
-<p id="p-434">You will find some explicit examples of the use of the strong principle of mathematical induction in <a href="Induction.html" alt="Appendix B Mathematical Induction" title="Appendix B Mathematical Induction">Appendix B</a> and will find some uses for it in this chapter.</p></section></section><section class="subsection" id="subsection-12"><header title="Subsection 2.1.2 Binomial Coefficients and the Binomial Theorem"><h1 class="heading hide-type" alt="Subsection 2.1.2 Binomial Coefficients and the Binomial Theorem">
-<span class="type">Subsection</span><span class="codenumber">2.1.2</span><span class="title">Binomial Coefficients and the Binomial Theorem</span><a href="sec_induction-examples.html#subsection-12" class="permalink">¶ permalink</a>
-</h1></header><article class="example-like essential" id="activity-72"><h5 class="heading">
+<p id="p-447">You will find some explicit examples of the use of the strong principle of mathematical induction in <a href="Induction.html" alt="Appendix B Mathematical Induction" title="Appendix B Mathematical Induction">Appendix B</a> and will find some uses for it in this chapter.</p></section></section><section class="subsection" id="subsection-12"><header title="Subsection 2.1.2 Binomial Coefficients and the Binomial Theorem"><h3 class="heading hide-type" alt="Subsection 2.1.2 Binomial Coefficients and the Binomial Theorem">
+<span class="type">Subsection</span><span class="codenumber">2.1.2</span><span class="title">Binomial Coefficients and the Binomial Theorem</span>
+</h3>
+<a href="sec_induction-examples.html#subsection-12" class="permalink">¶</a></header><article class="example-like essential" id="activity-72"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">72</span>
-</h5>
-<p id="p-435">When we studied the Pascal Equation and subsets in <a href="what-is.html" alt="Chapter 1 What is Combinatorics?" title="Chapter 1 What is Combinatorics?">Chapter 1</a>, it may have appeared that there is no connection between the Pascal relation \(\binom{n}{k} = \binom{n-1}{k-1} +\binom{n-1}{k}\) and the formula \(\binom{n}{k}=\frac{n!}{k!(n-k)!}\text{.}\) Of course you probably realize you can prove the Pascal relation by substituting the values the formula gives you into the right-hand side of the equation and simplifying to give you the left hand side. In fact, from the Pascal Relation and the facts that \(\binom{n}{0}=1\) and \(\binom{n}{n}=1\text{,}\) you can actually prove the formula for \(\binom{n}{k}\) by induction on \(n\text{.}\) Do so.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-63" id="hint-63"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-63" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-436">We wish to prove that \(\binom{n}{i} =\frac{n!}{i!(n-i)!}\text{.}\) Mathematical induction allows us to assume that \(\binom{n-1}{j}=\frac{(n-1)!}{j! (n-1-j)!}\) for every \(j\)between 0 and \(n-1\text{.}\) How does this put us into a position to use the Pascal relation? What special cases will be left over?</p></span></span>
-</div></article><article class="example-like interesting" id="activity-73"><h5 class="heading">
+</h6>
+<p id="p-448">When we studied the Pascal Equation and subsets in <a href="what-is.html" alt="Chapter 1 What is Combinatorics?" title="Chapter 1 What is Combinatorics?">Chapter 1</a>, it may have appeared that there is no connection between the Pascal relation \(\binom{n}{k} = \binom{n-1}{k-1} +\binom{n-1}{k}\) and the formula \(\binom{n}{k}=\frac{n!}{k!(n-k)!}\text{.}\) Of course you probably realize you can prove the Pascal relation by substituting the values the formula gives you into the right-hand side of the equation and simplifying to give you the left hand side. In fact, from the Pascal Relation and the facts that \(\binom{n}{0}=1\) and \(\binom{n}{n}=1\text{,}\) you can actually prove the formula for \(\binom{n}{k}\) by induction on \(n\text{.}\) Do so.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-63" id="hint-63"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-63" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-449">We wish to prove that \(\binom{n}{i} =\frac{n!}{i!(n-i)!}\text{.}\) Mathematical induction allows us to assume that \(\binom{n-1}{j}=\frac{(n-1)!}{j! (n-1-j)!}\) for every \(j\)between 0 and \(n-1\text{.}\) How does this put us into a position to use the Pascal relation? What special cases will be left over?</p></span></span>
+</div></article><article class="example-like interesting" id="activity-73"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">73</span>
-</h5>
-<p id="p-439">Use the fact that \((x+y)^n = (x+y)(x+y)^{n-1}\) to give an inductive proof of the binomial theorem.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-64" id="hint-64"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-64" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-440">What sort of relationship do you know between values of the form \(\binom{n}{i}\) and values of the form \(\binom{n-1}{j}\text{?}\)</p></span></span>
-</div></article><article class="example-like" id="activity-74"><h5 class="heading">
+</h6>
+<p id="p-452">Use the fact that \((x+y)^n = (x+y)(x+y)^{n-1}\) to give an inductive proof of the binomial theorem.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-64" id="hint-64"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-64" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-453">What sort of relationship do you know between values of the form \(\binom{n}{i}\) and values of the form \(\binom{n-1}{j}\text{?}\)</p></span></span>
+</div></article><article class="example-like" id="activity-74"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">74</span>
-</h5>
-<p id="p-444">Suppose that \(f\) is a function defined on the nonnegative integers such that \(f(0)=3\) and \(f(n)=2f(n-1)\text{.}\) Find a formula for \(f(n)\) and prove your formula is correct.</p></article><article class="example-like" id="altproofnumberoffunctionsconjecture"><h5 class="heading">
+</h6>
+<p id="p-457">Suppose that \(f\) is a function defined on the nonnegative integers such that \(f(0)=3\) and \(f(n)=2f(n-1)\text{.}\) Find a formula for \(f(n)\) and prove your formula is correct.</p></article><article class="example-like" id="altproofnumberoffunctionsconjecture"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">75</span>
-</h5>
-<p id="p-446">Prove the conjecture in <a knowl="./knowl/numberoffunctionsconjecture.html" knowl-id="xref-numberoffunctionsconjecture" alt="Part 13.b " title="Part 13.b ">Part 13.b</a> for an arbitrary positive integer \(m\) without appealing to the general product principle.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-65" id="hint-65"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-65" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-447">We did something rather similar in our example of the inductive proof that a set with \(n\) elements has \(2^n\) subsets. The work you did in a previous problem may be similar to part of what you need to do here.</p></span></span>
-</div></article></section><section class="subsection" id="subsection-13"><header title="Subsection 2.1.3 Inductive definition"><h1 class="heading hide-type" alt="Subsection 2.1.3 Inductive definition">
-<span class="type">Subsection</span><span class="codenumber">2.1.3</span><span class="title">Inductive definition</span><a href="sec_induction-examples.html#subsection-13" class="permalink">¶ permalink</a>
-</h1></header><p id="p-448">You may have seen \(n!\) described by the two equations \(0!=1\) and \(n!=n(n-1)!\) for \(n&gt;0\text{.}\) By the principle of mathematical induction we know that this pair of equations defines \(n!\) for all nonnegative numbers \(n\text{.}\) For this reason we call such a definition an <em class="terminology">inductive definition</em>. An inductive definition is sometimes called a <em class="terminology">recursive definition</em>. Often we can get very easy proofs of useful facts by using inductive definitions.</p>
-<article class="example-like interesting" id="activity-76"><h5 class="heading">
+</h6>
+<p id="p-459">Prove the conjecture in <a knowl="./knowl/numberoffunctionsconjecture.html" knowl-id="xref-numberoffunctionsconjecture" alt="Part 13.b " title="Part 13.b ">Part 13.b</a> for an arbitrary positive integer \(m\) without appealing to the general product principle.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-65" id="hint-65"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-65" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-460">We did something rather similar in our example of the inductive proof that a set with \(n\) elements has \(2^n\) subsets. The work you did in a previous problem may be similar to part of what you need to do here.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-13"><header title="Subsection 2.1.3 Inductive definition"><h3 class="heading hide-type" alt="Subsection 2.1.3 Inductive definition">
+<span class="type">Subsection</span><span class="codenumber">2.1.3</span><span class="title">Inductive definition</span>
+</h3>
+<a href="sec_induction-examples.html#subsection-13" class="permalink">¶</a></header><p id="p-461">You may have seen \(n!\) described by the two equations \(0!=1\) and \(n!=n(n-1)!\) for \(n&gt;0\text{.}\) By the principle of mathematical induction we know that this pair of equations defines \(n!\) for all nonnegative numbers \(n\text{.}\) For this reason we call such a definition an <b class="terminology">inductive definition</b>. An inductive definition is sometimes called a <b class="terminology">recursive definition</b>. Often we can get very easy proofs of useful facts by using inductive definitions.</p>
+<article class="example-like interesting" id="activity-76"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">76</span>
-</h5>
-<article class="introduction" id="introduction-26"><p id="p-449">An inductive definition of \(a^n\) for nonnegative \(n\) is given by \(a^0=1\) and \(a^n=aa^{n-1}\text{.}\) (Notice the similarity to the inductive definition of \(n!\text{.}\)) We remarked above that inductive definitions often give us easy proofs of useful facts. Here we apply this inductive definition to prove two useful facts about exponents that you have been using almost since you learned the meaning of exponents.</p></article><article class="exercise-like" id="task-75"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-450">Use this definition to prove the rule of exponents \(a^{m+n}=a^ma^n\) for nonnegative \(m\) and \(n\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-66" id="hint-66"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-66" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-451">This may look difficult because one can't decide in advance on whether to try to induct on \(m\text{,}\) on \(n\text{,}\) or on their sum. In some sense, it doesn't matter which you choose to induct on, though inducting on the sum would look more complicated. For most people inducting on \(n\) fits their way of working with exponents best.</p></span></span></article><article class="exercise-like" id="task-76"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-454">Use this definition to prove the rule of exponents \(a^{mn} =
+</h6>
+<div class="introduction" id="introduction-26"><p id="p-462">An inductive definition of \(a^n\) for nonnegative \(n\) is given by \(a^0=1\) and \(a^n=aa^{n-1}\text{.}\) (Notice the similarity to the inductive definition of \(n!\text{.}\)) We remarked above that inductive definitions often give us easy proofs of useful facts. Here we apply this inductive definition to prove two useful facts about exponents that you have been using almost since you learned the meaning of exponents.</p></div>
+<article class="exercise-like" id="task-75"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-463">Use this definition to prove the rule of exponents \(a^{m+n}=a^ma^n\) for nonnegative \(m\) and \(n\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-66" id="hint-66"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-66" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-464">This may look difficult because one can't decide in advance on whether to try to induct on \(m\text{,}\) on \(n\text{,}\) or on their sum. In some sense, it doesn't matter which you choose to induct on, though inducting on the sum would look more complicated. For most people inducting on \(n\) fits their way of working with exponents best.</p></span></span>
+</div></article><article class="exercise-like" id="task-76"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-467">Use this definition to prove the rule of exponents \(a^{mn} =
 (a^m)^n\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-67" id="hint-67"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-67" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-455">Here it matters whether you choose to induct on \(m\) or \(n\text{.}\) However, it matters only in the sense that you need to use more tools in one case. In one case, you are likely to need the rule \((cd)^n=c^n d^n\)(, which we haven't proved. (However, you might be able to prove that by induction!) In either case, you may find part (a) handy.</p></span></span></article></article><article class="example-like summary" id="activity-77"><h5 class="heading">
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-67" id="hint-67"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-67" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-468">Here it matters whether you choose to induct on \(m\) or \(n\text{.}\) However, it matters only in the sense that you need to use more tools in one case. In one case, you are likely to need the rule \((cd)^n=c^n d^n\)(, which we haven't proved. (However, you might be able to prove that by induction!) In either case, you may find part (a) handy.</p></span></span>
+</div></article></article><article class="example-like summary" id="activity-77"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">77</span>
-</h5>
-<p id="p-458">Suppose that \(f\) is a function on the nonnegative integers such that \(f(0)=0\) and \(f(n) = n+f(n-1)\text{.}\) Prove that \(f(n) = n(n+1)/2\text{.}\) Notice that this gives a third proof that \(1+2+\cdots+n=n(n+1)/2\text{,}\) because this sum satisfies the two conditions for \(f\text{.}\) (The sum has no terms and is thus 0 when \(n=0\text{.}\))</p></article><article class="example-like interesting" id="activity-78"><h5 class="heading">
+</h6>
+<p id="p-471">Suppose that \(f\) is a function on the nonnegative integers such that \(f(0)=0\) and \(f(n) = n+f(n-1)\text{.}\) Prove that \(f(n) = n(n+1)/2\text{.}\) Notice that this gives a third proof that \(1+2+\cdots+n=n(n+1)/2\text{,}\) because this sum satisfies the two conditions for \(f\text{.}\) (The sum has no terms and is thus 0 when \(n=0\text{.}\))</p></article><article class="example-like interesting" id="activity-78"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">78</span>
-</h5>
-<p id="p-460">Give an inductive definition of the summation notation \(\sum_{i=1}^n a_i\text{.}\) Use it and the distributive law \(b(a+c) = ba+bc\) to prove the distributive law</p>
+</h6>
+<p id="p-473">Give an inductive definition of the summation notation \(\sum_{i=1}^n a_i\text{.}\) Use it and the distributive law \(b(a+c) = ba+bc\) to prove the distributive law</p>
 \begin{equation*}
 b\sum_{i=1}^n a_i = \sum_{i=1}^n ba_i.
 \end{equation*}
-</article></section><section class="subsection" id="subsection-14"><header title="Subsection 2.1.4 Proving the general product principle (Optional)"><h1 class="heading hide-type" alt="Subsection 2.1.4 Proving the general product principle (Optional)">
-<span class="type">Subsection</span><span class="codenumber">2.1.4</span><span class="title">Proving the general product principle (Optional)</span><a href="sec_induction-examples.html#subsection-14" class="permalink">¶ permalink</a>
-</h1></header><p id="p-462">We stated the sum principle as</p>
-<blockquote class="blockquote" id="blockquote-9"><p id="p-463">If we have a partition of a set \(S\text{,}\) then the size of \(S\) is the sum of the sizes of the blocks of the partition.</p></blockquote>
-<p id="p-464">In fact, the simplest form of the sum principle says that the size of the sum of two disjoint (finite) sets is the sum of their sizes.</p>
-<article class="example-like" id="activity-79"><h5 class="heading">
+</article></section><section class="subsection" id="subsection-14"><header title="Subsection 2.1.4 Proving the general product principle (Optional)"><h3 class="heading hide-type" alt="Subsection 2.1.4 Proving the general product principle (Optional)">
+<span class="type">Subsection</span><span class="codenumber">2.1.4</span><span class="title">Proving the general product principle (Optional)</span>
+</h3>
+<a href="sec_induction-examples.html#subsection-14" class="permalink">¶</a></header><p id="p-475">We stated the sum principle as</p>
+<blockquote class="blockquote" id="blockquote-11"><p id="p-476">If we have a partition of a set \(S\text{,}\) then the size of \(S\) is the sum of the sizes of the blocks of the partition.</p></blockquote>
+<p id="p-477">In fact, the simplest form of the sum principle says that the size of the sum of two disjoint (finite) sets is the sum of their sizes.</p>
+<article class="example-like" id="activity-79"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">79</span>
-</h5>
-<p id="p-465">Prove the sum principle we stated for partitions of a set from the simplest form of the sum principle.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-68" id="hint-68"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-68" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-466">We didn't explicitly say to use induction here, but, especially in this context, induction is a natural tool to try here. But we don't have a variable n to induct on. That means you have to choose one. So what do you think is most useful. The number of blocks in the partition? The size of the first block of the partition? The size of the set we are partitioning? Or something else?</p></span></span>
-</div></article><p id="p-469">We stated the simplest form of the product principle as</p>
-<blockquote class="blockquote" id="blockquote-10"><p id="p-470">If we have a partition of a set \(S\) into \(m\) blocks, each of size \(n\text{,}\) then \(S\) has size \(mn\text{.}\)</p></blockquote>
-<p id="p-471">In <a knowl="./knowl/generalproductprinciple.html" knowl-id="xref-generalproductprinciple" alt="Problem 14 " title="Problem 14 ">Problem 14</a> we gave a more general form of the product principle which can be stated as </p>
-<blockquote class="blockquote" id="blockquote-11">
-<p id="p-472">Let \(S\) be a set of functions \(f\) from \([n]\) to some set \(X\text{.}\)  Suppose that </p>
+</h6>
+<p id="p-478">Prove the sum principle we stated for partitions of a set from the simplest form of the sum principle.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-68" id="hint-68"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-68" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-479">We didn't explicitly say to use induction here, but, especially in this context, induction is a natural tool to try here. But we don't have a variable n to induct on. That means you have to choose one. So what do you think is most useful. The number of blocks in the partition? The size of the first block of the partition? The size of the set we are partitioning? Or something else?</p></span></span>
+</div></article><p id="p-482">We stated the simplest form of the product principle as</p>
+<blockquote class="blockquote" id="blockquote-12"><p id="p-483">If we have a partition of a set \(S\) into \(m\) blocks, each of size \(n\text{,}\) then \(S\) has size \(mn\text{.}\)</p></blockquote>
+<p id="p-484">In <a knowl="./knowl/generalproductprinciple.html" knowl-id="xref-generalproductprinciple" alt="Problem 14 " title="Problem 14 ">Problem 14</a> we gave a more general form of the product principle which can be stated as </p>
+<blockquote class="blockquote" id="blockquote-13">
+<p id="p-485">Let \(S\) be a set of functions \(f\) from \([n]\) to some set \(X\text{.}\)  Suppose that </p>
 <ul id="ul-3" style="list-style-type: disc;">
-<li id="li-9"><p id="p-473">there are \(k_1\) choices for \(f(1)\text{,}\) and</p></li>
-<li id="li-10"><p id="p-474">suppose that for each choice of \(f(1)\text{,}\) \(f(2)\text{,}\) … \(f(i-1)\text{,}\) there are \(k_i\) choices for \(f(i)\text{.}\)</p></li>
+<li id="li-12"><p id="p-486">there are \(k_1\) choices for \(f(1)\text{,}\) and</p></li>
+<li id="li-13"><p id="p-487">suppose that for each choice of \(f(1)\text{,}\) \(f(2)\text{,}\) … \(f(i-1)\text{,}\) there are \(k_i\) choices for \(f(i)\text{.}\)</p></li>
 </ul>
 <p> Then the number of functions in the set \(S\) is \(k_1k_2\cdots k_n\text{.}\)</p>
 </blockquote>
-<article class="example-like summary" id="generalproductprincipleproof"><h5 class="heading">
+<article class="example-like summary" id="generalproductprincipleproof"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">80</span>
-</h5>
-<p id="p-475">Prove the general form of the product principle from the simplest form of the product principle.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-69" id="hint-69"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-69" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-476">Think about how you might have gone from the number of double decker cones to the number of triple decker cones in <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>.</p></span></span>
-</div></article></section><section class="subsection" id="subsection-15"><header title="Subsection 2.1.5 Double Induction and Ramsey Numbers"><h1 class="heading hide-type" alt="Subsection 2.1.5 Double Induction and Ramsey Numbers">
-<span class="type">Subsection</span><span class="codenumber">2.1.5</span><span class="title">Double Induction and Ramsey Numbers</span><a href="sec_induction-examples.html#subsection-15" class="permalink">¶ permalink</a>
-</h1></header><p id="p-478">In <a href="s1-3-apps.html#Ramseysection" alt="Subsection 1.3.4 Ramsey Numbers" title="Subsection 1.3.4 Ramsey Numbers">Section 1.3.4</a> we gave two different descriptions of the Ramsey number \(R(m,n)\text{.}\) However if you look carefully, you will see that we never showed that Ramsey numbers actually exist; we merely described what they were and showed that \(R(3,3)\) and \(R(3,4)\) exist by computing them directly. As long as we can show that there is some number \(R\) such that when there are \(R\) people together, there are either \(m\) mutual acquaintances or \(n\) mutual strangers, this shows that the Ramsey Number \(R(m,n)\) exists, because it is the smallest such \(R\text{.}\) Mathematical induction allows us to show that one such \(R\) is \(\binom{m+n-2}{m-1}\text{.}\) The question is, what should we induct on, \(m\) or \(n\text{?}\) In other words, do we use the fact that with \(\binom{m+n-3}{m-2}\) people in a room there are at least \(m-1\) mutual acquaintances or \(n\) mutual strangers, or do we use the fact that with at least \(\binom{m+n-3}{n-2}\) people in a room there are at least \(m\) mutual acquaintances or at least \(n-1\) mutual strangers? It turns out that we use both. Thus we want to be able to simultaneously induct on \(m\) and \(n\text{.}\) One way to do that is to use yet another variation on the principle of mathematical induction, the <em class="terminology">Principle of Double Mathematical Induction</em>. This principle (which can be derived from one of our earlier ones) states that</p>
-<blockquote class="blockquote" id="blockquote-12">
-<p id="p-479">In order to prove a statement about  integers \(m\) and \(n\text{,}\) if we can </p>
-<ol id="ol-3" style="list-style-type: decimal;">
-<li id="li-15"><p id="p-480">Prove the statement when \(m=a\) and \(n=b\text{,}\) for  fixed integers \(a\) and \(b\)</p></li>
-<li id="li-16"><p id="p-481">Prove the statement when \(m=a\) and \(n&gt;b\) and when \(m&gt;a\)  and \(n=b\) (for the same fixed integers \(a\) and \(b\)),</p></li>
-<li id="li-17"><p id="p-482">Show that the truth of the statement for \(m=j\) and \(n=k-1\) (with \(j\ge a\) and \(k&gt;b\)) and the truth of the statement for \(m=j-1\) and \(n=k\) (with \(j&gt;a\) and \(k\ge b\)) imply the truth of the statement for \(m=j\) and \(n=k\text{,}\)</p></li>
+</h6>
+<p id="p-488">Prove the general form of the product principle from the simplest form of the product principle.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-69" id="hint-69"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-69" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-489">Think about how you might have gone from the number of double decker cones to the number of triple decker cones in <a knowl="./knowl/tripledeckercone.html" knowl-id="xref-tripledeckercone" alt="Problem 6 " title="Problem 6 ">Problem 6</a>.</p></span></span>
+</div></article></section><section class="subsection" id="subsection-15"><header title="Subsection 2.1.5 Double Induction and Ramsey Numbers"><h3 class="heading hide-type" alt="Subsection 2.1.5 Double Induction and Ramsey Numbers">
+<span class="type">Subsection</span><span class="codenumber">2.1.5</span><span class="title">Double Induction and Ramsey Numbers</span>
+</h3>
+<a href="sec_induction-examples.html#subsection-15" class="permalink">¶</a></header><p id="p-491">In <a href="s1-3-apps.html#Ramseysection" alt="Subsection 1.3.4 Ramsey Numbers" title="Subsection 1.3.4 Ramsey Numbers">Section 1.3.4</a> we gave two different descriptions of the Ramsey number \(R(m,n)\text{.}\) However if you look carefully, you will see that we never showed that Ramsey numbers actually exist; we merely described what they were and showed that \(R(3,3)\) and \(R(3,4)\) exist by computing them directly. As long as we can show that there is some number \(R\) such that when there are \(R\) people together, there are either \(m\) mutual acquaintances or \(n\) mutual strangers, this shows that the Ramsey Number \(R(m,n)\) exists, because it is the smallest such \(R\text{.}\) Mathematical induction allows us to show that one such \(R\) is \(\binom{m+n-2}{m-1}\text{.}\) The question is, what should we induct on, \(m\) or \(n\text{?}\) In other words, do we use the fact that with \(\binom{m+n-3}{m-2}\) people in a room there are at least \(m-1\) mutual acquaintances or \(n\) mutual strangers, or do we use the fact that with at least \(\binom{m+n-3}{n-2}\) people in a room there are at least \(m\) mutual acquaintances or at least \(n-1\) mutual strangers? It turns out that we use both. Thus we want to be able to simultaneously induct on \(m\) and \(n\text{.}\) One way to do that is to use yet another variation on the principle of mathematical induction, the <b class="terminology">Principle of Double Mathematical Induction</b>. This principle (which can be derived from one of our earlier ones) states that</p>
+<blockquote class="blockquote" id="blockquote-14">
+<p id="p-492">In order to prove a statement about  integers \(m\) and \(n\text{,}\) if we can </p>
+<ol id="ol-4" style="list-style-type: decimal;">
+<li id="li-18"><p id="p-493">Prove the statement when \(m=a\) and \(n=b\text{,}\) for  fixed integers \(a\) and \(b\)</p></li>
+<li id="li-19"><p id="p-494">Prove the statement when \(m=a\) and \(n&gt;b\) and when \(m&gt;a\)  and \(n=b\) (for the same fixed integers \(a\) and \(b\)),</p></li>
+<li id="li-20"><p id="p-495">Show that the truth of the statement for \(m=j\) and \(n=k-1\) (with \(j\ge a\) and \(k&gt;b\)) and the truth of the statement for \(m=j-1\) and \(n=k\) (with \(j&gt;a\) and \(k\ge b\)) imply the truth of the statement for \(m=j\) and \(n=k\text{,}\)</p></li>
 </ol>
 <p> then we can conclude the statement is true for all pairs of integers \(m\ge
 a\) and \(n\ge b\text{.}\)</p>
 </blockquote>
-<p id="p-483">There is a strong version of double induction, and it is actually easier to state. The principle of <em class="terminology">strong double mathematical induction</em>     says the following.</p>
-<blockquote class="blockquote" id="blockquote-13">
-<p id="p-484">In order to prove a statement about integers \(m\) and \(n\text{,}\) if we can </p>
-<ol id="ol-4" style="list-style-type: decimal;">
-<li id="li-18">Prove the statement when \(m=a\) and \(n=b\text{,}\) for fixed integers \(a\) and \(b\text{.}\)</li>
-<li id="li-19">Show that the truth of the statemetn for values of \(m\) and \(n\) with \(a+b\leq m+n \lt k\) imples the truth of the statment for \(m+n=k\text{,}\)</li>
+<p id="p-496">There is a strong version of double induction, and it is actually easier to state. The principle of <b class="terminology">strong double mathematical induction</b>     says the following.</p>
+<blockquote class="blockquote" id="blockquote-15">
+<p id="p-497">In order to prove a statement about integers \(m\) and \(n\text{,}\) if we can </p>
+<ol id="ol-5" style="list-style-type: decimal;">
+<li id="li-21">Prove the statement when \(m=a\) and \(n=b\text{,}\) for fixed integers \(a\) and \(b\text{.}\)</li>
+<li id="li-22">Show that the truth of the statemetn for values of \(m\) and \(n\) with \(a+b\leq m+n \lt k\) imples the truth of the statment for \(m+n=k\text{,}\)</li>
 </ol>
 <p> then we can conclude that the statement is true for all pairs of integers \(m\geq a\) and \(n\geq b\text{.}\)</p>
 </blockquote>
-<article class="example-like interesting-forward-essential" id="Ramseybound"><h5 class="heading">
+<article class="example-like interesting-forward-essential" id="Ramseybound"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">81</span>
-</h5>
-<p id="p-485">Prove that \(R(m,n)\) exists by proving that if there are \(\binom{m+n-2}{m-1}\) people in a room, then there are either at least \(m\) mutual acquaintances or at least \(n\) mutual strangers.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-70" id="hint-70"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-70" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-486">Perhaps the first thing one needs to ask is why proving that if there are \(\binom{m+n-2}{m-1}\)people in a room, then there are either at least \(m\) mutual acquaintances or at least \(n\) mutual strangers proves that \(R(m, n)\) exists. Can you see why this tells us that there is some number \(R\) of people such that if \(R\) people are in a room, then there are \(m\) mutual acquaintances or \(n\) mutual strangers? And why does that mean the Ramsey Number exists?</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-71" id="hint-71"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-71" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-487">Naturally it should come as no surprise that you will use double induction, and you can use either form. As you think about how to use induction, the Pascal relation will come to mind. This suggests that you want to make assumptions involving \(\binom{m+n-3}{m-1}\) people in a room, or \(\binom{m+n-3}{m-2}\) people in a room. Now you have to figure out what these assumptions are and how they help you prove the result! Recall that we have made progress before by choosing one person and asking whether this person is acquainted with at least some number of people or unacquainted with at least some other number of people.</p></span></span>
-</div></article><article class="example-like forward-essential" id="Ramseyrecurrence"><h5 class="heading">
+</h6>
+<p id="p-498">Prove that \(R(m,n)\) exists by proving that if there are \(\binom{m+n-2}{m-1}\) people in a room, then there are either at least \(m\) mutual acquaintances or at least \(n\) mutual strangers.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-70" id="hint-70"><span class="solution"><span class="type">Hint</span><span class="codenumber">1</span></span></a><span id="hk-hint-70" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-499">Perhaps the first thing one needs to ask is why proving that if there are \(\binom{m+n-2}{m-1}\)people in a room, then there are either at least \(m\) mutual acquaintances or at least \(n\) mutual strangers proves that \(R(m, n)\) exists. Can you see why this tells us that there is some number \(R\) of people such that if \(R\) people are in a room, then there are \(m\) mutual acquaintances or \(n\) mutual strangers? And why does that mean the Ramsey Number exists?</p></span></span><a knowl="" class="id-ref" refid="hk-hint-71" id="hint-71"><span class="solution"><span class="type">Hint</span><span class="codenumber">2</span></span></a><span id="hk-hint-71" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-500">Naturally it should come as no surprise that you will use double induction, and you can use either form. As you think about how to use induction, the Pascal relation will come to mind. This suggests that you want to make assumptions involving \(\binom{m+n-3}{m-1}\) people in a room, or \(\binom{m+n-3}{m-2}\) people in a room. Now you have to figure out what these assumptions are and how they help you prove the result! Recall that we have made progress before by choosing one person and asking whether this person is acquainted with at least some number of people or unacquainted with at least some other number of people.</p></span></span>
+</div></article><article class="example-like forward-essential" id="Ramseyrecurrence"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">82</span>
-</h5>
-<p id="p-489">Prove that \(R(m,n)\le R(m-1,n) + R(m,n-1)\text{.}\)</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-72" id="hint-72"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-72" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-490">One expects to need double induction again here. But only because of the location of the problem and because the sum looks like double induction. And those reasons aren't enough to mean you have to use double induction. If you had this result in hand already, then you could us it with double induction to give a second proof that Ramsey Numbers exist.</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-73" id="hint-73"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-73" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-491">What you do need to show is that if there are \(R(m - 1, n) + R(m, n - 1)\) people in a room, then there are either m mutual acquaintances or n mutual strangers. As with earlier problems, it helps to start with a person and think about the number of people with whom this person is acquainted or nonacquainted. The generalized pigeonhole principle tells you something about these numbers.</p></span></span>
-</div></article><article class="example-like interesting-forward-essential" id="Ramseybound2"><h5 class="heading">
+</h6>
+<p id="p-502">Prove that \(R(m,n)\le R(m-1,n) + R(m,n-1)\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-72" id="hint-72"><span class="solution"><span class="type">Hint</span><span class="codenumber">1</span></span></a><span id="hk-hint-72" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-503">One expects to need double induction again here. But only because of the location of the problem and because the sum looks like double induction. And those reasons aren't enough to mean you have to use double induction. If you had this result in hand already, then you could us it with double induction to give a second proof that Ramsey Numbers exist.</p></span></span><a knowl="" class="id-ref" refid="hk-hint-73" id="hint-73"><span class="solution"><span class="type">Hint</span><span class="codenumber">2</span></span></a><span id="hk-hint-73" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-504">What you do need to show is that if there are \(R(m - 1, n) + R(m, n - 1)\) people in a room, then there are either m mutual acquaintances or n mutual strangers. As with earlier problems, it helps to start with a person and think about the number of people with whom this person is acquainted or nonacquainted. The generalized pigeonhole principle tells you something about these numbers.</p></span></span>
+</div></article><article class="example-like interesting-forward-essential" id="Ramseybound2"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">83</span>
-</h5>
-<article class="exercise-like" id="task-77"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-493">What does the equation in <a knowl="./knowl/Ramseyrecurrence.html" knowl-id="xref-Ramseyrecurrence" alt="Problem 82 " title="Problem 82 ">Problem 82</a> tell us about \(R(4,4)\text{?}\)</p></article><article class="exercise-like difficult" id="task-78"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-495">Consider 17 people arranged in a circle such that each person is acquainted with the first, second, fourth, and eighth person to the right and the first, second, fourth, and eighth person to the left.  can you find a set of four mutual acquaintances?  Can you find a set of four mutual strangers?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-74" id="hint-74"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-74" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-496">If you could find four mutual acquaintances, you could assume person 1 is among them. And by the generalized pigeonhole principle and symmetry, so are two of the people to the first, second, fourth and eighth to the right. Now there are lots of possibilities for that fourth person. You now have the hard work of using symmetry and the definition of who is acquainted with whom to eliminate all possible combinations of four people. Then you have to think about nonacquaintances.</p></span></span></article><article class="exercise-like" id="task-79"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-498">What is \(R(4,4)\text{?}\)</p></article></article><article class="example-like" id="activity-84"><h5 class="heading">
+</h6>
+<article class="exercise-like" id="task-77"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-506">What does the equation in <a knowl="./knowl/Ramseyrecurrence.html" knowl-id="xref-Ramseyrecurrence" alt="Problem 82 " title="Problem 82 ">Problem 82</a> tell us about \(R(4,4)\text{?}\)</p></article><article class="exercise-like difficult" id="task-78"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-508">Consider 17 people arranged in a circle such that each person is acquainted with the first, second, fourth, and eighth person to the right and the first, second, fourth, and eighth person to the left.  can you find a set of four mutual acquaintances?  Can you find a set of four mutual strangers?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-74" id="hint-74"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-74" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-509">If you could find four mutual acquaintances, you could assume person 1 is among them. And by the generalized pigeonhole principle and symmetry, so are two of the people to the first, second, fourth and eighth to the right. Now there are lots of possibilities for that fourth person. You now have the hard work of using symmetry and the definition of who is acquainted with whom to eliminate all possible combinations of four people. Then you have to think about nonacquaintances.</p></span></span>
+</div></article><article class="exercise-like" id="task-79"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-511">What is \(R(4,4)\text{?}\)</p></article></article><article class="example-like" id="activity-84"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">84</span>
-</h5>
-<p id="p-499">(Optional) Prove the inequality of <a knowl="./knowl/Ramseybound.html" knowl-id="xref-Ramseybound" alt="Problem 81 " title="Problem 81 ">Problem 81</a> by induction on \(m+n\text{.}\)</p></article><article class="example-like" id="activity-85"><h5 class="heading">
+</h6>
+<p id="p-512">(Optional) Prove the inequality of <a knowl="./knowl/Ramseybound.html" knowl-id="xref-Ramseybound" alt="Problem 81 " title="Problem 81 ">Problem 81</a> by induction on \(m+n\text{.}\)</p></article><article class="example-like" id="activity-85"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">85</span>
-</h5>
-<p id="p-502">Use Stirling's approximation (<a knowl="./knowl/Stirling_sapproximation.html" knowl-id="xref-Stirling_sapproximation" alt="Problem 46 " title="Problem 46 ">Problem 46</a>) to convert the upper bound for \(R(n,n)\) that you get from <a knowl="./knowl/Ramseybound.html" knowl-id="xref-Ramseybound" alt="Problem 81 " title="Problem 81 ">Problem 81</a> to a multiple of a power of an integer.</p></article></section><section class="subsection" id="subsection-16"><header title="Subsection 2.1.6 A bit of asymptotic combinatorics"><h1 class="heading hide-type" alt="Subsection 2.1.6 A bit of asymptotic combinatorics">
-<span class="type">Subsection</span><span class="codenumber">2.1.6</span><span class="title">A bit of asymptotic combinatorics</span><a href="sec_induction-examples.html#subsection-16" class="permalink">¶ permalink</a>
-</h1></header><p id="p-504"><a knowl="./knowl/Ramseybound2.html" knowl-id="xref-Ramseybound2" alt="Problem 83 " title="Problem 83 ">Problem 83</a> gives us an upper bound on \(R(n,n)\text{.}\) A very clever technique due to Paul Erdös, called the “probabilistic method,” will give a lower bound. Since both bounds are exponential in \(n\text{,}\) they show that \(R(n,n)\) grows exponentially as \(n\) gets large. An analysis of what happens to a function of \(n\) as \(n\) gets large is usually called an <em class="terminology">asymptotic analysis</em>. The <em class="terminology">probabilistic method</em>, at least in its simpler forms, can be expressed in terms of averages, so one does not need to know the language of probability in order to understand it. We will apply it to Ramsey numbers in the next problem. Combined with the result of <a knowl="./knowl/Ramseybound2.html" knowl-id="xref-Ramseybound2" alt="Problem 83 " title="Problem 83 ">Problem 83</a>, this problem will give us that \(\sqrt{2}^{\rangle n}\lt R(n,n)\lt 2^{2n-2}\text{,}\) so that we know that the Ramsey number \(R(n,n)\) grows exponentially with \(n\text{.}\)</p>
-<article class="example-like interesting" id="activity-86"><h5 class="heading">
+</h6>
+<p id="p-515">Use Stirling's approximation (<a knowl="./knowl/Stirling_sapproximation.html" knowl-id="xref-Stirling_sapproximation" alt="Problem 46 " title="Problem 46 ">Problem 46</a>) to convert the upper bound for \(R(n,n)\) that you get from <a knowl="./knowl/Ramseybound.html" knowl-id="xref-Ramseybound" alt="Problem 81 " title="Problem 81 ">Problem 81</a> to a multiple of a power of an integer.</p></article></section><section class="subsection" id="subsection-16"><header title="Subsection 2.1.6 A bit of asymptotic combinatorics"><h3 class="heading hide-type" alt="Subsection 2.1.6 A bit of asymptotic combinatorics">
+<span class="type">Subsection</span><span class="codenumber">2.1.6</span><span class="title">A bit of asymptotic combinatorics</span>
+</h3>
+<a href="sec_induction-examples.html#subsection-16" class="permalink">¶</a></header><p id="p-517"><a knowl="./knowl/Ramseybound2.html" knowl-id="xref-Ramseybound2" alt="Problem 83 " title="Problem 83 ">Problem 83</a> gives us an upper bound on \(R(n,n)\text{.}\) A very clever technique due to Paul Erdös, called the “probabilistic method,” will give a lower bound. Since both bounds are exponential in \(n\text{,}\) they show that \(R(n,n)\) grows exponentially as \(n\) gets large. An analysis of what happens to a function of \(n\) as \(n\) gets large is usually called an <b class="terminology">asymptotic analysis</b>. The <b class="terminology">probabilistic method</b>, at least in its simpler forms, can be expressed in terms of averages, so one does not need to know the language of probability in order to understand it. We will apply it to Ramsey numbers in the next problem. Combined with the result of <a knowl="./knowl/Ramseybound2.html" knowl-id="xref-Ramseybound2" alt="Problem 83 " title="Problem 83 ">Problem 83</a>, this problem will give us that \(\sqrt{2}^{ n}\lt R(n,n)\lt 2^{2n-2}\text{,}\) so that we know that the Ramsey number \(R(n,n)\) grows exponentially with \(n\text{.}\)</p>
+<article class="example-like interesting" id="activity-86"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">86</span>
-</h5>
-<article class="introduction" id="introduction-27"><p id="p-505">Suppose we have two numbers \(n\) and \(m\text{.}\) We consider all possible ways to color the edges of the complete graph \(K_m\) with two colors, say red and blue. For each coloring, we look at each \(n\)-element subset \(N\) of the vertex set \(M\) of \(K_m\text{.}\) Then \(N\) together with the edges of of \(K_m\) connecting vertices in \(N\) forms a complete graph on \(n\) vertices. This graph, which we denote by \(K_N\text{,}\) has its edges colored by the original coloring of the edges of \(K_m\text{.}\)</p></article><article class="exercise-like" id="task-80"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-506">Why is it that if there is no subset \(N\subseteq M\) so that all the edges of \(K_N\) are colored the same color, then \(R(n,n)&gt;m\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-75" id="hint-75"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-75" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-507">What is the definition of \(R(n, n)\text{?}\)</p></span></span></article><article class="exercise-like" id="task-81"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-509">To apply the probabilistic method, we are going to compute the average, over all colorings of \(K_m\text{,}\) of the number of sets \(N\subseteq M\) with \(|N|=n\) such that \(K_N\) <!--Style me with CSS--><em>does</em> have all its edges the same color. Explain why it is that if the average is less than 1, then for some coloring there is no set \(N\) such that \(K_N\) has all its edges colored the same color.  Why does this mean that \(R(n,n)&gt;m\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-76" id="hint-76"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-76" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-510">If you average a bunch of numbers and each one is bigger than one, what can you say about the average?</p></span></span></article><article class="exercise-like" id="task-82"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-512">We call a \(K_N\) <em class="terminology">monochromatic</em> for a coloring \(c\) of \(K_m\) if the color \(c(e)\) assigned to edge \(e\) is the same for every edge \(e\) of \(K_N\text{.}\)  Let us define \({ mono}(c,N)\) to be 1 if \(N\) is monochromatic for \(c\) and to be 0 otherwise.  Find a formula for the average number of monochromatic \(K_N\)s over all colorings of \(K_m\) that involves a double sum first over all edge colorings \(c\) of \(K_m\) and then over all \(n\)-element subsets \(N\subseteq M\) of \({
+</h6>
+<div class="introduction" id="introduction-27"><p id="p-518">Suppose we have two numbers \(n\) and \(m\text{.}\) We consider all possible ways to color the edges of the complete graph \(K_m\) with two colors, say red and blue. For each coloring, we look at each \(n\)-element subset \(N\) of the vertex set \(M\) of \(K_m\text{.}\) Then \(N\) together with the edges of of \(K_m\) connecting vertices in \(N\) forms a complete graph on \(n\) vertices. This graph, which we denote by \(K_N\text{,}\) has its edges colored by the original coloring of the edges of \(K_m\text{.}\)</p></div>
+<article class="exercise-like" id="task-80"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-519">Why is it that if there is no subset \(N\subseteq M\) so that all the edges of \(K_N\) are colored the same color, then \(R(n,n)&gt;m\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-75" id="hint-75"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-75" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-520">What is the definition of \(R(n, n)\text{?}\)</p></span></span>
+</div></article><article class="exercise-like" id="task-81"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-522">To apply the probabilistic method, we are going to compute the average, over all colorings of \(K_m\text{,}\) of the number of sets \(N\subseteq M\) with \(|N|=n\) such that \(K_N\) <em class="emphasis">does</em> have all its edges the same color. Explain why it is that if the average is less than 1, then for some coloring there is no set \(N\) such that \(K_N\) has all its edges colored the same color.  Why does this mean that \(R(n,n)&gt;m\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-76" id="hint-76"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-76" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-523">If you average a bunch of numbers and each one is bigger than one, what can you say about the average?</p></span></span>
+</div></article><article class="exercise-like" id="task-82"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-525">We call a \(K_N\) <b class="terminology">monochromatic</b> for a coloring \(c\) of \(K_m\) if the color \(c(e)\) assigned to edge \(e\) is the same for every edge \(e\) of \(K_N\text{.}\)  Let us define \({ mono}(c,N)\) to be 1 if \(N\) is monochromatic for \(c\) and to be 0 otherwise.  Find a formula for the average number of monochromatic \(K_N\)s over all colorings of \(K_m\) that involves a double sum first over all edge colorings \(c\) of \(K_m\) and then over all \(n\)-element subsets \(N\subseteq M\) of \({
 mono}(c,N)\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-77" id="hint-77"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-77" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-513">Note that there are \(2^{\binom{n}{2}}\) graphs on a set of \(n\) vertices.</p></span></span></article><article class="exercise-like" id="task-83"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-515">Show that your formula for the average reduces to \(2\binom{m}{n}\cdot2^{-\binom{n}{2}}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-78" id="hint-78"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-78" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-516">A notation for the sum over all colorings \(c\) of \(K_m\) is</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-77" id="hint-77"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-77" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-526">Note that there are \(2^{\binom{n}{2}}\) graphs on a set of \(n\) vertices.</p></span></span>
+</div></article><article class="exercise-like" id="task-83"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-528">Show that your formula for the average reduces to \(2\binom{m}{n}\cdot2^{-\binom{n}{2}}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-78" id="hint-78"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-78" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-529">A notation for the sum over all colorings \(c\) of \(K_m\) is</p>
 \begin{equation*}
 \sum_{c:c\mbox{~is a coloring of~} K_m},
 \end{equation*}
@@ -311,13 +338,17 @@ mono}(c,N)\text{.}\)</p>
 \begin{equation*}
 \sum_{N:N\subseteq M,~|N|=n}
 \end{equation*}
-</span></span></article><article class="exercise-like" id="task-84"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-518">Explain why \(R(n,n)&gt;m\) if \(\binom{m}{n}\le 2^{\binom{n}{2} -1}\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-79" id="hint-79"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-79" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-519">If you interchange the order of summation so that you sum over subsets first and colorings second, you can take advantage of the fact that for a fixed subset \(N\) , you can count count the number of colorings in which it is monochromatic.</p></span></span></article><article class="exercise-like difficult" id="task-85"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-521">Explain why \(R(n,n)&gt;\root n \of {n!2^{\binom{n}{2}-1}}\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-80" id="hint-80"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-80" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-522">You have an inequality involving m and n that tells you that \(R(n, n) &gt; m\text{.}\) Suppose you could work with that inequality in order to show that if the inequality holds, then \(m\) is bigger than something. What could you conclude about \(R(n, n)\text{?}\)</p></span></span></article><article class="exercise-like" id="task-86"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-524">By using Stirling's formula, show that if \(n\) is large enough, then \(R(n,n) &gt; \sqrt{2^n} = \sqrt{2}^{\rangle n}\)</p></article></article></section></section></div></main>
+</span></span>
+</div></article><article class="exercise-like" id="task-84"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-531">Explain why \(R(n,n)&gt;m\) if \(\binom{m}{n}\le 2^{\binom{n}{2} -1}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-79" id="hint-79"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-79" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-532">If you interchange the order of summation so that you sum over subsets first and colorings second, you can take advantage of the fact that for a fixed subset \(N\) , you can count count the number of colorings in which it is monochromatic.</p></span></span>
+</div></article><article class="exercise-like difficult" id="task-85"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-534">Explain why \(R(n,n)&gt;\root n \of {n!2^{\binom{n}{2}-1}}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-80" id="hint-80"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-80" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-535">You have an inequality involving m and n that tells you that \(R(n, n) &gt; m\text{.}\) Suppose you could work with that inequality in order to show that if the inequality holds, then \(m\) is bigger than something. What could you conclude about \(R(n, n)\text{?}\)</p></span></span>
+</div></article><article class="exercise-like" id="task-86"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-537">By using Stirling's formula, show that if \(n\) is large enough, then \(R(n,n) &gt; \sqrt{2^n} = \sqrt{2}^{n}\text{.}\)  (Here large enough means large enough for Stiirling's formula to be reasonable accurate.)</p></article></article></section></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

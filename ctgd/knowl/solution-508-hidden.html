@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:51-06:00    *-->
+<!--*    on 2017-12-13T14:14:58-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,9 +11,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>We are asking for the number of orbits of \(D_{17}\) on the set of functions from \([17]\) to \(\{R,B\}\text{.}\) Every function is fixed by the identity. The only functions fixed by a nontrivial rotation are the constant functions. Each flip is around a line from a bead to the space between the two “opposite” beads. The bead the line goes through can be either color, and then the eight beads to the left of this one must be identical to the eight beads to the right of this one. There are \(2^8\) ways to assign beads to the positions on the left, so a flip fixes \(2^9\) functions. Therefore by the CFB theorem, we have</p>
+<body><span class="solution"><p>We are stringing 17 beads on our necklace, so we are asking for the number of orbits of the group \(D_{17}\) on lists of four \(R\)s, six \(B\)s, and seven \(G\)s. For a rotation \(\rho^i\) to fix a list, it must take an \(R\) to a \(R\text{.}\) The powers of \(\rho^i\) form a group. Thus the set of places that contain an \(R\) in a list that is fixed by \(\rho^i\) must be an orbit of that group. But the size of the orbit must be a divisor of the size of the subgroup, which must be a divisor of seventeen, so the size of the orbit is one or 17. If it is 1, then \(i=0\text{.}\) Thus no elements are fixed by any nontrivial rotation, and all \(\binom{17}{4,6,7}\) lists of \(R\)s, \(B\)s and \(G\)s are fixed by the identity. Each flip will be a flip \strut around a line from a bead to the spot between the two “opposite” beads. This line divides the list into the eight beads on its left, the eight beads on its right and the one bead it goes through. If a flip fixes a list, the eight beads on the left must be identical to the eight beads on the right, meaning that the bead the line goes through must be one of the seven green beads. Thus the number of lists that are fixed by a flip is the number of ways to place three green beads, two red beads, and three blue beads in 8 slots, which is \(\binom{8}{3,2,3}\text{,}\) or \(\frac{8!}{3!2!3!}\text{.}\) There are 17 flips, so there are \(\frac{17\cdot8!}{3!2!3!}\) elements fixed by flips. Therefore we have</p>
 \begin{equation*}
-\frac{1}{2\cdot 17}\left(2^{17}+ 17\cdot2^9+16\cdot 2\right)=\frac{2^{16}}{17}+2^8 +\frac{2^4}{17}=16\frac{4097}{17}+256=4112
+\frac{1}{2\cdot 17}\left(\frac{17!}{4!6!7!} + \frac{17\cdot8!}{3!2!2!}\right) =
+\frac{8\cdot15!}{4!6!7!} + \frac{4\cdot7!}{3!2!3!}= 120,400
 \end{equation*}
-<p>necklaces.</p></span></body>
+<p>necklaces. The numerical answer, which is unimportant here, was obtained from Maple.</p></span></body>
 </html>

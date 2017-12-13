@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:35-06:00    *-->
+<!--*    on 2017-12-13T14:14:40-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Find a formula for the amount owed after \(n\) months.</p>
-<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1274">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{align*}
+\sum_{n=2}^\infty a_nx^n  \amp=  4\sum_{n=2}^\infty a_{n-1}x^n -
+4\sum_{n=2}^\infty a_{n-2}x^n\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x  \amp=  4x(\sum_{n=0}^\infty a_{n}x^n
+-a_0) - 4x^2\sum_{n=0}^\infty a_{n}x^n\\
+(1-4x+4x^2)\sum_{n=0}^\infty a_nx^n   \amp=
+a_0+a_1x-4a_0x\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-4a_0x}{(1-4x+4x^2)}\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-4a_0x}{(1-2x)^2}\\
+\sum_{n=0}^\infty a_nx^n \amp= (a_0+a_1x-4a_0x)\sum_{n=0}^\infty \binom{n+2-1}{n}
+2^nx^n\\
+\sum_{n=0}^\infty a_nx^n \amp= (a_0+a_1x-4a_0x)\sum_{n=0}^\infty (n+1)
+2^nx^n
+\end{align*}
+<p>Thus \(a_n=a_0(n+1)2^n
++(a_1-4a_0)n2^{n-1}=a_02^n+(a_1-2a_0)n2^{n-1}\text{.}\)</p>
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1274">in-context</a></span>
 </body>
 </html>

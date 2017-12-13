@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:16-06:00    *-->
+<!--*    on 2017-12-13T14:14:21-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,11 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If \(n=0\) we get \((ab)^0=1\) and \(a^0b^0=1\text{.}\) Assume inductively that \((ab)^{n-1}=a^{n-1}b^{n-1}\text{.}\) Then by the inductive definition, inductive hypothesis, and commutative law,</p>
-\begin{equation*}
-(ab)^n= (ab)^{n-1}ab=a^{n-1}b^{n-1}ab=a^{n-1}ab^{n-1}b=a^nb^n.
-\end{equation*}
-<span class="incontext"><a href="sec_induction-suppprobs.html#p-678">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The number of spanning trees of \(G\) not containing \(e\) is the number of spanning trees of \(G-e\text{.}\) The number of spanning trees of \(G\) containing the edge \(e\) is the number of spanning trees of \(G/e\text{.}\) Therefore \(\#(G) =\#(G-e)
++\#(G/e)\text{.}\) Applying the formula twice to \(G\) gives</p>
+\begin{align*}
+\#(G)
+= &amp;\#(G-\{1,2\}-\{2,3\}) + \#((G-\{1,2\})/\{2,3\})\\
+\amp +
+\#((G/\{1,2\})-\{2,3\}) +
+\#(G/\{1,2\}/\{2,3\}).
+\end{align*}
+<span class="incontext"><a href="sec_induction-graphstrees.html#p-678">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:27-06:00    *-->
+<!--*    on 2017-12-13T14:14:31-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>For now, most of our uses of power series will involve just simple algebra. Since we use power series in a different way in combinatorics than we do in calculus, we should review a bit of the algebra of power series.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{align*}
+E_P(S_1\times S_2) =\amp \sum_{(x_1,x_2)\in S_1\times
+S_2} P(x_1)P(x_2)\\
+=\amp
+\sum_{x_1:x_1\in S_1}\sum_{x_2:x_2\in S_2} P(x_1)P(x_2)\\
+=\amp \sum_{x_1\in S_1}P(x_1)\sum_{x_2\in S_2}P(x_2)\\
+=\amp \sum_{x_1\in S_1} P(x_1) E_{P_2}(S_2)\\
+=\amp \left(\sum_{x_1\in S_1} P(x_1)\right)E_{P_2}(S_2)\\
+=\amp E_{P_1}(S_1)E_{P_2}(S_2)
+\end{align*}
 <span class="incontext"><a href="sec_genfns-idea.html#p-1061">in-context</a></span>
 </body>
 </html>

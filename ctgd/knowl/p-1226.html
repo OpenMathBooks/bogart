@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:33-06:00    *-->
+<!--*    on 2017-12-13T14:14:37-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,18 +12,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Our recurrence becomes \(a_n=a_{n-1}+a_{n-2}\text{,}\) and following the pattern of <a knowl="./knowl/secondorderintroduction.html" knowl-id="xref-secondorderintroduction" alt="Problem 213 " title="Problem 213 ">Problem 213</a> we get</p>
-\begin{align*}
-\sum_{n=2}^\infty a_nx^n \amp= \sum_{n=2}^\infty a_{n-1}x^n +
-\sum_{n=2}^\infty a_{n-2}x^n\\
-\sum_{n=0}^\infty a_nx^n-a_0-a_1x  \amp= x\left(\sum_{n=0}^\infty
-a_{n}x^{n}-a_0\right) + x^2\sum_{n=0}^\infty a_{n}x^n\\
-(1-x-x^2)\sum_{n=0}^\infty a_nx^n \amp= a_0+a_1x-a_0x\\
-\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-a_0x}{(1-x-x^2)}\text{.}
-\end{align*}
-<p>Since now \(a_0=a_1=1\text{,}\) we have \(\displaystyle \sum_{n=0}^\infty a_nx^n=
-\frac{1}{1-x-x^2}\text{.}\)</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Multiply both sides by \(x^i\) and sum both the left hand side and right hand side from \(i=1\) to infinity.  In the left-hand side use the fact that</p>
+\begin{equation*}
+\sum_{i=1}^\infty a_ix^i = (\sum_{i=0}^\infty x^i) -a_0
+\end{equation*}
+<p>and in the right hand side, use the fact that</p>
+\begin{equation*}
+\sum_{i=1}^\infty a_{i-1}x^i = x\sum_{i=1}^\infty a_ix^{i-1}
+=x\sum_{j=0}^\infty a_jx^j =x\sum_{i=0}^\infty a_ix^i
+\end{equation*}
+<p>(where we substituted \(j\) for \(i-1\) to see explicitly how to change the limits of summation, a surprisingly useful trick) to rewrite the equation in terms of the power series \(\sum_{i=0}^\infty a_ix^i\text{.}\)  Solve the resulting equation for the power series \(\sum_{i=0}^\infty a_ix^i\text{.}\) You can save a lot of writing by using a variable like \(y\) to stand for the power series.</p>
 <span class="incontext"><a href="sec_genfns-recurrence.html#p-1226">in-context</a></span>
 </body>
 </html>

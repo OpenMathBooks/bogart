@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:05-06:00    *-->
+<!--*    on 2017-12-13T14:15:19-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,14 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Recall that \(p_{2n} = (2n-1)(2n-3)\cdots 1= \frac{(2n)!}{2^n
-n!}\text{.}\) Thus</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We say that the expression \(\sum_{i=0}^\infty a_i\frac{x^i}{i!}\) is the <b class="terminology">exponential generating function</b> for the sequence \(a_i\text{.}\) It is standard to use <b class="terminology">EGF</b> as a shorthand for exponential generating function. In this context we call the generating function \(\sum_{i=0}^n a_ix^i\) that we originally studied the <b class="terminology">ordinary generating function</b> for the sequence \(a_i\text{.}\) You can see why we use the term exponential generating function by thinking about the exponential generating function (EGF) for the all ones sequence,</p>
 \begin{equation*}
-\sum_{n=0}^\infty
-p_{2n}\frac{x^{2n}}{(2n)!}= \sum_{n=0}^\infty \frac{x^{2n}}{2^n n!} =
-\sum_{n=0}^\infty \frac{({x^2/2})^n}{n!} = e^{x^2/2} .
+\sum_{i=0}^\infty 1\frac{x^i}{i!} = \sum_{i=0}^\infty \frac{x^i}{i!}
+=e^x,
 \end{equation*}
-<span class="incontext"><a href="expogenfun.html#p-2045">in-context</a></span>
+<p>which we also denote by \(\exp (x)\text{.}\) Recall from calculus that the usual definition of \(e^x\) or \(\exp(x)\) involves limits at least implicitly. We work our way around that by defining \(e^x\) to be the power series \(\sum_{i=0}^\infty
+\frac{x^i}{i!}\text{.}\)</p>
+<span class="incontext"><a href="app3-2-expogenfns.html#p-2045">in-context</a></span>
 </body>
 </html>

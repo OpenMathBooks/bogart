@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:29-06:00    *-->
+<!--*    on 2017-12-13T14:14:33-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The enumerator for trees by degree sequence is the sum over all trees of \(x^{d_1}x^{d_2} \cdots x^{d_n}\text{,}\) where \(d_i\) is the degree of vertex \(i\text{.}\) What is the enumerator by degree sequence for trees on the vertex set \([n]\text{?}\)</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{align*}
+(x^j+x^{j+1}+\cdots+x^{m-1}) =\amp x^j
+\left(\sum_{i=0}^{m-j-1}x^i\right)^n\\
+=\amp
+\left(x^j\frac{1-x^{m-j}}{1-x}\right)^n\\
+=\amp \left(\frac{x^j-x^m}{1-x}\right)^n\\
+=\amp  (x^j-x^m)^n\sum_{i=0}^\infty \binom{n+i-1}{i}x^i.
+\end{align*}
 <span class="incontext"><a href="sec_genfns-idea.html#p-1122">in-context</a></span>
 </body>
 </html>

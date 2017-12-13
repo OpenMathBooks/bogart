@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:40-06:00    *-->
+<!--*    on 2017-12-13T14:14:46-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Since \(B_1=B_2\text{,}\) these two sets are the same block, and thus all blocks containing \(v\) are identical, so \(v\) is in only one block. Thus we have a partition of the vertex set, and the blocks of the partition are the connected components of the graph. Notice that the connected components depend on the edge set of the graph. If we have a graph on the vertex set \(V\) with edge set \(E\) and another graph on the vertex set \(V\) with edge set \(E'\text{,}\) then these two graphs could have different connected components. It is traditional to use the Greek letter \(\gamma\) (gamma)<span><a knowl="./knowl/fn-18-hidden.html" knowl-id="hidden-fn-18" alt="Footnote 5.3 " title="Footnote 5.3 "><span class="footnote"><sup> 3 </sup></span></a></span> to stand for the number of connected components of a graph; in particular, \(\gamma(V,E)\) stands for the number of connected components of the graph with vertex set \(V\) and edge set \(E\text{.}\) We are going to show how the principle of inclusion and exclusion may be used to compute the number of ways to properly color a graph using colors from a set \(C\) of \(c\) colors.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>An onto function is in none of these sets. Since we want the number of functions that are in none of these sets, we let our set \(A\) be the set of all functions from \(K\) to \([n]\text{.}\) Then the number of onto functions is \(|\overline{A_1\cup A_2\cup \cdots \cup A_n}|\text{.}\) For a nonempty subset \(S\) of \([n]\text{,}\) the set \(\bigcap_{i\colon i\in S} A_i\) is the set of functions functions from \(K\) to \([n]-S\text{.}\) The size of this set is \((n-|S|)^k\text{.}\) When \(S=\emptyset\) this gives the size of \(A\text{.}\) Thus by <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a></p>
+\begin{align*}
+\left|\overline{\bigcup_{i=1}^n A_i}\right|&amp;=  \sum_{S:s\subseteq [n]} (-1)^{|S|}
+(n-|S|)^k\\
+&amp;= \sum_{s=0}^n (-1)^s\binom{n}{s}(n-s)^k
+\end{align*}
+<p>is the number of functions from \(K\) onto \([n]\text{.}\)</p>
 <span class="incontext"><a href="sec_inclexcl-apps.html#p-1385">in-context</a></span>
 </body>
 </html>

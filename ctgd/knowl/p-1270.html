@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:35-06:00    *-->
+<!--*    on 2017-12-13T14:14:40-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,12 +12,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>What is the generating function for the number of ways to pass out \(k\) pieces of candy from an unlimited supply of identical candy to \(n\) children (where \(n\) is fixed) so that each child gets between three and six pieces of candy (inclusive)? Use the fact that</p>
-\begin{equation*}
-(1+x+x^2+x^3)(1-x) = 1-x^4
-\end{equation*}
-<p>to find a formula for the number of ways to pass out the candy.</p>
-<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1270">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>From the binomial theorem,</p>
+\begin{align*}
+\amp \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{   2}\right)^{n+1}- \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\\
+\amp=
+\frac{1}{2^{n+1}\sqrt{5}}\left[\sum_{i=0}^{n+1}\binom{n+1}{i}\left(\sqrt{5}\right)^i -\sum_{i=0}^{n+1} \binom{n+1}{i}(-1)^i\left(\sqrt{5}\right)^i\right]\\
+\amp= \frac{1}{2^{n+1}\sqrt{5}}\sum_{i:i\in
+[n+1],\ i\mbox{\scriptsize~is odd} }\binom{n+1}{i}\left(\left(\sqrt{5}\right)^i
+-(-1)^i\left(\sqrt{5}\right)^i\right)\\
+\amp= \frac{1}{2^{n+1}\sqrt{5}}\sum_{i:i\in[n+1],\ i\mbox{\scriptsize~is
+odd} }  2\binom{n+1}{i}\left(\sqrt{5}\right)^i\\
+\amp= \frac{1}{2^{n}}\sum_{i:i\in[n+1],\ i\mbox{\scriptsize~is
+odd} }  \binom{n+1}{i}\left(\sqrt{5}\right)^{i-1}\\
+\amp= \frac{1}{2^{n}}\sum_{i:i\in[n],\ i\mbox{\scriptsize~is
+even} }  \binom{n+1}{i+1}5^{i/2}\\
+\amp= \frac{1}{2^n}\sum_{k=0}^{\lfloor n/2 \rfloor}\binom{n+1}{2k+1}5^k,
+\end{align*}
+<p>which makes it clear that \(a_n\) is at least a rational number. It is not clear from this new formula why the result is always an integer.</p>
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1270">in-context</a></span>
 </body>
 </html>

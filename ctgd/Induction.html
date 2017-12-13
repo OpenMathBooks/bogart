@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:25:58-06:00    *-->
+<!--*    on 2017-12-13T14:14:04-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Mathematical Induction</title>
+<title>CTGD Mathematical Induction</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -21,7 +21,7 @@ MathJax.Hub.Config({
         extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
         TagSide: "right",
         TagIndent: ".8em",
     },
@@ -41,10 +41,9 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="custom-styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
 \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
@@ -71,24 +70,29 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<h1 class="heading"><a href="ctgd.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
 <p class="byline">Kenneth P. Bogart</p>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Relations.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter-1.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="expogenfun.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="equivalencerelations.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter-1.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="app2-1-induction.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Relations.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter-1.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="expogenfun.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="equivalencerelations.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter-1.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="app2-1-induction.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
+</ul>
 <h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
@@ -103,7 +107,7 @@ MathJax.Hub.Config({
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
@@ -136,117 +140,14 @@ MathJax.Hub.Config({
 <li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
 <li><a href="Induction.html" data-scroll="Induction" class="active">Mathematical Induction</a></li>
 <li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
-<li><a href="appendix-4.html" data-scroll="appendix-4">Hints to Selected Problems</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="Induction"><header title="Appendix B Mathematical Induction"><h1 class="heading hide-type" alt="Appendix B Mathematical Induction">
-<span class="type">Appendix</span><span class="codenumber">B</span><span class="title">Mathematical Induction</span><a href="Induction.html" class="permalink">¶ permalink</a>
-</h1></header><section class="section" id="app2-1-induction"><header title="Section B.1 The Principle of Mathematical Induction"><h1 class="heading hide-type" alt="Section B.1 The Principle of Mathematical Induction">
-<span class="type">Section</span><span class="codenumber">B.1</span><span class="title">The Principle of Mathematical Induction</span><a href="Induction.html#app2-1-induction" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-73"><header title="Subsection B.1.1 The ideas behind mathematical induction"><h1 class="heading hide-type" alt="Subsection B.1.1 The ideas behind mathematical induction">
-<span class="type">Subsection</span><span class="codenumber">B.1.1</span><span class="title">The ideas behind mathematical induction</span><a href="Induction.html#subsection-73" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1960">There is a variant of one of the bijections we used to prove the Pascal Equation that comes up in counting the subsets of a set. In the next problem it will help us compute the total number of subsets of a set, regardless of their size. Our main goal in this problem, however, is to introduce some ideas that will lead us to one of the most powerful proof techniques in combinatorics (and many other branches of mathematics), the principle of mathematical induction.</p>
-<article class="example-like" id="subsetsbysmallestcounterexample"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">360</span>
-</h5>
-<article class="exercise-like" id="subsetsbysmallestcounterexample1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1961">Write down a list of the subsets of \(\{1, 2 \}\text{.}\) Don't forget the empty set! Group the sets containing containing 2 separately from the others.</p></article><article class="exercise-like" id="subsetsbysmallestcounterexample2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1963">Write down a list of the subsets of \(\{1, 2, 3 \}\text{.}\) Group the sets containing 3 separately from the others.</p></article><article class="exercise-like" id="task-256"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1965">Look for a natural way to match up the subsets containing 2 in <a knowl="./knowl/subsetsbysmallestcounterexample1.html" knowl-id="xref-subsetsbysmallestcounterexample1" alt="Part 360.a " title="Part 360.a ">Part a</a> with those not containing 2. Look for a way to match up the subsets containing 3 in <a knowl="./knowl/subsetsbysmallestcounterexample2.html" knowl-id="xref-subsetsbysmallestcounterexample2" alt="Part 360.b " title="Part 360.b ">Part b</a> containing 3 with those not containing 3.</p></article><article class="exercise-like" id="task-257"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1967">On the basis of the previous part, you should be able to find a bijection between the collection of subsets of \(\{1, 2, \ldots , n \}\) containing \(n\) and those not containing \(n\text{.}\) (If you are having difficulty figuring out the bijection, try rethinking <a knowl="./knowl/subsetsbysmallestcounterexample1.html" knowl-id="xref-subsetsbysmallestcounterexample1" alt="Part 360.a " title="Part 360.a ">Parts a</a> and <a knowl="./knowl/subsetsbysmallestcounterexample2.html" knowl-id="xref-subsetsbysmallestcounterexample2" alt="Part 360.b " title="Part 360.b ">b</a>, perhaps by doing a similar exercise with the set \(\{1,2,3,4\}\text{.}\)) Describe the bijection (unless you are very familiar with the notation of sets, it is probably easier to describe to describe the function in words rather than symbols) and explain why it is a bijection. Explain why the number of subsets of \(\{1, 2, \ldots , n \}\) containing \(n\) equals the number of subsets of \(\{1, 2, \ldots, n-1 \}\text{.}\)</p></article><article class="exercise-like" id="task-258"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-1969"><a knowl="./knowl/subsetsbysmallestcounterexample1.html" knowl-id="xref-subsetsbysmallestcounterexample1" alt="Part 360.a " title="Part 360.a ">Parts a</a> and <a knowl="./knowl/subsetsbysmallestcounterexample2.html" knowl-id="xref-subsetsbysmallestcounterexample2" alt="Part 360.b " title="Part 360.b ">b</a> suggest strongly that the number of subsets of a \(n\)-element set is \(2^n\text{.}\) In particular, the empty set has \(2^0\) subsets, a one-element set has \(2^1\) subsets, itself and the empty set, and in <a knowl="./knowl/subsetsbysmallestcounterexample1.html" knowl-id="xref-subsetsbysmallestcounterexample1" alt="Part 360.a " title="Part 360.a ">Parts a</a> and <a knowl="./knowl/subsetsbysmallestcounterexample2.html" knowl-id="xref-subsetsbysmallestcounterexample2" alt="Part 360.b " title="Part 360.b ">b</a> we saw that two-element and three-element sets have \(2^2\) and \(2^3\) subsets respectively. So there are certainly some values of \(n\) for which an \(n\)-element set has \(2^n\) subsets. One way to prove that an \(n\)-element set has \(2^n\) subsets for all values of \(n\) is to argue by contradiction. For this purpose, suppose there is a nonnegative integer \(n\) such that an \(n\)-element set doesn't have exactly \(2^n\) subsets. In that case there may be more than one such \(n\text{.}\) Choose \(k\) to be the smallest such \(n\text{.}\) Notice that \(k -1\) is still a positive integer, because \(k\) can't be 0, 1, 2, or 3. Since \(k\) was the smallest value of \(n\) we could choose to make the statement “An \(n\)-element set has \(2^n\) subsets” false, what do you know about the number of subsets of a \((k - 1)\)-element set? What do you know about the number of subsets of the \(k\)-element set \(\{1, 2, \ldots, k \}\) that don't contain \(k\text{?}\) What do you know about the number of subsets of \(\{1,
-2, \ldots,  k \}\) that do contain \(k\text{?}\) What does the sum principle tell you about the number of subsets of \(\{1, 2, \ldots, k \}\text{?}\) Notice that this contradicts the way in which we chose \(k\text{,}\) and the only assumption that went into our choice of \(k\) was that ``there is a nonnegative integer \(n\) such that an \(n\)-element set doesn't have exactly \(2^n\) subsets." Since this assumption has led us to a contradiction, it must be false. What can you now conclude about the statement ``for every nonnegative integer \(n\text{,}\) an n-element set has exactly \(2^n\) subsets?"</p></article></article><article class="example-like" id="sumodd"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">361</span>
-</h5>
-<p id="p-1971">The expression</p>
-\begin{equation*}
-1+3+5+\cdots+2n-1
-\end{equation*}
-<p>is the sum of the first \(n\) odd integers. Experiment a bit with the sum for the first few positive integers and guess its value in terms of \(n\text{.}\) Now apply the technique of <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problem 360</a> to prove that you are right.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-254" id="hint-254"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-254" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1972">You've probably guessed that the sum is \(n^2\text{.}\) To prove this by contradiction, you have to assume it is false, that is, that there is an \(n\) such that \(1 + 3 + 5 + \cdots + 2n - 1 \ne n^2\text{.}\) Then the method of <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problem 360</a> says there must be a smallest such \(n\) and suggests we call it \(k\text{.}\) Why do you know that \(1 + 3 + 5 + \cdots + 2k - 3 = (k-1)2\text{?}\) What happens if you add \(2n-1\) to both  sides of the equation?</p></span></span>
-</div></article><p id="p-1975">In <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problems 360</a> and <a knowl="./knowl/sumodd.html" knowl-id="xref-sumodd" alt="Problem 361 " title="Problem 361 ">361</a> our proofs had several distinct elements. We had a statement involving an integer \(n\text{.}\) We knew the statement was true for the first few nonnegative integers in <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problem 360</a> and for the first few positive integers in <a knowl="./knowl/sumodd.html" knowl-id="xref-sumodd" alt="Problem 361 " title="Problem 361 ">Problem 361</a>. We wanted to prove that the statement was true for all nonnegative integers in <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problem 360</a> and for all positive integers in <a knowl="./knowl/sumodd.html" knowl-id="xref-sumodd" alt="Problem 361 " title="Problem 361 ">Problem 361</a>. In both cases we used the method of proof by contradiction; for that purpose we assumed that there was a value of \(n\) for which our formula wasn't true. We then chose \(k\) to be the smallest value of \(n\) for which our formula wasn't true. This meant that when \(n\) was \(k-1\text{,}\) our formula was true, (or else that \(k-1\) wasn't a nonnegative integer in <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problem 360</a> or that \(k-1\) wasn't a positive integer in <a knowl="./knowl/sumodd.html" knowl-id="xref-sumodd" alt="Problem 361 " title="Problem 361 ">Problem 361</a>). What we did next was the crux of the proof. We showed that the truth of our statement for \(n=k-1\) implied the truth of our statement for \(n=k\text{.}\) This gave us a contradiction to the assumption that there was an \(n\) that made the statement false. In fact, we will see that we can bypass entirely the use of proof by contradiction. We used it to help you discover the central ideas of the technique of proof by mathematical induction.</p>
-<p id="p-1976">The central core of mathematical induction is the proof that the truth of a statement about the integer \(n\) for \(n=k-1\) implies the truth of the statement for \(n=k\text{.}\) For example, once we know that a set of size 0 has \(2^0\) subsets, if we have proved our implication, we can then conclude that a set of size 1 has \(2^1\) subsets, from which we can conclude that a set of size 2 has \(2^2\) subsets, from which we can conclude that a set of size 3 has \(2^3\) subsets, and so on up to a set of size \(n\) having \(2^n\) subsets for any nonnegative integer \(n\) we choose. In other words, although it was the idea of proof by contradiction that led us to think about such an implication, we can now do without the contradiction at all. What we need to prove a statement about \(n\) by this method is a place to start, that is a value \(b\) of \(n\) for which we know the statement to be true, and then a proof that the truth of our statement for \(n=k-1\) implies the truth of the statement for \(n=k\) whenever \(k&gt;b\text{.}\)</p></section><section class="subsection" id="subsection-74"><header title="Subsection B.1.2 Mathematical induction"><h1 class="heading hide-type" alt="Subsection B.1.2 Mathematical induction">
-<span class="type">Subsection</span><span class="codenumber">B.1.2</span><span class="title">Mathematical induction</span><a href="Induction.html#subsection-74" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1977">The <em class="terminology">principle of mathematical induction</em> states that</p>
-<blockquote class="blockquote" id="blockquote-17">
-<p id="p-1978">In order to prove a statement about an integer \(n\text{,}\) if we can </p>
-<ol id="ol-27" style="list-style-type: decimal;">
-<li id="li-129"><p id="p-1979">Prove the statement when \(n=b\text{,}\) for some fixed integer \(b\)</p></li>
-<li id="li-130"><p id="p-1980">Show that the truth of the statement for \(n=k-1\) implies the truth of the statement for \(n=k\) whenever \(k&gt;b\text{,}\)</p></li>
-</ol>
-<p> then we can conclude the statement is true for all integers \(n\ge
-b\text{.}\)</p>
-</blockquote>
-<p id="p-1981">As an example, let us return to <a knowl="./knowl/subsetsbysmallestcounterexample.html" knowl-id="xref-subsetsbysmallestcounterexample" alt="Problem 360 " title="Problem 360 ">Problem 360</a>. The statement we wish to prove is the statement that “A set of size \(n\) has \(2^n\) subsets.”</p>
-<blockquote class="blockquote" id="blockquote-18"><p id="p-1982">Our statement is true when \(n=0\text{,}\) because a set of size 0 is the empty set and the empty set has \(1=2^0\) subsets. (This step of our proof is called a <em class="terminology">base step</em>.) Now suppose that \(k&gt;0\) and every set with \(k-1\) elements has \(2^{k-1}\) subsets.  Suppose \(S=\{a_1,a_2,\ldots a_k\}\) is a set with \(k\) elements. We partition the subsets of \(S\) into two blocks.  Block \(B_1\) consists of the subsets that do not contain \(a_n\) and block \(B_2\) consists of the subsets that do contain \(a_n\text{.}\)  Each set in \(B_1\) is a subset of \(\{a_1,a_2,\ldots a_{k-1}\}\text{,}\) and each subset of \(\{a_1,a_2, \ldots
-a_{k-1}\}\) is in \(B_1\text{.}\)  Thus \(B_1\) is the set of all subsets of \(\{a_1,a_2,\ldots a_{k-1}\}\text{.}\)  Therefore by our assumption in the first sentence of this paragraph, the size of \(B_1\) is \(2^{k-1}\text{.}\)  Consider the function from \(B_2\) to \(B_1\) which takes a subset of \(S\) including \(a_n\) and removes \(a_n\) from it.  This function is defined on \(B_2\text{,}\) because every set in \(B_2\) contains \(a_n\text{.}\)  This function is onto, because if \(T\) is a set in \(B_1\text{,}\) then \(T\cup \{a_k\}\) is a set in \(B_2\) which the function sends to \(T\text{.}\)  This function is one-to-one because if \(V\) and \(W\) are two different sets in \(B_2\text{,}\) then removing \(a_k\) from them gives two different sets in \(B_1\text{.}\)  Thus we have a bijection between \(B_1\) and \(B_2\text{,}\) so \(B_1\) and \(B_2\) have the same size.  Therefore by the sum principle the size of \(B_1\cup B_2\) is \(2^{k-1} +2^{k-1}=2^k\text{.}\)  Therefore \(S\) has \(2^k\) subsets.  This shows that if a set of size \(k-1\) has \(2^{k-1}\) subsets, then a set of size \(k\) has \(2^k\) subsets.  Therefore by the principle of mathematical induction, a set of size \(n\) has \(2^n\) subsets for every nonnegative integer \(n\text{.}\)</p></blockquote>
-<p id="p-1983">The first sentence of the last paragraph is called the <em class="terminology">inductive hypothesis</em>. In an inductive proof we always make an inductive hypothesis as part of proving that the truth of our statement when \(n=k-1\) implies the truth of our statement when \(n=k\text{.}\) The last paragraph itself is called the <em class="terminology">inductive step</em> of our proof. In an inductive step we derive the statement for \(n=k\) from the statement for \(n=k-1\text{,}\) thus proving that the truth of our statement when \(n=k-1\) implies the truth of our statement when \(n=k\text{.}\) The last sentence in the last paragraph is called the <em class="terminology">inductive conclusion</em>. All inductive proofs should have a base step, an inductive hypothesis, an inductive step, and an inductive conclusion.</p>
-<p id="p-1984">There are a couple details worth noticing. First, in this problem, our base step was the case \(n=0\text{,}\) or in other words, we had \(b=0\text{.}\) However, in other proofs, \(b\) could be any integer, positive, negative, or 0. Second, our proof that the truth of our statement for \(n=k-1\) implies the truth of our statement for \(n=k\) required that \(k\) be at least 1, so that there would be an element \(a_k\) we could take away in order to describe our bijection. However, condition (2) of the principle of mathematical induction only requires that we be able to prove the implication for \(k&gt;0\text{,}\) so we were allowed to assume \(k&gt;0\text{.}\)</p>
-<article class="example-like" id="activity-362"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">362</span>
-</h5>
-<p id="p-1985">Use mathematical induction to prove your formula from <a knowl="./knowl/sumodd.html" knowl-id="xref-sumodd" alt="Problem 361 " title="Problem 361 ">Problem 361</a>.</p></article></section><section class="subsection" id="subsection-75"><header title="Subsection B.1.3 Proving algebraic statements by induction"><h1 class="heading hide-type" alt="Subsection B.1.3 Proving algebraic statements by induction">
-<span class="type">Subsection</span><span class="codenumber">B.1.3</span><span class="title">Proving algebraic statements by induction</span><a href="Induction.html#subsection-75" class="permalink">¶ permalink</a>
-</h1></header><article class="example-like" id="activity-363"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">363</span>
-</h5>
-<p id="p-1986">Use mathematical induction to prove the well-known formula that for all positive integers \(n\text{,}\)</p>
-\begin{equation*}
-1+2 + \cdots +n = \frac{n(n+1)}{2}.
-\end{equation*}
-</article><article class="example-like" id="activity-364"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">364</span>
-</h5>
-<p id="p-1989">Experiment with various values of \(n\) in the sum</p>
-\begin{equation*}
-\frac{1}{1\cdot2}+\frac{1}{2\cdot3} + \frac{1}{3\cdot
-4}+\cdots+\frac{1}{n\cdot (n+1)} = \sum_{i=1}^n \frac{1}{i\cdot(i+1)}.
-\end{equation*}
-<p id="p-1990">Guess a formula for this sum and prove your guess is correct by induction.</p></article><article class="example-like" id="activity-365"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">365</span>
-</h5>
-<p id="p-1995">For large values of \(n\text{,}\) which is larger, \(n^2\) or \(2^n\text{?}\) Use mathematical induction to prove that you are correct.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-255" id="hint-255"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-255" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1996">You've probably already seen that, with small values of \(n\text{,}\) sometimes \(n^2\) and sometimes \(2^n\) is bigger. But if you keep experimenting one of the functions  seems to get bigger and stay bigger than the other. The number \(n=b\) where this change occurs is a good choice for a base case. So as not to spoil the problem for you, we won't say here what this value of \(b\) is. However you    shouldn't be surprised later in the proof if you need to use the assumption that \(n /gt b\text{.}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-256" id="hint-256"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-256" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1997">You may have reached the point of assuming that \(2^{k-1} \gt (k-1)^2\) and found yourself wondering how to prove that \(2^k \gt k^2\text{.}\) A natural thing to try is multiplying both sides of \(2^{k-1} \gt (k-1)^2\) by \(2\text{.}\) This ends up giving you \(2^k \gt 2k^2 - 4k +2\text{.}\) Based on previous experience it is natural for you to expect to see how to turn this new right hand side into \(k^2\) but not see how to do it. Here is the hint. You only need to show that the right hand side is greater than or equal to \(k^2\text{.}\) For this purpose you need to show that one of the two \(k^2\)s in \(2k^2\) somehow balances out the \(-4k\text{.}\) See if you can figure out how the fact that you are only considering \(k\)s with \(k \gt b\) can help you out.</p></span></span>
-</div></article><article class="example-like" id="activity-366"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">366</span>
-</h5>
-<p id="p-1999">What is wrong with the following attempt at an inductive proof that all integers in any consecutive set of \(n\) integers are equal for every positive integer \(n\text{?}\) For an arbitrary integer \(i\text{,}\) all integers from \(i\) to \(i\) are equal, so our statement is true when \(n=1\text{.}\) Now suppose \(k&gt;1\) and all integers in any consecutive set of \(k-1\) integers are equal. Let \(S\) be a set of \(k\) consecutive integers. By the inductive hypothesis, the first \(k-1\) elements of \(S\) are equal and the last \(k-1\) elements of \(S\) are equal. Therefore all the elements in the set \(S\) are equal. Thus by the principle of mathematical induction, for every positive \(n\text{,}\) every \(n\) consecutive integers are equal.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-257" id="hint-257"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-257" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-2000">When you suspect an argument is not valid, it may be helpful to explicitly try several values of \(n\) to see if it makes sense for them. Often small values of \(n\) are adequate to find the flaw. If you find one flaw, it invalidates everything that comes afterwards (unless, of course, you can fix the flaw).</p></span></span>
-</div></article></section><section class="subsection" id="subsection-76"><header title="Subsection B.1.4 Strong Induction"><h1 class="heading hide-type" alt="Subsection B.1.4 Strong Induction">
-<span class="type">Subsection</span><span class="codenumber">B.1.4</span><span class="title">Strong Induction</span><a href="Induction.html#subsection-76" class="permalink">¶ permalink</a>
-</h1></header><p id="p-2002">One way of looking at the principle of mathematical induction is that it tells us that if we know the “first” case of a theorem and we can derive each other case of the theorem from a smaller case, then the theorem is true in all cases. However the particular way in which we stated the theorem is rather restrictive in that it requires us to derive each case from the immediately preceding case. This restriction is not necessary, and removing it leads us to a more general statement of the principal of mathematical induction which people often call the <em class="terminology">strong principle of mathematical induction</em>. It states:</p>
-<blockquote class="blockquote" id="blockquote-19">
-<p id="p-2003">In order to prove a statement about an integer \(n\) if we can </p>
-<ol id="ol-28" style="list-style-type: decimal;">
-<li id="li-131"><p id="p-2004">prove our statement when \(n=b\) and</p></li>
-<li id="li-132"><p id="p-2005">prove that the statements we get with \(n=b\text{,}\) \(n=b+1\text{,}\) … \(n=k-1\) imply the statement with \(n=k\text{,}\)</p></li>
-</ol>
-<p> then our statement is true for all integers \(n\ge b\text{.}\)</p>
-</blockquote>
-<article class="example-like" id="activity-367"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">367</span>
-</h5>
-<p id="p-2006">What postage do you think we can make with five and six cent stamps? Is there a number \(N\) such that if \(n\ge N\text{,}\) then we can make \(n\) cents worth of postage?</p></article><p id="p-2008">You probably see that we can make \(n\) cents worth of postage as long as \(n\) is at least 20. However you didn't try to make 26 cents in postage by working with 25 cents; rather you saw that you could get 20 cents and then add six cents to that to get 26 cents. Thus if we want to prove by induction that we are right that if \(n\ge 20\text{,}\) then we can make \(n\) cents worth of postage, we are going to have to use the strong version of the principle of mathematical induction.</p>
-<p id="p-2009">We know that we can make 20 cents with four five-cent stamps. Now we let \(k\) be a number greater than 20, and assume that it is possible to make any amount between 20 and \(k-1\) cents in postage with five and six cent stamps. Now if \(k\) is less than 25, it is 21, 22, 23, or 24. We can make 21 with three fives and one six. We can make 22 with two fives and two sixes, 23 with one five and three sixes, and 24 with four sixes. Otherwise \(k-5\) is between 20 and \(k-1\) (inclusive) and so by our inductive hypothesis, we know that \(k-5\) cents can be made with five and six cent stamps, so with one more five cent stamp, so can \(k\) cents. Thus by the (strong) principle of mathematical induction, we can make \(n\) cents in stamps with five and six cent stamps for each \(n\ge 20\text{.}\)</p>
-<p id="p-2010">Some people might say that we really had five base cases, \(n=20\text{,}\) 21, 22, 23, and 24, in the proof above and once we had proved those five consecutive base cases, then we could reduce any other case to one of these base cases by successively subtracting 5. That is an appropriate way to look at the proof. A logician would say that it is also the case that, for example, by proving we could make 22 cents, we also proved that if we can make 20 cents and 21 cents in stamps, then we could also make 22 cents. We just didn't bother to use the assumption that we could make 20 cents and 21 cents! So long as one point of view or the other satisfies you, you are ready to use this kind of argument in proofs.</p>
-<article class="example-like" id="activity-368"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">368</span>
-</h5>
-<p id="p-2011">A number greater than one is called prime if it has no factors other than itself and one. Show that each positive number is either a prime or a power of a prime or a product of powers of prime numbers.</p></article><article class="example-like" id="activity-369"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">369</span>
-</h5>
-<p id="p-2013">Show that the number of prime factors of a positive number \(n\ge 2\) is less than or equal to \(\log_2 n\text{.}\)  (If a prime occurs to the \(k\)th power in a factorization of \(n\text{,}\) you can consider that power as \(k\) prime factors.)  (There is a way to do this by induction and a way to do it without induction.  It would be ideal to find both ways.)</p></article><article class="example-like" id="euclidsdivthm"><h5 class="heading">
-<span class="type">Problem</span><span class="codenumber">370</span>
-</h5>
-<p id="p-2016">One of the most powerful statements in elementary number theory is Euclid's Division Theorem.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-25" id="fn-25"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-25" style="display: none;" class="tex2jax_ignore"><span class="footnote">In a curious twist of language, mathematicians have long called The Division Algorithm or Euclid's Division Algorithm. However as computer science has grown in importance, the word algorithm has gotten a more precise definition: an algorithm is now a method to do something. There is a method (in fact there are more than one) to get the \(q\) and \(r\) that Euclid's Division Theorem gives us, and computer scientists would call these methods algorithms. Your author has chosen to break with mathematical tradition and restrict his use of the word algorithm to the more precise interpretation as a computer scientist probably would. We aren't giving a method here, so this is why the name used here is “Euclid's Division Theorem.”</span></span> This states that if \(m\) and \(n\) are positive integers, then there are unique nonnegative intergers \(q\) and \(r\) with \(0 \le r \lt n\text{,}\) such that \(m = nq + r\text{.}\) The number \(q\) is called the quotient and the number \(r\) is called the remainder. In computer science it is common to denote \(r\) by \(m \mod n\text{.}\) In elementary school you learned how to use long division to find \(q\) and \(r\text{.}\) However, it is unlikely that anyone ever proved for you that for any pair of positive intgers, \(m\) and \(n\text{,}\) there is such a pair of nonnegative numbers \(q\) and \(r\text{.}\) You now have the tools needed to prove this. Do so.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-258" id="hint-258"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-258" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-2017">You might start out by ignoring the word unique and give a proof of the simpler theorem that results. Then look at your proof to see how you can include uniqueness in it.</p></span></span>
-</div></article></section></section></section></div></main>
+<span class="type">Appendix</span><span class="codenumber">B</span><span class="title">Mathematical Induction</span>
+</h1>
+<a href="Induction.html" class="permalink">¶</a></header><nav class="summary-links"><a href="app2-1-induction.html"><span class="codenumber">B.1</span><span class="title">The Principle of Mathematical Induction</span></a></nav></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

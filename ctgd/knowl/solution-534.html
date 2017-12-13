@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:55-06:00    *-->
+<!--*    on 2017-12-13T14:15:03-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,25 +12,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">325.1</span>
-</h5>
-<p>We can first consider all ways of coloring the vertices of the cube with the four colors; once those vertices are in place, the number of ways to put the sticks in is the result of <a knowl="./knowl/coloredsticks.html" knowl-id="xref-coloredsticks" alt="Problem 324 " title="Problem 324 ">Problem 324</a>, so by the product principle then number of ways to choose the colors of the vertices and edges is the product of the number of ways to choose each. Thus we just need to consider the action of the rotation group of the cube on the vertices: </p>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">324.1</span>
+</h6>
+<p>For this problem we are interested in the action of the rotation group of the cube on the edges. Now we think of the group elements as permutations of the edges and analyze their cycle structure. </p>
 <ul style="list-style-type: disc;">
-<li>identity is the product of eight one-cycles.</li>
-<li>90 or 270 degree rotation around an axis perpendicular to two opposite faces is a product of two four-cycles.</li>
-<li>180 degree rotation around an axis perpendicular to two opposite faces is a product of four two-cycles.</li>
-<li>180 degree rotation around an axis joining two opposite edges is a product of four two-cycles.</li>
-<li>120 or 240 degree rotation around an axis through two diagonally opposite vertices is a product of two three-cycles and two one-cycles.</li>
+<li>The identity is a product of 12 one-cycles.</li>
+<li>A 90 or 270 degree rotation around an axis perpendicular to two opposite faces is a product of three four-cycles.</li>
+<li>A 180 degree rotation around an axis perpendicular to two opposite faces is a product of six two-cycles.</li>
+<li>A 180 degree rotation around an axis perpendicular to two opposite edges is a product of five two-cycles and two one-cycles.</li>
+<li>A 120 degree rotation around an axis connecting two diagonally opposite vertices is a product of four three-cycles.</li>
 </ul>
-<p> Thus the cycle index for this action is</p>
+<p> Thus the cycle index is</p>
 \begin{equation*}
-\frac{1}{24}\left(z_1^8+6z_4^2 + 9z_2^4 + 8z_3^2z_1^2\right).
+\frac{1}{24}\left(z_1^{12}+6z_4^3+3z_2^6+6z_2^5z_1^2 + 8z_3^4\right).
 \end{equation*}
-<p>Substituting 4 for each variable gives us</p>
+<p>We substitute the number three for each of the variables to get</p>
 \begin{equation*}
-\frac{1}{24}\left(4^8+6\cdot4^2 +9\cdot 4^4 + 8\cdot4^2\cdot4^2\right)=2916.
+\frac{1}{24}\left(3^{12}+6\cdot 3^3+3\cdot3^6+6\cdot 3^7 +8\cdot3^4\right)=22815
 \end{equation*}
-<p>Thus we have \(22815\cdot2916=66,528,540\) possible colored cubes.</p></span><span class="incontext"><a href="sec_groups-polya.html#solution-534">in-context</a></span>
+<p>ways to make the cube. To compute the number of ways with four sticks of each color, we need to apply the Pólya-Redfield theorem. Substituting \(R^i+B^i+G^i\) for \(z_i\) in the cycle index gives us</p>
+<p>\(\frac{1}{24}\Big((R+B+G)^{12}+6((R^4+B^4+G^4)^3+3(R^2+B^2+G^2)^6+\\6(R^2+B^2+B^2)^5(R+B+G)^2
++8(R^3+B^3+G^3)^4\Big)\text{.}\)</p>
+<p>The coefficient of \(R^4B^4G^4\) is</p>
+\begin{align*}
+\frac{1}{24}\left(\binom{12}{4,4,4}+6\binom{3}{1,1,1}+3\binom{6}{2,2,2}+
+6\binom{3}{1}\binom{5}{2,2,1}\binom{2}{2,0,0}
+\right) =\amp\\
+\frac{1}{24}\left(\frac{12!}{4!4!4!}+6\cdot3!+3\frac{6!}{2!2!2!}+6\cdot3\frac{5!}{2!2!1!}\right)=1479 \amp
+\end{align*}
+<p>The coefficient of \(R^2B^4G^6\) is</p>
+\begin{align*}
+\frac{1}{24}\left(\binom{12}{2,4,6}
++3\binom{6}{1,2,3}+6\left(\binom{5}{0,2,3}+\binom{5}{1,1,3}+\binom{5}{1,2,2}\right)\right) =\amp\\
+\frac{1}{24}\left(\frac{12!}{2!4!6!}+3\frac{6!}{1!2!3!}+6\left(\frac{5!}{2!3!}+\frac{5!}{1!1!3!}
++\frac{5!}{1!2!2!}\right)\right)=600.
+\end{align*}
+</span><span class="incontext"><a href="sec_groups-polya.html#solution-534">in-context</a></span>
 </body>
 </html>

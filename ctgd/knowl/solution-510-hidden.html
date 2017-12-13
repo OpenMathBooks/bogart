@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:51-06:00    *-->
+<!--*    on 2017-12-13T14:14:58-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,5 +11,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>Here we must consider the action of the rotation group of the cube on lists of six distinct colors. But no nontrivial rotation will fix a cube with all its faces colored differently. The identity rotation will fix all \(6!\) lists, and there are 24 members of the rotation group, so we have \(6!/24=6\cdot5=30\) ways to paint the faces of a cube with six distinct colors, using each color</p></span></body>
+<body><span class="solution"><p>Here we need to consider the action of \(D_{15}\) on lists (functions from \([15]\) to \(\{R,B,G\}\)) with five \(R\)s, five \(B\)s, and five \(G\)s. The identity will fix \(\binom{15}{5,5,5}\) lists. A rotation through 3,6,9,or 12 places will fix any function that has the same value in places 1, 4, 7, 10, and 13, the same value in places 2, 5, 8, 11, and 14, and the same value in places 3, 6, 9, 12, and 15. There are \(3!\) such lists. There is no other rotation that fixes any lists. Each flip is around an axis that goes from bead to the space between two opposite beads. If it fixed a list, the seven colors to the left of the axis would have to equal the seven colors to the right of the axis. Thus the number of beads of each color on the left and right sides would have to be equal. So except for the color of the bead the axis goes through, we would have to have an even number of beads of each color for a flip to fix a list of beads. Thus no flip fixes any functions. Therefore by the CFB theorem we have</p>
+\begin{equation*}
+\frac{1}{2\cdot15}\left(\frac{15!}{5!5!5!} +4\cdot 3!\right)=25,226
+\end{equation*}
+<p>necklaces. (The numerical answer, which was obtained from Maple, is not important here.)</p></span></body>
 </html>

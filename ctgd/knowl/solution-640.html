@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:08-06:00    *-->
+<!--*    on 2017-12-13T14:15:25-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,14 +12,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">404.1</span>
-</h5>
-<p>By the product principle for exponential generating functions it is</p>
-\begin{equation*}
-e^{2x}\left(1+\frac{(2x)^2}{2!}+ \frac{(2x)^4}{4!} + \cdots \right) =
-e^{2x}\frac{e^{2x}-e^{-2x}}{2}=e^{2x}\cosh(2x).
-\end{equation*}
-<p>Since \(\cosh(2x) = \sum_{i=0}^\infty \frac{x^{2i}}{(2i)!}\) and \(e^{3x}\) is \(\sum_{i=0}^\infty 3^i \frac{x^i}{i!}\text{,}\) we have the the coefficient of \(x^n\) is \(\sum_{i=0}^{\lfloor n/2 \rfloor} \frac{3^{n-2i}}{(n-2i)!}\frac{2^{2i}}{(2i)!}\text{,}\) and so the number of ways to paint \(n\) lightpoles is \(n!\) times this, which simplifies to \(\sum_{i=1}^{\lfloor n/2 \rfloor} \binom{n}{2i} 3^{n-2i}2^{2i}\text{.}\)</p></span><span class="incontext"><a href="expogenfun.html#solution-640">in-context</a></span>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">403.1</span>
+</h6>
+<p>In <a href="s3-1-distrib-idea.html#orderedfunctionsection" alt="Subsection 3.1.2 Ordered functions" title="Subsection 3.1.2 Ordered functions">Section 3.1.2</a> we remarked that an alternate definition of a function from \(S\) to \(T\) is that it is an assignment of disjoint subsets of \(S\) to elements of \(T\) so that the union of the subsets is \(S\text{.}\) Thus a function from \([k]\) to \([n]\) may be thought of as an \(n\)-tuple of disjoint subsets of \(S\) whose union is \([k]\text{.}\) In particular, an injection from \([k]\) to \([n]\) (which is a \(k\)-element permutation of \([n]\)) can be thought of as a \(n\)-tuple of disjoint singleton sets and empty sets whose union is \(n\text{.}\) The number of such \(n\)-tuples is therefore the number of \(k\)-element permutations of \([n]\text{.}\) If \(n=1\text{,}\) the possible \(n\)-tuples are \((\emptyset)\) and \(\{1\}\text{,}\) and so the EGF for such \(n\)-tuples is \(1+x\text{.}\) Then by <a knowl="./knowl/fspeciescorollary1.html" knowl-id="xref-fspeciescorollary1" alt="Corollary C.4.2 " title="Corollary C.4.2 ">Corollary C.4.2</a>, if we let the value of an \(n\)-tuple of disjoint singletons and empty sets be the union of the sets in the \(n\)-tuple, the EGF for the number of \(n\)-tuples whose value is \([k]\) is \((1+x)^n\text{.}\) Thus this is the EGF for \(k\)-element permutations of \([n]\text{.}\)</p></span><span class="incontext"><a href="app3-4-prodprinc.html#solution-640">in-context</a></span>
 </body>
 </html>

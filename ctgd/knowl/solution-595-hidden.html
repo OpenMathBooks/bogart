@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:03-06:00    *-->
+<!--*    on 2017-12-13T14:15:17-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,13 +11,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>When \(n=0\text{,}\) \(0=0(0+1)/2\text{,}\) so our formula holds. Now suppose that\(k&gt;0\) and that our formula holds when \(n=k-1\text{,}\) so that \(1+2+\cdots+k-1=(k-1)k/2\text{.}\) Add \(k\) to both sides of this equation to get</p>
-\begin{align*}
-1+2+\cdots+(k-1)+k =\amp  (k-1)k/2 +k\\
-=\amp  k^2/2-k/2+k\\
-=\amp
-k^2/2+k/2\\
-=\amp k(k+1)/2.
-\end{align*}
-<p>Thus the truth of our formula for \(n=k-1\) implies its truth for \(n=k\text{.}\) Therefore by the principle of mathematical induction, our formula holds for all nonnegative integers \(n\text{.}\)</p></span></body>
+<body><span class="solution"><p>We guess that \(1+3+5+\cdots+2n-1=n^2\text{.}\) Clearly this is true when \(n\) is 1, 2, or 3. Suppose there is an \(n\) for which this formula is not true, and let \(k\) be the smallest such \(n\text{.}\) Then \(1+3+5+\cdots+2(k-1)-1 =
+(k-1)^2\text{.}\) Simplifying, \(1+3+5+\cdots+2k-3 =
+(k-1)^2\text{.}\) Now suppose we add \(2k-1\) to both sides of this equation. Then we get</p>
+\begin{equation*}
+1+3+5+\cdots+2k-3 +2k-1 =
+(k-1)^2+2k-1 = k^2-2k+1+2k-1=k^2.
+\end{equation*}
+<p>But this is a contradiction, because we assumed that \(k\) was the smallest value of \(n\) for which the sum on the left is not \(n^2\text{.}\) Therefore the assumption that there is an \(n\) for which \(1+3+5+\cdots+2n-1
+\not=n^2\) must be false, so the equation \(1+3+5+\cdots+2n-1=n^2\) must be true for all positive integers \(n\text{.}\)</p></span></body>
 </html>

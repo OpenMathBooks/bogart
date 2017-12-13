@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:06-06:00    *-->
+<!--*    on 2017-12-13T14:15:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,24 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p></p>
-\begin{align*}
-\sum_{n=2}^\infty d_n\frac{x^{n-1}}{(n-1)!}
-=\amp \sum_{n=2}^\infty d_{n-1}\frac{x^{n-1}}{(n-2)!} +\sum_{n=2}^\infty
-d_{n-2}\frac{x^{n-1}}{(n-2)!}\\
-\sum_{n=1}^\infty d_n\frac{x^{n-1}}{(n-1)!} -d_1  =\amp
-x\sum_{n=2}^\infty d_{n-1}\frac{x^{n-2}}{(n-2)!} +xD(x)\\
-D'(x) -d_1  =\amp  xD'(x) +xD(x)\\
-D'(x)(1-x)  =\amp  xD(x)\\
-\frac{D'(x)}{D(x)}  =\amp  \frac{x}{1-x}
-\end{align*}
-<p>This gives us \(\ln D(x) = -\ln(1-x) -x +c\text{,}\) so that \(D(x) = \frac{1}{1-x}e^{-x}e^c\text{.}\) Since \(d_0=1\text{,}\) we have \(d(0)=1\text{,}\) so \(c=0\) and</p>
-\begin{align*}
-D(x)  =\amp  \frac{e^{-x}}{1-x}\\
-=\amp
-\sum_{i=0}^\infty(-1)^i\frac{x^i}{i!}\cdot\sum_{j=0}^\infty
-x^j=\sum_{i=0}^\infty\left(\sum_{j=0}^i \frac{(-1)^j}{j!}\right)
-x^i.
-\end{align*}
-<p>Thus \(d_n = n!\sum_{j=0}^n\frac{(-1)^j}{j!}\text{,}\) as we computed by inclusion and exclusion.</p></span></body>
+<body><span class="solution"><p>\(T(x) = \sum_{i=0}^\infty (x+x^2/2)^i/i!\text{.}\) By the binomial theorem, this gives \(T(x) = \sum_{i=0}^\infty \frac{\sum_{j=0}^i \binom{i}{j}x^j\bigl(\frac{x^2}{2}\bigr)^{i-j}}{
+i!}=\sum_{i=0}^\infty\frac{\sum_{j=0}^i\binom{i}{j}x^{2i-j}2^{j-i}}{i!}\text{.}\) Then the coefficient \(c_n\) of \(x^n\) is the sum over all \(i\) and \(j\) with \(2i-j=n\) and \(j\le i\) of \(\binom{i}{j}\frac{n!}{i!}2^{j-i}\text{.}\) But if \(2i-j=n\text{,}\) then \(j= 2i-n\text{,}\) and if \(2i-n\le i\text{,}\) then \(i\le n\text{,}\) so that \(c_n
+= \frac{n!}{2^n}\sum_{i=0}^n\binom{i}{2i-n}\frac{2^i}{i!}\text{.}\) Note that \(\binom{i}{2i-n}\) is the same as \(\binom{i}{n-i}\text{,}\) which is 0 unless \(i\ge
+n/2\text{,}\) which reduces our sum to \(c_n = \frac{n!}{2^n}\sum_{i=\lceil n/2\rceil}^n\binom{i}{n-i}\frac{2^i}{i!}\text{.}\)</p></span></body>
 </html>

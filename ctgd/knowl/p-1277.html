@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:36-06:00    *-->
+<!--*    on 2017-12-13T14:14:40-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,33 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p></p>
-<ol style="list-style-type: lower-alpha;">
-<li><p>\(a_n=(1+\frac{.01p}{12})a_{n-1}-m\text{.}\)</p></li>
-<li>
-<p>From <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a> or by applying generating functions we have</p>
-\begin{align*}
-a_n  =\amp  A(1+\frac{.01p}{12})^n-m\frac{1-(1+\frac{.01p}{12})^n}{1-(1+\frac{.01p}{12})}\\
-=\amp  \left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}
-\end{align*}
-</li>
-<li><p>\(\left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}=0\) gives us the equation \(\left(1+\frac{.01p}{12}\right)^n=\frac{1200m}{1200m-Ap}\text{.}\) Taking logarithms to any base we choose gives us \(n\log (1+\frac{.01p}{12})=\log 1200m-\log (1200m-Ap)\) and so \(n=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\text{.}\)</p></li>
-<li>
-<p>\(360=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\) is the equation we need to solve for \(m\text{,}\) the monthly payment. We need to chose some base for the logarithm so we can write its inverse function; suppose we use logs to the base 10. Then</p>
-\begin{align*}
-360\log (1+\frac{.01p}{12})  =\amp  \log
-1200m-\log (1200m-Ap)\\
-10^{360\log (1+\frac{.01p}{12})} =\amp 10^{\log
-1200m/(1200m-Ap)}\\
-(1+\frac{.01p}{12})^{360}  =\amp 1200m/(1200m-Ap)\\
-\left(1200m-Ap\right)(1+\frac{.01p}{12})^{360} =\amp 1200m\\
-1200m\left((1+\frac{.01p}{12})^{360}-1\right) =\amp  Ap(1+\frac{.01p}{12})^{360}\\
-m  =\amp  \frac{Ap(1+\frac{.01p}{12})^{360}}{1200\left((1+\frac{.01p}{12})^{360}-1\right)}
-\end{align*}
-<p>is our monthly payment.</p>
-</li>
-</ol>
-<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1277">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that a Dyck Path is a diagonal lattice path that never goes lower than its starting point and a Catalan Path of length \(2n\) is a Dyck path that goes from \((0,0)\) to \((2n,0)\) The Catalan number \(C_n\) is the number of Catalan paths of length \(2n\text{.}\) We take \(C_0=1\text{.}\) A Catalan path could touch the \(x\)-axis several times before it reaches \((2n,0)\text{.}\) Its first touch can be any point \((2i,0)\) between \((2,0)\) and \((2n,0)\text{.}\) For the path to touch first at \((0,2i)\text{,}\) the path must start with an upstep and then proceed as a Dyck path from \((1,1)\) to \((2i-1,1)\text{.}\) From there it must take a downstep. But the number of Dyck paths from \((1,1)\) to \((2i-1,1)\) is the same as the number of Catalan paths from \((0,0)\) to \((2i-2,0)\text{.}\) The number of Catalan paths is the number whose first touch of the \(x\)-axis is at \(x=2\) plus the number whose first touch is at \(x=4\text{,}\)…, through the number whose first touch is at \(2n\text{.}\) After the first touch at \(x=2i\text{,}\) the path then behaves as a Catalan path from \((2i,0)\) to \((2n,0)\text{.}\) The number of such paths is \(C_{n-i}\text{.}\) By the product principle, the number of Catalan paths whose first touch is at \(x=2i\) is \(C_{i-1}C_{n-i}\text{.}\) Then by the sum principle, the number of Catalan paths of length 1 or more is</p>
+\begin{equation*}
+C_n=\sum_{i=1}^nC_{i-1}C_{n-i}\text{.}
+\end{equation*}
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1277">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:20-06:00    *-->
+<!--*    on 2017-12-13T14:14:25-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,15 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>By multiplication, we can see that every falling factorial polynomial can be expressed as a sum of numerical multiples of powers of \(x\text{.}\) In symbols, this means that there are numbers \(s(k,n)\) (notice that this \(s\) is lower case, not upper case) such that we may write \(x^{\underline{k}} =
-\sum_{n=0}^k s(k,n)x^n\text{.}\) These numbers \(s(k,n)\) are called Stirling Numbers of the first kind. By thinking algebraically about what the formula</p>
-\begin{equation}
-x^{\underline{k}} =
-x^{\underline{k-1}}(x-k+1)
-\tag{3.3}
-\end{equation}
-<p>means, we can find a recurrence for Stirling numbers of the first kind that gives us another triangular array of numbers called Stirling's triangle of the first kind. Explain why <a knowl="./knowl/stirling1.html" knowl-id="xref-stirling1" alt="Equation 3.3 " title="Equation 3.3 ">Equation (3.3)</a> is true and use it to derive a recurrence for \(s(k,n)\) in terms of \(s(k-1,n-1)\) and \(s(k-1,n)\text{.}\)</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>When we use the distributive law to multiply out \((x_1+x_2+\cdots +x_n)^k\text{,}\) we will get a sum of a bunch of terms of the form \(x_1^{i_1}x_2^{i_2}\cdots x_n^{i_n}\) where \(i_1+i_2+\cdots+ i_n=k\text{.}\)  The terms with a given sequence \(i_1,i_2,\ldots, i_n\) of exponents will arise from choosing, as we apply the distributive law over and over again, \(x_1\) from \(i_1\) of the factors, \(x_2\) from \(i_2\) of the factors, and so on. Thus the number of terms \(x_1^{i_1}x_2^{i_2}\cdots x_n^{i_n}\) will be the number of ways to label \(i_1\) of the factors with a 1, \(i_2\) of the factors with a 2, …, and \(i_n\) of the factors with an \(n\text{.}\) The number of ways to do this is a multinomial coefficient, as we now explain. This labeling gives us a function from \([k]\) to \([n]\) as follows. If factor \(i\) is labelled \(j\) we let \(f(i) =j\text{.}\) Further each function \(f\) from \([k]\) to \([n]\) gives us that maps \(i_j\) elements of \([k]\) to \(j\) will give us such a labelling. Thus the coefficient of \(x_1^{i_1}x_2^{i_2}\cdots x_n^{i_n}\) will be the multinomial coefficient \(\binom{k}{i_1,i_2,\ldots, i_n}\text{.}\)</p>
 <span class="incontext"><a href="s3-2-partitions.html#p-853">in-context</a></span>
 </body>
 </html>

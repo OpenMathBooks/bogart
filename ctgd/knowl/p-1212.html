@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:32-06:00    *-->
+<!--*    on 2017-12-13T14:14:37-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,17 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Multiply both sides by \(x^i\) and sum both the left hand side and right hand side from \(i=1\) to infinity.  In the left-hand side use the fact that</p>
-\begin{equation*}
-\sum_{i=1}^\infty a_ix^i = (\sum_{i=0}^\infty x^i) -a_0
-\end{equation*}
-<p>and in the right hand side, use the fact that</p>
-\begin{equation*}
-\sum_{i=1}^\infty a_{i-1}x^i = x\sum_{i=1}^\infty a_ix^{i-1}
-=x\sum_{j=0}^\infty a_jx^j =x\sum_{i=0}^\infty a_ix^i
-\end{equation*}
-<p>(where we substituted \(j\) for \(i-1\) to see explicitly how to change the limits of summation, a surprisingly useful trick) to rewrite the equation in terms of the power series \(\sum_{i=0}^\infty a_ix^i\text{.}\)  Solve the resulting equation for the power series \(\sum_{i=0}^\infty a_ix^i\text{.}\) You can save a lot of writing by using a variable like \(y\) to stand for the power series.</p>
-<span class="incontext"><a href="sec_genfns-recurrence.html#p-1212">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now think of \(q\) as a variable that we will let approach \(1\text{.}\) Find an explicit formula for </p>
+<ol style="list-style-type: lower-roman;">
+<li>\(\displaystyle\lim_{q\rightarrow 1} [n]_q\text{.}\)</li>
+<li>\(\displaystyle\lim_{q\rightarrow 1} [n]!_q\text{.}\)</li>
+<li>\(\displaystyle\lim_{q\rightarrow 1} \qchoose{m+n}{n}\text{.}\)</li>
+</ol>
+<p> Why is the limit in <a knowl="./knowl/q-binomial-lim.html" knowl-id="xref-q-binomial-lim" alt="Item iii " title="Item iii ">Part iii</a> equal to the number of partitions (of any number) with at most \(n\) parts all of size most \(m\text{?}\) Can you explain bijectively why this quantity equals the formula you got?</p>
+<span class="incontext"><a href="sec_genfns-int-parts.html#p-1212">in-context</a></span>
 </body>
 </html>

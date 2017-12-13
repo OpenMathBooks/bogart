@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:02-06:00    *-->
+<!--*    on 2017-12-13T14:15:15-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>We know that the number of subsets of a \((k-1)\)-element set is \(2^{k-1}\text{.}\) The number of subsets of \(\{1,2,\ldots,k\}\) that do not contain \(k\) is the number of subsets of the \(k-1\)-element set \(\{1,2,\ldots,
-k-1\}\text{,}\) so we know this number is \(2^{k-1}\text{.}\) We know that the number of subsets that do contain \(k\) equals the number that don't, so the number that do contain \(k\) is also \(2^{k-1}\text{.}\) The sum principle tells us that the number os subsets of \(\{1,2,\ldots, k\}\) is \(2^{k-1}+2^{k-1}=2^k\text{.}\) We can conclude that the statement ``for every nonnegative integer \(n\text{,}\) an \(n\)-element set has exactly \(2^n\) subsets" is true.</p>
-<span class="incontext"><a href="Induction.html#p-1970">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Two lists are equivalent if I can get one from the other by some combination of cyclic shifts and reversals. Applying a cyclic shift on the list \(a_1,a_2,\ldots,a_{n-1},a_n\) gives either \(a_n,a_1,a_2,\ldots ,a_{n-1}\) or \(a_2,\ldots,a_{n-1},a_n,a_1\text{.}\) There are \(n\) possible results of repeated cyclic shifts, and each of them may be reversed to give a new list if \(n\ge 3\text{.}\) Further, these are the only lists we can get from shifts and reversals. (\(a_1\) must go to one of \(n\) places, and that leaves two choices for where \(a_2\) goes. Then the rest of the list is determined.) Thus we can get exactly \(2n\) lists from combinations of cyclic shifts and reversals. We define two lists to be equivalent if they give the same necklace; we've seen that this is an equivalence relation and that it has \(2n\) elements per equivalence class. Since there are \(n!\) lists, this gives us \((n-1)!/2\) equivalence classes, or necklaces.</p>
+<span class="incontext"><a href="equivalencerelations.html#p-1970">in-context</a></span>
 </body>
 </html>

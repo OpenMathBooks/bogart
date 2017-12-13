@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:15-06:00    *-->
+<!--*    on 2017-12-13T14:14:21-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Use \(\#(G)\) to stand for the number of spanning trees of \(G\) (so that, for example, \(\#(G/e)\) stands for the number of spanning trees of \(G/e\)). Find an expression for \(\#(G)\) in terms of \(\#(G/e)\) and \(\#(G-e)\text{.}\) This expression is called the <em class="terminology">deletion-contraction recurrence</em>.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Start with vertex, number it vertex 1, and choose the least costly edge leaving it. Number the new vertex 2. Given your current set of vertices and edges, choose the least costly edge leaving that set, and if your set has \(i-1\) vertices, label the new vertex \(i\text{.}\) You will always have a tree as you go along since you are adding a vertex of degree 1 to a tree you already have. You will get a spanning tree because the graph you start with is connected. If your tree did not have the lowest cost among all spanning trees, there would be some smallest \(i\) such that there is an edge from vertex \(i\) in a least cost spanning tree that is not in your tree. Since we chose the least \(i\text{,}\) the edge we just chose from vertex \(i\) goes to a higher-numbered vertex. Thus you could have chosen that edge as you were constructing your tree, so there cannot be a tree of lower total cost than the one you chose.</p>
 <span class="incontext"><a href="sec_induction-graphstrees.html#p-663">in-context</a></span>
 </body>
 </html>

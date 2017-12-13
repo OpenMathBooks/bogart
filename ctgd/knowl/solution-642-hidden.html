@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:09-06:00    *-->
+<!--*    on 2017-12-13T14:15:25-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,11 +11,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p></p>
+<body><span class="solution"><p>There are no onto functions from a \(0\)-element set to a \(1\)-element set; otherwise there is exactly one function from an \(n\)-element set onto a one element set so the EGF for functions from an \(n\)-element set onto a one element set is \(e^x-1\text{.}\) A function from an \(n\)-element set onto a \(k\)-element set may be thought of as a \(k-tuple\) of functions from disjoint subsets whose union is the \(n\)-element set onto the one element subsets of the \(k\)-element set. Therefore by the corollary to the product principle for EGFs the EGF for functions from an \(n\)-element set onto a \(k\)-element set is \((e^x-1)^k\text{.}\) By the binomial theorem, this is</p>
 \begin{equation*}
-\sum_{n=0}^\infty B_{n+1}\frac{x^n}{n!} = \sum_{n=0}^\infty\binom{n}{k}B_{n-k}\frac{x^n}{n!} =\sum_{i=0}^\infty B_{i}\frac{x^{i}}{(i)!}\sum_{j=0}^\infty \frac{x^j}{j!}
-\text{.}
+\kern-.25 in\sum_{i=0}^k\binom{k}{i}(-1)^{k-i}e^{ix}
+=
+\sum_{i=0}^k \binom{k}{i} (-1)^{k-i} \sum_{j=0}^\infty \frac{(ix)^j}{j!} =
+\sum_{i=0}^k (-1)^{k-i}\binom{k}{i} \sum_{j=0}^\infty i^j\frac{(x)^j}{j!}.
 \end{equation*}
-<p>Thus \(B'(x) = B(x)e^x\text{,}\) which gives us \(\ln B(x) = e^x+c\text{,}\) or \(B(x) =
-e^{ex+c} =e^ce^{(e^x)}\text{.}\) Since \(B_0=B(0)\) and \(B_0=1\text{,}\) we have \(c=-1\) and \(B(x) = \exp(e^x-1)\text{.}\)</p></span></body>
+<p>Thus \(c_n= \sum_{i=0}^k(-1)^{k-i}\binom{k}{i}n^i\text{,}\) which is consistent with the formula we got by inclusion and exclusion.</p></span></body>
 </html>

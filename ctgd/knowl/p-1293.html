@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:37-06:00    *-->
+<!--*    on 2017-12-13T14:14:41-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>One natural but oversimplified model for the growth of a tree is that all new wood grows from the previous year's growth and is proportional to it in amount. To be more precise, assume that the (total) length of the new growth in a given year is the constant \(c\) times the (total) length of new growth in the previous year. Write down a recurrence for the total length \(a_n\) of all the branches of the tree at the end of growing season \(n\text{.}\) Find the general solution to your recurrence relation. Assume that we begin with a one meter cutting of new wood (from the previous year) which branches out and grows a total of two meters of new wood in the first year.  What will the total length of all the branches of the tree be at the end of \(n\) years?</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>From <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a> or by applying generating functions we have</p>
+\begin{align*}
+a_n  =\amp  A(1+\frac{.01p}{12})^n-m\frac{1-(1+\frac{.01p}{12})^n}{1-(1+\frac{.01p}{12})}\\
+=\amp  \left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}
+\end{align*}
 <span class="incontext"><a href="sec_genfns-suppprobs.html#p-1293">in-context</a></span>
 </body>
 </html>

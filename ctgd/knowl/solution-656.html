@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:10-06:00    *-->
+<!--*    on 2017-12-13T14:15:28-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">419.1</span>
-</h5>
-<p>If an edge connected two vertices in different connected components, that edge would give a walk from a vertex in one of the connected components to a vertex in the other connected component, and thus not in the first component, violating the second part of the definition of a connected component.</p></span><span class="incontext"><a href="expogenfun.html#solution-656">in-context</a></span>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">418.1</span>
+</h6>
+<p>Let \(C\) be the set of all vertices connected by a walk to a vertex \(x\text{.}\) Then </p>
+<ul style="list-style-type: disc;">
+<li><p>Each pair of vertices \(u\) and \(v\) in \(C\) is connected by the walk that goes from \(u\) to \(x\) and then from \(x\) to \(v\text{.}\)</p></li>
+<li><p>If a vertex \(w\) is connected by a walk to a vertex \(v\) in \(C\text{,}\) then it is connected to \(x\) by the walk that goes from \(w\) to \(v\) and then from \(v\) to \(x\text{.}\)  Thus no  vertex \(w\) in the graph other than a member of \(C\) is connected by a walk to any vertex in \(C\text{.}\)</p></li>
+</ul>
+<p>Therefore \(C\) is a connected component containing \(x\text{.}\) If connected component \(D\) contained \(x\text{,}\) then every vertex in \(D\) would be connected by a walk to \(x\) and then by a walk from \(x\) to \(v\) for each other vertex in \(C\text{,}\) and similarly, each vertex in \(C\) would be connected to each vertex in \(D\text{.}\) Thus by the definition of connected component, \(C\) and \(D\) would have to be the same set. Therefore each vertex lies in one and only one connected component.</p></span><span class="incontext"><a href="app3-5-expformula.html#solution-656">in-context</a></span>
 </body>
 </html>

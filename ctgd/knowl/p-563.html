@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:13-06:00    *-->
+<!--*    on 2017-12-13T14:14:19-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>You might try working out the cases \(n=2,3,4\) and then look for a pattern. Alternately, you could write \(a_{n-1}=b a_{n-2} + d\text{,}\) substitute the right hand side of this expression into \(a_{n}=b a_{n-1} + d\) to get a recurrence involving only \(a_{n-2}\) , and then repeat a similar process with \(a_{n-2}\) and perhaps \(a_{n-3}\) and see a pattern that is developing.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We can prove this formula by induction. When \(n=1\) we have \(2+1\cdot0\) regions. Assuming that \(n-1\) circles give us \(2+(n-1)(n-2)\) regions, for \(n\) circles we have \(2+(n-1)(n-2) +2(n-1)=2+n(n-1)\) regions. Thus the correctness of our formula for \(n-1\) circles implies its correctness when we have \(n\) circles, so for all positive integers \(n\text{,}\) we get \(2+n(n-1)\) regions determined by \(n\) mutually intersecting circles. Two circles cannot touch more than twice, and if we let some of our \(n\) circles touch just once, or not at all, that would reduce the number of regions we would get. Similarly, allowing a circle to go through the intersection point of two other circles could only reduce the number of regions. So with \(n\) circles we could never have more than \(2+n(n-1)\) regions. In particular with 4 circles we get just 14 regions, rather than the 16 that would be required in a Venn diagram for four sets. We could prove, again by induction, that \(2+n(n-1)\lt 2^n\) for all \(n&gt;3\text{,}\) so it is not possible to draw a Venn diagram using circles to illustrate the intersections of four or more sets.</p>
 <span class="incontext"><a href="sec_induction-recurrence.html#p-563">in-context</a></span>
 </body>
 </html>

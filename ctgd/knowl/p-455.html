@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:10-06:00    *-->
+<!--*    on 2017-12-13T14:14:17-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Here it matters whether you choose to induct on \(m\) or \(n\text{.}\) However, it matters only in the sense that you need to use more tools in one case. In one case, you are likely to need the rule \((cd)^n=c^n d^n\)(, which we haven't proved. (However, you might be able to prove that by induction!) In either case, you may find part (a) handy.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now suppose that when \(n=k-1\text{,}\) \((x+y)^n=\sum_{i=0}^n \binom{n}{i}x^{n-i}y^i.\) This gives us</p>
+\begin{align*}
+(x+y)^k =\amp (x+y)(x+y)^{k-1}=(x+y)\sum_{i=0}^{k-1}\binom{k-1}{i}x^{k-1-i}y^i\\
+=\amp \sum_{i=0}^{k-1}\binom{k-1}{i}x^{k-i}y^i+\sum_{i=0}^{k-1} \binom{k-1}{i}x^{k-1-i}y^{i+1}\\
+=\amp \sum_{i=0}^{k-1}\binom{k-1}{i}x^{k-i}y^i+\sum_{i=1}^{k} \binom{k-1}{i-1}x^{k-i}y^{i}\\
+=\amp  x^k+\left(\sum_{i=1}^{k-1}\binom{k-1}{i}x^{k-i}y^i+\binom{k-1}{i-1}x^{k-i}y^i\right) +y^k\\
+=\amp  x^k+\left(\sum_{i=1}^{k-1} \binom{k}{i}x^{k-i}y^i\right) +y^k\ =\
+\sum_{i=0}^k \binom{k}{i}x^{k-i}y^i.
+\end{align*}
 <span class="incontext"><a href="sec_induction-examples.html#p-455">in-context</a></span>
 </body>
 </html>

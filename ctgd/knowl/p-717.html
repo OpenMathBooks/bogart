@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:17-06:00    *-->
+<!--*    on 2017-12-13T14:14:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If we pass out \(k\) distinct objects to \(n\) recipients so that each gets exactly one, then \(k=n\) and the function that our distribution gives us is a bijection. The number of bijections from an \(n\)-element set to an \(n\)-element set is \(n!\) by <a knowl="./knowl/numberofinjections.html" knowl-id="xref-numberofinjections" alt="Theorem 3.1.3 " title="Theorem 3.1.3 ">Theorem 3.1.3</a>. If we pass out \(k\) distinct objects of \(n\) identical recipients so that each gets exactly 1, then in this case it doesn't matter which recipient gets which object, so the number of ways to do so is 1 if \(k=n\text{.}\) If \(k\not=n\text{,}\) then the number of such distributions is zero. This explains the entries in row four of our table.</p>
-<span class="incontext"><a href="s3-1-distrib-idea.html#p-717">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We are given that\(d_i\) is the degree of vertex \(i\text{.}\) The number of times \(i\) appears in the Prüfer code of a tree is one less than the degree of \(i\text{,}\) so vertex \(i\) appears \(d_i-1\) times. Thus the sum of the \(d_i-1\) should be \(2n-2-n=n-2\text{.}\) Of the \(n-2\) places in the Prüfer code, we want to label \(d_1-1\) of them with 1, \(d_2-1\) of them with 2 and in general \(d_i-1\) of them with \(i\text{.}\) There are</p>
+\begin{equation*}
+\binom{n-2}{d_1-1}\binom{n-2-(d_1-1)}{d_2-1}\binom{n-2-(d_1-1+d_2-1)}{d_3-1}\cdots\binom{d_n-1}{d_n-1}
+\end{equation*}
+<p>ways to do this, so the number of trees in which vertex \(i\) has degree \(d_i\) is \(\frac{(n-2)!}{(d_1-1)!(d_2-1)!\cdots(d_n-1)!}\text{.}\)</p>
+<span class="incontext"><a href="sec_induction-suppprobs.html#p-717">in-context</a></span>
 </body>
 </html>

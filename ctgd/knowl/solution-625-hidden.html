@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:06-06:00    *-->
+<!--*    on 2017-12-13T14:15:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,5 +11,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>With one color of paint, there would have been one way to paint each pole so our EGF would be \(\sum_{n=0}^\infty \frac{x^n}{n!}\text{,}\) or \(e^x\text{.}\) With two colors of paint, it would be \(e^{2x}\) by analogy with the solution to <a knowl="./knowl/paintinglightpoles.html" knowl-id="xref-paintinglightpoles" alt="Problem 373 " title="Problem 373 ">Problem 373</a>. Thus the EGF for two colors of paint would be the square of the EGF for one color of paint. The EGF for four colors of paint is the fourth power of the EGF for one color of paint and the square of the EGF for two colors of paint.</p></span></body>
+<body><span class="solution"><p></p>
+\begin{align*}
+\sum_{n=2}^\infty d_n\frac{x^{n-1}}{(n-1)!}
+=\amp \sum_{n=2}^\infty d_{n-1}\frac{x^{n-1}}{(n-2)!} +\sum_{n=2}^\infty
+d_{n-2}\frac{x^{n-1}}{(n-2)!}\\
+\sum_{n=1}^\infty d_n\frac{x^{n-1}}{(n-1)!} -d_1  =\amp
+x\sum_{n=2}^\infty d_{n-1}\frac{x^{n-2}}{(n-2)!} +xD(x)\\
+D'(x) -d_1  =\amp  xD'(x) +xD(x)\\
+D'(x)(1-x)  =\amp  xD(x)\\
+\frac{D'(x)}{D(x)}  =\amp  \frac{x}{1-x}
+\end{align*}
+<p>This gives us \(\ln D(x) = -\ln(1-x) -x +c\text{,}\) so that \(D(x) = \frac{1}{1-x}e^{-x}e^c\text{.}\) Since \(d_0=1\text{,}\) we have \(d(0)=1\text{,}\) so \(c=0\) and</p>
+\begin{align*}
+D(x)  =\amp  \frac{e^{-x}}{1-x}\\
+=\amp
+\sum_{i=0}^\infty(-1)^i\frac{x^i}{i!}\cdot\sum_{j=0}^\infty
+x^j=\sum_{i=0}^\infty\left(\sum_{j=0}^i \frac{(-1)^j}{j!}\right)
+x^i.
+\end{align*}
+<p>Thus \(d_n = n!\sum_{j=0}^n\frac{(-1)^j}{j!}\text{,}\) as we computed by inclusion and exclusion.</p></span></body>
 </html>

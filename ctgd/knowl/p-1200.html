@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:32-06:00    *-->
+<!--*    on 2017-12-13T14:14:36-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,14 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p></p>
-<ol style="list-style-type: lower-roman;">
-<li>\(n\)</li>
-<li>\(n!\)</li>
-<li>\(\binom{m+n}{n}\)</li>
-</ol>
-<p> Since the generating function is a finite sum (we are talking about partitions whose Young diagram into a finite rectangle), the limit is obtained by setting \(q=1\text{,}\) and this sums the number of partitions of each possible number \(k\) that have at most \(n\) parts all of size at most \(m\text{.}\) We want a bijection between such partitions and the \(n\) element subsets of an \(m+n\) element set. Recall that there is a bijection between subsets of an \(n\) element set and lattice paths from \((0,0)\) to \(m,n\) in a coordinate plane. If we draw our rectangle of width \(m\) and depth \(n\) with its lower left corner at \((0,0)\text{,}\) then each Young diagram gives us such a lattice path and each such lattice path gives us a Young diagram.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The generating function for partitions that arise in the second case is \(\qchoose{m+n-1}{m-1}=\qchoose{m+n-1}{n}\text{.}\) In the first case, after we delete the largest part, the Young diagram sits in a rectangle of width \(m\) and depth \(n-1\text{.}\) The generating function for partitions that arise in the first case <em class="emphasis">after</em> we have deleted a part of size \(m\) is \(\qchoose{m+n-1}{n-1}\text{.}\) Thus the generating function for partitions that arise in the first case (<em class="emphasis">before</em> we delete the part of size \(m\)) is \(q^m\qchoose{m+n-1}{n-1}\text{.}\) Thus by the sum principle the generating function for all partitions that fit into a rectangle of width \(m\) and depth \(n\) is given by</p>
+\begin{equation*}
+\qchoose{m+n}{n}= q^m\qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{n}.
+\end{equation*}
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1200">in-context</a></span>
 </body>
 </html>

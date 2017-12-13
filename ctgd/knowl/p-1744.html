@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:53-06:00    *-->
+<!--*    on 2017-12-13T14:15:00-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>In <a knowl="./knowl/polya1.html" knowl-id="xref-polya1" alt="Problem 314 " title="Problem 314 ">Problem 314</a> we have four kinds of group elements: the identity (which fixes every coloring), the rotations through 60 or 300 degrees, the rotations through 120 and 240 degrees, and the rotation through 180 degrees. The fixed point enumerator for the rotation group acting on the functions is by definition the sum of the fixed point enumerators of colorings fixed by the identity, of colorings fixed by 60 or 300 degree rotations, of colorings fixed by 120 or 240 degree rotations, and of colorings fixed by the 180 degree rotation. Write down each of these enumerators (one for each kind of permutation) individually and factor each one (over the integers) as completely as you can.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let \(E\text{,}\) for enumerator, be the sum of all the pictures of all the elements in the union of the multiorbits of \(G\) acting on a set \(S\text{.}\) Recall that for any multiorbit \(M\) the picture \(P(M)\) is the picture \(P(x)\) of any element \(x\) of \(M\text{,}\) and the number of elements of a multiorbit \(M\) is always the size of \(G\text{.}\) This lets us write</p>
+\begin{align*}
+E &amp;= \sum_{M\colon M\text{ is a multiorbit of }G}\sum_{x\colon x\in M} P(x)\\
+&amp;= \sum_{M\colon M\text{ is a multiorbit of }G}|G|P(M)\\
+&amp;= |G|\sum_{M\colon M\text{ is a multiorbit of }G}P(M)\\
+&amp;= |G|\Orb(G,S)\text{.}
+\end{align*}
+<p>Recall also that the multiplicity of an element \(x\) in its multiorbit, and thus in the union of the multiorbits, is \(|\Fix(x)|\text{.}\) This lets us write \(E = \sum_{x\colon x\in S}|\Fix(x)|P(x)\text{.}\) Now we have two possible approaches. First, the sum we just gave for \(E\) is the sum, over all ordered pairs \((\sigma,x)\) such that \(\sigma\) fixes \(x\text{,}\) of \(P(x)\text{.}\) But this is exactly \(\Fix(G,S)\text{.}\) Second, we can get the same formula for \(E\) by using \(\chi(\sigma,x)\) as in <a knowl="./knowl/numbermultiorbits5.html" knowl-id="xref-numbermultiorbits5" alt="Problem 300 " title="Problem 300 ">Problem 300</a>. We may write</p>
+\begin{align*}
+E&amp;= \sum_{x\colon x\in S} |\Fix(x)|P(x)\\
+&amp;=\sum_{x\colon x\in S}\sum_{\sigma\colon \sigma\in G}\chi(\sigma,x)P(x)\\
+&amp;= \sum_{\sigma\colon \sigma\in G}\sum_{x\colon \sigma x=x} P(x)\\
+&amp;=\Fix(G,S)\text{.}
+\end{align*}
+<p>Setting our two values of \(E\) equal and solving for \(\Orb(G,S)\) gives us</p>
+\begin{equation*}
+\Orb(G,S) = \frac{1}{|G|}\Fix(G,S)\text{.}
+\end{equation*}
 <span class="incontext"><a href="sec_groups-polya.html#p-1744">in-context</a></span>
 </body>
 </html>

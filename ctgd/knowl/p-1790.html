@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:55-06:00    *-->
+<!--*    on 2017-12-13T14:15:04-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,14 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Two simple graphs on the set \([n]= \{1,2,\ldots, n\}\) with edge sets \(E\) and \(E'\) (which we think of a sets of two-element sets for this problem) are said to be <em class="terminology">isomorphic</em> if there is a permutation \(\sigma\) of \([n]\) which, in its action of two-element sets, carries \(E\) to \(E'\text{.}\) We say two graphs are different if they are not isomorphic. Thus the number of different graphs is the number of orbits of the set of all two-element subsets of \([n]\) under the action of the group \(S_n\text{.}\) We can represent an edge set by its characteristic function (as in <a knowl="./knowl/charfunction.html" knowl-id="xref-charfunction" alt="Problem 33 " title="Problem 33 ">problem 33</a>). That is we define</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>For this problem we are interested in the action of the rotation group of the cube on the edges. Now we think of the group elements as permutations of the edges and analyze their cycle structure. </p>
+<ul style="list-style-type: disc;">
+<li>The identity is a product of 12 one-cycles.</li>
+<li>A 90 or 270 degree rotation around an axis perpendicular to two opposite faces is a product of three four-cycles.</li>
+<li>A 180 degree rotation around an axis perpendicular to two opposite faces is a product of six two-cycles.</li>
+<li>A 180 degree rotation around an axis perpendicular to two opposite edges is a product of five two-cycles and two one-cycles.</li>
+<li>A 120 degree rotation around an axis connecting two diagonally opposite vertices is a product of four three-cycles.</li>
+</ul>
+<p> Thus the cycle index is</p>
 \begin{equation*}
-\chi_E(\{u,v\}) = \left\{
-\begin{array}{ll}
-1 \amp  \mbox{if \(\{u,v\}\in E\)} \\
-0 \amp  \mbox{otherwise.}
-\end{array} \right.
+\frac{1}{24}\left(z_1^{12}+6z_4^3+3z_2^6+6z_2^5z_1^2 + 8z_3^4\right).
 \end{equation*}
 <span class="incontext"><a href="sec_groups-polya.html#p-1790">in-context</a></span>
 </body>

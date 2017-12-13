@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:07-06:00    *-->
+<!--*    on 2017-12-13T14:15:24-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,9 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>Let \(f(x)\text{,}\) \(g(x)\text{,}\) and \(h(x)\) be, respectively, the EGFs for the species \(\F\text{,}\) \(\mathcal{G}\text{,}\) and \(\F\cdot\mathcal{G}\text{.}\)  Suppose \(f(x) = \sum_{i=0}^\infty a_i \frac{x^i}{i!}\) and \(g(x) = \sum_{j=0}^\infty b_j\frac{x^j}{j!}\text{.}\) Then the coefficient of \(x^n\) in \(f(x)g(x)\) is \(\sum_{k=0}^n \frac{a_kb_{n-k}}{i!(n-k)!}\text{,}\) so the coefficient of \(\frac{x^n}{n!}\) is</p>
-\begin{equation*}
-n!\sum_{k=0}^n \frac{a_kb_{n-k}}{i!(n-k)!} = \sum_{k=0}^n \binom{n}{k} a_kb_{n-k}.
-\end{equation*}
-<p>But \(\binom{n}{k}a_kb_{n-k}\) is the number of ways to partition a set of size \(n\) into a first set of size \(k\) and a second set of size \(n-k\) and to choose a structure for each of them.  That is, it is the number of pair structures on an ordered pair of sets of size \(k\) and \(n-k\text{.}\)  Thus the coefficient of \(\frac{x^n}{n!}\) in \(h(x)\) is the number of \(\F\cdot\mathcal{G}\) pair structures on a subset of \(X\) of size \(n\text{.}\)  This proves that \(h(x) = f(x)g(x)\text{.}\)</p></span></body>
+<body><span class="solution"><p>We must show that if \(S\) and \(S'\) are finite subsets of \(X\) with the same size, then the number of pair structures on \(S\) and the number of pair structures on \(S'\) are the same. To get a pair structure on \(S\) we partition \(S\) into two parts, \(S_1\) and \(S_2\text{,}\) take an \(\F\) structure on \(S_1\) and a \(\mathcal{G}\) structure on \(S_2\) and form the ordered pair of these structures. The number of ways to partition \(S\) into sets of size \(s_1\) and \(s_2\) is the same as the number of ways to partition \(S'\) into sets \(S_1'\) and \(S_2'\) of size \(s_1\) and \(s_2\) (there are intentionally no primes on the lower case \(s_1\) and \(s_2\)) and the number of ways to choose an \(\F\)-structure on \(S_1'\) and a \(\mathcal{G}\)-structure on \(S_2'\) is the number of ways to make the same choices on \(S_1\) and \(S_2\text{.}\) Therefore the number of pairs of structures on the disjoint sets \(S_1\) and \(S_2\) whose union is \(S\) is the same as the number of pairs of structures on the disjoint sets \(S_1'\) and \(S_2'\) whose union is \(S'\text{.}\) Summing over all ways to partition \(S\) or \(S'\) into two sets, we find that the number of pair structures on \(S\) equals the number of pair structures on \(S'\text{.}\) Thus the pair structure of \(\F\cdot \mathcal{G}\) forms a species of structures.</p></span></body>
 </html>

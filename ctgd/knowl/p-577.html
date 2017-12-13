@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:13-06:00    *-->
+<!--*    on 2017-12-13T14:14:20-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,10 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If \(b\not=1\) and \(a_n=ba_{n-1} +d\text{,}\) then \(\displaystyle a_n =
-a_0b^n + d\frac{1-b^n}{1-b}\text{.}\) If \(b=1\text{,}\) then, \(\displaystyle a_n =
-a_0 +nd\)</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Note that by the formula, \(a_{n-1}=ba_{n-2} +d\text{.}\) Substituting this into the original equation for \(a_n\) gives \(a_n=b^2a_{n-2}+bd +d\text{.}\) Repeating this kind of substitution gives us \(a_n=b^3a_{n-3} +b^2d +bd +d\text{.}\) This suggests that \(a_n = a_0b^n +\sum_{i=0}^{n-1}db^i\text{.}\) We would guess the same formula by writing out the first few values of \(a_i\text{,}\) namely, \(a_0\text{,}\) \(a_0b+d\text{,}\) \(a_0b^2+db+d\text{,}\) \(a_0b^3+b^2d+bd+d\text{,}\) and so on. We prove our general formula by induction on \(n\text{.}\) It is clearly true when \(n=0\) as there are no terms in the sum and \(b^0=1\text{.}\) If we assume the formula is true when \(n=k-1\text{,}\) we may write</p>
+\begin{align*}
+a_k  =\amp  ba_{k-1}+d\\
+=\amp b(a_0b^{k-1}+ b\left(\sum_{i=0}^{n-2}db^i\right) +d\\
+=\amp a_0b^n +\sum_{i=0}^{n-1}db^i
+\end{align*}
 <span class="incontext"><a href="sec_induction-recurrence.html#p-577">in-context</a></span>
 </body>
 </html>

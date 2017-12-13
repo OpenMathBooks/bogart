@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:41-06:00    *-->
+<!--*    on 2017-12-13T14:14:46-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>In <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a> we introduced the deletion-contraction recurrence for counting spanning trees of a graph. Figure out how the chromatic polynomial of a graph is related to those resulting from deletion of an edge \(e\) and from contraction of that same edge \(e\text{.}\) Try to find a recurrence like the one for counting spanning trees that expresses the chromatic polynomial of a graph in terms of the chromatic polynomials of \(G-e\) and \(G/e\) for an arbitrary edge \(e\text{.}\) Use this recurrence to give another proof that the number of ways to color a graph with \(x\) colors is a polynomial function of \(x\text{.}\)</p>
-<span class="incontext"><a href="sec_inclexcl-delcont.html#p-1396">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We defined a graph to consist of set \(V\) of elements called vertices and a set \(E\) of elements called edges such that each edge joins two vertices. A <b class="terminology">coloring</b> of a graph by the elements of a set \(C\) (of colors) is an assignment of an element of \(C\) to each vertex of the graph; that is, a function from the vertex set \(V\) of the graph to \(C\text{.}\) A coloring is called <b class="terminology">proper</b> if for each edge joining two distinct vertices<span><a knowl="./knowl/fn-17-hidden.html" knowl-id="hidden-fn-17" alt="Footnote 5.2 " title="Footnote 5.2 "><span class="footnote"><sup> 2 </sup></span></a></span>, the two vertices it joins have different colors. You may have heard of the famous four color theorem of graph theory that says if a graph may be drawn in the plane so that no two edges cross (though they may touch at a vertex), then the graph has a proper coloring with four colors. Here we are interested in a different, though related, problem: namely, in how many ways may we properly color a graph (regardless of whether it can be drawn in the plane or not) using \(k\) or fewer colors? When we studied trees, we restricted ourselves to connected graphs. (Recall that a graph is connected if, for each pair of vertices, there is a walk between them.) Here, disconnected graphs will also be important to us. Given a graph which might or might not be connected, we partition its vertices into blocks called <b class="terminology">connected components</b> as follows. For each vertex \(v\) we put all vertices connected to it by a walk into a block together. Clearly each vertex is in at least one block, because vertex \(v\) is connected to vertex \(v\) by the trivial walk consisting of the single vertex \(v\) and no edges. To have a partition, each vertex must be in one and only one block. To prove that we have defined a partition, suppose that vertex \(v\) is in the blocks \(B_1\) and \(B_2\text{.}\) Then \(B_1\) is the set of all vertices connected by walks to some vertex \(v_1\) and \(B_2\) is the set of all vertices connected by walks to some vertex \(v_2\text{.}\)</p>
+<span class="incontext"><a href="sec_inclexcl-apps.html#p-1396">in-context</a></span>
 </body>
 </html>

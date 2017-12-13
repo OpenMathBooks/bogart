@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:32-06:00    *-->
+<!--*    on 2017-12-13T14:14:36-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,14 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>\(\qchoose{m+n}{n}\) is the generating function for the number of partitions whose Young diagram fits into an \(m\) by \(n\) rectangle. That is,</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We either have exactly \(k\) parts or fewer than \(k\) parts. In the first case, removing one from each part gives us a partition whose Young diagram fits into a \(m-1\) by \(n\) box, while in the second case doing nothing gives us a partition that fits into a \(m\) by \(n-1\) box. In the first case the partition we get partitions \(k-n\text{,}\) and in the second case it still partitions \(k\text{.}\) Thus we get</p>
 \begin{equation*}
-\qchoose{m+n}{n}=\sum_{k=0}^\infty a_kq^k,
-\end{equation*}
-<p>where \(a_k\) is the number of partitions of \(k\) whose Young diagram fits into an \(m\) by \(n\) rectangle. In particular \(a_k=0\) if \(k&gt;mn\text{,}\) because the Young diagram of a partition of a number larger than \(mn\) certainly cannot fit into an \(m\) by \(n\) rectangle. Thus</p>
-\begin{equation*}
-\qchoose{m+n}{n}=\sum_{k=0}^{mn} a_kq^k.
+\qchoose{m+n}{n}= q^n\qchoose{m+n-1}{n}+\qchoose{m+n-1}{n-1}.
 \end{equation*}
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1204">in-context</a></span>
 </body>

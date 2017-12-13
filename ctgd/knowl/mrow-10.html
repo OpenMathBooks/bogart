@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-12-13T14:14:17-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+\begin{align*}
+(x+y)^k =\amp (x+y)(x+y)^{k-1}=(x+y)\sum_{i=0}^{k-1}\binom{k-1}{i}x^{k-1-i}y^i\\
+=\amp \sum_{i=0}^{k-1}\binom{k-1}{i}x^{k-i}y^i+\sum_{i=0}^{k-1} \binom{k-1}{i}x^{k-1-i}y^{i+1}\\
+=\amp \sum_{i=0}^{k-1}\binom{k-1}{i}x^{k-i}y^i+\sum_{i=1}^{k} \binom{k-1}{i-1}x^{k-i}y^{i}\\
+=\amp  x^k+\left(\sum_{i=1}^{k-1}\binom{k-1}{i}x^{k-i}y^i+\binom{k-1}{i-1}x^{k-i}y^i\right) +y^k\\
+=\amp  x^k+\left(\sum_{i=1}^{k-1} \binom{k}{i}x^{k-i}y^i\right) +y^k\ =\
+\sum_{i=0}^k \binom{k}{i}x^{k-i}y^i.
+\end{align*}
+<span class="incontext"><a href="sec_induction-examples.html#mjx-eqn-mrow-10">in-context</a></span>
+</body>
+</html>

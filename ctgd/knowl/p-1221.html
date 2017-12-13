@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:33-06:00    *-->
+<!--*    on 2017-12-13T14:14:37-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The sequence of problems that follows (culminating in <a knowl="./knowl/solveFibonacci.html" knowl-id="xref-solveFibonacci" alt="Problem 222 " title="Problem 222 ">Problem 222</a>) describes a number of hypotheses we might make about a fictional population of rabbits. We use the example of a rabbit population for historic reasons; our goal is a classical sequence of numbers called Fibonacci numbers. When Fibonacci<span><a knowl="./knowl/fn-14-hidden.html" knowl-id="hidden-fn-14" alt="Footnote 4.6 " title="Footnote 4.6 "><span class="footnote"><sup> 6 </sup></span></a></span> introduced them, he did so with a fictional population of rabbits.</p>
-<span class="incontext"><a href="sec_genfns-recurrence.html#p-1221">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We could compute some more values of the limit by going back to the definition in this way, but it seems unlikely that we could get enough data to make a good conjecture. However we have the recurrence, and setting \(q=-1\) in the recurrence gives us <a knowl="./knowl/q-binomial-tab.html" knowl-id="xref-q-binomial-tab" alt="Table 4.2.1 " title="Table 4.2.1 ">Table 4.2.1</a>.  From the table, it is clear that we get binomial coefficients interspersed with 0s in the even numbered rows of our table and repeated binomial coefficients in the odd numbered rows of our table. In particular when \(m+n\) and \(n\) are both even, \(\neg1choose{m+n}{n}=\binom{(m+n)/2}{n/2}\text{,}\) and if \(m+n\) is even and \(n\) is odd, \(\neg1choose{m+n}{n}=0\text{.}\) In our table, at least, if \(m+n\) is odd, it appears that we get \(\neg1choose{m+n}{n}=\binom{\lfloor(m+n)/2\rfloor}{\lfloor n/2\rfloor}\text{.}\) In fact, using the recurrence just as we used it to construct the table, we can prove by induction that</p>
+\begin{equation*}
+\neg1choose{m+n}{n}=\left\{
+\begin{array}{ll}0\amp \mbox{if \(mn\) is odd} \\
+\binom{\lfloor(m+n)/2\rfloor}{\lfloor n/2\rfloor}\amp \mbox{otherwise.}
+\end{array} \right.
+\end{equation*}
+<span class="incontext"><a href="sec_genfns-int-parts.html#p-1221">in-context</a></span>
 </body>
 </html>

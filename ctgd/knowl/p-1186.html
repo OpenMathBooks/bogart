@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:31-06:00    *-->
+<!--*    on 2017-12-13T14:14:36-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,11 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The generating function for partitions that arise in the second case is \(\qchoose{m+n-1}{m-1}=\qchoose{m+n-1}{n}\text{.}\) In the first case, after we delete the largest part, the Young diagram sits in a rectangle of width \(m\) and depth \(n-1\text{.}\) The generating function for partitions that arise in the first case <!--Style me with CSS--><em>after</em> we have deleted a part of size \(m\) is \(\qchoose{m+n-1}{n-1}\text{.}\) Thus the generating function for partitions that arise in the first case (<!--Style me with CSS--><em>before</em> we delete the part of size \(m\)) is \(q^m\qchoose{m+n-1}{n-1}\text{.}\) Thus by the sum principle the generating function for all partitions that fit into a rectangle of width \(m\) and depth \(n\) is given by</p>
-\begin{equation*}
-\qchoose{m+n}{n}= q^m\qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{n}.
-\end{equation*}
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>In <a knowl="./knowl/largestpartatmostm.html" knowl-id="xref-largestpartatmostm" alt="Part 201.b " title="Part 201.b ">Problem 201.b</a> and <a knowl="./knowl/atmostmparts.html" knowl-id="xref-atmostmparts" alt="Problem 202 " title="Problem 202 ">Problem 202</a> you gave the generating functions for, respectively, the number of partitions of \(k\) into parts the largest of which is at most \(m\) and for the number of partitions of \(k\) into at most \(m\) parts. In this problem we will give the generating function for the number of partitions of \(k\) into at most \(n\) parts, the largest of which is at most \(m\text{.}\) That is we will analyze \(\sum_{i=0}^\infty a_kq^k\) where \(a_k\) is the number of partitions of \(k\) into at most \(n\) parts, the largest of which is at most \(m\text{.}\) Geometrically, it is the generating function for partitions whose Young diagram fits into an \(m\) by \(n\) rectangle, as in <a knowl="./knowl/rectanglecomplement.html" knowl-id="xref-rectanglecomplement" alt="Problem 167 " title="Problem 167 ">Problem 167</a>. This generating function has significant analogs to the binomial coefficient \(\binom{m+n}{n}\text{,}\) and so it is denoted by \(\qchoose{m+n}{n}\text{.}\) It is called a <b class="terminology">\(q\)-binomial coefficient</b>.</p>
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1186">in-context</a></span>
 </body>
 </html>

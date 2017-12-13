@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:06-06:00    *-->
+<!--*    on 2017-12-13T14:14:14-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,15 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="example-like interesting-forward-essential"><h5 class="heading">
+<article class="example-like interesting-forward-essential"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">51</span>
-</h5>
-<article class="introduction" id="introduction-20"><p id="p-285">Notice that a lattice path from \((0,0)\) to \((n,n)\) stays inside (or on the edges of) the square whose sides are the \(x\)-axis, the \(y\)-axis, the line \(x=n\) and the line \(y=n\text{.}\) In this problem we will compute the number of lattice paths from (0,0) to \((n,n)\) that stay inside (or on the edges of) the triangle whose sides are the \(x\)-axis, the line \(x=n\) and the line \(y=x\text{.}\) For example, in <a knowl="./knowl/CatalanPaths.html" knowl-id="xref-CatalanPaths" alt="Figure 1.3.1 " title="Figure 1.3.1 ">Figure 1.3.1</a> we show the grid of points with integer coordinates for the triangle whose sides are the \(x\)-axis, the line \(x=4\) and the line \(y=x\text{.}\)</p>
-<figure class="figure-like" id="CatalanPaths"><object type="image/svg+xml" style="width:33%; margin:auto; display:block;" data="images/CatalanPaths.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.1</span>The lattice paths from \((0,0)\) to \((i,i)\) for \(i=0,1,2,3,4\text{.}\)  The number of paths to the point \((i,i)\) is shown just above that point.</figcaption></figure></article><article class="exercise-like" id="task-56"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-286">Explain why the number of lattice paths from \((0,0)\) to \((n,n)\) that go outside the triangle is the number of lattice paths from \((0,0)\) to \((n,n)\) that either touch or cross the line \(y=x+1\text{.}\)</p></article><article class="exercise-like" id="task-57"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-288">Find a bijection between lattice paths from \((0,0)\) to \((n,n)\) that touch (or cross) the line \(y=x+1\) and lattice paths from \((-1,1)\) to \((n,n)\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-41" id="hint-41"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-41" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-289">Given a path from \((0, 0)\) to \((n, n)\) which touches or crosses the line \(y = x + 1\text{,}\) how can you modify the part of the path from \((0, 0)\) to the first touch of \(y = x + 1\) so that the modified path starts instead at \((-1, 1)\text{?}\) The trick is to do this in a systematic way that will give you your bijection.</p></span></span></article><article class="exercise-like" id="task-58"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-291">Find a formula for the number of lattice paths from \((0,0)\) to \((n,n)\) that do not cross the line \(y=x\text{.}\)  The number of such paths is called a <em class="terminology">Catalan Number</em> and is usually denoted by \(C_n\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-42" id="hint-42"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-42" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-292">A path either touches the line \(y = x + 1\) or it doesn't. This partitions the set of paths into two blocks.</p></span></span></article></article><span class="incontext"><a href="s1-3-apps.html#activity-51">in-context</a></span>
+</h6>
+<div class="introduction">
+<p>Notice that a lattice path from \((0,0)\) to \((n,n)\) stays inside (or on the edges of) the square whose sides are the \(x\)-axis, the \(y\)-axis, the line \(x=n\) and the line \(y=n\text{.}\) In this problem we will compute the number of lattice paths from (0,0) to \((n,n)\) that stay inside (or on the edges of) the triangle whose sides are the \(x\)-axis, the line \(x=n\) and the line \(y=x\text{.}\) For example, in <a knowl="./knowl/CatalanPaths.html" knowl-id="xref-CatalanPaths" alt="Figure 1.3.1 " title="Figure 1.3.1 ">Figure 1.3.1</a> we show the grid of points with integer coordinates for the triangle whose sides are the \(x\)-axis, the line \(x=4\) and the line \(y=x\text{.}\)</p>
+<figure class="figure-like"><object type="image/svg+xml" style="width:33%; margin:auto; display:block;" data="images/CatalanPaths.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.1</span>The lattice paths from \((0,0)\) to \((i,i)\) for \(i=0,1,2,3,4\text{.}\)  The number of paths to the point \((i,i)\) is shown just above that point.</figcaption></figure>
+</div>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>Explain why the number of lattice paths from \((0,0)\) to \((n,n)\) that go outside the triangle is the number of lattice paths from \((0,0)\) to \((n,n)\) that either touch or cross the line \(y=x+1\text{.}\)</p></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>Find a bijection between lattice paths from \((0,0)\) to \((n,n)\) that touch (or cross) the line \(y=x+1\) and lattice paths from \((-1,1)\) to \((n,n)\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-41-hidden.html" knowl-id="hidden-hint-41" alt="Hint 51.b.1 " title="Hint 51.b.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>Find a formula for the number of lattice paths from \((0,0)\) to \((n,n)\) that do not go above the line \(y=x\text{.}\)  The number of such paths is called a <b class="terminology">Catalan Number</b> and is usually denoted by \(C_n\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-42-hidden.html" knowl-id="hidden-hint-42" alt="Hint 51.c.1 " title="Hint 51.c.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article></article><span class="incontext"><a href="s1-3-apps.html#activity-51">in-context</a></span>
 </body>
 </html>

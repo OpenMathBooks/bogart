@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:08-06:00    *-->
+<!--*    on 2017-12-13T14:15:25-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,5 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>We can think of a painting of a set of street poles as a four-tuple of sets, the sets painted each of the four colors. Then <a knowl="./knowl/fspeciescorollary1.html" knowl-id="xref-fspeciescorollary1" alt="Corollary C.4.2 " title="Corollary C.4.2 ">Corollary C.4.2</a> tells us that the EGF for such four-tuples is the fourth power of the EGF for the number of ways to paint streetlight poles with one color. The EGF for painting streetlight poles with \(k\) colors of paint is \(e^{kx}\text{.}\)</p></span></body>
+<body><span class="solution"><p>Every involution is a unique product of disjoint two-cycles and one-cycles, so we can think of it as an ordered pair of whose first entry is a set of disjoint two-cycles and whose second element is a set of disjoint one-cycles. The value of a set of two-cycles is the union of their support sets and the value of a set of one-cycles is the union of their support sets. Then the EGF for involutions is the product of the EGF for permutations that are the product of only disjoint two-cycles and the EGF for permutations that are the product of only disjoint one-cycles (i.e. identity permutations).</p>
+<p>We noted in the solution to <a knowl="./knowl/derangementsand1cycles.html" knowl-id="xref-derangementsand1cycles" alt="Problem 391 " title="Problem 391 ">Problem 391</a> that every permutation is the product of a derangement (on the elements that are not fixed by the permutation) and a product of one cycles (on the elements that are fixed by the permutation). Thus we can think of every permutation as an ordered pair consisting of a derangement and a product of one-cycles, and the product principle tells us that the EGF for all permutations is the product of the EGF for derangements and the EGF for identity permutations.</p></span></body>
 </html>

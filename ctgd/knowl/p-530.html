@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:12-06:00    *-->
+<!--*    on 2017-12-13T14:14:18-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>To specify a bijection \(f\) from an \(n\)-element set \(\{a_1,a_2,
-\ldots a_n\}\) to an \(n\)-element set, we have \(n\) choices for \(f(a_1)\text{,}\) and then \(b_{n-1}\) choices for how to define \(f\) from the elements \(\{a_2,a_3, \ldots,a_n\}\) to the remaining \(n-1\) elements of our range. By the product principle this gives us \(b_n=nb_{n-1}\) for the number \(b_n\) of bijections from an \(n\)-element set to an \(n\)-element set.</p>
-<span class="incontext"><a href="sec_induction-recurrence.html#p-530">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{align*}
+\amp \frac{1}{2^{\binom{m}{2}}}\sum_{c:c\mbox{~is a coloring
+of~} K_m}\sum_{N:N\subseteq M,~|N|=n}{ mono}(c,N)\\
+=\amp \frac{1}{2^{\binom{m}{2}}} \sum_{N:N\subseteq
+M,~|N|=n}\sum_{c:c\mbox{~is a coloring of~} K_m}{ mono}(c,N)\\
+=\amp
+2^{-\binom{m}{2}}\sum_{N:N\subseteq
+M,~|N|=n}2\cdot2^{\binom{m}{2}-\binom{n}{2}}\\
+=\amp  2\binom{m}{n}2^{-\binom{n}{2}}
+\end{align*}
+<span class="incontext"><a href="sec_induction-examples.html#p-530">in-context</a></span>
 </body>
 </html>

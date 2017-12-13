@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:05-06:00    *-->
+<!--*    on 2017-12-13T14:14:14-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,10 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h5 class="heading">
+<span class="solution"><h6 class="heading">
 <span class="type">Solution</span><span class="codenumber">44.a.1</span>
-</h5>
-<p>Choose people in pairs. There are \(\binom{2n}{2}\) ways to choose one pair, \(\binom{2n-2}{2}\) ways to choose a second pair, and once \(k\) pairs have been chosen, there are \(\binom{2n-2k}{2}\) ways to choose the next pair. The number of <!--Style me with CSS--><em>lists</em> of pairs we get in this way is \(\prod_{i=0}^{n-1} \binom{2n-2i}{2}= \frac{(2n)!}{2^i}\text{.}\) However each way of pairing people gets listed \(n!\) times since we see all possible length \(n\) lists of pairs. Therefore the number of actual pairings is</p>
+</h6>
+<p>Choose people in pairs. There are \(\binom{2n}{2}\) ways to choose one pair, \(\binom{2n-2}{2}\) ways to choose a second pair, and once \(k\) pairs have been chosen, there are \(\binom{2n-2k}{2}\) ways to choose the next pair. The number of <em class="emphasis">lists</em> of pairs we get in this way is \(\prod_{i=0}^{n-1} \binom{2n-2i}{2}= \frac{(2n)!}{2^i}\text{.}\) However each way of pairing people gets listed \(n!\) times since we see all possible length \(n\) lists of pairs. Therefore the number of actual pairings is</p>
 \begin{equation*}
 \frac{(2n)!}{2^n n!} = \frac{2n!}{2n\cdot2n-2\cdot2n-4\cdot \cdots\cdot 2} =  \prod_{i=0}^{n-1} 2n-2i-1.
 \end{equation*}

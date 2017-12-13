@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:40-06:00    *-->
+<!--*    on 2017-12-13T14:14:45-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>(Relevant in <a href="expogenfun.html" alt="Appendix C Exponential Generating Functions" title="Appendix C Exponential Generating Functions">Appendix C</a> as well as this section.) Show that \(B_1=B_2\text{.}\)</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Then from <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a></p>
+\begin{align*}
+\left|\overline{\bigcup_{i=1}^n A_i}\right|  &amp;= \sum_{S:S\subseteq [n]} (-1)^{|S|}\frac{(2n-|S|-1)!(n-|S|)!(n-|S|-1)!
+}{(2n-2|S|-1)!}\\
+=\amp \sum_{s=0}^n(-1)^s\binom{n}{s}\frac{(2n-s-1)!(n-s)!(n-s-1)!}{(2n-2s-1)!}\\
+=\amp \sum_{s=0}^n(-1)^s\frac{n!}{s!(n-s)!}\frac{(2n-s-1)!(n-s)!(n-s-1)!}{(2n-2s-1)!}\\
+=\amp \sum_{s=0}^n(-1)^s \frac{n!(2n-s-1)!(n-s-1)!}{s!(2n-2s-1)!}\\
+=\amp \sum_{s=0}^n(-1)^s\binom{2n-s-1}{s}n!(n-s-1)!
+\end{align*}
+<p>is the number of ways to seat the people, alternating sex, so that no couple sits together.</p>
 <span class="incontext"><a href="sec_inclexcl-apps.html#p-1383">in-context</a></span>
 </body>
 </html>

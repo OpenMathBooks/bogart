@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:37-06:00    *-->
+<!--*    on 2017-12-13T14:14:42-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>\(|A\cup B|=|A| + |B| - |A\cap B|\text{.}\)</p>
-<span class="incontext"><a href="sec_inclexcl-sizeunion.html#p-1308">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>\(a_n= a_{n-1} +c(a_{n-1}-a_{n-2})=(1+c)a_{n-1}-ca_{n-2}\text{.}\)</p>
+\begin{align*}
+\sum_{n=2}^\infty
+a_nx^n =\amp \sum_{n=2}^\infty(1+c)a_{n-1}x^n-c\sum_{n=2}^\infty a_{n-2}x^n\\
+(1-(1+c)x +cx^2)\sum_{n=0}^\infty a_nx^n =\amp a_0+a_1x-a_0(1+c)x\\
+\sum_{n=0}^\infty a_nx^n  =\amp  \frac{a_0+(a_1-a_0(1+c))x}{1-(1+c)x +cx^2}\\
+=\amp  \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}
+\end{align*}
+<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1308">in-context</a></span>
 </body>
 </html>

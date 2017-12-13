@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-12-13T14:14:08-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CTGD The Product Principle for EGFs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="custom-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+\left(\begin{array}#1\end{array}\right)}
+\newcommand{\importantarrow}{\Rightarrow}
+\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\bp}{
+\begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+\newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+\end{enumerate}}
+\newcommand{\ignore}[1]{}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\topfraction}{.8}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\ap}{\apple}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\ba}{\banana}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\pe}{\pear}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Orb}{Orb}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ctgd.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<p class="byline">Kenneth P. Bogart</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app3-3-recurrences.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="expogenfun.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="app3-5-expformula.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app3-3-recurrences.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="expogenfun.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="app3-5-expformula.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
+</ul>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
+<ul>
+<li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
+<li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
+<li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
+<li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
+</ul>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<ul>
+<li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
+<li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
+<li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
+<li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<ul>
+<li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
+<li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
+<li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
+<li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<ul>
+<li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
+<li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
+<li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
+<li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<ul>
+<li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
+<li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
+<li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
+<li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<ul>
+<li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
+<li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
+<li><a href="sec_groups-polya.html" data-scroll="sec_groups-polya">Pólya-Redfield Enumeration Theory</a></li>
+<li><a href="sec_groups-suppprobs.html" data-scroll="sec_groups-suppprobs">Supplementary Problems</a></li>
+</ul>
+<h2 class="link active"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
+<li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
+<li><a href="expogenfun.html" data-scroll="expogenfun" class="active">Exponential Generating Functions</a></li>
+<li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="app3-4-prodprinc"><header title="Section C.4 The Product Principle for EGFs"><h2 class="heading hide-type" alt="Section C.4 The Product Principle for EGFs">
+<span class="type">Section</span><span class="codenumber">C.4</span><span class="title">The Product Principle for EGFs</span>
+</h2>
+<a href="app3-4-prodprinc.html" class="permalink">¶</a></header><p id="p-2098">One of our major tools for ordinary generating functions was the product principle. It is thus natural to ask if there is a product principle for exponential generating functions. In <a knowl="./knowl/exponentialbookshelf.html" knowl-id="xref-exponentialbookshelf" alt="Problem 383 " title="Problem 383 ">Problem 383</a> you likely found that the EGF for the number of ways of arranging \(n\) books on one shelf was exactly the same as the EGF for the number of permutations of \([n]\text{,}\) namely \(\frac{1}{1-x}\) or \((1-x)^{-1}\text{.}\) Then using our formula from <a knowl="./knowl/bookcase.html" knowl-id="xref-bookcase" alt="Problem 122 " title="Problem 122 ">Problem 122</a> and the generating function for multisets, you probably found that the EGF for number of ways of arranging \(n\) books on some fixed number \(m\) of bookshelves was \((1-x)^{-m}\text{.}\) Thus the EGF for \(m\) shelves is a product of \(m\) copies of the EGF for one shelf.</p>
+<article class="example-like motivation" id="paintinglightpoles2"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">389</span>
+</h6>
+<p id="p-2099">In <a knowl="./knowl/paintinglightpoles.html" knowl-id="xref-paintinglightpoles" alt="Problem 373 " title="Problem 373 ">Problem 373</a> what would the exponential generating function have been if we had asked for the number of ways to paint the poles with just one color of paint? With two colors of paint? What is the relationship between the EGF for painting the \(n\) poles with one color of paint and the EGF for painting the \(n\) poles with four colors of paint? What is the relationship between the EGF for painting the \(n\) poles with two colors of paint and the EGF for painting the poles with four colors of paint?</p></article><p id="p-2101">In <a knowl="./knowl/telephonenetwork.html" knowl-id="xref-telephonenetwork" alt="Problem 385 " title="Problem 385 ">Problem 385</a> you likely found that the EGF for the number of network configurations with \(n\) customers was \(e^{x+x^2/2}= e^x \cdot
+e^{x^2/2}\text{.}\) In <a knowl="./knowl/allonessequence.html" knowl-id="xref-allonessequence" alt="Problem 380 " title="Problem 380 ">Problem 380</a> you saw that the generating function for the number of permutations on \(n\) elements that are products of one cycles was \(e^x\text{,}\) and in <a knowl="./knowl/exponentialtennisparings.html" knowl-id="xref-exponentialtennisparings" alt="Problem 378 " title="Problem 378 ">Problem 378</a> you likely found that the EGF for the number of tennis pairings of \(2n\) people, or equivalently, the number of permutations of \(2n\) objects that are products of \(n\) two-cycles is \(e^{x^2/2}\text{.}\)</p>
+<article class="example-like forward-essential" id="x2cyclesand1cycles"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">390</span>
+</h6>
+<p id="p-2102">What can you say about the relationship among the EGF for the number of permutations that are products of disjoint two-cycles and one-cycles, i.e., are involutions, the exponential generating function for the number of permutations that are the product of disjoint two-cycles only and the generating function for the number of permutations that are the product of disjoint one cycles only (these are identity permutations on their domain)?</p></article><p id="p-2104">In <a knowl="./knowl/exponentialderangements.html" knowl-id="xref-exponentialderangements" alt="Problem 388 " title="Problem 388 ">Problem 388</a> you likely found that the EGF for the number of permutations of \([n]\) that are derangements is \(\frac{e^{-x}}{1-x}\text{.}\) But every permutation is a product of derangements and one cycles, because the permutation that sends \(i\) to \(i\) is a one-cycle, so that when you factor a permutation as a product of disjoint cycles, the cycles of size greater than one multiply together to give a derangement, and the elements not moved by the permutation are one-cycles.</p>
+<article class="example-like forward-essential" id="derangementsand1cycles"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">391</span>
+</h6>
+<p id="p-2105">If we multiply the EGF for derangements times the EGF for the number of permutations whose cycle decompositions consist of one-cycles only, what EGF do we get? for what set of objects have we found the EGF?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-263" id="hint-263"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-263" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2106">Notice that any permutation is a product of a derangement of the elements not fixed by the permutation times a permutation whose cycle decomposition consists of one-cycles.</p></span></span>
+</div></article><p id="p-2108">We now have four examples in which the EGF for a sequence or a pair of objects is the product of the EGFs for the individual objects making up the sequence or pair.</p>
+<article class="example-like forward-essential" id="exponentialpp1"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">392</span>
+</h6>
+<p id="p-2109">What is the coefficient of \(\frac{x^n}{n!}\) in the product of two EGFs \(\sum_{i=0}^\infty a_i\frac{x^i}{i!}\) and \(\sum_{j=0}^\infty
+b_j\frac{x^j}{j!}\text{?}\) (A summation sign is appropriate in your answer.)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-264" id="hint-264"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-264" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2110">A binomial coefficient is likely to appear in your answer.</p></span></span>
+</div></article><p id="p-2112"> In the case of painting streetlight poles in <a knowl="./knowl/paintinglightpoles2.html" knowl-id="xref-paintinglightpoles2" alt="Problem 389 " title="Problem 389 ">Problem 389</a>, let us examine the relationship between the EGF for painting poles with two colors, the EGF for painting the poles with three colors, and the EGF for painting poles with five colors, \(e^{5x}\text{.}\) To be specific, the EGF for painting poles red and white is \(e^{2x}\) and the EGF for painting poles blue, green, and yellow is \(e^{3x}\text{.}\) To decide how to paint poles with red, white, blue, green, and yellow, we can decide  which set of poles is to be painted with red and white, and which set of poles is to be painted with blue, green, and yellow. Notice that the number of ways to paint a set of poles with red and white depends only on the size of that set, and the number of ways to paint a set of poles with blue, green, and yellow depends only on the size of that set.</p>
+<article class="example-like forward-essential" id="exponentialpp2"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">393</span>
+</h6>
+<p id="p-2113">Suppose that \(a_i\) is the number of ways to paint a set of \(i\) poles with red and white, and \(b_j\) is the number of ways to paint a set of \(j\) poles with blue, green, and yellow. In how many ways may we take a set \(N\) of \(n\) poles, divide it up into two sets \(I\) and \(J\) (using \(i\) to stand for the size of \(I\) and \(j\) to stand for the size of the set \(J\text{,}\) and allowing \(i\) and \(j\) to vary) and paint the poles in \(I\) red and white and the poles in \(J\) blue, green, and yellow? (Give your answer in terms of \(a_i\) and \(b_j\text{.}\)  Don't figure out formulas for  \(a_i\) and \(b_j\) to use in your answer; that will make it harder to get the point of the problem!) How does this relate to <a knowl="./knowl/exponentialpp1.html" knowl-id="xref-exponentialpp1" alt="Problem 392 " title="Problem 392 ">Problem 392</a>?</p></article><p id="p-2115"><a knowl="./knowl/exponentialpp2.html" knowl-id="xref-exponentialpp2" alt="Problem 393 " title="Problem 393 ">Problem 393</a> shows that the formula you got for the coefficient of \(\frac{x^n}{n!}\) in the product of two EGFs is the formula we get by splitting a set \(N\) of poles into two parts and painting the poles in the first part with red and white and the poles in the second part with blue, green, and yellow.  More generally, you could interpret your result in <a knowl="./knowl/exponentialpp1.html" knowl-id="xref-exponentialpp1" alt="Problem 392 " title="Problem 392 ">Problem 392</a> to say that the coefficient of \(\frac{x^n}{n!}\) in the product \(\sum_{i=0}^\infty a_i \frac{x^i}{i!}
+\sum_{j=0}^\infty b_j\frac{x^j}{j!}\) of two EGFs is the sum, over all ways of splitting a set \(N\) of size \(n\) into an ordered pair of disjoint sets \(I\) and \(J\text{,}\) of the product \(a_{|I|}b_{|J|}\text{.}\)</p>
+<p id="p-2116">There seem to be two essential features that relate to the product of exponential generating functions. First, we are considering <b class="terminology">structures</b> that consist of a set and some additional mathematical construction on or relationship among the elements of that set. For example, our set might be a set of light poles and the additional construction might be a coloring function defined on that set. Other examples of additional mathematical constructions or relationships on a set could include a permutation of that set; in particular an involution or a derangement, a partition of that set, a graph on that set, a connected graph on that set, an arrangement of the elements of that set around a circle, or an arrangement of the elements of that set on the shelves of a bookcase. In fact a set with no additional construction or arrangement on it is also an example of a structure. Its additional construction is the empty set!  When a structure consists of the set \(S\) plus the additional construction, we say the structure <em class="emphasis">uses</em> \(S\text{.}\) What all the examples we have mentioned in our earlier discussion of exponential generating functions have in common is that the number of structures that use a given set is determined by the size of that set. We will call a family \(\F\) of structures a <b class="terminology">species</b> of structures on subsets of a set \(X\) if structures are defined on finite subsets of \(X\) and if the number of structures in the family using a finite set \(S\) is finite and is determined by the size of \(S\) (that is, if there is a bijection between subsets \(S\) and \(T\) of \(X\text{,}\) the number of structures in the family that use \(S\) equals the number of structures in the family that use \(T\)). We say a structure is an <b class="terminology">\(\F\)-structure</b> if it is a member of the family \(\F\text{.}\)</p>
+<article class="example-like forward-essential" id="activity-394"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">394</span>
+</h6>
+<p id="p-2117">In <a knowl="./knowl/exponentialbookshelf.html" knowl-id="xref-exponentialbookshelf" alt="Problem 383 " title="Problem 383 ">Problem 383</a>, why is the family of arrangements of set of books on a single shelf (assuming they all fit) a species?</p></article><article class="example-like forward-essential" id="activity-395"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">395</span>
+</h6>
+<p id="p-2119">In <a knowl="./knowl/telephonenetwork.html" knowl-id="xref-telephonenetwork" alt="Problem 385 " title="Problem 385 ">Problem 385</a>, why is the family of people actually making phone calls (assuming nobody is calling outside the telephone network) at any given time, with the added relationship of who is calling whome, a species? Why is the family of sets of people who are not using their phones a species (with no additional construction needed)?</p></article><p id="p-2121">The second essential feature of our examples of products of EGFs is that products of EGFs seem to count structures on ordered pairs of two disjoint sets (or more generally on \(k\)-tuples of mutually disjoint sets). For example, we can determine a five coloring of a set \(S\) by partitioning it in all possible ways into two sets and coloring the first set in the pair with our first two colors and our second pair with the last three colors. Or we can partition our set in all possible ways into five parts and color part i with our ith color. We don't have to do the same thing to each part of our partition; for example, we could define a derangement on one part and an identity permutation on the other; this defines a permutation on the set we are partitioning, and we have already noted that every permutation arises in this way.</p>
+<p id="p-2122">Our combinatorial interpretation of EGFs will involve assuming that the coefficient of \(\frac{x^i}{i!}\) counts the number of structures on a particular set of of size \(i\) in a species of structures on subsets of a set \(X\text{.}\)  Thus in order to give an interpretation of the product of two EGFs we need to be able to think of ordered pairs of structures on disjoint sets or \(k\)-tuples of structures on disjoint sets as structures themselves. Thus given a structure on a set \(S\) and another structure on a disjoint set \(T\text{,}\) we define the ordered pair of structures (which is a mathematical construction!) to be a structure on the set \(S\cup T\text{.}\) We call this a <b class="terminology">pair structure</b>   on \(S\cup T\text{.}\) We can get many structures on a set \(S\cup T\) in this way, because \(S\cup T\) can be divided into many other pairs of disjoint sets. In particular, the set of pair structures whose first structure comes from \(\F\) and whose second element comes from \(\mathcal{G}\) is denoted by \(\F\cdot \mathcal{G}\text{.}\)</p>
+<article class="example-like" id="activity-396"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">396</span>
+</h6>
+<p id="p-2123">Show that if \(\F\) and \(\mathcal{G}\) are species of structures on subsets of a set \(X\text{,}\) then the pair of structures of \(\F\cdot\mathcal{G}\) for a species of structures</p></article><p id="p-2125">Given a species \(\F\) of structures, the number of structures using any particular set of size \(i\) is the same as the number of structures in the family using any other set of size \(i\text{.}\)  We can thus define the exponential generating function (EGF) for the family as the power series \(\sum_{i=1}^\infty a_i \frac{x^i}{i!}\text{,}\) where \(a_i\) is the number of structures of \(\F\) that use one particular set of size \(i\text{.}\)  In <a knowl="./knowl/egf2n.html" knowl-id="xref-egf2n" alt="Problem 372 " title="Problem 372 ">Problems 372</a>, <a knowl="./knowl/paintinglightpoles.html" knowl-id="xref-paintinglightpoles" alt="Problem 373 " title="Problem 373 ">373</a>, <a knowl="./knowl/exponentialpermutations.html" knowl-id="xref-exponentialpermutations" alt="Problem 376 " title="Problem 376 ">376</a>, <a knowl="./knowl/exponentialroundtable.html" knowl-id="xref-exponentialroundtable" alt="Problem 377 " title="Problem 377 ">377</a>, <a knowl="./knowl/exponentialtennisparings.html" knowl-id="xref-exponentialtennisparings" alt="Problem 378 " title="Problem 378 ">378</a>, <a knowl="./knowl/allonessequence.html" knowl-id="xref-allonessequence" alt="Problem 380 " title="Problem 380 ">380</a>, <a knowl="./knowl/oneblockpartitions.html" knowl-id="xref-oneblockpartitions" alt="Problem 382 " title="Problem 382 ">382</a>, <a knowl="./knowl/exponentialbookshelf.html" knowl-id="xref-exponentialbookshelf" alt="Problem 383 " title="Problem 383 ">383</a>, <a knowl="./knowl/telephonenetworkEGF.html" knowl-id="xref-telephonenetworkEGF" alt="Problem 387 " title="Problem 387 ">387</a>, and <a knowl="./knowl/exponentialderangements.html" knowl-id="xref-exponentialderangements" alt="Problem 388 " title="Problem 388 ">388</a>, we were computaing EGFs for species of subsets of some set.</p>
+<article class="example-like" id="activity-397"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">397</span>
+</h6>
+<p id="p-2126">If \(\F\) and \(\mathcal{G}\) are species of subsets of \(X\text{,}\) how is the EGF for \(\F\cdot \mathcal{G}\) related to the EGFs for \(F\) and \(G\text{?}\)  Prove you are right.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-265" id="hint-265"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-265" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2127">If \(f(x) = \sum_{i=0}^\infty a_i \frac{x^i}{i!}\) and \(g(x) = \sum_{j=0}^\infty b_j\frac{x^j}{j!}\text{,}\) what is the coefficient of \(\frac{x^n}{n!}\) in \(f(x)g(x)\text{?}\)  don't be surprised if your answer has a binomial coefficient in it.  In fact, the binomial coefficient should help you finish the problem.</p></span></span>
+</div></article><article class="example-like" id="genspeciesproduct"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">398</span>
+</h6>
+<p id="p-2129">Without giving the proof, how can you compute the EGF \(f(x)\) for the number of structures using a set of size \(n\) in the species \(\F_1\cdot\F_2\cdot \cdots\cdot \F_k\) of structures on \(k\)-tuples of subsets of \(X\) from the EGFs \(f_i(x)\) for \(\F_i\) for each \(i\) from \(1\) to \(k\text{?}\)  (Here we are using the natural extension of the idea of the pair of structures to the idea of a \(k\)-tuple structure.)</p></article><article class="theorem-like" id="genprodprincipleEGF"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">C.4.1</span>
+</h6>
+<p id="p-2131">If \(\F_1, \F_2, \ldots, \F_n\) are species of subsets of the set \(X\) and \(\F_i\) has EGF \(f_i(x)\text{,}\) then the family of \(k\)-tuple structures \(\F_1\cdot \F_2\cdot \cdots\cdot \F_n\) has EGF \(\prod_{i=1}^n f_i(x)\text{.}\)</p></article><p id="p-2132">We call <a knowl="./knowl/genprodprincipleEGF.html" knowl-id="xref-genprodprincipleEGF" alt="Theorem C.4.1 " title="Theorem C.4.1 ">Theorem C.4.1</a> the <b class="terminology">product principle for exponential generating functions</b>. We give two corollaries; the proof of the second is not immediate though not particular difficult.</p>
+<article class="theorem-like" id="fspeciescorollary1"><h6 class="heading">
+<span class="type">Corollary</span><span class="codenumber">C.4.2</span>
+</h6>
+<p id="p-2133">If \(\F\) is a species of structures on subsets of \(X\) and \(f(x0)\) is the EGF for \(\F\text{,}\) then \(f(x)^k\) is the EGF for the \(k\)-tuple structure on \(k\)-tuples of \(\F\)-structures using disjoint subsets of \(X\text{.}\)</p></article><p id="p-2134">Our next corollary uses the idea of a \(k\)-set structure. Suppose we have a species \(\F\) of structures on nonempty subsets of \(X\text{,}\) that is, a species of structures which assigns no structures to the empty set. Then we can define a new species \(\F^{(k)}\) of structures, called “\(k\)-set structures,” using nonempty subsets of \(X\text{.}\) Given a fixed positive integer \(k\text{,}\) a <b class="terminology">\(k\)-set structure</b> on a subset \(Y\) of \(X\) consists of a \(k\)-element set of nonempty disjoint subsets of \(X\) whose union is \(Y\) and an assignment of an \(\F\)-structure to each of the disjoint subsets. This is a species on the set of subsets of \(X\text{;}\) the subset used by a \(k\)-set structure is the union of the sets of the structure. To recapitulate, the set of \(k\)-set structures on a subset \(Y\) of \(X\) is the set of all possible assignments of \(\F\)-structures to \(k\) nonempty disjoint sets whose union is \(Y\text{.}\) (You can also think of the \(k\)-set structures as a family of structures defined on blocks of partitions of subsets of \(X\) into \(k\) blocks.)</p>
+<article class="theorem-like" id="fspeciescorollary2"><h6 class="heading">
+<span class="type">Corollary</span><span class="codenumber">C.4.3</span>
+</h6>
+<p id="p-2135">If \(\F\) is a species of structures on nonempty subsets of \(X\) and \(f(x)\) is the EGF for \(\F\text{,}\) then for each positive integer \(k\text{,}\) \(\frac{f(x)^k}{k!}\) is the EGF for the family \(\F^{(k)}\) of \(k\)-set structures on subsets of \(X\)</p></article><article class="example-like" id="activity-399"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">399</span>
+</h6>
+<p id="p-2136">Prove <a knowl="./knowl/fspeciescorollary2.html" knowl-id="xref-fspeciescorollary2" alt="Corollary C.4.3 " title="Corollary C.4.3 ">Corollary C.4.3</a>.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-266" id="hint-266"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-266" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2137">Since the sets of a \(k\)-set structure are nonempty and disjoint, the \(k\)-element set of sets can be arranged as a \(k\)-tuple in \(k!\) ways.</p></span></span>
+</div></article><article class="example-like forward-essential" id="activity-400"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">400</span>
+</h6>
+<p id="p-2139">Use the product principle for EGFs to explain the results of <a knowl="./knowl/x2cyclesand1cycles.html" knowl-id="xref-x2cyclesand1cycles" alt="Problem 390 " title="Problem 390 ">Problems 390</a> and <a knowl="./knowl/derangementsand1cycles.html" knowl-id="xref-derangementsand1cycles" alt="Problem 391 " title="Problem 391 ">Problem 391</a>.</p></article><article class="example-like forward-essential" id="activity-401"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">401</span>
+</h6>
+<p id="p-2142">Use the general product principle for EGFs or one of its corollaries to explain the relationship between the EGF for painting streetlight poles in only one color and the EGF for painting streetlight poles in \(4\) colors in <a knowl="./knowl/paintinglightpoles.html" knowl-id="xref-paintinglightpoles" alt="Problem 373 " title="Problem 373 ">Problems 373</a> and <a knowl="./knowl/paintinglightpoles2.html" knowl-id="xref-paintinglightpoles2" alt="Problem 389 " title="Problem 389 ">Problem 389</a>. What is the EGF for the number \(p_n\) of ways to paint \(n\) streetlight poles with some fixed number \(k\) of colors of paint.</p></article><article class="example-like forward-essential" id="activity-402"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">402</span>
+</h6>
+<p id="p-2144">Use the general product principle for EGFs or one of its corollaries to explain the relationship between the EGF for arranging books on one shelf and the EGF for arranging books on \(n\) shelves in <a knowl="./knowl/exponentialbookshelf.html" knowl-id="xref-exponentialbookshelf" alt="Problem 383 " title="Problem 383 ">Problem 383</a>.</p></article><article class="example-like interesting" id="activity-403"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">403</span>
+</h6>
+<p id="p-2146">(Optional) Our very first example of exponential generating functions used the binomial theorem to show that the EGF for \(k\)-element permutations of an \(n\) element set is \((1+x)^n\text{.}\) Use the EGF for \(k\)-element permutations of a one-element set and the product principle to prove the same thing. Hint: Review the alternate definition of a function in <a href="s3-1-distrib-idea.html#orderedfunctionsection" alt="Subsection 3.1.2 Ordered functions" title="Subsection 3.1.2 Ordered functions">Section 3.1.2</a>.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-267" id="hint-267"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-267" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2147">The alternate definition of a funciton in <a href="s3-1-distrib-idea.html#orderedfunctionsection" alt="Subsection 3.1.2 Ordered functions" title="Subsection 3.1.2 Ordered functions">Section 3.1.2</a> can be restated to say that a function from a \(k\)-element set \(K\) to an \(n\)-element set \(N\) can be thought of as an \(n\)-tuple of sets, perhaps with some empty, whose union is \(K\text{.}\) In order to think of the function as an \(n\)-tuple, we number the elements of \(N\) as number 1 through number \(n\text{.}\) Then the \(i\)th set in the \(n\)-tuple is the set of elements mapped to the \(i\)th element of \(N\) in our numbering?</p></span></span>
+</div></article><article class="example-like" id="activity-404"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">404</span>
+</h6>
+<p id="p-2149">What is the EGF for the number of ways to paint \(n\) streetlight poles red, white blue, green and yellow, assuming an even number of poles must be painted green and an even number of poles must be  painted yellow? Give a formula for the number of ways to paint \(n\) poles.  (Don't forget the factorial!)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-268" id="hint-268"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-268" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2150">Don't be surprised if you see a hyperbolic sine or hyperbolic cosine in your answer. If you aren't familiar with these functions, look them up in a calculus book.</p></span></span>
+</div></article><article class="example-like interesting-forward-essential" id="activity-405"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">405</span>
+</h6>
+<p id="p-2152">What is the EGF for the number of functions from an \(n\)-element set onto a one-element set? (Can there be any functions from the empty set onto a one-element set?) What is the EGF for the number \(c_n\) of functions from an \(n\)-element set onto a \(k\) element set (where \(k\) is fixed)? Use this EGF to find an explicit expression for the number of functions from a \(k\)-element set onto an \(n\)-element set and compare the result with what you got by inclusion and exclusion.</p></article><article class="example-like interesting-forward-essential" id="BellNumbersEGF"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">406</span>
+</h6>
+<p id="p-2155">In <a knowl="./knowl/BellNumberIntro.html" knowl-id="xref-BellNumberIntro" alt="Problem 142 " title="Problem 142 ">Problem 142</a> You showed that the Bell Numbers \(B_n\) satisfy the equation \(B_{n+1} =
+\sum_{k=0}^{n} \binom{n}{k}B_{n-k}\) (or a similar equation for \(B_n\text{.}\)) Multiply both sides of this equation by \(\frac{x^n}{n!}\) and sum from \(n=0\) to infinity. On the left hand side you have a derivative of a certain EGF we might call \(B(x)\text{.}\) On the right hand side, you have a product of two EGFs, one of which is \(B(x)\text{.}\) What is the other one? What differential equation involving \(B(x)\) does this give you. Solve the differential equation for \(B(x)\text{.}\) This is the EGF for the Bell numbers!.</p></article><article class="example-like interesting" id="activity-407"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">407</span>
+</h6>
+<p id="p-2157">Prove that \(n2^{n-1} = \sum_{k=1}^n \binom{n}{k}k\) by using EGFs.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-269" id="hint-269"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-269" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2158">The EGF for \(\sum_{i=1}^n\binom{n}{k}k\) is \(\sum_{n=1}^\infty \sum_{i=1}^n \frac{n!}{k!(n-k)!}k\frac{x^n}{n!}\text{.}\)  You can cancel out the \(n!\) terms and the \(k\) terms.  Now try to see if what is left can be regarded as the product of two EGFs.</p></span></span>
+</div></article><article class="example-like forward-essential" id="activity-408"><h6 class="heading">
+<span class="type">Problem</span><span class="codenumber">408</span>
+</h6>
+<p id="p-2161">In light of <a knowl="./knowl/oneblockpartitions.html" knowl-id="xref-oneblockpartitions" alt="Problem 382 " title="Problem 382 ">Problem 382</a>, why is the EGF for the Stirling numbers \(S(n,k)\) of the second kind not \((e^x -1)^n\text{?}\) What is it equal to instead?</p></article></section></div></main>
+</div>
+</body>
+</html>

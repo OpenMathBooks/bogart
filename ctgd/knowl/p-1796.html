@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:56-06:00    *-->
+<!--*    on 2017-12-13T14:15:04-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>A permutation with cycle structure \(2^2 1^1\) will have a one-cycle of two-sets for each two cycle, any other two-set will be in a  two cycle.  There are \(4+2+2=8\) such two-sets and thus four two-cycles, so such a permutation has four two cycles and two one cycles.  There are \(\binom{5}{2}\binom{3}{2}/2 =15\) such permutations.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We can first consider all ways of coloring the vertices of the cube with the four colors; once those vertices are in place, the number of ways to put the sticks in is the result of <a knowl="./knowl/coloredsticks.html" knowl-id="xref-coloredsticks" alt="Problem 324 " title="Problem 324 ">Problem 324</a>, so by the product principle then number of ways to choose the colors of the vertices and edges is the product of the number of ways to choose each. Thus we just need to consider the action of the rotation group of the cube on the vertices: </p>
+<ul style="list-style-type: disc;">
+<li>identity is the product of eight one-cycles.</li>
+<li>90 or 270 degree rotation around an axis perpendicular to two opposite faces is a product of two four-cycles.</li>
+<li>180 degree rotation around an axis perpendicular to two opposite faces is a product of four two-cycles.</li>
+<li>180 degree rotation around an axis joining two opposite edges is a product of four two-cycles.</li>
+<li>120 or 240 degree rotation around an axis through two diagonally opposite vertices is a product of two three-cycles and two one-cycles.</li>
+</ul>
+<p> Thus the cycle index for this action is</p>
+\begin{equation*}
+\frac{1}{24}\left(z_1^8+6z_4^2 + 9z_2^4 + 8z_3^2z_1^2\right).
+\end{equation*}
 <span class="incontext"><a href="sec_groups-polya.html#p-1796">in-context</a></span>
 </body>
 </html>

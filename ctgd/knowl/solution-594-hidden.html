@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:02-06:00    *-->
+<!--*    on 2017-12-13T14:15:16-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,13 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>We guess that \(1+3+5+\cdots+2n-1=n^2\text{.}\) Clearly this is true when \(n\) is 1, 2, or 3. Suppose there is an \(n\) for which this formula is not true, and let \(k\) be the smallest such \(n\text{.}\) Then \(1+3+5+\cdots+2(k-1)-1 =
-(k-1)^2\text{.}\) Simplifying, \(1+3+5+\cdots+2k-3 =
-(k-1)^2\text{.}\) Now suppose we add \(2k-1\) to both sides of this equation. Then we get</p>
-\begin{equation*}
-1+3+5+\cdots+2k-3 +2k-1 =
-(k-1)^2+2k-1 = k^2-2k+1+2k-1=k^2.
-\end{equation*}
-<p>But this is a contradiction, because we assumed that \(k\) was the smallest value of \(n\) for which the sum on the left is not \(n^2\text{.}\) Therefore the assumption that there is an \(n\) for which \(1+3+5+\cdots+2n-1
-\not=n^2\) must be false, so the equation \(1+3+5+\cdots+2n-1=n^2\) must be true for all positive integers \(n\text{.}\)</p></span></body>
+<body><span class="solution"><p>We know that the number of subsets of a \((k-1)\)-element set is \(2^{k-1}\text{.}\) The number of subsets of \(\{1,2,\ldots,k\}\) that do not contain \(k\) is the number of subsets of the \(k-1\)-element set \(\{1,2,\ldots,
+k-1\}\text{,}\) so we know this number is \(2^{k-1}\text{.}\) We know that the number of subsets that do contain \(k\) equals the number that don't, so the number that do contain \(k\) is also \(2^{k-1}\text{.}\) The sum principle tells us that the number os subsets of \(\{1,2,\ldots, k\}\) is \(2^{k-1}+2^{k-1}=2^k\text{.}\) We can conclude that the statement ``for every nonnegative integer \(n\text{,}\) an \(n\)-element set has exactly \(2^n\) subsets" is true.</p></span></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:09-06:00    *-->
+<!--*    on 2017-12-13T14:15:26-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>There was one element that our last four problems had in common. In each case our EGF \(f(x)\) involved the number of structures of a certain type (partitions, telephone networks, tennis pairings, permutations) that used only one set of an appropriate kind. (That is, we had a partition with one part, a telephone network consisting either of one person or two people connected to each other, a tennis pairing of one set of two people, or a permutation with one cycle.) Our EGF \(g(x)\) was the number of structures of the same “type” (we put type in quotation marks here because we don't plan to define it formally) that could consist of any number of sets of the appropriate kind. Notice that the order of these sets was irrelevant. For example we don't order the blocks of a partition and a product of disjoint cycles is the same no matter what order we use to write down the product. Thus we were relating the EGF for structures which were somehow “building blocks” to the EGF for structures which were sets of building blocks. For a reason that you will see later, it is common to call the building blocks <em class="terminology">connected</em> structures. Notice that our connected structures were all based on nonempty sets, so we had no connected structures whose value was the empty set. Thus in each case, if \(f(x) = \sum_{i=0}^\infty a_i\frac{x^i}{i!}\text{,}\) we would have \(a_0=0\text{.}\) The relationship between the EGFs was always \(g(x) = e^{f(x)}\text{.}\) We now give a combinatorial explanation for this relationship.</p>
-<span class="incontext"><a href="expogenfun.html#p-2156">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{equation*}
+\sum_{n=0}^\infty B_{n+1}\frac{x^n}{n!} = \sum_{n=0}^\infty\binom{n}{k}B_{n-k}\frac{x^n}{n!} =\sum_{i=0}^\infty B_{i}\frac{x^{i}}{(i)!}\sum_{j=0}^\infty \frac{x^j}{j!}\text{.}
+\end{equation*}
+<p>Thus \(B'(x) = B(x)e^x\text{,}\) which gives us \(\ln B(x) = e^x+c\text{,}\) or \(B(x) =
+e^{ex+c} =e^ce^{(e^x)}\text{.}\) Since \(B_0=B(0)\) and \(B_0=1\text{,}\) we have \(c=-1\) and \(B(x) = \exp(e^x-1)\text{.}\)</p>
+<span class="incontext"><a href="app3-4-prodprinc.html#p-2156">in-context</a></span>
 </body>
 </html>

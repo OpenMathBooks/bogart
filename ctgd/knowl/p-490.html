@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:11-06:00    *-->
+<!--*    on 2017-12-13T14:14:18-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>One expects to need double induction again here. But only because of the location of the problem and because the sum looks like double induction. And those reasons aren't enough to mean you have to use double induction. If you had this result in hand already, then you could us it with double induction to give a second proof that Ramsey Numbers exist.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We prove by induction that if \(S\) is a set of functions defined on \([m]\) such that </p>
+<ul style="list-style-type: disc;">
+<li>There are \(k_1\) choices for \(f(1)\) and</li>
+<li>when \(2\le i\le m\text{,}\) for each choice of \(f(1)\text{,}\) \(f(2)\text{,}\) … \(f(i-1)\text{,}\) there are \(k_i\) choices for \(f(i)\text{,}\)</li>
+</ul>
+<p> then there are \(\prod_{i=1}^m k_i\) functions in \(S\text{.}\) When \(m=1\text{,}\) the product is \(k_1\) and there are \(k_1\) functions in \(S\text{.}\) Now assume inductively that when \(S'\) is a set of functions defined on \([m-1]\) such that </p>
+<ul style="list-style-type: disc;">
+<li>There are \(k_1\) choices for \(f(1)\) and</li>
+<li>when \(2\le i\le m-1\text{,}\) for each choice of \(f(1)\text{,}\) \(f(2)\text{,}\) … \(f(i-1)\text{,}\) there are \(k_i\) choices for \(f(i)\text{,}\)</li>
+</ul>
+<p> then there are \(\prod_{i=1}^{m-1} k_i\) functions in \(S'\text{.}\) Now partition \(S\) into \(k_1\) sets \(S_j\text{,}\) where \(S_j\) is the set of functions \(f\) in \(S\) with \(f(n) = y_j\) for each of the \(k_n\) values \(y_j\) that are possible for \(f(1)\text{.}\) Thus \(S\) is a union of \(k_n\) sets \(S_j\) each of size \(\prod_{i=1}^{m-1} k_i\) (by the inductive hypothesis), and so by the product principle for unions of sets, \(S\) has size \(\prod_{i=1}^{m} k_i\text{.}\) Therefore, by the principle of mathematical induction, we have proved the general product principle.</p>
 <span class="incontext"><a href="sec_induction-examples.html#p-490">in-context</a></span>
 </body>
 </html>

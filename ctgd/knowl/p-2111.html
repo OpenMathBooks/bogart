@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:07-06:00    *-->
+<!--*    on 2017-12-13T14:15:23-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If \(f(x) = \sum_{i=0}^\infty a_i \frac{x^i}{i!}\) and \(g(x) = \sum_{j=0}^\infty b_j\frac{x^j}{j!}\text{,}\) what is the coefficient of \(\frac{x^n}{n!}\) in \(f(x)g(x)\text{?}\)  don't be surprised if your answer has a binomial coefficient in it.  In fact, the binomial coefficient should help you finish the problem.</p>
-<span class="incontext"><a href="expogenfun.html#p-2111">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+\begin{equation*}
+\sum_{i,j:\ i+j=n} n!\frac{a_i}{i!}\frac{b_j}{j!},
+\end{equation*}
+<p>which can be better written as</p>
+\begin{equation*}
+\sum_{i=0}^n\frac{n!}{i!(n-i)!} a_i
+b_{n-i}=\sum_{i=0}^n\binom{n}{i} a_i b_{n-i}.
+\end{equation*}
+<span class="incontext"><a href="app3-4-prodprinc.html#p-2111">in-context</a></span>
 </body>
 </html>

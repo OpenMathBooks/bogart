@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:35-06:00    *-->
+<!--*    on 2017-12-13T14:14:40-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,18 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>\((x^3+x^4+x^5+x^6)^n\text{;}\)</p>
-\begin{align*}
-(x^3+x^4+x^5+x^6)^n =\amp x^{3n}(1+x+x^2+x^3)^n\\
-=\amp x^{3n}\left(\frac{1-x^4}{1-x}\right)^n\\
-=\amp x^{3n}\sum_{j=0}^n (-1)^j\binom{n}{j}x^{4j}\sum_{i=0}^\infty
-\binom{n+i-1}{i}x^i\text{.}
-\end{align*}
-<p>The number of ways to pass out \(k\) pieces of candy is the coefficient of \(x^k\) in this expression. Thus the answer is zero if \(k\lt 3n\) because of the \(x^{3n}\) in front. Otherwise the answer is the coefficient of \(^{k-3n}\) in \(\sum_{j=0}^n (-1)^j\binom{n}{j}x^{4j}\sum_{i=0}^\infty \binom{n+i-1}{i}x^i\text{,}\) which is</p>
-\begin{equation*}
-\sum_{i,j:4j+i=k-3n}(-1)^j\binom{n}{j}\binom{n+i-1}{i}= \sum_{j=0}^{\lfloor (k-3n)/4\rfloor} (-1)^j\binom{n}{j}\binom{k-2n-4j-1}{n-1}.
-\end{equation*}
-<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1271">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>As a challenge (which the author has not yet done), see if you can find a way to show algebraically (not using the recurrence relation, but rather the formula you get by removing the square roots of five) that the formula for the Fibonacci numbers yields integers.</p>
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1271">in-context</a></span>
 </body>
 </html>

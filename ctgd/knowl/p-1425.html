@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:42-06:00    *-->
+<!--*    on 2017-12-13T14:14:47-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,18 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>We use the Principle of Inclusion and Exclusion. The set \(A\) will be the set of arrangements of people in a circle where two arrangements are the same if we get one from the other by rotating or flipping the second. Set \(A_i\) will be the set of arrangements in which person \(i\) links arms with someone previously to his or her immediate right. (Saying it is the person to the right gives us more control over our formulas.) Given a subset \(S\) of \([n]\text{,}\) the number of ways for the people in that set to link arms with the people previously on their right is the number of ways to arrange \(n-|S|\) strings of people around a circle with strings of length more than 1 having two ways to arrange themselves.  (Once we have two or more people linked, another person can be added to this string only at one end or not at all, because this person must have been to the right of one of the people on an end of the string. However a string of length two or more can unlink and then link in the opposite order, and each person will still be linked to exactly the same people.) Thus \(\left|\bigcap_{i\colon i\in S}A_i\right|= (n-|S|-1)!2^{m(S)}\text{,}\) where \(m(S)\) is the number of strings of length more than one determined by \(S\text{.}\) The number \(m(S)\) can be any number from 1 to \(S\text{,}\) so long as \(S\) is not too big; namely so long as \(|S|\le \lfloor n/1\rfloor\text{.}\) (This is because if \(m(S)=|S|\text{,}\) then each person determined by a property in \(S\) must be adjacent to a person not determined by a property in \(S\text{.}\)) In particular, \(\left|\bigcap_{i\colon i\in S}A_i\right|\) is not completely determined by the size of \(S\text{,}\) as in all our other inclusion-exclusion problems. How do we compute \(m(S)\text{?}\) Let us call a subset \(R\) of \(S\) a run if </p>
-<ol style="list-style-type: lower-alpha;">
-<li>the people determined by \(R\) sit together in a row in both seatings, and</li>
-<li>no other person in \(S\) is in a row with these people in both seatings.</li>
-</ol>
-<p> Some runs might determine just one person, but a run could also equal all of \(S\text{.}\) Each run will have one more person not in \(S\) who was originally to the right of the person in the run who was rightmost in the first seating, and so this person will have to sit in a row with the people in \(R\) in the second seating as well. Thus the number \(r\) of runs in \(S\) is the number of strings \(m(S)\) that may be seated in two ways, and there are \(n-|S|-r\) people who do not have to be seated with runs. Thus \(\left|\bigcap_{i\colon i\in S}A_i\right| = (n-|S|-1)!2^r\text{,}\) because the total number of strings of people (including strings of just one person) we need to seat is \(n-|S| -r\text{,}\) and there are \((k-1)!\) ways to arrange \(k\) objects in a circle. If we try to use the information we have so far to compute \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\text{,}\) we get</p>
-\begin{equation*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right| =\sum_{S:S\subseteq [n]}(-1)^{|S|}(n-|S|_1)!2^r
-=\sum_{s=0}^n\sum_{r=1}^{|S|}N(s,r)(n-s-1)!2^r,
-\end{equation*}
-<p>in which \(N(s,r)\) stands for the number of property sets with size \(s\) and \(r\) runs.</p>
-<span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1425">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>What do you observe about the signs of the coefficients of the chromatic polynomial of the graph in <a knowl="./knowl/del-cont.html" knowl-id="xref-del-cont" alt="Figure 5.3.1 " title="Figure 5.3.1 ">Figure 5.3.1</a>? What about the signs of the coefficients of the chromatic polynomial of a path? Of a cycle? Of a tree? Make a conjecture about the signs of the coefficients of a chromatic polynomial and prove it.</p>
+<span class="incontext"><a href="sec_inclexcl-delcont.html#p-1425">in-context</a></span>
 </body>
 </html>

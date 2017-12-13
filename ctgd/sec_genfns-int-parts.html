@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:25:52-06:00    *-->
+<!--*    on 2017-12-13T14:13:53-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Generating functions for integer partitions</title>
+<title>CTGD Generating functions for integer partitions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -21,7 +21,7 @@ MathJax.Hub.Config({
         extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
         TagSide: "right",
         TagIndent: ".8em",
     },
@@ -41,10 +41,9 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="custom-styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
 \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
@@ -71,7 +70,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<h1 class="heading"><a href="ctgd.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
 <p class="byline">Kenneth P. Bogart</p>
 </div>
 </div></div>
@@ -88,7 +87,12 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
+</ul>
 <h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
@@ -103,7 +107,7 @@ MathJax.Hub.Config({
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
@@ -136,127 +140,155 @@ MathJax.Hub.Config({
 <li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
 <li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
 <li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
-<li><a href="appendix-4.html" data-scroll="appendix-4">Hints to Selected Problems</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_genfns-int-parts"><header title="Section 4.2 Generating functions for integer partitions"><h1 class="heading hide-type" alt="Section 4.2 Generating functions for integer partitions">
-<span class="type">Section</span><span class="codenumber">4.2</span><span class="title">Generating functions for integer partitions</span><a href="sec_genfns-int-parts.html" class="permalink">¶ permalink</a>
-</h1></header><article class="example-like essential" id="change-making"><h5 class="heading">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_genfns-int-parts"><header title="Section 4.2 Generating functions for integer partitions"><h2 class="heading hide-type" alt="Section 4.2 Generating functions for integer partitions">
+<span class="type">Section</span><span class="codenumber">4.2</span><span class="title">Generating functions for integer partitions</span>
+</h2>
+<a href="sec_genfns-int-parts.html" class="permalink">¶</a></header><article class="example-like essential" id="change-making"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">200</span>
-</h5>
-<p id="p-1124">If we have five identical pennies, five identical nickels, five identical dimes, and five identical quarters, give the picture enumerator for the combinations of coins we can form and convert it to a generating function for the number of ways to make \(k\) cents with the coins we have. Do the same thing assuming we have an unlimited supply of pennies, nickels, dimes, and quarters.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-177" id="hint-177"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-177" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1125">This is a good place to apply the product principle for picture enumerators.</p></span></span>
-</div></article><article class="example-like essential" id="activity-201"><h5 class="heading">
+</h6>
+<p id="p-1138">If we have five identical pennies, five identical nickels, five identical dimes, and five identical quarters, give the picture enumerator for the combinations of coins we can form and convert it to a generating function for the number of ways to make \(k\) cents with the coins we have. Do the same thing assuming we have an unlimited supply of pennies, nickels, dimes, and quarters.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-177" id="hint-177"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-177" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1139">This is a good place to apply the product principle for picture enumerators.</p></span></span>
+</div></article><article class="example-like essential" id="activity-201"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">201</span>
-</h5>
-<article class="introduction" id="introduction-42"><p id="p-1129">Recall that a partition of an integer \(k\) is a multiset of numbers that adds to \(k\text{.}\) In <a knowl="./knowl/change-making.html" knowl-id="xref-change-making" alt="Problem 200 " title="Problem 200 ">Problem 200</a> we found the generating function for the number of partitions of an integer into parts of size 1, 5, 10, and 25. When working with generating functions for partitions, it is becoming standard to use \(q\) rather than \(x\) as the variable in the generating function.  Write your answers in this notation.<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-13" id="fn-13"><span class="footnote"><sup> 5 </sup></span></a></span><span id="hk-fn-13" style="display: none;" class="tex2jax_ignore"><span class="footnote">The reason for this change in the notation relates to the subject of finite fields in abstract algebra, where \(q\) is the standard notation for the size of a finite field.  While we will make no use of this connection, it will be easier for you to read more advanced work if you get used to the different notation.</span></span></p></article><article class="exercise-like" id="task-139"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1130">Give the generating function for the number partitions of an integer into parts of size one through ten.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-178" id="hint-178"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-178" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1131">The product principle for generating functions helps you break the generating function into a product of ten simpler ones.</p></span></span></article><article class="exercise-like" id="largestpartatmostm"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1133">Give the generating function for the number of partitions of an integer \(k\) into parts of size at most \(m\text{,}\) where \(m\) is fixed but \(k\) may vary. Notice this is the generating function for partitions whose Young diagram fits into the space between the line \(x=0\) and the line \(x=m\) in a coordinate plane. (We assume the boxes in the Young diagram are one unit by one unit.)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-179" id="hint-179"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-179" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1134">\(m\) was 10 in the previous part of this problem.</p></span></span></article></article><article class="example-like essential" id="atmostmparts"><h5 class="heading">
+</h6>
+<div class="introduction" id="introduction-42"><p id="p-1143">Recall that a partition of an integer \(k\) is a multiset of numbers that adds to \(k\text{.}\) In <a knowl="./knowl/change-making.html" knowl-id="xref-change-making" alt="Problem 200 " title="Problem 200 ">Problem 200</a> we found the generating function for the number of partitions of an integer into parts of size 1, 5, 10, and 25. When working with generating functions for partitions, it is becoming standard to use \(q\) rather than \(x\) as the variable in the generating function.  Write your answers in this notation.<a knowl="" class="id-ref" refid="hk-fn-13" id="fn-13"><span class="footnote"><sup> 5 </sup></span></a><span id="hk-fn-13" class="hidden-content tex2jax_ignore"><span class="footnote">The reason for this change in the notation relates to the subject of finite fields in abstract algebra, where \(q\) is the standard notation for the size of a finite field.  While we will make no use of this connection, it will be easier for you to read more advanced work if you get used to the different notation.</span></span></p></div>
+<article class="exercise-like" id="task-139"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1144">Give the generating function for the number partitions of an integer into parts of size one through ten.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-178" id="hint-178"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-178" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1145">The product principle for generating functions helps you break the generating function into a product of ten simpler ones.</p></span></span>
+</div></article><article class="exercise-like" id="largestpartatmostm"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1147">Give the generating function for the number of partitions of an integer \(k\) into parts of size at most \(m\text{,}\) where \(m\) is fixed but \(k\) may vary. Notice this is the generating function for partitions whose Young diagram fits into the space between the line \(x=0\) and the line \(x=m\) in a coordinate plane. (We assume the boxes in the Young diagram are one unit by one unit.)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-179" id="hint-179"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-179" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1148">\(m\) was 10 in the previous part of this problem.</p></span></span>
+</div></article></article><article class="example-like essential" id="atmostmparts"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">202</span>
-</h5>
-<p id="p-1136">In <a knowl="./knowl/largestpartatmostm.html" knowl-id="xref-largestpartatmostm" alt="Part 201.b " title="Part 201.b ">Problem 201.b</a> you gave the generating function for the number of partitions of an integer into parts of size at most \(m\text{.}\) Explain why this is also the generating function for partitions of an integer into at most \(m\) parts. Notice that this is the generating function for the number of partitions whose Young diagram fits into the space between the line \(y=0\) and the line \(y=m\text{.}\)</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-180" id="hint-180"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-180" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1137">Think about conjugate partitions.</p></span></span>
-</div></article><article class="example-like essential" id="genfunpartitions"><h5 class="heading">
+</h6>
+<p id="p-1150">In <a knowl="./knowl/largestpartatmostm.html" knowl-id="xref-largestpartatmostm" alt="Part 201.b " title="Part 201.b ">Problem 201.b</a> you gave the generating function for the number of partitions of an integer into parts of size at most \(m\text{.}\) Explain why this is also the generating function for partitions of an integer into at most \(m\) parts. Notice that this is the generating function for the number of partitions whose Young diagram fits into the space between the line \(y=0\) and the line \(y=m\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-180" id="hint-180"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-180" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1151">Think about conjugate partitions.</p></span></span>
+</div></article><article class="example-like essential" id="genfunpartitions"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">203</span>
-</h5>
-<article class="introduction" id="introduction-43"><p id="p-1139">When studying partitions of integers, it is inconvenient to restrict ourselves to partitions with at most \(m\) parts or partitions with maximum part size \(m\text{.}\)</p></article><article class="exercise-like" id="task-141"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1140">Give the generating function for the number of partitions of an integer into parts of any size. Don't forget to use \(q\) rather than \(x\) as your variable.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-181" id="hint-181"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-181" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1141">Don't be afraid of writing down a product of infinitely many power series.</p></span></span></article><article class="exercise-like" id="task-142"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1143">Find the coefficient of \(q^4\) in this generating function.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-182" id="hint-182"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-182" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1144">From the fifth factor on, there is no way to choose a q i that has i nonzero and less than five from the factor.</p></span></span></article><article class="exercise-like" id="task-143"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1146">find the coefficient of \(q^5\) in this generating function.</p></article><article class="exercise-like" id="task-144"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1148">This generating function involves an infinite product. Describe the process you would use to expand this product into as many terms of a power series as you choose.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-183" id="hint-183"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-183" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1149">Describe to yourself how to get the coefficient of a given power of \(q\text{.}\)</p></span></span></article><article class="exercise-like" id="task-145"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-1151">Rewrite any power series that appear in your product as quotients of polynomials or as integers divided by polynomials.</p></article></article><article class="example-like interesting" id="activity-204"><h5 class="heading">
+</h6>
+<div class="introduction" id="introduction-43"><p id="p-1153">When studying partitions of integers, it is inconvenient to restrict ourselves to partitions with at most \(m\) parts or partitions with maximum part size \(m\text{.}\)</p></div>
+<article class="exercise-like" id="task-141"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1154">Give the generating function for the number of partitions of an integer into parts of any size. Don't forget to use \(q\) rather than \(x\) as your variable.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-181" id="hint-181"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-181" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1155">Don't be afraid of writing down a product of infinitely many power series.</p></span></span>
+</div></article><article class="exercise-like" id="task-142"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1157">Find the coefficient of \(q^4\) in this generating function.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-182" id="hint-182"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-182" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1158">From the fifth factor on, there is no way to choose a \(q^i\) that has \(i\) nonzero and less than five from the factor.</p></span></span>
+</div></article><article class="exercise-like" id="task-143"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1160">find the coefficient of \(q^5\) in this generating function.</p></article><article class="exercise-like" id="task-144"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1162">This generating function involves an infinite product. Describe the process you would use to expand this product into as many terms of a power series as you choose.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-183" id="hint-183"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-183" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1163">Describe to yourself how to get the coefficient of a given power of \(q\text{.}\)</p></span></span>
+</div></article><article class="exercise-like" id="task-145"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1165">Rewrite any power series that appear in your product as quotients of polynomials or as integers divided by polynomials.</p></article></article><article class="example-like interesting" id="activity-204"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">204</span>
-</h5>
-<p id="p-1153">In <a knowl="./knowl/genfunpartitions.html" knowl-id="xref-genfunpartitions" alt="Problem 203 " title="Problem 203 ">Problem 203</a>, we multiplied together infinitely many power series. Here are two notations for infinite products that look rather similar:</p>
+</h6>
+<p id="p-1167">In <a knowl="./knowl/genfunpartitions.html" knowl-id="xref-genfunpartitions" alt="Problem 203 " title="Problem 203 ">Problem 203</a>, we multiplied together infinitely many power series. Here are two notations for infinite products that look rather similar:</p>
 \begin{equation*}
 \prod_{i=1}^\infty 1 + x + x^2 +\cdots+ x^i\qquad\mbox{and}\qquad
 \prod_{i=1}^\infty 1 +x^i +x^{2i} +\cdots + x^{i^2}.
 \end{equation*}
-<p id="p-1154">However, one makes sense and one doesn't. Figure out which one makes sense and explain why it makes sense and the other one doesn't. If we want a product of the form</p>
+<p id="p-1168">However, one makes sense and one doesn't. Figure out which one makes sense and explain why it makes sense and the other one doesn't. If we want a product of the form</p>
 \begin{equation*}
 \prod_{i=1}^\infty 1 +p_i(x),
 \end{equation*}
 <p>where each \(p_i(x)\) is a nonzero polynomial in \(x\) to make sense, describe a relatively simple assumption about the polynomials \(p_i(x)\) that will make the product make sense. If we assumed the terms \(p_i(x)\) were nonzero power series, is there a relatively simple assumption we could make about them in order to make the product make sense? (Describe such a condition or explain why you think there couldn't be one.)</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-184" id="hint-184"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-184" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1155">If infinitely many of the polynomials had a nonzero coefficient for \(q\text{,}\) would the product make any sense?</p></span></span>
-</div></article><article class="example-like essential" id="activity-205"><h5 class="heading">
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-184" id="hint-184"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-184" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1169">If infinitely many of the polynomials had a nonzero coefficient for \(q\text{,}\) would the product make any sense?</p></span></span>
+</div></article><article class="example-like essential" id="activity-205"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">205</span>
-</h5>
-<p id="p-1157">What is the generating function (using \(q\) for the variable) for the number of partitions of an integer in which each part is even?</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-185" id="hint-185"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-185" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1158">\((1 + q^2 + q^4 )(1 + q^3 + q^9 )\) is the generating function for partitions of an integer into at most two twos and at most two threes.</p></span></span>
-</div></article><article class="example-like essential" id="activity-206"><h5 class="heading">
+</h6>
+<p id="p-1171">What is the generating function (using \(q\) for the variable) for the number of partitions of an integer in which each part is even?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-185" id="hint-185"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-185" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1172">\((1 + q^2 + q^4 )(1 + q^3 + q^9 )\) is the generating function for partitions of an integer into at most two twos and at most two threes.</p></span></span>
+</div></article><article class="example-like essential" id="activity-206"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">206</span>
-</h5>
-<p id="p-1160">What is the generating function (using \(q\) as the variable) for the number of partitions of an integer into distinct parts, that is, in which each part is used at most once?</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-186" id="hint-186"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-186" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1161">\((1 + q^2 + q^4 )(1 + q^3 + q^9 )\) is the generating function for partitions of an integer into at most two twos and at most two threes. (This is intentionally the same hint as in the previous problem, but it has a different point in this problem.)</p></span></span>
-</div></article><article class="example-like essential" id="activity-207"><h5 class="heading">
+</h6>
+<p id="p-1174">What is the generating function (using \(q\) as the variable) for the number of partitions of an integer into distinct parts, that is, in which each part is used at most once?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-186" id="hint-186"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-186" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1175">\((1 + q^2 + q^4 )(1 + q^3 + q^9 )\) is the generating function for partitions of an integer into at most two twos and at most two threes. (This is intentionally the same hint as in the previous problem, but it has a different point in this problem.)</p></span></span>
+</div></article><article class="example-like essential" id="activity-207"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">207</span>
-</h5>
-<p id="p-1163">Use generating functions to explain why the number of partitions of an integer in which each part is used an even number of times equals the generating function for the number of partitions of an integer in which each part is even.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-187" id="hint-187"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-187" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1164">In the power series \(\sum_{j=0}^\infty q^{2ij}\text{,}\) the \(2ij\) has a different interpretation if you think of it as \((2i) \cdot j\) or if you think of it as \(i \cdot (2j)\text{.}\) P</p></span></span>
-</div></article><article class="example-like" id="activity-208"><h5 class="heading">
+</h6>
+<p id="p-1177">Use generating functions to explain why the number of partitions of an integer in which each part is used an even number of times equals the generating function for the number of partitions of an integer in which each part is even.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-187" id="hint-187"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-187" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1178">In the power series \(\sum_{j=0}^\infty q^{2ij}\text{,}\) the \(2ij\) has a different interpretation if you think of it as \((2i) \cdot j\) or if you think of it as \(i \cdot (2j)\text{.}\)</p></span></span>
+</div></article><article class="example-like" id="activity-208"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">208</span>
-</h5>
-<p id="p-1166">Use the fact that</p>
+</h6>
+<p id="p-1180">Use the fact that</p>
 \begin{equation*}
 \frac{1-q^{2i}}{1-q^i}= 1+q^i
 \end{equation*}
 <p>and the generating function for the number of partitions of an integer into distinct parts to show how the number of partitions of an integer \(k\) into distinct parts is related to the number of partitions of an integer \(k\) into odd parts.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-188" id="hint-188"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-188" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1167">Note that</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-188" id="hint-188"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-188" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1181">Note that</p>
 \begin{equation*}
 \frac{1-q^2}{1-q}\cdot \frac{1-q^4}{1-q^2}\cdot \frac{1-q^6}{1-q^3}\cdot \frac{1-q^8}{1-q^4} = \frac{(1-q^6)(1-q^8)}{(1-q)(1-q^3)} \text{.}
 \end{equation*}
 </span></span>
-</div></article><article class="example-like" id="activity-209"><h5 class="heading">
+</div></article><article class="example-like" id="activity-209"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">209</span>
-</h5>
-<p id="p-1169">Write down the generating function for the number of ways to partition an integer into parts of size no more than \(m\text{,}\) each used an odd number of times. Write down the generating function for the number of partitions of an integer into parts of size no more than \(m\text{,}\) each used an even number of times. Use these two generating functions to get a relationship between the two sequences for which you wrote down the generating functions.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-189" id="hint-189"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-189" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1170">Note that \(q^i + q^{3i} + q^{5i} + \cdots = q^i (1 + q^2 + q^4 + \cdots)\text{.}\)</p></span></span>
-</div></article><article class="example-like interesting" id="qtorialformula"><h5 class="heading">
+</h6>
+<p id="p-1183">Write down the generating function for the number of ways to partition an integer into parts of size no more than \(m\text{,}\) each used an odd number of times. Write down the generating function for the number of partitions of an integer into parts of size no more than \(m\text{,}\) each used an even number of times. Use these two generating functions to get a relationship between the two sequences for which you wrote down the generating functions.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-189" id="hint-189"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-189" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1184">Note that \(q^i + q^{3i} + q^{5i} + \cdots = q^i (1 + q^2 + q^4 + \cdots)\text{.}\)</p></span></span>
+</div></article><article class="example-like interesting" id="qtorialformula"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">210</span>
-</h5>
-<article class="introduction" id="introduction-44"><p id="p-1172">In <a knowl="./knowl/largestpartatmostm.html" knowl-id="xref-largestpartatmostm" alt="Part 201.b " title="Part 201.b ">Problem 201.b</a> and <a knowl="./knowl/atmostmparts.html" knowl-id="xref-atmostmparts" alt="Problem 202 " title="Problem 202 ">Problem 202</a> you gave the generating functions for, respectively, the number of partitions of \(k\) into parts the largest of which is at most \(m\) and for the number of partitions of \(k\) into at most \(m\) parts. In this problem we will give the generating function for the number of partitions of \(k\) into at most \(n\) parts, the largest of which is at most \(m\text{.}\) That is we will analyze \(\sum_{i=0}^\infty a_kq^k\) where \(a_k\) is the number of partitions of \(k\) into at most \(n\) parts, the largest of which is at most \(m\text{.}\) Geometrically, it is the generating function for partitions whose Young diagram fits into an \(m\) by \(n\) rectangle, as in <a knowl="./knowl/rectanglecomplement.html" knowl-id="xref-rectanglecomplement" alt="Problem 167 " title="Problem 167 ">Problem 167</a>. This generating function has significant analogs to the binomial coefficient \(\binom{m+n}{n}\text{,}\) and so it is denoted by \(\qchoose{m+n}{n}\text{.}\) It is called a <em class="terminology">\(q\)-binomial coefficient</em>.</p></article><article class="exercise-like" id="task-146"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1173">Compute \(\qchoose{4}{2}=\qchoose{2+2}{2}\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-190" id="hint-190"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-190" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1174">We want to calculate the number of partitions whose Young diagrams fit into a two by two square. These partitions have at most two parts and the parts have size at most two. Thus they are partitions of 1, 2, 3, or 4. However not all partitions of 3 or 4 have diagrams that fit into a two by two square. Try writing down the relevant diagrams.</p></span></span></article><article class="exercise-like" id="task-147"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1176">Find explicit formulas for \(\qchoose{n}{1}\) and \(\qchoose{n}{n-1}\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-191" id="hint-191"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-191" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1177">They are the generating function for the number of partitions whose Young diagram fits into a rectangle \(n - 1\) units wide and 1 unit deep or into a rectangle 1 unit wide and \(n - 1\) units deep respectively.</p></span></span></article><article class="exercise-like" id="task-148"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1179">How are \(\qchoose{m+n}{n}\) and \(\qchoose{m+n}{n}\) related? Prove it. (Note this is the same as asking how \(\qchoose{r}{s}\) and \(\qchoose{r}{r-s}\) are related.)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-192" id="hint-192"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-192" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1180">How can you get a diagram of a partition counted by partition is counted by \(\qchoose{m+n}{n}\) from one whose partition is counted by \(\qchoose{m+n}{m}\text{?}\)</p></span></span></article><article class="exercise-like" id="task-149"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1182">So far the analogy to \(\binom{m+n}{n}\) is rather thin! If we had a recurrence like the Pascal recurrence, that would demonstrate a real analogy. Is \(\qchoose{m+n}{n}= \qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{n}\text{?}\)</p></article><article class="exercise-like" id="task-150"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<article class="introduction" id="introduction-45"><p id="p-1184">Recall the two operations we studied in <a knowl="./knowl/numberpartitionrecurrence.html" knowl-id="xref-numberpartitionrecurrence" alt="Problem 171 " title="Problem 171 ">Problem 171</a>.</p></article><article class="exercise-like" id="task-151"><h5 class="heading"><span class="codenumber">(i)</span></h5>
-<p id="p-1185">The largest part of a partition counted by \(\qchoose{m+n}{n}\) is either \(m\) or is less than or equal to \(m-1\text{.}\)  In the second case, the partition fits into a rectangle that is at most \(m-1\) units wide and at most \(n\) units deep.  What is the generating function for partitions of this type?  In the first case, what kind of rectangle does the partition we get by removing the largest part sit in?  What is the generating function for partitions that sit in this kind of rectangle?  What is the generating function for partitions that sit in this kind of rectangle after we remove a largest part of size \(m\text{?}\)  What recurrence relation does this give you?</p></article><article class="exercise-like" id="task-152"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
-<p id="p-1189">What recurrence do you get from the other operation we studied in <a knowl="./knowl/numberpartitionrecurrence.html" knowl-id="xref-numberpartitionrecurrence" alt="Problem 171 " title="Problem 171 ">Problem 171</a>?</p></article><article class="exercise-like" id="task-153"><h5 class="heading"><span class="codenumber">(iii)</span></h5>
-<p id="p-1191">It is quite likely that the two recurrences you got are different.  One would expect that they might give different values for \(\qchoose{m+n}{n}\text{.}\)  Can you resolve this potential conflict?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-193" id="hint-193"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-193" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1192">Think about geometric operations on Young Diagrams</p></span></span></article></article><article class="exercise-like" id="task-154"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-1194">Define \([n]_q\) to be \(1+q+\cdots+q^{n-1}\) for \(n&gt;0\) and \([0]_q =1\text{.}\)  We read this simply as \(n\)-sub-\(q\text{.}\) Define \([n]!_q\) to be \([n]_q[n-1]_q\cdots [3]_q[2]_q[1]_q\text{.}\) We read this as \(n\) cue-torial, and refer to it as a <em class="terminology">\(q\)-ary factorial</em>. Show that</p>
+</h6>
+<div class="introduction" id="introduction-44"><p id="p-1186">In <a knowl="./knowl/largestpartatmostm.html" knowl-id="xref-largestpartatmostm" alt="Part 201.b " title="Part 201.b ">Problem 201.b</a> and <a knowl="./knowl/atmostmparts.html" knowl-id="xref-atmostmparts" alt="Problem 202 " title="Problem 202 ">Problem 202</a> you gave the generating functions for, respectively, the number of partitions of \(k\) into parts the largest of which is at most \(m\) and for the number of partitions of \(k\) into at most \(m\) parts. In this problem we will give the generating function for the number of partitions of \(k\) into at most \(n\) parts, the largest of which is at most \(m\text{.}\) That is we will analyze \(\sum_{i=0}^\infty a_kq^k\) where \(a_k\) is the number of partitions of \(k\) into at most \(n\) parts, the largest of which is at most \(m\text{.}\) Geometrically, it is the generating function for partitions whose Young diagram fits into an \(m\) by \(n\) rectangle, as in <a knowl="./knowl/rectanglecomplement.html" knowl-id="xref-rectanglecomplement" alt="Problem 167 " title="Problem 167 ">Problem 167</a>. This generating function has significant analogs to the binomial coefficient \(\binom{m+n}{n}\text{,}\) and so it is denoted by \(\qchoose{m+n}{n}\text{.}\) It is called a <b class="terminology">\(q\)-binomial coefficient</b>.</p></div>
+<article class="exercise-like" id="task-146"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1187">Compute \(\qchoose{4}{2}=\qchoose{2+2}{2}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-190" id="hint-190"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-190" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1188">We want to calculate the number of partitions whose Young diagrams fit into a two by two square. These partitions have at most two parts and the parts have size at most two. Thus they are partitions of 1, 2, 3, or 4. However not all partitions of 3 or 4 have diagrams that fit into a two by two square. Try writing down the relevant diagrams.</p></span></span>
+</div></article><article class="exercise-like" id="task-147"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1190">Find explicit formulas for \(\qchoose{n}{1}\) and \(\qchoose{n}{n-1}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-191" id="hint-191"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-191" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1191">They are the generating function for the number of partitions whose Young diagram fits into a rectangle \(n - 1\) units wide and 1 unit deep or into a rectangle 1 unit wide and \(n - 1\) units deep respectively.</p></span></span>
+</div></article><article class="exercise-like" id="task-148"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1193">How are \(\qchoose{m+n}{n}\) and \(\qchoose{m+n}{n}\) related? Prove it. (Note this is the same as asking how \(\qchoose{r}{s}\) and \(\qchoose{r}{r-s}\) are related.)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-192" id="hint-192"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-192" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1194">How can you get a diagram of a partition counted by partition is counted by \(\qchoose{m+n}{n}\) from one whose partition is counted by \(\qchoose{m+n}{m}\text{?}\)</p></span></span>
+</div></article><article class="exercise-like" id="task-149"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1196">So far the analogy to \(\binom{m+n}{n}\) is rather thin! If we had a recurrence like the Pascal recurrence, that would demonstrate a real analogy. Is \(\qchoose{m+n}{n}= \qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{n}\text{?}\)</p></article><article class="exercise-like" id="task-150"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="introduction" id="introduction-45"><p id="p-1198">Recall the two operations we studied in <a knowl="./knowl/numberpartitionrecurrence.html" knowl-id="xref-numberpartitionrecurrence" alt="Problem 171 " title="Problem 171 ">Problem 171</a>.</p></div>
+<article class="exercise-like" id="task-151"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-1199">The largest part of a partition counted by \(\qchoose{m+n}{n}\) is either \(m\) or is less than or equal to \(m-1\text{.}\)  In the second case, the partition fits into a rectangle that is at most \(m-1\) units wide and at most \(n\) units deep.  What is the generating function for partitions of this type?  In the first case, what kind of rectangle does the partition we get by removing the largest part sit in?  What is the generating function for partitions that sit in this kind of rectangle?  What is the generating function for partitions that sit in this kind of rectangle after we remove a largest part of size \(m\text{?}\)  What recurrence relation does this give you?</p></article><article class="exercise-like" id="task-152"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-1203">What recurrence do you get from the other operation we studied in <a knowl="./knowl/numberpartitionrecurrence.html" knowl-id="xref-numberpartitionrecurrence" alt="Problem 171 " title="Problem 171 ">Problem 171</a>?</p></article><article class="exercise-like" id="task-153"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-1205">It is quite likely that the two recurrences you got are different.  One would expect that they might give different values for \(\qchoose{m+n}{n}\text{.}\)  Can you resolve this potential conflict?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-193" id="hint-193"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-193" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1206">Think about geometric operations on Young Diagrams</p></span></span>
+</div></article></article><article class="exercise-like" id="task-154"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1208">Define \([n]_q\) to be \(1+q+\cdots+q^{n-1}\) for \(n&gt;0\) and \([0]_q =1\text{.}\)  We read this simply as \(n\)-sub-\(q\text{.}\) Define \([n]!_q\) to be \([n]_q[n-1]_q\cdots [3]_q[2]_q[1]_q\text{.}\) We read this as \(n\) cue-torial, and refer to it as a <b class="terminology">\(q\)-ary factorial</b>. Show that</p>
 \begin{equation*}
 \qchoose{m+n}{n} = \frac{[m+n]!_q}{[m]!_q[n]!_q}.
 \end{equation*}
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-194" id="hint-194"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-194" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1195">How would you use the Pascal recurrence to prove the corresponding result for binomial coefficients?</p></span></span></article><article class="exercise-like" id="task-155"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-1198">Now think of \(q\) as a variable that we will let approach \(1\text{.}\) Find an explicit formula for </p>
-<ol id="ol-18" style="list-style-type: lower-roman;">
-<li id="li-70">\(\displaystyle\lim_{q\rightarrow 1} [n]_q\text{.}\)</li>
-<li id="li-71">\(\displaystyle\lim_{q\rightarrow 1} [n]!_q\text{.}\)</li>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-194" id="hint-194"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-194" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1209">How would you use the Pascal recurrence to prove the corresponding result for binomial coefficients?</p></span></span>
+</div></article><article class="exercise-like" id="task-155"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-1212">Now think of \(q\) as a variable that we will let approach \(1\text{.}\) Find an explicit formula for </p>
+<ol id="ol-19" style="list-style-type: lower-roman;">
+<li id="li-73">\(\displaystyle\lim_{q\rightarrow 1} [n]_q\text{.}\)</li>
+<li id="li-74">\(\displaystyle\lim_{q\rightarrow 1} [n]!_q\text{.}\)</li>
 <li id="q-binomial-lim">\(\displaystyle\lim_{q\rightarrow 1} \qchoose{m+n}{n}\text{.}\)</li>
 </ol>
 <p> Why is the limit in <a knowl="./knowl/q-binomial-lim.html" knowl-id="xref-q-binomial-lim" alt="Item iii " title="Item iii ">Part iii</a> equal to the number of partitions (of any number) with at most \(n\) parts all of size most \(m\text{?}\) Can you explain bijectively why this quantity equals the formula you got?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-195" id="hint-195"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-195" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1199">For finding a bijection, think about lattice paths.</p></span></span></article><article class="exercise-like difficult" id="task-156"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<p id="p-1201">What happens to \(\qchoose{m+n}{n}\) if we let \(q\) approach \(-1\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-196" id="hint-196"><span class="solution"><span class="type">Hint</span> <span class="codenumber">1</span></span></a></span><span id="hk-hint-196" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1202">If you could prove \(\qchoose{m+n}{n}\) is a polynomial function of \(q\text{,}\) what would that tell you about how to compute the limit as \(q\) approaches \(-1\text{?}\)</p></span></span><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-197" id="hint-197"><span class="solution"><span class="type">Hint</span> <span class="codenumber">2</span></span></a></span><span id="hk-hint-197" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1203">Try computing a table of values of \(\qchoose{m+n}{n}\) with \(q=-1\) by using the recurrence relation. Make a pretty big table so you can see what is happening.</p></span></span></article></article></section></div></main>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-195" id="hint-195"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-195" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1213">For finding a bijection, think about lattice paths.</p></span></span>
+</div></article><article class="exercise-like difficult" id="task-156"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-1215">What happens to \(\qchoose{m+n}{n}\) if we let \(q\) approach \(-1\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-196" id="hint-196"><span class="solution"><span class="type">Hint</span><span class="codenumber">1</span></span></a><span id="hk-hint-196" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1216">If you could prove \(\qchoose{m+n}{n}\) is a polynomial function of \(q\text{,}\) what would that tell you about how to compute the limit as \(q\) approaches \(-1\text{?}\)</p></span></span><a knowl="" class="id-ref" refid="hk-hint-197" id="hint-197"><span class="solution"><span class="type">Hint</span><span class="codenumber">2</span></span></a><span id="hk-hint-197" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1217">Try computing a table of values of \(\qchoose{m+n}{n}\) with \(q=-1\) by using the recurrence relation. Make a pretty big table so you can see what is happening.</p></span></span>
+</div></article></article></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

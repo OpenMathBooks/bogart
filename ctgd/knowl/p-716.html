@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:17-06:00    *-->
+<!--*    on 2017-12-13T14:14:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If we distribute \(k\) distinct objects to \(n\) distinct recipients so that each recipient gets at least one, then we are counting functions again, but this time functions from a \(k\)-element set <!--Style me with CSS--><em>onto</em> an \(n\)-element set. At present we do not know how to compute the number of such functions, but we will discuss how to do so later in this chapter and in the next chapter. If we distribute \(k\) identical objects to \(n\) recipients, we are again simply partitioning the objects, but the condition that each recipient gets at least one means that we are partitioning the objects into exactly \(n\) blocks. Again, we will discuss how compute the number of ways of partitioning a set of \(k\) objects into \(n\) blocks later in this chapter. This explains the entries in row three of our table.</p>
-<span class="incontext"><a href="s3-1-distrib-idea.html#p-716">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+<ol style="list-style-type: lower-alpha;">
+<li>
+<p>We are given that\(d_i\) is the degree of vertex \(i\text{.}\) The number of times \(i\) appears in the Prüfer code of a tree is one less than the degree of \(i\text{,}\) so vertex \(i\) appears \(d_i-1\) times. Thus the sum of the \(d_i-1\) should be \(2n-2-n=n-2\text{.}\) Of the \(n-2\) places in the Prüfer code, we want to label \(d_1-1\) of them with 1, \(d_2-1\) of them with 2 and in general \(d_i-1\) of them with \(i\text{.}\) There are</p>
+\begin{equation*}
+\binom{n-2}{d_1-1}\binom{n-2-(d_1-1)}{d_2-1}\binom{n-2-(d_1-1+d_2-1)}{d_3-1}\cdots\binom{d_n-1}{d_n-1}
+\end{equation*}
+<p>ways to do this, so the number of trees in which vertex \(i\) has degree \(d_i\) is \(\frac{(n-2)!}{(d_1-1)!(d_2-1)!\cdots(d_n-1)!}\text{.}\)</p>
+</li>
+<li>
+<p>Now we modify the solution of the previous part by observing that to count all graphs with a given degree sequence, the actual vertices which have the given degrees is irrelevant, so we must multiply the result of the easier problem by the number of ways to assign the degrees to the vertices. To assign the degrees, we can list the vertices in \(n!\) ways, choose the first \(i_1\) of these vertices to have degree 1, then next \(i_2\) to have degree 2, and so on. But the order in which we list the vertices of a given degree is irrelevant. Thus the number of ways to assign the degrees is \(\frac{n!}{i_1!i_2!\cdots i_n!}\text{.}\) Once the degrees are assigned, there are \(\frac{(n-2)!}{\prod_{d=1}^n (d-1)!^{i_d}}\text{,}\) by translating our easier result. Thus the total number of trees with the degree sequence in which there are \(i_d\) vertices of degree \(d\) is</p>
+\begin{equation*}
+\frac{n!(n-2)!}{\prod_{j=1}^n i_j!(j-1)!^{i_j}}\text{.}
+\end{equation*}
+</li>
+</ol>
+<span class="incontext"><a href="sec_induction-suppprobs.html#p-716">in-context</a></span>
 </body>
 </html>

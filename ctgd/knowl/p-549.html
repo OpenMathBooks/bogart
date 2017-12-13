@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:13-06:00    *-->
+<!--*    on 2017-12-13T14:14:19-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,13 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>One circle defines two regions, the inside and outside. When we draw a second circle that intersects the first, we can start at one of the intersection points and go inside the first circle, cutting its region into two pieces, and then when we leave it we cut the outside region into two pieces. This suggests the general pattern. If we have drawn \(n-1\) circles and start a new one, each time we enter a circle, we start dividing a region into two pieces. Each time we leave a circle, we also start dividing a region into two pieces. Thus if we have \(r_n\) regions with \(n\) circles, to get the number of regions, we note that in going from \(n-1\) circles to \(n\) circles, we start with \(r_{n-1}\) regions, and divide \(2(n-1)\) of them in half, so we get \(2n-2\) new regions. This gives us \(r_n=r_{n-1}+2(n-1)\text{.}\) Notice that by substitution of the formula \(r_{n-1}=r_{n-2} +2(n-2)\text{,}\) we get \(r_n=r_{n-2}+ 2(n-2)
-+2(n-1)\text{,}\) and would guess that \(r_n=r_{n-3}+2(n-3)+2(n-2) +2(n-1)\text{.}\) This leads to the conjecture</p>
-\begin{equation*}
-r_n=r_1  +2\cdot1+2\cdot2+\cdots+2\cdot(n-1)=r_1+2\sum_{i=1}^{n-1}
-i=2+n(n-1).
-\end{equation*}
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We prove by induction on \(n\) that there is one and only one value \(s_n\) that satisfies both \(s_n=2s_{n-1}\) for \(n&gt;0\) and \(s_0=1\text{.}\) First, there is clearly one and only one value \(s_0\) that satisfies \(s_0=1\text{.}\) Now assume that \(k&gt;0\) and there is one and only one value \(s_{k-1}\) that satisfies the two equations. Then \(s_k=2s_{k-1}\) is the one and only one value that satisfies the two equations. Therefore by the principle of mathematical induction, for all nonnegative integers \(n\) there is one and only one value \(s_n\) that satisfies the equations \(s_0=1\) and \(s_k=2s_{k-1}\) for all \(k&gt;0\text{.}\) (Note that since we were making a statement about \(s_n\) for all nonnegative integers \(n\) it was not appropriate to use \(n\) as the dummy variable in the recursive equation \(s_k=2s_{k-1}\text{.}\))</p>
 <span class="incontext"><a href="sec_induction-recurrence.html#p-549">in-context</a></span>
 </body>
 </html>

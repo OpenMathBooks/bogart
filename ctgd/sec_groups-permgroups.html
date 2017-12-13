@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:25:55-06:00    *-->
+<!--*    on 2017-12-13T14:13:58-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Permutation Groups</title>
+<title>CTGD Permutation Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -21,7 +21,7 @@ MathJax.Hub.Config({
         extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
         TagSide: "right",
         TagIndent: ".8em",
     },
@@ -41,10 +41,9 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="custom-styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
 \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
@@ -71,7 +70,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
+<h1 class="heading"><a href="ctgd.html"><span class="title">Combinatorics Through Guided Discovery</span></a></h1>
 <p class="byline">Kenneth P. Bogart</p>
 </div>
 </div></div>
@@ -88,7 +87,12 @@ MathJax.Hub.Config({
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul><li><a href="preface.html" data-scroll="preface">Preface</a></li></ul>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
+</ul>
 <h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
@@ -103,7 +107,7 @@ MathJax.Hub.Config({
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
@@ -136,89 +140,98 @@ MathJax.Hub.Config({
 <li><a href="Relations.html" data-scroll="Relations">Relations</a></li>
 <li><a href="Induction.html" data-scroll="Induction">Mathematical Induction</a></li>
 <li><a href="expogenfun.html" data-scroll="expogenfun">Exponential Generating Functions</a></li>
-<li><a href="appendix-4.html" data-scroll="appendix-4">Hints to Selected Problems</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_groups-permgroups"><header title="Section 6.1 Permutation Groups"><h1 class="heading hide-type" alt="Section 6.1 Permutation Groups">
-<span class="type">Section</span><span class="codenumber">6.1</span><span class="title">Permutation Groups</span><a href="sec_groups-permgroups.html" class="permalink">¶ permalink</a>
-</h1></header><section class="introduction" id="introduction-53"><p id="p-1434">Until now we have thought of permutations mostly as ways of listing the elements of a set. In this chapter we will find it very useful to think of permutations as functions. This will help us in using permutations to solve enumeration problems that cannot be solved by the quotient principle because they involve counting the blocks of a partition in which the blocks don't have the same size. We begin by studying the kinds of permutations that arise in situations where we have used the quotient principle in the past.</p></section><section class="subsection" id="subsection-58"><header title="Subsection 6.1.1 The rotations of a square"><h1 class="heading hide-type" alt="Subsection 6.1.1 The rotations of a square">
-<span class="type">Subsection</span><span class="codenumber">6.1.1</span><span class="title">The rotations of a square</span><a href="sec_groups-permgroups.html#subsection-58" class="permalink">¶ permalink</a>
-</h1></header><figure class="figure-like" id="RotationsOfSquare"><object type="image/svg+xml" style="width:95%; margin:auto; display:block;" data="images/RotationsOfSquare.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.1</span>The four possible results of rotating a square and maintaining its position.</figcaption></figure><p id="p-1435">In <a knowl="./knowl/RotationsOfSquare.html" knowl-id="xref-RotationsOfSquare" alt="Figure 6.1.1 " title="Figure 6.1.1 ">Figure 6.1.1</a> we show a square with its four vertices labelled 1, 2, 3, and 4. We have also labeled the spot in the plane where each of these vertices falls with the same label. Then we have shown the effect of rotating the square clockwise through 90, 180, 270, and 360 degrees (which is the same as rotating through 0 degrees). Underneath each of the rotated squares we have named the function that carries out the rotation. We use \(\rho\text{,}\) the Greek letter pronounced “row,” to stand for a 90 degree clockwise rotation. We use \(\rho^2\) to stand for two 90 degree rotations, and so on. We can think of the function \(\rho\) as a function on the four element set<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-19" id="fn-19"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-19" style="display: none;" class="tex2jax_ignore"><span class="footnote">What we are doing is restricting the rotation \(\rho\) to the set \(\{1,2,3,4\}\text{.}\)</span></span> \(\{1,2,3,4\}\text{.}\) In particular, for any function \(\varphi\) (the Greek letter phi, usually pronounced “fee,” but sometimes “fie”) from the plane back to itself that may move the square around but otherwise leaves it in the same place, we let \(\varphi(i)\) be the label of the place where vertex previously in position \(i\) is now. Thus \(\rho(1) =2\text{,}\) \(\rho(2)=3\text{,}\) \(\rho(3)=4\) and \(\rho(4) =1\text{.}\) Notice that \(\rho\) is a permutation on the set \(\{1,2,3,4\}\text{.}\)</p>
-<article class="example-like essential" id="composition1"><h5 class="heading">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_groups-permgroups"><header title="Section 6.1 Permutation Groups"><h2 class="heading hide-type" alt="Section 6.1 Permutation Groups">
+<span class="type">Section</span><span class="codenumber">6.1</span><span class="title">Permutation Groups</span>
+</h2>
+<a href="sec_groups-permgroups.html" class="permalink">¶</a></header><section class="introduction" id="introduction-53"><p id="p-1448">Until now we have thought of permutations mostly as ways of listing the elements of a set. In this chapter we will find it very useful to think of permutations as functions. This will help us in using permutations to solve enumeration problems that cannot be solved by the quotient principle because they involve counting the blocks of a partition in which the blocks don't have the same size. We begin by studying the kinds of permutations that arise in situations where we have used the quotient principle in the past.</p></section><section class="subsection" id="subsection-58"><header title="Subsection 6.1.1 The rotations of a square"><h3 class="heading hide-type" alt="Subsection 6.1.1 The rotations of a square">
+<span class="type">Subsection</span><span class="codenumber">6.1.1</span><span class="title">The rotations of a square</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-58" class="permalink">¶</a></header><figure class="figure-like" id="RotationsOfSquare"><object type="image/svg+xml" style="width:95%; margin:auto; display:block;" data="images/RotationsOfSquare.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.1</span>The four possible results of rotating a square and maintaining its position.</figcaption></figure><p id="p-1449">In <a knowl="./knowl/RotationsOfSquare.html" knowl-id="xref-RotationsOfSquare" alt="Figure 6.1.1 " title="Figure 6.1.1 ">Figure 6.1.1</a> we show a square with its four vertices labelled 1, 2, 3, and 4. We have also labeled the spot in the plane where each of these vertices falls with the same label. Then we have shown the effect of rotating the square clockwise through 90, 180, 270, and 360 degrees (which is the same as rotating through 0 degrees). Underneath each of the rotated squares we have named the function that carries out the rotation. We use \(\rho\text{,}\) the Greek letter pronounced “row,” to stand for a 90 degree clockwise rotation. We use \(\rho^2\) to stand for two 90 degree rotations, and so on. We can think of the function \(\rho\) as a function on the four element set<a knowl="" class="id-ref" refid="hk-fn-19" id="fn-19"><span class="footnote"><sup> 1 </sup></span></a><span id="hk-fn-19" class="hidden-content tex2jax_ignore"><span class="footnote">What we are doing is restricting the rotation \(\rho\) to the set \(\{1,2,3,4\}\text{.}\)</span></span> \(\{1,2,3,4\}\text{.}\) In particular, for any function \(\varphi\) (the Greek letter phi, usually pronounced “fee,” but sometimes “fie”) from the plane back to itself that may move the square around but otherwise leaves it in the same place, we let \(\varphi(i)\) be the label of the place where vertex previously in position \(i\) is now. Thus \(\rho(1) =2\text{,}\) \(\rho(2)=3\text{,}\) \(\rho(3)=4\) and \(\rho(4) =1\text{.}\) Notice that \(\rho\) is a permutation on the set \(\{1,2,3,4\}\text{.}\)</p>
+<article class="example-like essential" id="composition1"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">248</span>
-</h5>
-<p id="p-1436">The composition \(f\circ g\) of two functions \(f\) and \(g\) is defined by \(f\circ g(x) = f(g(x))\text{.}\) Is \(\rho^3\) the composition of \(\rho\) and \(\rho^2\text{?}\) Does the answer depend on the order in which we write \(\rho\) and \(\rho^2\text{?}\) How is \(\rho^2\) related to \(\rho\text{?}\)</p></article><article class="example-like essential" id="activity-249"><h5 class="heading">
+</h6>
+<p id="p-1450">The composition \(f\circ g\) of two functions \(f\) and \(g\) is defined by \(f\circ g(x) = f(g(x))\text{.}\) Is \(\rho^3\) the composition of \(\rho\) and \(\rho^2\text{?}\) Does the answer depend on the order in which we write \(\rho\) and \(\rho^2\text{?}\) How is \(\rho^2\) related to \(\rho\text{?}\)</p></article><article class="example-like essential" id="activity-249"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">249</span>
-</h5>
-<p id="p-1438">Is the composition of two permutations always a permutation?</p></article><p id="p-1440">In <a knowl="./knowl/composition1.html" knowl-id="xref-composition1" alt="Problem 248 " title="Problem 248 ">Problem 248</a> you see that we can think of \(\rho^2\circ\rho\) as the result of first rotating by 90 degrees and then by another 180 degrees. In other words, the composition of two rotations is the same thing as first doing one and then doing the other. Of course there is nothing special about 90 degrees and 180 degrees.  As long as we first do one rotation through a multiple of 90 degrees and then another rotation through a multiple of 90 degrees, the composition of these rotations is a rotation through a multiple of 90 degrees.</p>
-<p id="p-1441">If we first rotate by 90 degrees and then by 270 degrees then we have rotated by 360 degrees, which does nothing visible to the square. Thus we say that \(\rho^4\) is the “identity function.” In general the <em class="terminology">identity function</em> on a set \(S\text{,}\) denoted by \(\iota\) (the Greek letter iota, pronounced eye-oh-ta) is the function that takes each element of the set to itself. In symbols, \(\iota(x) =x\) for every \(x\) in \(S\text{.}\) Of course the identity function on a set is a permutation of that set.</p></section><section class="subsection" id="subsection-59"><header title="Subsection 6.1.2 Groups of Permutations"><h1 class="heading hide-type" alt="Subsection 6.1.2 Groups of Permutations">
-<span class="type">Subsection</span><span class="codenumber">6.1.2</span><span class="title">Groups of Permutations</span><a href="sec_groups-permgroups.html#subsection-59" class="permalink">¶ permalink</a>
-</h1></header><article class="example-like essential" id="activity-250"><h5 class="heading">
+</h6>
+<p id="p-1452">Is the composition of two permutations always a permutation?</p></article><p id="p-1454">In <a knowl="./knowl/composition1.html" knowl-id="xref-composition1" alt="Problem 248 " title="Problem 248 ">Problem 248</a> you see that we can think of \(\rho^2\circ\rho\) as the result of first rotating by 90 degrees and then by another 180 degrees. In other words, the composition of two rotations is the same thing as first doing one and then doing the other. Of course there is nothing special about 90 degrees and 180 degrees.  As long as we first do one rotation through a multiple of 90 degrees and then another rotation through a multiple of 90 degrees, the composition of these rotations is a rotation through a multiple of 90 degrees.</p>
+<p id="p-1455">If we first rotate by 90 degrees and then by 270 degrees then we have rotated by 360 degrees, which does nothing visible to the square. Thus we say that \(\rho^4\) is the “identity function.” In general the <b class="terminology">identity function</b> on a set \(S\text{,}\) denoted by \(\iota\) (the Greek letter iota, pronounced eye-oh-ta) is the function that takes each element of the set to itself. In symbols, \(\iota(x) =x\) for every \(x\) in \(S\text{.}\) Of course the identity function on a set is a permutation of that set.</p></section><section class="subsection" id="subsection-59"><header title="Subsection 6.1.2 Groups of Permutations"><h3 class="heading hide-type" alt="Subsection 6.1.2 Groups of Permutations">
+<span class="type">Subsection</span><span class="codenumber">6.1.2</span><span class="title">Groups of Permutations</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-59" class="permalink">¶</a></header><article class="example-like essential" id="activity-250"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">250</span>
-</h5>
-<p id="p-1442">For any function \(\varphi\) from a set \(S\) to itself, we define \(\varphi^n\) (for nonnegative integers \(n\)) inductively by \(\varphi^0 =
-\iota\) and \(\varphi^n = \varphi^{n-1}\circ\varphi\) for every positive integer \(n\text{.}\) If \(\varphi\) is a permutation, is \(\varphi^n\) a permutation? Based on your experience with previous inductive proofs, what do you expect \(\varphi^n\circ \varphi^m\) to be? What do you expect \((\varphi^m)^n\) to be? There is no need to prove these last two answers are correct, for you have, in effect, already done so in <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a>.</p></article><article class="example-like essential" id="identityproperty"><h5 class="heading">
+</h6>
+<p id="p-1456">For any function \(\varphi\) from a set \(S\) to itself, we define \(\varphi^n\) (for nonnegative integers \(n\)) inductively by \(\varphi^0 =
+\iota\) and \(\varphi^n = \varphi^{n-1}\circ\varphi\) for every positive integer \(n\text{.}\) If \(\varphi\) is a permutation, is \(\varphi^n\) a permutation? Based on your experience with previous inductive proofs, what do you expect \(\varphi^n\circ \varphi^m\) to be? What do you expect \((\varphi^m)^n\) to be? There is no need to prove these last two answers are correct, for you have, in effect, already done so in <a href="InductionRecursion.html" alt="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory" title="Chapter 2 Applications of Induction and Recursion in Combinatorics and Graph Theory">Chapter 2</a>.</p></article><article class="example-like essential" id="identityproperty"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">251</span>
-</h5>
-<p id="p-1444">If we perform the composition \(\iota\circ \varphi\) for any function \(\varphi\) from \(S\) to \(S\text{,}\) what function do we get? What if we perform the composition \(\varphi\circ\iota\text{?}\)</p></article><p id="p-1446">What you have observed about iota in <a knowl="./knowl/identityproperty.html" knowl-id="xref-identityproperty" alt="Problem 251 " title="Problem 251 ">Problem 251</a> is called the <em class="terminology">identity property</em> of iota. In the context of permutations, people usually call the function \(\iota\) “the identity” rather than calling it “iota.”</p>
-<p id="p-1447">Since rotating first by 90 degrees and then by 270 degrees has the same effect as doing nothing, we can think of the 270 degree rotation as undoing what the 90 degree rotation does. For this reason we say that in the rotations of the square, \(\rho^3\) is the “inverse” of \(\rho\text{.}\) In general, a function \(\varphi:T\rightarrow S\) is called an <em class="terminology">inverse</em> of a function \(\sigma:S
+</h6>
+<p id="p-1458">If we perform the composition \(\iota\circ \varphi\) for any function \(\varphi\) from \(S\) to \(S\text{,}\) what function do we get? What if we perform the composition \(\varphi\circ\iota\text{?}\)</p></article><p id="p-1460">What you have observed about iota in <a knowl="./knowl/identityproperty.html" knowl-id="xref-identityproperty" alt="Problem 251 " title="Problem 251 ">Problem 251</a> is called the <b class="terminology">identity property</b> of iota. In the context of permutations, people usually call the function \(\iota\) “the identity” rather than calling it “iota.”</p>
+<p id="p-1461">Since rotating first by 90 degrees and then by 270 degrees has the same effect as doing nothing, we can think of the 270 degree rotation as undoing what the 90 degree rotation does. For this reason we say that in the rotations of the square, \(\rho^3\) is the “inverse” of \(\rho\text{.}\) In general, a function \(\varphi:T\rightarrow S\) is called an <b class="terminology">inverse</b> of a function \(\sigma:S
 \rightarrow T\) (the lower case Greek letter sigma) if \(\varphi\circ \sigma= \sigma
 \circ\varphi =
-\iota\text{.}\) For a slower introduction to inverses and practice with them, see <a href="Relations.html#digraphsoffunctions" alt="Subsection A.1.3 Digraphs of Functions" title="Subsection A.1.3 Digraphs of Functions">Section A.1.3</a> in <a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a>.  Since a permutation is a bijection, it has a unique inverse, as in <a href="Relations.html#digraphsoffunctions" alt="Subsection A.1.3 Digraphs of Functions" title="Subsection A.1.3 Digraphs of Functions">Section A.1.3</a>.  And since the inverse of a bijection is a bijection (again, as in the Appendix), the inverse of a permutation is a permutation.</p>
-<p id="p-1448">We use \(\varphi^{-1}\) to denote the inverse of the permutation \(\varphi\text{.}\) We've seen that the rotations of the square are functions that return the square to its original position but may move the vertices to different places. In this way we create permutations of the vertices of the square. We've observed three important properties of these permutations. </p>
+\iota\text{.}\) For a slower introduction to inverses and practice with them, see <a href="relationsandfunctions.html#digraphsoffunctions" alt="Subsection A.1.3 Digraphs of Functions" title="Subsection A.1.3 Digraphs of Functions">Section A.1.3</a> in <a href="Relations.html" alt="Appendix A Relations" title="Appendix A Relations">Appendix A</a>.  Since a permutation is a bijection, it has a unique inverse, as in <a href="relationsandfunctions.html#digraphsoffunctions" alt="Subsection A.1.3 Digraphs of Functions" title="Subsection A.1.3 Digraphs of Functions">Section A.1.3</a>.  And since the inverse of a bijection is a bijection (again, as in the Appendix), the inverse of a permutation is a permutation.</p>
+<p id="p-1462">We use \(\varphi^{-1}\) to denote the inverse of the permutation \(\varphi\text{.}\) We've seen that the rotations of the square are functions that return the square to its original position but may move the vertices to different places. In this way we create permutations of the vertices of the square. We've observed three important properties of these permutations. </p>
 <ul id="ul-6" style="list-style-type: disc;">
-<li id="li-86"><p id="p-1449">(Identity Property) These permutations include the identity permutation.</p></li>
-<li id="li-87"><p id="p-1450">(Inverse Property) Whenever these permutations include \(\varphi\text{,}\) they also include \(\varphi^{-1}\text{.}\)</p></li>
-<li id="li-88"><p id="p-1451">(Closure Property)  Whenever these permutations include \(\varphi\) and \(\sigma\text{,}\) they also include \(\varphi\circ\sigma\text{.}\)</p></li>
+<li id="li-89"><p id="p-1463">(Identity Property) These permutations include the identity permutation.</p></li>
+<li id="li-90"><p id="p-1464">(Inverse Property) Whenever these permutations include \(\varphi\text{,}\) they also include \(\varphi^{-1}\text{.}\)</p></li>
+<li id="li-91"><p id="p-1465">(Closure Property)  Whenever these permutations include \(\varphi\) and \(\sigma\text{,}\) they also include \(\varphi\circ\sigma\text{.}\)</p></li>
 </ul>
-<p id="p-1452">A set of permutations with these three properties is called a <em class="terminology">permutation group</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-20" id="fn-20"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-20" style="display: none;" class="tex2jax_ignore"><span class="footnote">The concept of a permutation group is a special case of the concept of a <em class="terminology">group</em> that one studies in abstract algebra.  When we refer to a group in what follows, if you  know what groups are in the more abstract sense, you may use the word in this way. If you do not know about groups in this more abstract sense, then you may assume we mean permutation group when we say group.</span></span> or a group of permutations. We call the group of permutations corresponding to rotations of the square the <em class="terminology">rotation group</em> of the square. There is a similar rotation group with \(n\) elements for any regular \(n\)-gon.</p>
-<article class="example-like essential" id="activity-252"><h5 class="heading">
+<p id="p-1466">A set of permutations with these three properties is called a <b class="terminology">permutation group</b><a knowl="" class="id-ref" refid="hk-fn-20" id="fn-20"><span class="footnote"><sup> 2 </sup></span></a><span id="hk-fn-20" class="hidden-content tex2jax_ignore"><span class="footnote">The concept of a permutation group is a special case of the concept of a <b class="terminology">group</b> that one studies in abstract algebra.  When we refer to a group in what follows, if you  know what groups are in the more abstract sense, you may use the word in this way. If you do not know about groups in this more abstract sense, then you may assume we mean permutation group when we say group.</span></span> or a group of permutations. We call the group of permutations corresponding to rotations of the square the <b class="terminology">rotation group</b> of the square. There is a similar rotation group with \(n\) elements for any regular \(n\)-gon.</p>
+<article class="example-like essential" id="activity-252"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">252</span>
-</h5>
-<p id="p-1453">If \(f:S\rightarrow T\text{,}\) \(g:T\rightarrow X\text{,}\) and \(h:X \rightarrow Y\text{,}\) is \(h\circ(g\circ f) = (h\circ g)\circ f\text{?}\) What does this say about the status of the <!--Style me with CSS--><em>associative law</em></p>
+</h6>
+<p id="p-1467">If \(f:S\rightarrow T\text{,}\) \(g:T\rightarrow X\text{,}\) and \(h:X \rightarrow Y\text{,}\) is \(h\circ(g\circ f) = (h\circ g)\circ f\text{?}\) What does this say about the status of the <em class="emphasis">associative law</em></p>
 \begin{equation*}
 \rho\circ(\sigma\circ \varphi) = (\rho\circ \sigma)\circ\varphi
 \end{equation*}
-<p>in a group of permutations?</p></article><article class="example-like essential" id="activity-253"><h5 class="heading">
+<p>in a group of permutations?</p></article><article class="example-like essential" id="activity-253"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">253</span>
-</h5>
-<article class="exercise-like" id="task-186"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1456">How should we define \(\varphi^{-n}\) for an element \(\varphi\) of a permutation group?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-226" id="hint-226"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-226" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1457">What do you want \(\varphi^n\circ\varphi^{-1}\) to be?</p></span></span></article><article class="exercise-like" id="task-187"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1459">Will the two standard rules for exponents</p>
+</h6>
+<article class="exercise-like" id="task-186"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1470">How should we define \(\varphi^{-n}\) for an element \(\varphi\) of a permutation group?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-226" id="hint-226"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-226" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1471">What do you want \(\varphi^n\circ\varphi^{-1}\) to be?</p></span></span>
+</div></article><article class="exercise-like" id="task-187"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1473">Will the two standard rules for exponents</p>
 \begin{equation*}
 a^ma^n=a^{m+n} \mbox{\ and\ }  (a^m)^n = a^{mn}
 \end{equation*}
-<p>still hold if one or more of the exponents may be negative?</p></article><article class="exercise-like" id="task-188"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1461">What would we have to prove to show that the rules still hold?</p></article><article class="exercise-like" id="task-189"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1463">If the rules hold, give enough of the proof to show that you know how to do it; otherwise give a counterexample.</p></article></article><article class="example-like essential" id="activity-254"><h5 class="heading">
+<p>still hold if one or more of the exponents may be negative?</p></article><article class="exercise-like" id="task-188"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1475">What would we have to prove to show that the rules still hold?</p></article><article class="exercise-like" id="task-189"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1477">If the rules hold, give enough of the proof to show that you know how to do it; otherwise give a counterexample.</p></article></article><article class="example-like essential" id="activity-254"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">254</span>
-</h5>
-<p id="p-1467">If a finite set of permutations satisfies the closure property is it a permutation group?</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-227" id="hint-227"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-227" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1468">If \(\sigma^i = \sigma^j\) and \(i \ne j\text{,}\) what can you conclude about \(\iota\text{?}\)</p></span></span>
-</div></article><article class="example-like essential" id="dihedral1"><h5 class="heading">
+</h6>
+<p id="p-1481">If a finite set of permutations satisfies the closure property is it a permutation group?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-227" id="hint-227"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-227" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1482">If \(\sigma^i = \sigma^j\) and \(i \ne j\text{,}\) what can you conclude about \(\iota\text{?}\)</p></span></span>
+</div></article><article class="example-like essential" id="dihedral1"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">255</span>
-</h5>
-<p id="p-1470">There are three dimensional geometric motions of the square that return it to its original position but move some of the vertices to other positions. For example, if we flip the square around a diagonal, most of it moves out of the plane during the flip, but the square ends up in the same place. Draw a figure like <a knowl="./knowl/RotationsOfSquare.html" knowl-id="xref-RotationsOfSquare" alt="Figure 6.1.1 " title="Figure 6.1.1 ">Figure 6.1.1</a> that shows all the possible results of such motions, including the ones shown in <a knowl="./knowl/RotationsOfSquare.html" knowl-id="xref-RotationsOfSquare" alt="Figure 6.1.1 " title="Figure 6.1.1 ">Figure 6.1.1</a>. Do the corresponding permutations form a group?</p></article><article class="example-like" id="activity-256"><h5 class="heading">
+</h6>
+<p id="p-1484">There are three-dimensional geometric motions of the square that return it to its original position but move some of the vertices to other positions. For example, if we flip the square around a diagonal, most of it moves out of the plane during the flip, but the square ends up in the same place. Draw a figure like <a knowl="./knowl/RotationsOfSquare.html" knowl-id="xref-RotationsOfSquare" alt="Figure 6.1.1 " title="Figure 6.1.1 ">Figure 6.1.1</a> that shows all the possible results of such motions, including the ones shown in <a knowl="./knowl/RotationsOfSquare.html" knowl-id="xref-RotationsOfSquare" alt="Figure 6.1.1 " title="Figure 6.1.1 ">Figure 6.1.1</a>. Do the corresponding permutations form a group?</p></article><article class="example-like" id="activity-256"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">256</span>
-</h5>
-<article class="introduction" id="introduction-54"><p id="p-1472">Let \(\sigma\) and \(\varphi\) be permutations.</p></article><article class="exercise-like" id="task-190"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1473">Why must \(\sigma\circ\varphi\) have an inverse?</p></article><article class="exercise-like" id="task-191"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1475">Is \((\sigma\circ\varphi)^{-1}=\sigma^{-1}\varphi^{-1}\text{?}\) (Prove or give a counter-example.)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-228" id="hint-228"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-228" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1476">What does it mean for one function to be the inverse of another one?</p></span></span></article><article class="exercise-like" id="task-192"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1478">Is \((\sigma\circ\varphi)^{-1}= \varphi^{-1}\sigma^{-1}\text{?}\) (Prove or give a counter-example.)</p></article></article><article class="example-like essential" id="activity-257"><h5 class="heading">
+</h6>
+<div class="introduction" id="introduction-54"><p id="p-1487">Let \(\sigma\) and \(\varphi\) be permutations.</p></div>
+<article class="exercise-like" id="task-190"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1488">Why must \(\sigma\circ\varphi\) have an inverse?</p></article><article class="exercise-like" id="task-191"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1490">Is \((\sigma\circ\varphi)^{-1}=\sigma^{-1}\varphi^{-1}\text{?}\) (Prove or give a counter-example.)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-228" id="hint-228"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-228" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1491">What does it mean for one function to be the inverse of another one?</p></span></span>
+</div></article><article class="exercise-like" id="task-192"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1493">Is \((\sigma\circ\varphi)^{-1}= \varphi^{-1}\sigma^{-1}\text{?}\) (Prove or give a counter-example.)</p></article></article><article class="example-like essential" id="activity-257"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">257</span>
-</h5>
-<p id="p-1480">Explain why the set of all permutations of four elements is a permutation group. How many elements does this group have? This group is called the <em class="terminology">symmetric group on four letters</em> and is denoted by \(S_4\text{.}\)</p></article></section><section class="subsection" id="subsection-60"><header title="Subsection 6.1.3 The symmetric group"><h1 class="heading hide-type" alt="Subsection 6.1.3 The symmetric group">
-<span class="type">Subsection</span><span class="codenumber">6.1.3</span><span class="title">The symmetric group</span><a href="sec_groups-permgroups.html#subsection-60" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1482">In general, the set of all permutations of an \(n\)-element set is a group. It is called the <em class="terminology">symmetric group on \(\mathbf n\) letters</em>. We don't have nice geometric descriptions (like rotations) for all its elements, and it would be inconvenient to have to write down something like “Let \(\sigma(1) =3\text{,}\) \(\sigma(2) =1\text{,}\) \(\sigma(3)=4\text{,}\) and \(\sigma(4)=1\)” each time we need to introduce a new permutation. We introduce a new notation for permutations that allows us to denote them <!--Style me with CSS--><em>reasonably</em> compactly and compose them reasonably quickly. If \(\sigma\) is the permutation of \(\{1,2,3,4\}\) given by \(\sigma(1)=3\text{,}\) \(\sigma(2)=1\text{,}\) \(\sigma(3) =4\) and \(\sigma(4) =2\text{,}\) we write</p>
+</h6>
+<p id="p-1495">Explain why the set of all permutations of four elements is a permutation group. How many elements does this group have? This group is called the <b class="terminology">symmetric group on four letters</b> and is denoted by \(S_4\text{.}\)</p></article></section><section class="subsection" id="subsection-60"><header title="Subsection 6.1.3 The symmetric group"><h3 class="heading hide-type" alt="Subsection 6.1.3 The symmetric group">
+<span class="type">Subsection</span><span class="codenumber">6.1.3</span><span class="title">The symmetric group</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-60" class="permalink">¶</a></header><p id="p-1497">In general, the set of all permutations of an \(n\)-element set is a group. It is called the <b class="terminology">symmetric group on \(n\) letters</b>. We don't have nice geometric descriptions (like rotations) for all its elements, and it would be inconvenient to have to write down something like “Let \(\sigma(1) =3\text{,}\) \(\sigma(2) =1\text{,}\) \(\sigma(3)=4\text{,}\) and \(\sigma(4)=1\)” each time we need to introduce a new permutation. We introduce a new notation for permutations that allows us to denote them <em class="emphasis">reasonably</em> compactly and compose them reasonably quickly. If \(\sigma\) is the permutation of \(\{1,2,3,4\}\) given by \(\sigma(1)=3\text{,}\) \(\sigma(2)=1\text{,}\) \(\sigma(3) =4\) and \(\sigma(4) =2\text{,}\) we write</p>
 \begin{equation*}
 \sigma =\left( \begin{matrix}1\amp 2\amp 3\amp 4\cr3\amp 1\amp 4\amp 2
 \end{matrix} \right).
 \end{equation*}
-<p id="p-1483">We call this notation the <em class="terminology">two row notation</em> for permutations. In the two row notation for a permutation of \(\{a_1,a_2,\ldots, a_n\}\text{,}\) we write the numbers \(a_1\) through \(a_n\) in a one row and we write \(\sigma(a_1)\) through \(\sigma(a_n)\) in a row right below, enclosing both rows in parentheses. Notice that</p>
+<p id="p-1498">We call this notation the <b class="terminology">two row notation</b> for permutations. In the two row notation for a permutation of \(\{a_1,a_2,\ldots, a_n\}\text{,}\) we write the numbers \(a_1\) through \(a_n\) in a one row and we write \(\sigma(a_1)\) through \(\sigma(a_n)\) in a row right below, enclosing both rows in parentheses. Notice that</p>
 \begin{equation*}
 \left( \begin{matrix}1\amp 2\amp 3\amp 4\cr3\amp 1\amp 4\amp 2
 \end{matrix} \right) = \left(
@@ -226,63 +239,73 @@ a^ma^n=a^{m+n} \mbox{\ and\ }  (a^m)^n = a^{mn}
 \end{matrix} \right),
 \end{equation*}
 <p>although the second ordering of the columns is rarely used.</p>
-<p id="p-1484">If \(\varphi\) is given by</p>
+<p id="p-1499">If \(\varphi\) is given by</p>
 \begin{equation*}
 \varphi = \begin{pmatrix}1\amp 2\amp 3\amp 4\cr4\amp 1\amp 2\amp 3
 \end{pmatrix} ,
 \end{equation*}
 <p>then, by applying the definition of composition of functions, we may compute \(\sigma\circ
 \varphi\) as shown in <a knowl="./knowl/permutationproduct.html" knowl-id="xref-permutationproduct" alt="Figure 6.1.2 " title="Figure 6.1.2 ">Figure 6.1.2</a>.</p>
-<figure class="figure-like" id="permutationproduct"><object type="image/svg+xml" style="width:73%; margin:auto; display:block;" data="images/productofpermutations.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.2</span>How to multiply permutations in two-row notation.</figcaption></figure><p id="p-1485">We don't normally put the circle between two permutations in two row notation when we are composing them, and refer to the operation as multiplying the permutations, or as the product of the permutations. To see how <a knowl="./knowl/permutationproduct.html" knowl-id="xref-permutationproduct" alt="Figure 6.1.2 " title="Figure 6.1.2 ">Figure 6.1.2</a> illustrates composition, notice that the arrow starting at 1 in \(\varphi\) goes to 4. Then from the 4 in \(\varphi\) it goes to the 4 in \(\sigma\) and then to 2. This illustrates that \(\varphi(1)=4\) and \(\sigma(4) =2\text{,}\) so that \(\sigma(\varphi(1))=2\text{.}\)</p>
-<article class="example-like" id="activity-258"><h5 class="heading">
+<figure class="figure-like" id="permutationproduct"><object type="image/svg+xml" style="width:73%; margin:auto; display:block;" data="images/productofpermutations.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.2</span>How to multiply permutations in two-row notation.</figcaption></figure><p id="p-1500">We don't normally put the circle between two permutations in two row notation when we are composing them, and refer to the operation as multiplying the permutations, or as the product of the permutations. To see how <a knowl="./knowl/permutationproduct.html" knowl-id="xref-permutationproduct" alt="Figure 6.1.2 " title="Figure 6.1.2 ">Figure 6.1.2</a> illustrates composition, notice that the arrow starting at 1 in \(\varphi\) goes to 4. Then from the 4 in \(\varphi\) it goes to the 4 in \(\sigma\) and then to 2. This illustrates that \(\varphi(1)=4\) and \(\sigma(4) =2\text{,}\) so that \(\sigma(\varphi(1))=2\text{.}\)</p>
+<article class="example-like" id="activity-258"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">258</span>
-</h5>
-<p id="p-1486">For practice, compute \(\begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\cr3\amp 4\amp 1\amp 5\amp 2
+</h6>
+<p id="p-1501">For practice, compute \(\begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\cr3\amp 4\amp 1\amp 5\amp 2
 \end{pmatrix}
 \begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\cr 4\amp 3\amp 5\amp 1\amp 2
-\end{pmatrix}\text{.}\)</p></article></section><section class="subsection" id="subsection-61"><header title="Subsection 6.1.4 The dihedral group"><h1 class="heading hide-type" alt="Subsection 6.1.4 The dihedral group">
-<span class="type">Subsection</span><span class="codenumber">6.1.4</span><span class="title">The dihedral group</span><a href="sec_groups-permgroups.html#subsection-61" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1488">We found four permutations that correspond to rotations of the square. In <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a> you found four permutations that correspond to flips of the square in space. One flip fixes the vertices in the places labeled 1 and 3 and interchanges the vertices in the places labeled 2 and 4. Let us denote it by \(\varphi_{1|3}\text{.}\) One flip fixes the vertices in the positions labeled 2 and 4 and interchanges those in the positions labeled 1 and 3. Let us denote it by \(\varphi{2|4}\text{.}\) One flip interchanges the vertices in the places labeled 1 and 2 and also interchanges those in the places labeled 3 and 4. Let us denote it by \(\varphi_{12|34}\text{.}\) The fourth flip interchanges the vertices in the places labeled 1 and 4 and interchanges those in the places labeled 2 and 3. Let us denote it by \(\varphi_{14|23}\text{.}\) Notice that \(\varphi_{1|3}\) is a permutation that takes the vertex in place 1 to the vertex in place 1 and the vertex in place 3 to the vertex in place 3, while \(\varphi_{12|34}\) is a permutation that takes the edge between places 1 and 2 to the edge between places 2 and 1 (which is the same edge) and takes the edge between places 3 and 4 to the edge between places 4 and 3 (which is the same edge). This should help to explain the similarity in the notation for the two different kinds of flips.</p>
-<article class="example-like essential" id="dihedral2"><h5 class="heading">
+\end{pmatrix}\text{.}\)</p></article></section><section class="subsection" id="subsection-61"><header title="Subsection 6.1.4 The dihedral group"><h3 class="heading hide-type" alt="Subsection 6.1.4 The dihedral group">
+<span class="type">Subsection</span><span class="codenumber">6.1.4</span><span class="title">The dihedral group</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-61" class="permalink">¶</a></header><p id="p-1503">We found four permutations that correspond to rotations of the square. In <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a> you found four permutations that correspond to flips of the square in space. One flip fixes the vertices in the places labeled 1 and 3 and interchanges the vertices in the places labeled 2 and 4. Let us denote it by \(\varphi_{1|3}\text{.}\) One flip fixes the vertices in the positions labeled 2 and 4 and interchanges those in the positions labeled 1 and 3. Let us denote it by \(\varphi{2|4}\text{.}\) One flip interchanges the vertices in the places labeled 1 and 2 and also interchanges those in the places labeled 3 and 4. Let us denote it by \(\varphi_{12|34}\text{.}\) The fourth flip interchanges the vertices in the places labeled 1 and 4 and interchanges those in the places labeled 2 and 3. Let us denote it by \(\varphi_{14|23}\text{.}\) Notice that \(\varphi_{1|3}\) is a permutation that takes the vertex in place 1 to the vertex in place 1 and the vertex in place 3 to the vertex in place 3, while \(\varphi_{12|34}\) is a permutation that takes the edge between places 1 and 2 to the edge between places 2 and 1 (which is the same edge) and takes the edge between places 3 and 4 to the edge between places 4 and 3 (which is the same edge). This should help to explain the similarity in the notation for the two different kinds of flips.</p>
+<article class="example-like essential" id="dihedral2"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">259</span>
-</h5>
-<p id="p-1489">Write down the two-row notation for \(\rho^3\text{,}\) \(\varphi_{2|4}\text{,}\) \(\varphi_{12|34}\) and \(\varphi_{2|4}\circ \varphi_{12|34}\text{.}\) Remember that \(\sigma(i)\) stands for the position where the vertex that originated in position \(i\) is after we apply \(\sigma\text{.}\)</p></article><article class="example-like" id="activity-260"><h5 class="heading">
+</h6>
+<p id="p-1504">Write down the two-row notation for \(\rho^3\text{,}\) \(\varphi_{2|4}\text{,}\) \(\varphi_{12|34}\) and \(\varphi_{2|4}\circ \varphi_{12|34}\text{.}\) Remember that \(\sigma(i)\) stands for the position where the vertex that originated in position \(i\) is after we apply \(\sigma\text{.}\)</p></article><article class="example-like" id="activity-260"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">260</span>
-</h5>
-<p id="p-1491">(You may have already done this problem in <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>, in which case you need not do it again!) In <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>, if a rigid motion of three-dimensional space returns the square to its original position, in how many places can vertex number one land? Once the location of vertex number one is decided, how many possible locations are there for vertex two? Once the locations of vertex one and vertex two are decided, how many locations are there for vertex three? Answer the same question for vertex four. What does this say about the relationship between the four rotations and four flips described above and the permutations you described in <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>?</p></article><p id="p-1493">The four rotations and four flips of the square described before <a knowl="./knowl/dihedral2.html" knowl-id="xref-dihedral2" alt="Problem 259 " title="Problem 259 ">Problem 259</a> form a group called the dihedral group of the square. Sometimes the group is denoted \(D_8\) because it has eight elements, and sometimes the group is denoted by \(D_4\) because it deals with four vertices! Let us agree to use the notation \(D_4\) for the dihedral group of the square. There is a similar dihedral group, denoted by \(D_{n}\text{,}\) of all the rigid motions of three-dimensional space that return a regular \(n\)-gon to its original position (but might put the vertices in different places.)</p>
-<article class="example-like" id="activity-261"><h5 class="heading">
+</h6>
+<p id="p-1506">(You may have already done this problem in <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>, in which case you need not do it again!) In <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>, if a rigid motion of three-dimensional space returns the square to its original position, in how many places can vertex number one land? Once the location of vertex number one is decided, how many possible locations are there for vertex two? Once the locations of vertex one and vertex two are decided, how many locations are there for vertex three? Answer the same question for vertex four. What does this say about the relationship between the four rotations and four flips described above and the permutations you described in <a knowl="./knowl/dihedral1.html" knowl-id="xref-dihedral1" alt="Problem 255 " title="Problem 255 ">Problem 255</a>?</p></article><p id="p-1508">The four rotations and four flips of the square described before <a knowl="./knowl/dihedral2.html" knowl-id="xref-dihedral2" alt="Problem 259 " title="Problem 259 ">Problem 259</a> form a group called the dihedral group of the square. Sometimes the group is denoted \(D_8\) because it has eight elements, and sometimes the group is denoted by \(D_4\) because it deals with four vertices! Let us agree to use the notation \(D_4\) for the dihedral group of the square. There is a similar dihedral group, denoted by \(D_{n}\text{,}\) of all the rigid motions of three-dimensional space that return a regular \(n\)-gon to its original position (but might put the vertices in different places.)</p>
+<article class="example-like" id="activity-261"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">261</span>
-</h5>
-<p id="p-1494">Another view of the dihedral group of the square is that it is the group of all distance preserving functions, also called <em class="terminology">isometries</em>,  from a square to itself.  Notice that an isometry must be a bijection.  Any rigid motion of the square preserves the distances between all points of the square.  However, it is conceivable that there might be some isometries that do not arise from rigid motions.  (We will see some later on in the case of a cube.)  Show that there are exactly eight isometires (dinsce preserving functions) from a square to itself.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-229" id="hint-229"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-229" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1495">Once you know where the corners of the square go under the action of an isometry, how much do you know about the isometry?</p></span></span>
-</div></article><article class="example-like" id="activity-262"><h5 class="heading">
+</h6>
+<p id="p-1509">Another view of the dihedral group of the square is that it is the group of all distance preserving functions, also called <b class="terminology">isometries</b>,  from a square to itself.  Notice that an isometry must be a bijection.  Any rigid motion of the square preserves the distances between all points of the square.  However, it is conceivable that there might be some isometries that do not arise from rigid motions.  (We will see some later on in the case of a cube.)  Show that there are exactly eight isometires (distance preserving functions) from a square to itself.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-229" id="hint-229"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-229" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1510">Once you know where the corners of the square go under the action of an isometry, how much do you know about the isometry?</p></span></span>
+</div></article><article class="example-like" id="activity-262"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">262</span>
-</h5>
-<p id="p-1497">How many elements does the group \(D_n\) have? Prove that you are correct.</p></article><article class="example-like" id="cube1-prob"><h5 class="heading">
+</h6>
+<p id="p-1512">How many elements does the group \(D_n\) have? Prove that you are correct.</p></article><article class="example-like" id="cube1-prob"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">263</span>
-</h5>
-<article class="introduction" id="introduction-55"><p id="p-1499">In <a knowl="./knowl/cube1.html" knowl-id="xref-cube1" alt="Figure 6.1.3 " title="Figure 6.1.3 ">Figure 6.1.3</a> we show a cube with the positions of its vertices and faces labeled.  As with motions of the square, we let \(\varphi(x)\) be the label of the place where vertex previously in position \(x\) is now.</p>
-<figure class="figure-like" id="cube1"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/cube1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.3</span>A cube with the positions of its vertices and faces labelled.  The curved arrows point to the positions that are blocked by the cube.</figcaption></figure></article><article class="exercise-like" id="task-193"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1500">Write in two row notation the permutation \(\rho\) of the vertices that corresponds to rotating the cube 90 degrees around a vertical axis through the faces \(t\) (for top) and \(u\) (for underneath). (Rotate in a right-handed fashion around this axis, meaning that vertex 6 goes to the back and vertex 8 comes to the front.)</p></article><article class="exercise-like" id="task-194"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1502">Write in two row notation the permutation \(\varphi\) that rotates the cube 120 degrees around the diagonal from vertex 1 to vertex 7 and carries vertex 8 to vertex 6.</p></article><article class="exercise-like" id="task-195"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1504">Compute the two row notation for \(\rho \circ \varphi\)</p></article><article class="exercise-like" id="task-196"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1506">Is the permutation \(\rho\circ\varphi\) a rotation of the cube around some axis?  If so, say what the axis is and how many degrees we rotate around the axis.  If \(\rho\circ\varphi\) is not a rotation, give a geometic description of it.</p></article></article><article class="example-like interesting-forward-essential" id="activity-264"><h5 class="heading">
+</h6>
+<div class="introduction" id="introduction-55">
+<p id="p-1514">In <a knowl="./knowl/cube1.html" knowl-id="xref-cube1" alt="Figure 6.1.3 " title="Figure 6.1.3 ">Figure 6.1.3</a> we show a cube with the positions of its vertices and faces labeled.  As with motions of the square, we let \(\varphi(x)\) be the label of the place where vertex previously in position \(x\) is now.</p>
+<figure class="figure-like" id="cube1"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/cube1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.3</span>A cube with the positions of its vertices and faces labelled.  The curved arrows point to the positions that are blocked by the cube.</figcaption></figure>
+</div>
+<article class="exercise-like" id="task-193"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1515">Write in two row notation the permutation \(\rho\) of the vertices that corresponds to rotating the cube 90 degrees around a vertical axis through the faces \(t\) (for top) and \(u\) (for underneath). (Rotate in a right-handed fashion around this axis, meaning that vertex 6 goes to the back and vertex 8 comes to the front.)</p></article><article class="exercise-like" id="task-194"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1517">Write in two row notation the permutation \(\varphi\) that rotates the cube 120 degrees around the diagonal from vertex 1 to vertex 7 and carries vertex 8 to vertex 6.</p></article><article class="exercise-like" id="task-195"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1519">Compute the two row notation for \(\rho \circ \varphi\)</p></article><article class="exercise-like" id="task-196"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1521">Is the permutation \(\rho\circ\varphi\) a rotation of the cube around some axis?  If so, say what the axis is and how many degrees we rotate around the axis.  If \(\rho\circ\varphi\) is not a rotation, give a geometic description of it.</p></article></article><article class="example-like interesting-forward-essential" id="activity-264"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">264</span>
-</h5>
-<p id="p-1508">How many permutations are in the group \(R\text{?}\) \(R\) is sometimes called the “rotation group” of the cube. Can you justify this?</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-230" id="hint-230"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-230" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1509">In how many ways can you choose a place to which you can move vertex 1? Having done that, in how many ways can you place the three vertices adjacent to vertex 1?</p></span></span>
-</div></article><article class="example-like" id="activity-265"><h5 class="heading">
+</h6>
+<p id="p-1523">How many permutations are in the group \(R\text{?}\) \(R\) is sometimes called the “rotation group” of the cube. Can you justify this?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-230" id="hint-230"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-230" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1524">In how many ways can you choose a place to which you can move vertex 1? Having done that, in how many ways can you place the three vertices adjacent to vertex 1?</p></span></span>
+</div></article><article class="example-like" id="activity-265"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">265</span>
-</h5>
-<article class="introduction" id="introduction-56"><p id="p-1511">As with a two-dimensional figure, it is possible to talk about isometries of a three-dimensional figure. These are distance preserving functions from the figure to itself. The function that reflects the cube in <a knowl="./knowl/cube1.html" knowl-id="xref-cube1" alt="Figure 6.1.3 " title="Figure 6.1.3 ">Figure 6.1.3</a> through a plane halfway between the bottom face and top face exchanges the vertices 1 and 5, 2 and 6, 3 and 7, and 4 and 8 of the cube. This function preserves distances between points in the cube. However, it cannot be achieved by a rigid motion of the cube because a rigid motion that takes vertex 1 to vertex 5, vertex 2 to vertex 6, vertex 3 to vertex 7, and vertex 4 to vertex 8 would not return the cube to its original location; rather it would put the bottom of the cube where its top previously was and would put the rest of the cube above that square rather than below it.</p></article><article class="exercise-like" id="task-197"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1512">How many elements are there in the group of permutations of \([8]\)   that correspond to isometries of the cube?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-231" id="hint-231"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-231" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1513">In how many ways can you choose a place to which you can move vertex 1? Having done that, in how many ways can you place the three vertices adjacent to vertex 1?</p></span></span></article><article class="exercise-like" id="task-198"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1515">Is every permutation of \([8]\) that corresponds to an isometry either a rotation or a reflection?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-232" id="hint-232"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-232" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1516">Why is it sufficient to focus on permutations that take vertex 1 to itself?</p></span></span></article></article></section><section class="subsection" id="subsection-62"><header title="Subsection 6.1.5 Group tables (Optional)"><h1 class="heading hide-type" alt="Subsection 6.1.5 Group tables (Optional)">
-<span class="type">Subsection</span><span class="codenumber">6.1.5</span><span class="title">Group tables (Optional)</span><a href="sec_groups-permgroups.html#subsection-62" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1518">We can always figure out the composition of two permutations of the same set by using the definition of composition, but if we are going to work with a given permutation group again and again, it is worth making the computations once and recording them in a table. For example the group of rotations of the square may be represented as in <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a>. We list the elements of our group, with the identity first, across the top of the table and down the left side of the table, using the same order both times. Then in the row labeled by the group element \(\sigma\) and the column labelled by the group element \(\varphi\text{,}\) we write the composition \(\sigma\circ \varphi\text{,}\) expressed in terms of the elements we have listed on the top and on the left side. Since a group of permutations is closed under composition, the result \(\sigma\circ \varphi\) will always be expressible as one of these elements.</p>
+</h6>
+<div class="introduction" id="introduction-56"><p id="p-1526">As with a two-dimensional figure, it is possible to talk about isometries of a three-dimensional figure. These are distance preserving functions from the figure to itself. The function that reflects the cube in <a knowl="./knowl/cube1.html" knowl-id="xref-cube1" alt="Figure 6.1.3 " title="Figure 6.1.3 ">Figure 6.1.3</a> through a plane halfway between the bottom face and top face exchanges the vertices 1 and 5, 2 and 6, 3 and 7, and 4 and 8 of the cube. This function preserves distances between points in the cube. However, it cannot be achieved by a rigid motion of the cube because a rigid motion that takes vertex 1 to vertex 5, vertex 2 to vertex 6, vertex 3 to vertex 7, and vertex 4 to vertex 8 would not return the cube to its original location; rather it would put the bottom of the cube where its top previously was and would put the rest of the cube above that square rather than below it.</p></div>
+<article class="exercise-like" id="task-197"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1527">How many elements are there in the group of permutations of \([8]\)   that correspond to isometries of the cube?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-231" id="hint-231"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-231" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1528">In how many ways can you choose a place to which you can move vertex 1? Having done that, in how many ways can you place the three vertices adjacent to vertex 1?</p></span></span>
+</div></article><article class="exercise-like" id="task-198"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1530">Is every permutation of \([8]\) that corresponds to an isometry either a rotation or a reflection?</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-232" id="hint-232"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-232" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1531">Why is it sufficient to focus on permutations that take vertex 1 to itself?</p></span></span>
+</div></article></article></section><section class="subsection" id="subsection-62"><header title="Subsection 6.1.5 Group tables (Optional)"><h3 class="heading hide-type" alt="Subsection 6.1.5 Group tables (Optional)">
+<span class="type">Subsection</span><span class="codenumber">6.1.5</span><span class="title">Group tables (Optional)</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-62" class="permalink">¶</a></header><p id="p-1533">We can always figure out the composition of two permutations of the same set by using the definition of composition, but if we are going to work with a given permutation group again and again, it is worth making the computations once and recording them in a table. For example the group of rotations of the square may be represented as in <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a>. We list the elements of our group, with the identity first, across the top of the table and down the left side of the table, using the same order both times. Then in the row labeled by the group element \(\sigma\) and the column labelled by the group element \(\varphi\text{,}\) we write the composition \(\sigma\circ \varphi\text{,}\) expressed in terms of the elements we have listed on the top and on the left side. Since a group of permutations is closed under composition, the result \(\sigma\circ \varphi\) will always be expressible as one of these elements.</p>
 <figure class="figure-like" id="rotationgrouptable"><table>
 <tr>
 <td class="l m b1 r1 l0 t0 lines">\(\circ\)</td>
@@ -320,103 +343,104 @@ a^ma^n=a^{m+n} \mbox{\ and\ }  (a^m)^n = a^{mn}
 <td class="l m b0 r0 l0 t0 lines">\(\rho^2\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">6.1.4</span>The group table for the rotations of a square.</figcaption></figure><article class="example-like" id="activity-266"><h5 class="heading">
+<figcaption><span class="heading">Table</span><span class="codenumber">6.1.4</span>The group table for the rotations of a square.</figcaption></figure><article class="example-like" id="activity-266"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">266</span>
-</h5>
-<p id="p-1519">In <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a>, all the entries in a row (not including the first entry, the one to the left of the line) are different. Will this be true in any group table for a permutation group? Why or why not? Also in <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a> all the entries in a column (not including the first entry, the one above the line) are different. Will this be true in any group table for a permutation group? Why or why not?</p></article><article class="example-like" id="activity-267"><h5 class="heading">
+</h6>
+<p id="p-1534">In <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a>, all the entries in a row (not including the first entry, the one to the left of the line) are different. Will this be true in any group table for a permutation group? Why or why not? Also in <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a> all the entries in a column (not including the first entry, the one above the line) are different. Will this be true in any group table for a permutation group? Why or why not?</p></article><article class="example-like" id="activity-267"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">267</span>
-</h5>
-<p id="p-1521">In <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a>, every element of the group appears in every row (even if you don't include the first element, the one before the line). Will this be true in any group table for a permutation group? Why or why not? Also in <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a> every element of the group appears in every column (even if you don't include the first entry, the one before the line). Will this be true in any group table for a permutation group? Why or why not?</p></article><article class="example-like essential" id="dihedral3"><h5 class="heading">
+</h6>
+<p id="p-1536">In <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a>, every element of the group appears in every row (even if you don't include the first element, the one before the line). Will this be true in any group table for a permutation group? Why or why not? Also in <a knowl="./knowl/rotationgrouptable.html" knowl-id="xref-rotationgrouptable" alt="Table 6.1.4 " title="Table 6.1.4 ">Table 6.1.4</a> every element of the group appears in every column (even if you don't include the first entry, the one before the line). Will this be true in any group table for a permutation group? Why or why not?</p></article><article class="example-like essential" id="dihedral3"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">268</span>
-</h5>
-<p id="p-1523">Write down the group table for the dihedral group \(D_4\text{.}\) Use the \(\varphi\) notation described above to denote the flips. (Hints: Part of the table has already been written down. Will you need to think hard to write down the last row? Will you need to think hard to write down the last column? When you multiply a product like \(\varphi_{1|3}
-\circ \rho\) remember that we defined \(\varphi_{1|3}\) to be the flip that fixes the vertex in position 1 and the vertex in position 3, <!--Style me with CSS--><em>not</em> the one that fixes the vertex on the square labelled 1 and the vertex on the square labelled 3.)</p></article><p id="p-1524">You may notice that the associative law, the identity property, and the inverse property are three of the most important rules that we use in regrouping parentheses in algebraic expressions when solving equations. There is one property we have not yet mentioned, the <em class="terminology">commutative law</em> which would say that \(\sigma\circ \varphi =
+</h6>
+<p id="p-1538">Write down the group table for the dihedral group \(D_4\text{.}\) Use the \(\varphi\) notation described above to denote the flips. (Hints: Part of the table has already been written down. Will you need to think hard to write down the last row? Will you need to think hard to write down the last column? When you multiply a product like \(\varphi_{1|3}
+\circ \rho\) remember that we defined \(\varphi_{1|3}\) to be the flip that fixes the vertex in position 1 and the vertex in position 3, <em class="emphasis">not</em> the one that fixes the vertex on the square labelled 1 and the vertex on the square labelled 3.)</p></article><p id="p-1539">You may notice that the associative law, the identity property, and the inverse property are three of the most important rules that we use in regrouping parentheses in algebraic expressions when solving equations. There is one property we have not yet mentioned, the <b class="terminology">commutative law</b> which would say that \(\sigma\circ \varphi =
 \varphi\circ\sigma\text{.}\) It is easy to see from the group table of \(R_4\) that it satisfies the commutative law.</p>
-<article class="example-like" id="activity-269"><h5 class="heading">
+<article class="example-like" id="activity-269"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">269</span>
-</h5>
-<p id="p-1525">Does the commutative law hold in all permutation groups?</p></article></section><section class="subsection" id="subsection-63"><header title="Subsection 6.1.6 Subgroups"><h1 class="heading hide-type" alt="Subsection 6.1.6 Subgroups">
-<span class="type">Subsection</span><span class="codenumber">6.1.6</span><span class="title">Subgroups</span><a href="sec_groups-permgroups.html#subsection-63" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1527">We have seen that the dihedral group \(D_4\) contains a copy of the group of rotations of the square. When one group \(G\) of permutations of a set \(S\) is a subset of another group \(G'\) of permutations of \(S\text{,}\) we say that \(G\) is a <em class="terminology">subgroup</em> of \(G'\text{.}\) </p>
-<article class="example-like essential" id="S4"><h5 class="heading">
+</h6>
+<p id="p-1540">Does the commutative law hold in all permutation groups?</p></article></section><section class="subsection" id="subsection-63"><header title="Subsection 6.1.6 Subgroups"><h3 class="heading hide-type" alt="Subsection 6.1.6 Subgroups">
+<span class="type">Subsection</span><span class="codenumber">6.1.6</span><span class="title">Subgroups</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-63" class="permalink">¶</a></header><p id="p-1542">We have seen that the dihedral group \(D_4\) contains a copy of the group of rotations of the square. When one group \(G\) of permutations of a set \(S\) is a subset of another group \(G'\) of permutations of \(S\text{,}\) we say that \(G\) is a <b class="terminology">subgroup</b> of \(G'\text{.}\) </p>
+<article class="example-like essential" id="S4"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">270</span>
-</h5>
-<p id="p-1528">Find all subgroups of the group \(D_4\text{.}\)</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-233" id="hint-233"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-233" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1529">If a subgroup contains, say, \(\rho^3\) and some flip, how many elements of \(D_4\) must it contain?</p></span></span>
-</div></article><article class="example-like" id="activity-271"><h5 class="heading">
+</h6>
+<p id="p-1543">Find all subgroups of the group \(D_4\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-233" id="hint-233"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-233" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1544">If a subgroup contains, say, \(\rho^3\) and some flip, how many elements of \(D_4\) must it contain?</p></span></span>
+</div></article><article class="example-like" id="activity-271"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">271</span>
-</h5>
-<p id="p-1531">Can you find subgroups of the symmetric group \(S_4\) with two elements? Three elements? Four elements? Six elements? (For each positive answer, describe a subgroup. For each negative answer, explain why not.)</p></article></section><section class="subsection" id="subsection-64"><header title="Subsection 6.1.7 The cycle structure of a permutation"><h1 class="heading hide-type" alt="Subsection 6.1.7 The cycle structure of a permutation">
-<span class="type">Subsection</span><span class="codenumber">6.1.7</span><span class="title">The cycle structure of a permutation</span><a href="sec_groups-permgroups.html#subsection-64" class="permalink">¶ permalink</a>
-</h1></header><p id="p-1533">There is an even more efficient way to write down permutations. Notice that the product in <a knowl="./knowl/permutationproduct.html" knowl-id="xref-permutationproduct" alt="Figure 6.1.2 " title="Figure 6.1.2 ">Figure 6.1.2</a> is \(\begin{pmatrix}1\amp 2\amp 3\amp 4\cr2\amp 3\amp 1\amp 4
+</h6>
+<p id="p-1546">Can you find subgroups of the symmetric group \(S_4\) with two elements? Three elements? Four elements? Six elements? (For each positive answer, describe a subgroup. For each negative answer, explain why not.)</p></article></section><section class="subsection" id="subsection-64"><header title="Subsection 6.1.7 The cycle structure of a permutation"><h3 class="heading hide-type" alt="Subsection 6.1.7 The cycle structure of a permutation">
+<span class="type">Subsection</span><span class="codenumber">6.1.7</span><span class="title">The cycle structure of a permutation</span>
+</h3>
+<a href="sec_groups-permgroups.html#subsection-64" class="permalink">¶</a></header><p id="p-1548">There is an even more efficient way to write down permutations. Notice that the product in <a knowl="./knowl/permutationproduct.html" knowl-id="xref-permutationproduct" alt="Figure 6.1.2 " title="Figure 6.1.2 ">Figure 6.1.2</a> is \(\begin{pmatrix}1\amp 2\amp 3\amp 4\cr2\amp 3\amp 1\amp 4
 \end{pmatrix}\text{.}\) We have drawn the directed graph of this permutation in <a knowl="./knowl/permutationcycledigraph.html" knowl-id="xref-permutationcycledigraph" alt="Figure 6.1.5 " title="Figure 6.1.5 ">Figure 6.1.5</a>.</p>
-<figure class="figure-like" id="permutationcycledigraph"><object type="image/svg+xml" style="width:73%; margin:auto; display:block;" data="images/permutationcycledigraph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.5</span>The directed graph of a permutation .</figcaption></figure><p id="p-1534">You see that the graph has two directed cycles, the rather trivial one with vertex 4 pointing to itself, and the nontrivial one with vertex 1 pointing to vertex 2 pointing to vertex 3 which points back to vertex 1. A permutation is called a <em class="terminology">cycle</em> if its digraph consists of exactly one cycle. Thus \(\begin{pmatrix}1\amp 2\amp 3\cr2\amp 3\amp 1
+<figure class="figure-like" id="permutationcycledigraph"><object type="image/svg+xml" style="width:73%; margin:auto; display:block;" data="images/permutationcycledigraph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.1.5</span>The directed graph of a permutation .</figcaption></figure><p id="p-1549">You see that the graph has two directed cycles, the rather trivial one with vertex 4 pointing to itself, and the nontrivial one with vertex 1 pointing to vertex 2 pointing to vertex 3 which points back to vertex 1. A permutation is called a <b class="terminology">cycle</b> if its digraph consists of exactly one cycle. Thus \(\begin{pmatrix}1\amp 2\amp 3\cr2\amp 3\amp 1
 \end{pmatrix}\) is a cycle but \(\begin{pmatrix}1\amp 2\amp 3\amp 4\cr2\amp 3\amp 1\amp 4
 \end{pmatrix}\) is not a cycle by our definition. We write \((1\ 2\ 3)\) or \((2\ 3\ 1)\) or \((3\ 1\ 2)\) to stand for the cycle \(\sigma =\begin{pmatrix}1\amp 2\amp 3\cr2\amp 3\amp 1
 \end{pmatrix}\text{.}\)</p>
-<p id="p-1535">We can describe cycles in another way as well. A <em class="terminology">cycle</em> of the permutation \(\sigma\) is a list \((i\
+<p id="p-1550">We can describe cycles in another way as well. A <b class="terminology">cycle</b> of the permutation \(\sigma\) is a list \((i\
 \sigma(i)\
 \sigma^2(i)
 \ \ldots\
 \sigma^n(i))\) that does not have repeated elements while the list \((i\ \sigma(i)\
 \sigma^2(i)\ \ldots\ \sigma^n(i))\ \sigma^{n+1}(i))\) does have repeated elements.</p>
-<article class="example-like" id="activity-272"><h5 class="heading">
+<article class="example-like" id="activity-272"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">272</span>
-</h5>
-<p id="p-1536">If the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) does not have repeated elements but the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i)\ \sigma^{n+1}(i))\) does have repeated elements, then what is \(\sigma^{n+1}(i)\text{?}\)</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-234" id="hint-234"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-234" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1537">If the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) does not have repeated elements but the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i)\ \sigma^{n+1}(i))\) does have repeated elements, then which element or elements are repeats?</p></span></span>
-</div></article><p id="p-1539">We say \(\sigma^j(i)\) is an <em class="terminology">element</em> of the cycle \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\text{.}\)  Notice that the case \(j=0\) means \(i\) is an element of the cycle.  Notice also that if \(j\gt n\text{,}\) \(\sigma^j(i) = \sigma^{j-n-1}(i)\text{,}\) so the distinct elements of the cycle are \(i\text{,}\) \(\sigma(i)\text{,}\) \(\sigma^2(i)\text{,}\) through \(\sigma^n(i)\text{.}\) We think of the cycle \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) as representing the permutation \(\sigma\) restricted to the set of elements of the cycle. We say that the cycles \((i\
+</h6>
+<p id="p-1551">If the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) does not have repeated elements but the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i)\ \sigma^{n+1}(i))\) does have repeated elements, then what is \(\sigma^{n+1}(i)\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-234" id="hint-234"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-234" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1552">If the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) does not have repeated elements but the list \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i)\ \sigma^{n+1}(i))\) does have repeated elements, then which element or elements are repeats?</p></span></span>
+</div></article><p id="p-1554">We say \(\sigma^j(i)\) is an <b class="terminology">element</b> of the cycle \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\text{.}\)  Notice that the case \(j=0\) means \(i\) is an element of the cycle.  Notice also that if \(j\gt n\text{,}\) \(\sigma^j(i) = \sigma^{j-n-1}(i)\text{,}\) so the distinct elements of the cycle are \(i\text{,}\) \(\sigma(i)\text{,}\) \(\sigma^2(i)\text{,}\) through \(\sigma^n(i)\text{.}\) We think of the cycle \((i\ \sigma(i)\ \sigma^2(i)\ \ldots\ \sigma^n(i))\) as representing the permutation \(\sigma\) restricted to the set of elements of the cycle. We say that the cycles \((i\
 \sigma(i)\
 \sigma^2(i)\ \ldots\ \sigma^n(i))\) and \((j\
 \sigma(j)\
-\sigma^2(j)\ \ldots\ \sigma^n(j))\) are <em class="terminology">equivalent</em> if there is an integer \(k\) such that \(j=
+\sigma^2(j)\ \ldots\ \sigma^n(j))\) are <b class="terminology">equivalent</b> if there is an integer \(k\) such that \(j=
 \sigma^k(i)\text{.}\)</p>
-<article class="example-like essential" id="d4-cycles"><h5 class="heading">
+<article class="example-like essential" id="d4-cycles"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">273</span>
-</h5>
-<p id="p-1540">Find the cycles of the permutations \(\rho\text{,}\) \(\varphi_{1|3}\) and \(\varphi_{12|34}\) in the group \(D_4\text{.}\)</p></article><article class="example-like" id="permutation-cycles"><h5 class="heading">
+</h6>
+<p id="p-1555">Find the cycles of the permutations \(\rho\text{,}\) \(\varphi_{1|3}\) and \(\varphi_{12|34}\) in the group \(D_4\text{.}\)</p></article><article class="example-like" id="permutation-cycles"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">274</span>
-</h5>
-<p id="p-1542">Find the cycles of the permutation</p>
+</h6>
+<p id="p-1557">Find the cycles of the permutation</p>
 \begin{equation*}
 \begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\amp 6\amp 7\amp 8\amp 9\cr
 3\amp 4\amp 6\amp 2\amp 9\amp 7\amp 1\amp 5\amp 8
 \end{pmatrix}\text{.}
 \end{equation*}
-</article><article class="example-like" id="common-elements"><h5 class="heading">
+</article><article class="example-like" id="common-elements"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">275</span>
-</h5>
-<p id="p-1544">If two cycles of \(\sigma\) have an element in common, what can we say about them?</p></article><p id="p-1546"><a knowl="./knowl/common-elements.html" knowl-id="xref-common-elements" alt="Problem 275 " title="Problem 275 ">Problem 275</a> leads almost immediately to the following theorem.</p>
-<article class="theorem-like" id="unique-partition"><h5 class="heading">
+</h6>
+<p id="p-1559">If two cycles of \(\sigma\) have an element in common, what can we say about them?</p></article><p id="p-1561"><a knowl="./knowl/common-elements.html" knowl-id="xref-common-elements" alt="Problem 275 " title="Problem 275 ">Problem 275</a> leads almost immediately to the following theorem.</p>
+<article class="theorem-like" id="unique-partition"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.1.6</span>
-</h5>
-<p id="p-1547">for each permutation \(\sigma\) of a set \(S\text{,}\) there is a unique partition of \(S\) each of whose blocks is the set of elements of a cycle of \(\sigma\text{.}\)</p></article><p id="p-1548">More informally, we may say that every permutation partitions its domain into disjoint cycles. We call the set of cycles of a permutation the <em class="terminology">cycle decomposition</em> of the permutation. Since the cycles of a permutation \(\sigma\) tell us \(\sigma(x)\) for every \(x\) in the domain of \(\sigma\text{,}\) the cycle decomposition of a permutation completely determines the permutation. Using our informal language, we can express this idea in the following corollary to <a knowl="./knowl/unique-partition.html" knowl-id="xref-unique-partition" alt="Theorem 6.1.6 " title="Theorem 6.1.6 ">Theorem 6.1.6</a>.</p>
-<article class="theorem-like" id="corollary-2"><h5 class="heading">
+</h6>
+<p id="p-1562">for each permutation \(\sigma\) of a set \(S\text{,}\) there is a unique partition of \(S\) each of whose blocks is the set of elements of a cycle of \(\sigma\text{.}\)</p></article><p id="p-1563">More informally, we may say that every permutation partitions its domain into disjoint cycles. We call the set of cycles of a permutation the <b class="terminology">cycle decomposition</b> of the permutation. Since the cycles of a permutation \(\sigma\) tell us \(\sigma(x)\) for every \(x\) in the domain of \(\sigma\text{,}\) the cycle decomposition of a permutation completely determines the permutation. Using our informal language, we can express this idea in the following corollary to <a knowl="./knowl/unique-partition.html" knowl-id="xref-unique-partition" alt="Theorem 6.1.6 " title="Theorem 6.1.6 ">Theorem 6.1.6</a>.</p>
+<article class="theorem-like" id="corollary-2"><h6 class="heading">
 <span class="type">Corollary</span><span class="codenumber">6.1.7</span>
-</h5>
-<p id="p-1549">Every partition of a set \(S\) into cycles determins a unique permutation of \(S\text{.}\)</p></article><article class="example-like" id="activity-276"><h5 class="heading">
+</h6>
+<p id="p-1564">Every partition of a set \(S\) into cycles determins a unique permutation of \(S\text{.}\)</p></article><article class="example-like" id="activity-276"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">276</span>
-</h5>
-<p id="p-1550">Prove <a knowl="./knowl/unique-partition.html" knowl-id="xref-unique-partition" alt="Theorem 6.1.6 " title="Theorem 6.1.6 ">Theorem 6.1.6</a>.</p></article><p id="p-1552">In <a knowl="./knowl/d4-cycles.html" knowl-id="xref-d4-cycles" alt="Problem 273 " title="Problem 273 ">Problems 273</a> and <a knowl="./knowl/permutation-cycles.html" knowl-id="xref-permutation-cycles" alt="Problem 274 " title="Problem 274 ">Problem 274</a> you found the cycle decomposition of typical elements of the group \(D_4\) and of the permutation</p>
+</h6>
+<p id="p-1565">Prove <a knowl="./knowl/unique-partition.html" knowl-id="xref-unique-partition" alt="Theorem 6.1.6 " title="Theorem 6.1.6 ">Theorem 6.1.6</a>.</p></article><p id="p-1567">In <a knowl="./knowl/d4-cycles.html" knowl-id="xref-d4-cycles" alt="Problem 273 " title="Problem 273 ">Problems 273</a> and <a knowl="./knowl/permutation-cycles.html" knowl-id="xref-permutation-cycles" alt="Problem 274 " title="Problem 274 ">Problem 274</a> you found the cycle decomposition of typical elements of the group \(D_4\) and of the permutation</p>
 \begin{equation*}
 \begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\amp 6\amp 7\amp 8\amp 9\cr
 3\amp 4\amp 6\amp 2\amp 9\amp 7\amp 1\amp 5\amp 8
 \end{pmatrix}
 \end{equation*}
-<p id="p-1553">The group of all rotations of the square is simply the set of the four powers of the cycle \(\rho = (1\ 2\ 3\ 4)\text{.}\)  for this reason it is called a <em class="terminology">cyclic group</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-21" id="fn-21"><span class="footnote"><sup> 3 </sup></span></a></span><span id="hk-fn-21" style="display: none;" class="tex2jax_ignore"><span class="footnote">The phrace cyclic group applies in a more general (but similar) situation.  Namely the set of all powers of any member of a group is called a cyclic group.</span></span> and is often denoted by \(C_4\text{.}\)  Similarly, the rotation group of an \(n\)-gon is usually denoted \(C_n\text{.}\)</p>
-<article class="example-like interesting" id="activity-277"><h5 class="heading">
+<p id="p-1568">The group of all rotations of the square is simply the set of the four powers of the cycle \(\rho = (1\ 2\ 3\ 4)\text{.}\)  for this reason it is called a <b class="terminology">cyclic group</b><a knowl="" class="id-ref" refid="hk-fn-21" id="fn-21"><span class="footnote"><sup> 3 </sup></span></a><span id="hk-fn-21" class="hidden-content tex2jax_ignore"><span class="footnote">The phrace cyclic group applies in a more general (but similar) situation.  Namely the set of all powers of any member of a group is called a cyclic group.</span></span> and is often denoted by \(C_4\text{.}\)  Similarly, the rotation group of an \(n\)-gon is usually denoted \(C_n\text{.}\)</p>
+<article class="example-like interesting" id="activity-277"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">277</span>
-</h5>
-<p id="p-1554">Write a recurrence for the number \(c(k,n)\) for the number of permutations of \([k]\) that have exactly \(n\) cycles, including 1-cycles. Use it to write a table of \(c(k,n)\) for \(k\) between 1 and 7 inclusive. Can you find a relationship between \(c(k,n)\) and any of the other families of special numbers such as binomial coefficients, Stirling numbers, Lah numbers, etc. we have studied? If you find such a relationship, prove you are right.</p>
-<div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-235" id="hint-235"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-235" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1555">The element \(k\) is either in a cycle by itself or it isn't.</p></span></span>
-</div></article><article class="example-like interesting-forward-essential" id="activity-278"><h5 class="heading">
+</h6>
+<p id="p-1569">Write a recurrence for the number \(c(k,n)\) for the number of permutations of \([k]\) that have exactly \(n\) cycles, including 1-cycles. Use it to write a table of \(c(k,n)\) for \(k\) between 1 and 7 inclusive. Can you find a relationship between \(c(k,n)\) and any of the other families of special numbers such as binomial coefficients, Stirling numbers, Lah numbers, etc. we have studied? If you find such a relationship, prove you are right.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-hint-235" id="hint-235"><span class="solution"><span class="type">Hint</span></span></a><span id="hk-hint-235" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1570">The element \(k\) is either in a cycle by itself or it isn't.</p></span></span>
+</div></article><article class="example-like interesting-forward-essential" id="activity-278"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">278</span>
-</h5>
-<p id="p-1559">(Relevant to <a href="expogenfun.html" alt="Appendix C Exponential Generating Functions" title="Appendix C Exponential Generating Functions">Appendix C</a>.) A permutation \(\sigma\) is called an <em class="terminology">involution</em> if \(\sigma^2=\iota\text{.}\) When you write an involution as a product of disjoint cycles, what is special about the cycles?</p></article></section></section></div></main>
+</h6>
+<p id="p-1574">(Relevant to <a href="expogenfun.html" alt="Appendix C Exponential Generating Functions" title="Appendix C Exponential Generating Functions">Appendix C</a>.) A permutation \(\sigma\) is called an <b class="terminology">involution</b> if \(\sigma^2=\iota\text{.}\) When you write an involution as a product of disjoint cycles, what is special about the cycles?</p></article></section></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:04-06:00    *-->
+<!--*    on 2017-12-13T14:15:19-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,10 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>We prove our result by induction on \(m\text{.}\)  If \(m=1\text{,}\) then either \(n = 1\) and we can choose \(q = 1\) and \(r = 0\text{,}\) or \(n \gt 1\) and we can choose \(q = 0\) and \(r = 1\text{.}\)  Furthermore, if \(m = 1\) and \(n = 1\text{,}\) then \(r\) must equal zero (to be less than 1), and so \(q\) must equal 1.  In \(m=1\) and \(n \gt 1\text{,}\) then we must choose \(q = 0\) (because otherwise \(nq+r\) would have to be bigger than \(m\)) and therefore must choose \(r = m\text{.}\)  Therefore Euclid's theorem is true when \(m = 1\text{.}\)</p>
-<p>Now assume that \(m \gt 1\) and that for any positive integer \(m' \lt m\text{,}\) there are unique nonnegative integers \(q'\) and \(r'\) such that \(m' = q'n+r'\text{,}\) with \(0 \le r' \lt n\text{.}\)  If \(m \lt n\text{,}\) then we can let \(q = 0\) and \(r = m\text{,}\) and we have our \(q\) and \(r\text{.}\)  If \(m = n\text{,}\) we may choose \(q = 1\) and \(r = 0\) and we have our \(q\) and \(r\) again.  Therefore we may assume that \(m \gt n\text{.}\) In this case, \(m-n\) is a positive integer, and so since \(m-n \lt n\text{,}\) we have that, for unique nonnegative integers \(q'\) and \(r'\text{,}\)</p>
-\begin{equation*}
-m-n = q'n+r',
-\end{equation*}
-<p>with \(0 \le r \lt n\text{.}\)  But then adding \(n\) to both sides of the equation gives us \(m = (q'+1)n + r'\text{,}\) with \(0 \le r' \lt n\text{.}\)  Therefore if we take \(q = q'+1\) and \(r = r'\) we have that \(m = qn+r\text{,}\) with \(0 \le r \lt n\text{.}\)  On the other hand, \(q'\) and \(r'\) are unique by our inductive hypothesis.  Thus if \(m = qn + r\text{,}\) subtracting \(n\) from both sides of the equation gives us \(m-n = (q-1)n+r\text{.}\) This tells us that \(q\) <!--Style me with CSS--><em>must</em> equal \(q'+1\) and \(r\) <!--Style me with CSS--><em>must</em> equal \(r'\text{.}\)  Therefore by the strong principle of mathematical induction, Eulcid's Theorem holds for all positive integers \(m\text{.}\)</p></span></body>
+<body><span class="solution"><p>For a noninductive proof, note that all factors of \(n\) are at least 2. If \(n\) is a power of two, then the number of times \(2\) is a factor of \(n\) is exactly \(\log_2 n\text{.}\) But if \(n\) is not a power of 2, we still have that \(2^{\log_2 n}=n\text{,}\) so the product of \(\lceil\log_2 n\rceil\) numbers including some greater than 2 must be greater than \(n\text{.}\) Therefore, the number of prime factors of \(n\) is no more than \(\log_2 n\text{.}\) Thus for all \(n\ge2\text{,}\)the number of prime factors of \(n\) must be less than or equal to \(\log_2 n\text{.}\)</p></span></body>
 </html>

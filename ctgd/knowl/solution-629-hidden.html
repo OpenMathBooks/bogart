@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:27:07-06:00    *-->
+<!--*    on 2017-12-13T14:15:23-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,5 +11,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>\(\binom{n}{i}a_ib_j\text{.}\) You could also write the first answer as \(\binom{n}{i}a_ib_{n-i}\) or in some other form.  This shows that the coefficient of \(\frac{x^n}{n!}\) in the EGF for painting poles with five colors is the coefficient of  \(\frac{x^n}{n!}\) in the product of the EGF for painting poles with two colors and the EGF for painting poles with three colors.</p></span></body>
+<body><span class="solution"><p></p>
+\begin{equation*}
+\sum_{i,j:\ i+j=n} n!\frac{a_i}{i!}\frac{b_j}{j!},
+\end{equation*}
+<p>which can be better written as</p>
+\begin{equation*}
+\sum_{i=0}^n\frac{n!}{i!(n-i)!} a_i
+b_{n-i}=\sum_{i=0}^n\binom{n}{i} a_i b_{n-i}.
+\end{equation*}
+</span></body>
 </html>

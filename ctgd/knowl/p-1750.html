@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:54-06:00    *-->
+<!--*    on 2017-12-13T14:15:00-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,12 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Recall that we said that a group of permutations acts on a set if, for each member \(\sigma\) of \(G\) there is a bijection \(\overline{\sigma}\) of \(S\) such that</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Based on the previous problem, we expect that</p>
 \begin{equation*}
-\overline{\sigma\circ\varphi} = \overline{\sigma}\circ\overline{\varphi}
+E_{\widehat{P}}(S_1\times S_2\times \cdots\times S_k) = \prod_{i=1}^k E_{P_i}(S_i)\text{.}
 \end{equation*}
-<p>for every member \(\sigma\) and \(\varphi\) of \(G\text{.}\) Since \(\overline{\sigma}\) is a bijection of \(S\) to itself, it is in fact a permutation of \(S\text{.}\) Thus \(\overline{\sigma}\) has a cycle structure (that is, it is a product of disjoint cycles) as a permutation of \(S\) (in addition to whatever its cycle structure is in the original permutation group \(G\)).</p>
+<p>To prove it, we represent a \(k\)-tuple as the ordered pair</p>
+\begin{equation*}
+(x_1,(x_2,x_3,\dots,x_k))
+\end{equation*}
+<p>and apply induction and <a knowl="./knowl/ProdPrincPictureEnumerators.html" knowl-id="xref-ProdPrincPictureEnumerators" alt="Problem 312 " title="Problem 312 ">Problem 312</a>. For the special case, \(E_{\widehat{P}}(S^k) = (E_P(S))^k\text{.}\)</p>
 <span class="incontext"><a href="sec_groups-polya.html#p-1750">in-context</a></span>
 </body>
 </html>

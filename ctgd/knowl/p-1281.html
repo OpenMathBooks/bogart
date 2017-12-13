@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:36-06:00    *-->
+<!--*    on 2017-12-13T14:14:41-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,19 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>\(360=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\) is the equation we need to solve for \(m\text{,}\) the monthly payment. We need to chose some base for the logarithm so we can write its inverse function; suppose we use logs to the base 10. Then</p>
-\begin{align*}
-360\log (1+\frac{.01p}{12})  =\amp  \log
-1200m-\log (1200m-Ap)\\
-10^{360\log (1+\frac{.01p}{12})} =\amp 10^{\log
-1200m/(1200m-Ap)}\\
-(1+\frac{.01p}{12})^{360}  =\amp 1200m/(1200m-Ap)\\
-\left(1200m-Ap\right)(1+\frac{.01p}{12})^{360} =\amp 1200m\\
-1200m\left((1+\frac{.01p}{12})^{360}-1\right) =\amp  Ap(1+\frac{.01p}{12})^{360}\\
-m  =\amp  \frac{Ap(1+\frac{.01p}{12})^{360}}{1200\left((1+\frac{.01p}{12})^{360}-1\right)}
-\end{align*}
-<p>is our monthly payment.</p>
-<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1281">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Taylor's theorem from calculus tells us that the extended binomial theorem</p>
+\begin{equation*}
+(1+x)^r = \sum_{i=0}^\infty \binom{r}{i}x^i
+\end{equation*}
+<p>holds for any number real number \(r\text{,}\) where \(\binom{r}{i}\) is defined to be</p>
+\begin{equation*}
+\frac{r^{\underline{i}}}{i!} = \frac{r(r-1)\cdots(r-i+1)}{i!}  \text{.}
+\end{equation*}
+<p>Use this and your solution for \(y\) (note that of the two possible values for \(y\) that you get from the quadratic formula, only one gives an actual power series) to get a formula for the Catalan numbers.</p>
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1281">in-context</a></span>
 </body>
 </html>

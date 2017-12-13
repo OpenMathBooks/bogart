@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:38-06:00    *-->
+<!--*    on 2017-12-13T14:14:43-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p><a knowl="./knowl/hatcheck.html" knowl-id="xref-hatcheck" alt="Problem 231 " title="Problem 231 ">Problem 231</a> is “classically” called the <em class="terminology">hatcheck problem</em>; the name comes from substituting hats for backpacks. If is also sometimes called the <em class="terminology">derangement problem</em>. A <em class="terminology">derangement</em> of an \(n\)-element set is a permutation of that set (thought of as a bijection) that maps no element of the set to itself. One can think of a way of handing back the backpacks as a permutation \(f\) of the students: \(f(i)\) is the owner of the backpack that student \(i\) receives. Then a derangement is a way to pass back the backpacks so that no student gets his or her own.</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+\begin{equation*}
+\left|\bigcup_{i=1}^n A_i\right| = \sum_{S:S\subseteq [n],
+S\not=\emptyset}(-1)^{|S|-1}|\bigcap_{i: i\in S}A_i|
+\end{equation*}
+<p>I chose this way of writing the formula partly because it is efficient with symbols; for example, it uses only one sum sign. But more importantly I chose it because it captures what I would want to say in words: ``You sum, over all ways of choosing an intersection of the sets \(A_i\text{,}\) the size of the intersection times a sign factor that is -1 if you are intersecting an even number of sets and 1 if you are intersecting an odd number." If I were writing my solution out in words, I would probably assume that nobody would think about the possibility of an intersection of the empty set of the \(A_i\)s, but I had to put the \(S\not=\emptyset\) in my formula because otherwise the formula would have had us consider the possibility that \(S\) was empty.</p>
 <span class="incontext"><a href="sec_inclexcl-sizeunion.html#p-1334">in-context</a></span>
 </body>
 </html>

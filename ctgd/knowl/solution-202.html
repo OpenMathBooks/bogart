@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:16-06:00    *-->
+<!--*    on 2017-12-13T14:14:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h5 class="heading">
+<span class="solution"><h6 class="heading">
 <span class="type">Solution</span><span class="codenumber">2.4.9.1</span>
-</h5>
+</h6>
 <p>The vertices of degree 1 are the vertices that do not appear in the Gray code for the tree. So we first choose four vertices out of \(n\) in \(\binom{n}{4}\) ways to be our vertices of degree 1, and then we use the remaining \(n-4\) vertices to fill in our list of \(n-2\) vertices, using each of the \(n-4\) at least once. Thus we either use one of them 3 times and the rest once, or two of them twice and the rest once. There are \(n-4\) ways to choose the one we use three times and \(\binom{n-2}{3}\binom{n-5}{1}\binom{n-6}{1}\cdots\binom{1}{1}=\frac{(n-2)!}{3!}\) ways to label the \(n-2\) places with the chosen vertices. There are \(\binom{n-4}{2}\) ways to choose the vertices we would use twice, and \(\binom{n-2}{2}\binom{n-4}{2}\binom{n-6}{1}\binom{n-7}{1}\cdots \binom{1}{1}=\frac{(n-2)!}{2!2!}\) ways to assign the chosen vertices to the \(n-2\) places in the Prüfer Code. Thus we have</p>
 \begin{align*}
 \amp \binom{n}{4}\left((n-4)\frac{(n-2)!}{3!} +\frac{(n-4)(n-3)}{2}\frac{(n-2)!}{4}\right)\\

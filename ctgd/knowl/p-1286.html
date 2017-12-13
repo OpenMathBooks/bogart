@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:36-06:00    *-->
+<!--*    on 2017-12-13T14:14:41-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,16 +12,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The number of triangulations of the original polygon that we get from case 1 is \(2d_{n-1}\text{.}\) The number of triangulations we get from the second case is \(\sum_{i=3}^{n-2} d_id_{n-i+1}\text{.}\) Thus the total number of triangulations is \(2d_{n-1}+d_{n-2}d_3 + d_{n-3}d_4 +\cdots + d_3d_{n-2}\text{.}\) If we take \(d_2=1\text{,}\) then we may write \(d_n = d_{n-1}d_2+d_{n-2}d_3 +\cdots+d_3d_{n-2} + d_2d_{n-1}=\sum\limits_{i=2}^{n-1} d_id_{n-i+1}\text{.}\) This is very similar to the recurrence in <a knowl="./knowl/CatalanRecurrence.html" knowl-id="xref-CatalanRecurrence" alt="Problem 224 " title="Problem 224 ">Problem 224</a> for the Catalan numbers. We could apply the generating function method we used with the Catalan numbers to find a formula for \(d_n\text{.}\) We could also experiment with the first few Catalan numbers and the first few “triangulation” numbers to see if they are related. We have \(C_0=1\text{,}\) \(C_1=1\text{,}\) \(C_2=2\text{,}\) \(C_3=C_0C_2+C_1C_1 +C_2C_0=5\text{,}\) and \(C_4=C_0C_3+C_1C_2+C_2C_1+C_3C_0=14\text{.}\) We have that \(d_2=1\text{,}\) \(d_3=1\text{,}\) \(d_4=2\text{,}\) \(d_5=d_4d_2+d_3d_3+d_2d_4=5\text{,}\) and \(d_6=d_5d_2+d_4d_3+d_3d_4+d_5d_2=14\text{.}\) This makes pretty convincing evidence that \(d_i= C_{i-2}\text{.}\) We have already done a base case (and more) for an inductive proof. So assume inductively that \(d_{i}=C_{i-2}\) for \(i\lt n\text{.}\) Then</p>
-\begin{align*}
-d_n =\amp \sum\limits_{i=2}^{n-1} d_id_{n-i+1}\\
-=\amp \sum\limits_{i=2}^{n-1} C_{i-2}C_{n-i+1-2}\\
-=\amp \sum\limits_{i=2}^{n-1} C_{i-2}C_{n-i-1}\\
-=\amp \sum\limits_{k=1}^{n-2} C_{k-1}C_{n-(k+1)-1}\\
-=\amp \sum\limits_{k=1}^{n-2} C_{k-1}C_{(n-2)-k}\\
-=\amp C_{n-2}
-\end{align*}
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p></p>
+<ol style="list-style-type: lower-alpha;">
+<li><p>In paying off a mortgage loan with initial amount \(A\text{,}\) annual interest rate \(p\)% on a monthly basis with a monthly payment of \(m\text{,}\) what recurrence describes the amount owed after \(n\) months of payments in terms of the amount owed after \(n-1\) months?  Some technical details: You make the first payment after one month.  The amount of interest included in your monthly payment is \(.01p/12\text{.}\)  This interest rate is applied to the amount you owed immediately after making your last monthly payment.</p></li>
+<li><p>Find a formula for the amount owed after \(n\) months.</p></li>
+<li><p>Find a formula for the number of months needed to bring the amount owed to zero.  Another technical point: If you were to make the standard monthly payment \(m\) in the last month, you might actually end up owing a negative amount of money.  Therefore it is ok if the result of your formula for the number of months needed gives a non-integer number of months.  The bank would just round up to the next integer and adjust your payment so your balance comes out to zero.</p></li>
+<li><p>What should the monthly payment be to pay off the loan over a period of 30 years?</p></li>
+</ol>
 <span class="incontext"><a href="sec_genfns-suppprobs.html#p-1286">in-context</a></span>
 </body>
 </html>

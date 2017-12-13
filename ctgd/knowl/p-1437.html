@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:42-06:00    *-->
+<!--*    on 2017-12-13T14:14:48-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Yes, \(\rho^3\) is the composition of \(\rho\) and \(\rho^2\text{,}\) and also of \(\rho^2\) and \(\rho\text{,}\) so it doesn't matter in which order we write them. \(\rho^2=\rho\circ\rho\text{.}\)</p>
-<span class="incontext"><a href="sec_groups-permgroups.html#p-1437">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We use inclusion and exclusion, with \(A\) being the set of all circular arrangements of the children (where rotation of an arrangement gives the same arrangement, but flipping gives a different arrangement). The set \(A_i\) is the set of arrangements such that child \(i\) has the same child to the immediate right both times they join hands. Given a set \(S\subseteq [n]\text{,}\) we can think of arranging units consisting of individual children and strings of children holding hands in a circle. We have \(n-s\) of these units because \(s\) children are to the immediate right of someone in units of size more than one (and everyone else is leftmost in a unit or not in a string of length 2 or more). Each string of children can be arranged in only one way, because our set specifies who has to have the same child on the right. Thus \(\left|\bigcap_{i\colon i\in S} A_i\right| = (n-s-1)!\text{.}\) This gives us</p>
+\begin{align*}
+\left|\overline{\bigcup_{i=1}^n A_i}\right| &amp;=\sum_{S:S\subseteq [n]}
+(-1)^{|S|}(n-|S|-1)!\\
+&amp;=
+\sum_{s=0}^n (-1)^s \binom{n}{s} (n-s-1)!\\
+&amp;= \sum_{s=0}^n (-1)^s \frac{n!}{s!(n-s)}
+\end{align*}
+<p>ways for the children to join hands the second time so that none of them has the same child to the right.</p>
+<span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1437">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:11-06:00    *-->
+<!--*    on 2017-12-13T14:14:18-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,31 +12,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="example-like interesting"><h5 class="heading">
+<article class="example-like interesting"><h6 class="heading">
 <span class="type">Problem</span><span class="codenumber">86</span>
-</h5>
-<article class="introduction" id="introduction-27"><p id="p-505">Suppose we have two numbers \(n\) and \(m\text{.}\) We consider all possible ways to color the edges of the complete graph \(K_m\) with two colors, say red and blue. For each coloring, we look at each \(n\)-element subset \(N\) of the vertex set \(M\) of \(K_m\text{.}\) Then \(N\) together with the edges of of \(K_m\) connecting vertices in \(N\) forms a complete graph on \(n\) vertices. This graph, which we denote by \(K_N\text{,}\) has its edges colored by the original coloring of the edges of \(K_m\text{.}\)</p></article><article class="exercise-like" id="task-80"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-506">Why is it that if there is no subset \(N\subseteq M\) so that all the edges of \(K_N\) are colored the same color, then \(R(n,n)&gt;m\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-75" id="hint-75"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-75" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-507">What is the definition of \(R(n, n)\text{?}\)</p></span></span></article><article class="exercise-like" id="task-81"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-509">To apply the probabilistic method, we are going to compute the average, over all colorings of \(K_m\text{,}\) of the number of sets \(N\subseteq M\) with \(|N|=n\) such that \(K_N\) <!--Style me with CSS--><em>does</em> have all its edges the same color. Explain why it is that if the average is less than 1, then for some coloring there is no set \(N\) such that \(K_N\) has all its edges colored the same color.  Why does this mean that \(R(n,n)&gt;m\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-76" id="hint-76"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-76" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-510">If you average a bunch of numbers and each one is bigger than one, what can you say about the average?</p></span></span></article><article class="exercise-like" id="task-82"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-512">We call a \(K_N\) <em class="terminology">monochromatic</em> for a coloring \(c\) of \(K_m\) if the color \(c(e)\) assigned to edge \(e\) is the same for every edge \(e\) of \(K_N\text{.}\)  Let us define \({ mono}(c,N)\) to be 1 if \(N\) is monochromatic for \(c\) and to be 0 otherwise.  Find a formula for the average number of monochromatic \(K_N\)s over all colorings of \(K_m\) that involves a double sum first over all edge colorings \(c\) of \(K_m\) and then over all \(n\)-element subsets \(N\subseteq M\) of \({
+</h6>
+<div class="introduction"><p>Suppose we have two numbers \(n\) and \(m\text{.}\) We consider all possible ways to color the edges of the complete graph \(K_m\) with two colors, say red and blue. For each coloring, we look at each \(n\)-element subset \(N\) of the vertex set \(M\) of \(K_m\text{.}\) Then \(N\) together with the edges of of \(K_m\) connecting vertices in \(N\) forms a complete graph on \(n\) vertices. This graph, which we denote by \(K_N\text{,}\) has its edges colored by the original coloring of the edges of \(K_m\text{.}\)</p></div>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>Why is it that if there is no subset \(N\subseteq M\) so that all the edges of \(K_N\) are colored the same color, then \(R(n,n)&gt;m\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-75-hidden.html" knowl-id="hidden-hint-75" alt="Hint 86.a.1 " title="Hint 86.a.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>To apply the probabilistic method, we are going to compute the average, over all colorings of \(K_m\text{,}\) of the number of sets \(N\subseteq M\) with \(|N|=n\) such that \(K_N\) <em class="emphasis">does</em> have all its edges the same color. Explain why it is that if the average is less than 1, then for some coloring there is no set \(N\) such that \(K_N\) has all its edges colored the same color.  Why does this mean that \(R(n,n)&gt;m\text{?}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-76-hidden.html" knowl-id="hidden-hint-76" alt="Hint 86.b.1 " title="Hint 86.b.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>We call a \(K_N\) <b class="terminology">monochromatic</b> for a coloring \(c\) of \(K_m\) if the color \(c(e)\) assigned to edge \(e\) is the same for every edge \(e\) of \(K_N\text{.}\)  Let us define \({ mono}(c,N)\) to be 1 if \(N\) is monochromatic for \(c\) and to be 0 otherwise.  Find a formula for the average number of monochromatic \(K_N\)s over all colorings of \(K_m\) that involves a double sum first over all edge colorings \(c\) of \(K_m\) and then over all \(n\)-element subsets \(N\subseteq M\) of \({
 mono}(c,N)\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-77" id="hint-77"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-77" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-513">Note that there are \(2^{\binom{n}{2}}\) graphs on a set of \(n\) vertices.</p></span></span></article><article class="exercise-like" id="task-83"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-515">Show that your formula for the average reduces to \(2\binom{m}{n}\cdot2^{-\binom{n}{2}}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-78" id="hint-78"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-78" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-516">A notation for the sum over all colorings \(c\) of \(K_m\) is</p>
-\begin{equation*}
-\sum_{c:c\mbox{~is a coloring of~} K_m},
-\end{equation*}
-<p>and a notation for the sum over all subsets \(N\) of \(M\) that have size \(n\) is</p>
-\begin{equation*}
-\sum_{N:N\subseteq M,~|N|=n}
-\end{equation*}
-</span></span></article><article class="exercise-like" id="task-84"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-518">Explain why \(R(n,n)&gt;m\) if \(\binom{m}{n}\le 2^{\binom{n}{2} -1}\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-79" id="hint-79"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-79" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-519">If you interchange the order of summation so that you sum over subsets first and colorings second, you can take advantage of the fact that for a fixed subset \(N\) , you can count count the number of colorings in which it is monochromatic.</p></span></span></article><article class="exercise-like difficult" id="task-85"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-521">Explain why \(R(n,n)&gt;\root n \of {n!2^{\binom{n}{2}-1}}\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-80" id="hint-80"><span class="solution"><span class="type">Hint</span></span></a></span><span id="hk-hint-80" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-522">You have an inequality involving m and n that tells you that \(R(n, n) &gt; m\text{.}\) Suppose you could work with that inequality in order to show that if the inequality holds, then \(m\) is bigger than something. What could you conclude about \(R(n, n)\text{?}\)</p></span></span></article><article class="exercise-like" id="task-86"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-524">By using Stirling's formula, show that if \(n\) is large enough, then \(R(n,n) &gt; \sqrt{2^n} = \sqrt{2}^{\rangle n}\)</p></article></article><span class="incontext"><a href="sec_induction-examples.html#activity-86">in-context</a></span>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-77-hidden.html" knowl-id="hidden-hint-77" alt="Hint 86.c.1 " title="Hint 86.c.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p>Show that your formula for the average reduces to \(2\binom{m}{n}\cdot2^{-\binom{n}{2}}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-78-hidden.html" knowl-id="hidden-hint-78" alt="Hint 86.d.1 " title="Hint 86.d.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p>Explain why \(R(n,n)&gt;m\) if \(\binom{m}{n}\le 2^{\binom{n}{2} -1}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-79-hidden.html" knowl-id="hidden-hint-79" alt="Hint 86.e.1 " title="Hint 86.e.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like difficult"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p>Explain why \(R(n,n)&gt;\root n \of {n!2^{\binom{n}{2}-1}}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-80-hidden.html" knowl-id="hidden-hint-80" alt="Hint 86.f.1 " title="Hint 86.f.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p>By using Stirling's formula, show that if \(n\) is large enough, then \(R(n,n) &gt; \sqrt{2^n} = \sqrt{2}^{n}\text{.}\)  (Here large enough means large enough for Stiirling's formula to be reasonable accurate.)</p></article></article><span class="incontext"><a href="sec_induction-examples.html#activity-86">in-context</a></span>
 </body>
 </html>
