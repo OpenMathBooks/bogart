@@ -2,8 +2,9 @@
 
 <!-- This file is part of the book                 -->
 <!--                                               -->
-<!--   Discrete Mathematics: an Open Introduction  -->
-<!--                                               -->
+<!--   Combinatorics through Guided Discovery      -->
+<!-- Adapted from the corresponding file for       -->
+<!-- Discrete Mathematics: An Open Introduction    -->
 <!-- Copyright (C) 2015-2016 Oscar Levin           -->
 <!-- See the file COPYING for copying conditions.  -->
 
@@ -15,7 +16,7 @@
 
 
 
-<!-- Assumes current file is in discrete-text/xsl                         -->
+<!-- Assumes current file is in ibl-combinatorics/xsl                     -->
 <!-- These are defined in matbook-common.xsl, so these are overrides      -->
 <!-- Explanations are verbatim, from 2015/05/19                           -->
 

@@ -3,8 +3,9 @@
 
 <!-- This file is part of the book                 -->
 <!--                                               -->
-<!--   Discrete Mathematics: an Open Introduction  -->
-<!--                                               -->
+<!--   Combinatorics through Guided Discovery      -->
+<!-- Adapted from the corresponding file for       -->
+<!-- Discrete Mathematics: An Open Introduction    -->
 <!-- Copyright (C) 2015-2016 Oscar Levin           -->
 <!-- See the file COPYING for copying conditions.  -->
 
@@ -15,8 +16,8 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<!-- Assumes current file is in discrete-text/xsl and that the mathbook repository is adjacent -->
-<xsl:import href="../../../mathbook/xsl/mathbook-html.xsl" />
+<!-- Assumes current file is in ibl-combinatorics/xsl and that the mathbook repository is adjacent -->
+<xsl:import href="../../mathbook/xsl/mathbook-html.xsl" />
 <!-- Assumes next file can be found in discrete-text/xsl -->
 <xsl:import href="custom-common.xsl" />
 

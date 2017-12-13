@@ -42,7 +42,7 @@
 <!-- Default is empty and thus ineffective         -->
 <!-- Otherwise, happens early in preamble template -->
 
-<xsl:param name="latex.geometry" select="'papersize={8.5in,11in}, hmargin={.75in, 1.5in}, bindingoffset=0.25in, height=9in, top=1in, twoside, ignoreheadfoot'"/>
+<xsl:param name="latex.geometry" select="'papersize={7in,10in},  width=5in, inner=.75in, height=8.25in, top=0.75in, twoside, ignoreheadfoot'"/>
 
 <!--  -->
 <!-- PDF Watermarking                    -->
@@ -433,6 +433,16 @@
     <xsl:text>&#xa;</xsl:text>
 </xsl:template>
 
+<!-- Put hint markers on statements that have hints: -->
+<!-- This works, but does not look great. -->
+<!-- A project may have a hint, with switch control -->
+<xsl:template match="hint">
+    <xsl:if test="$project.text.hint = 'yes'">
+        <xsl:apply-templates select="." mode="solution-heading" />
+        <xsl:apply-templates />
+    </xsl:if>
+    <xsl:text>~{\tiny (h)}</xsl:text>
+</xsl:template>
 
 
 </xsl:stylesheet>

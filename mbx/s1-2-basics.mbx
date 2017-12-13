@@ -756,7 +756,7 @@ many ways can you pair up the next person who isn't already paired up?
       </statement>
       <hint>
         <p>
-          Try applying the product principle in the case n = 2 and n = 3. How might you apply it in general?
+          Try applying the product principle in the case <m>n = 2</m> and <m>n = 3</m>. How might you apply it in general?
         </p>
       </hint>
       <solution>
@@ -932,10 +932,6 @@ many ways can you pair up the next person who isn't already paired up?
       the function to find a nice placement of the vertices rather than
       putting them in a row.
     </p>
-
-<todo>
-The figure needs to have part (e) added to it.
-</todo>
 
     <p>
       Notice that there is a simple test for whether a digraph whose vertices
@@ -2080,7 +2076,7 @@ The figure needs to have part (e) added to it.
           <cell><m>bac</m></cell>
           <cell><m>bca</m></cell>
           <cell><m>cab</m></cell>
-          <cell><m>cab</m></cell>
+          <cell><m>cba</m></cell>
         </row>
         <row>
           <cell><m>abd</m></cell>
