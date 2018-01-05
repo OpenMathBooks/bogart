@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}: {{ site.description }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+
+    <section class="hero is-dark is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1">
+            {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+          </h1>
+          {% if page.subtitle %}
+            <h2 class="subtitle is-3">
+              {{ page.subtitle }}
+            </h2>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+    {% include nav.html %}
+
+    <!-- <section class="section">
+      <div class="container">
+        <div class="content"> -->
+        {{ content }}
+      <!-- </div>
+      </div>
+    </section> -->
+
+    <footer class="footer">
+      <div class="container has-text-right">
+          <p class="is-large">{% if page.footer %}{{ page.footer }}{% else %}{{ site.footer }}{% endif %}</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,3 +1,9 @@
-theme: jekyll-theme-midnight
-title: "Combinatorics Through Guided Discovery"
-description: "Kenneth P. Bogart"
+# Site wide config:
+
+title: "My Test Site"
+description: "a description"
+
+footer: "&#169; Copyright 2017 Oscar Levin"
+
+sass:
+  style: compressed
