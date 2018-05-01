@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:23-07:00    *-->
+<!--*    on 2018-05-01T14:11:52-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,14 +14,18 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>Choose \(n\) books from the \(k\) books in \(\binom{k}{n}\) ways, and assign them to the \(n\) places shelves in \(n!\) ways, giving us \(k!/(k-n)!\) ways to put a book on each shelf. Now leaving these books at the far left of each shelf, place the remaining books in</p>
+<div class="displaymath">
 \begin{equation*}
 \prod_{i=1}^{k-n}
 (n+i-1)=\frac{(n+(k-n)-1)!}{(n-1)!}=\frac{(k-1)!}{(n-1)!}
 \end{equation*}
+</div>
 <p>ways. Thus we have</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{k!(k-1)!}{(k-n)!(n-1)!}=k!\binom{k-1}{n-1}
 \end{equation*}
+</div>
 <p>ways to place the books. Of course the right hand side of that equation cries out for a combinatorial explanation. Here it is. Imagine lining up the \(k\) books in a row. Then there are \(k-1\) places in between them. Choose \(n-1\) of these places, and slide a piece of paper in there as a divider. Now put the books before the first divider on shelf one, and the books after divider \(i\) on shelf \(i+1\text{.}\) This gives an arrangement of the books on the shelves so that every shelf has a book!</p>
 <span class="incontext"><a href="s3-1-distrib-idea.html#p-752">in-context</a></span>
 </body>

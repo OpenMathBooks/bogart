@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:15:03-07:00    *-->
+<!--*    on 2018-05-01T14:12:35-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,18 +12,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><span class="solution"><p>We are asking for a generating function for the orbits of a colored 12-gon under the action of \(D_{12}\text{.}\) To apply the Pólya-Redfield theorem we need the cycle index for \(D_{12}\text{.}\) If \(\rho\) is a 30 degree rotation, then \(\rho\text{,}\) \(\rho^5\text{,}\) \(\rho^7\) and \(\rho^{11}\) are 12-cycles. The elements \(\rho^2\) and \(\rho^{10}\) are products of two six-cycles. The elements \(\rho^3\) and \(\rho^9\) are products of three four-cycles. The elements \(\rho^4\) and \(\rho^8\) are products of four three-cycles. The element \(\rho^6\) is a product of six two-cycles. The element \(\iota=\rho^0\) is a product of 12 one-cycles. There are six flips around axes through opposite vertices; each is a product of five two-cycles and two one-cycles. There are six flips around axes perpendicular to two opposite sides; each is a product of six two-cycles. Summarizing this in the cycle index, we write</p>
+<div class="displaymath">
 \begin{align*}
 Z(G,S)  =\amp \frac{1}{24}\left( z_1^{12}+z_2^6+ 2z_3^4+ 2z_4^3 + 2z_6^2 +4z_{12} +
 6z_2^5z_1^2 + 6z_2^6\right)\\
 =\amp \frac{1}{24}\left( z_1^{12}+7z_2^6+ 2z_3^4+ 2z_4^3 +
 2z_6^2 +4z_{12} + 6z_2^5z_1^2\right).
 \end{align*}
+</div>
 <p>When we substitute \(B^i+G^i+R^i+Y^i\) for \(z_i\) and expand, we would get get \(12^4\) terms, one for each possible term \(B^iG^jR^kY^h\text{.}\) Thus it does not make sense to expand the polynomial. The unexpanded form is</p>
 <p>\(\frac{1}{24}\Big((B+G+R+Y)^{12}+7(B^2+G^2+R^2+Y^2)^6+
 2(B^3+G^3+R^3+Y^3)^4+\\
 2(B^4+G^4+R^4+Y^4)^3 +  2(B^6+G^6+R^6+Y^6)^2
 +\\4(B^{12}+G^{12}+R^{12}+Y^{12}) +  6((B^2+G^2+R^2+Y^2)^5)(B+G+R+Y)^2\Big)\)</p>
 <p>We can compute the coefficient of \(B^3G^3R^2Y^4\) by computing the contribution of each term of the sum to the coefficient. We get</p>
+<div class="displaymath">
 \begin{align*}
 \frac{1}{24}\left(\binom{12}{3,3,2,4}+ 6\binom{5}{1,1,1,2}\binom{2}{1,1}\right) =\amp \frac{12!}{24\cdot3!3!2!4!}+\frac{6\cdot5!2!}{24\cdot2!}\\
 =\amp \frac{11!}{2\cdot3!3!2!4!}+5
@@ -31,5 +34,5 @@ Z(G,S)  =\amp \frac{1}{24}\left( z_1^{12}+z_2^6+ 2z_3^4+ 2z_4^3 + 2z_6^2 +4z_{12
 =\amp 11\cdot5\cdot3\cdot2\cdot7\cdot5+30\\
 =\amp 11,550+30=11,580
 \end{align*}
-</span></body>
+</div></span></body>
 </html>

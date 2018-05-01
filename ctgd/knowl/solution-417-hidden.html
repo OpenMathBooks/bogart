@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:48-07:00    *-->
+<!--*    on 2018-05-01T14:12:18-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><span class="solution"><p>We use inclusion and exclusion. Let \(A\) be the set of all ways to distribute the prizes. Let \(A_i\) be the set of distributions in which person \(i\) gets the prize he or she brought. We are interested in \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\text{.}\) We need to compute \(\left|\bigcap_{i\colon i\in S} A_i\right|\) for every subset \(S\) of \([n]\text{.}\) But \(\left|\bigcap_{i\colon i\in S} A_i\right|\) is the number of functions from the prizes to the people that assign the prize that person \(i\) brhought to person \(i\) for each \(i\) in the set \(S\text{.}\) Think in terms of distributing those prizes first. Then there are \(n-|S|\) other prizes that we may pass out to the \(n\) people as we please, so we may do that in \(n^{n-|S|}\) ways. Thus \(\left|\bigcap_{i\colon i\in S} A_i\right|=n^{n-|S|}\text{.}\) Applying the formula from <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a>, we get</p>
+<div class="displaymath">
 \begin{equation*}
 \left|\overline{\bigcup_{i=1}^n A_i}\right| =\sum_{S:S\subseteq [n]}(-1)^{|S|} n^{n-|S|} =
 \sum_{s=0}^n (-1)^{|S|}\binom{n}{s}n^{n-s}.
 \end{equation*}
-</span></body>
+</div></span></body>
 </html>

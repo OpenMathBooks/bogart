@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:41-07:00    *-->
+<!--*    on 2018-05-01T14:12:12-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,6 +13,7 @@
 </head>
 <body><span class="solution"><p>Let \(d_n\) be the number of ways to divide an \(n\)-gon into triangles by means of nonintersecting diagonals. Take an \(n\)-gon and label its vertices cyclically from 1 to \(n\text{.}\) Any triangulation must have a triangle containing the edge \(1n\) between vertex 1 and vertex \(n\text{.}\) The third vertex can be any number between 2 and \(n-1\text{.}\) We consider two cases. First, if the third vertex is 2 or \(n-1\text{,}\) then we have divided our polygon up into a triangle and an \((n-1)\)-gon, and any triangulation of that \((n-1)\)-gon joins with our original triangle to give us a triangulation of the \(n\)-gon. Second, if the third vertex of our original triangle is vertex \(i\) with \(3\le i\le n-2\) then we have divided our polygon into the polygon with the \(i\) edges \(12\text{,}\) \(23\text{,}\) …, \((i-1)i\text{,}\) \(i1\text{,}\) the polygon with \(n-i+1\) edges \(ni\text{,}\) \(i(i+1)\text{,}\) …, \((n-1)n\text{,}\) and the original triangle with edges \(n1\text{,}\) \(1i\text{,}\) \(in\text{.}\) Triangulations of the first two of these polygons join with the original triangle to give us a triangulation of the original polygon.</p>
 <p>The number of triangulations of the original polygon that we get from case 1 is \(2d_{n-1}\text{.}\) The number of triangulations we get from the second case is \(\sum_{i=3}^{n-2} d_id_{n-i+1}\text{.}\) Thus the total number of triangulations is \(2d_{n-1}+d_{n-2}d_3 + d_{n-3}d_4 +\cdots + d_3d_{n-2}\text{.}\) If we take \(d_2=1\text{,}\) then we may write \(d_n = d_{n-1}d_2+d_{n-2}d_3 +\cdots+d_3d_{n-2} + d_2d_{n-1}=\sum\limits_{i=2}^{n-1} d_id_{n-i+1}\text{.}\) This is very similar to the recurrence in <a knowl="./knowl/CatalanRecurrence.html" knowl-id="xref-CatalanRecurrence" alt="Problem 224 " title="Problem 224 ">Problem 224</a> for the Catalan numbers. We could apply the generating function method we used with the Catalan numbers to find a formula for \(d_n\text{.}\) We could also experiment with the first few Catalan numbers and the first few “triangulation” numbers to see if they are related. We have \(C_0=1\text{,}\) \(C_1=1\text{,}\) \(C_2=2\text{,}\) \(C_3=C_0C_2+C_1C_1 +C_2C_0=5\text{,}\) and \(C_4=C_0C_3+C_1C_2+C_2C_1+C_3C_0=14\text{.}\) We have that \(d_2=1\text{,}\) \(d_3=1\text{,}\) \(d_4=2\text{,}\) \(d_5=d_4d_2+d_3d_3+d_2d_4=5\text{,}\) and \(d_6=d_5d_2+d_4d_3+d_3d_4+d_5d_2=14\text{.}\) This makes pretty convincing evidence that \(d_i= C_{i-2}\text{.}\) We have already done a base case (and more) for an inductive proof. So assume inductively that \(d_{i}=C_{i-2}\) for \(i\lt n\text{.}\) Then</p>
+<div class="displaymath">
 \begin{align*}
 d_n =\amp \sum\limits_{i=2}^{n-1} d_id_{n-i+1}\\
 =\amp \sum\limits_{i=2}^{n-1} C_{i-2}C_{n-i+1-2}\\
@@ -21,5 +22,6 @@ d_n =\amp \sum\limits_{i=2}^{n-1} d_id_{n-i+1}\\
 =\amp \sum\limits_{k=1}^{n-2} C_{k-1}C_{(n-2)-k}\\
 =\amp C_{n-2}
 \end{align*}
+</div>
 <p>Thus by the principle of mathematical induction, \(d_n=C_{n-2}\) for all integers \(n\ge 2\text{.}\)</p></span></body>
 </html>

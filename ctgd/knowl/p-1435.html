@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:48-07:00    *-->
+<!--*    on 2018-05-01T14:12:18-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,12 +14,14 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>We use inclusion and exclusion. Let property \(A\) be the set of all arrangements of the books on the shelves. Let \(A_i\) be the set of arrangements in which shelf \(i\) gets more than \(m\) books. Then the number of arrangements of books in which the shelves determined by a subset \(S\) of \([n]\) get more than \(m\) books is \(\left|\bigcap_{i\colon i\in S} A_i\right| = k^{\underline{(m+1)|S|}}n^{\underline{k-(m+1)|S|}}\text{,}\) because in order to get an arrangement in \(\bigcup_{i\colon i\in S} A_i\) we may choose \((m+1)|S|\) books and arrange \(m+1\) of them on each of the shelves represented by the properties in \(S\text{,}\) after which we arrange the remainder of the books. Thus</p>
+<div class="displaymath">
 \begin{align*}
 \left|\overline{\bigcup_{i=1}^n A_i}\right| &amp;=\sum_{S:S\subseteq [n]} (-1)^{|S|}
 k^{\underline{(m+1)|S|}}n^{\underline{k-(m+1)|S|}}\\
 &amp;=\sum_{s=0}^n
 (-1)^s\binom{n}{s}k^{\underline{(m+1)s}}n^{\underline{k-(m+1)s}}
 \end{align*}
+</div>
 <p>is the number of ways to arrange the books so that no shelf gets more than \(m\text{.}\)</p>
 <span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1435">in-context</a></span>
 </body>

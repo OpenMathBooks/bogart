@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:41-07:00    *-->
+<!--*    on 2018-05-01T14:12:11-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,19 +11,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p></p>
-<ol style="list-style-type: lower-alpha;">
+<body><span class="solution"><ol class="lower-alpha">
 <li><p>\(a_n=(1+\frac{.01p}{12})a_{n-1}-m\text{.}\)</p></li>
 <li>
 <p>From <a knowl="./knowl/firstordlinconst.html" knowl-id="xref-firstordlinconst" alt="Problem 98 " title="Problem 98 ">Problem 98</a> or by applying generating functions we have</p>
+<div class="displaymath">
 \begin{align*}
 a_n  =\amp  A(1+\frac{.01p}{12})^n-m\frac{1-(1+\frac{.01p}{12})^n}{1-(1+\frac{.01p}{12})}\\
 =\amp  \left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}
 \end{align*}
+</div>
 </li>
 <li><p>\(\left(A-\frac{1200m}{p}\right)\left(1+\frac{.01p}{12}\right)^n+\frac{1200m}{p}=0\) gives us the equation \(\left(1+\frac{.01p}{12}\right)^n=\frac{1200m}{1200m-Ap}\text{.}\) Taking logarithms to any base we choose gives us \(n\log (1+\frac{.01p}{12})=\log 1200m-\log (1200m-Ap)\) and so \(n=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\text{.}\)</p></li>
 <li>
 <p>\(360=\frac{\log 1200m-\log (1200m-Ap)}{\log (1+\frac{.01p}{12})}\) is the equation we need to solve for \(m\text{,}\) the monthly payment. We need to chose some base for the logarithm so we can write its inverse function; suppose we use logs to the base 10. Then</p>
+<div class="displaymath">
 \begin{align*}
 360\log (1+\frac{.01p}{12})  =\amp  \log
 1200m-\log (1200m-Ap)\\
@@ -34,6 +36,7 @@ a_n  =\amp  A(1+\frac{.01p}{12})^n-m\frac{1-(1+\frac{.01p}{12})^n}{1-(1+\frac{.0
 1200m\left((1+\frac{.01p}{12})^{360}-1\right) =\amp  Ap(1+\frac{.01p}{12})^{360}\\
 m  =\amp  \frac{Ap(1+\frac{.01p}{12})^{360}}{1200\left((1+\frac{.01p}{12})^{360}-1\right)}
 \end{align*}
+</div>
 <p>is our monthly payment.</p>
 </li>
 </ol></span></body>

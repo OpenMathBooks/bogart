@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:18-07:00    *-->
+<!--*    on 2018-05-01T14:11:47-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -18,18 +18,18 @@
 <div class="introduction"><p>Suppose we have two numbers \(n\) and \(m\text{.}\) We consider all possible ways to color the edges of the complete graph \(K_m\) with two colors, say red and blue. For each coloring, we look at each \(n\)-element subset \(N\) of the vertex set \(M\) of \(K_m\text{.}\) Then \(N\) together with the edges of of \(K_m\) connecting vertices in \(N\) forms a complete graph on \(n\) vertices. This graph, which we denote by \(K_N\text{,}\) has its edges colored by the original coloring of the edges of \(K_m\text{.}\)</p></div>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p>Why is it that if there is no subset \(N\subseteq M\) so that all the edges of \(K_N\) are colored the same color, then \(R(n,n)&gt;m\text{?}\)</p>
-<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-75-hidden.html" knowl-id="hidden-hint-75" alt="Hint 86.a.1 " title="Hint 86.a.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><span class="solution"><a knowl="./knowl/hint-75-hidden.html" knowl-id="hidden-hint-75" alt="Hint 86.a.1 " title="Hint 86.a.1 "><span class="type">Hint</span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p>To apply the probabilistic method, we are going to compute the average, over all colorings of \(K_m\text{,}\) of the number of sets \(N\subseteq M\) with \(|N|=n\) such that \(K_N\) <em class="emphasis">does</em> have all its edges the same color. Explain why it is that if the average is less than 1, then for some coloring there is no set \(N\) such that \(K_N\) has all its edges colored the same color.  Why does this mean that \(R(n,n)&gt;m\text{?}\)</p>
-<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-76-hidden.html" knowl-id="hidden-hint-76" alt="Hint 86.b.1 " title="Hint 86.b.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p>We call a \(K_N\) <b class="terminology">monochromatic</b> for a coloring \(c\) of \(K_m\) if the color \(c(e)\) assigned to edge \(e\) is the same for every edge \(e\) of \(K_N\text{.}\)  Let us define \({ mono}(c,N)\) to be 1 if \(N\) is monochromatic for \(c\) and to be 0 otherwise.  Find a formula for the average number of monochromatic \(K_N\)s over all colorings of \(K_m\) that involves a double sum first over all edge colorings \(c\) of \(K_m\) and then over all \(n\)-element subsets \(N\subseteq M\) of \({
+<div class="solutions"><span class="solution"><a knowl="./knowl/hint-76-hidden.html" knowl-id="hidden-hint-76" alt="Hint 86.b.1 " title="Hint 86.b.1 "><span class="type">Hint</span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>We call a \(K_N\) <dfn class="terminology">monochromatic</dfn> for a coloring \(c\) of \(K_m\) if the color \(c(e)\) assigned to edge \(e\) is the same for every edge \(e\) of \(K_N\text{.}\)  Let us define \({ mono}(c,N)\) to be 1 if \(N\) is monochromatic for \(c\) and to be 0 otherwise.  Find a formula for the average number of monochromatic \(K_N\)s over all colorings of \(K_m\) that involves a double sum first over all edge colorings \(c\) of \(K_m\) and then over all \(n\)-element subsets \(N\subseteq M\) of \({
 mono}(c,N)\text{.}\)</p>
-<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-77-hidden.html" knowl-id="hidden-hint-77" alt="Hint 86.c.1 " title="Hint 86.c.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="solutions"><span class="solution"><a knowl="./knowl/hint-77-hidden.html" knowl-id="hidden-hint-77" alt="Hint 86.c.1 " title="Hint 86.c.1 "><span class="type">Hint</span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p>Show that your formula for the average reduces to \(2\binom{m}{n}\cdot2^{-\binom{n}{2}}\)</p>
-<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-78-hidden.html" knowl-id="hidden-hint-78" alt="Hint 86.d.1 " title="Hint 86.d.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="solutions"><span class="solution"><a knowl="./knowl/hint-78-hidden.html" knowl-id="hidden-hint-78" alt="Hint 86.d.1 " title="Hint 86.d.1 "><span class="type">Hint</span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(e)</span></h6>
 <p>Explain why \(R(n,n)&gt;m\) if \(\binom{m}{n}\le 2^{\binom{n}{2} -1}\text{.}\)</p>
-<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-79-hidden.html" knowl-id="hidden-hint-79" alt="Hint 86.e.1 " title="Hint 86.e.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like difficult"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<div class="solutions"><span class="solution"><a knowl="./knowl/hint-79-hidden.html" knowl-id="hidden-hint-79" alt="Hint 86.e.1 " title="Hint 86.e.1 "><span class="type">Hint</span></a></span></div></article><article class="exercise-like difficult"><h6 class="heading"><span class="codenumber">(f)</span></h6>
 <p>Explain why \(R(n,n)&gt;\root n \of {n!2^{\binom{n}{2}-1}}\text{.}\)</p>
-<div class="hidden-knowl-wrapper solutions"><span><a knowl="./knowl/hint-80-hidden.html" knowl-id="hidden-hint-80" alt="Hint 86.f.1 " title="Hint 86.f.1 "><span class="solution"><span class="type">Hint</span></span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<div class="solutions"><span class="solution"><a knowl="./knowl/hint-80-hidden.html" knowl-id="hidden-hint-80" alt="Hint 86.f.1 " title="Hint 86.f.1 "><span class="type">Hint</span></a></span></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(g)</span></h6>
 <p>By using Stirling's formula, show that if \(n\) is large enough, then \(R(n,n) &gt; \sqrt{2^n} = \sqrt{2}^{n}\text{.}\)  (Here large enough means large enough for Stiirling's formula to be reasonable accurate.)</p></article></article><span class="incontext"><a href="sec_induction-examples.html#activity-86">in-context</a></span>
 </body>
 </html>

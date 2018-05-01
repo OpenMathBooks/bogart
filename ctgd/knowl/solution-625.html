@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:15:22-07:00    *-->
+<!--*    on 2018-05-01T14:13:08-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -15,7 +15,7 @@
 <span class="solution"><h6 class="heading">
 <span class="type">Solution</span><span class="codenumber">388.b.1</span>
 </h6>
-<p></p>
+<div class="displaymath">
 \begin{align*}
 \sum_{n=2}^\infty d_n\frac{x^{n-1}}{(n-1)!}
 =\amp \sum_{n=2}^\infty d_{n-1}\frac{x^{n-1}}{(n-2)!} +\sum_{n=2}^\infty
@@ -26,7 +26,9 @@ D'(x) -d_1  =\amp  xD'(x) +xD(x)\\
 D'(x)(1-x)  =\amp  xD(x)\\
 \frac{D'(x)}{D(x)}  =\amp  \frac{x}{1-x}
 \end{align*}
+</div>
 <p>This gives us \(\ln D(x) = -\ln(1-x) -x +c\text{,}\) so that \(D(x) = \frac{1}{1-x}e^{-x}e^c\text{.}\) Since \(d_0=1\text{,}\) we have \(d(0)=1\text{,}\) so \(c=0\) and</p>
+<div class="displaymath">
 \begin{align*}
 D(x)  =\amp  \frac{e^{-x}}{1-x}\\
 =\amp
@@ -34,6 +36,7 @@ D(x)  =\amp  \frac{e^{-x}}{1-x}\\
 x^j=\sum_{i=0}^\infty\left(\sum_{j=0}^i \frac{(-1)^j}{j!}\right)
 x^i.
 \end{align*}
+</div>
 <p>Thus \(d_n = n!\sum_{j=0}^n\frac{(-1)^j}{j!}\text{,}\) as we computed by inclusion and exclusion.</p></span><span class="incontext"><a href="app3-3-recurrences.html#solution-625">in-context</a></span>
 </body>
 </html>

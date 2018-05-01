@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:38-07:00    *-->
+<!--*    on 2018-05-01T14:12:08-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,6 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><span class="solution"><p>\(a_n=1.1a_{n-1}+1000\text{,}\) and \(a_0=5000\text{.}\)</p>
+<div class="displaymath">
 \begin{align*}
 \sum_{i=1}^\infty
 a_ix^i \amp= 1.1x\sum_{i=1}^\infty a_{i-1}x^{i-1} + 1000\sum_{i=1}^\infty x^i\\
@@ -24,5 +25,6 @@ a_ix^i \amp= 1.1x\sum_{i=1}^\infty a_{i-1}x^{i-1} + 1000\sum_{i=1}^\infty x^i\\
 +1000\sum_{k=0}^\infty \left(\sum_{i=0}^k(1.1)^i\right)x^k
 - 1000\sum_{i=0}^\infty (1.1)^ix^i
 \end{align*}
+</div>
 <p>This gives us that \(a_n= 4000(1.1)^n +1000 \frac{1-(1.1)^{n+1}}{-.1}\text{.}\) This simplifies to \(a_n= 4000(1.1)^n+10000(1.1)^{n+1}-10000 = 15,000(1.1)^n-10000\text{.}\) Courtesy of Maple, after ten years we have $28,906.14 and after 20 years we have $90,912.50.</p></span></body>
 </html>

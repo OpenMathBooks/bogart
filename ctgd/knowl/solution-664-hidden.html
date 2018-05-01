@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:15:30-07:00    *-->
+<!--*    on 2018-05-01T14:13:27-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,18 +11,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p></p>
+<body><span class="solution"><div class="displaymath">
 \begin{equation*}
 f(x) = 1+\sum_{j=1}^\infty
 (-1)^{j-1}\frac{(g(x)-1)^j}{j}= 1+\sum_{j=1}^\infty
 (-1)^{j-1}\frac{(\sum_{i=1}^\infty 2^{\binom{i}{2}}\frac{x^i}{i!})^j}{j}.
 \end{equation*}
+</div>
 <p>From the right-hand expression, we get a term involving \(x^n\) whenever we have an \(x^n\) term in the \(j\)th power of \(\sum_{i=1}^\infty 2^{\binom{i}{2}}\frac{x^i}{i!}\text{.}\) So the coefficient of \(\frac{x^n}{n!}\) is the sum over all \(j\) and all sequences \(i_1,i_2,\ldots,i_j\) with \(i_1+i_2+\cdots+i_j = n\) of terms of the form</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{n!}{j}(-1)^j\prod_{k=1}^j \frac{2^{\binom{i_k}{2}}
 }{i_k!},
 \end{equation*}
+</div>
 <p>where each \(i_k&gt;0\text{.}\) Notice that reordering the numbers \(i_1\text{,}\) \(i_2\text{,}\) … \(i_k\) does not change the value of the expression. The sequence of \(i_k\)s is a composition of \(n\) into positive parts. If we knew how many compositions of \(n\) into \(j\) parts correspond to one partition of \(n\) into \(j\) parts, we could sum over a much smaller set of terms. If we use the type vector notation for a partition, namely that it has \(p_1\) parts of size 1, \(p_2\) parts of size 2, …, \(p_n\) parts of size \(n\text{,}\) then the number of compositions corresponding to that partition, i.e. the number of compositions with the type vector \((p_1,p_2, \ldots, p_n)\) is the number of ways to take \(j\) places in a vector and label \(p_1\) of them with 1, \(p_2\) of them with 2, and so on until we label \(p_n\) of them with \(n\text{.}\) This number is the multinomial coefficient \(\binom{j}{p_1,p_2,\ldots, p_n}\text{.}\) Thus our sum over all j and all compositions of \(n\) into \(j\) parts becomes</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{j=1}^n \frac{n!}{j}(-1)^j\sum_{{p_1,p_2,\ldots,p_n: \sum_{r=1}^n
 rp_r =n \atop \text{ and }  \sum_{r=1}^n p_r =j}}\binom{j}{p_1, p_2, \ldots,
@@ -30,19 +34,24 @@ p_n}
 \prod_{r=1}^n\frac{2^{{\binom{r}{2}p_r}}
 }{(r!)^{p_r}}.
 \end{equation*}
+</div>
 <p>We can remove one of the summation signs and the condition that \(\sum_{r=1}^n p_r=j\) by substituting \(\sum_{r=1}^n p_r\) for \(j\text{,}\) and we get</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{{p_1,p_2,\ldots,p_n: \sum_{r=1}^n
 rp_r =n }}{n!}(-1)^{^{\sum_{r=1}^n p_r}}\left(\sum_{r=1}^n p_r -1\right)!
 \prod_{r=1}^n\frac{2^{^{\binom{r}{2}p_r}}
 }{(r!)^{p_r}p_r!}
 \end{equation*}
+</div>
 <p>for the number of connected graphs on \(n\) vertices. If we want to shorten the appearance of the formula we can keep \(j\) in our sum and explain its value afterwards, as in</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{{p_1,p_2,\ldots,p_n: \sum_{r=1}^n
 rp_r =n }}{n!}(-1)^j(j-1)!
 \prod_{r=1}^n \frac{2^{^{\binom{r}{2}p_r}}
 }{(r!)^{p_r}p_r!},
 \end{equation*}
+</div>
 <p>where \(j=\sum_{r=1}^n p_r\text{.}\)</p></span></body>
 </html>

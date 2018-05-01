@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:47-07:00    *-->
+<!--*    on 2018-05-01T14:12:17-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,6 +14,7 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>The chromatic polynomial of a triangle is \(x(x-1)(x-2)\) because for one vertex we have \(x\) colors, for a second we have \(x-1\text{,}\) and for the third vertex, because it is adjacent to both of the other vertices, we have \(x-2\) choices of colors. For a vertex of degree 1 there are \(x-1\) choices of colors, those colors not used on the one vertex it is adjacent to. As we mentioned, the extra edges do not change the chromatic polynomial, so we have that the chromatic polynomial of \((G-\{1,2\})-\{2,3\}\) is \(x(x-1)^3(x-2)\text{,}\) the chromatic polynomial of \((G-\{1,2\})/\{2,3\}\) is \(x(x-1)^2(x-2)\text{,}\) as is that of \((G-\{2,3\})/\{1,2\}\text{,}\) and the chromatic polynomial of \((G/\{2,3\})/\{1,2\}\) is \((x-1)(x-2)(x-3)\text{.}\) Using the deletion-contraction recurrence, we get that</p>
+<div class="displaymath">
 \begin{align*}
 \chi_G(x)  \amp =  \chi_{G-\{1,2\}}(x) - \chi_{G/\{1,2\}}(x)\\
 \amp =
@@ -24,6 +25,7 @@
 \amp =  x(x-1)(x-2)(x^2-2x+1 +2x-2 +1)\\
 \amp =  x^3(x-1)(x-2)
 \end{align*}
+</div>
 <p>for the chromatic polynomial of \(G\text{.}\)</p>
 <span class="incontext"><a href="sec_inclexcl-delcont.html#p-1415">in-context</a></span>
 </body>

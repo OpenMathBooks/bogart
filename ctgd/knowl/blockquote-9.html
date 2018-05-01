@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:16-07:00    *-->
+<!--*    on 2018-05-01T14:11:46-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,7 +14,7 @@
 <body>
 <blockquote class="blockquote">
 <h6 class="heading"><span class="type">Quotation</span></h6>
-<p>Our statement is true when \(n=0\text{,}\) because a set of size 0 is the empty set and the empty set has \(1=2^0\) subsets. (This step of our proof is called a <b class="terminology">base step</b>.) Now suppose that \(k&gt;0\) and every set with \(k-1\) elements has \(2^{k-1}\) subsets.  Suppose \(S=\{a_1,a_2,\ldots a_k\}\) is a set with \(k\) elements. We partition the subsets of \(S\) into two blocks.  Block \(B_1\) consists of the subsets that do not contain \(a_n\) and block \(B_2\) consists of the subsets that do contain \(a_n\text{.}\)  Each set in \(B_1\) is a subset of \(\{a_1,a_2,\ldots a_{k-1}\}\text{,}\) and each subset of \(\{a_1,a_2, \ldots
+<p>Our statement is true when \(n=0\text{,}\) because a set of size 0 is the empty set and the empty set has \(1=2^0\) subsets. (This step of our proof is called a <dfn class="terminology">base step</dfn>.) Now suppose that \(k&gt;0\) and every set with \(k-1\) elements has \(2^{k-1}\) subsets.  Suppose \(S=\{a_1,a_2,\ldots a_k\}\) is a set with \(k\) elements. We partition the subsets of \(S\) into two blocks.  Block \(B_1\) consists of the subsets that do not contain \(a_n\) and block \(B_2\) consists of the subsets that do contain \(a_n\text{.}\)  Each set in \(B_1\) is a subset of \(\{a_1,a_2,\ldots a_{k-1}\}\text{,}\) and each subset of \(\{a_1,a_2, \ldots
 a_{k-1}\}\) is in \(B_1\text{.}\)  Thus \(B_1\) is the set of all subsets of \(\{a_1,a_2,\ldots a_{k-1}\}\text{.}\)  Therefore by our assumption in the first sentence of this paragraph, the size of \(B_1\) is \(2^{k-1}\text{.}\)  Consider the function from \(B_2\) to \(B_1\) which takes a subset of \(S\) including \(a_k\) and removes \(a_k\) from it.  This function is defined on \(B_2\text{,}\) because every set in \(B_2\) contains \(a_k\text{.}\)  This function is onto, because if \(T\) is a set in \(B_1\text{,}\) then \(T\cup \{a_k\}\) is a set in \(B_2\) which the function sends to \(T\text{.}\)  This function is one-to-one because if \(V\) and \(W\) are two different sets in \(B_2\text{,}\) then removing \(a_k\) from them gives two different sets in \(B_1\text{.}\)  Thus we have a bijection between \(B_1\) and \(B_2\text{,}\) so \(B_1\) and \(B_2\) have the same size.  Therefore by the sum principle the size of \(B_1\cup B_2\) is \(2^{k-1} +2^{k-1}=2^k\text{.}\)  Therefore \(S\) has \(2^k\) subsets.  This shows that if a set of size \(k-1\) has \(2^{k-1}\) subsets, then a set of size \(k\) has \(2^k\) subsets.  Therefore by the principle of mathematical induction, a set of size \(n\) has \(2^n\) subsets for every nonnegative integer \(n\text{.}\)</p>
 </blockquote>
 <span class="incontext"><a href="sec_induction-examples.html#blockquote-9">in-context</a></span>

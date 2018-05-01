@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:48-07:00    *-->
+<!--*    on 2018-05-01T14:12:19-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,9 +14,11 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>Picking out runs in a circular arrangement adds a layer of difficulty, so to compute \(N(s,r)\text{,}\) we first compute how many subsets of \([n]\) we have with \(r\) runs and then adjust for putting \(1\) through \(n\) around a circle in order.  Imagine writing 1 through \(n\) in a straight line, each integer occupying one unit of distance along the line. We now place \(r\) sticks whose lengths add to \(s\) (each stick has positive integer length) along that line. Each stick picks out a set of consecutive integers, as many as its length, so the sticks together pick out \(s\) integers. In order to be sure the sticks correspond to runs, we need to make sure they do not touch each other, so we place \(n-s\) identical stones along the line too, making sure there is at least one stone between any two sticks. The stones thus pick out the integers not in \(S\text{.}\) The sticks are not quite identical, though the sticks of a given length are. In other words, which lengths of sticks are in which places is what matters. So the sticks give us a composition of \(s\text{,}\) a list of distinct positive integers that add to \(s\text{.}\) We know there are \(\binom{s-1}{r-1}\) such compositions. Once we have chosen an ordering for the sticks, we need to distribute the stones among the sticks so that no two sticks are adjacent.  Since the stones are identical, we can do this by putting one stone between each pair of sticks in our composition, and then distribute the remaining \(n-s-r+1\) stones in any way we want among the \(r-1\) places between the sticks and the two places to the left and right of all the sticks.. We can do this in</p>
+<div class="displaymath">
 \begin{equation*}
 \binom{r+1 + (n-s-r+1)-1}{n-s-r+1}=\binom{n-s+1}{n-s-r+1}=\binom{n-s+1}{r}
 \end{equation*}
+</div>
 <p>ways. Thus there are \(\binom{s-1}{r-1}\binom{n-s+1}{r}\) ways to choose a subset \(S\) of \([n]\) that has \(r\) runs.</p>
 <span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1440">in-context</a></span>
 </body>

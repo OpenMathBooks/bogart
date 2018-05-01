@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:42-07:00    *-->
+<!--*    on 2018-05-01T14:12:12-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,9 +13,10 @@
 </head>
 <body>
 <span class="solution"><h6 class="heading">
-<span class="type">Solution</span><span class="codenumber">4.4.7.1</span>
+<span class="type">Solution</span><span class="codenumber">4.7.1</span>
 </h6>
 <p>\(a_n= a_{n-1} +c(a_{n-1}-a_{n-2})=(1+c)a_{n-1}-ca_{n-2}\text{.}\)</p>
+<div class="displaymath">
 \begin{align*}
 \sum_{n=2}^\infty
 a_nx^n =\amp \sum_{n=2}^\infty(1+c)a_{n-1}x^n-c\sum_{n=2}^\infty a_{n-2}x^n\\
@@ -23,7 +24,9 @@ a_nx^n =\amp \sum_{n=2}^\infty(1+c)a_{n-1}x^n-c\sum_{n=2}^\infty a_{n-2}x^n\\
 \sum_{n=0}^\infty a_nx^n  =\amp  \frac{a_0+(a_1-a_0(1+c))x}{1-(1+c)x +cx^2}\\
 =\amp  \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}
 \end{align*}
+</div>
 <p>Assuming \(c\not=1\) and using the method of partial fractions gives us</p>
+<div class="displaymath">
 \begin{align*}
 \amp \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}\\
 =\amp  (a_0+(a_1-a_0(1+c))x)
@@ -32,10 +35,13 @@ a_nx^n =\amp \sum_{n=2}^\infty(1+c)a_{n-1}x^n-c\sum_{n=2}^\infty a_{n-2}x^n\\
 =\amp  \frac{(a_0+(a_1-a_0(1+c))x)}{1-c}\sum_{i=0}^\infty
 (1-c^{i+1})x^i.
 \end{align*}
+</div>
 <p>From this we get that</p>
+<div class="displaymath">
 \begin{equation*}
 a_i=\frac{a_0}{1-c}(1-c^{i+1}) +\frac{a_1-a_0(1+c)}{1-c}(1-c^i).
 \end{equation*}
+</div>
 <p>Assuming that we begin with one meter of new wood means \(a_0=1\text{,}\) and assuming we have a total of two meters of new wood at the end of the first year means \(c=2\) and \(a_1=3\text{.}\) Substituting these into our formula for \(a_i\) gives us \(a_i=2^{i+1}-1\)</p></span><span class="incontext"><a href="sec_genfns-suppprobs.html#solution-378">in-context</a></span>
 </body>
 </html>

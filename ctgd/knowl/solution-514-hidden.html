@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:14:58-07:00    *-->
+<!--*    on 2018-05-01T14:12:31-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,13 +14,17 @@
 <body><span class="solution"><p>The set of all powers of a rotation is a subgroup of the dihedral group of the \((2n+1)\)-gon. If a given rotation fixes a coloring, all powers of that rotation fix the coloring. The set of edges to which a given edge is taken by that rotation is an orbit of the group of powers of the rotation. The size of this orbit is a divisor of the size of the subgroup, which is a divisor of \(2n+1\text{.}\) If the edge is colored red, the size of the orbit is also a divisor of \(n\text{,}\) and if the edge is colored blue, the size of the orbit is also a divisor of \(n+1\text{.}\) But neither \(n\) nor \(n+1\) have common divisors with \(2n+1\text{,}\) except for one. Therefore the only rotation that fixes a coloring is the identity rotation, and it fixes all \(\binom{2n+1}{n}\) colorings.</p>
 <p>A flip, on the other hand can fix some colorings. In particular, if \(n\) is even, we color one edge blue, leaving an even number \(n\) of edges to be colored blue and an even number \(n\) of edges to be colored red. It the flip over the axis perpendicular to the side we picked fixes the coloring, the \(n\) edges to the right of the chosen edge must be colored identically with the \(n\) edges to the left of the chosen edge. There are \(\binom{n}{n/2}\) ways to color the \(n\) edges to the right of the chosen edge (choose which edges get red), and so this is the number of colorings fixed by this flip. We have \(2n+1\) flips, and since we have one flip of the type described for each edge, all flips have the form given above. Thus each flip fixes \(\binom{n}{n/2}\) colorings.</p>
 <p>Thus the number of orbits is</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{2(2n+1)}\left(\binom{2n+1}{n} +
 (2n+1)\binom{n}{n/2}\right).
 \end{equation*}
+</div>
 <p>If \(n\) is odd, we color one edge red, leaving an even number \(n-1\) of edges to be colored red and an even number \(n+1\) of edges to be colored blue. With an argument similar to the previous one we see that there are</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{2(2n+1)}\left(\binom{2n+1}{n} + (2n+1)(\binom{n}{(n-1)/2}\right)
 \end{equation*}
+</div>
 <p>orbits.</p></span></body>
 </html>

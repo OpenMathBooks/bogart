@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-12-13T14:15:17-07:00    *-->
+<!--*    on 2018-05-01T14:12:59-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,20 +12,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><span class="solution"><p>We guess the formula</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{i=1}^n\frac{1}{i(i+1)} = \frac{n}{n+1}.
 \end{equation*}
+</div>
 <p>When \(n=1\) this formula says that \(\frac{1}{1\cdot2}=\frac{1}{1\cdot
 2}\text{,}\) so our formula holds when \(n=1\text{.}\) Now assume that \(k&gt;1\) and that our formula holds when \(n=k-1\text{.}\) Then</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{i=1}^{k-1} \frac{1}{i(i+1)}= \frac{k-1}{k}.
 \end{equation*}
+</div>
 <p>Adding \(\frac{1}{k(k+1)}\) to both sides of this equation gives us</p>
+<div class="displaymath">
 \begin{align*}
 \sum_{i=1}^{k-1} \frac{1}{i(i+1)}+\frac{1}{k(k+1)}  =\amp  \frac{k-1}{k}+\frac{1}{k(k+1)}\\
 \sum_{i=1}^k \frac{1}{i(i+1)} =\amp \frac{(k-1)(k+1)}{k(k+1)}+\frac{1}{k(k+1)}\\
 =\amp \frac{k^2 -1 +1}{k(k+1)}\\
 =\amp  \frac{k}{k+1}.
 \end{align*}
+</div>
 <p>Thus whenever our formula is true with \(n=k-1\text{,}\) it is true with \(n=k\) as well. Therefore by the principle of mathematical induction, our formula is true for all positive integers.</p></span></body>
 </html>
