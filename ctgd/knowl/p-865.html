@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:55-06:00    *-->
+<!--*    on 2018-08-12T12:00:47-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,14 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>How do we express powers of \(x\) in terms of powers of \(x+1\text{?}\) Some experimentation would help us guess how to do so; however there is a really nice trick that also isn't hard to see. Namely, we can write</p>
+<p>We know that</p>
 <div class="displaymath">
-\begin{align*}
-x^n =(x+1-1)^n= [(x+1) -1]^n =\amp  \sum_{i=0}^n \binom{n}{i}(x+1)^{n-i}(-1)^i\\
-=\amp
-\sum_{i=0}^n \binom{n}{i}(x+1)^i(-1)^{n-i}
-\end{align*}
+\begin{equation}
+(x+1)^n=\sum_{i=0}^n \binom{n}{i}x^{i}\tag{3.2}
+\end{equation}
 </div>
+<p>from the binomial theorem. (In the way we stated the binomial theorem, instead of \(\binom{n}{i}x^i\) we would have gotten \(\binom{n}{i}x^{n-i}\text{.}\) There are two ways to fix this. One is to observe that the coefficient of \(x^i\) in that expansion is \(\binom{n}{n-i}\text{,}\) which equals \(\binom{n}{i}\text{.}\) The other is to observe that when we expand \((1+x)^n\) according to the binomial theorem we get exactly what we wrote on the right hand side in <a knowl="./knowl/usingbinomialtheorem.html" title="Equation 3.2">Equation (3.2)</a>.) Therefore every power of \(x+1\) is expressible in terms of powers of \(x\text{.}\)</p>
 <span class="incontext"><a href="s3-2-partitions.html#p-865">in-context</a></span>
 </body>
 </html>

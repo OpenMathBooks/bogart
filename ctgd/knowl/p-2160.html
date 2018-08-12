@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:18-06:00    *-->
+<!--*    on 2018-08-12T12:01:47-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Thus the coefficient of \(\frac{x^n}{n!}\) is \(n2^{n-1}\text{,}\) as well as \(\sum_{k=1}^n \binom{n}{k}k\text{.}\)</p>
+<p>By the product principle for EGFs, the EGF for the right hand side is</p>
+<div class="displaymath">
+\begin{equation*}
+e^x\cdot xe^x =xe^{2x}=x\sum_{i=o}^\infty \frac{(2x)^i}{i!} =
+\sum_{j=1}^\infty 2^{j-1}\frac{x^j}{(j-1)!}=\sum_{j=1}^\infty
+j2^{j-1}\frac{x^j}{j!}.
+\end{equation*}
+</div>
 <span class="incontext"><a href="app3-4-prodprinc.html#p-2160">in-context</a></span>
 </body>
 </html>

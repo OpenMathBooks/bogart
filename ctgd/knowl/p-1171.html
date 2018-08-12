@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:05-06:00    *-->
+<!--*    on 2018-08-12T12:00:54-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>What is the generating function (using \(q\) for the variable) for the number of partitions of an integer in which each part is even?</p>
+<p>\(\prod_{i=1}^\infty 1 +x^i +x^{2i} +\cdots + x^{i^2}\) makes sense because when we look for ways of choosing one summand from each factor so that the summands multiply together to give us \(x^k\text{,}\) we will find only finitely many ways of making those choices, so the coefficient of \(x^k\) can be taken to be the number of such choices. On the other hand, in the expression \(\prod_{i=1}^\infty 1 + x + x^2 +\cdots+ x^i\text{,}\) there are infinitely many ways to choose \(x\) from one term and \(1\) from all the rest of the terms so that the product of these summands is \(x\text{.}\) Thus we can't even specify what the coefficient of \(x\) is in the product. On the basis of this analysis, we see that for \(\prod_{i=1}^\infty 1 +p_i(x)\) to make sense, we need to assume that for each possible positive integer \(n\text{,}\) there are only a finite number of polynomials \(p_i\) whose lowest degree term has degree less than or equal to \(n\text{.}\) In that way, for each positive integer, there will be only finitely many ways to chose a summand from each factor so that the product of the summands is a multiple of \(x^k\text{.}\) The same assumption works when the \(p_i\) are power series, for the same reason.</p>
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1171">in-context</a></span>
 </body>
 </html>

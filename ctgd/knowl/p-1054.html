@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:01-06:00    *-->
+<!--*    on 2018-08-12T12:00:51-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>As you've seen, in our descriptions of ways of choosing fruits, we've treated the pictures of the fruit as if they are variables. You've also likely noticed that it is much easier to do algebraic manipulations with letters rather than pictures, simply because it is time consuming to draw the same picture over and over again, while we are used to writing letters quickly. In the theory of generating functions, we associate variables or polynomials or even power series with members of a set. There is no standard language describing how we associate variables with members of a set, so we shall invent<span class="footnote"><a knowl="./knowl/fn-10-hidden.html" knowl-id="hidden-fn-10" alt="Footnote 4.2 " title="Footnote 4.2 "><sup> 2 </sup></a></span> some. By a <dfn class="terminology">picture</dfn> of a member of a set we will mean a variable, or perhaps a product of powers of variables (or even a sum of products of powers of variables). A function that assigns a picture \(P(s)\) to each member \(s\) of a set \(S\) will be called a <dfn class="terminology">picture function</dfn> . The <dfn class="terminology">picture enumerator</dfn> for a picture function \(P\) defined on a set \(S\) will be</p>
+<p>If we were to expand the formula</p>
 <div class="displaymath">
-\begin{equation*}
-E_P(S) = \sum_{s: s\in S}  P(s).
-\end{equation*}
+\begin{equation}
+(\ap+\ap^2+\ap^3)(\pe+\pe^2)(\ba+\ba^2).\tag{4.2}
+\end{equation}
 </div>
+<p>we would get <a knowl="./knowl/uptothreefruits.html" title="Equation 4.1">Formula (4.1)</a>. Thus <a knowl="./knowl/uptothreefruits.html" title="Equation 4.1">Formula (4.1)</a> and <a knowl="./knowl/threefruitsagain.html" title="Equation 4.2">Formula (4.2)</a> each describe the number of multisets we can choose from the set \(\{\ap,\pe,\ba\}\) in which \(\apple\) appears between 1 and three times and \(\pear\) and \(\banana\) each appear once or twice. We interpret <a knowl="./knowl/uptothreefruits.html" title="Equation 4.1">Formula (4.1)</a> as describing each individual multiset we can choose, and we interpret <a knowl="./knowl/threefruitsagain.html" title="Equation 4.2">Formula (4.2)</a> as saying that we first decide how many apples to take, and then decide how many pears to take, and then decide how many bananas to take. At this stage it might seem a bit magical that doing ordinary algebra with the second formula yields the first, but in fact we could define addition and multiplication with these pictures more formally so we could explain in detail why things work out. However since the pictures are for motivation, and are actually difficult to write out on paper, it doesn't make much sense to work out these details. We will see an explanation in another context later on.</p>
 <span class="incontext"><a href="sec_genfns-idea.html#p-1054">in-context</a></span>
 </body>
 </html>

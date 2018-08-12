@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:49-06:00    *-->
+<!--*    on 2018-08-12T12:00:42-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,7 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>Note that by the formula, \(a_{n-1}=ba_{n-2} +d\text{.}\) Substituting this into the original equation for \(a_n\) gives \(a_n=b^2a_{n-2}+bd +d\text{.}\) Repeating this kind of substitution gives us \(a_n=b^3a_{n-3} +b^2d +bd +d\text{.}\) This suggests that \(a_n = a_0b^n +\sum_{i=0}^{n-1}db^i\text{.}\) We would guess the same formula by writing out the first few values of \(a_i\text{,}\) namely, \(a_0\text{,}\) \(a_0b+d\text{,}\) \(a_0b^2+db+d\text{,}\) \(a_0b^3+b^2d+bd+d\text{,}\) and so on. We prove our general formula by induction on \(n\text{.}\) It is clearly true when \(n=0\) as there are no terms in the sum and \(b^0=1\text{.}\) If we assume the formula is true when \(n=k-1\text{,}\) we may write</p>
+<body><div class="solution">
+<p>Note that by the formula, \(a_{n-1}=ba_{n-2} +d\text{.}\) Substituting this into the original equation for \(a_n\) gives \(a_n=b^2a_{n-2}+bd +d\text{.}\) Repeating this kind of substitution gives us \(a_n=b^3a_{n-3} +b^2d +bd +d\text{.}\) This suggests that \(a_n = a_0b^n +\sum_{i=0}^{n-1}db^i\text{.}\) We would guess the same formula by writing out the first few values of \(a_i\text{,}\) namely, \(a_0\text{,}\) \(a_0b+d\text{,}\) \(a_0b^2+db+d\text{,}\) \(a_0b^3+b^2d+bd+d\text{,}\) and so on. We prove our general formula by induction on \(n\text{.}\) It is clearly true when \(n=0\) as there are no terms in the sum and \(b^0=1\text{.}\) If we assume the formula is true when \(n=k-1\text{,}\) we may write</p>
 <div class="displaymath">
 \begin{align*}
 a_k  =\amp  ba_{k-1}+d\\
@@ -38,5 +39,6 @@ x^{n-1})\cdot x\\
 \sum_{i=1}^{n-1}x^i=\frac{1-x^n}{1-x}.
 \end{equation*}
 </div>
-<p>Using this in our formula for \(a_n\) gives us \(a_n =a_ob^n+d\frac{1-b^n}{1-b}.\) This is valid except in the case \(b=1\) (in our computation with \(x\) above, we would be dividing by 0.) If \(b=1\) we get \(a_n =a_0 +nd\) for the sum.</p></span></body>
+<p>Using this in our formula for \(a_n\) gives us \(a_n =a_ob^n+d\frac{1-b^n}{1-b}.\) This is valid except in the case \(b=1\) (in our computation with \(x\) above, we would be dividing by 0.) If \(b=1\) we get \(a_n =a_0 +nd\) for the sum.</p>
+</div></body>
 </html>

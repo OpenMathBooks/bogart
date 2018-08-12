@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:12-06:00    *-->
+<!--*    on 2018-08-12T12:00:59-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,11 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>From this we get that</p>
+<p>Assuming \(c\not=1\) and using the method of partial fractions gives us</p>
 <div class="displaymath">
-\begin{equation*}
-a_i=\frac{a_0}{1-c}(1-c^{i+1}) +\frac{a_1-a_0(1+c)}{1-c}(1-c^i).
-\end{equation*}
+\begin{align*}
+\amp \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}\\
+=\amp  (a_0+(a_1-a_0(1+c))x)
+\left[\frac{1/(1-c)}{(1-x)} -\frac{c/(1-c)}{1-cx}\right]\\
+=\amp  (a_0+(a_1-a_0(1+c))x)\left[\frac{1}{1-c}\sum_{i=0}^\infty x^i-\frac{c}{1-c}\sum_{i=0}^\infty c^ix^i\right]\\
+=\amp  \frac{(a_0+(a_1-a_0(1+c))x)}{1-c}\sum_{i=0}^\infty
+(1-c^{i+1})x^i.
+\end{align*}
 </div>
 <span class="incontext"><a href="sec_genfns-suppprobs.html#p-1310">in-context</a></span>
 </body>

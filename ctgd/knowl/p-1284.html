@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:11-06:00    *-->
+<!--*    on 2018-08-12T12:00:58-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,13 +13,23 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>What is the generating function for the number of ways to pass out \(k\) pieces of candy from an unlimited supply of identical candy to \(n\) children (where \(n\) is fixed) so that each child gets between three and six pieces of candy (inclusive)? Use the fact that</p>
+<p>By the extended binomial theorem,</p>
 <div class="displaymath">
 \begin{equation*}
-(1+x+x^2+x^3)(1-x) = 1-x^4
+\sqrt{1-4x}=(1-4x)^{1/2} = \sum_{i=0}^\infty \binom{1/2}{i}(-4x)^i=
+\sum_{i=0}^\infty \frac{(1/2)^{\underline{i}}}{i!}(-1)^i4^ix^i\text{.}
 \end{equation*}
 </div>
-<p>to find a formula for the number of ways to pass out the candy.</p>
-<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1284">in-context</a></span>
+<p>The first term of this power series is 1, so to get a power series for \(y\text{,}\) we must take the negative square root so that the \(x\) in the denominator will cancel out. Thus \(y=-\frac{1}{2}\sum_{i=1}^\infty \frac{(1/2)^{\underline{i}}}{i!}(-1)^i4^ix^i\text{.}\) But \((1/2)^{\underline{i}}=(\frac{1}{2})(\frac{-1}{2})(\frac{-3}{2})(\frac{-5}{2})\cdots (\frac{-2i+3}{2})\text{,}\) so</p>
+<div class="displaymath">
+\begin{align*}
+y \amp= -\frac{1}{2}\sum_{i=1}^\infty\frac{1\cdot3\cdot5\cdots(2i-3)}{i!}(-1)^{2i-1}2^ix^{i-1}\\
+\amp=  \sum_{i=1}^\infty \frac{(2i-2)!}{(i-1)!2^{i}i!}2^ix^{i-1}\\
+\amp=  \sum_{i=1}^\infty\frac{2i-2!}{i!(i-1)!}x^{i-1}\\
+\amp= \sum_{j=0}^\infty\frac{2j!}{(j+1)!j!}x^j
+\end{align*}
+</div>
+<p>giving us \(C_j=\frac{1}{j+1}\binom{2j}{j}\text{,}\) which is our earlier formula for the Catalan Number \(C_j\text{.}\)</p>
+<span class="incontext"><a href="sec_genfns-recurrence.html#p-1284">in-context</a></span>
 </body>
 </html>

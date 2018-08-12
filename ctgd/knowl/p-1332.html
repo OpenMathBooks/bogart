@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:13-06:00    *-->
+<!--*    on 2018-08-12T12:00:59-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>This kind of notation, consisting of an operator with a description underneath of the values of a dummy variable of interest to us, can be extended in many ways. For example</p>
+<p>The difficulty of generalizing <a knowl="./knowl/threesetintersection.html" title="Problem 228">Problem 228</a> to <a knowl="./knowl/nsetintersection.html" title="Problem 229">Problem 229</a> is not likely to be one of being able to see what the right conjecture is, but of finding a good notation to express your conjecture. In fact, it would be easier for some people to express the conjecture in words than to express it in a notation. Here is some notation that will make your task easier. Let us define</p>
 <div class="displaymath">
-\begin{align}
-\sum_{I:I \subseteq \{1,2,3,4\}, \ |I|=2} |\cap_{i\in I}
-A_i|  \amp =  |A_1\cap A_2|+ |A_1\cap A_3|
-+|A_1\cap A_4|\notag\\
-\amp +  |A_2\cap A_3|+
-|A_2\cap A_4| +|A_3\cap A_4|.\tag{5.2}
-\end{align}
+\begin{equation*}
+\bigcap_{i:i\in I}A_i
+\end{equation*}
+</div>
+<p>to mean the intersection over all elements \(i\) in the set \(I\) of \(A_i\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation}
+\bigcap_{i:i\in
+\{1,3,4,6\}} = A_1\cap A_3\cap A_4 \cap A_6.\tag{5.1}
+\end{equation}
 </div>
 <span class="incontext"><a href="sec_inclexcl-sizeunion.html#p-1332">in-context</a></span>
 </body>

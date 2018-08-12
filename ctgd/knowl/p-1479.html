@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:20-06:00    *-->
+<!--*    on 2018-08-12T12:01:05-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We do the same in the case that \(m-n\) is negative, getting</p>
+<p>We give the first and last proof. We will induct on \(n\) in the first proof. If \(n=0\) the formula automatically holds. Assume inductively that \(\varphi^m\circ\varphi^{-(n-1)} = \varphi^{m-(n-1)}\text{.}\) Compose both sides of this equation on the right by \(\sigma^{-1}\) and use the associative law for composition of functions to get, in the case that \(m-n\) is nonnegative</p>
 <div class="displaymath">
 \begin{align*}
 \varphi^m\circ(\varphi^{-(n-1)}\circ\varphi^{-1})  =\amp
 \varphi^{m-(n-1)}\circ\varphi^{-1}\\
 \varphi^m\circ(\varphi^{-1})^{n-1}\varphi^{-1} =\amp
-(\varphi^{-1})^{n-m-1}\circ\varphi^{-1}\\
-\varphi^m\circ(\varphi^{-1})^n  =\amp  (\varphi^{-1})^{n-m}\\
-\varphi^m\circ\varphi^{-n} =\amp \varphi^{m-n}.
+(\varphi^{m-n}\circ\varphi)\circ\varphi^{-1}\\
+\varphi^m\circ(\varphi^{-1})^n  =\amp  \varphi^{m-n}.
 \end{align*}
 </div>
 <span class="incontext"><a href="sec_groups-permgroups.html#p-1479">in-context</a></span>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:12-06:00    *-->
+<!--*    on 2018-08-12T12:00:59-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Assuming \(c\not=1\) and using the method of partial fractions gives us</p>
+<p>\(a_n= a_{n-1} +c(a_{n-1}-a_{n-2})=(1+c)a_{n-1}-ca_{n-2}\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
-\amp \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}\\
-=\amp  (a_0+(a_1-a_0(1+c))x)
-\left[\frac{1/(1-c)}{(1-x)} -\frac{c/(1-c)}{1-cx}\right]\\
-=\amp  (a_0+(a_1-a_0(1+c))x)\left[\frac{1}{1-c}\sum_{i=0}^\infty x^i-\frac{c}{1-c}\sum_{i=0}^\infty c^ix^i\right]\\
-=\amp  \frac{(a_0+(a_1-a_0(1+c))x)}{1-c}\sum_{i=0}^\infty
-(1-c^{i+1})x^i.
+\sum_{n=2}^\infty
+a_nx^n =\amp \sum_{n=2}^\infty(1+c)a_{n-1}x^n-c\sum_{n=2}^\infty a_{n-2}x^n\\
+(1-(1+c)x +cx^2)\sum_{n=0}^\infty a_nx^n =\amp a_0+a_1x-a_0(1+c)x\\
+\sum_{n=0}^\infty a_nx^n  =\amp  \frac{a_0+(a_1-a_0(1+c))x}{1-(1+c)x +cx^2}\\
+=\amp  \frac{a_0+(a_1-a_0(1+c))x}{(1-x)(1-cx)}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec_genfns-suppprobs.html#p-1309">in-context</a></span>

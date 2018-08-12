@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:06-06:00    *-->
+<!--*    on 2018-08-12T12:00:55-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The generating function for partitions that arise in the second case is \(\qchoose{m+n-1}{m-1}=\qchoose{m+n-1}{n}\text{.}\) In the first case, after we delete the largest part, the Young diagram sits in a rectangle of width \(m\) and depth \(n-1\text{.}\) The generating function for partitions that arise in the first case <em class="emphasis">after</em> we have deleted a part of size \(m\) is \(\qchoose{m+n-1}{n-1}\text{.}\) Thus the generating function for partitions that arise in the first case (<em class="emphasis">before</em> we delete the part of size \(m\)) is \(q^m\qchoose{m+n-1}{n-1}\text{.}\) Thus by the sum principle the generating function for all partitions that fit into a rectangle of width \(m\) and depth \(n\) is given by</p>
-<div class="displaymath">
-\begin{equation*}
-\qchoose{m+n}{n}= q^m\qchoose{m+n-1}{n-1}+\qchoose{m+n-1}{n}.
-\end{equation*}
-</div>
+<p>The largest part of a partition counted by \(\qchoose{m+n}{n}\) is either \(m\) or is less than or equal to \(m-1\text{.}\)  In the second case, the partition fits into a rectangle that is at most \(m-1\) units wide and at most \(n\) units deep.  What is the generating function for partitions of this type?  In the first case, what kind of rectangle does the partition we get by removing the largest part sit in?  What is the generating function for partitions that sit in this kind of rectangle?  What is the generating function for partitions that sit in this kind of rectangle after we remove a largest part of size \(m\text{?}\)  What recurrence relation does this give you?</p>
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1200">in-context</a></span>
 </body>
 </html>

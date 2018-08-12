@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:18-06:00    *-->
+<!--*    on 2018-08-12T12:01:03-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h6 class="heading">
-<span class="type">Solution</span><span class="codenumber">5.2.1</span>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">5.2.1</span>
 </h6>
 <p>We use inclusion and exclusion. We let \(A\) be the set of all seating arrangements. We let \(A_i\) be the set of seating arrangements such that student \(i\) sits in the same seat as before. We are interested in \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\text{.}\) For this purpose, for each subset \(S\) of the set \([n]\text{,}\) we need to compute \(\left|\bigcap_{i\colon i\in S} A_i\right|\text{,}\) the number of ways for the students to return so that every student represented by an \(i\) in \(S\) sits in his or her previous seat. This leaves us with \(n-|S|\) seats to be filled in a one-to-one fashion by \(m-|S|\) students. There are \((n-|S|)^{\underline{m-|S|}}\) such seating arrangements, so \(\left|\bigcap_{i\colon i\in S} A_i\right|= (n-|S|)^{\underline{m-|S|}}\text{.}\) Thus we have</p>
 <div class="displaymath">
@@ -22,6 +23,8 @@
 (-1)^{|S|}(n-|S|)^{\underline{m-|S|}} = \sum_{s=0}^m (-1)^s\binom{m}{s}(n-s)^{\underline{m-s}}
 \end{equation*}
 </div>
-<p>ways for the students to return so that nobody sits in his or her previous place.</p></span><span class="incontext"><a href="sec_inclexcl-suppprobs.html#solution-418">in-context</a></span>
+<p>ways for the students to return so that nobody sits in his or her previous place.</p>
+</div>
+<span class="incontext"><a href="sec_inclexcl-suppprobs.html#solution-418">in-context</a></span>
 </body>
 </html>

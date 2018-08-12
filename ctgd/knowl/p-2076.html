@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:06-06:00    *-->
+<!--*    on 2018-08-12T12:01:38-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,24 +13,8 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="displaymath">
-\begin{align*}
-\sum_{n=2}^\infty a_n\frac{x^n}{n!}
-=\amp \sum_{n=2}^\infty a_{n-1}\frac{x^n}{(n-1)!} + \sum_{n=2}^\infty
-\frac{x^n}{(n-2)!}\\
-=\amp  x\left(\sum_{n=0}^\infty a_n\frac{x^n}{n!} - a_0\right) +
-x^2\sum_{n=0}^\infty \frac{x^n}{n!}\\
-=\amp  x\left(\sum_{n=0}^\infty a_n\frac{x^n}{n!}\right) - a_0x
-+x^2e^x
-\end{align*}
-</div>
-<p>We sum from \(n=2\) because otherwise we would have a factorial of a negative number in the denominator. Thus \(\sum_{n=0}^\infty a_n\frac{x^n}{n!} -a_0-a_1x =  x\left(\sum_{n=0}^\infty a_n\frac{x^n}{n!}\right) - a_0x
-+x^2e^x\text{,}\) or</p>
-<div class="displaymath">
-\begin{equation*}
-(1-x)\sum_{n=0}^\infty a_n\frac{x^n}{n!}=a_0+a_1x-a_0x +x^2e^x.
-\end{equation*}
-</div>
+<p>Consider the recurrence \(a_n=na_{n-1} +n(n-1)\text{.}\) Multiply both sides by \(\frac{x^n}{n!}\text{,}\) and sum from \(n=2\) to \(\infty\text{.}\) (Why do we sum from \(n=2\) to infinity instead of \(n=1\) or \(n=0\text{?}\)) Letting \(y =
+\sum_{i=0}^\infty a_ix^i\text{,}\) show that the left-hand side of the equation is \(y-a_0 -a_1x\text{.}\) Express the right hand side in terms of \(y\text{,}\) \(x\text{,}\) and \(e^x\text{.}\) Solve the resulting equation for \(y\) and use the result to get an equation for \(a_n\text{.}\) (A finite summation is acceptable in your answer for \(a_n\text{.}\))</p>
 <span class="incontext"><a href="app3-3-recurrences.html#p-2076">in-context</a></span>
 </body>
 </html>

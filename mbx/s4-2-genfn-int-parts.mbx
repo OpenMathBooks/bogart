@@ -707,7 +707,7 @@ of it as <m>(2i) \cdot j</m> or if you think of it as <m>i \cdot (2j)</m>.
                         </tabular>
                     </table>
                     <p>
-                        (Note that <m>mn</m> is odd if and only if <m>m+n</m> is even and <m>n</m> is odd.) Wouldn't it be fascinating to know what we are counting here? It is the number of lattice paths from <m>(0, 0)</m> to <m>(n - k, k)</m> that are symmetric under 180 degree rotation. This and other results are discussed in the paper by John R. Stembridge <q>Some hidden relations involving the ten symmetry classes of plane partitions.</q> <booktitle>J. Combin. Theory Ser. A</booktitle> 68 (1994), no. 2, 372–409.
+                        (Note that <m>mn</m> is odd if and only if <m>m+n</m> is even and <m>n</m> is odd.) Wouldn't it be fascinating to know what we are counting here? It is the number of lattice paths from <m>(0, 0)</m> to <m>(n - k, k)</m> that are symmetric under 180 degree rotation. This and other results are discussed in the paper by John R. Stembridge <q>Some hidden relations involving the ten symmetry classes of plane partitions.</q> <pubtitle>J. Combin. Theory Ser. A</pubtitle> 68 (1994), no. 2, 372–409.
                     </p>
                 </solution>
             </task>

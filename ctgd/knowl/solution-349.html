@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:07-06:00    *-->
+<!--*    on 2018-08-12T12:00:55-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h6 class="heading">
-<span class="type">Solution</span><span class="codenumber">210.h.1</span>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">210.h.1</span>
 </h6>
 <p>\(\qchoose{m+n}{n}\) is the generating function for the number of partitions whose Young diagram fits into an \(m\) by \(n\) rectangle. That is,</p>
 <div class="displaymath">
@@ -34,7 +35,7 @@
 \lim_{q\rightarrow -1}\qchoose{4}{2}=1-1+2-1+1=1.
 \end{equation*}
 </div>
-<p>We could compute some more values of the limit by going back to the definition in this way, but it seems unlikely that we could get enough data to make a good conjecture. However we have the recurrence, and setting \(q=-1\) in the recurrence gives us <a knowl="./knowl/q-binomial-tab.html" knowl-id="xref-q-binomial-tab" alt="Table 4.2.1 " title="Table 4.2.1 ">Table 4.2.1</a>.  From the table, it is clear that we get binomial coefficients interspersed with 0s in the even numbered rows of our table and repeated binomial coefficients in the odd numbered rows of our table. In particular when \(m+n\) and \(n\) are both even, \(\neg1choose{m+n}{n}=\binom{(m+n)/2}{n/2}\text{,}\) and if \(m+n\) is even and \(n\) is odd, \(\neg1choose{m+n}{n}=0\text{.}\) In our table, at least, if \(m+n\) is odd, it appears that we get \(\neg1choose{m+n}{n}=\binom{\lfloor(m+n)/2\rfloor}{\lfloor n/2\rfloor}\text{.}\) In fact, using the recurrence just as we used it to construct the table, we can prove by induction that</p>
+<p>We could compute some more values of the limit by going back to the definition in this way, but it seems unlikely that we could get enough data to make a good conjecture. However we have the recurrence, and setting \(q=-1\) in the recurrence gives us <a knowl="./knowl/q-binomial-tab.html" title="Table 4.2.1">Table 4.2.1</a>.  From the table, it is clear that we get binomial coefficients interspersed with 0s in the even numbered rows of our table and repeated binomial coefficients in the odd numbered rows of our table. In particular when \(m+n\) and \(n\) are both even, \(\neg1choose{m+n}{n}=\binom{(m+n)/2}{n/2}\text{,}\) and if \(m+n\) is even and \(n\) is odd, \(\neg1choose{m+n}{n}=0\text{.}\) In our table, at least, if \(m+n\) is odd, it appears that we get \(\neg1choose{m+n}{n}=\binom{\lfloor(m+n)/2\rfloor}{\lfloor n/2\rfloor}\text{.}\) In fact, using the recurrence just as we used it to construct the table, we can prove by induction that</p>
 <div class="displaymath">
 \begin{equation*}
 \neg1choose{m+n}{n}=\left\{
@@ -188,6 +189,8 @@
 <td class="l m b0 r0 l0 t0 lines">1</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">4.2.1</span>\(-1\)-binomial coefficients</figcaption></figure><p>(Note that \(mn\) is odd if and only if \(m+n\) is even and \(n\) is odd.) Wouldn't it be fascinating to know what we are counting here? It is the number of lattice paths from \((0, 0)\) to \((n - k, k)\) that are symmetric under 180 degree rotation. This and other results are discussed in the paper by John R. Stembridge “Some hidden relations involving the ten symmetry classes of plane partitions.” <span class="booktitle">J. Combin. Theory Ser. A</span> 68 (1994), no. 2, 372–409.</p></span><span class="incontext"><a href="sec_genfns-int-parts.html#solution-349">in-context</a></span>
+<figcaption><span class="type">Table</span> <span class="codenumber">4.2.1</span> \(-1\)-binomial coefficients</figcaption></figure><p>(Note that \(mn\) is odd if and only if \(m+n\) is even and \(n\) is odd.) Wouldn't it be fascinating to know what we are counting here? It is the number of lattice paths from \((0, 0)\) to \((n - k, k)\) that are symmetric under 180 degree rotation. This and other results are discussed in the paper by John R. Stembridge “Some hidden relations involving the ten symmetry classes of plane partitions.” <span class="booktitle">J. Combin. Theory Ser. A</span> 68 (1994), no. 2, 372–409.</p>
+</div>
+<span class="incontext"><a href="sec_genfns-int-parts.html#solution-349">in-context</a></span>
 </body>
 </html>

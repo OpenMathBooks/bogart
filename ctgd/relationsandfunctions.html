@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:22-06:00    *-->
+<!--*    on 2018-08-12T12:00:19-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>CTGD Relations as sets of Ordered Pairs</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -35,18 +35,18 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
-\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
-\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\qchoose}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_q}
+\def\neg1choose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
 \newcommand{\bp}{
 \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
 \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
@@ -75,16 +75,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Relations.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Relations.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="equivalencerelations.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Relations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Relations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="equivalencerelations.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Relations.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="Relations.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="equivalencerelations.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Relations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Relations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="equivalencerelations.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
@@ -92,42 +92,42 @@ MathJax.Hub.Config({
 <li><a href="preface.html" data-scroll="preface">Preface</a></li>
 <li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
 </ul>
-<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title punctuated">What is Combinatorics?</span></a></h2>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span> <span class="title punctuated">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
 <li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
 <li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
 <li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
 </ul>
-<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span> <span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
 <ul>
 <li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
 <li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span> <span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
 <li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
 <li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span> <span class="title">Generating Functions</span></a></h2>
 <ul>
 <li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
 <li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
 <li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
 <li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span> <span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
 <ul>
 <li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
 <li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
 <li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
 <li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span> <span class="title">Groups acting on sets</span></a></h2>
 <ul>
 <li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
 <li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
@@ -142,116 +142,128 @@ MathJax.Hub.Config({
 <li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="relationsandfunctions"><h2 class="heading hide-type" alt="Section A.1 Relations as sets of Ordered Pairs">
-<span class="type">Section</span><span class="codenumber">A.1</span><span class="title">Relations as sets of Ordered Pairs</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="relationsandfunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">A.1</span> <span class="title">Relations as sets of Ordered Pairs</span>
 </h2>
-<a href="relationsandfunctions.html" class="permalink">¶</a><section class="subsection" id="functionrelation"><h3 class="heading hide-type" alt="Subsection A.1.1 The relation of a function">
-<span class="type">Subsection</span><span class="codenumber">A.1.1</span><span class="title">The relation of a function</span>
+<a href="relationsandfunctions.html" class="permalink">¶</a><section class="subsection" id="functionrelation"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">A.1.1</span> <span class="title">The relation of a function</span>
 </h3>
 <a href="relationsandfunctions.html#functionrelation" class="permalink">¶</a><article class="example-like" id="functionsasorderedpairs"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">328</span>
+<span class="type">Problem</span> <span class="codenumber">328</span>
 </h6>
-<p id="p-1843">Consider the functions from \(S=\{-2,-1,0,1,2\}\) to \(T=\{1,2,3,4,5\}\) defined by \(f(x) = x+3\text{,}\) and \(g(x) = x^5-5x^3+5x +3\text{.}\) Write down the set of ordered pairs \((x,f(x))\) for \(x \in S\) and the set of ordered pairs \((x,g(x))\) for \(x \in S\text{.}\) Are the two functions the same or different?</p></article><p id="p-1845"><a knowl="./knowl/functionsasorderedpairs.html" knowl-id="xref-functionsasorderedpairs" alt="Problem 328 " title="Problem 328 ">Problem 328</a> points out how two functions which appear to be different are actually the same on some domain of interest to us. Most of the time when we are thinking about functions it is fine to think of a function casually as a relationship between two sets. In <a knowl="./knowl/functionsasorderedpairs.html" knowl-id="xref-functionsasorderedpairs" alt="Problem 328 " title="Problem 328 ">Problem 328</a> the set of ordered pairs you wrote down for each function is called the <dfn class="terminology">relation</dfn> of the function. When we want to distinguish between the casual and the careful in talking about relationships, our casual term will be “relationship” and our careful term will be “relation.” So <em class="emphasis">relation</em> is a technical word in mathematics, and as such it has a technical definition. A <dfn class="terminology">relation</dfn> from a set \(S\) to a set \(T\) is a set of ordered pairs whose first elements are in \(S\) and whose second elements are in \(T\text{.}\) Another way to say this is that a <dfn class="terminology">relation</dfn> from \(S\) to \(T\) is a subset of \(S\times T\text{.}\)</p>
-<p id="p-1846">A typical way to define a <dfn class="terminology">function</dfn> \(f\) from a set \(S\text{,}\) called the <dfn class="terminology">domain</dfn> of the function,  to a set \(T\text{,}\) called the <dfn class="terminology">range</dfn>,  is that \(f\) is a relationship between \(S\) to \(T\) that relates one and only one member of \(T\) to each element of \(X\text{.}\) We use \(f(x)\) to stand for the element of \(T\) that is related to the element \(x\) of \(S\text{.}\) If we wanted to make our definition more precise, we could substitute the word “relation” for the word “relationship” and we would have a more precise definition. For our purposes, you can choose whichever definition you prefer. However, in any case, there is a relation associated with each function. As we said above, the relation of a function \(f:
+<p id="p-1844">Consider the functions from \(S=\{-2,-1,0,1,2\}\) to \(T=\{1,2,3,4,5\}\) defined by \(f(x) = x+3\text{,}\) and \(g(x) = x^5-5x^3+5x +3\text{.}\) Write down the set of ordered pairs \((x,f(x))\) for \(x \in S\) and the set of ordered pairs \((x,g(x))\) for \(x \in S\text{.}\) Are the two functions the same or different?</p></article><p id="p-1846"><a knowl="./knowl/functionsasorderedpairs.html" title="Problem 328">Problem 328</a> points out how two functions which appear to be different are actually the same on some domain of interest to us. Most of the time when we are thinking about functions it is fine to think of a function casually as a relationship between two sets. In <a knowl="./knowl/functionsasorderedpairs.html" title="Problem 328">Problem 328</a> the set of ordered pairs you wrote down for each function is called the <dfn class="terminology">relation</dfn> of the function. When we want to distinguish between the casual and the careful in talking about relationships, our casual term will be “relationship” and our careful term will be “relation.” So <em class="emphasis">relation</em> is a technical word in mathematics, and as such it has a technical definition. A <dfn class="terminology">relation</dfn> from a set \(S\) to a set \(T\) is a set of ordered pairs whose first elements are in \(S\) and whose second elements are in \(T\text{.}\) Another way to say this is that a <dfn class="terminology">relation</dfn> from \(S\) to \(T\) is a subset of \(S\times T\text{.}\)</p>
+<p id="p-1847">A typical way to define a <dfn class="terminology">function</dfn> \(f\) from a set \(S\text{,}\) called the <dfn class="terminology">domain</dfn> of the function,  to a set \(T\text{,}\) called the <dfn class="terminology">range</dfn>,  is that \(f\) is a relationship between \(S\) to \(T\) that relates one and only one member of \(T\) to each element of \(X\text{.}\) We use \(f(x)\) to stand for the element of \(T\) that is related to the element \(x\) of \(S\text{.}\) If we wanted to make our definition more precise, we could substitute the word “relation” for the word “relationship” and we would have a more precise definition. For our purposes, you can choose whichever definition you prefer. However, in any case, there is a relation associated with each function. As we said above, the relation of a function \(f:
 S\rightarrow T\) (which is the standard shorthand for “\(f\) is a function from \(S\) to \(T\)” and is usually read as \(f\) <dfn class="terminology">maps</dfn> \(S\) to \(T\)) is the set of all ordered pairs \((x,f(x))\) such that \(x\) is in \(S\text{.}\)</p>
 <article class="example-like" id="formalrelations"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">329</span>
+<span class="type">Problem</span> <span class="codenumber">329</span>
 </h6>
-<div class="introduction" id="introduction-67"><p id="p-1847">Here are some questions that will help you get used to the formal idea of a relation and the related formal idea of a function. \(S\) will stand for a set of size \(s\) and \(T\) will stand for a set of size \(t\text{.}\)</p></div>
+<div class="introduction" id="introduction-67"><p id="p-1848">Here are some questions that will help you get used to the formal idea of a relation and the related formal idea of a function. \(S\) will stand for a set of size \(s\) and \(T\) will stand for a set of size \(t\text{.}\)</p></div>
 <article class="exercise-like" id="task-235"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1848">What is the size of the largest relation from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="task-236"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1850">What is the size of the smallest relation from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="task-237"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1852">The relation of a function \(f:S\rightarrow T\) is the set of all ordered pairs \((x,f(x))\) with \(x\in S\text{.}\)  What is the size of the relation of a function from \(S\) to \(T\text{?}\)  That is, how many ordered pairs are in the relation of a function from \(S\) to \(T\text{?}\)</p>
+<p id="p-1849">What is the size of the largest relation from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="task-236"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1851">What is the size of the smallest relation from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="task-237"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1853">The relation of a function \(f:S\rightarrow T\) is the set of all ordered pairs \((x,f(x))\) with \(x\in S\text{.}\)  What is the size of the relation of a function from \(S\) to \(T\text{?}\)  That is, how many ordered pairs are in the relation of a function from \(S\) to \(T\text{?}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-248" id="hint-248"><span class="type">Hint</span></a></span><div id="hk-hint-248" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1853">In the relation of a function, how many pairs \((x, f (x))\) have the same \(x\)-value?</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-248" id="hint-248"><span class="type">Hint</span></a><div id="hk-hint-248" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1854">In the relation of a function, how many pairs \((x, f (x))\) have the same \(x\)-value?</p></div></div>
 </div></article><article class="exercise-like" id="task-238"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1855">We say \(f\) is a <dfn class="terminology">one-to-one</dfn> function or <dfn class="terminology">injection</dfn> from \(S\) to \(T\) if each member of \(S\) is related to a <em class="emphasis">different</em> element of \(T\text{.}\) How many different elements must appear as second elements of the ordered pairs in the relation of a one-to-one function (injection) from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="onto"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1857">A function \(f:S\rightarrow T\) is called an <dfn class="terminology">onto function</dfn> or <dfn class="terminology">surjection</dfn> if each element of \(T\) is \(f(x)\) for some \(x\in S\) What is the minimum size that \(S\) can have if there is a  surjection from \(S\) to \(T\text{?}\)</p></article></article><article class="example-like" id="activity-330"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">330</span>
+<p id="p-1856">We say \(f\) is a <dfn class="terminology">one-to-one</dfn> function or <dfn class="terminology">injection</dfn> from \(S\) to \(T\) if each member of \(S\) is related to a <em class="emphasis">different</em> element of \(T\text{.}\) How many different elements must appear as second elements of the ordered pairs in the relation of a one-to-one function (injection) from \(S\) to \(T\text{?}\)</p></article><article class="exercise-like" id="onto"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1858">A function \(f:S\rightarrow T\) is called an <dfn class="terminology">onto function</dfn> or <dfn class="terminology">surjection</dfn> if each element of \(T\) is \(f(x)\) for some \(x\in S\) What is the minimum size that \(S\) can have if there is a  surjection from \(S\) to \(T\text{?}\)</p></article></article><article class="example-like" id="activity-330"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">330</span>
 </h6>
-<div class="introduction" id="introduction-68"><p id="p-1859">When \(f\) is a function from \(S\) to \(T\text{,}\) the sets \(S\) and \(T\) play a big role in determining whether a function is one-to-one or onto (as defined in <a knowl="./knowl/formalrelations.html" knowl-id="xref-formalrelations" alt="Problem 329 " title="Problem 329 ">Problem 329</a>). For the remainder of this problem, let \(S\) and \(T\) stand for  the set of nonnegative real numbers.</p></div>
+<div class="introduction" id="introduction-68"><p id="p-1860">When \(f\) is a function from \(S\) to \(T\text{,}\) the sets \(S\) and \(T\) play a big role in determining whether a function is one-to-one or onto (as defined in <a knowl="./knowl/formalrelations.html" title="Problem 329">Problem 329</a>). For the remainder of this problem, let \(S\) and \(T\) stand for  the set of nonnegative real numbers.</p></div>
 <article class="exercise-like" id="task-240"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1860">If \(f:S\rightarrow T\) is given by \(f(x) =x^2\text{,}\) is \(f\) one-to-one? Is \(f\) onto?</p></article><article class="exercise-like" id="task-241"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1862">Now assume \(S'\) is the set of all real numbers and \(g:S'\rightarrow T\) is given by \(g(x) = x^2\text{.}\) Is \(g\) one-to-one? Is \(g\) onto?</p></article><article class="exercise-like" id="task-242"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1864">Assume that \(T'\) is the set of all real numbers and \(h:S\rightarrow T'\) is given by \(h(x) = x^2\text{.}\) Is \(h\) one-to-one? Is \(h\) onto?</p></article><article class="exercise-like" id="task-243"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1866">And if the function \(j:S'\rightarrow T'\) is given by \(j(x)=x^2\text{,}\) is \(j\) one-to-one? Is \(j\) onto?</p></article></article><article class="example-like" id="activity-331"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">331</span>
+<p id="p-1861">If \(f:S\rightarrow T\) is given by \(f(x) =x^2\text{,}\) is \(f\) one-to-one? Is \(f\) onto?</p></article><article class="exercise-like" id="task-241"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1863">Now assume \(S'\) is the set of all real numbers and \(g:S'\rightarrow T\) is given by \(g(x) = x^2\text{.}\) Is \(g\) one-to-one? Is \(g\) onto?</p></article><article class="exercise-like" id="task-242"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1865">Assume that \(T'\) is the set of all real numbers and \(h:S\rightarrow T'\) is given by \(h(x) = x^2\text{.}\) Is \(h\) one-to-one? Is \(h\) onto?</p></article><article class="exercise-like" id="task-243"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1867">And if the function \(j:S'\rightarrow T'\) is given by \(j(x)=x^2\text{,}\) is \(j\) one-to-one? Is \(j\) onto?</p></article></article><article class="example-like" id="activity-331"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">331</span>
 </h6>
-<p id="p-1868">If \(f:S\rightarrow T\) is a function, we say that \(f\) <dfn class="terminology">maps</dfn> \(x\) to \(y\) as another way to say that \(f(x)=y\text{.}\) Suppose \(S=T=\{1,2,3\}\text{.}\) Give a function from \(S\) to \(T\) that is not onto. Notice that two different members of \(S\) have mapped to the same element of \(T\text{.}\) Thus when we say that \(f\) associates one and only one element of \(T\) to each element of \(S\text{,}\) it is quite possible that the one and only one element \(f(1)\) that \(f\) maps 1 to is exactly the same as the one and only one element \(f(2)\) that \(f\) maps 2 to.</p></article></section><section class="subsection" id="relationdigraph"><h3 class="heading hide-type" alt="Subsection A.1.2 Directed graphs">
-<span class="type">Subsection</span><span class="codenumber">A.1.2</span><span class="title">Directed graphs</span>
+<p id="p-1869">If \(f:S\rightarrow T\) is a function, we say that \(f\) <dfn class="terminology">maps</dfn> \(x\) to \(y\) as another way to say that \(f(x)=y\text{.}\) Suppose \(S=T=\{1,2,3\}\text{.}\) Give a function from \(S\) to \(T\) that is not onto. Notice that two different members of \(S\) have mapped to the same element of \(T\text{.}\) Thus when we say that \(f\) associates one and only one element of \(T\) to each element of \(S\text{,}\) it is quite possible that the one and only one element \(f(1)\) that \(f\) maps 1 to is exactly the same as the one and only one element \(f(2)\) that \(f\) maps 2 to.</p></article></section><section class="subsection" id="relationdigraph"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">A.1.2</span> <span class="title">Directed graphs</span>
 </h3>
-<a href="relationsandfunctions.html#relationdigraph" class="permalink">¶</a><p id="p-1870">We visualize numerical functions like \(f(x)=x^2\) with their graphs in Cartesian coordinate systems. We will call these kinds of graphs <em class="emphasis">coordinate graphs</em> to distinguish them from other kinds of graphs used to visualize relations that are non-numerical.</p>
-<figure class="figure-like" id="alphabetdigraph"><img src="images/alphabetdigraph.svg" width="10%" style="display: block; margin: 0 auto;" alt=""><figcaption><span class="type">Figure</span><span class="codenumber">A.1.1</span>The alphabet digraph.</figcaption></figure><p id="p-1871">In <a knowl="./knowl/alphabetdigraph.html" knowl-id="xref-alphabetdigraph" alt="Figure A.1.1 " title="Figure A.1.1 ">Figure A.1.1</a> we illustrate another kind of graph, a “directed graph” or “digraph” of the ``comes before in alphabetical order" relation on the letters \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{.}\) To draw a <dfn class="terminology">directed graph</dfn> of a relation on a set \(S\text{,}\) we draw a circle (or dot, if we prefer), which we call a <dfn class="terminology">vertex</dfn>, for each element of the set, we usually label the vertex with the set element it corresponds to, and we draw an arrow from the vertex for \(a\) to that for \(b\) if \(a\) is related to \(b\text{,}\) that is, if the ordered pair \((a,b)\) is in our relation. We call such an arrow an <dfn class="terminology">edge</dfn> or a <dfn class="terminology">directed edge</dfn>. We draw the arrow from \(a\) to \(b\text{,}\) for example, because \(a\) comes before \(b\) in alphabetical order. We try to choose the locations where we draw our vertices so that the arrows capture what we are trying to illustrate as well as possible. Sometimes this entails redrawing our directed graph several times until we think the arrows capture the relationship well.</p>
-<p id="p-1872">We also draw digraphs for relations from a set \(S\) to a set \(T\text{;}\) we simply draw vertices for the elements of \(S\) (usually in a row) and vertices for the elements of \(T\) (usually in a parallel row) draw an arrow from \(x\) in \(S\) to \(y\) in \(T\) if \(x\) is related to \(y\text{.}\) Notice that instead of referring to the vertex representing \(x\text{,}\) we simply referred to \(x\text{.}\) This is a common shorthand. Here are some exercises just to practice drawing digraphs.</p>
+<a href="relationsandfunctions.html#relationdigraph" class="permalink">¶</a><p id="p-1871">We visualize numerical functions like \(f(x)=x^2\) with their graphs in Cartesian coordinate systems. We will call these kinds of graphs <em class="emphasis">coordinate graphs</em> to distinguish them from other kinds of graphs used to visualize relations that are non-numerical.</p>
+<figure class="figure-like" id="alphabetdigraph"><img src="images/alphabetdigraph.svg" width="10%" style="display: block; margin: 0 auto;" alt=""><figcaption><span class="type">Figure</span> <span class="codenumber">A.1.1</span> The alphabet digraph.</figcaption></figure><p id="p-1872">In <a knowl="./knowl/alphabetdigraph.html" title="Figure A.1.1">Figure A.1.1</a> we illustrate another kind of graph, a “directed graph” or “digraph” of the ``comes before in alphabetical order" relation on the letters \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{.}\) To draw a <dfn class="terminology">directed graph</dfn> of a relation on a set \(S\text{,}\) we draw a circle (or dot, if we prefer), which we call a <dfn class="terminology">vertex</dfn>, for each element of the set, we usually label the vertex with the set element it corresponds to, and we draw an arrow from the vertex for \(a\) to that for \(b\) if \(a\) is related to \(b\text{,}\) that is, if the ordered pair \((a,b)\) is in our relation. We call such an arrow an <dfn class="terminology">edge</dfn> or a <dfn class="terminology">directed edge</dfn>. We draw the arrow from \(a\) to \(b\text{,}\) for example, because \(a\) comes before \(b\) in alphabetical order. We try to choose the locations where we draw our vertices so that the arrows capture what we are trying to illustrate as well as possible. Sometimes this entails redrawing our directed graph several times until we think the arrows capture the relationship well.</p>
+<p id="p-1873">We also draw digraphs for relations from a set \(S\) to a set \(T\text{;}\) we simply draw vertices for the elements of \(S\) (usually in a row) and vertices for the elements of \(T\) (usually in a parallel row) draw an arrow from \(x\) in \(S\) to \(y\) in \(T\) if \(x\) is related to \(y\text{.}\) Notice that instead of referring to the vertex representing \(x\text{,}\) we simply referred to \(x\text{.}\) This is a common shorthand. Here are some exercises just to practice drawing digraphs.</p>
 <article class="example-like" id="activity-332"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">332</span>
+<span class="type">Problem</span> <span class="codenumber">332</span>
 </h6>
-<p id="p-1873">Draw the digraph of the “is a proper subset of” relation on the set of subsets of a two element set. How many arrows would you have had to draw if this problem asked you to draw the digraph for the subsets of a three-element set?</p>
+<p id="p-1874">Draw the digraph of the “is a proper subset of” relation on the set of subsets of a two element set. How many arrows would you have had to draw if this problem asked you to draw the digraph for the subsets of a three-element set?</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-249" id="hint-249"><span class="type">Hint</span></a></span><div id="hk-hint-249" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1874">For the second question, how many arrows have to leave the empty set? How many arrows have to leave a set of size one?</p></span></div>
-</div></article><p id="p-1876">We also draw digraphs for relations from finite set \(S\) to a finite set \(T\text{;}\) we simply draw vertices for the elements of \(S\) (usually in a row) and vertices for the elements of \(T\) (usually in a parallel row) and draw an arrow from \(x\) in \(S\) to \(y\) in \(T\) if \(x\) is related to \(y\text{.}\) Notice that instead of referring to the vertex representing \(x\text{,}\) we simply referred to \(x\text{.}\) This is a common shorthand.</p>
+<a knowl="" class="id-ref" refid="hk-hint-249" id="hint-249"><span class="type">Hint</span></a><div id="hk-hint-249" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1875">For the second question, how many arrows have to leave the empty set? How many arrows have to leave a set of size one?</p></div></div>
+</div></article><p id="p-1877">We also draw digraphs for relations from finite set \(S\) to a finite set \(T\text{;}\) we simply draw vertices for the elements of \(S\) (usually in a row) and vertices for the elements of \(T\) (usually in a parallel row) and draw an arrow from \(x\) in \(S\) to \(y\) in \(T\) if \(x\) is related to \(y\text{.}\) Notice that instead of referring to the vertex representing \(x\text{,}\) we simply referred to \(x\text{.}\) This is a common shorthand.</p>
 <article class="example-like" id="initialdigraph"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">333</span>
+<span class="type">Problem</span> <span class="codenumber">333</span>
 </h6>
-<p id="p-1877">Draw the digraph of the relation from the set \{A, M, P, S\} to the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} given by “is the first letter of.”</p></article><article class="example-like" id="initialdigraph2"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">334</span>
+<p id="p-1878">Draw the digraph of the relation from the set \{A, M, P, S\} to the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} given by “is the first letter of.”</p></article><article class="example-like" id="initialdigraph2"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">334</span>
 </h6>
-<p id="p-1878">Draw the digraph of the relation from the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} to the set \{A, M, P, S\} given by “has as its first letter.”</p></article><article class="example-like" id="activity-335"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">335</span>
+<p id="p-1879">Draw the digraph of the relation from the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} to the set \{A, M, P, S\} given by “has as its first letter.”</p></article><article class="example-like" id="activity-335"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">335</span>
 </h6>
-<p id="p-1879">Draw the digraph of the relation on the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} given by “has the same first letter as.”</p></article></section><section class="subsection" id="digraphsoffunctions"><h3 class="heading hide-type" alt="Subsection A.1.3 Digraphs of Functions">
-<span class="type">Subsection</span><span class="codenumber">A.1.3</span><span class="title">Digraphs of Functions</span>
+<p id="p-1880">Draw the digraph of the relation on the set \{Sam, Mary, Pat, Ann, Polly, Sarah\} given by “has the same first letter as.”</p></article></section><section class="subsection" id="digraphsoffunctions"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">A.1.3</span> <span class="title">Digraphs of Functions</span>
 </h3>
 <a href="relationsandfunctions.html#digraphsoffunctions" class="permalink">¶</a><article class="example-like" id="activity-336"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">336</span>
+<span class="type">Problem</span> <span class="codenumber">336</span>
 </h6>
-<div class="introduction" id="introduction-69"><p id="p-1880">When we draw the digraph of a function \(f\text{,}\) we draw an arrow <em class="emphasis">from</em> the vertex representing \(x\) <em class="emphasis">to</em> the vertex representing \(f(x)\text{.}\)  One of the relations you considered in <a knowl="./knowl/initialdigraph.html" knowl-id="xref-initialdigraph" alt="Problem 333 " title="Problem 333 ">Problems 333</a> and <a knowl="./knowl/initialdigraph2.html" knowl-id="xref-initialdigraph2" alt="Problem 334 " title="Problem 334 ">Problem 334</a> is the relation of a function.</p></div>
+<div class="introduction" id="introduction-69"><p id="p-1881">When we draw the digraph of a function \(f\text{,}\) we draw an arrow <em class="emphasis">from</em> the vertex representing \(x\) <em class="emphasis">to</em> the vertex representing \(f(x)\text{.}\)  One of the relations you considered in <a knowl="./knowl/initialdigraph.html" title="Problem 333">Problems 333</a> and <a knowl="./knowl/initialdigraph2.html" title="Problem 334">Problem 334</a> is the relation of a function.</p></div>
 <article class="exercise-like" id="task-244"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1881">Which relation is the relation of a function?</p></article><article class="exercise-like" id="task-245"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1883">How does the digraph help you visualize that one relation is a function and the other is not?</p></article></article><article class="example-like" id="functiondigraphs-prob"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">337</span>
+<p id="p-1882">Which relation is the relation of a function?</p></article><article class="exercise-like" id="task-245"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1884">How does the digraph help you visualize that one relation is a function and the other is not?</p></article></article><article class="example-like" id="functiondigraphs-prob"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">337</span>
 </h6>
-<div class="introduction" id="introduction-70"><p id="p-1885">Digraphs of functions help us to visualize whether or not they are onto or one-to-one. For example, let both \(S\) and \(T\) be the set \(\{-2, -1, 0 ,1, 2\}\) and let \(S'\) and \(T'\) be the set \(\{0,1,2\}\text{.}\)  Let \(f(x) = 2-|x|\text{.}\)</p></div>
+<div class="introduction" id="introduction-70"><p id="p-1886">Digraphs of functions help us to visualize whether or not they are onto or one-to-one. For example, let both \(S\) and \(T\) be the set \(\{-2, -1, 0 ,1, 2\}\) and let \(S'\) and \(T'\) be the set \(\{0,1,2\}\text{.}\)  Let \(f(x) = 2-|x|\text{.}\)</p></div>
 <article class="exercise-like" id="task-246"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1886">Draw the digraph of the function \(f\) assuming its domain is \(S\) and its range is \(T\text{.}\)  Use the digraph to explain why or why not this function maps \(S\) onto \(T\text{.}\)</p></article><article class="exercise-like" id="task-247"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1888">Use the digraph of the previous part to explain whether or not the function is one-to one.</p></article><article class="exercise-like" id="task-248"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1890">Draw the digraph of the function \(f\) assuming its domain is \(S\) and its range is \(T'\text{.}\) Use the digraph to explain whether or not the function is onto.</p></article><article class="exercise-like" id="task-249"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1892">Use the digraph of the previous part to explain whether or not the function is one-to-one.</p></article><article class="exercise-like" id="task-250"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1894">Draw the digraph of the function \(f\) assuming its domain is \(S'\) and its range is \(T'\text{.}\) Use the digraph to explain whether the function is onto.</p></article><article class="exercise-like" id="task-251"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<p id="p-1896">Use the digraph of the previous part to explain whether the function is one-to-one.</p></article><article class="exercise-like" id="task-252"><h6 class="heading"><span class="codenumber">(g)</span></h6>
-<p id="p-1898">Suppose the function \(f\) has domain \(S'\) and range \(T\text{.}\)  Draw the digraph of \(f\) and use it to explain whether \(f\) is onto.</p></article><article class="exercise-like" id="task-253"><h6 class="heading"><span class="codenumber">(h)</span></h6>
-<p id="p-1900">Use the digraph of the previous part to explain whether \(f\) is one-to-one.</p></article></article><p id="p-1902">A one-to-one function from a set \(X\) onto a set \(Y\) is frequently called a <dfn class="terminology">bijection</dfn>, especially in combinatorics.  Your work in <a knowl="./knowl/functiondigraphs-prob.html" knowl-id="xref-functiondigraphs-prob" alt="Problem 337 " title="Problem 337 ">Problem 337</a> should show you that a digraph is the digraph of a bijection from \(X\) to \(Y\) </p>
+<p id="p-1887">Draw the digraph of the function \(f\) assuming its domain is \(S\) and its range is \(T\text{.}\)  Use the digraph to explain why or why not this function maps \(S\) onto \(T\text{.}\)</p></article><article class="exercise-like" id="task-247"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1889">Use the digraph of the previous part to explain whether or not the function is one-to one.</p></article><article class="exercise-like" id="task-248"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1891">Draw the digraph of the function \(f\) assuming its domain is \(S\) and its range is \(T'\text{.}\) Use the digraph to explain whether or not the function is onto.</p></article><article class="exercise-like" id="task-249"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1893">Use the digraph of the previous part to explain whether or not the function is one-to-one.</p></article><article class="exercise-like" id="task-250"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1895">Draw the digraph of the function \(f\) assuming its domain is \(S'\) and its range is \(T'\text{.}\) Use the digraph to explain whether the function is onto.</p></article><article class="exercise-like" id="task-251"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1897">Use the digraph of the previous part to explain whether the function is one-to-one.</p></article><article class="exercise-like" id="task-252"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-1899">Suppose the function \(f\) has domain \(S'\) and range \(T\text{.}\)  Draw the digraph of \(f\) and use it to explain whether \(f\) is onto.</p></article><article class="exercise-like" id="task-253"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-1901">Use the digraph of the previous part to explain whether \(f\) is one-to-one.</p></article></article><p id="p-1903">A one-to-one function from a set \(X\) onto a set \(Y\) is frequently called a <dfn class="terminology">bijection</dfn>, especially in combinatorics.  Your work in <a knowl="./knowl/functiondigraphs-prob.html" title="Problem 337">Problem 337</a> should show you that a digraph is the digraph of a bijection from \(X\) to \(Y\) </p>
 <ul class="disc">
-<li id="li-126"><p id="p-1903">if the vertices of the digraph represent the elements of \(X\) and \(Y\text{,}\)</p></li>
-<li id="li-127"><p id="p-1904">if each vertex representing an element of \(X\) has one and only one arrow leaving it, and</p></li>
-<li id="li-128"><p id="p-1905">each vertex representing an element of \(Y\) has one and only one arrow entering it.</p></li>
+<li id="li-126"><p id="p-1904">if the vertices of the digraph represent the elements of \(X\) and \(Y\text{,}\)</p></li>
+<li id="li-127"><p id="p-1905">if each vertex representing an element of \(X\) has one and only one arrow leaving it, and</p></li>
+<li id="li-128"><p id="p-1906">each vertex representing an element of \(Y\) has one and only one arrow entering it.</p></li>
 </ul>
 <article class="example-like" id="activity-338"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">338</span>
+<span class="type">Problem</span> <span class="codenumber">338</span>
 </h6>
-<p id="p-1906">If we reverse all the arrows in the digraph of a bijection \(f\text{,}\) we get the digraph of another function \(g\text{.}\) Is \(g\) a bijection? What is \(f(g(x))\text{?}\) What is \(g(f(x))\text{?}\)</p></article><p id="p-1908">If \(f\) is a function from \(S\) to \(T\text{,}\) if \(g\) is a function from \(T\) to \(S\text{,}\) and if \(f(g(x))= x\) for each \(x\) in \(T\) and \(g(f(x)) = x\) for each \(x\) in \(S\text{,}\) then we say that \(g\) is an inverse of \(f\) (and \(f\) is an inverse of \(g\)).</p>
-<p id="p-1909">More generally, if \(f\) is a function from a set \(R\) to a set \(S\text{,}\) and \(g\) is a function from \(S\) to \(T\text{,}\) then we define a new function \(f \circ g\text{,}\) called the <dfn class="terminology">composition</dfn> of \(f\) and \(g\) , by \(f\circ g(x) = f(g(x))\text{.}\)  Composition of functions is a particularly important operatio in subjects such as calculus, where we represent a function like \(h(x) = \sqrt{x^2 + 1}\) as the composition of the square root function and the square and add one function in order to use the chain rule to take the derivative of \(h\text{.}\)</p>
-<p id="p-1910">The function \(\iota\) (the Greek letter iota is pronounced eye-oh-ta) from a set \(S\) to itself, given by the rule \(\iota(x) = x\) for every \(x\) in \(S\text{,}\) is called the <dfn class="terminology">identity function</dfn> on S.  If \(f\) is a function from \(S\) to \(T\) and \(g\) is a function from \(T\) to \(S\) such that \(g(f(x)) = x\) for every \(x\) in \(S\text{,}\) we can express this by saying that \(g\circ f = \iota\text{,}\) where \(\iota\) is the identity function of \(S\text{.}\) Saying that \(f(g(x)) = x\) is the same as saying that \(f\circ g = \iota\text{,}\) where \(\iota\) stands for the identity function on \(T\text{.}\)  We use the same letter for the identity function on two different sets when we can use context to tell us on which set the identity function is being defined.</p>
+<p id="p-1907">If we reverse all the arrows in the digraph of a bijection \(f\text{,}\) we get the digraph of another function \(g\text{.}\) Is \(g\) a bijection? What is \(f(g(x))\text{?}\) What is \(g(f(x))\text{?}\)</p></article><p id="p-1909">If \(f\) is a function from \(S\) to \(T\text{,}\) if \(g\) is a function from \(T\) to \(S\text{,}\) and if \(f(g(x))= x\) for each \(x\) in \(T\) and \(g(f(x)) = x\) for each \(x\) in \(S\text{,}\) then we say that \(g\) is an inverse of \(f\) (and \(f\) is an inverse of \(g\)).</p>
+<p id="p-1910">More generally, if \(f\) is a function from a set \(R\) to a set \(S\text{,}\) and \(g\) is a function from \(S\) to \(T\text{,}\) then we define a new function \(f \circ g\text{,}\) called the <dfn class="terminology">composition</dfn> of \(f\) and \(g\) , by \(f\circ g(x) = f(g(x))\text{.}\)  Composition of functions is a particularly important operatio in subjects such as calculus, where we represent a function like \(h(x) = \sqrt{x^2 + 1}\) as the composition of the square root function and the square and add one function in order to use the chain rule to take the derivative of \(h\text{.}\)</p>
+<p id="p-1911">The function \(\iota\) (the Greek letter iota is pronounced eye-oh-ta) from a set \(S\) to itself, given by the rule \(\iota(x) = x\) for every \(x\) in \(S\text{,}\) is called the <dfn class="terminology">identity function</dfn> on S.  If \(f\) is a function from \(S\) to \(T\) and \(g\) is a function from \(T\) to \(S\) such that \(g(f(x)) = x\) for every \(x\) in \(S\text{,}\) we can express this by saying that \(g\circ f = \iota\text{,}\) where \(\iota\) is the identity function of \(S\text{.}\) Saying that \(f(g(x)) = x\) is the same as saying that \(f\circ g = \iota\text{,}\) where \(\iota\) stands for the identity function on \(T\text{.}\)  We use the same letter for the identity function on two different sets when we can use context to tell us on which set the identity function is being defined.</p>
 <article class="example-like" id="activity-339"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">339</span>
+<span class="type">Problem</span> <span class="codenumber">339</span>
 </h6>
-<p id="p-1911">If \(f\) is a function from \(S\) to \(T\) and \(g\) is a function from \(T\) to \(S\) such that \(g(f(x)) = x\text{,}\) how can we tell from context that \(g\circ f\) is the identity function on \(S\) and not the identity function on \(T\text{?}\)</p>
+<p id="p-1912">If \(f\) is a function from \(S\) to \(T\) and \(g\) is a function from \(T\) to \(S\) such that \(g(f(x)) = x\text{,}\) how can we tell from context that \(g\circ f\) is the identity function on \(S\) and not the identity function on \(T\text{?}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-250" id="hint-250"><span class="type">Hint</span></a></span><div id="hk-hint-250" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1912">What is the domain of \(g \circ f\text{?}\)</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-250" id="hint-250"><span class="type">Hint</span></a><div id="hk-hint-250" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1913">What is the domain of \(g \circ f\text{?}\)</p></div></div>
 </div></article><article class="example-like" id="inversetobijection"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">340</span>
+<span class="type">Problem</span> <span class="codenumber">340</span>
 </h6>
-<p id="p-1914">Explain why a function that has an inverse must be a bijection.</p></article><article class="example-like" id="activity-341"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">341</span>
+<p id="p-1915">Explain why a function that has an inverse must be a bijection.</p></article><article class="example-like" id="activity-341"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">341</span>
 </h6>
-<p id="p-1916">Is it true that the inverse of a bijection is a bijection?</p></article><article class="example-like" id="activity-342"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">342</span>
+<p id="p-1917">Is it true that the inverse of a bijection is a bijection?</p></article><article class="example-like" id="activity-342"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">342</span>
 </h6>
-<p id="p-1918">If \(g\) and \(h\) are inverse of \(f\text{,}\) then what can we say about \(g\) and \(h\text{?}\)</p></article><article class="example-like" id="activity-343"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">343</span>
+<p id="p-1919">If \(g\) and \(h\) are inverse of \(f\text{,}\) then what can we say about \(g\) and \(h\text{?}\)</p></article><article class="example-like" id="activity-343"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">343</span>
 </h6>
-<p id="p-1920">Explain why a bijection must have an inverse.</p></article><p id="p-1922">Since a function with an inverse has exactly one inverse \(g\text{,}\) we call \(g\) <em class="emphasis">the</em> inverse of \(f\text{.}\)  From now on, when \(f\) has an inverse, we shall denote its inverse by \(f^{-1}\text{.}\)  Thus \(f(f^{-1}(x)) = x\) and \(f^{-1}(f(x)) = x\text{.}\)  Equivalenetly \(f\circ f^{-1} = \iota\) and \(f^{-1} \circ f = \iota\text{.}\)</p></section></section></div></main>
+<p id="p-1921">Explain why a bijection must have an inverse.</p></article><p id="p-1923">Since a function with an inverse has exactly one inverse \(g\text{,}\) we call \(g\) <em class="emphasis">the</em> inverse of \(f\text{.}\)  From now on, when \(f\) has an inverse, we shall denote its inverse by \(f^{-1}\text{.}\)  Thus \(f(f^{-1}(x)) = x\) and \(f^{-1}(f(x)) = x\text{.}\)  Equivalenetly \(f\circ f^{-1} = \iota\) and \(f^{-1} \circ f = \iota\text{.}\)</p></section></section></div></main>
 </div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code-->
 </body>
 </html>

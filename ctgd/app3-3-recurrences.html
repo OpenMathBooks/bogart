@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:31-06:00    *-->
+<!--*    on 2018-08-12T12:00:27-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>CTGD Applications to recurrences.</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -35,18 +35,18 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
-\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
-\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\qchoose}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_q}
+\def\neg1choose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
 \newcommand{\bp}{
 \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
 \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
@@ -75,16 +75,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app3-2-expogenfns.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="expogenfun.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="app3-4-prodprinc.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app3-2-expogenfns.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="expogenfun.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="app3-4-prodprinc.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app3-2-expogenfns.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="expogenfun.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="app3-4-prodprinc.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app3-2-expogenfns.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="expogenfun.html" title="Up">Up</a><a class="next-button button toolbar-item" href="app3-4-prodprinc.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
@@ -92,42 +92,42 @@ MathJax.Hub.Config({
 <li><a href="preface.html" data-scroll="preface">Preface</a></li>
 <li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
 </ul>
-<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title punctuated">What is Combinatorics?</span></a></h2>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span> <span class="title punctuated">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
 <li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
 <li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
 <li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
 </ul>
-<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span> <span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
 <ul>
 <li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
 <li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span> <span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
 <li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
 <li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span> <span class="title">Generating Functions</span></a></h2>
 <ul>
 <li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
 <li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
 <li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
 <li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span> <span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
 <ul>
 <li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
 <li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
 <li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
 <li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span> <span class="title">Groups acting on sets</span></a></h2>
 <ul>
 <li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
 <li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
@@ -142,46 +142,58 @@ MathJax.Hub.Config({
 <li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="app3-3-recurrences"><h2 class="heading hide-type" alt="Section C.3 Applications to recurrences.">
-<span class="type">Section</span><span class="codenumber">C.3</span><span class="title">Applications to recurrences.</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="app3-3-recurrences"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">C.3</span> <span class="title">Applications to recurrences.</span>
 </h2>
-<a href="app3-3-recurrences.html" class="permalink">¶</a><section class="introduction" id="introduction-71"><p id="p-2074">We saw that ordinary generating functions often play a role in solving recurrence relations. We found them most useful in the constant coefficient case. Exponential generating functions are useful in solving recurrence relations where the coefficients involve simple functions of \(n\text{,}\) because the \(n!\) in the denominator can cancel out factors of \(n\) in the numerator.</p>
+<a href="app3-3-recurrences.html" class="permalink">¶</a><section class="introduction" id="introduction-71"><p id="p-2075">We saw that ordinary generating functions often play a role in solving recurrence relations. We found them most useful in the constant coefficient case. Exponential generating functions are useful in solving recurrence relations where the coefficients involve simple functions of \(n\text{,}\) because the \(n!\) in the denominator can cancel out factors of \(n\) in the numerator.</p>
 <article class="example-like motivation" id="activity-384"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">384</span>
+<span class="type">Problem</span> <span class="codenumber">384</span>
 </h6>
-<p id="p-2075">Consider the recurrence \(a_n=na_{n-1} +n(n-1)\text{.}\) Multiply both sides by \(\frac{x^n}{n!}\text{,}\) and sum from \(n=2\) to \(\infty\text{.}\) (Why do we sum from \(n=2\) to infinity instead of \(n=1\) or \(n=0\text{?}\)) Letting \(y =
+<p id="p-2076">Consider the recurrence \(a_n=na_{n-1} +n(n-1)\text{.}\) Multiply both sides by \(\frac{x^n}{n!}\text{,}\) and sum from \(n=2\) to \(\infty\text{.}\) (Why do we sum from \(n=2\) to infinity instead of \(n=1\) or \(n=0\text{?}\)) Letting \(y =
 \sum_{i=0}^\infty a_ix^i\text{,}\) show that the left-hand side of the equation is \(y-a_0 -a_1x\text{.}\) Express the right hand side in terms of \(y\text{,}\) \(x\text{,}\) and \(e^x\text{.}\) Solve the resulting equation for \(y\) and use the result to get an equation for \(a_n\text{.}\) (A finite summation is acceptable in your answer for \(a_n\text{.}\))</p></article><article class="example-like interesting-forward-essential" id="telephonenetwork"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">385</span>
+<span class="type">Problem</span> <span class="codenumber">385</span>
 </h6>
-<div class="introduction" id="introduction-72"><p id="p-2078">The telephone company in a city has \(n\) subscribers. Assume a telephone call involves exactly two subscribers (that is, there are no calls to outside the network and no conference calls), and that the configuration of the telephone network is determined by which pairs of subscribers are talking. Notice that we may think of a configuration of the telephone network as a permutation whose cycle decomposition consists entirely of one-cycles and two-cycles, that is, we may think of a configuration as an involution in the symmetric group \(S_n\text{.}\)</p></div>
+<div class="introduction" id="introduction-72"><p id="p-2079">The telephone company in a city has \(n\) subscribers. Assume a telephone call involves exactly two subscribers (that is, there are no calls to outside the network and no conference calls), and that the configuration of the telephone network is determined by which pairs of subscribers are talking. Notice that we may think of a configuration of the telephone network as a permutation whose cycle decomposition consists entirely of one-cycles and two-cycles, that is, we may think of a configuration as an involution in the symmetric group \(S_n\text{.}\)</p></div>
 <article class="exercise-like" id="task-259"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2079">Give a recurrence for the number \(c_n\) of configurations of the network. (Hint: Person \(n\) is either on  the phone or not.)</p></article><article class="exercise-like" id="task-260"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2081">What are \(c_0\) and \(c_1\text{?}\)</p></article><article class="exercise-like" id="task-261"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-2083">What are \(c_2\) through \(c_6\text{?}\)</p></article></article><article class="example-like interesting-forward-essential" id="derangementrecurrence"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">386</span>
+<p id="p-2080">Give a recurrence for the number \(c_n\) of configurations of the network. (Hint: Person \(n\) is either on  the phone or not.)</p></article><article class="exercise-like" id="task-260"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2082">What are \(c_0\) and \(c_1\text{?}\)</p></article><article class="exercise-like" id="task-261"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2084">What are \(c_2\) through \(c_6\text{?}\)</p></article></article><article class="example-like interesting-forward-essential" id="derangementrecurrence"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">386</span>
 </h6>
-<p id="p-2085">Recall that a <dfn class="terminology">derangement</dfn> of \([n]\) is a permutation of \([n]\) that has no fixed points, or equivalently is a way to pass out \(n\) hats to their \(n\) different owners so that nobody gets the correct hat. Use \(d_n\) to stand for the number of derangements of \([n]\text{.}\) We can think of derangement of \([n]\) as a list of \(1\) through \(n\) so that \(i\) is not in the \(i\)th place for any \(n\text{.}\) Thus in a derangement, some number \(k\) different from \(n\) is in position \(n\text{.}\) Consider two cases: either \(n\) is in position \(k\) or it is not. Notice that in the second case, if we erase position \(n\) and replace \(n\) by \(k\text{,}\) we get a derangement of \([n-1]\text{.}\) Based on these two cases, find a recurrence for \(d_n\text{.}\) What is \(d_1\text{?}\) What is \(d_2\text{?}\) What is \(d_0\text{?}\) What are \(d_3\) through \(d_6\text{?}\)</p></article></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type" alt="Subsection C.3.1 Using calculus  with exponential generating functions">
-<span class="type">Subsection</span><span class="codenumber">C.3.1</span><span class="title">Using calculus  with exponential generating functions</span>
+<p id="p-2086">Recall that a <dfn class="terminology">derangement</dfn> of \([n]\) is a permutation of \([n]\) that has no fixed points, or equivalently is a way to pass out \(n\) hats to their \(n\) different owners so that nobody gets the correct hat. Use \(d_n\) to stand for the number of derangements of \([n]\text{.}\) We can think of derangement of \([n]\) as a list of \(1\) through \(n\) so that \(i\) is not in the \(i\)th place for any \(n\text{.}\) Thus in a derangement, some number \(k\) different from \(n\) is in position \(n\text{.}\) Consider two cases: either \(n\) is in position \(k\) or it is not. Notice that in the second case, if we erase position \(n\) and replace \(n\) by \(k\text{,}\) we get a derangement of \([n-1]\text{.}\) Based on these two cases, find a recurrence for \(d_n\text{.}\) What is \(d_1\text{?}\) What is \(d_2\text{?}\) What is \(d_0\text{?}\) What are \(d_3\) through \(d_6\text{?}\)</p></article></section><section class="subsection" id="subsection-77"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">C.3.1</span> <span class="title">Using calculus  with exponential generating functions</span>
 </h3>
 <a href="app3-3-recurrences.html#subsection-77" class="permalink">¶</a><article class="example-like interesting-forward-essential" id="telephonenetworkEGF"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">387</span>
+<span class="type">Problem</span> <span class="codenumber">387</span>
 </h6>
-<div class="introduction" id="introduction-73"><p id="p-2087">Your recurrence in <a knowl="./knowl/telephonenetwork.html" knowl-id="xref-telephonenetwork" alt="Problem 385 " title="Problem 385 ">Problem 385</a> should be a second order recurrence.</p></div>
+<div class="introduction" id="introduction-73"><p id="p-2088">Your recurrence in <a knowl="./knowl/telephonenetwork.html" title="Problem 385">Problem 385</a> should be a second order recurrence.</p></div>
 <article class="exercise-like" id="task-262"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2088">Assuming that the left hand side is \(c_n\) and the right hand side involves \(c_{n-1}\) and \(c_{n-2}\text{,}\) decide on an appropriate power of \(x\) divided by an appropriate factorial by which to multiply both sides of the recurrence.  Using the fact that the derivative of \(\frac{x^n}{n!}\) is \(\frac{x^{n-1}}{(n-1)!}\text{,}\) write down a differential equation for the EGF \(T(x) =
+<p id="p-2089">Assuming that the left hand side is \(c_n\) and the right hand side involves \(c_{n-1}\) and \(c_{n-2}\text{,}\) decide on an appropriate power of \(x\) divided by an appropriate factorial by which to multiply both sides of the recurrence.  Using the fact that the derivative of \(\frac{x^n}{n!}\) is \(\frac{x^{n-1}}{(n-1)!}\text{,}\) write down a differential equation for the EGF \(T(x) =
 \sum_{i=0}^\infty c_i\frac{x^i}{i!}\text{.}\)  Note that it makes sense to substitute 0 for \(x\) in \(T(x)\text{.}\)  What is \(T(0)\text{?}\)  Solve your differential equation to find an equation for \(T(x)\text{.}\)</p></article><article class="exercise-like" id="task-263"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2090">Use your EGF to compute a formula for \(c_n\text{.}\)</p>
+<p id="p-2091">Use your EGF to compute a formula for \(c_n\text{.}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-262" id="hint-262"><span class="type">Hint</span></a></span><div id="hk-hint-262" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-2091">At some point, you may find the binomial theorem to be useful.</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-262" id="hint-262"><span class="type">Hint</span></a><div id="hk-hint-262" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2092">At some point, you may find the binomial theorem to be useful.</p></div></div>
 </div></article></article><article class="example-like interesting-forward-essential" id="exponentialderangements"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">388</span>
+<span class="type">Problem</span> <span class="codenumber">388</span>
 </h6>
-<div class="introduction" id="introduction-74"><p id="p-2093">Your recurrence in <a knowl="./knowl/derangementrecurrence.html" knowl-id="xref-derangementrecurrence" alt="Problem 386 " title="Problem 386 ">Problem 386</a> should be a second order recurrence.</p></div>
+<div class="introduction" id="introduction-74"><p id="p-2094">Your recurrence in <a knowl="./knowl/derangementrecurrence.html" title="Problem 386">Problem 386</a> should be a second order recurrence.</p></div>
 <article class="exercise-like" id="task-264"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2094">Assuming that the left-hand side is \(d_n\) and the right hand side involves \(d_{n-1}\) and \(d_{n-2}\text{,}\) decide on an appropriate power of \(x\) divided by an appropriate factorial by which to multiply both sides of the recurrence.  Using the fact that the derivative of \(\frac{x^n}{n!}\) is \(\frac{x^{n-1}}{(n-1)!}\text{,}\) write down a differential equation for the EGF \(D(x) =
+<p id="p-2095">Assuming that the left-hand side is \(d_n\) and the right hand side involves \(d_{n-1}\) and \(d_{n-2}\text{,}\) decide on an appropriate power of \(x\) divided by an appropriate factorial by which to multiply both sides of the recurrence.  Using the fact that the derivative of \(\frac{x^n}{n!}\) is \(\frac{x^{n-1}}{(n-1)!}\text{,}\) write down a differential equation for the EGF \(D(x) =
 \sum_{i=0}^\infty d_i\frac{x^i}{i!}\text{.}\) What is \(D(0)\text{?}\)  Solve your differential equation to find an equation for \(D(x)\text{.}\)</p></article><article class="exercise-like" id="task-265"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2095">Use the equation you found for \(D(x)\) to find an equation for \(d_n\text{.}\)  Compare this result with the one you computed by inclusion and exclusion.</p></article></article></section></section></div></main>
+<p id="p-2096">Use the equation you found for \(D(x)\) to find an equation for \(d_n\text{.}\)  Compare this result with the one you computed by inclusion and exclusion.</p></article></article></section></section></div></main>
 </div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code-->
 </body>
 </html>

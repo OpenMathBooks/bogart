@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:12-06:00    *-->
+<!--*    on 2018-08-12T12:01:44-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Without giving the proof, how can you compute the EGF \(f(x)\) for the number of structures using a set of size \(n\) in the species \(\F_1\cdot\F_2\cdot \cdots\cdot \F_k\) of structures on \(k\)-tuples of subsets of \(X\) from the EGFs \(f_i(x)\) for \(\F_i\) for each \(i\) from \(1\) to \(k\text{?}\)  (Here we are using the natural extension of the idea of the pair of structures to the idea of a \(k\)-tuple structure.)</p>
+<p>Let \(f(x)\text{,}\) \(g(x)\text{,}\) and \(h(x)\) be, respectively, the EGFs for the species \(\F\text{,}\) \(\mathcal{G}\text{,}\) and \(\F\cdot\mathcal{G}\text{.}\)  Suppose \(f(x) = \sum_{i=0}^\infty a_i \frac{x^i}{i!}\) and \(g(x) = \sum_{j=0}^\infty b_j\frac{x^j}{j!}\text{.}\) Then the coefficient of \(x^n\) in \(f(x)g(x)\) is \(\sum_{k=0}^n \frac{a_kb_{n-k}}{i!(n-k)!}\text{,}\) so the coefficient of \(\frac{x^n}{n!}\) is</p>
+<div class="displaymath">
+\begin{equation*}
+n!\sum_{k=0}^n \frac{a_kb_{n-k}}{i!(n-k)!} = \sum_{k=0}^n \binom{n}{k} a_kb_{n-k}.
+\end{equation*}
+</div>
+<p>But \(\binom{n}{k}a_kb_{n-k}\) is the number of ways to partition a set of size \(n\) into a first set of size \(k\) and a second set of size \(n-k\) and to choose a structure for each of them.  That is, it is the number of pair structures on an ordered pair of sets of size \(k\) and \(n-k\text{.}\)  Thus the coefficient of \(\frac{x^n}{n!}\) in \(h(x)\) is the number of \(\F\cdot\mathcal{G}\) pair structures on a subset of \(X\) of size \(n\text{.}\)  This proves that \(h(x) = f(x)g(x)\text{.}\)</p>
 <span class="incontext"><a href="app3-4-prodprinc.html#p-2129">in-context</a></span>
 </body>
 </html>

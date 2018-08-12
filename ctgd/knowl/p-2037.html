@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:02-06:00    *-->
+<!--*    on 2018-08-12T12:01:36-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Thus we say that \((1+x)^n\) is the generating function for the binomial coefficients \(\binom{n}{i}\text{.}\) The notation tells us that we are assuming that only \(i\) varies in the sum on the right, but that the equation holds for each fixed integer \(n\text{.}\) This is implicit when we say that \((1+x)^n\) is the generating function for \(\binom{n}{i}\text{,}\) because we haven't written \(i\) anywhere in \((1+x)^n\text{,}\) so it is free to vary.</p>
+<p>When we introduced the idea of a generating function, we said that the formal sum</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=0}^n a_ix^i
+\end{equation*}
+</div>
+<p>may be thought of as a convenient way to keep track of the sequence \(a_i\text{.}\) We then did quite a few examples that showed how combinatorial properties of arrangements counted by the coefficients in a generating function could be mirrored by algebraic properties of the generating functions themselves. The monomials \(x^i\) are called <dfn class="terminology">indicator polynomials</dfn>. (They indicate the position of the coefficient \(a_i\text{.}\)) One example of a generating function is given by</p>
+<div class="displaymath">
+\begin{equation*}
+(1+x)^n = \sum_{i=0}^\infty \binom{n}{i}x^i.
+\end{equation*}
+</div>
 <span class="incontext"><a href="app3-1-indicator.html#p-2037">in-context</a></span>
 </body>
 </html>

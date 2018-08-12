@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:56-06:00    *-->
+<!--*    on 2018-08-12T12:00:47-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Equating the coefficients of \(x^n\) in the first and last line of this equation, we get \(s(k,n) = s(k-1,n-1) -(k-1)s(k-1,n)\text{,}\) for \(n\) between 1 and \(k-1\text{..}\)</p>
+<p><a knowl="./knowl/stirling1.html" title="Equation 3.3">Equation (3.3)</a> is effectively the inductive step of an inductive definition of \(x^{\underline{k}}\text{.}\) With this equation we can write</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=0}^k s(k,n)x^n =\amp x^{\underline{k}} =
+x^{\underline{k-1}}(x-k+1)\\
+=\amp \left(\sum_{n=0}^{k-1}s(k-1,n)x^n\right)(x-k+1)\\
+=\amp \sum_{n=0}^{k-1}s(k-1,n)x^{n+1} - \sum_{n=0}^{k-1}(k-1)s(k-1,n)x^n\\
+=\amp \sum_{n=1}^k s(k-1,n-1)x^n-\sum_{n=0}^{k-1}(k-1)s(k-1,n)x^n.
+\end{align*}
+</div>
 <span class="incontext"><a href="s3-2-partitions.html#p-871">in-context</a></span>
 </body>
 </html>

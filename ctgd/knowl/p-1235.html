@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:08-06:00    *-->
+<!--*    on 2018-08-12T12:00:56-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The sequence of problems that follows (culminating in <a knowl="./knowl/solveFibonacci.html" knowl-id="xref-solveFibonacci" alt="Problem 222 " title="Problem 222 ">Problem 222</a>) describes a number of hypotheses we might make about a fictional population of rabbits. We use the example of a rabbit population for historic reasons; our goal is a classical sequence of numbers called Fibonacci numbers. When Fibonacci<span class="footnote"><a knowl="./knowl/fn-14-hidden.html" knowl-id="hidden-fn-14" alt="Footnote 4.6 " title="Footnote 4.6 "><sup> 6 </sup></a></span> introduced them, he did so with a fictional population of rabbits.</p>
+<p>\(a_n=1.1a_{n-1}+1000\text{,}\) and \(a_0=5000\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{i=1}^\infty
+a_ix^i \amp= 1.1x\sum_{i=1}^\infty a_{i-1}x^{i-1} + 1000\sum_{i=1}^\infty x^i\\
+\sum_{i=0}^\infty a_ix^i -a_0 \amp=
+1.1x\sum_{i=0}^\infty a_ix^i +1000(\sum_{i=0}^\infty x^i-1)\\
+(1-1.1x)\sum_{i=0}^\infty a_ix^i  \amp=  a_0 +1000\sum_{i=10}^\infty x^i-1000\\
+\sum_{i=0}^\infty a_i x^i \amp=  a_0\sum_{i=0}^\infty (1.1)^ix^i
++1000\sum_{i=0}^\infty (1.1)^ix^i\sum_{i=0}^\infty x^i -1000\\
+\sum_{i=0}^\infty a_i x^i \amp=  a_0\sum_{i=0}^\infty (1.1)^ix^i
++1000\sum_{k=0}^\infty \left(\sum_{i=0}^k(1.1)^i\right)x^k
+- 1000\sum_{i=0}^\infty (1.1)^ix^i
+\end{align*}
+</div>
+<p>This gives us that \(a_n= 4000(1.1)^n +1000 \frac{1-(1.1)^{n+1}}{-.1}\text{.}\) This simplifies to \(a_n= 4000(1.1)^n+10000(1.1)^{n+1}-10000 = 15,000(1.1)^n-10000\text{.}\) Courtesy of Maple, after ten years we have $28,906.14 and after 20 years we have $90,912.50.</p>
 <span class="incontext"><a href="sec_genfns-recurrence.html#p-1235">in-context</a></span>
 </body>
 </html>

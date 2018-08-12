@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:05-06:00    *-->
+<!--*    on 2018-08-12T12:00:54-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>\(\displaystyle\prod_{i=1}^\infty 1+q^i=\prod_{i=1}^n \frac{1-q^{2i}}{1-q^i}=\frac{\prod_{i=1}^\infty1-q^{2i}}{\prod_{j=1}^\infty 1-q^j} =\prod_{i=j}^\infty \frac{1}{1-q^{2j-1}}\text{,}\) because all the terms in the numerator cancel with alternate terms in the denominator leaving only terms with odd powers of \(q\text{.}\) But</p>
+<p>Note that</p>
 <div class="displaymath">
-\begin{align*}
-\amp \prod_{j=1}^\infty\frac{1}{1-q^{2j-1}} =  \prod_{j=1}^\infty \sum_{i=0}^\infty (q^{2j-1})^i\\
-=\amp (1+q+q^{2\cdot1}+\cdots)(1+q^3+q^{2\cdot3}+\cdots)(1
-+q^5+q^{2\cdot5}+\cdots)\cdots,
-\end{align*}
+\begin{equation*}
+\frac{1-q^2}{1-q}\cdot \frac{1-q^4}{1-q^2}\cdot \frac{1-q^6}{1-q^3}\cdot \frac{1-q^8}{1-q^4} = \frac{(1-q^6)(1-q^8)}{(1-q)(1-q^3)} \text{.}
+\end{equation*}
 </div>
-<p>which is the generating function for partitions of integers into parts that are odd numbers.</p>
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1182">in-context</a></span>
 </body>
 </html>

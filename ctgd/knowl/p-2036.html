@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:02-06:00    *-->
+<!--*    on 2018-08-12T12:01:36-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,18 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>When we introduced the idea of a generating function, we said that the formal sum</p>
+<p>Now assume that \(m \gt 1\) and that for any positive integer \(m' \lt m\text{,}\) there are unique nonnegative integers \(q'\) and \(r'\) such that \(m' = q'n+r'\text{,}\) with \(0 \le r' \lt n\text{.}\)  If \(m \lt n\text{,}\) then we can let \(q = 0\) and \(r = m\text{,}\) and we have our \(q\) and \(r\text{.}\)  If \(m = n\text{,}\) we may choose \(q = 1\) and \(r = 0\) and we have our \(q\) and \(r\) again.  Therefore we may assume that \(m \gt n\text{.}\) In this case, \(m-n\) is a positive integer, and so since \(m-n \lt n\text{,}\) we have that, for unique nonnegative integers \(q'\) and \(r'\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{i=0}^n a_ix^i
+m-n = q'n+r',
 \end{equation*}
 </div>
-<p>may be thought of as a convenient way to keep track of the sequence \(a_i\text{.}\) We then did quite a few examples that showed how combinatorial properties of arrangements counted by the coefficients in a generating function could be mirrored by algebraic properties of the generating functions themselves. The monomials \(x^i\) are called <dfn class="terminology">indicator polynomials</dfn>. (They indicate the position of the coefficient \(a_i\text{.}\)) One example of a generating function is given by</p>
-<div class="displaymath">
-\begin{equation*}
-(1+x)^n = \sum_{i=0}^\infty \binom{n}{i}x^i.
-\end{equation*}
-</div>
-<span class="incontext"><a href="app3-1-indicator.html#p-2036">in-context</a></span>
+<p>with \(0 \le r \lt n\text{.}\)  But then adding \(n\) to both sides of the equation gives us \(m = (q'+1)n + r'\text{,}\) with \(0 \le r' \lt n\text{.}\)  Therefore if we take \(q = q'+1\) and \(r = r'\) we have that \(m = qn+r\text{,}\) with \(0 \le r \lt n\text{.}\)  On the other hand, \(q'\) and \(r'\) are unique by our inductive hypothesis.  Thus if \(m = qn + r\text{,}\) subtracting \(n\) from both sides of the equation gives us \(m-n = (q-1)n+r\text{.}\) This tells us that \(q\) <em class="emphasis">must</em> equal \(q'+1\) and \(r\) <em class="emphasis">must</em> equal \(r'\text{.}\)  Therefore by the strong principle of mathematical induction, Eulcid's Theorem holds for all positive integers \(m\text{.}\)</p>
+<span class="incontext"><a href="app2-1-induction.html#p-2036">in-context</a></span>
 </body>
 </html>

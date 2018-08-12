@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:16-06:00    *-->
+<!--*    on 2018-08-12T12:01:01-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>An onto function is in none of these sets. Since we want the number of functions that are in none of these sets, we let our set \(A\) be the set of all functions from \(K\) to \([n]\text{.}\) Then the number of onto functions is \(|\overline{A_1\cup A_2\cup \cdots \cup A_n}|\text{.}\) For a nonempty subset \(S\) of \([n]\text{,}\) the set \(\bigcap_{i\colon i\in S} A_i\) is the set of functions functions from \(K\) to \([n]-S\text{.}\) The size of this set is \((n-|S|)^k\text{.}\) When \(S=\emptyset\) this gives the size of \(A\text{.}\) Thus by <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a></p>
-<div class="displaymath">
-\begin{align*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right|&amp;=  \sum_{S:s\subseteq [n]} (-1)^{|S|}
-(n-|S|)^k\\
-&amp;= \sum_{s=0}^n (-1)^s\binom{n}{s}(n-s)^k
-\end{align*}
-</div>
-<p>is the number of functions from \(K\) onto \([n]\text{.}\)</p>
+<p>Given a function \(f\) from the \(k\)-element set \(K\) to the \(n\)-element set \([n]\text{,}\) we say \(f\) is in the set \(A_i\) if \(f(x)\not= i\) for every \(x\) in \(K\text{.}\) How many of these  sets does an onto function belong to? What is the number of functions from a \(k\)-element set onto an \(n\)-element set?</p>
 <span class="incontext"><a href="sec_inclexcl-apps.html#p-1385">in-context</a></span>
 </body>
 </html>

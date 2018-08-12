@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:18-06:00    *-->
+<!--*    on 2018-08-12T12:01:48-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,8 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Exponential generating functions turn out to be quite useful in advanced work in combinatorics. One reason why is that it is often possible to give a combinatorial interpretation to the composition of two exponential generating functions. In particular, if \(f(x) =
-\sum_{i=0}^n a_i\frac{x^i}{i!}\) and \(g(x) = \sum_{j=1}^\infty b_j \frac{x^j}{j!}\text{,}\) it makes sense to form the composition \(f(g(x))\) because in so doing we need add together only finitely many terms in order to find the coefficient of \(\frac{x^n}{n!}\) in \(f(g(x))\) since in the EGF \(g(x)\) the dummy variable \(j\) starts at 1. Since our study of combinatorial structures has not been advanced enough to give us applications of a general formula for the composition of the EGF, we will not give here the combinatorial interpretation of this composition. However we have seen some examples where one particular composition can be applied. Namely, if \(f(x) = e^x = \exp(x)\text{,}\) then \(f(g(x)) =\ exp(g(x))\) is well defined when \(b_0=0\text{.}\) We have seen three examples in which an EGF is \(e^{f(x)}\) where \(f(x)\) is another EGF. There is a fourth example in which the exponential function is slightly hidden.</p>
-<span class="incontext"><a href="app3-5-expformula.html#p-2163">in-context</a></span>
+<p>Notice that a one block partition is the same thing as a function from that block onto a one element set. However a partition with \(n\) blocks is not an \(n\)-tuple of blocks, but rather a set of \(n\) blocks. An \(n\)-tuple of blocks corresponds to a function from the union of the blocks onto an \(n\)-element set, and \(n!\) different onto functions correspond to the same partition into \(n\) blocks. Thus the EGF for partitions of an \(n\)-element set into \(k\) parts (where \(n\) is fixed but \(k\) varies) is \(\frac{1}{n!} (e^x -1)^n\text{.}\)  We could also use <a knowl="./knowl/fspeciescorollary2.html" title="Corollary C.4.3">Corollary C.4.3</a> directly.</p>
+<span class="incontext"><a href="app3-4-prodprinc.html#p-2163">in-context</a></span>
 </body>
 </html>

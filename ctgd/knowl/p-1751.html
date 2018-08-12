@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:32-06:00    *-->
+<!--*    on 2018-08-12T12:01:14-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Use the Orbit-Fixed Point Theorem to determine the Orbit Enumerator for the colorings, with two colors (red and blue), of six circles placed at the vertices of a hexagon which is free to move in the plane. Compare the coefficients of the resulting polynomial with the various orbits you found in <a knowl="./knowl/coloredhex.html" knowl-id="xref-coloredhex" alt="Problem 310 " title="Problem 310 ">Problem 310</a>.</p>
+<p>Based on the previous problem, we expect that</p>
+<div class="displaymath">
+\begin{equation*}
+E_{\widehat{P}}(S_1\times S_2\times \cdots\times S_k) = \prod_{i=1}^k E_{P_i}(S_i)\text{.}
+\end{equation*}
+</div>
+<p>To prove it, we represent a \(k\)-tuple as the ordered pair</p>
+<div class="displaymath">
+\begin{equation*}
+(x_1,(x_2,x_3,\dots,x_k))
+\end{equation*}
+</div>
+<p>and apply induction and <a knowl="./knowl/ProdPrincPictureEnumerators.html" title="Problem 312">Problem 312</a>. For the special case, \(E_{\widehat{P}}(S^k) = (E_P(S))^k\text{.}\)</p>
 <span class="incontext"><a href="sec_groups-polya.html#p-1751">in-context</a></span>
 </body>
 </html>

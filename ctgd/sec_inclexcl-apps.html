@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:12-06:00    *-->
+<!--*    on 2018-08-12T12:00:10-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>CTGD Application of Inclusion and Exclusion</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -35,18 +35,18 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
-\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
-\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\qchoose}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_q}
+\def\neg1choose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
 \newcommand{\bp}{
 \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
 \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
@@ -75,16 +75,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_inclexcl-sizeunion.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_inclexcl.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_inclexcl-delcont.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_inclexcl-sizeunion.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_inclexcl.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_inclexcl-delcont.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_inclexcl-sizeunion.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_inclexcl.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_inclexcl-delcont.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_inclexcl-sizeunion.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_inclexcl.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_inclexcl-delcont.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
@@ -92,42 +92,42 @@ MathJax.Hub.Config({
 <li><a href="preface.html" data-scroll="preface">Preface</a></li>
 <li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
 </ul>
-<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title punctuated">What is Combinatorics?</span></a></h2>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span> <span class="title punctuated">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
 <li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
 <li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
 <li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
 </ul>
-<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span> <span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
 <ul>
 <li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
 <li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span> <span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
 <li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
 <li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span> <span class="title">Generating Functions</span></a></h2>
 <ul>
 <li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
 <li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
 <li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence">Generating Functions and Recurrence Relations</a></li>
 <li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span> <span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
 <ul>
 <li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
 <li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps" class="active">Application of Inclusion and Exclusion</a></li>
 <li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
 <li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span> <span class="title">Groups acting on sets</span></a></h2>
 <ul>
 <li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
 <li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
@@ -142,77 +142,89 @@ MathJax.Hub.Config({
 <li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_inclexcl-apps"><h2 class="heading hide-type" alt="Section 5.2 Application of Inclusion and Exclusion">
-<span class="type">Section</span><span class="codenumber">5.2</span><span class="title">Application of Inclusion and Exclusion</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_inclexcl-apps"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Application of Inclusion and Exclusion</span>
 </h2>
-<a href="sec_inclexcl-apps.html" class="permalink">¶</a><section class="subsection" id="subsection-54"><h3 class="heading hide-type" alt="Subsection 5.2.1 Multisets with restricted numbers of elements">
-<span class="type">Subsection</span><span class="codenumber">5.2.1</span><span class="title">Multisets with restricted numbers of elements</span>
+<a href="sec_inclexcl-apps.html" class="permalink">¶</a><section class="subsection" id="subsection-54"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.2.1</span> <span class="title">Multisets with restricted numbers of elements</span>
 </h3>
 <a href="sec_inclexcl-apps.html#subsection-54" class="permalink">¶</a><article class="example-like" id="activity-235"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">235</span>
+<span class="type">Problem</span> <span class="codenumber">235</span>
 </h6>
-<p id="p-1370">In how many ways may we distribute \(k\) identical apples to \(n\) children so that no child gets more than four apples? Compare your result with your result in <a knowl="./knowl/candygenfn.html" knowl-id="xref-candygenfn" alt="Problem 197 " title="Problem 197 ">Problem 197</a></p>
+<p id="p-1371">In how many ways may we distribute \(k\) identical apples to \(n\) children so that no child gets more than four apples? Compare your result with your result in <a knowl="./knowl/candygenfn.html" title="Problem 197">Problem 197</a></p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-216" id="hint-216"><span class="type">Hint</span></a></span><div id="hk-hint-216" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1371">Notice that it is straightforward to figure out how many ways we may pass out the apples so that child \(i\) gets five or more apples: give five apples to child \(i\) and then pass out the remaining apples however you choose. And if  we want to figure out how many ways we may pass out the apples so that a given set \(C\) of children each get five or more apples, we give five to each child in \(C\) and then pass out the remaining \(k-5|C|\) apples however we choose.</p></span></div>
-</div></article></section><section class="subsection" id="sec-menage"><h3 class="heading hide-type" alt="Subsection 5.2.2 The Menage Problem">
-<span class="type">Subsection</span><span class="codenumber">5.2.2</span><span class="title">The Menage Problem</span>
+<a knowl="" class="id-ref" refid="hk-hint-216" id="hint-216"><span class="type">Hint</span></a><div id="hk-hint-216" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1372">Notice that it is straightforward to figure out how many ways we may pass out the apples so that child \(i\) gets five or more apples: give five apples to child \(i\) and then pass out the remaining apples however you choose. And if  we want to figure out how many ways we may pass out the apples so that a given set \(C\) of children each get five or more apples, we give five to each child in \(C\) and then pass out the remaining \(k-5|C|\) apples however we choose.</p></div></div>
+</div></article></section><section class="subsection" id="sec-menage"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.2.2</span> <span class="title">The Ménage Problem</span>
 </h3>
 <a href="sec_inclexcl-apps.html#sec-menage" class="permalink">¶</a><article class="example-like interesting" id="relaxedmenage"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">236</span>
+<span class="type">Problem</span> <span class="codenumber">236</span>
 </h6>
-<p id="p-1373">A group of \(n\) married couples comes to a group discussion session where they all sit around a round table. In how many ways can they sit so that no person is next to his or her spouse? (Note that two people of the same sex can sit next to each other.)</p>
+<p id="p-1374">A group of \(n\) married couples comes to a group discussion session where they all sit around a round table. In how many ways can they sit so that no person is next to his or her spouse? (Note that two people of the same sex can sit next to each other.)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-217" id="hint-217"><span class="type">Hint</span><span class="codenumber">1</span></a></span><div id="hk-hint-217" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1374">Start with two questions that can apply to any inclusion-exclusion problem. Do you think you would be better off trying to compute the size of a union of sets or the size of a complement of a union of sets? What kinds of sets (that are conceivably of use to you) is it easy to compute the size of? (The second question can be interpreted in different ways, and for each way of interpreting it, the answer may help you see something you can use in solving the problem.)</p></span></div>
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-218" id="hint-218"><span class="type">Hint</span><span class="codenumber">2</span></a></span><div id="hk-hint-218" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1375">Suppose we have a set \(S\) of couples whom we want to seat side by side. We can think of lining up \(|S|\) couples and \(2n - 2|S|\) individual people in a circle.  In how many ways can we arrange this many items in a circle?</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-217" id="hint-217"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-217" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1375">Start with two questions that can apply to any inclusion-exclusion problem. Do you think you would be better off trying to compute the size of a union of sets or the size of a complement of a union of sets? What kinds of sets (that are conceivably of use to you) is it easy to compute the size of? (The second question can be interpreted in different ways, and for each way of interpreting it, the answer may help you see something you can use in solving the problem.)</p></div></div>
+<a knowl="" class="id-ref" refid="hk-hint-218" id="hint-218"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-218" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1376">Suppose we have a set \(S\) of couples whom we want to seat side by side. We can think of lining up \(|S|\) couples and \(2n - 2|S|\) individual people in a circle.  In how many ways can we arrange this many items in a circle?</p></div></div>
 </div></article><article class="example-like interesting-difficult}" id="activity-237"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">237</span>
+<span class="type">Problem</span> <span class="codenumber">237</span>
 </h6>
-<p id="p-1377">A group of \(n\) married couples comes to a group discussion session where they all sit around a round table. In how many ways can they sit so that no person is next to his or her spouse or a person of the same sex? This problem is called the <dfn class="terminology">menage problem</dfn>.</p>
+<p id="p-1378">A group of \(n\) married couples comes to a group discussion session where they all sit around a round table. In how many ways can they sit so that no person is next to his or her spouse or a person of the same sex? This problem is called the <dfn class="terminology">ménage problem</dfn>.</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-219" id="hint-219"><span class="type">Hint</span><span class="codenumber">1</span></a></span><div id="hk-hint-219" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1378">Reason somewhat as you did in <a knowl="./knowl/relaxedmenage.html" knowl-id="xref-relaxedmenage" alt="Problem 236 " title="Problem 236 ">Problem 236</a>, noting that if the set of couples who do sit side-by-side is nonempty, then the sex of the person at each place at the table is determined once we seat one couple in that set.</p></span></div>
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-220" id="hint-220"><span class="type">Hint</span><span class="codenumber">2</span></a></span><div id="hk-hint-220" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1379">Think in terms of the sets \(A_i\) of arrangements of people in which couple \(i\) sits side-by-side. What does the union of the sets \(A_i\) have to do with the problem?</p></span></div>
-</div></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type" alt="Subsection 5.2.3 Counting onto functions">
-<span class="type">Subsection</span><span class="codenumber">5.2.3</span><span class="title">Counting onto functions</span>
+<a knowl="" class="id-ref" refid="hk-hint-219" id="hint-219"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-219" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1379">Reason somewhat as you did in <a knowl="./knowl/relaxedmenage.html" title="Problem 236">Problem 236</a>, noting that if the set of couples who do sit side-by-side is nonempty, then the sex of the person at each place at the table is determined once we seat one couple in that set.</p></div></div>
+<a knowl="" class="id-ref" refid="hk-hint-220" id="hint-220"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-220" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1380">Think in terms of the sets \(A_i\) of arrangements of people in which couple \(i\) sits side-by-side. What does the union of the sets \(A_i\) have to do with the problem?</p></div></div>
+</div></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.2.3</span> <span class="title">Counting onto functions</span>
 </h3>
 <a href="sec_inclexcl-apps.html#subsection-56" class="permalink">¶</a><article class="example-like essential" id="numontofun"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">238</span>
+<span class="type">Problem</span> <span class="codenumber">238</span>
 </h6>
-<p id="p-1384">Given a function \(f\) from the \(k\)-element set \(K\) to the \(n\)-element set \([n]\text{,}\) we say \(f\) is in the set \(A_i\) if \(f(x)\not= i\) for every \(x\) in \(K\text{.}\) How many of these  sets does an onto function belong to? What is the number of functions from a \(k\)-element set onto an \(n\)-element set?</p></article><article class="example-like interesting" id="activity-239"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">239</span>
+<p id="p-1385">Given a function \(f\) from the \(k\)-element set \(K\) to the \(n\)-element set \([n]\text{,}\) we say \(f\) is in the set \(A_i\) if \(f(x)\not= i\) for every \(x\) in \(K\text{.}\) How many of these  sets does an onto function belong to? What is the number of functions from a \(k\)-element set onto an \(n\)-element set?</p></article><article class="example-like interesting" id="activity-239"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">239</span>
 </h6>
-<p id="p-1386">Find a formula for the Stirling number (of the second kind) \(S(k,n)\text{.}\)</p>
+<p id="p-1387">Find a formula for the Stirling number (of the second kind) \(S(k,n)\text{.}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-221" id="hint-221"><span class="type">Hint</span></a></span><div id="hk-hint-221" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1387">What does <a knowl="./knowl/numontofun.html" knowl-id="xref-numontofun" alt="Problem 238 " title="Problem 238 ">Problem 238</a> have to do with this question?</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-221" id="hint-221"><span class="type">Hint</span></a><div id="hk-hint-221" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1388">What does <a knowl="./knowl/numontofun.html" title="Problem 238">Problem 238</a> have to do with this question?</p></div></div>
 </div></article><article class="example-like" id="activity-240"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">240</span>
+<span class="type">Problem</span> <span class="codenumber">240</span>
 </h6>
-<div class="introduction" id="introduction-51"><p id="p-1389">If we roll a die eight times, we get a sequence of 8 numbers, the number of dots on top on the first roll, the number on the second roll, and so on.</p></div>
+<div class="introduction" id="introduction-51"><p id="p-1390">If we roll a die eight times, we get a sequence of 8 numbers, the number of dots on top on the first roll, the number on the second roll, and so on.</p></div>
 <article class="exercise-like" id="task-178"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1390">What is the number of ways of rolling the die eight times so that each of the numbers one through six appears at least once in our sequence? To get a numerical answer, you will likely need a computer algebra package.</p></article><article class="exercise-like" id="task-179"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1392">What is the probability that we get a sequence in which all six numbers between one and six appear? To get a numerical answer, you will likely need a computer algebra package, programmable calculator, or spreadsheet.</p></article><article class="exercise-like" id="task-180"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1394">How many times do we have to roll the die to have probability at least one half that all six numbers appear in our sequence. To answer this question, you will likely need a computer algebra package, programmable calculator, or spreadsheet.</p></article></article></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type" alt="Subsection 5.2.4 The chromatic polynomial of a graph">
-<span class="type">Subsection</span><span class="codenumber">5.2.4</span><span class="title">The chromatic polynomial of a graph</span>
+<p id="p-1391">What is the number of ways of rolling the die eight times so that each of the numbers one through six appears at least once in our sequence? To get a numerical answer, you will likely need a computer algebra package.</p></article><article class="exercise-like" id="task-179"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1393">What is the probability that we get a sequence in which all six numbers between one and six appear? To get a numerical answer, you will likely need a computer algebra package, programmable calculator, or spreadsheet.</p></article><article class="exercise-like" id="task-180"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1395">How many times do we have to roll the die to have probability at least one half that all six numbers appear in our sequence. To answer this question, you will likely need a computer algebra package, programmable calculator, or spreadsheet.</p></article></article></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.2.4</span> <span class="title">The chromatic polynomial of a graph</span>
 </h3>
-<a href="sec_inclexcl-apps.html#subsection-57" class="permalink">¶</a><p id="p-1396">We defined a graph to consist of set \(V\) of elements called vertices and a set \(E\) of elements called edges such that each edge joins two vertices. A <dfn class="terminology">coloring</dfn> of a graph by the elements of a set \(C\) (of colors) is an assignment of an element of \(C\) to each vertex of the graph; that is, a function from the vertex set \(V\) of the graph to \(C\text{.}\) A coloring is called <dfn class="terminology">proper</dfn> if for each edge joining two distinct vertices<span class="footnote"><a knowl="" class="id-ref" refid="hk-fn-17" id="fn-17"><sup> 2 </sup></a></span><span id="hk-fn-17" class="hidden-content tex2jax_ignore"><span class="footnote">If a graph had a loop connecting a vertex to itself, that loop would connect a vertex to a vertex of the same color.  It is because of this that we only consider edges with two distinct vertices in our definition.</span></span>, the two vertices it joins have different colors. You may have heard of the famous four color theorem of graph theory that says if a graph may be drawn in the plane so that no two edges cross (though they may touch at a vertex), then the graph has a proper coloring with four colors. Here we are interested in a different, though related, problem: namely, in how many ways may we properly color a graph (regardless of whether it can be drawn in the plane or not) using \(k\) or fewer colors? When we studied trees, we restricted ourselves to connected graphs. (Recall that a graph is connected if, for each pair of vertices, there is a walk between them.) Here, disconnected graphs will also be important to us. Given a graph which might or might not be connected, we partition its vertices into blocks called <dfn class="terminology">connected components</dfn> as follows. For each vertex \(v\) we put all vertices connected to it by a walk into a block together. Clearly each vertex is in at least one block, because vertex \(v\) is connected to vertex \(v\) by the trivial walk consisting of the single vertex \(v\) and no edges. To have a partition, each vertex must be in one and only one block. To prove that we have defined a partition, suppose that vertex \(v\) is in the blocks \(B_1\) and \(B_2\text{.}\) Then \(B_1\) is the set of all vertices connected by walks to some vertex \(v_1\) and \(B_2\) is the set of all vertices connected by walks to some vertex \(v_2\text{.}\)</p>
+<a href="sec_inclexcl-apps.html#subsection-57" class="permalink">¶</a><p id="p-1397">We defined a graph to consist of set \(V\) of elements called vertices and a set \(E\) of elements called edges such that each edge joins two vertices. A <dfn class="terminology">coloring</dfn> of a graph by the elements of a set \(C\) (of colors) is an assignment of an element of \(C\) to each vertex of the graph; that is, a function from the vertex set \(V\) of the graph to \(C\text{.}\) A coloring is called <dfn class="terminology">proper</dfn> if for each edge joining two distinct vertices<a knowl="" class="id-ref" refid="hk-fn-17" id="fn-17"><sup> 2 </sup></a><span id="hk-fn-17" class="hidden-content tex2jax_ignore"><span class="footnote">If a graph had a loop connecting a vertex to itself, that loop would connect a vertex to a vertex of the same color.  It is because of this that we only consider edges with two distinct vertices in our definition.</span></span>, the two vertices it joins have different colors. You may have heard of the famous four color theorem of graph theory that says if a graph may be drawn in the plane so that no two edges cross (though they may touch at a vertex), then the graph has a proper coloring with four colors. Here we are interested in a different, though related, problem: namely, in how many ways may we properly color a graph (regardless of whether it can be drawn in the plane or not) using \(k\) or fewer colors? When we studied trees, we restricted ourselves to connected graphs. (Recall that a graph is connected if, for each pair of vertices, there is a walk between them.) Here, disconnected graphs will also be important to us. Given a graph which might or might not be connected, we partition its vertices into blocks called <dfn class="terminology">connected components</dfn> as follows. For each vertex \(v\) we put all vertices connected to it by a walk into a block together. Clearly each vertex is in at least one block, because vertex \(v\) is connected to vertex \(v\) by the trivial walk consisting of the single vertex \(v\) and no edges. To have a partition, each vertex must be in one and only one block. To prove that we have defined a partition, suppose that vertex \(v\) is in the blocks \(B_1\) and \(B_2\text{.}\) Then \(B_1\) is the set of all vertices connected by walks to some vertex \(v_1\) and \(B_2\) is the set of all vertices connected by walks to some vertex \(v_2\text{.}\)</p>
 <article class="example-like forward-essential" id="conncomp"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">241</span>
+<span class="type">Problem</span> <span class="codenumber">241</span>
 </h6>
-<p id="p-1397">(Relevant in <a href="expogenfun.html" class="xref" alt="Appendix C Exponential Generating Functions" title="Appendix C Exponential Generating Functions">Appendix C</a> as well as this section.) Show that \(B_1=B_2\text{.}\)</p></article><p id="p-1399">Since \(B_1=B_2\text{,}\) these two sets are the same block, and thus all blocks containing \(v\) are identical, so \(v\) is in only one block. Thus we have a partition of the vertex set, and the blocks of the partition are the connected components of the graph. Notice that the connected components depend on the edge set of the graph. If we have a graph on the vertex set \(V\) with edge set \(E\) and another graph on the vertex set \(V\) with edge set \(E'\text{,}\) then these two graphs could have different connected components. It is traditional to use the Greek letter \(\gamma\) (gamma)<span class="footnote"><a knowl="" class="id-ref" refid="hk-fn-18" id="fn-18"><sup> 3 </sup></a></span><span id="hk-fn-18" class="hidden-content tex2jax_ignore"><span class="footnote">The greek  letter gamma is pronounced gam-uh, where gam rhymes with ham.</span></span> to stand for the number of connected components of a graph; in particular, \(\gamma(V,E)\) stands for the number of connected components of the graph with vertex set \(V\) and edge set \(E\text{.}\) We are going to show how the principle of inclusion and exclusion may be used to compute the number of ways to properly color a graph using colors from a set \(C\) of \(c\) colors.</p>
+<p id="p-1398">(Relevant in <a href="expogenfun.html" class="xref" title="Appendix C: Exponential Generating Functions">Appendix C</a> as well as this section.) Show that \(B_1=B_2\text{.}\)</p></article><p id="p-1400">Since \(B_1=B_2\text{,}\) these two sets are the same block, and thus all blocks containing \(v\) are identical, so \(v\) is in only one block. Thus we have a partition of the vertex set, and the blocks of the partition are the connected components of the graph. Notice that the connected components depend on the edge set of the graph. If we have a graph on the vertex set \(V\) with edge set \(E\) and another graph on the vertex set \(V\) with edge set \(E'\text{,}\) then these two graphs could have different connected components. It is traditional to use the Greek letter \(\gamma\) (gamma)<a knowl="" class="id-ref" refid="hk-fn-18" id="fn-18"><sup> 3 </sup></a><span id="hk-fn-18" class="hidden-content tex2jax_ignore"><span class="footnote">The greek  letter gamma is pronounced gam-uh, where gam rhymes with ham.</span></span> to stand for the number of connected components of a graph; in particular, \(\gamma(V,E)\) stands for the number of connected components of the graph with vertex set \(V\) and edge set \(E\text{.}\) We are going to show how the principle of inclusion and exclusion may be used to compute the number of ways to properly color a graph using colors from a set \(C\) of \(c\) colors.</p>
 <article class="example-like forward-essential" id="activity-242"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">242</span>
+<span class="type">Problem</span> <span class="codenumber">242</span>
 </h6>
-<div class="introduction" id="introduction-52"><p id="p-1400">Suppose we have a graph \(G\) with vertex set \(V\) and edge set \(E\text{.}\) Suppose \(F\) is a subset of \(E\text{.}\) Suppose we have a set \(C\) of \(c\) colors with which to color the vertices.</p></div>
+<div class="introduction" id="introduction-52"><p id="p-1401">Suppose we have a graph \(G\) with vertex set \(V\) and edge set \(E\text{.}\) Suppose \(F\) is a subset of \(E\text{.}\) Suppose we have a set \(C\) of \(c\) colors with which to color the vertices.</p></div>
 <article class="exercise-like" id="task-181"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1401">In terms of \(\gamma(V,F)\text{,}\) in how many ways may we color the vertices of \(G\) so that each edge in \(F\) connects two vertices of the same color?</p>
+<p id="p-1402">In terms of \(\gamma(V,F)\text{,}\) in how many ways may we color the vertices of \(G\) so that each edge in \(F\) connects two vertices of the same color?</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-222" id="hint-222"><span class="type">Hint</span></a></span><div id="hk-hint-222" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1402">For each edge in \(F\) to connect two vertices of the same color, we must have all the vertices in a connected component of the graph  with vertex set \(V\) and edge set \(F\) colored the same color.</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-222" id="hint-222"><span class="type">Hint</span></a><div id="hk-hint-222" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1403">For each edge in \(F\) to connect two vertices of the same color, we must have all the vertices in a connected component of the graph  with vertex set \(V\) and edge set \(F\) colored the same color.</p></div></div>
 </div></article><article class="exercise-like" id="task-182"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1404">Given a coloring of \(G\text{,}\) for each edge \(e\) in \(E\text{,}\) let us consider the property that the endpoints of \(e\) are colored the same color.  Let us call this property “property \(e\text{.}\)”  In this way each set of properties can be thought of as a subset of \(E\text{.}\)  What set of properties does a proper coloring have?</p></article><article class="exercise-like" id="chromaticpoly"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1406">Find a formula (which may involve summing over all subsets \(F\) of the edge set of the graph and using the number \(\gamma(V,F)\) of connected components of the graph with vertex set \(V\) and edge set \(F\)) for the number of proper colorings of \(G\) using colors in the set \(C\text{.}\)</p>
+<p id="p-1405">Given a coloring of \(G\text{,}\) for each edge \(e\) in \(E\text{,}\) let us consider the property that the endpoints of \(e\) are colored the same color.  Let us call this property “property \(e\text{.}\)”  In this way each set of properties can be thought of as a subset of \(E\text{.}\)  What set of properties does a proper coloring have?</p></article><article class="exercise-like" id="chromaticpoly"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1407">Find a formula (which may involve summing over all subsets \(F\) of the edge set of the graph and using the number \(\gamma(V,F)\) of connected components of the graph with vertex set \(V\) and edge set \(F\)) for the number of proper colorings of \(G\) using colors in the set \(C\text{.}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-223" id="hint-223"><span class="type">Hint</span></a></span><div id="hk-hint-223" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1407">How does the number you are trying to compute relate to the union of the sets \(A_i\text{?}\)</p></span></div>
-</div></article></article><p id="p-1409">The formula you found in <a knowl="./knowl/chromaticpoly.html" knowl-id="xref-chromaticpoly" alt="Part 242.c " title="Part 242.c ">Problem 242.c</a> is a formula that involves powers of \(c\text{,}\) and so it is a polynomial function of \(c\text{.}\) Thus it is called the <dfn class="terminology">chromatic polynomial</dfn> of the graph \(G\text{.}\) Since we like to think about polynomials as having a variable \(x\) and we like to think of \(c\) as standing for some constant, people often use \(x\) as the notation for the number of colors we are using to color \(G\text{.}\) Frequently people will use \(\chi_G(x)\) to stand for the number of way to color \(G\) with \(x\) colors, and call \(\chi_G(x)\) the <dfn class="terminology">chromatic polynomial</dfn> of \(G\text{.}\)</p></section></section></div></main>
+<a knowl="" class="id-ref" refid="hk-hint-223" id="hint-223"><span class="type">Hint</span></a><div id="hk-hint-223" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1408">How does the number you are trying to compute relate to the union of the sets \(A_i\text{?}\)</p></div></div>
+</div></article></article><p id="p-1410">The formula you found in <a knowl="./knowl/chromaticpoly.html" title="Part 242.c">Problem 242.c</a> is a formula that involves powers of \(c\text{,}\) and so it is a polynomial function of \(c\text{.}\) Thus it is called the <dfn class="terminology">chromatic polynomial</dfn> of the graph \(G\text{.}\) Since we like to think about polynomials as having a variable \(x\) and we like to think of \(c\) as standing for some constant, people often use \(x\) as the notation for the number of colors we are using to color \(G\text{.}\) Frequently people will use \(\chi_G(x)\) to stand for the number of way to color \(G\) with \(x\) colors, and call \(\chi_G(x)\) the <dfn class="terminology">chromatic polynomial</dfn> of \(G\text{.}\)</p></section></section></div></main>
 </div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code-->
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:50-06:00    *-->
+<!--*    on 2018-08-12T12:00:43-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,8 +11,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>Here are three proofs:</p>
+<body><div class="solution">
+<p>Here are three proofs:</p>
 <p>Start with a connected graph, and if you can find a cycle, remove one edge of that cycle. Repeat this process until you get a tree. You will get a tree, because removing an edge of a cycle reduces the number of cycles but leaves the graph connected. This tree will be a spanning tree of the original graph.</p>
 <p>Start with the original vertex set and no edges for a graph \(H\text{.}\) Go through the edges of the original graph \(G\) one at a time, and if you can add an edge of \(G\) to the graph \(H\) without creating a cycle, do so. Otherwise discard the edge and go on to the next one. This will give you a graph \(H\) with no cycles, and if it were not connected, there would be an edge in \(G\) between two vertices not yet connected in \(H\text{.}\) (If there weren't, the graph you just constructed would be connected.) Thus you get a spanning tree.</p>
-<p>Start with vertex 1 and no edges as a graph \(H\text{.}\) Take an edge from it to another vertex. Add that edge and vertex to \(H\text{.}\) Now take an edge from one of the vertices you currently have to yet another vertex of the original graph. Add that vertex and edge to \(H\text{.}\) Repeat this process until you can find no such edge. You will get a tree because each edge you add connects a vertex of degree 1 to a tree you have already constructed. Since the original graph is connected, there must always be an edge from the current set of vertices you are considering to something not in that set.</p></span></body>
+<p>Start with vertex 1 and no edges as a graph \(H\text{.}\) Take an edge from it to another vertex. Add that edge and vertex to \(H\text{.}\) Now take an edge from one of the vertices you currently have to yet another vertex of the original graph. Add that vertex and edge to \(H\text{.}\) Repeat this process until you can find no such edge. You will get a tree because each edge you add connects a vertex of degree 1 to a tree you have already constructed. Since the original graph is connected, there must always be an edge from the current set of vertices you are considering to something not in that set.</p>
+</div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:08-06:00    *-->
+<!--*    on 2018-08-12T12:00:56-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In Fibonacci's original problem, each pair of mature rabbits produces one new pair at the end of each month, but otherwise the situation is the same as in <a knowl="./knowl/secondorderintroduction.html" knowl-id="xref-secondorderintroduction" alt="Problem 213 " title="Problem 213 ">Problem 213</a>.  Assuming that we start with one pair of baby rabbits (at the end of month 0), find the generating function for the number of pairs of rabbits we have at the end on \(n\) months.</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=2}^\infty a_nx^n \amp= \sum_{n=2}^\infty a_{n-1}x^n +
+2\sum_{n=2}^\infty a_{n-2}x^n\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x  \amp= x\sum_{n=2}^\infty a_{n-1}x^{n-1} +
+2x^2\sum_{n=2}^\infty a_{n-2}x^{n-2}\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x \amp= x\sum_{n=1}^\infty a_{n}x^{n} +
+2x^2\sum_{n=0}^\infty a_{n}x^n\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x \amp= x\left(\sum_{n=0}^\infty
+a_{n}x^{n}-a_0\right) + 2x^2\sum_{n=0}^\infty a_{n}x^n\\
+(1-x-2x^2)\sum_{n=0}^\infty a_nx^n \amp= a_0+a_1x-a_0x\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-a_0x}{(1-x-2x^2)}
+\end{align*}
+</div>
+<p>In this problem \(a_0=a_1=10\) because we start with ten pairs of baby rabbits, so they have to mature for a month before they begin reproducing. Thus \(\displaystyle\sum_{n=0}^\infty a_nx^n = \frac{10}{(1-x-2x^2)}\text{.}\)</p>
 <span class="incontext"><a href="sec_genfns-recurrence.html#p-1238">in-context</a></span>
 </body>
 </html>

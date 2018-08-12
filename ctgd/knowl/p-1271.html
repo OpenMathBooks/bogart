@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:10-06:00    *-->
+<!--*    on 2018-08-12T12:00:57-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>As a challenge (which the author has not yet done), see if you can find a way to show algebraically (not using the recurrence relation, but rather the formula you get by removing the square roots of five) that the formula for the Fibonacci numbers yields integers.</p>
+<p>From the binomial theorem,</p>
+<div class="displaymath">
+\begin{align*}
+\amp \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{   2}\right)^{n+1}- \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\\
+\amp=
+\frac{1}{2^{n+1}\sqrt{5}}\left[\sum_{i=0}^{n+1}\binom{n+1}{i}\left(\sqrt{5}\right)^i -\sum_{i=0}^{n+1} \binom{n+1}{i}(-1)^i\left(\sqrt{5}\right)^i\right]\\
+\amp= \frac{1}{2^{n+1}\sqrt{5}}\sum_{i:i\in
+[n+1],\ i\mbox{\scriptsize~is odd} }\binom{n+1}{i}\left(\left(\sqrt{5}\right)^i
+-(-1)^i\left(\sqrt{5}\right)^i\right)\\
+\amp= \frac{1}{2^{n+1}\sqrt{5}}\sum_{i:i\in[n+1],\ i\mbox{\scriptsize~is
+odd} }  2\binom{n+1}{i}\left(\sqrt{5}\right)^i\\
+\amp= \frac{1}{2^{n}}\sum_{i:i\in[n+1],\ i\mbox{\scriptsize~is
+odd} }  \binom{n+1}{i}\left(\sqrt{5}\right)^{i-1}\\
+\amp= \frac{1}{2^{n}}\sum_{i:i\in[n],\ i\mbox{\scriptsize~is
+even} }  \binom{n+1}{i+1}5^{i/2}\\
+\amp= \frac{1}{2^n}\sum_{k=0}^{\lfloor n/2 \rfloor}\binom{n+1}{2k+1}5^k,
+\end{align*}
+</div>
+<p>which makes it clear that \(a_n\) is at least a rational number. It is not clear from this new formula why the result is always an integer.</p>
 <span class="incontext"><a href="sec_genfns-recurrence.html#p-1271">in-context</a></span>
 </body>
 </html>

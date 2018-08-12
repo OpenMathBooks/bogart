@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:18-06:00    *-->
+<!--*    on 2018-08-12T12:01:03-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,14 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We use inclusion and exclusion. We let \(A\) be the set of all seating arrangements. We let \(A_i\) be the set of seating arrangements such that student \(i\) sits in the same seat as before. We are interested in \(\left|\overline{\bigcup_{i=1}^n A_i}\right|\text{.}\) For this purpose, for each subset \(S\) of the set \([n]\text{,}\) we need to compute \(\left|\bigcap_{i\colon i\in S} A_i\right|\text{,}\) the number of ways for the students to return so that every student represented by an \(i\) in \(S\) sits in his or her previous seat. This leaves us with \(n-|S|\) seats to be filled in a one-to-one fashion by \(m-|S|\) students. There are \((n-|S|)^{\underline{m-|S|}}\) such seating arrangements, so \(\left|\bigcap_{i\colon i\in S} A_i\right|= (n-|S|)^{\underline{m-|S|}}\text{.}\) Thus we have</p>
-<div class="displaymath">
-\begin{equation*}
-\left|\overline{\bigcup_{i=1}^n A_i}\right|=\sum_{S:S\subseteq [n]}
-(-1)^{|S|}(n-|S|)^{\underline{m-|S|}} = \sum_{s=0}^m (-1)^s\binom{m}{s}(n-s)^{\underline{m-s}}
-\end{equation*}
-</div>
-<p>ways for the students to return so that nobody sits in his or her previous place.</p>
+<p>There are \(m\) students attending a seminar in a room with \(n\) seats. The seminar is a long one, and in the middle the group takes a break. In how many ways may the students return to the room and sit down so that nobody is in the same seat as before?</p>
 <span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1431">in-context</a></span>
 </body>
 </html>

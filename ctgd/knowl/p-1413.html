@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:17-06:00    *-->
+<!--*    on 2018-08-12T12:01:02-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,9 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Use the deletion-contraction recurrence to compute the chromatic polynomial of the graph in <a knowl="./knowl/del-cont.html" knowl-id="xref-del-cont" alt="Figure 5.3.1 " title="Figure 5.3.1 ">Figure 5.3.1</a>. (You can simplify your computations by thinking about the effect on the chromatic polynomial of deleting an edge that is a loop, or deleting one of several edges between the same two vertices.)</p>
+<p>The number of colorings of \(G-e\) is equal to the number of proper colorings of \(G\) plus the number of colorings of \(G\) that are proper except for giving both ends of \(e\) the same color. But the number of colorings of \(G\) that are proper except for giving both ends of \(e\) the same color is the number of proper colorings of \(G/e\text{.}\) Therefore \(\chi_{G-e}(x) =\chi_G(x)
+-\chi_{G/e}(x)\text{.}\) This gives us \(\chi_G(x) = \chi_{G-e}(x)
+-\chi_{G/e}(x)\text{.}\) We can use this to prove inductively that \(\chi_G(x)\) is a polynomial in \(x\text{.}\) If \(G\) has one vertex, then the number of ways to color \(G\) properly with \(x\) colors is \(x\text{.}\) This is a polynomial in \(x\text{.}\) Now suppose inductively that \(G\) has more than one vertex and whenever a graph \(H\) has fewer vertices than \(G\text{,}\) the function \(\chi_H(x)\) is a polynomial function in \(x\text{.}\) Then \(\chi_G(x)= \chi_{G-e}(x)-\chi_{G/e}(x)\text{,}\) is a difference of of two polynomial functions in \(x\text{,}\) so it is a polynomial function in \(x\text{.}\) Therefore by the principle of mathematical induction, for all graphs \(G\) on a finite vertex set, the number of ways to properly color \(G\) in \(x\) colors is a polynomial in \(x\text{.}\)</p>
 <span class="incontext"><a href="sec_inclexcl-delcont.html#p-1413">in-context</a></span>
 </body>
 </html>

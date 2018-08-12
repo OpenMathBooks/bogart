@@ -58,6 +58,12 @@
 <rename element="task" lang="en-US">Part</rename>
 <cross-references text="type-global" />
 
+<analytics>
+  <google>
+    <tracking>UA-66485406-3</tracking>
+  </google>
+</analytics>
+
 </docinfo>
 
 
@@ -145,10 +151,10 @@ Ken's career was characterized by a love of mathematics and scholarship, and a p
 
 <xi:include href="./app3-expogenfns.mbx" />
 
-<appendix xml:id="app-hints">
+<!-- <appendix xml:id="app-hints">
     <title>Hints to Selected Problems</title>
     <solution-list />
-</appendix>
+</appendix> -->
 
 <xi:include href="./gfdl-pretext.ptx" />
 

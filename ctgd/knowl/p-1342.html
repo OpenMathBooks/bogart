@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:13-06:00    *-->
+<!--*    on 2018-08-12T12:01:00-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,20 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>What is the probability that at least one student gets the correct backpack?</p>
+<p>If we let \(A_i\) be the set of backpack distributions in which student \(i\) gets the correct backpack, then the number we want to compute is the size of the union of the sets \(A_i\text{.}\) For this purpose we need to know, for every subset \(S\subseteq [n]\) the size of \(\cap_{i\in S}A_i\text{.}\) That is, we need to know the number of ways to pass out the backpacks so that student \(i\) gets the correct one for each \(i\) in \(S\text{.}\) It won't matter whether or not other students get the correct backpacks, so we can just assume that for each \(i\in S\text{,}\) student \(i\) gets the correct backpack and then hand out the remaining \(n-|S|\) backpacks to the remaining \(n-|S|\) students in \((n-|S|)!\) ways. Thus \((n-|S|)!\) is \(|\cap_{i:i\in S}A_i|\text{.}\) Using our formula from <a knowl="./knowl/inclusion-exclusionunion.html" title="Problem 230">Problem 230</a> we get</p>
+<div class="displaymath">
+\begin{align*}
+\left|\bigcup_{i=1}^n A_i \right|  =\amp  \sum_{S:
+S\subseteq [n], S\not=\emptyset}
+(-1)^{|S|-1}\left|\bigcap_{i:i\in S} A_i \right|\\
+=\amp \sum_{S:
+S\subseteq [n], S\not=\emptyset}(-1)^{|S|-1} (n-|S|)!\\
+=\amp
+\sum_{s=1}^n \binom{n}{s}(-1)^{s-1}(n-s)!\\
+=\amp \sum_{s=1}^n
+(-1)^{s-1}\frac{n!}{s!}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec_inclexcl-sizeunion.html#p-1342">in-context</a></span>
 </body>
 </html>

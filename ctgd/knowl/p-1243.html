@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:08-06:00    *-->
+<!--*    on 2018-08-12T12:00:56-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The recurrence relations we have seen in this section are called <dfn class="terminology">second order</dfn> because they specify \(a_i\) in terms of \(a_{i-1}\) and \(a_{i-2}\text{,}\) they are called <dfn class="terminology">linear</dfn> because \(a_{i-1}\) and \(a_{i-2}\) each appear to the first power, and they are called <dfn class="terminology">constant coefficient recurrences</dfn> because the coefficients in front of \(a_{i-1}\) and \(a_{i-2}\) are constants.</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{i=2}^\infty a_ix^i  \amp=  \sum_{i=2}^\infty
+5a_{i-1}x^i-\sum_{i=2}^\infty 6a_{i-2}x^i + \sum_{i=2}^\infty 2^ix^i\\
+\sum_{i=0}^\infty a_ix^i -a_0-a_1x  \amp=
+5x\left(\sum_{i=0}^\infty
+a_{i}x^i-a_0\right)-6x^2\sum_{i=0}^\infty a_{i}x^i + \sum_{n=0}^\infty
+2^ix^i-1-2x\\
+(1-5x+6x^2)\sum_{i=0}^\infty a_ix^i \amp= a_0-1+(a_1-5a_0-2)x +
+\sum_{n=0}^\infty 2^ix^i\\
+\sum_{i=0}^\infty a_ix^i \amp=  \frac{a_0-1+(a_1-5a_0-2)x}{1-5x+6x^2}+ \frac{1}{1-5x+6x^2}\cdot\frac{1}{1-2x}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec_genfns-recurrence.html#p-1243">in-context</a></span>
 </body>
 </html>

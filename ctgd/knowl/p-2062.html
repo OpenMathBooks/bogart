@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:04-06:00    *-->
+<!--*    on 2018-08-12T12:01:37-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>What is the EGF for the sequence \(0,1,2,3,\ldots\text{?}\) You may think of this as the EFG for the number of ways to select one element from an \(n\) element set. What is the EGF for the number of ways to select two elements from an \(n\)-element set?</p>
+<p>Recall that \(p_{2n} = (2n-1)(2n-3)\cdots 1= \frac{(2n)!}{2^n
+n!}\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty
+p_{2n}\frac{x^{2n}}{(2n)!}= \sum_{n=0}^\infty \frac{x^{2n}}{2^n n!} =
+\sum_{n=0}^\infty \frac{({x^2/2})^n}{n!} = e^{x^2/2} .
+\end{equation*}
+</div>
 <span class="incontext"><a href="app3-2-expogenfns.html#p-2062">in-context</a></span>
 </body>
 </html>

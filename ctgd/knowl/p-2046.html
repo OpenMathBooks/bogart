@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:03-06:00    *-->
+<!--*    on 2018-08-12T12:01:36-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Find the EGF (exponential generating function) for the sequence \(a_n=2^n\text{.}\) What does this say about the EGF for the number of subsets of an \(n\)-element set?</p>
+<p>We say that the expression \(\sum_{i=0}^\infty a_i\frac{x^i}{i!}\) is the <dfn class="terminology">exponential generating function</dfn> for the sequence \(a_i\text{.}\) It is standard to use <dfn class="terminology">EGF</dfn> as a shorthand for exponential generating function. In this context we call the generating function \(\sum_{i=0}^n a_ix^i\) that we originally studied the <dfn class="terminology">ordinary generating function</dfn> for the sequence \(a_i\text{.}\) You can see why we use the term exponential generating function by thinking about the exponential generating function (EGF) for the all ones sequence,</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=0}^\infty 1\frac{x^i}{i!} = \sum_{i=0}^\infty \frac{x^i}{i!}
+=e^x,
+\end{equation*}
+</div>
+<p>which we also denote by \(\exp (x)\text{.}\) Recall from calculus that the usual definition of \(e^x\) or \(\exp(x)\) involves limits at least implicitly. We work our way around that by defining \(e^x\) to be the power series \(\sum_{i=0}^\infty
+\frac{x^i}{i!}\text{.}\)</p>
 <span class="incontext"><a href="app3-2-expogenfns.html#p-2046">in-context</a></span>
 </body>
 </html>

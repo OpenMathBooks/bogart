@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:18-06:00    *-->
+<!--*    on 2018-08-12T12:01:03-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In how many ways may \(k\) distinct books be arranged on \(n\) shelves so that no shelf gets more than \(m\) books?</p>
+<p>We could do the problem as a generating functions problem. But, as an inclusion-exclusion problem, we would let \(A_i\) be the set of \(i\) such that child \(i\) gets more than six pieces of candy. We would then observe that the number of ways to pass out the candy so that the children determined by a set \(S\) of \([n]\) all get more than six pieces, and everyone else gets at least 3, is the number of ways to pass out the remaining candy after giving 7 pieces to each child identified by \(S\) and 3 pieces to each other child. This number is \(\binom{k-7|S|-3(n-|S|)-1}{n-1}=\binom{k-2n-4|S|-1}{n-1}\text{.}\) From here we would substitute into the formula from <a knowl="./knowl/compunion.html" title="Problem 234">Problem 234</a>, make any simplifications we could, and we would be done. This will give the same answer as <a knowl="./knowl/candy-genfn.html" title="Exercise 4.1">Exercise 1 of Chapter 4</a>.</p>
 <span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1434">in-context</a></span>
 </body>
 </html>

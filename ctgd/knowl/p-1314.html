@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:12-06:00    *-->
+<!--*    on 2018-08-12T12:00:59-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Thus the number of ways to paint \(n\) chairs is \(\binom{n+4-1}{n}=\binom{n+3}{n}\)</p>
+<p>The generating function for the number of ways to paint \(n\) chairs is</p>
+<div class="displaymath">
+\begin{align*}
+\amp \hspace{-.5in}(1+x+x^2+\cdots)^2(1+x)(1+x+x^2+x^3)(1+x^2+x^4+\cdots)
+(1+x^4+x^8+\cdots)\\
+=\amp
+\frac{(1+x)(1+x+x^2+x^3)}{(1-x)^2(1-x^2)(1-x^4)} =  \frac{1}{(1-x)^4}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec_genfns-suppprobs.html#p-1314">in-context</a></span>
 </body>
 </html>

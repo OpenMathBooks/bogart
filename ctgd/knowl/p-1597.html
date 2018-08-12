@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:25-06:00    *-->
+<!--*    on 2018-08-12T12:01:08-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,13 +13,22 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We say that a permutation group \(G\) <dfn class="terminology">acts</dfn> on a set \(S\) if, for each member \(\sigma\) of \(G\) there is a permutation \(\overline{\sigma}\) of \(S\) such that</p>
 <div class="displaymath">
 \begin{equation*}
-\overline{\sigma\circ\varphi} = \overline{\sigma}\circ\overline{\varphi}
+\begin{pmatrix}t\amp f\amp r\amp b\amp l\amp u\cr t\amp r\amp b\amp l\amp f\amp u
+\end{pmatrix} \begin{pmatrix}t\amp f\amp r\amp b\amp l\amp u\cr r\amp u\amp b\amp t\amp f\amp l
+\end{pmatrix}  =
+\begin{pmatrix}t\amp f\amp r\amp b\amp l\amp u\cr b\amp u\amp l\amp t\amp r\amp f
+\end{pmatrix}
 \end{equation*}
 </div>
-<p>for every member \(\sigma\) and \(\varphi\) of \(G\text{.}\) In <a knowl="./knowl/cube2.html" knowl-id="xref-cube2" alt="Part 280.c " title="Part 280.c ">Problem 280.c</a> you saw one example of this condition. If we think intuitively of \(\rho\) and \(\varphi\) as motions in space, then following the action of \(\varphi\) by the action of \(\rho\) does give us the action of \(\rho\circ \varphi\text{.}\) We can also reason directly with the permutations in the group \(R\) of rigid motions (rotations) of the cube to show that \(R\) acts on the faces of the cube.</p>
+<div class="displaymath">
+\begin{equation*}
+\overline{\rho\circ\varphi} =\begin{pmatrix}t\amp f\amp r\amp b\amp l\amp u\cr
+b\amp u\amp l\amp t\amp r\amp f
+\end{pmatrix} =\overline{\rho}\circ\overline{\varphi}
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec_groups-groupsact.html#p-1597">in-context</a></span>
 </body>
 </html>

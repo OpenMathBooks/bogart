@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:12-06:00    *-->
+<!--*    on 2018-08-12T12:00:59-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>One of our very first counting principles was the <dfn class="terminology">sum principle</dfn> which says that the size of a union of disjoint sets is the sum of their sizes. Computing the size of overlapping sets requires, quite naturally, information about how they overlap. Taking such information into account will allow us to develop a powerful extension of the sum principle known as the “principle of inclusion and exclusion.”</p>
-<span class="incontext"><a href="sec_inclexcl-sizeunion.html#p-1317">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+(1+q+\cdots+q^m)(1+q^2 +\cdots+q^{2m})\cdots
+=\prod_{i=1}^\infty\sum_{j=0}^m q^{ij}\\
+=\prod_{i=1}^\infty \frac{1-q^{i(m+1)}}{1-q^i}
+\end{equation*}
+</div>
+<p>This is also the generating function for the number of partitions of an integer in which consecutive parts differ by at most \(m\text{,}\) because when we conjugate a partition in which each part is used at most \(m\) times, we get a partition in which each distinct column of the Young diagram occurs at most \(m\) times, which means that the difference between two consecutive parts (in the decreasing list representation) is at most \(m\text{.}\)</p>
+<span class="incontext"><a href="sec_genfns-suppprobs.html#p-1317">in-context</a></span>
 </body>
 </html>

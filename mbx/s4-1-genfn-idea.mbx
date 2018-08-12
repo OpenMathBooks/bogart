@@ -16,7 +16,7 @@
         </me>
         </p>
 
-        <p>In this notation <m>\ap^3</m> stands for taking a multiset of three apples, while <m>\ap^2\ba</m> stands for taking a multiset of two apples and a banana, and so on. What our notation is really doing is giving us a convenient way to list all three element multisets chosen from the set <m>\{\ap,\pe,\ba\}</m>.<fn>This approach was inspired by George P&#xf3;lya's paper <q>Picture Writing,</q> in the December, 1956 issue of the <booktitle>American Mathematical Monthly</booktitle>, page 689. While we are taking a somewhat more formal approach than P&#xf3;lya, it is still completely in the spirit of his work.</fn>
+        <p>In this notation <m>\ap^3</m> stands for taking a multiset of three apples, while <m>\ap^2\ba</m> stands for taking a multiset of two apples and a banana, and so on. What our notation is really doing is giving us a convenient way to list all three element multisets chosen from the set <m>\{\ap,\pe,\ba\}</m>.<fn>This approach was inspired by George P&#xf3;lya's paper <q>Picture Writing,</q> in the December, 1956 issue of the <pubtitle>American Mathematical Monthly</pubtitle>, page 689. While we are taking a somewhat more formal approach than P&#xf3;lya, it is still completely in the spirit of his work.</fn>
         </p>
 
         <p>Suppose now that we plan to choose between one and three apples, between one and two pears, and between one and two bananas. In a somewhat clumsy way we could describe our fruit selections as

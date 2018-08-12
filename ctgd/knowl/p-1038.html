@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:00-06:00    *-->
+<!--*    on 2018-08-12T12:00:50-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The <dfn class="terminology">degree sequence</dfn> of a graph is a list of the degrees of the vertices in non-increasing order. For example the degree sequence of the first graph in <a knowl="./knowl/spanningtrees.html" knowl-id="xref-spanningtrees" alt="Figure 2.3.3 " title="Figure 2.3.3 ">Figure 2.3.3</a> is \((4, 3, 2, 2, 1)\text{.}\) For a graph with vertices labeled 1 through \(n\text{,}\) the <dfn class="terminology">ordered degree sequence</dfn> of the graph is the sequence \(d_1, d_2,\dots, d_n\) in which \(d_i\) is the degree of vertex \(i\text{.}\) For example the ordered degree sequence of the first graph in <a knowl="./knowl/Threegraphs.html" knowl-id="xref-Threegraphs" alt="Figure 2.3.1 " title="Figure 2.3.1 ">Figure 2.3.1</a> is \((1,2,3,3,1,1,2,1)\text{.}\)</p>
+<p>The vertices of degree 1 are the vertices that do not appear in the Prüfer code for the tree. So we first choose four vertices out of \(n\) in \(\binom{n}{4}\) ways to be our vertices of degree 1, and the Prüfer code may be thought of as a function from the \(n-2\) places of the code onto the \(n-4\) remaining vertices, so there are \(S(n-2,n-4)(n-4)!\) Prüfer codes for each choice of the vertices of degree 1. Thus, using <a knowl="./knowl/partitions-k-2-parts.html" title="Exercise 3.6">Exercise 3.6</a>, we have that the number of labeled trees is</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{4}\frac{(n-2)(n-4)(3n-11)(n-4)!}{24} = \frac{n!(n-2)(n-3)(n-4)(3n-11)}{576}\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec_distribution-suppprobs.html#p-1038">in-context</a></span>
 </body>
 </html>

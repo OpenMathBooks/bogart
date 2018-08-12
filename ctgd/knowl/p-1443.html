@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:19-06:00    *-->
+<!--*    on 2018-08-12T12:01:03-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,19 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>This gives us</p>
+<p>On the other hand, the number of subsets of \([n]\) that have \(r\) runs and do not contain both \(1\) and \(n\) is the total number of subsets with \(r\) runs minus the number that do contain both \(1\) and \(n\text{;}\) this is</p>
 <div class="displaymath">
 \begin{equation*}
-N(s,r) =\binom{s-1}{r}\binom{n-s-1}{r-1}+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right)
+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right).
 \end{equation*}
 </div>
-<p>ways to choose an \(s\)-element subset of \([n]\) that has \(r\) runs when \([n]\) is arranged around a circle. Thus there are</p>
-<div class="displaymath">
-\begin{equation*}
-\sum\limits_{s=0}^n\sum\limits_{r=1}^{s}(-1)^s\left[\binom{s-1}{r}\binom{n-s-1}{r-1}+\binom{s-1}{r-1}\left(\binom{n-s+1}{r}- \binom{n-s-1}{r-2}\right)\right](n-s-1)!2^r
-\end{equation*}
-</div>
-<p>ways for people to arrange themselves in the second circle so that no-one is adjacent to anyone he or she was previously adjacent to.</p>
 <span class="incontext"><a href="sec_inclexcl-suppprobs.html#p-1443">in-context</a></span>
 </body>
 </html>

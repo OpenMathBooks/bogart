@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:15-06:00    *-->
+<!--*    on 2018-08-12T12:01:01-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(S\) be the set of all distributions of \(k\) identical apples to the \(n\) children. Let \(A_i\) be the set of distributions in which child \(i\) gets five or more apples. Then we are asking for the number of distributions of apples that lie in none of the sets, so we are asking for \(|\overline{A_1\cup A_2\cup \cdots \cup A_n}|\text{.}\) From the formula you gave in <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a> we see that to find this number we need to know \(|\bigcap_{i\in S}A_i|\) for every subset \(S\) of \([n]\text{.}\) But if \(S\) has size \(s\text{,}\) then \(S\) determines a distribution such that all the children in a particular set of size \(s\) will get five or more apples. By <a knowl="./knowl/k-obj-n-recip.html" knowl-id="xref-k-obj-n-recip" alt="Problem 128 " title="Problem 128 ">Problem 128</a>, we can pass out the apples so that the children in a particular set \(\hat S\) of children get at least five apples as follows: we give everyone in \(\hat
-S\) five apples, and then pass out the remaining \(k-5s\) apples to the children in \(\binom{k-5s+n-1}{k-5s}= \binom{k-5s+n-1}{n-1}\) ways. This counts the number of ways to give at least five apples to every child in \(\hat S\text{,}\) and maybe give five apples to some other children as well. Thus \(|\bigcap_{i\in S}A_i| = = \binom{k-5|S|+n-1}{n-1}\text{.}\) In particular, if \(S=\emptyset\text{,}\) we get \(\binom{k+n-1}{n-1}\text{,}\) which is the total number of ways to pass out \(k\) identical apples to \(n\) children. Applying the formula from <a knowl="./knowl/compunion.html" knowl-id="xref-compunion" alt="Problem 234 " title="Problem 234 ">Problem 234</a> gives us</p>
-<div class="displaymath">
-\begin{align*}
-\left| \overline{\bigcup_{i=1}^n A_i}\right|&amp;= \sum_{S:S\subseteq [n]}(-1)^{|S|}\left|\bigcap _{i\colon i\in S} A_i\right|\\
-&amp;= \sum_{s=0}^n \binom{n}{s}(-1)^s \binom{k-5s+n-1}{n-1}\\
-&amp;= \sum_{s=0}^n (-1)^s\binom{n}{s}\binom{k-5s+n-1}{n-1}\text{.}
-\end{align*}
-</div>
+<p>Notice that it is straightforward to figure out how many ways we may pass out the apples so that child \(i\) gets five or more apples: give five apples to child \(i\) and then pass out the remaining apples however you choose. And if  we want to figure out how many ways we may pass out the apples so that a given set \(C\) of children each get five or more apples, we give five to each child in \(C\) and then pass out the remaining \(k-5|C|\) apples however we choose.</p>
 <span class="incontext"><a href="sec_inclexcl-apps.html#p-1372">in-context</a></span>
 </body>
 </html>

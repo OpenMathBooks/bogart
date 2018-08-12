@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:01-06:00    *-->
+<!--*    on 2018-08-12T12:00:51-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In <a knowl="./knowl/reprovingbinomialtheorem.html" knowl-id="xref-reprovingbinomialtheorem" alt="Problem 186 " title="Problem 186 ">Problem 186</a> we see that we can think of the process of expanding the polynomial \((1+x)^n\) as a way of “generating” the binomial coefficients \(\binom{n}{k}\) as the coefficients of \(x^k\) in the expansion of \((1+x)^n\text{.}\) For this reason, we say that \((1+x)^n\) is the “generating function” for the binomial coefficients \(\binom{n}{k}\text{.}\) More generally, the <dfn class="terminology">generating function</dfn> for a sequence \(a_i\text{,}\) defined for \(i\) with \(0\le i\le n\) is the expression \(\sum_{i=0}^n a_ix^i\text{,}\) and the <dfn class="terminology">generating function</dfn> for the sequence \(a_i\) with \(i\ge 0\) is the expression \(\sum_{i=0}^\infty a_ix^i\text{.}\) This last expression is an example of a power series. In calculus it is important to think about whether a power series converges in order to determine whether or not it represents a function. In a nice twist of language, even though we use the phrase generating function as the name of a power series in combinatorics, we don't require the power series to actually represent a function in the usual sense, and so we don't have to worry about convergence.<span class="footnote"><a knowl="./knowl/fn-11-hidden.html" knowl-id="hidden-fn-11" alt="Footnote 4.3 " title="Footnote 4.3 "><sup> 3 </sup></a></span> Instead we think of a power series as a convenient way of representing the terms of a sequence of numbers of interest to us. The only justification for saying that such a representation is convenient is because of the way algebraic properties of power series capture some of the important properties of some sequences that are of combinatorial importance. The remainder of this chapter is devoted to giving examples of how the algebra of power series reflects combinatorial ideas.</p>
+<p>The picture enumerator for choosing \(1\) or not choosing 1 is \(x_1+1\text{.}\) The picture enumerator for choosing or not choosing \(i\) is \(x_i+1\text{.}\)  The picture enumerator for choosing all possible subsets of \([n]\) is \((x_1+1)(x_2+1)\cdots(x_n+1).\) We should substitute \(x\) for \(x_i\text{,}\) thus getting \((1+x)^n\text{.}\) Since the number of ways to choose an \(n\)-element subset is \(\binom{n}{k}\text{,}\) we have just proved the version of the binomial theorem that says</p>
+<div class="displaymath">
+\begin{equation*}
+(x+1)^n=\sum_{i=0}^n \binom{n}{i}x^i.
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec_genfns-idea.html#p-1073">in-context</a></span>
 </body>
 </html>

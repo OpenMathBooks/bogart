@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:55-06:00    *-->
+<!--*    on 2018-08-12T12:01:30-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,8 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p><a knowl="./knowl/subsetsbysmallestcounterexample1.html" knowl-id="xref-subsetsbysmallestcounterexample1" alt="Part 360.a " title="Part 360.a ">Parts a</a> and <a knowl="./knowl/subsetsbysmallestcounterexample2.html" knowl-id="xref-subsetsbysmallestcounterexample2" alt="Part 360.b " title="Part 360.b ">b</a> suggest strongly that the number of subsets of a \(n\)-element set is \(2^n\text{.}\) In particular, the empty set has \(2^0\) subsets, a one-element set has \(2^1\) subsets, itself and the empty set, and in <a knowl="./knowl/subsetsbysmallestcounterexample1.html" knowl-id="xref-subsetsbysmallestcounterexample1" alt="Part 360.a " title="Part 360.a ">Parts a</a> and <a knowl="./knowl/subsetsbysmallestcounterexample2.html" knowl-id="xref-subsetsbysmallestcounterexample2" alt="Part 360.b " title="Part 360.b ">b</a> we saw that two-element and three-element sets have \(2^2\) and \(2^3\) subsets respectively. So there are certainly some values of \(n\) for which an \(n\)-element set has \(2^n\) subsets. One way to prove that an \(n\)-element set has \(2^n\) subsets for all values of \(n\) is to argue by contradiction. For this purpose, suppose there is a nonnegative integer \(n\) such that an \(n\)-element set doesn't have exactly \(2^n\) subsets. In that case there may be more than one such \(n\text{.}\) Choose \(k\) to be the smallest such \(n\text{.}\) Notice that \(k -1\) is still a positive integer, because \(k\) can't be 0, 1, 2, or 3. Since \(k\) was the smallest value of \(n\) we could choose to make the statement “An \(n\)-element set has \(2^n\) subsets” false, what do you know about the number of subsets of a \((k - 1)\)-element set? What do you know about the number of subsets of the \(k\)-element set \(\{1, 2, \ldots, k \}\) that don't contain \(k\text{?}\) What do you know about the number of subsets of \(\{1,
-2, \ldots,  k \}\) that do contain \(k\text{?}\) What does the sum principle tell you about the number of subsets of \(\{1, 2, \ldots, k \}\text{?}\) Notice that this contradicts the way in which we chose \(k\text{,}\) and the only assumption that went into our choice of \(k\) was that ``there is a nonnegative integer \(n\) such that an \(n\)-element set doesn't have exactly \(2^n\) subsets." Since this assumption has led us to a contradiction, it must be false. What can you now conclude about the statement ``for every nonnegative integer \(n\text{,}\) an n-element set has exactly \(2^n\) subsets?"</p>
+<p>If we adjoin \(n\) to the subsets not containing \(n\) we get the subsets containing \(n\text{.}\) This is a bijection because if we start with two different sets, adjoining \(n\) to them can't make them the same, and every subset \(S\) containing \(n\) must arise in this way from the set \(S-\{n\}\) not containing \(n\text{.}\)</p>
 <span class="incontext"><a href="app2-1-induction.html#p-1985">in-context</a></span>
 </body>
 </html>

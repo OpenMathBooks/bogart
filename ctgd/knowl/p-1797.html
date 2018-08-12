@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:36-06:00    *-->
+<!--*    on 2018-08-12T12:01:16-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,10 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Substituting 4 for each variable gives us</p>
+<p>We can first consider all ways of coloring the vertices of the cube with the four colors; once those vertices are in place, the number of ways to put the sticks in is the result of <a knowl="./knowl/coloredsticks.html" title="Problem 324">Problem 324</a>, so by the product principle then number of ways to choose the colors of the vertices and edges is the product of the number of ways to choose each. Thus we just need to consider the action of the rotation group of the cube on the vertices: </p>
+<ul class="disc">
+<li>identity is the product of eight one-cycles.</li>
+<li>90 or 270 degree rotation around an axis perpendicular to two opposite faces is a product of two four-cycles.</li>
+<li>180 degree rotation around an axis perpendicular to two opposite faces is a product of four two-cycles.</li>
+<li>180 degree rotation around an axis joining two opposite edges is a product of four two-cycles.</li>
+<li>120 or 240 degree rotation around an axis through two diagonally opposite vertices is a product of two three-cycles and two one-cycles.</li>
+</ul>
+<p> Thus the cycle index for this action is</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{1}{24}\left(4^8+6\cdot4^2 +9\cdot 4^4 + 8\cdot4^2\cdot4^2\right)=2916.
+\frac{1}{24}\left(z_1^8+6z_4^2 + 9z_2^4 + 8z_3^2z_1^2\right).
 \end{equation*}
 </div>
 <span class="incontext"><a href="sec_groups-polya.html#p-1797">in-context</a></span>

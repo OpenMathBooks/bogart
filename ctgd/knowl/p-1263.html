@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:10-06:00    *-->
+<!--*    on 2018-08-12T12:00:57-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,30 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="displaymath">
-\begin{align*}
-\sum_{n=0}^\infty a_nx^n  \amp= \frac{1}{1-x-x^2}= -\frac{1}{x^2+x-1}\\
-\amp= \frac{1}{\sqrt{5}}\cdot\frac{1}{r_1-x} -\frac{1}{\sqrt{5}}\cdot\frac{1}{r_2-x}\\
-\amp= \frac{1}{r_1\sqrt{5}}\cdot\frac{1}{1-x/r_1} -\frac{1}{r_2\sqrt{5}}\cdot\frac{1}{1-x/r_2}\\
-\amp= \frac{1}{r_1\sqrt{5}}\sum_{n=0}^\infty\left(\frac{x}{r_1}\right)^n
--\frac{1}{r_2\sqrt{5}}\sum_{n=0}^\infty  \left(\frac{x}{r_2}\right)^n
-\end{align*}
-</div>
-<p>This gives us that</p>
-<div class="displaymath">
-\begin{align*}
-a_n \amp= \frac{1}{\sqrt{5}\cdot r_1^{n+1}}
-+\frac{1}{\sqrt{5}\cdot r_2^{n+1}}\\
-\amp= \frac{2^{n+1}}{\sqrt{5}(-1+\sqrt{5})^{n+1}}
-+
-\frac{2^{n+1}}{\sqrt{5}(-1-\sqrt{5})^{n+1}}\\
-\amp= \frac{2^{n+1}(1+\sqrt{5})^{n+1}}{\sqrt{5}\cdot
-4^{n+1}}-
-\frac{2^{n+1}(1-\sqrt{5})^{n+1}}{\sqrt{5}\cdot4^{n+1}}\\
-\amp= \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-
-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}.
-\end{align*}
-</div>
+<p>Once again it will save a lot of tedious algebra if you use the symbols \(r_1\) and \(r_2\) for the solutions as in <a knowl="./knowl/fractionFibonacci.html" title="Problem 221">Problem 221</a> and substitute the actual values of the solutions once you have a formula for \(a_n\) in terms of \(r_1\) and \(r_2\text{.}\)</p>
 <span class="incontext"><a href="sec_genfns-recurrence.html#p-1263">in-context</a></span>
 </body>
 </html>

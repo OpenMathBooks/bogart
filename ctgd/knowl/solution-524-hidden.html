@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:33-06:00    *-->
+<!--*    on 2018-08-12T12:01:14-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -11,7 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><span class="solution"><p>We want to think of the rotation group of the cube acting on the faces of the cube, in order to see what kinds of colorings are left fixed. For this purpose we note that each element of the rotation group gives us a permutation of the faces of the cube, and if two faces are in the same cycle of this permutation, they must have the same color, but if they are in different cycles, they may get different colors. The 90 and 270 degree rotations around an axis through two faces have a four-cycle and two one-cycles. The 180 degree rotation around an axis through two faces has two two-cycles and two one-cycles. The 120 and 240 degree rotations around an axis connecting diagonally opposite vertices have two three-cycles. The 180 degree rotations around an axis connecting two opposite edges have three two-cycles, and the identity has six one-cycles. A coloring is fixed by a permutation if and only if it is constant on (i.e. assigns the same color to all elements of) each cycle of the permutation. The picture enumerator for (constant) colorings of an \(i\)-cycle is \(R^i+B^i\text{.}\) Thus, using <a knowl="./knowl/PictureEnumeratorforFunctions.html" knowl-id="xref-PictureEnumeratorforFunctions" alt="Problem 313 " title="Problem 313 ">Problem 313</a>, if \(\sigma\) is a 90 or 270 degree rotation, its fixed point enumerator is \((R^4+B^4)(R+B)^2\text{,}\) if it is a 180 degree rotation around an axis connecting two opposite faces, its fixed point enumerator is \((R^2+B^2)^2(R+B)^2\text{,}\) if it is a 180 degree rotation around an axis connecting two opposite edges, its fixed point enumerator is \((R^2+B^2)^3\text{,}\) if it is a 120 or 240 degree rotation its fixed point enumerator is \((R^3+B^3)^2\text{,}\) and if it is the identity, then its fixed point enumerator is \((R+B)^6\text{.}\) Therefore the generating function is</p>
+<body><div class="solution">
+<p>We want to think of the rotation group of the cube acting on the faces of the cube, in order to see what kinds of colorings are left fixed. For this purpose we note that each element of the rotation group gives us a permutation of the faces of the cube, and if two faces are in the same cycle of this permutation, they must have the same color, but if they are in different cycles, they may get different colors. The 90 and 270 degree rotations around an axis through two faces have a four-cycle and two one-cycles. The 180 degree rotation around an axis through two faces has two two-cycles and two one-cycles. The 120 and 240 degree rotations around an axis connecting diagonally opposite vertices have two three-cycles. The 180 degree rotations around an axis connecting two opposite edges have three two-cycles, and the identity has six one-cycles. A coloring is fixed by a permutation if and only if it is constant on (i.e. assigns the same color to all elements of) each cycle of the permutation. The picture enumerator for (constant) colorings of an \(i\)-cycle is \(R^i+B^i\text{.}\) Thus, using <a knowl="./knowl/PictureEnumeratorforFunctions.html" title="Problem 313">Problem 313</a>, if \(\sigma\) is a 90 or 270 degree rotation, its fixed point enumerator is \((R^4+B^4)(R+B)^2\text{,}\) if it is a 180 degree rotation around an axis connecting two opposite faces, its fixed point enumerator is \((R^2+B^2)^2(R+B)^2\text{,}\) if it is a 180 degree rotation around an axis connecting two opposite edges, its fixed point enumerator is \((R^2+B^2)^3\text{,}\) if it is a 120 or 240 degree rotation its fixed point enumerator is \((R^3+B^3)^2\text{,}\) and if it is the identity, then its fixed point enumerator is \((R+B)^6\text{.}\) Therefore the generating function is</p>
 <div class="displaymath">
 \begin{align*}
 \amp \frac{1}{24}\big((R+B)^6 + 8(R^3+B^3)^2 + 3(R^2+B^2)^2(R+B)^2 +\\
@@ -25,5 +26,6 @@
 RB^5+2R^4B^2+R^5B+2R^3B^3+2R^2B^4+R^6+B^6\text{.}
 \end{equation*}
 </div>
-<p>There is one way to color the cube all red or all blue, one way to color it with exactly five red or exactly five blue faces, there are two ways to color it with exactly four red or four blue faces and two ways to color it with exactly three red (and three blue) faces.</p></span></body>
+<p>There is one way to color the cube all red or all blue, one way to color it with exactly five red or exactly five blue faces, there are two ways to color it with exactly four red or four blue faces and two ways to color it with exactly three red (and three blue) faces.</p>
+</div></body>
 </html>

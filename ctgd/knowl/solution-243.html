@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:55-06:00    *-->
+<!--*    on 2018-08-12T12:00:47-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,8 +12,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<span class="solution"><h6 class="heading">
-<span class="type">Solution</span><span class="codenumber">153.1</span>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">153.1</span>
 </h6>
 <p>We know that</p>
 <div class="displaymath">
@@ -21,7 +22,7 @@
 (x+1)^n=\sum_{i=0}^n \binom{n}{i}x^{i}\tag{3.2}
 \end{equation}
 </div>
-<p>from the binomial theorem. (In the way we stated the binomial theorem, instead of \(\binom{n}{i}x^i\) we would have gotten \(\binom{n}{i}x^{n-i}\text{.}\) There are two ways to fix this. One is to observe that the coefficient of \(x^i\) in that expansion is \(\binom{n}{n-i}\text{,}\) which equals \(\binom{n}{i}\text{.}\) The other is to observe that when we expand \((1+x)^n\) according to the binomial theorem we get exactly what we wrote on the right hand side in <a knowl="./knowl/usingbinomialtheorem.html" knowl-id="xref-usingbinomialtheorem" alt="Equation 3.2 " title="Equation 3.2 ">Equation (3.2)</a>.) Therefore every power of \(x+1\) is expressible in terms of powers of \(x\text{.}\)</p>
+<p>from the binomial theorem. (In the way we stated the binomial theorem, instead of \(\binom{n}{i}x^i\) we would have gotten \(\binom{n}{i}x^{n-i}\text{.}\) There are two ways to fix this. One is to observe that the coefficient of \(x^i\) in that expansion is \(\binom{n}{n-i}\text{,}\) which equals \(\binom{n}{i}\text{.}\) The other is to observe that when we expand \((1+x)^n\) according to the binomial theorem we get exactly what we wrote on the right hand side in <a knowl="./knowl/usingbinomialtheorem.html" title="Equation 3.2">Equation (3.2)</a>.) Therefore every power of \(x+1\) is expressible in terms of powers of \(x\text{.}\)</p>
 <p>How do we express powers of \(x\) in terms of powers of \(x+1\text{?}\) Some experimentation would help us guess how to do so; however there is a really nice trick that also isn't hard to see. Namely, we can write</p>
 <div class="displaymath">
 \begin{align*}
@@ -30,6 +31,8 @@ x^n =(x+1-1)^n= [(x+1) -1]^n =\amp  \sum_{i=0}^n \binom{n}{i}(x+1)^{n-i}(-1)^i\\
 \sum_{i=0}^n \binom{n}{i}(x+1)^i(-1)^{n-i}
 \end{align*}
 </div>
-<p>This means that every power of \(x\) is expressible in terms of powers of \(x+1\) and the change of basis coefficients to express powers of \(x\) in terms of powers of \(x+1\) are \((-1)^{n-i}\binom{n}{i}\) while the change of basis coefficients used to express powers of \(x+1\) in terms of powers of \(x\) are \(\binom{n}{i}\text{.}\)</p></span><span class="incontext"><a href="s3-2-partitions.html#solution-243">in-context</a></span>
+<p>This means that every power of \(x\) is expressible in terms of powers of \(x+1\) and the change of basis coefficients to express powers of \(x\) in terms of powers of \(x+1\) are \((-1)^{n-i}\binom{n}{i}\) while the change of basis coefficients used to express powers of \(x+1\) in terms of powers of \(x\) are \(\binom{n}{i}\text{.}\)</p>
+</div>
+<span class="incontext"><a href="s3-2-partitions.html#solution-243">in-context</a></span>
 </body>
 </html>

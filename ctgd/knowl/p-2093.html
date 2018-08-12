@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:08-06:00    *-->
+<!--*    on 2018-08-12T12:01:40-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,10 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Your recurrence in <a knowl="./knowl/derangementrecurrence.html" knowl-id="xref-derangementrecurrence" alt="Problem 386 " title="Problem 386 ">Problem 386</a> should be a second order recurrence.</p>
+<p>\(T(x) = \sum_{i=0}^\infty (x+x^2/2)^i/i!\text{.}\) By the binomial theorem, this gives \(T(x) = \sum_{i=0}^\infty \frac{\sum_{j=0}^i \binom{i}{j}x^j\bigl(\frac{x^2}{2}\bigr)^{i-j}}{
+i!}=\sum_{i=0}^\infty\frac{\sum_{j=0}^i\binom{i}{j}x^{2i-j}2^{j-i}}{i!}\text{.}\) Then the coefficient \(c_n\) of \(x^n\) is the sum over all \(i\) and \(j\) with \(2i-j=n\) and \(j\le i\) of \(\binom{i}{j}\frac{n!}{i!}2^{j-i}\text{.}\) But if \(2i-j=n\text{,}\) then \(j= 2i-n\text{,}\) and if \(2i-n\le i\text{,}\) then \(i\le n\text{,}\) so that \(c_n
+= \frac{n!}{2^n}\sum_{i=0}^n\binom{i}{2i-n}\frac{2^i}{i!}\text{.}\) Note that \(\binom{i}{2i-n}\) is the same as \(\binom{i}{n-i}\text{,}\) which is 0 unless \(i\ge
+n/2\text{,}\) which reduces our sum to \(c_n = \frac{n!}{2^n}\sum_{i=\lceil n/2\rceil}^n\binom{i}{n-i}\frac{2^i}{i!}\text{.}\)</p>
 <span class="incontext"><a href="app3-3-recurrences.html#p-2093">in-context</a></span>
 </body>
 </html>

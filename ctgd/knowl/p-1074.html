@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:01-06:00    *-->
+<!--*    on 2018-08-12T12:00:51-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Because we choose to think of power series as strings of symbols that we manipulate by using the ordinary rules of algebra and we choose to ignore issues of convergence, we have to avoid manipulating power series in a way that would require us to add infinitely many real numbers. For example, we cannot make the substitution of \(y+1\) for \(x\) in the power series \(\sum_{i=0}^\infty x^i\text{,}\) because in order to interpret \(\sum_{i=0}^\infty (y+1)^i\) as a power series we would have to apply the binomial theorem to each of the \((y+1)^i\) terms, and then collect like terms, giving us infinitely many ones added together as the coefficient of \(y^0\text{,}\) and in fact infinitely many numbers added together for the coefficient of any \(y^i\text{.}\) (On the other hand, it would be fine to substitute \(y+y^2\) for \(x\text{.}\) Can you see why?)</p>
+<p>In <a knowl="./knowl/reprovingbinomialtheorem.html" title="Problem 186">Problem 186</a> we see that we can think of the process of expanding the polynomial \((1+x)^n\) as a way of “generating” the binomial coefficients \(\binom{n}{k}\) as the coefficients of \(x^k\) in the expansion of \((1+x)^n\text{.}\) For this reason, we say that \((1+x)^n\) is the “generating function” for the binomial coefficients \(\binom{n}{k}\text{.}\) More generally, the <dfn class="terminology">generating function</dfn> for a sequence \(a_i\text{,}\) defined for \(i\) with \(0\le i\le n\) is the expression \(\sum_{i=0}^n a_ix^i\text{,}\) and the <dfn class="terminology">generating function</dfn> for the sequence \(a_i\) with \(i\ge 0\) is the expression \(\sum_{i=0}^\infty a_ix^i\text{.}\) This last expression is an example of a power series. In calculus it is important to think about whether a power series converges in order to determine whether or not it represents a function. In a nice twist of language, even though we use the phrase generating function as the name of a power series in combinatorics, we don't require the power series to actually represent a function in the usual sense, and so we don't have to worry about convergence.<a knowl="./knowl/fn-11-hidden.html" title="Footnote 4.3"><sup> 3 </sup></a> Instead we think of a power series as a convenient way of representing the terms of a sequence of numbers of interest to us. The only justification for saying that such a representation is convenient is because of the way algebraic properties of power series capture some of the important properties of some sequences that are of combinatorial importance. The remainder of this chapter is devoted to giving examples of how the algebra of power series reflects combinatorial ideas.</p>
 <span class="incontext"><a href="sec_genfns-idea.html#p-1074">in-context</a></span>
 </body>
 </html>

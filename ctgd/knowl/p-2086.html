@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:07-06:00    *-->
+<!--*    on 2018-08-12T12:01:39-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>\(d_n = (n-1)d_{n-1} + (n-1)d_{n-2}\text{.}\) \(d_1 = 0\) and \(d_2 = 1\text{.}\) Thus \(d_0\) must be 1 for our recurrence to be valid. (For those familiar with functions as sets of ordered pairs, the empty function is not only a permutation, but it does not map \(i\) to \(i\) for any integer \(i\text{,}\) so it is a derangement as well! Thus the definition of a derangement also gives us that \(d_0=1\text{.}\)) \(d_3= 2\text{,}\) \(d_4=3\cdot1+3\cdot 2=9\text{,}\) \(d_5=4\cdot2+4\cdot 9 = 44\text{,}\) and \(d_6 = 5\cdot9+5\cdot44 = 256\text{.}\)</p>
+<p>Recall that a <dfn class="terminology">derangement</dfn> of \([n]\) is a permutation of \([n]\) that has no fixed points, or equivalently is a way to pass out \(n\) hats to their \(n\) different owners so that nobody gets the correct hat. Use \(d_n\) to stand for the number of derangements of \([n]\text{.}\) We can think of derangement of \([n]\) as a list of \(1\) through \(n\) so that \(i\) is not in the \(i\)th place for any \(n\text{.}\) Thus in a derangement, some number \(k\) different from \(n\) is in position \(n\text{.}\) Consider two cases: either \(n\) is in position \(k\) or it is not. Notice that in the second case, if we erase position \(n\) and replace \(n\) by \(k\text{,}\) we get a derangement of \([n-1]\text{.}\) Based on these two cases, find a recurrence for \(d_n\text{.}\) What is \(d_1\text{?}\) What is \(d_2\text{?}\) What is \(d_0\text{?}\) What are \(d_3\) through \(d_6\text{?}\)</p>
 <span class="incontext"><a href="app3-3-recurrences.html#p-2086">in-context</a></span>
 </body>
 </html>

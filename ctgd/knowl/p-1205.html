@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:06-06:00    *-->
+<!--*    on 2018-08-12T12:00:55-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>It is quite likely that the two recurrences you got are different.  One would expect that they might give different values for \(\qchoose{m+n}{n}\text{.}\)  Can you resolve this potential conflict?</p>
+<p>We either have exactly \(k\) parts or fewer than \(k\) parts. In the first case, removing one from each part gives us a partition whose Young diagram fits into a \(m-1\) by \(n\) box, while in the second case doing nothing gives us a partition that fits into a \(m\) by \(n-1\) box. In the first case the partition we get partitions \(k-n\text{,}\) and in the second case it still partitions \(k\text{.}\) Thus we get</p>
+<div class="displaymath">
+\begin{equation*}
+\qchoose{m+n}{n}= q^n\qchoose{m+n-1}{n}+\qchoose{m+n-1}{n-1}.
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec_genfns-int-parts.html#p-1205">in-context</a></span>
 </body>
 </html>

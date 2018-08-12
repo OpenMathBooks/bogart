@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:38-06:00    *-->
+<!--*    on 2018-08-12T12:01:17-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,26 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>No, because \(\overline{\sigma\tau}(f) = f\circ\sigma\circ\tau\text{,}\) but \(\overline{\sigma}\circ\overline{\tau}(f) = f\circ\tau\circ\sigma\text{.}\) Thus, if our group is not commutative, this is not a group action.</p>
+<ol class="lower-alpha">
+<li><p>No, because \(\overline{\sigma\tau}(f) = f\circ\sigma\circ\tau\text{,}\) but \(\overline{\sigma}\circ\overline{\tau}(f) = f\circ\tau\circ\sigma\text{.}\) Thus, if our group is not commutative, this is not a group action.</p></li>
+<li><p>Yes, because the action gives a permutation of the functions and \(\overline{\sigma\tau}(f) = f\circ(\sigma\circ)^{-1} = f\circ\tau^{-1}\circ\sigma^{-1}\text{,}\) while \(\overline{\sigma}\circ\overline{\tau}(f) = f\circ\tau^{-1}\circ\sigma^{-1}\text{.}\) Thus this is a group action.</p></li>
+<li>
+<p>The action proposed in <a knowl="./knowl/group-act-comp.html" title="Item 6.7.b">part 6.7.b</a> is the same as our action on colorings. To see why, if</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\{(1,g(1)),(2,g(2)),\dots,(n,g(n))\}\\
+=&amp;\{(\sigma(1),f(1)),(\sigma(2),f(2)),\dots,(\sigma(n),f(n))\}\text{,}
+\end{align*}
+</div>
+<p>and \(i=\sigma(j)\text{,}\) then \(j=\sigma^{-1}(i)\) and so</p>
+<div class="displaymath">
+\begin{equation*}
+(i,g(i)) = (\sigma(j),f(j)) = (\sigma(\sigma^{-1}(i)),f(\sigma^{-1}(i)) = (i,f(\sigma^{-1}(i))\text{.}
+\end{equation*}
+</div>
+<p>Therefore, \(g=f\circ \sigma^{-1}\text{.}\)</p>
+</li>
+</ol>
 <span class="incontext"><a href="sec_groups-suppprobs.html#p-1832">in-context</a></span>
 </body>
 </html>

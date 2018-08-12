@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:32-06:00    *-->
+<!--*    on 2018-08-12T12:01:13-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,11 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose \(P_i\) is a picture function on a set \(S_i\) for \(i=1,\dots,k\text{.}\) We define the picture of a \(k\)-tuple \((x_1,x_2,\dots,x_k)\) to be the product of the pictures of its elements, i.e.</p>
 <div class="displaymath">
-\begin{equation*}
-\widehat P((x_1,x_2,\dots,x_k)) = \prod_{i=1}^k P_i(x_i).
-\end{equation*}
+\begin{align*}
+E_P(S_1\times S_2) =\amp \sum_{x_1\in S_1,\ x_2\in
+S_2}P(x_1)P(x_2)=\sum_{x_1\in S_1}\sum_{x_2 \in S_2}P(x_1)P(x_2)\\
+=\amp  \sum_{x_1\in
+S_1}P_1(x_1)\sum_{x_2 \in S_2}P_2(x_2)=E_{P_1}(S_1)E_{P_2}(S_2)\text{.}
+\end{align*}
 </div>
 <span class="incontext"><a href="sec_groups-polya.html#p-1748">in-context</a></span>
 </body>

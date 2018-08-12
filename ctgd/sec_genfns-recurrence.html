@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:11:10-06:00    *-->
+<!--*    on 2018-08-12T12:00:08-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,7 +12,7 @@
 <title>CTGD Generating Functions and Recurrence Relations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -35,18 +35,18 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="custom-styles.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 \newcommand{\importantarrow}{\Rightarrow}
-\newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
-\def\neg1choose#1#2{\left[{#1\atop#2}\right]_{-1}}
+\newcommand{\qchoose}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_q}
+\def\neg1choose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
 \newcommand{\bp}{
 \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
 \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
@@ -75,16 +75,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_genfns-int-parts.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_genfns.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_genfns-suppprobs.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_genfns-int-parts.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_genfns.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_genfns-suppprobs.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_genfns-int-parts.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_genfns.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec_genfns-suppprobs.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_genfns-int-parts.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_genfns.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_genfns-suppprobs.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
@@ -92,42 +92,42 @@ MathJax.Hub.Config({
 <li><a href="preface.html" data-scroll="preface">Preface</a></li>
 <li><a href="ptx-preface.html" data-scroll="ptx-preface">Preface to PreTeXt edition</a></li>
 </ul>
-<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span><span class="title punctuated">What is Combinatorics?</span></a></h2>
+<h2 class="link"><a href="what-is.html" data-scroll="what-is"><span class="codenumber">1</span> <span class="title punctuated">What is Combinatorics?</span></a></h2>
 <ul>
 <li><a href="s1-1-about.html" data-scroll="s1-1-about">About These Notes</a></li>
 <li><a href="s1-2-basics.html" data-scroll="s1-2-basics">Basic Counting Principles</a></li>
 <li><a href="s1-3-apps.html" data-scroll="s1-3-apps">Some Applications of the Basic Principles</a></li>
 <li><a href="sec_whatis-suppprobs.html" data-scroll="sec_whatis-suppprobs">Supplementary Chapter Problems</a></li>
 </ul>
-<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span><span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
+<h2 class="link"><a href="InductionRecursion.html" data-scroll="InductionRecursion"><span class="codenumber">2</span> <span class="title">Applications of Induction and Recursion in Combinatorics and Graph Theory</span></a></h2>
 <ul>
 <li><a href="sec_induction-examples.html" data-scroll="sec_induction-examples">Some Examples of Mathematical Induction</a></li>
 <li><a href="sec_induction-recurrence.html" data-scroll="sec_induction-recurrence">Recurrence Relations</a></li>
 <li><a href="sec_induction-graphstrees.html" data-scroll="sec_induction-graphstrees">Graphs and Trees</a></li>
 <li><a href="sec_induction-suppprobs.html" data-scroll="sec_induction-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span><span class="title">Distribution Problems</span></a></h2>
+<h2 class="link"><a href="ch3-distribution.html" data-scroll="ch3-distribution"><span class="codenumber">3</span> <span class="title">Distribution Problems</span></a></h2>
 <ul>
 <li><a href="s3-1-distrib-idea.html" data-scroll="s3-1-distrib-idea">The idea of a distribution</a></li>
 <li><a href="s3-2-partitions.html" data-scroll="s3-2-partitions">Partitions and Stirling Numbers</a></li>
 <li><a href="s3-3-partitions-int.html" data-scroll="s3-3-partitions-int">Partitions of Integers</a></li>
 <li><a href="sec_distribution-suppprobs.html" data-scroll="sec_distribution-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span><span class="title">Generating Functions</span></a></h2>
+<h2 class="link"><a href="ch_genfns.html" data-scroll="ch_genfns"><span class="codenumber">4</span> <span class="title">Generating Functions</span></a></h2>
 <ul>
 <li><a href="sec_genfns-idea.html" data-scroll="sec_genfns-idea">The Idea of Generating Functions</a></li>
 <li><a href="sec_genfns-int-parts.html" data-scroll="sec_genfns-int-parts">Generating functions for integer partitions</a></li>
 <li><a href="sec_genfns-recurrence.html" data-scroll="sec_genfns-recurrence" class="active">Generating Functions and Recurrence Relations</a></li>
 <li><a href="sec_genfns-suppprobs.html" data-scroll="sec_genfns-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span><span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
+<h2 class="link"><a href="ch_inclexcl.html" data-scroll="ch_inclexcl"><span class="codenumber">5</span> <span class="title">The Principle of Inclusion and Exclusion</span></a></h2>
 <ul>
 <li><a href="sec_inclexcl-sizeunion.html" data-scroll="sec_inclexcl-sizeunion">The size of a union of sets</a></li>
 <li><a href="sec_inclexcl-apps.html" data-scroll="sec_inclexcl-apps">Application of Inclusion and Exclusion</a></li>
 <li><a href="sec_inclexcl-delcont.html" data-scroll="sec_inclexcl-delcont">Deletion-Contraction and the Chromatic Polynomial</a></li>
 <li><a href="sec_inclexcl-suppprobs.html" data-scroll="sec_inclexcl-suppprobs">Supplementary Problems</a></li>
 </ul>
-<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span><span class="title">Groups acting on sets</span></a></h2>
+<h2 class="link"><a href="groupsonsets.html" data-scroll="groupsonsets"><span class="codenumber">6</span> <span class="title">Groups acting on sets</span></a></h2>
 <ul>
 <li><a href="sec_groups-permgroups.html" data-scroll="sec_groups-permgroups">Permutation Groups</a></li>
 <li><a href="sec_groups-groupsact.html" data-scroll="sec_groups-groupsact">Groups Acting on Sets</a></li>
@@ -142,87 +142,89 @@ MathJax.Hub.Config({
 <li><a href="app-hints.html" data-scroll="app-hints">Hints to Selected Problems</a></li>
 <li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_genfns-recurrence"><h2 class="heading hide-type" alt="Section 4.3 Generating Functions and Recurrence Relations">
-<span class="type">Section</span><span class="codenumber">4.3</span><span class="title">Generating Functions and Recurrence Relations</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_genfns-recurrence"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Generating Functions and Recurrence Relations</span>
 </h2>
-<a href="sec_genfns-recurrence.html" class="permalink">¶</a><section class="introduction" id="introduction-46"><p id="p-1223">Recall that a recurrence relation for a sequence \(a_n\) expresses \(a_n\) in terms of values \(a_i\) for \(i\lt n\text{.}\) For example, the equation \(a_i=3a_{i-1} +2^i\) is a first order linear constant coefficient recurrence.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type" alt="Subsection 4.3.1 How generating functions are relevant">
-<span class="type">Subsection</span><span class="codenumber">4.3.1</span><span class="title">How generating functions are relevant</span>
+<a href="sec_genfns-recurrence.html" class="permalink">¶</a><section class="introduction" id="introduction-46"><p id="p-1224">Recall that a recurrence relation for a sequence \(a_n\) expresses \(a_n\) in terms of values \(a_i\) for \(i\lt n\text{.}\) For example, the equation \(a_i=3a_{i-1} +2^i\) is a first order linear constant coefficient recurrence.</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.1</span> <span class="title">How generating functions are relevant</span>
 </h3>
-<a href="sec_genfns-recurrence.html#subsection-46" class="permalink">¶</a><p id="p-1224">Algebraic manipulations with generating functions can sometimes reveal the solutions to a recurrence relation.</p>
+<a href="sec_genfns-recurrence.html#subsection-46" class="permalink">¶</a><p id="p-1225">Algebraic manipulations with generating functions can sometimes reveal the solutions to a recurrence relation.</p>
 <article class="example-like essential" id="substituteandsolve"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">211</span>
+<span class="type">Problem</span> <span class="codenumber">211</span>
 </h6>
-<div class="introduction" id="introduction-47"><p id="p-1225">Suppose that \(a_i=3a_{i-1} + 3^i\text{.}\)</p></div>
+<div class="introduction" id="introduction-47"><p id="p-1226">Suppose that \(a_i=3a_{i-1} + 3^i\text{.}\)</p></div>
 <article class="exercise-like" id="task-157"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1226">Multiply both sides by \(x^i\) and sum both the left hand side and right hand side from \(i=1\) to infinity.  In the left-hand side use the fact that</p>
+<p id="p-1227">Multiply both sides by \(x^i\) and sum both the left hand side and right hand side from \(i=1\) to infinity.  In the left-hand side use the fact that</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{i=1}^\infty a_ix^i = (\sum_{i=0}^\infty x^i) -a_0
+\sum_{i=1}^\infty a_ix^i = (\sum_{i=0}^\infty a_ix^i) -a_0
 \end{equation*}
 </div>
 <p>and in the right hand side, use the fact that</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{i=1}^\infty a_{i-1}x^i = x\sum_{i=1}^\infty a_ix^{i-1}
+\sum_{i=1}^\infty a_{i-1}x^i = x\sum_{i=1}^\infty a_{i-1}x^{i-1}
 =x\sum_{j=0}^\infty a_jx^j =x\sum_{i=0}^\infty a_ix^i
 \end{equation*}
 </div>
 <p>(where we substituted \(j\) for \(i-1\) to see explicitly how to change the limits of summation, a surprisingly useful trick) to rewrite the equation in terms of the power series \(\sum_{i=0}^\infty a_ix^i\text{.}\)  Solve the resulting equation for the power series \(\sum_{i=0}^\infty a_ix^i\text{.}\) You can save a lot of writing by using a variable like \(y\) to stand for the power series.</p></article><article class="exercise-like" id="task-158"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1228">Use the previous part to get a formula for \(a_i\) in terms of \(a_0\text{.}\)</p></article><article class="exercise-like" id="task-159"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1230">Now suppose that \(a_i=3a_{i-1} + 2^i\text{.}\)  Repeat the previous two steps for this recurrence relation.  (There is a way to do this part using what you already know.  Later on we shall introduce yet another way to deal with the kind of generating function that arises here.)</p>
+<p id="p-1229">Use the previous part to get a formula for \(a_i\) in terms of \(a_0\text{.}\)</p></article><article class="exercise-like" id="task-159"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1231">Now suppose that \(a_i=3a_{i-1} + 2^i\text{.}\)  Repeat the previous two steps for this recurrence relation.  (There is a way to do this part using what you already know.  Later on we shall introduce yet another way to deal with the kind of generating function that arises here.)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-198" id="hint-198"><span class="type">Hint</span></a></span><div id="hk-hint-198" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1231">You may run into a product of the form \(\sum_{i=0}^\infty a^ix^i\sum_{j=0}^\infty b^jx^j\text{.}\) Note that in the product, the coefficient of \(x^k\) is \(\sum_{i=0}^k a^ib^{k-i} = \sum_{i=0}^k \frac{a^i}{b^i}\text{.}\)</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-198" id="hint-198"><span class="type">Hint</span></a><div id="hk-hint-198" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1232">You may run into a product of the form \(\sum_{i=0}^\infty a^ix^i\sum_{j=0}^\infty b^jx^j\text{.}\) Note that in the product, the coefficient of \(x^k\) is \(\sum_{i=0}^k a^ib^{k-i} = \sum_{i=0}^k \frac{a^i}{b^i}\text{.}\)</p></div></div>
 </div></article></article><article class="example-like motivation" id="activity-212"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">212</span>
+<span class="type">Problem</span> <span class="codenumber">212</span>
 </h6>
-<p id="p-1233">Suppose we deposit $5000 in a savings certificate that pays ten percent interest and also participate in a program to add $1000 to the certificate at the end of each year (from the end of the first year on) that follows (also subject to interest.) Assuming we make the $5000 deposit at the end of year 0, and letting \(a_i\) be the amount of money in the account at the end of year \(i\text{,}\) write a recurrence for the amount of money the certificate is worth at the end of year \(n\text{.}\) Solve this recurrence. How much money do we have in the account (after our year-end deposit) at the end of ten years?  At the end of 20 years?</p></article></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type" alt="Subsection 4.3.2 Fibonacci numbers">
-<span class="type">Subsection</span><span class="codenumber">4.3.2</span><span class="title">Fibonacci numbers</span>
+<p id="p-1234">Suppose we deposit $5000 in a savings certificate that pays ten percent interest and also participate in a program to add $1000 to the certificate at the end of each year (from the end of the first year on) that follows (also subject to interest.) Assuming we make the $5000 deposit at the end of year 0, and letting \(a_i\) be the amount of money in the account at the end of year \(i\text{,}\) write a recurrence for the amount of money the certificate is worth at the end of year \(n\text{.}\) Solve this recurrence. How much money do we have in the account (after our year-end deposit) at the end of ten years?  At the end of 20 years?</p></article></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.2</span> <span class="title">Fibonacci numbers</span>
 </h3>
-<a href="sec_genfns-recurrence.html#subsection-47" class="permalink">¶</a><p id="p-1235">The sequence of problems that follows (culminating in <a knowl="./knowl/solveFibonacci.html" knowl-id="xref-solveFibonacci" alt="Problem 222 " title="Problem 222 ">Problem 222</a>) describes a number of hypotheses we might make about a fictional population of rabbits. We use the example of a rabbit population for historic reasons; our goal is a classical sequence of numbers called Fibonacci numbers. When Fibonacci<span class="footnote"><a knowl="" class="id-ref" refid="hk-fn-14" id="fn-14"><sup> 6 </sup></a></span><span id="hk-fn-14" class="hidden-content tex2jax_ignore"><span class="footnote">Apparently Leanardo de Pisa was given the name Fibonacci posthumously. It is a shortening of “son of Bonacci” in Italian.</span></span> introduced them, he did so with a fictional population of rabbits.</p></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type" alt="Subsection 4.3.3 Second order linear recurrence relations">
-<span class="type">Subsection</span><span class="codenumber">4.3.3</span><span class="title">Second order linear recurrence relations</span>
+<a href="sec_genfns-recurrence.html#subsection-47" class="permalink">¶</a><p id="p-1236">The sequence of problems that follows (culminating in <a knowl="./knowl/solveFibonacci.html" title="Problem 222">Problem 222</a>) describes a number of hypotheses we might make about a fictional population of rabbits. We use the example of a rabbit population for historic reasons; our goal is a classical sequence of numbers called Fibonacci numbers. When Fibonacci<a knowl="" class="id-ref" refid="hk-fn-14" id="fn-14"><sup> 6 </sup></a><span id="hk-fn-14" class="hidden-content tex2jax_ignore"><span class="footnote">Apparently Leonardo da Pisa was given the name Fibonacci posthumously. It is a shortening of “son of Bonacci” in Italian.</span></span> introduced them, he did so with a fictional population of rabbits.</p></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.3</span> <span class="title">Second order linear recurrence relations</span>
 </h3>
 <a href="sec_genfns-recurrence.html#subsection-48" class="permalink">¶</a><article class="example-like essential" id="secondorderintroduction"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">213</span>
+<span class="type">Problem</span> <span class="codenumber">213</span>
 </h6>
-<p id="p-1236">Suppose we start (at the end of month 0) with 10 pairs of baby rabbits, and that after baby rabbits mature for one month they begin to reproduce, with each pair producing two new pairs at the end of each month afterwards. Suppose further that over the time we observe the rabbits, none die. Let \(a_n\) be the number of rabbits we have at the end of month \(n\text{.}\) Show that \(a_n=a_{n-1} + 2a_{n-2}\text{.}\) This is an example of a <dfn class="terminology">second order</dfn> <em class="emphasis">linear</em> recurrence with constant coefficients. Using a method similar to that of <a knowl="./knowl/substituteandsolve.html" knowl-id="xref-substituteandsolve" alt="Problem 211 " title="Problem 211 ">Problem 211</a>, show that</p>
+<p id="p-1237">Suppose we start (at the end of month 0) with 10 pairs of baby rabbits, and that after baby rabbits mature for one month they begin to reproduce, with each pair producing two new pairs at the end of each month afterwards. Suppose further that over the time we observe the rabbits, none die. Let \(a_n\) be the number of rabbits we have at the end of month \(n\text{.}\) Show that \(a_n=a_{n-1} + 2a_{n-2}\text{.}\) This is an example of a <dfn class="terminology">second order</dfn> <em class="emphasis">linear</em> recurrence with constant coefficients. Using a method similar to that of <a knowl="./knowl/substituteandsolve.html" title="Problem 211">Problem 211</a>, show that</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{i=0}^\infty a_ix^i = \frac{10}{1-x-2x^2}.
 \end{equation*}
 </div>
 <p>This gives us the generating function for the sequence \(a_i\) giving the population in month \(i\text{;}\) shortly we shall see a method for converting this to a solution to the recurrence.</p></article><article class="example-like essential" id="originalFibonacci"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">214</span>
+<span class="type">Problem</span> <span class="codenumber">214</span>
 </h6>
-<p id="p-1238">In Fibonacci's original problem, each pair of mature rabbits produces one new pair at the end of each month, but otherwise the situation is the same as in <a knowl="./knowl/secondorderintroduction.html" knowl-id="xref-secondorderintroduction" alt="Problem 213 " title="Problem 213 ">Problem 213</a>.  Assuming that we start with one pair of baby rabbits (at the end of month 0), find the generating function for the number of pairs of rabbits we have at the end on \(n\) months.</p>
+<p id="p-1239">In Fibonacci's original problem, each pair of mature rabbits produces one new pair at the end of each month, but otherwise the situation is the same as in <a knowl="./knowl/secondorderintroduction.html" title="Problem 213">Problem 213</a>.  Assuming that we start with one pair of baby rabbits (at the end of month 0), find the generating function for the number of pairs of rabbits we have at the end on \(n\) months.</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-199" id="hint-199"><span class="type">Hint</span></a></span><div id="hk-hint-199" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1239">Our recurrence becomes \(a_n = a_{n-1} + a_{n-2}\text{.}\)</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-199" id="hint-199"><span class="type">Hint</span></a><div id="hk-hint-199" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1240">Our recurrence becomes \(a_n = a_{n-1} + a_{n-2}\text{.}\)</p></div></div>
 </div></article><article class="example-like interesting" id="secondordernonhomo"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">215</span>
+<span class="type">Problem</span> <span class="codenumber">215</span>
 </h6>
-<p id="p-1241">Find the generating function for the solutions to the recurrence</p>
+<p id="p-1242">Find the generating function for the solutions to the recurrence</p>
 <div class="displaymath">
 \begin{equation*}
 a_i=5a_{i-1}-6a_{i-2} + 2^i.
 \end{equation*}
-</div></article><p id="p-1243">The recurrence relations we have seen in this section are called <dfn class="terminology">second order</dfn> because they specify \(a_i\) in terms of \(a_{i-1}\) and \(a_{i-2}\text{,}\) they are called <dfn class="terminology">linear</dfn> because \(a_{i-1}\) and \(a_{i-2}\) each appear to the first power, and they are called <dfn class="terminology">constant coefficient recurrences</dfn> because the coefficients in front of \(a_{i-1}\) and \(a_{i-2}\) are constants.</p></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type" alt="Subsection 4.3.4 Partial fractions">
-<span class="type">Subsection</span><span class="codenumber">4.3.4</span><span class="title">Partial fractions</span>
+</div></article><p id="p-1244">The recurrence relations we have seen in this section are called <dfn class="terminology">second order</dfn> because they specify \(a_i\) in terms of \(a_{i-1}\) and \(a_{i-2}\text{,}\) they are called <dfn class="terminology">linear</dfn> because \(a_{i-1}\) and \(a_{i-2}\) each appear to the first power, and they are called <dfn class="terminology">constant coefficient recurrences</dfn> because the coefficients in front of \(a_{i-1}\) and \(a_{i-2}\) are constants.</p></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.4</span> <span class="title">Partial fractions</span>
 </h3>
-<a href="sec_genfns-recurrence.html#subsection-49" class="permalink">¶</a><p id="p-1244">The generating functions you found in the previous section all can be expressed in terms of the reciprocal of a quadratic polynomial. However without a power series representation, the generating function doesn't tell us what the sequence is. It turns out that whenever you can factor a polynomial into linear factors (and over the complex numbers such a factorization always exists) you can use that factorization to express the reciprocal in terms of power series.</p>
+<a href="sec_genfns-recurrence.html#subsection-49" class="permalink">¶</a><p id="p-1245">The generating functions you found in the previous section all can be expressed in terms of the reciprocal of a quadratic polynomial. However without a power series representation, the generating function doesn't tell us what the sequence is. It turns out that whenever you can factor a polynomial into linear factors (and over the complex numbers such a factorization always exists) you can use that factorization to express the reciprocal in terms of power series.</p>
 <article class="example-like essential" id="simplifysumoffractions"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">216</span>
+<span class="type">Problem</span> <span class="codenumber">216</span>
 </h6>
-<p id="p-1245">Express \(\frac{1}{x-3} + \frac{2}{x-2}\) as a single fraction.</p></article><article class="example-like motivation" id="partialfractionsintro"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">217</span>
+<p id="p-1246">Express \(\frac{1}{x-3} + \frac{2}{x-2}\) as a single fraction.</p></article><article class="example-like motivation" id="partialfractionsintro"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">217</span>
 </h6>
-<p id="p-1247">In <a knowl="./knowl/simplifysumoffractions.html" knowl-id="xref-simplifysumoffractions" alt="Problem 216 " title="Problem 216 ">Problem 216</a> you see that when we added numerical multiples of the reciprocals of first degree polynomials we got a fraction in which the denominator is a quadratic polynomial. This will always happen unless the two denominators are multiples of each other, because their least common multiple will simply be their product, a quadratic polynomial. This leads us to ask whether a fraction whose denominator is a quadratic polynomial can always be expressed as a sum of fractions whose denominators are first degree polynomials. Find numbers \(c\) and \(d\) so that</p>
+<p id="p-1248">In <a knowl="./knowl/simplifysumoffractions.html" title="Problem 216">Problem 216</a> you see that when we added numerical multiples of the reciprocals of first degree polynomials we got a fraction in which the denominator is a quadratic polynomial. This will always happen unless the two denominators are multiples of each other, because their least common multiple will simply be their product, a quadratic polynomial. This leads us to ask whether a fraction whose denominator is a quadratic polynomial can always be expressed as a sum of fractions whose denominators are first degree polynomials. Find numbers \(c\) and \(d\) so that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{5x+1}{(x-3)(x+5)} = \frac{c}{x-3} + \frac{d}{x+5}.
 \end{equation*}
 </div>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-200" id="hint-200"><span class="type">Hint</span></a></span><div id="hk-hint-200" class="hidden-content tex2jax_ignore"><span class="solution"><div class="displaymath" id="p-1248">
+<a knowl="" class="id-ref" refid="hk-hint-200" id="hint-200"><span class="type">Hint</span></a><div id="hk-hint-200" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath" id="p-1249">
 \begin{equation*}
 \frac{5x+1}{(x-3)(x-5)} = \frac{cx+5c+dx-3d}{(x-3)(x-5)}
 \end{equation*}
@@ -233,18 +235,20 @@ a_i=5a_{i-1}-6a_{i-2} + 2^i.
 5x \amp = cx+dx\\
 1 \amp= 5c-3d\text{.}
 \end{align*}
-</div></span></div>
+</div>
+</div></div>
 </div></article><article class="example-like essential" id="partialfractions1"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">218</span>
+<span class="type">Problem</span> <span class="codenumber">218</span>
 </h6>
-<p id="p-1250">In <a knowl="./knowl/partialfractionsintro.html" knowl-id="xref-partialfractionsintro" alt="Problem 217 " title="Problem 217 ">Problem 217</a> you may have simply guessed at values of \(c\) and \(d\text{,}\) or you may have solved a system of equations in the two unknowns \(c\) and \(d\text{.}\) Given constants \(a\text{,}\) \(b\text{,}\) \(r_1\text{,}\) and \(r_2\) (with \(r_1\not= r_2\)), write down a system of equations we can solve for \(c\) and \(d\) to write</p>
+<p id="p-1251">In <a knowl="./knowl/partialfractionsintro.html" title="Problem 217">Problem 217</a> you may have simply guessed at values of \(c\) and \(d\text{,}\) or you may have solved a system of equations in the two unknowns \(c\) and \(d\text{.}\) Given constants \(a\text{,}\) \(b\text{,}\) \(r_1\text{,}\) and \(r_2\) (with \(r_1\not= r_2\)), write down a system of equations we can solve for \(c\) and \(d\) to write</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{ax+b}{(x-r_1)(x-r_2)} = \frac{c}{x-r_1} + \frac{d}{x-r_2}\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-201" id="hint-201"><span class="type">Hint</span></a></span><div id="hk-hint-201" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1251">To have</p>
+<a knowl="" class="id-ref" refid="hk-hint-201" id="hint-201"><span class="type">Hint</span></a><div id="hk-hint-201" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-1252">To have</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{ax+b}{(x-r_1)(x-r_2)} = \frac{c}{x-r_1} + \frac{d}{x-r_2}
@@ -255,24 +259,25 @@ a_i=5a_{i-1}-6a_{i-2} + 2^i.
 \begin{equation*}
 cx-r_2c+dx-r_1d =ax+b\text{.}
 \end{equation*}
-</div></span></div>
-</div></article><p id="p-1253">Writing down the equations in <a knowl="./knowl/partialfractions1.html" knowl-id="xref-partialfractions1" alt="Problem 218 " title="Problem 218 ">Problem 218</a> and solving them is called the <dfn class="terminology">method of partial fractions</dfn>. This method will let you find power series expansions for generating functions of the type you found in <a knowl="./knowl/secondorderintroduction.html" knowl-id="xref-secondorderintroduction" alt="Problem 213 " title="Problem 213 ">Problems 213</a> to <a knowl="./knowl/secondordernonhomo.html" knowl-id="xref-secondordernonhomo" alt="Problem 215 " title="Problem 215 ">Problem 215</a>. However you have to be able to factor the quadratic polynomials that are in the denominators of your generating functions.</p>
+</div>
+</div></div>
+</div></article><p id="p-1254">Writing down the equations in <a knowl="./knowl/partialfractions1.html" title="Problem 218">Problem 218</a> and solving them is called the <dfn class="terminology">method of partial fractions</dfn>. This method will let you find power series expansions for generating functions of the type you found in <a knowl="./knowl/secondorderintroduction.html" title="Problem 213">Problems 213</a> to <a knowl="./knowl/secondordernonhomo.html" title="Problem 215">Problem 215</a>. However you have to be able to factor the quadratic polynomials that are in the denominators of your generating functions.</p>
 <article class="example-like essential" id="activity-219"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">219</span>
+<span class="type">Problem</span> <span class="codenumber">219</span>
 </h6>
-<p id="p-1254">Use the method of partial fractions to convert the generating function of <a knowl="./knowl/secondorderintroduction.html" knowl-id="xref-secondorderintroduction" alt="Problem 213 " title="Problem 213 ">Problem 213</a> into the form</p>
+<p id="p-1255">Use the method of partial fractions to convert the generating function of <a knowl="./knowl/secondorderintroduction.html" title="Problem 213">Problem 213</a> into the form</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{c}{x-r_1} + \frac{d}{x-r_2}\text{.}
 \end{equation*}
 </div>
 <p>Use this to find a formula for \(a_n\text{.}\)</p></article><article class="example-like essential" id="factorFibonacci"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">220</span>
+<span class="type">Problem</span> <span class="codenumber">220</span>
 </h6>
-<p id="p-1256">Use the quadratic formula to find the solutions to \(x^2+x-1=0\text{,}\) and use that information to factor \(x^2+x-1\text{.}\)</p></article><article class="example-like essential" id="fractionFibonacci"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">221</span>
+<p id="p-1257">Use the quadratic formula to find the solutions to \(x^2+x-1=0\text{,}\) and use that information to factor \(x^2+x-1\text{.}\)</p></article><article class="example-like essential" id="fractionFibonacci"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">221</span>
 </h6>
-<p id="p-1258">Use the factors you found in <a knowl="./knowl/factorFibonacci.html" knowl-id="xref-factorFibonacci" alt="Problem 220 " title="Problem 220 ">Problem 220</a> to write</p>
+<p id="p-1259">Use the factors you found in <a knowl="./knowl/factorFibonacci.html" title="Problem 220">Problem 220</a> to write</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{x^2+x-1}
@@ -285,12 +290,12 @@ cx-r_2c+dx-r_1d =ax+b\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-202" id="hint-202"><span class="type">Hint</span></a></span><div id="hk-hint-202" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1259">You can save yourself a tremendous amount of frustrating algebra if you arbitrarily choose one of the solutions and call it \(r_1\) and call the other solution \(r_2\) and solve the problem using these algebraic symbols in place of the actual roots.<span class="footnote"><a knowl="" class="id-ref" refid="hk-fn-15" id="fn-15"><sup> 7 </sup></a></span><span id="hk-fn-15" class="hidden-content tex2jax_ignore"><span class="footnote">We use the words roots and solutions interchangeably.</span></span> Not only will you save yourself some work, but you will get a formula you could use in other problems. When you are done, substitute in the actual values of the solutions and simplify.</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-202" id="hint-202"><span class="type">Hint</span></a><div id="hk-hint-202" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1260">You can save yourself a tremendous amount of frustrating algebra if you arbitrarily choose one of the solutions and call it \(r_1\) and call the other solution \(r_2\) and solve the problem using these algebraic symbols in place of the actual roots.<a knowl="" class="id-ref" refid="hk-fn-15" id="fn-15"><sup> 7 </sup></a><span id="hk-fn-15" class="hidden-content tex2jax_ignore"><span class="footnote">We use the words roots and solutions interchangeably.</span></span> Not only will you save yourself some work, but you will get a formula you could use in other problems. When you are done, substitute in the actual values of the solutions and simplify.</p></div></div>
 </div></article><article class="example-like essential" id="solveFibonacci"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">222</span>
+<span class="type">Problem</span> <span class="codenumber">222</span>
 </h6>
 <article class="exercise-like" id="task-160"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1261">Use the partial fractions decomposition you found in <a knowl="./knowl/factorFibonacci.html" knowl-id="xref-factorFibonacci" alt="Problem 220 " title="Problem 220 ">Problem 220</a> to write the generating function you found in <a knowl="./knowl/originalFibonacci.html" knowl-id="xref-originalFibonacci" alt="Problem 214 " title="Problem 214 ">Problem 214</a> in the form</p>
+<p id="p-1262">Use the partial fractions decomposition you found in <a knowl="./knowl/factorFibonacci.html" title="Problem 220">Problem 220</a> to write the generating function you found in <a knowl="./knowl/originalFibonacci.html" title="Problem 214">Problem 214</a> in the form</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n=0}^\infty a_nx^i
@@ -298,38 +303,38 @@ cx-r_2c+dx-r_1d =ax+b\text{.}
 </div>
 <p>and use this to give an explicit formula for \(a_n\text{.}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-203" id="hint-203"><span class="type">Hint</span></a></span><div id="hk-hint-203" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1262">Once again it will save a lot of tedious algebra if you use the symbols \(r_1\) and \(r_2\) for the solutions as in <a knowl="./knowl/fractionFibonacci.html" knowl-id="xref-fractionFibonacci" alt="Problem 221 " title="Problem 221 ">Problem 221</a> and substitute the actual values of the solutions once you have a formula for \(a_n\) in terms of \(r_1\) and \(r_2\text{.}\)</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-203" id="hint-203"><span class="type">Hint</span></a><div id="hk-hint-203" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1263">Once again it will save a lot of tedious algebra if you use the symbols \(r_1\) and \(r_2\) for the solutions as in <a knowl="./knowl/fractionFibonacci.html" title="Problem 221">Problem 221</a> and substitute the actual values of the solutions once you have a formula for \(a_n\) in terms of \(r_1\) and \(r_2\text{.}\)</p></div></div>
 </div></article><article class="exercise-like" id="task-161"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1264">When we have \(a_0=1\) and \(a_1=1\text{,}\) i.e. when we start with one pair of baby rabbits, the numbers \(a_n\) are called <dfn class="terminology">Fibonacci Numbers</dfn>.  Use either the recurrence or your final formula to find \(a_2\) through \(a_8\text{.}\)  Are you amazed that your general formula produces integers, or for that matter produces rational numbers?  Why does the recurrence equation tell you that the Fibonacci numbers are all integers?</p></article><article class="exercise-like" id="task-162"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1266">Explain why there is a real number \(b\) such that, for large values of \(n\text{,}\) the value of the \(n\)th Fibonacci number is almost exactly (but not quite) some constant times \(b^n\text{.}\) (Find \(b\) and the constant.)</p></article><article class="exercise-like" id="task-163"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1268">Find an algebraic explanation (not using the recurrence equation) of what happens to make the square roots of five go away.</p>
+<p id="p-1265">When we have \(a_0=1\) and \(a_1=1\text{,}\) i.e. when we start with one pair of baby rabbits, the numbers \(a_n\) are called <dfn class="terminology">Fibonacci Numbers</dfn>.  Use either the recurrence or your final formula to find \(a_2\) through \(a_8\text{.}\)  Are you amazed that your general formula produces integers, or for that matter produces rational numbers?  Why does the recurrence equation tell you that the Fibonacci numbers are all integers?</p></article><article class="exercise-like" id="task-162"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1267">Explain why there is a real number \(b\) such that, for large values of \(n\text{,}\) the value of the \(n\)th Fibonacci number is almost exactly (but not quite) some constant times \(b^n\text{.}\) (Find \(b\) and the constant.)</p></article><article class="exercise-like" id="task-163"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1269">Find an algebraic explanation (not using the recurrence equation) of what happens to make the square roots of five go away.</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-204" id="hint-204"><span class="type">Hint</span></a></span><div id="hk-hint-204" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1269">Think about how the binomial theorem might help you.</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-204" id="hint-204"><span class="type">Hint</span></a><div id="hk-hint-204" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1270">Think about how the binomial theorem might help you.</p></div></div>
 </div></article><article class="exercise-like" id="task-164"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1271">As a challenge (which the author has not yet done), see if you can find a way to show algebraically (not using the recurrence relation, but rather the formula you get by removing the square roots of five) that the formula for the Fibonacci numbers yields integers.</p></article></article><article class="example-like" id="activity-223"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">223</span>
+<p id="p-1272">As a challenge (which the author has not yet done), see if you can find a way to show algebraically (not using the recurrence relation, but rather the formula you get by removing the square roots of five) that the formula for the Fibonacci numbers yields integers.</p></article></article><article class="example-like" id="activity-223"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">223</span>
 </h6>
-<p id="p-1273">Solve the recurrence \(a_n= 4a_{n-1} - 4a_{n-2}\text{.}\)</p></article></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type" alt="Subsection 4.3.5 Catalan Numbers">
-<span class="type">Subsection</span><span class="codenumber">4.3.5</span><span class="title">Catalan Numbers</span>
+<p id="p-1274">Solve the recurrence \(a_n= 4a_{n-1} - 4a_{n-2}\text{.}\)</p></article></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.5</span> <span class="title">Catalan Numbers</span>
 </h3>
 <a href="sec_genfns-recurrence.html#subsection-50" class="permalink">¶</a><article class="example-like interesting" id="CatalanRecurrence"><h6 class="heading">
-<span class="type">Problem</span><span class="codenumber">224</span>
+<span class="type">Problem</span> <span class="codenumber">224</span>
 </h6>
 <article class="exercise-like" id="task-165"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1275">Using either lattice paths or diagonal lattice paths, explain why the Catalan Number \(c_n\) satisfies the recurrence</p>
+<p id="p-1276">Using either lattice paths or diagonal lattice paths, explain why the Catalan Number \(c_n\) satisfies the recurrence</p>
 <div class="displaymath">
 \begin{equation*}
 C_n = \sum_{i=1}^{n-1} C_{i-1}C_{n-i}\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-205" id="hint-205"><span class="type">Hint</span></a></span><div id="hk-hint-205" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1276">A Catalan path could touch the \(x\)-axis several times before it reaches \((2n, 0)\text{.}\)  Its first touch can be any point \((2i, 0)\) between \((2, 0)\) and \((2n, 0)\text{.}\) For the path to touch first at \((2i, 0)\text{,}\) the path must start with an upstep and then proceed as a Dyck path from \((1, 1)\) to \((2i - 1, 1)\text{.}\) From there it must take a downstep. Can you see a bijection between such Dyck paths and Catalan paths of a certain kind?</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-205" id="hint-205"><span class="type">Hint</span></a><div id="hk-hint-205" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1277">A Catalan path could touch the \(x\)-axis several times before it reaches \((2n, 0)\text{.}\)  Its first touch can be any point \((2i, 0)\) between \((2, 0)\) and \((2n, 0)\text{.}\) For the path to touch first at \((2i, 0)\text{,}\) the path must start with an upstep and then proceed as a Dyck path from \((1, 1)\) to \((2i - 1, 1)\text{.}\) From there it must take a downstep. Can you see a bijection between such Dyck paths and Catalan paths of a certain kind?</p></div></div>
 </div></article><article class="exercise-like" id="task-166"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1278">Show that if we use \(y\) to stand for the power series \(\sum_{n=0}^\infty c_nx^n\text{,}\) then we can find \(y\) by solving a quadratic equation. Find \(y\text{.}\)</p>
+<p id="p-1279">Show that if we use \(y\) to stand for the power series \(\sum_{n=0}^\infty c_nx^n\text{,}\) then we can find \(y\) by solving a quadratic equation. Find \(y\text{.}\)</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-206" id="hint-206"><span class="type">Hint</span></a></span><div id="hk-hint-206" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-1279">Does the right-hand side of the recurrence remind you of some products you have worked with?</p></span></div>
+<a knowl="" class="id-ref" refid="hk-hint-206" id="hint-206"><span class="type">Hint</span></a><div id="hk-hint-206" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1280">Does the right-hand side of the recurrence remind you of some products you have worked with?</p></div></div>
 </div></article><article class="exercise-like" id="task-167"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1281">Taylor's theorem from calculus tells us that the extended binomial theorem</p>
+<p id="p-1282">Taylor's theorem from calculus tells us that the extended binomial theorem</p>
 <div class="displaymath">
 \begin{equation*}
 (1+x)^r = \sum_{i=0}^\infty \binom{r}{i}x^i
@@ -343,12 +348,23 @@ C_n = \sum_{i=1}^{n-1} C_{i-1}C_{n-i}\text{.}
 </div>
 <p>Use this and your solution for \(y\) (note that of the two possible values for \(y\) that you get from the quadratic formula, only one gives an actual power series) to get a formula for the Catalan numbers.</p>
 <div class="solutions">
-<span class="solution"><a knowl="" class="id-ref" refid="hk-hint-207" id="hint-207"><span class="type">Hint</span></a></span><div id="hk-hint-207" class="hidden-content tex2jax_ignore"><span class="solution"><div class="displaymath" id="p-1282">
+<a knowl="" class="id-ref" refid="hk-hint-207" id="hint-207"><span class="type">Hint</span></a><div id="hk-hint-207" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="p-1283">
 \begin{equation*}
 \frac{1\cdot 3\cdot 5\cdots (2i-3)}{i!} = \frac{(2i-2)!}{(i-1)!2^i i!}\text{.}
 \end{equation*}
-</div></span></div>
+</div></div></div>
 </div></article></article></section></section></div></main>
 </div>
+<!--Start: Google code--><script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-66485406-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code-->
 </body>
 </html>

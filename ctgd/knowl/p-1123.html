@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:03-06:00    *-->
+<!--*    on 2018-08-12T12:00:53-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Recall that a tree is determined by its edge set. Suppose you have a tree on \(n\) vertices, say with vertex set \([n]\text{.}\) We can use \(x_i\) as the picture of vertex \(i\) and \(x_ix_j\) as the picture of the edge \(x_ix_j\text{.}\) Then one possible picture of the tree \(T\) is the product \(P(T) = \prod_{\{i,j\}:i\text{ and }j\text{ are adjacent }}x_ix_j\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+(x^j+x^{j+1}+\cdots+x^{m-1}) =\amp x^j
+\left(\sum_{i=0}^{m-j-1}x^i\right)^n\\
+=\amp
+\left(x^j\frac{1-x^{m-j}}{1-x}\right)^n\\
+=\amp \left(\frac{x^j-x^m}{1-x}\right)^n\\
+=\amp  (x^j-x^m)^n\sum_{i=0}^\infty \binom{n+i-1}{i}x^i.
+\end{align*}
+</div>
 <span class="incontext"><a href="sec_genfns-idea.html#p-1123">in-context</a></span>
 </body>
 </html>

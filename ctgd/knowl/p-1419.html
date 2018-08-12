@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:12:18-06:00    *-->
+<!--*    on 2018-08-12T12:01:03-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,24 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If we use \(C_n\) to stand for a cycle on \(n\) vertices and \(P_n\) to stand for a path on \(n\) vertices, then by the deletion-contraction recurrence, we may write</p>
-<div class="displaymath">
-\begin{align*}
-\hspace{-.4 in}\chi_{C_n}(x)  \amp =
-\chi_{P_n}(x)-\chi_{C_{n-1}}(x)\\
-\amp =  \chi_{P_n}(x)-\chi_{P_{n-1}}(x)+\chi_{C_{n-2}}(x)\\
-\amp =
-\chi_{P_n}(x)-\chi_{P_{n-1}}(x)+\chi_{P_{n-3}}(x)-
-\cdots+(-1)^{n-3}(\chi_{P_3}(x)-\chi_{C_2}(x))\\
-\amp =  x(x-1)^{n-1}-x(x-1)^{n-2}+x(x-1)^{n-3}\cdots\\
-\amp \quad
-+ (-1)^{n-3}[x(x-1)^2-x(x-1)]\\
-\amp =  x(x-1)\sum_{i=0}^{n-2}(x-1)^i(-1)^{n-2-i}\\
-\amp =  x(x-1)(-1)^{n-2}\sum_{i=0}^{n-2}(1-x)^i\\
-\amp =  x(x-1)(-1)^{n-2}\frac{1-(1-x)^{n-1}}{1-(1-x)}\\
-\amp =  (x-1)[(x-1)^{n-1}+(-1)^n].
-\end{align*}
-</div>
+<p>(Not tremendously hard.) In how many ways may you properly color the vertices of a cycle on \(n\) vertices with \(x\) colors? Describe any dependence of the chromatic polynomial of a cycle on the number of vertices.</p>
 <span class="incontext"><a href="sec_inclexcl-delcont.html#p-1419">in-context</a></span>
 </body>
 </html>

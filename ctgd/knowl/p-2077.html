@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-05-01T14:13:06-06:00    *-->
+<!--*    on 2018-08-12T12:01:38-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>This gives us</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=2}^\infty a_n\frac{x^n}{n!}
+=\amp \sum_{n=2}^\infty a_{n-1}\frac{x^n}{(n-1)!} + \sum_{n=2}^\infty
+\frac{x^n}{(n-2)!}\\
+=\amp  x\left(\sum_{n=0}^\infty a_n\frac{x^n}{n!} - a_0\right) +
+x^2\sum_{n=0}^\infty \frac{x^n}{n!}\\
+=\amp  x\left(\sum_{n=0}^\infty a_n\frac{x^n}{n!}\right) - a_0x
++x^2e^x
+\end{align*}
+</div>
+<p>We sum from \(n=2\) because otherwise we would have a factorial of a negative number in the denominator. Thus \(\sum_{n=0}^\infty a_n\frac{x^n}{n!} -a_0-a_1x =  x\left(\sum_{n=0}^\infty a_n\frac{x^n}{n!}\right) - a_0x
++x^2e^x\text{,}\) or</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{n=0}^\infty a_n\frac{x^n}{n!}=\frac{1}{1-x}(a_0+a_1x-a_0x
-+x^2e^x).
+(1-x)\sum_{n=0}^\infty a_n\frac{x^n}{n!}=a_0+a_1x-a_0x +x^2e^x.
 \end{equation*}
 </div>
-<p>computing the coefficient of \(a_n\) gives us \(a_n = a_1 +\sum_{i=0}^{n-2}
-\frac{1}{i!}\text{.}\)</p>
 <span class="incontext"><a href="app3-3-recurrences.html#p-2077">in-context</a></span>
 </body>
 </html>
