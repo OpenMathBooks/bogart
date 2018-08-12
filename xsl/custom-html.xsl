@@ -106,7 +106,6 @@
 <!-- We just like #3 as the default                          -->
 <!-- N.B.:  This scheme is transitional and may change             -->
 <!-- N.B.:  without warning and without any deprecation indicators -->
-<xsl:param name="html.js.server"  select="'https://aimath.org'" />
 <xsl:param name="html.css.server" select="'https://aimath.org'" />
 <xsl:param name="html.css.file"   select="'mathbook-4.css'" />
 <!-- A space-separated list of CSS URLs (points to servers or local files) -->
