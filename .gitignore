@@ -168,3 +168,9 @@ TSWLatexianTemp*
 schemas.xml
 
 latex/images/
+
+.directory
+
+.sass*
+
+_site/
