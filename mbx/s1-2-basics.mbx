@@ -2024,19 +2024,15 @@ many ways can you pair up the next person who isn't already paired up?
       <hint>
           <p>
         The problem suggests that you think about how to get a list from a seating
-        arrangement. Could every list of n distinct people come from a seating chart?
-        How many lists of n distinct people are there? How many lists could we get
+        arrangement. Could every list of <m>n</m> distinct people come from a seating chart?
+        How many lists of <m>n</m> distinct people are there? How many lists could we get
         from a given seating chart by taking different starting places?
           </p>
       </hint>
       <hint>
-          <p>
-              For a different way of doing the problem, suppose that you have chosen
-        one person, say the first one in a list of the people in alphabetical order by
-        name. Now seat that person. Does it matter where they sit? In ways can
-        you seat the remaining people? Does it matter where the second person in
-        alphabetical order sits?
-          </p>
+        <p>
+          For a different way of doing the problem, suppose that you have chosen one person, say the first one in a list of the people in alphabetical order by name. Now seat that person. Does it matter where they sit? In how many ways can you seat the remaining people? Does it matter where the second person in alphabetical order sits?
+        </p>
       </hint>
       <solution>
         <p>
@@ -2154,7 +2150,7 @@ many ways can you pair up the next person who isn't already paired up?
     </table>
 
     <p>
-      In <xref ref="tab_permsof3" /> we list all three-element permutations of
+      In <xref ref="tab_permsof3" /> we list all three-element permutations from
       the <m>5</m>-element set <m>\{a,b,c,d,e\}</m>. Each row consists of all
       <m>3</m>-element permutations of some subset of <m>\{a,b,c,d,e\}</m>. Because a
       given <m>k</m>-element subset can be listed as a <m>k</m>-element permutation in
