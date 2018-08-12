@@ -2,8 +2,10 @@
 
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" >
     <docinfo>
-                <initialism>CTGD</initialism>
+        <initialism>CTGD</initialism>
         <author-biographies length="long" />
+        
+        <brandlogo url="http://bogart.openmathbooks.org/" source="images/cover.png"/>
 
 <macros>
 \newcommand{\cycle}[1]{\arraycolsep 5 pt
