@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-25T15:26:12-06:00    *-->
+<!--*    on 2018-08-12T14:07:06-06:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,11 +12,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-\begin{equation}
-a_n= a_1a_{n-1} + a_2a_{n-2}+\cdots +
-a_{n-1}a_1.
-\tag{2.6}
-\end{equation}
-<span class="incontext"><a href="sec_induction-recurrence.html#Catalanrecurrence">in-context</a></span>
+<article class="example-like interesting"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">224</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>Using either lattice paths or diagonal lattice paths, explain why the Catalan Number \(c_n\) satisfies the recurrence</p>
+<div class="displaymath">
+\begin{equation*}
+C_n = \sum_{i=1}^{n-1} C_{i-1}C_{n-i}\text{.}
+\end{equation*}
+</div>
+<div class="solutions"><a knowl="./knowl/hint-205-hidden.html" title="Hint 224.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>Show that if we use \(y\) to stand for the power series \(\sum_{n=0}^\infty c_nx^n\text{,}\) then we can find \(y\) by solving a quadratic equation. Find \(y\text{.}\)</p>
+<div class="solutions"><a knowl="./knowl/hint-206-hidden.html" title="Hint 224.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>Taylor's theorem from calculus tells us that the extended binomial theorem</p>
+<div class="displaymath">
+\begin{equation*}
+(1+x)^r = \sum_{i=0}^\infty \binom{r}{i}x^i
+\end{equation*}
+</div>
+<p>holds for any number real number \(r\text{,}\) where \(\binom{r}{i}\) is defined to be</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{r^{\underline{i}}}{i!} = \frac{r(r-1)\cdots(r-i+1)}{i!}  \text{.}
+\end{equation*}
+</div>
+<p>Use this and your solution for \(y\) (note that of the two possible values for \(y\) that you get from the quadratic formula, only one gives an actual power series) to get a formula for the Catalan numbers.</p>
+<div class="solutions"><a knowl="./knowl/hint-207-hidden.html" title="Hint 224.c.1"><span class="type">Hint</span></a></div></article></article><span class="incontext"><a href="sec_genfns-recurrence.html#CatalanRecurrence">in-context</a></span>
 </body>
 </html>
