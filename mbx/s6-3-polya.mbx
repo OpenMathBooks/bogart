@@ -38,14 +38,14 @@
         <caption>The two different isomers of butyl alcohol.</caption>
         <sidebyside widths="47% 47%" margins="auto">
         <image>
-            <latex-image-code>
+            <latex-image>
 \chemfig{H-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]OH)-[:0]C(-[:90]H)(-[:270]H)-[:0]H}
-            </latex-image-code>
+            </latex-image>
         </image>
         <image>
-            <latex-image-code>
+            <latex-image>
 \chemfig{H-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]C(-[:90]H)(-[:270]H)-[:0]OH}
-            </latex-image-code>
+            </latex-image>
         </image>
         </sidebyside>
     </figure>
